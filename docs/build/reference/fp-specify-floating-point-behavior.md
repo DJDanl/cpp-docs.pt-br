@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: f85f9b397ef3ab5bd070be1f4c81845405b14020
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234374"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040906"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (especificar comportamento de ponto flutuante)
 
@@ -43,11 +43,11 @@ Se o seu código de ponto flutuante não depender da ordem das operações e das
 
 #### <a name="strict"></a>strict
 
-`/fp:strict`tem um comportamento semelhante a `/fp:precise` , ou seja, o compilador preserva a ordenação de origem e as propriedades de arredondamento do código de ponto flutuante quando ele gera e otimiza o código do objeto para o computador de destino e observa o padrão ao manipular valores especiais. Além disso, o programa pode acessar com segurança ou modificar o ambiente de ponto flutuante em tempo de execução.
+`/fp:strict` tem um comportamento semelhante a `/fp:precise` , ou seja, o compilador preserva a ordenação de origem e as propriedades de arredondamento do código de ponto flutuante quando ele gera e otimiza o código do objeto para o computador de destino e observa o padrão ao manipular valores especiais. Além disso, o programa pode acessar com segurança ou modificar o ambiente de ponto flutuante em tempo de execução.
 
 Em `/fp:strict` , o compilador gera um código que permite ao programa desmascarar com segurança exceções de ponto flutuante, ler ou gravar registros de status de ponto flutuante ou alterar os modos de arredondamento. Ele arredonda para a precisão do código-fonte em quatro pontos específicos durante a avaliação da expressão: em atribuições, em typecasts, quando um argumento de ponto flutuante é passado para uma chamada de função e quando um valor de ponto flutuante é retornado de uma chamada de função. As computações intermediárias podem ser executadas na precisão da máquina. Typecasts pode ser usado para arredondar explicitamente cálculos intermediários. O compilador não executa transformações de algébricas em expressões de ponto flutuante, como reassociação ou distribuição, a menos que a transformação produza um resultado idêntico de bit a ponto. As expressões que envolvem valores especiais (NaN, + Infinity,-Infinity,-0,0) são processadas de acordo com as especificações do IEEE-754. Por exemplo, `x != x` avalia como **`true`** se x é Nan. As contratações de ponto flutuante não são geradas em `/fp:strict` .
 
-`/fp:strict`é computacionalmente mais cara do que `/fp:precise` porque o compilador deve inserir instruções adicionais para interceptar exceções e permitir que programas acessem ou modifiquem o ambiente de ponto flutuante em tempo de execução. Se o seu código não usar esse recurso, mas exigir ordenação e arredondamento de código-fonte, ou se depender de valores especiais, use `/fp:precise` . Caso contrário, considere `/fp:fast` o uso do, que pode produzir um código mais rápido e menor.
+`/fp:strict` é computacionalmente mais cara do que `/fp:precise` porque o compilador deve inserir instruções adicionais para interceptar exceções e permitir que programas acessem ou modifiquem o ambiente de ponto flutuante em tempo de execução. Se o seu código não usar esse recurso, mas exigir ordenação e arredondamento de código-fonte, ou se depender de valores especiais, use `/fp:precise` . Caso contrário, considere `/fp:fast` o uso do, que pode produzir um código mais rápido e menor.
 
 #### <a name="fast"></a>rápido
 
@@ -55,7 +55,7 @@ A `/fp:fast` opção permite que o compilador reordene, combine ou simplifique o
 
 Em `/fp:fast` , o compilador gera o código destinado à execução no ambiente de ponto flutuante padrão e pressupõe que o ambiente de ponto flutuante não seja acessado ou modificado no tempo de execução. Ou seja, ele pressupõe que o código não mascara as exceções de ponto flutuante, leia ou grave registros de status de ponto flutuante ou altere os modos de arredondamento.
 
-`/fp:fast`o destina-se a programas que não exigem ordenação de código-fonte estrito e arredondamento de expressões de ponto flutuante e não dependem das regras padrão para lidar com valores especiais, como NaN. Se o seu código de ponto flutuante exigir preservação de ordem e arredondamento de código-fonte, ou se depender do comportamento padrão de valores especiais, use [/fp: preciso](#precise). Se o seu código acessa ou modifica o ambiente de ponto flutuante para alterar os modos de arredondamento, desmascarar exceções de ponto flutuante ou verificar o status de ponto flutuante, use [/fp: strict](#strict).
+`/fp:fast` o destina-se a programas que não exigem ordenação de código-fonte estrito e arredondamento de expressões de ponto flutuante e não dependem das regras padrão para lidar com valores especiais, como NaN. Se o seu código de ponto flutuante exigir preservação de ordem e arredondamento de código-fonte, ou se depender do comportamento padrão de valores especiais, use [/fp: preciso](#precise). Se o seu código acessa ou modifica o ambiente de ponto flutuante para alterar os modos de arredondamento, desmascarar exceções de ponto flutuante ou verificar o status de ponto flutuante, use [/fp: strict](#strict).
 
 #### <a name="except"></a>excepção
 
@@ -73,11 +73,11 @@ A opção [/za](za-ze-disable-language-extensions.md) (compatibilidade com ANSI)
 
 O compilador fornece três diretivas pragma para substituir o comportamento de ponto flutuante especificado na linha de comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)e [fp_contract](../../preprocessor/fp-contract.md). Você pode usar essas diretivas para controlar o comportamento de ponto flutuante em nível de função, não dentro de uma função. Observe que essas diretivas não correspondem diretamente às `/fp` opções. Esta tabela mostra como as `/fp` diretivas Options e pragma são mapeadas umas às outras. Para obter mais informações, consulte a documentação para as instruções individuais e as diretivas de pragma.
 
-||float_control (preciso)|float_control (exceto)|fenv_access|fp_contract|
+| Opção | float_control (preciso) | float_control (exceto) | fenv_access | fp_contract |
 |-|-|-|-|-|
-|`/fp:fast`|Desligar|Desligar|Desligar|em|
-|`/fp:precise`|em|Desligar|Desligar|em|
-|`/fp:strict`|em|em|em|Desligar|
+|`/fp:fast`|Desligar|Desligar|Desligar|on|
+|`/fp:precise`|em|Desligar|Desligar|on|
+|`/fp:strict`|on|on|em|Desligar|
 
 ### <a name="the-default-floating-point-environment"></a>O ambiente de ponto flutuante padrão
 

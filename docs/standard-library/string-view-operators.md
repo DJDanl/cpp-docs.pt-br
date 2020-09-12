@@ -1,6 +1,7 @@
 ---
 title: '&lt;operadores de string_view &gt;'
-ms.date: 04/19/2019
+description: Referência de API para os `string_view` operadores, que são usados para comparar dois `string_view` objetos, ou um `string_view` e outro objeto de cadeia de caracteres
+ms.date: 9/4/2020
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833212"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039879"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;operadores de string_view &gt;
 
@@ -58,7 +59,7 @@ bool operator!=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -66,7 +67,7 @@ Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_s
 *Certo*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto no lado esquerdo do operador não for modo lexicográfico igual ao objeto no lado direito; caso contrário **`false`** .
 
@@ -97,7 +98,7 @@ bool operator==(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -105,7 +106,7 @@ Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_s
 *Certo*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto no lado esquerdo do operador for modo lexicográfico igual ao objeto no lado direito; caso contrário **`false`** .
 
@@ -136,7 +137,7 @@ bool operator<(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -144,7 +145,7 @@ Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_s
 *Certo*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto no lado esquerdo do operador for modo lexicográfico menor que o objeto no lado direito; caso contrário **`false`** .
 
@@ -197,7 +198,7 @@ bool operator<=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -205,7 +206,7 @@ Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_s
 *Certo*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto no lado esquerdo do operador for modo lexicográfico menor ou igual ao objeto no lado direito; caso contrário **`false`** .
 
@@ -223,7 +224,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& Ostr, const basic_string_view<CharType, Traits> Str);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Ostr*\
 um fluxo de saída no qual está sendo gravado.
@@ -231,7 +232,7 @@ um fluxo de saída no qual está sendo gravado.
 *Str*\
 O string_view a ser inserido em um fluxo de saída.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 um fluxo de saída no qual está sendo gravado.
 
@@ -260,7 +261,7 @@ bool operator>(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -268,7 +269,7 @@ Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_s
 *Certo*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto no lado esquerdo do operador for modo lexicográfico maior que o objeto string_view no lado direito; caso contrário **`false`** .
 
@@ -297,7 +298,7 @@ bool operator>=(
     const basic_string_view<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
@@ -305,7 +306,7 @@ Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_s
 *Certo*\
 Qualquer tipo de cadeia de caracteres conversível ou um objeto do tipo `basic_string_view` a ser comparado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto no lado esquerdo do operador for modo lexicográfico maior ou igual ao objeto no lado direito; caso contrário **`false`** .
 
@@ -329,6 +330,10 @@ using namespace literals::string_view_literals;
     u16string_view sv16{ u"Hello"sv };
     u32string_view sv32{ U"Hello"sv };
 ```
+
+## <a name="requirements"></a>Requisitos
+
+[/std:c++17](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="see-also"></a>Confira também
 

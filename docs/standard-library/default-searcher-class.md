@@ -5,12 +5,12 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203722"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039684"
 ---
 # <a name="default_searcher-class"></a>Classe default_searcher
 
@@ -36,14 +36,14 @@ class default_searcher
 
 ## <a name="members"></a>Membros
 
-| | |
+| Membro | DESCRIÇÃO |
 | - | - |
 | **Qu** | |
-| [default_searcher](#default-searcher-constructor) | |
+| [default_searcher](#default-searcher-constructor) | Constrói uma instância de pesquisador. |
 | **Operadores** | |
-| [operador ()](#operator-call) | |
+| [operador ()](#operator-call) | Invoca a operação na sequência. |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>Construtor de default_searcher
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a> Construtor de default_searcher
 
 Constrói um `default_searcher` objeto de função usando a sequência para pesquisar e um predicado de igualdade.
 
@@ -59,7 +59,7 @@ constexpr default_searcher(         // C++20
     BinaryPredicate pred = BinaryPredicate());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pat_first*\
 O elemento inicial da sequência a ser pesquisada.
@@ -76,7 +76,7 @@ Gera qualquer exceção gerada pelo construtor de cópia dos tipos *BinaryPredic
 
 Essa classe é nova no C++ 17. O c++ 20 fez o construtor **`constexpr`** .
 
-## <a name="operator"></a><a name="operator-call"></a>operador ()
+## <a name="operator"></a><a name="operator-call"></a> operador ()
 
 O operador de chamada do operador de função. Pesquisa dentro da sequência `[first, last)` de argumento para a sequência especificada para o construtor.
 
@@ -92,7 +92,7 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
     ForwardIterator2 last) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *primeiro*\
 O elemento inicial da sequência na qual Pesquisar.

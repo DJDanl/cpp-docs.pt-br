@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833251"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040595"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -234,7 +234,7 @@ A função membro estática retorna um objeto de localidade que representa a loc
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência à localidade C.
 
@@ -290,12 +290,12 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *source_locale*\
 A localidade que contém a faceta a ser inserida na localidade de destino.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 A função membro retorna um objeto Locale que substitui ou adiciona a ** \* essa** faceta `Facet` listada em *source_locale*.
 
@@ -358,12 +358,12 @@ Redefine a localidade padrão do programa. Essa chamada afeta a localidade globa
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *new_default_locale*\
 A localidade a ser usada como localidade padrão pelo programa.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 A localidade anterior antes da redefinição da localidade padrão.
 
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *locale_name*\
 Nome de uma localidade.
@@ -520,7 +520,7 @@ Retorna o nome da localidade armazenado.
 string name() const;
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma cadeia de caracteres que fornece o nome da localidade.
 
@@ -567,12 +567,12 @@ Testa a desigualdade de duas localidades.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Uma das localidades que terá sua desigualdade testada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um valor booliano que **`true`** se as localidades não são cópias da mesma localidade. É **`false`** se as localidades são cópias da mesma localidade.
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="localeoperator"></a><a name="op_call"></a> locale:: Operator ()
 
-Compara dois `basic_string` objetos de acordo com as regras de comparação de lexicográfica definidas pela faceta std:: COLLATE deste local <charT> .
+Compara dois `basic_string` objetos de acordo com as regras de comparação de lexicográfica definidas pela `std::collate<charT>` faceta da localidade.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -631,7 +631,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 A primeira cadeia de caracteres a ser comparada.
@@ -639,7 +639,7 @@ A primeira cadeia de caracteres a ser comparada.
 *Certo*\
 A segunda cadeia de caracteres a ser comparada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 - **`true`** Se *Left* for modo lexicográfico menor que *Right*, caso contrário **`false`** .
 
@@ -694,12 +694,12 @@ Testa a igualdade de duas localidades.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 Uma das localidades que terá sua igualdade testada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um valor booliano que **`true`** se as localidades são cópias da mesma localidade. É **`false`** se as localidades não são cópias da mesma localidade.
 

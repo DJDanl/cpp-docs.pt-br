@@ -1,6 +1,6 @@
 ---
-title: Typedef onBeginEndPassFunc
-description: A referência tipo de tipo Deftos C++ Build Insights SDK OnBeginEndPassFunc.
+title: Typedef OnBeginEndPassFunc
+description: A referência de typedef OnBeginEndPassFunc do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3b3fc453245a47463c29ceeb30dfdc48c79aef35
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2008dfb86d6f45a1c05a59e1f0f4f8c7868dcda2
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329081"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041972"
 ---
-# <a name="onbeginendpassfunc-typedef"></a>Typedef onBeginEndPassFunc
+# <a name="onbeginendpassfunc-typedef"></a>Typedef OnBeginEndPassFunc
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-O `OnBeginEndPassFunc` typedef é uma das assinaturas de função utilizadas nas estruturas [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) e [RELOG_CALLBACKS.](relog-callbacks-struct.md)
+O `OnBeginEndPassFunc` typedef é uma das assinaturas de função usadas nas estruturas [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) e [RELOG_CALLBACKS](relog-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnBeginEndPassFunc)(
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
 | `callbackContext` |  |
 

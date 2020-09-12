@@ -1,6 +1,6 @@
 ---
-title: estrutura FRONT_END_FILE_DATA
-description: O C++ Build Insights SDK FRONT_END_FILE_DATA referência de estrutura.
+title: Estrutura de FRONT_END_FILE_DATA
+description: A referência de estrutura do SDK do insights de compilação do C++ FRONT_END_FILE_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7fb6b6fff4f309a3539a290f279d1e31cb1ed76b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2519bfd478776f54cee59ba08b83ea00b96beff
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325543"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041751"
 ---
-# <a name="front_end_file_data-structure"></a>estrutura FRONT_END_FILE_DATA
+# <a name="front_end_file_data-structure"></a>Estrutura de FRONT_END_FILE_DATA
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-A `FRONT_END_FILE_DATA` estrutura descreve o processamento de um arquivo pela parte frontal do compilador.
+A `FRONT_END_FILE_DATA` estrutura descreve o processamento de um arquivo pelo front-end do compilador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,7 +39,7 @@ typedef struct FRONT_END_FILE_DATA_TAG
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
 | `Path` | O caminho absoluto do arquivo, codificado em UTF-8. |
 

@@ -2,29 +2,29 @@
 title: Instalar e configurar ferramentas de build usando o iOS
 ms.date: 10/17/2019
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-ms.openlocfilehash: 87c02f5399465c6131fad2bb9839698699d1e488
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 26dea080f3d3f05885f348dcaf1c66a0db2a36b5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177559"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041985"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>Instalar e configurar ferramentas de build usando o iOS
 
-Você pode usar o Visual Studio com o **desenvolvimento móvel C++**  de plataforma cruzada com ferramentas para editar, depurar e implantar o código Ios no simulador do Ios ou em um dispositivo IOS. Mas, devido a restrições de licenciamento, o código deve ser compilado e executado remotamente em um Mac. Para compilar e executar aplicativos iOS usando o Visual Studio, é necessário instalar e configurar o agente remoto, [vcremote](https://www.npmjs.com/package/vcremote), no Mac. O agente remoto trata de solicitações de build do Visual Studio e executa o aplicativo em um dispositivo iOS conectado ao Mac, ou no Simulator de iOS no Mac.
+Você pode usar o Visual Studio com o **desenvolvimento móvel** de plataforma cruzada com ferramentas C++ para editar, depurar e implantar o código Ios no simulador do Ios ou em um dispositivo IOS. Mas, devido a restrições de licenciamento, o código deve ser compilado e executado remotamente em um Mac. Para compilar e executar aplicativos iOS usando o Visual Studio, é necessário instalar e configurar o agente remoto, [vcremote](https://www.npmjs.com/package/vcremote), no Mac. O agente remoto trata de solicitações de build do Visual Studio e executa o aplicativo em um dispositivo iOS conectado ao Mac, ou no Simulator de iOS no Mac.
 
 > [!NOTE]
-> Para saber mais sobre como usar os serviços hospedados em nuvem do Mac, em vez de um Mac, confira [Configurar o Visual Studio para se conectar ao seu Mac hospedado na nuvem](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac). As instruções são para compilação usando as Ferramentas do Visual Studio para Apache Cordova. Para usar as instruções para compilar usando C++, substitua `vcremote` para `remotebuild`.
+> Para saber mais sobre como usar os serviços hospedados em nuvem do Mac, em vez de um Mac, confira [Configurar o Visual Studio para se conectar ao seu Mac hospedado na nuvem](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017&preserve-view=true#configure-visual-studio-to-connect-to-your-cloud-hosted-mac). As instruções são para compilação usando as Ferramentas do Visual Studio para Apache Cordova. Para usar as instruções para criar usando o C++, substitua `vcremote` por `remotebuild` .
 
 Depois de instalar as ferramentas para criar usando o iOS, consulte este artigo para obter maneiras de configurar e atualizar rapidamente o agente remoto para o desenvolvimento do iOS no Visual Studio e no seu Mac.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 Para instalar e usar o agente remoto para desenvolver código para iOS, é necessário primeiro ter estes pré-requisitos:
 
 - Um computador Mac executando macOS Mojave versão 10.14 ou posterior
 
-- Uma [Apple ID](https://appleid.apple.com/)
+- Uma [ID da Apple](https://appleid.apple.com/)
 
 - Uma conta do [Programa de Desenvolvedor da Apple](https://developer.apple.com/programs/) ativa
 
@@ -52,48 +52,48 @@ Para instalar e usar o agente remoto para desenvolver código para iOS, é neces
 
    Se quiser fazer a assinatura manual, você precisará criar um perfil de provisionamento para seu aplicativo. Para obter informações detalhadas sobre como criar Perfis de provisionamento, consulte [Criar um perfil de provisionamento de desenvolvimento](https://help.apple.com/developer-account/#/devf2eb157f8).
 
-- [Node. js](https://nodejs.org/) versão 12.14.1 e NPM versão 6.13.4
+- [Node.js](https://nodejs.org/) versão 12.14.1 e NPM versão 6.13.4
 
-   Instale a versão 12.14.1 do node. js no seu Mac. Se você instalar o pacote node. js, ele deverá vir com o NPM versão 6.13.4. Outras versões do node. js e do NPM podem não dar suporte a alguns módulos usados no agente remoto `vcremote`, o que pode causar falha na instalação do `vcremote`. Recomendamos que você instale o Node. js usando um Gerenciador de pacotes, como o [node versão Manager](https://nodejs.org/en/download/package-manager/#nvm). Evite usar o `sudo` de comando para instalar o Node. js, pois alguns módulos podem falhar ao serem instalados ao usar o `sudo`.
+   Instale a versão 12.14.1 do Node.js no seu Mac. Se você instalar o pacote de Node.js, ele deverá vir com o NPM versão 6.13.4. Outras versões do Node.js e do NPM podem não dar suporte a alguns módulos usados no agente remoto `vcremote` , o que pode causar `vcremote` falha na instalação. Recomendamos que você instale Node.js usando um Gerenciador de pacotes, como o [node versão Manager](https://nodejs.org/en/download/package-manager/#nvm). Evite usar o comando `sudo` para instalar o Node.js, pois alguns módulos podem falhar ao serem instalados ao usar o `sudo` .
 
-## <a name="Install"></a> Instalar o agente remoto para iOS
+## <a name="install-the-remote-agent-for-ios"></a><a name="Install"></a> Instalar o agente remoto para iOS
 
-Quando você instala o desenvolvimento móvel com C++ carga de trabalho, o Visual Studio pode se comunicar com o [vcremote](https://www.npmjs.com/package/vcremote), um agente remoto em execução no seu Mac para transferir arquivos, compilar e executar seu aplicativo Ios e enviar comandos de depuração.
+Quando você instala o desenvolvimento móvel com carga de trabalho C++, o Visual Studio pode se comunicar com o [vcremote](https://www.npmjs.com/package/vcremote), um agente remoto em execução no seu Mac para transferir arquivos, compilar e executar seu aplicativo Ios e enviar comandos de depuração.
 
-Antes de instalar o agente remoto, verifique se você satisfez os [pré-requisitos](#prerequisites) e concluiu as etapas de instalação em [instalar o desenvolvimento móvel de plataforma cruzada com C++ ](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)o.
+Antes de instalar o agente remoto, verifique se você satisfez os [pré-requisitos](#prerequisites) e concluiu as etapas de instalação em [instalar o desenvolvimento móvel de plataforma cruzada com o C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools).
 
-### <a name="DownloadInstall"></a> Para baixar e instalar o agente remoto
+### <a name="to-download-and-install-the-remote-agent"></a><a name="DownloadInstall"></a> Para baixar e instalar o agente remoto
 
-- No aplicativo de terminal no seu Mac, verifique se a versão do node. js atualmente em uso é a versão necessária 12.14.1. Para verificar a versão, execute o comando:
+- No aplicativo de terminal no seu Mac, verifique se a versão Node.js atualmente em uso é a versão necessária 12.14.1. Para verificar a versão, execute o comando:
 
   `node -v`
   
-  Se não for a versão correta, talvez seja necessário seguir as instruções de instalação do node. js nos pré-requisitos. Em seguida, reinicie o Node. js.
+  Se não for a versão correta, talvez seja necessário seguir as instruções de instalação do Node.js nos pré-requisitos. Em seguida, reinicie o Node.js.
 
-- Depois de verificar se o Node. js necessário está em uso, execute este comando para instalar o vcremote sob essa versão do node. js:
+- Depois de verificar se o Node.js necessário está em uso, execute este comando para instalar o vcremote nessa versão do Node.js:
 
    `npm install -g --unsafe-perm vcremote`
 
-   A opção de instalação global ( **-g**) é recomendada, mas não é necessária. Se você não usar a opção de instalação global, o vcremote será instalado no caminho ativo atual no aplicativo de terminal.
+   A opção de instalação global (**-g**) é recomendada, mas não é necessária. Se você não usar a opção de instalação global, o vcremote será instalado no caminho ativo atual no aplicativo de terminal.
 
-   Durante a instalação, o `vcremote` é instalado e o modo de desenvolvedor é ativado no seu Mac. [Homebrew](https://brew.sh/) e dois pacotes npm, `vcremote-lib` e `vcremote-utils`, também são instalados. Após a conclusão da instalação, ignore os avisos sobre dependências opcionais ignoradas.
+   Durante a instalação, o `vcremote` é instalado e o modo de desenvolvedor é ativado no seu Mac. [Homebrew](https://brew.sh/) e dois pacotes NPM, `vcremote-lib` e `vcremote-utils` também são instalados. Após a conclusão da instalação, ignore os avisos sobre dependências opcionais ignoradas.
 
    > [!NOTE]
-   > Para instalar o Homebrew, você deve ter acesso sudo (administrador). Se precisar instalar `vcremote` sem sudo, você poderá instalar o Homebrew manualmente em um local usr/local e adicionar sua pasta bin ao seu caminho. Para obter mais informações, consulte a [Documentação do Homebrew](https://github.com/Homebrew/homebrew/wiki/Installation). Para habilitar manualmente o modo de desenvolvedor, digite este comando no aplicativo Terminal: `DevToolsSecurity -enable`
+   > Para instalar o Homebrew, você deve ter acesso sudo (administrador). Se precisar instalar `vcremote` o sem sudo, você poderá instalar o Homebrew manualmente em um local usr/local e adicionar sua pasta bin ao seu caminho. Para obter mais informações, consulte a [Documentação do Homebrew](https://github.com/Homebrew/homebrew/wiki/Installation). Para habilitar manualmente o modo de desenvolvedor, digite este comando no aplicativo Terminal: `DevToolsSecurity -enable`
 
 Se atualizar para uma nova versão do Visual Studio, você também deverá atualizar para a versão atual do agente remoto. Para atualizar o agente remoto, repita as etapas para baixar e instalá-lo.
 
-## <a name="Start"></a> Iniciar o agente remoto
+## <a name="start-the-remote-agent"></a><a name="Start"></a> Iniciar o agente remoto
 
 O agente remoto deve estar em execução para o Visual Studio compilar e executar seu código do iOS. O Visual Studio deve ser emparelhado ao agente remoto antes que possa se comunicar. Por padrão, o agente remoto é executado no modo de conexão segura, o que requer um PIN para emparelhar ao Visual Studio.
 
-### <a name="RemoteAgentStartServer"></a> Para iniciar o agente remoto
+### <a name="to-start-the-remote-agent"></a><a name="RemoteAgentStartServer"></a> Para iniciar o agente remoto
 
 - No aplicativo Terminal no seu Mac, insira:
 
    `vcremote`
 
-   Esse comando inicia o agente remoto com um diretório de Build padrão de `~/vcremote`. Para ver opções de configuração adicionais, consulte [Configurar o agente remoto no Mac](#ConfigureMac).
+   Esse comando inicia o agente remoto com um diretório de compilação padrão do `~/vcremote` . Para ver opções de configuração adicionais, consulte [Configurar o agente remoto no Mac](#ConfigureMac).
 
 Na primeira vez que você iniciar o agente e sempre que criar um novo certificado de cliente, você receberá as informações necessárias para configurar o agente no Visual Studio, incluindo o nome do host, a porta e o PIN.
 
@@ -107,7 +107,7 @@ O PIN gerado é de uso único e só é válido por um período limitado. Se voc�
 
 #### <a name="to-disable-secured-connection-mode"></a>Para desabilitar o modo de conexão segura
 
-- Para desabilitar o modo de conexão segura no `vcremote`, digite este comando no aplicativo de terminal em seu Mac:
+- Para desabilitar o modo de conexão segura no `vcremote` , digite este comando no aplicativo de terminal em seu Mac:
 
    `vcremote --secure false`
 
@@ -121,15 +121,15 @@ Depois de iniciar o agente remoto, você pode usá-lo no Visual Studio até par�
 
 #### <a name="to-stop-the-remote-agent"></a>Para parar o agente remoto
 
-- Na janela do terminal `vcremote` está em execução no, digite **Control**+**C**.
+- Na janela do terminal `vcremote` está em execução no, digite o **controle** + **C**.
 
-## <a name="ConfigureVS"></a> Configurar o agente remoto no Visual Studio
+## <a name="configure-the-remote-agent-in-visual-studio"></a><a name="ConfigureVS"></a> Configurar o agente remoto no Visual Studio
 
 Para se conectar ao agente remoto do Visual Studio, você deve especificar a configuração remota nas opções do Visual Studio.
 
 ### <a name="to-configure-the-remote-agent-from-visual-studio"></a>Para configurar o agente remoto do Visual Studio
 
-1. Se o agente não estiver sendo executado no Mac, siga as etapas em [Iniciar o agente remoto](#Start). Seu Mac deve estar executando `vcremote` para que o Visual Studio Emparelhe, conecte e compile seu projeto com êxito.
+1. Se o agente não estiver sendo executado no Mac, siga as etapas em [Iniciar o agente remoto](#Start). Seu Mac deve estar em execução para que o `vcremote` Visual Studio Emparelhe, conecte e compile seu projeto com êxito.
 
 1. No Mac, obtenha o nome do host ou o endereço IP do seu Mac.
 
@@ -137,7 +137,7 @@ Para se conectar ao agente remoto do Visual Studio, você deve especificar a con
 
 1. Na barra de menus do Visual Studio, escolha **Ferramentas**, **Opções**.
 
-1. Na caixa de diálogo **Opções**, expanda **Multiplataforma**, **C++** , **iOS**.
+1. Na caixa de diálogo **Opções**, expanda **Multiplataforma**, **C++**, **iOS**.
 
 1. Nos campos **Nome do Host** e **Porta**, insira os valores especificados pelo agente remoto quando você o iniciou. O nome do host pode ser o nome DNS ou o endereço IP do seu Mac. A porta padrão é a 3030.
 
@@ -154,13 +154,13 @@ Para se conectar ao agente remoto do Visual Studio, você deve especificar a con
 
    Se o emparelhamento não for bem-sucedido, verifique se o agente remoto está em execução seguindo as etapas em [Iniciar o agente remoto](#Start). Se muito tempo tiver decorrido desde que o PIN do agente remoto foi gerado, siga as etapas em [Gerar um novo PIN de segurança](#GeneratePIN) no Mac e tente novamente. Se você estiver usando o nome de host do seu Mac, tente usar o endereço IP no campo **Nome do Host** em vez disso.
 
-1. Atualize o nome da pasta no campo **Raiz Remota** para especificar a pasta usada pelo agente remoto no diretório base ( *~* ) no Mac. Por padrão, o agente remoto usa `/Users/<username>/vcremote` como a raiz remota.
+1. Atualize o nome da pasta no campo **Raiz Remota** para especificar a pasta usada pelo agente remoto no diretório base (*~*) no Mac. Por padrão, o agente remoto usa `/Users/<username>/vcremote` como a raiz remota.
 
 1. Escolha **OK** para salvar as configurações de conexão de emparelhamento remoto.
 
 O Visual Studio usa as mesmas informações para se conectar ao agente remoto no seu Mac sempre que você usá-lo. Você não precisa emparelhar o Visual Studio ao agente remoto novamente a menos que gere um novo certificado de segurança no Mac ou que seu nome de host ou endereço IP seja alterado.
 
-## <a name="GeneratePIN"></a> Gerar um novo PIN de segurança
+## <a name="generate-a-new-security-pin"></a><a name="GeneratePIN"></a> Gerar um novo PIN de segurança
 
 Quando você inicia o agente remoto pela primeira vez, o PIN gerado é válido por um período limitado — por padrão, 10 minutos. Se você não emparelhar o Visual Studio ao agente remoto antes desse período expirar, será necessário gerar um novo PIN.
 
@@ -174,13 +174,13 @@ Quando você inicia o agente remoto pela primeira vez, o PIN gerado é válido p
 
    O agente remoto gera um novo PIN temporário. Para emparelhar o Visual Studio usando o novo PIN, repita as etapas em [Configurar o agente remoto no Visual Studio](#ConfigureVS).
 
-## <a name="GenerateCert"></a> Gerar um novo certificado do servidor
+## <a name="generate-a-new-server-certificate"></a><a name="GenerateCert"></a> Gerar um novo certificado do servidor
 
 Por motivos de segurança, os certificados de servidor que emparelham o Visual Studio ao agente remoto estão vinculados ao nome de host ou ao endereço IP do seu Mac. Se esses valores forem alterados, você precisará gerar um novo certificado do servidor e reconfigurar o Visual Studio com os novos valores.
 
 ### <a name="to-generate-a-new-server-certificate"></a>Para gerar um novo certificado do servidor
 
-1. Pare o agente de `vcremote`.
+1. Pare o `vcremote` agente.
 
 1. Digite este comando no aplicativo Terminal:
 
@@ -196,7 +196,7 @@ Por motivos de segurança, os certificados de servidor que emparelham o Visual S
 
 1. Para emparelhar o Visual Studio usando o novo PIN, repita as etapas em [Configurar o agente remoto no Visual Studio](#ConfigureVS).
 
-## <a name="ConfigureMac"></a> Configurar o agente remoto no Mac
+## <a name="configure-the-remote-agent-on-the-mac"></a><a name="ConfigureMac"></a> Configurar o agente remoto no Mac
 
 Você pode configurar o agente remoto usando várias opções de linha de comando. Por exemplo, você pode especificar a porta para escutar solicitações de compilação e especificar o número máximo de compilações a serem mantidas no sistema de arquivos. Por padrão, o limite é de 10 compilações. O agente remoto removerá as compilações que ultrapassarem o máximo no desligamento.
 
@@ -216,7 +216,7 @@ Você pode configurar o agente remoto usando várias opções de linha de comand
 
    `vcremote --serverDir directory_path`
 
-   em que *directory_path* é o local no seu Mac para colocar os arquivos de log, compilações e certificados de servidor. Por padrão, esse local é `/Users/<username>/vcremote`. As compilações são organizadas por número de build nesse local.
+   em que *directory_path* é o local no seu Mac para colocar os arquivos de log, compilações e certificados de servidor. Por padrão, esse local é `/Users/<username>/vcremote` . As compilações são organizadas por número de build nesse local.
 
 - Para usar um processo em segundo plano para capturar `stdout` e `stderr` para um arquivo chamado server.log, digite:
 
@@ -234,7 +234,7 @@ Você pode configurar o agente remoto usando várias opções de linha de comand
 
 ### <a name="debugging-on-an-ios-device"></a>Depuração em um dispositivo iOS
 
-Se a depuração em um dispositivo iOS não funcionar, poderá haver problemas com a ferramenta [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller), que é usada para comunicação com um dispositivo iOS. Essa ferramenta normalmente é instalada a partir do Homebrew durante a instalação do `vcremote`. Siga as etapas abaixo para solucionar esse problema.
+Se a depuração em um dispositivo iOS não funcionar, poderá haver problemas com a ferramenta [ideviceinstaller](https://github.com/libimobiledevice/ideviceinstaller), que é usada para comunicação com um dispositivo iOS. Essa ferramenta é normalmente instalada a partir do Homebrew durante a instalação do `vcremote` . Siga as etapas abaixo para solucionar esse problema.
 
 Abra o aplicativo de terminal e atualize `ideviceinstaller` e suas dependências executando os seguintes comandos na ordem:
 
@@ -258,22 +258,22 @@ Abra o aplicativo de terminal e atualize `ideviceinstaller` e suas dependências
 
    `brew install --HEAD libimobiledevice`
 
-1. Desinstalar e reinstalar o `ideviceinstaller`
+1. Desinstalar e reinstalar `ideviceinstaller`
 
    `brew uninstall ideviceinstaller`
 
    `brew install ideviceinstaller`
 
-Verifique se `ideviceinstaller` pode se comunicar com o dispositivo ao tentar listar os aplicativos instalados no dispositivo:
+Verifique se `ideviceinstaller` o pode se comunicar com o dispositivo ao tentar listar os aplicativos instalados no dispositivo:
 
 `ideviceinstaller -l`
 
-Se `ideviceinstaller` erros de que ele não pode acessar a pasta `/var/db/lockdown`, altere o privilégio na pasta com:
+Se os `ideviceinstaller` erros que não podem acessar a pasta `/var/db/lockdown` , altere o privilégio na pasta com:
 
 `sudo chmod 777 /var/db/lockdown`
 
-Em seguida, verifique novamente se `ideviceinstaller` pode se comunicar com o dispositivo.
+Em seguida, verifique novamente se o `ideviceinstaller` pode se comunicar com o dispositivo.
 
 ## <a name="see-also"></a>Confira também
 
-- [Instalar o desenvolvimento móvel de plataforma cruzada com oC++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)
+- [Instalar desenvolvimento de tecnologia móvel multiplataforma com C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)

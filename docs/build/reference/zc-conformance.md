@@ -1,20 +1,21 @@
 ---
 title: /Zc (conformidade)
-ms.date: 03/06/2018
+description: As opções do compilador de conformidade do/Zc habilitam ou desabilitam o suporte para conformidade ou comportamento compatível com versões anteriores.
+ms.date: 09/10/2020
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 6d6d3b7736fd1775372a3b2093c53e177db5099e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234348"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041517"
 ---
-# <a name="zc-conformance"></a>`/Zc`Conformidade
+# <a name="zc-conformance"></a>`/Zc` Conformidade
 
 Você pode usar as **`/Zc`** Opções do compilador para especificar o comportamento do compilador padrão ou específico da Microsoft.
 
@@ -38,6 +39,7 @@ Estas são as **`/Zc`** Opções do compilador:
 | [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Habilitar o implícito **`noexcept`** nas funções necessárias (ativado por padrão). |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | Remova a função ou os dados sem referência se ele for COMDAT ou tiver somente vínculo interno (desativado por padrão). |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | Impor regras C++ 17 **`noexcept`** (ativadas por padrão no c++ 17 ou posterior). |
+| [`/Zc:preprocessor`](zc-preprocessor.md) | Use o novo pré-processador de conformidade (desativado por padrão, exceto em C11/C17). |
 | [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | Um UDT temporário não será associado a uma referência lvalue não const (desativado por padrão). |
 | [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) | Impor regras de conversão de tipo C++ Explicit padrão (desativado por padrão). |
 | [`/Zc:sizedDealloc`](zc-sizeddealloc-enable-global-sized-dealloc-functions.md) | Habilitar funções de desalocação de tamanho global do C++ 14 (ativada por padrão). |

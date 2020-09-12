@@ -3,12 +3,12 @@ title: Funções de CRT sem suporte em aplicativos da Plataforma Universal do Wi
 description: Guia de referência para funções CRT sem suporte em aplicativos Plataforma Universal do Windows.
 ms.date: 04/16/2020
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: cfe5fbc1ce505c255e074dda2c3a240b46754eee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 793283a5c20f04e58de22fcfca5ede1926de369c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845712"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041829"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funções de CRT sem suporte em aplicativos da Plataforma Universal do Windows
 
@@ -18,7 +18,7 @@ A tabela a seguir lista as funções do CRT que não estão disponíveis quando 
 
 ## <a name="unsupported-crt-functions"></a>Funções CRT sem suporte
 
-|Função|Descrição|Solução alternativa|
+| Função | Descrição | Solução alternativa |
 |-|-|-|
 |`_beep` `_sleep` `_seterrormode`|Essas funções eram obsoletas em versões anteriores do CRT. Além disso, as APIs do Win32 correspondentes não estão disponíveis para aplicativos UWP.|Sem solução alternativa.|
 |`chdir` `_chdrive` `getcwd`|Essas funções são obsoletas ou não são thread-safe.|Use `_chdir` `_getcwd` e funções relacionadas.|
@@ -33,12 +33,12 @@ A tabela a seguir lista as funções do CRT que não estão disponíveis quando 
 |`_getsystime` `_setsystime`|Elas eram APIs obsoletas em versões anteriores do CRT. Além disso, um usuário não pode definir a hora do sistema em um aplicativo UWP devido à falta de permissões.|Para apenas obter a hora do sistema, use a API do Win32 `GetSystemTime`. Não é possível definir a hora do sistema.|
 |`_environ``_putenv` `_putenv_s` `_searchenv` `_searchenv_s` `_dupenv_s` `_wputenv` `_wputenv_s` `_wsearchenv` getenv `_wdupenv_s` `_wenviron` getenv_s `_wgetenv` putenv `_wgetenv_s` `_wsearchenv_s``tzset`|As variáveis de ambiente não estão disponíveis para aplicativos UWP.|Sem solução alternativa. Para definir o fuso horário, use `_tzset` .|
 |`_loaddll` `_getdllprocaddr` `_unloaddll`|Elas eram funções obsoletas em versões anteriores do CRT. Além disso, um usuário não pode carregar DLLs, exceto aquelas no mesmo pacote de aplicativos.|Use as APIs do Win32 `LoadPackagedLibrary`, `GetProcAddress`e `FreeLibrary` para carregar e usar DLLs empacotadas.|
-|`_wexecl``_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe`' ' gerative ` ` spawnle ` ` spawnlp ` ` spawnlpe ` ` spawnv ` ` spawnve ` ` spawnvp ` ` spawnvpe ` ` System '|A funcionalidade não está disponível em aplicativos UWP. Um aplicativo UWP não pode invocar outro aplicativo UWP ou um aplicativo de área de trabalho.|Sem solução alternativa.|
+|`_wexecl` `_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe` `spawnl` `spawnle` `spawnlp` `spawnlpe` `spawnv` `spawnve` `spawnvp` `spawnvpe` `system`|A funcionalidade não está disponível em aplicativos UWP. Um aplicativo UWP não pode invocar outro aplicativo UWP ou um aplicativo de área de trabalho.|Sem solução alternativa.|
 |`_heapwalk` `_heapadd` `_heapchk` `_heapset` `_heapused`|Essas funções são normalmente usadas para funcionar com o heap. No entanto, não há suporte para as APIs do Win32 correspondentes em aplicativos UWP. Além disso, os aplicativos não podem mais criar ou usar heaps privados.|Sem solução alternativa. No entanto, o `_heapwalk` está disponível em DEBUG CRT, apenas para fins de depuração. Essas funções não podem ser usadas em aplicativos que são carregados para o Microsoft Store.|
 
 As funções a seguir estão disponíveis no CRT para aplicativos UWP. No entanto, use-os somente quando não for possível usar as APIs do Win32 ou do Windows Runtime correspondentes, como quando você estiver portando grandes bases de código:
 
-|Funções|Solução alternativa|
+| Funções | Solução alternativa |
 |-|-|
 |Funções de cadeia de caracteres de um byte – por exemplo, `strcat`, `strcpy`, `strlwr`e assim por diante.|Torne seus aplicativos UWP estritamente Unicode, pois todas as APIs do Win32 e Windows Runtime APIs que são expostas usam apenas conjuntos de caracteres Unicode.  Funções de byte único foram deixadas para portar grandes bases de código, mas, caso contrário, devem ser evitadas. As funções de caracteres largos correspondentes devem ser usadas em vez disso, quando possível.|
 |Funções de E/S de transmissão e E/S de arquivo de nível baixo — por exemplo, `fopen`, `open`e assim por diante.|Essas funções são síncronas, o que não é recomendado para aplicativos UWP. Em seus aplicativos UWP, use APIs assíncronas para abrir, ler e gravar arquivos para evitar o bloqueio do thread da interface do usuário. Exemplos de APIs desse tipo são os contidos na classe `Windows::Storage::FileIO` .|
@@ -47,7 +47,7 @@ As funções a seguir estão disponíveis no CRT para aplicativos UWP. No entant
 
 As APIs mencionadas anteriormente e as APIs a seguir não estão disponíveis em aplicativos de armazenamento do Windows 8. x e Windows Phone aplicativos 8. x.
 
-|Funções|Descrição|Solução alternativa|
+| Funções | Descrição | Solução alternativa |
 |-|-|-|
 |`_beginthread` `_beginthreadex` `_endthread` `_endthreadex`|O threading de APIs do Win32 não está disponível em aplicativos do Windows 8.x da Loja.|Use o `Windows Runtime Windows::System::Threading::ThreadPool` ou `concurrency::task` em vez disso.|
 |`_chdir` `_wchdir` `_getcwd` `_getdcwd` `_wgetcwd` `_wgetdcwd`|O conceito de um diretório de trabalho não se aplica aos aplicativos do Windows 8.x da Loja.|Use caminhos completos.|

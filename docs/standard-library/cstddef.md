@@ -1,24 +1,25 @@
 ---
 title: '&lt;cstddef&gt;'
-ms.date: 11/04/2016
+description: Descreve <stddef. h>, que garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam declarados no `std` namespace.
+ms.date: 9/4/2020
 f1_keywords:
 - <cstddef>
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 186de0e893c413a25d31d4f1431c280d749e9541
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222518"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040022"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
 Inclui o cabeçalho da biblioteca padrão C \<stddef.h> e adiciona nomes associados ao `std` namespace. A inclusão desse cabeçalho garante que os nomes declarados usando vínculo externo no cabeçalho da biblioteca padrão C sejam declarados no `std` namespace.
 
 > [!NOTE]
-> \<cstddef>inclui o tipo **byte** e não inclui o tipo **`wchar_t`** .
+> \<cstddef> inclui o tipo **byte** e não inclui o tipo **`wchar_t`** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,7 +41,7 @@ namespace std {
 #define offsetof(type, member-designator)
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *ptrdiff_t*\
 Um tipo de inteiro assinado definido por implementação que pode conter a diferença de dois subscritos em um objeto de matriz.

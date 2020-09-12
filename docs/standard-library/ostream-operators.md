@@ -4,20 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: 3851003500d37a11a88736cf611b69a2d6b1813c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228148"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039762"
 ---
 # <a name="ltostreamgt-operators"></a>Operadores &lt;ostream&gt;
 
-||
-|-|
-|[operador&lt;&lt;](#op_lt_lt)|
+[operador&lt;&lt;](#op_lt_lt)
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operador&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operador&lt;&lt;
 
 Grava vários tipos no fluxo.
 
@@ -78,7 +76,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
     Ty val);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Ch*\
 Um caractere.
@@ -98,7 +96,7 @@ Características de caractere.
 *Val*\
 O tipo
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O fluxo.
 

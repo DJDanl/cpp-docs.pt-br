@@ -1,6 +1,6 @@
 ---
-title: estrutura INVOCATION_VERSION_DATA
-description: O C++ Build Insights SDK INVOCATION_VERSION_DATA referência de estrutura.
+title: Estrutura de INVOCATION_VERSION_DATA
+description: A referência de estrutura do SDK do insights de compilação do C++ INVOCATION_VERSION_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1211b4eb999fd63767af71c6884d7d20d6920df0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec54c560dd408dc3beecbc20eaac69d389c7ec37
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325467"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041553"
 ---
-# <a name="invocation_version_data-structure"></a>estrutura INVOCATION_VERSION_DATA
+# <a name="invocation_version_data-structure"></a>Estrutura de INVOCATION_VERSION_DATA
 
 ::: moniker range="<=vs-2015"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -42,11 +42,11 @@ typedef struct INVOCATION_VERSION_DATA_TAG
 
 ## <a name="members"></a>Membros
 
-|  |  |
+| Nome | Descrição |
 |--|--|
 | `VersionMajor` | O número principal da versão. |
-| `VersionMinor` | A versão é menor número. |
-| `BuildNumberMajor` | O número maior da construção. |
-| `BuildNumberMinor` | O número menor da compilação. |
+| `VersionMinor` | O número secundário da versão. |
+| `BuildNumberMajor` | O número principal da compilação. |
+| `BuildNumberMinor` | O número secundário da compilação. |
 
 ::: moniker-end
