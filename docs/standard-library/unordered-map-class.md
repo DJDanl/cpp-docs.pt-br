@@ -1,6 +1,7 @@
 ---
 title: Classe unordered_map
-ms.date: 11/04/2016
+description: Referência de API para a classe de contêiner da biblioteca padrão C++ `unordered_map` , que controla uma sequência de elementos de comprimento variável.
+ms.date: 9/9/2020
 f1_keywords:
 - unordered_map/std::unordered_map
 - unordered_map/std::unordered_map::allocator_type
@@ -27,6 +28,7 @@ f1_keywords:
 - unordered_map/std::unordered_map::cbegin
 - unordered_map/std::unordered_map::cend
 - unordered_map/std::unordered_map::clear
+- unordered_map/std::unordered_map::contains
 - unordered_map/std::unordered_map::count
 - unordered_map/std::unordered_map::emplace
 - unordered_map/std::unordered_map::emplace_hint
@@ -74,6 +76,7 @@ helpviewer_keywords:
 - std::unordered_map::cbegin
 - std::unordered_map::cend
 - std::unordered_map::clear
+- std::unordered_map::contains
 - std::unordered_map::count
 - std::unordered_map::emplace
 - std::unordered_map::emplace_hint
@@ -138,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: bde29e2d6148dd5aa5c39ac6a923048694e3a32d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8fe2e153e3a7483d9c4698ef4a87e281ace653fc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562435"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042128"
 ---
 # <a name="unordered_map-class"></a>Classe unordered_map
 
@@ -209,6 +212,7 @@ A classe do alocador.
 |[cend](#cend)|Designa o fim da sequência controlada.|
 |[formatação](#clear)|Remove todos os elementos.|
 |[contagem](#count)|Localiza o número de elementos que correspondem a uma chave especificada.|
+|[contém](#contains)<sup>c++ 20</sup>|Verifique se há um elemento com a chave especificada no `unordered_map` .|
 |[emplace](#emplace)|Adiciona um elemento construído no lugar.|
 |[emplace_hint](#emplace_hint)|Adiciona um elemento construído no lugar, com dica.|
 |[empty](#empty)|Testa se nenhum elemento está presente.|
@@ -302,7 +306,7 @@ const Ty& at(const Key& key) const;
 *chaves*\
 O valor de chave a ser localizado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao valor de dados do elemento encontrado.
 
@@ -607,7 +611,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso de encaminhamento que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio `cbegin() == cend()` ).
 
@@ -633,7 +637,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso de encaminhamento que aponta muito além do fim do intervalo.
 
@@ -902,6 +906,58 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
+## <a name="unordered_mapcontains"></a><a name="contains"></a> unordered_map:: contém
+
+Verifica se há um elemento no `unordered_map` com a chave especificada.
+Introduzido em C++ 20.
+
+```cpp
+bool contains(const Key& key) const;
+<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*C*\
+Tipo da chave.
+
+*chaves*\
+O valor de chave do elemento a ser pesquisado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se o elemento for encontrado no contêiner; `false` caso contrário. 
+
+### <a name="remarks"></a>Comentários
+
+`contains()` é novo no C++ 20. Para usá-lo, especifique a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) .
+
+`template<class K> bool contains(const K& key) const` só participará da resolução de sobrecarga se `key_compare` for transparente.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_map>
+#include <iostream>
+
+int main()
+{
+    std::unordered_map<int, bool> theUnorderedMap = {{0, false}, {1,true}};
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedMap.contains(1) << '\n';
+    std::cout << theUnorderedMap.contains(2) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="unordered_mapcount"></a><a name="count"></a> unordered_map:: Count
 
 Localiza o número de elementos que correspondem a uma chave especificada.
@@ -1030,7 +1086,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no `unordered_map` , a menos que ele já contenha um elemento cujo valor seja ordenado de maneira equivalente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um `pair` cujo **`bool`** componente retorna true se uma inserção foi feita e false se o `unordered_map` já continha um elemento cuja chave tinha um valor equivalente na ordenação e cujo componente de iterador retorna o endereço em que um novo elemento foi inserido ou onde o elemento já estava localizado.
 
@@ -1061,7 +1117,7 @@ Os argumentos encaminhados para construir um elemento a ser inserido no unordere
 *posição*\
 Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador para o elemento recém-inserido.
 
@@ -1256,7 +1312,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do mapa, se esse elemento não existir.
 
@@ -1495,7 +1551,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 As funções de membro de elemento único, (1) e (2), retornam um [par](../standard-library/pair-structure.md) cujo **`bool`** componente é true se uma inserção foi feita e false se o unordered_map já continha um elemento cuja chave tinha um valor equivalente na ordenação. O componente do iterador do par de valor de retorno aponta para o elemento inserido recentemente se o **`bool`** componente for verdadeiro ou para o elemento existente se o **`bool`** componente for false.
 
@@ -2115,7 +2171,7 @@ Ty& operator[](Key&& keyval);
 *Keyval*\
 O valor de chave a ser localizado ou inserido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao valor de dados do elemento inserido.
 

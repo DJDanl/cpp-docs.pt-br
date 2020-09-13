@@ -3,12 +3,12 @@ title: Aprimoramentos de conformidade do C++
 ms.date: 08/04/2020
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841383"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042115"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>A saída do pré-processador preserva as novas linhas
 
-O pré-processador experimental agora preserva as novas linhas e o espaço em branco ao usar **`/P`** ou **`/E`** com **`/experimental:preprocessor`** . Essa alteração pode ser desabilitada usando o **`/d1experimental:preprocessor:oldWhitespace`** .
+O pré-processador experimental agora preserva as novas linhas e o espaço em branco ao usar **`/P`** ou **`/E`** com **`/experimental:preprocessor`** .
 
 Dada esta origem de exemplo,
 
@@ -1566,7 +1566,7 @@ Essas variáveis devem ser definidas na mesma unidade de tradução em que são 
 
 Em padrões do C++ antes do C++ 20, uma conversão de uma classe derivada em uma classe base não exigia que a classe derivada fosse um tipo de classe completo. O Comitê standard do C++ aprovou uma alteração de relatório de defeito retroativa que se aplica a todas as versões da linguagem C++. Essa alteração alinha o processo de conversão com características de tipo, como `std::is_base_of` , que exigem que a classe derivada seja um tipo de classe completo.
 
-Veja um exemplo:
+Aqui está um exemplo:
 
 ```cpp
 template<typename A, typename B>
