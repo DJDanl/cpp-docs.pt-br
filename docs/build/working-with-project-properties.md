@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078233"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042180"
 ---
 # <a name="set-compiler-and-build-properties"></a>Defina propriedades de build e compilador
 
-No IDE, todas as informações necessárias para compilar um projeto são expostas como *propriedades*. Essas informações incluem nome do aplicativo, extensão (como DLL, LIB, EXE), opções do compilador, opções do vinculador, configurações do depurador, etapas de build personalizadas e muitas outras. Normalmente, você usa *páginas de propriedades* para exibir e modificar essas propriedades. Para acessar as páginas de propriedades, escolha **Project** > **_ProjectName_ Properties** no menu principal ou clique com o botão direito do mouse no nó do projeto em **Gerenciador de soluções** e escolha **Propriedades**.
+No IDE, todas as informações necessárias para compilar um projeto são expostas como *propriedades*. Essas informações incluem nome do aplicativo, extensão (como DLL, LIB, EXE), opções do compilador, opções do vinculador, configurações do depurador, etapas de build personalizadas e muitas outras. Normalmente, você usa *páginas de propriedades* para exibir e modificar essas propriedades. Para acessar as páginas de propriedades, escolha **Project**  >  **_ProjectName_ Properties** no menu principal ou clique com o botão direito do mouse no nó do projeto em **Gerenciador de soluções** e escolha **Propriedades**.
 
 ## <a name="default-properties"></a>Propriedades padrão
 
@@ -46,7 +46,7 @@ O valor de plataforma de destino **Qualquer CPU** que pode ser visto no **Config
 Para obter mais informações sobre como definir propriedades para uma compilação de depuração, consulte:
 
 - [Configurações do projeto para uma configuração de depuração do C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
-- [Configurações e preparação do depurador](/visualstudio/debugger/debugger-settings-and-preparation)
+- [Preparação e configurações do depurador](/visualstudio/debugger/debugger-settings-and-preparation)
 - [Preparação da depuração: Visual C++ tipos de projeto](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Especificar arquivos de símbolo (.pdb) e de origem no depurador do Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
@@ -82,7 +82,7 @@ Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se 
 
 #### <a name="to-create-a-user-defined-macro"></a>Para criar uma macro definida pelo usuário
 
-1. Abra a janela **Gerenciador de propriedades** . (Na barra de menus, escolha **Exibir** > **Gerenciador de propriedades** ou **Exibir** > **outro** > **Gerenciador de propriedades**do Windows.) Abra o menu de atalho para uma folha de Propriedades (seu nome termina em. User) e escolha **Propriedades**. A caixa de diálogo **Páginas de Propriedades** dessa folha de propriedades será aberta.
+1. Abra a janela **Gerenciador de propriedades** . (Na barra de menus, escolha **Exibir**  >  **Gerenciador de propriedades** ou **Exibir**  >  **outras**  >  **Gerenciador de propriedades**do Windows.) Abra o menu de atalho para uma folha de Propriedades (seu nome termina em. User) e escolha **Propriedades**. A caixa de diálogo **Páginas de Propriedades** dessa folha de propriedades será aberta.
 
 1. No painel esquerdo da caixa de diálogo, selecione **Macros de Usuário**. No painel direito, escolha o botão **Adicionar Macro** para abrir a caixa de diálogo **Adicionar Macro de Usuário**.
 
@@ -90,13 +90,13 @@ Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se 
 
 ## <a name=""></a><a name="property_editor">Editor de propriedade</a>
 
-Você pode usar o Editor de Propriedades para alterar certas propriedades da cadeia de caracteres e selecionar macros como valores. Para acessar o Editor de Propriedades, selecione uma propriedade em uma página de propriedades e, em seguida, selecione o botão de seta para a direita. Se a lista suspensa contiver ** \<editar>**, você poderá escolher para exibir o editor de propriedades dessa propriedade.
+Você pode usar o Editor de Propriedades para alterar certas propriedades da cadeia de caracteres e selecionar macros como valores. Para acessar o Editor de Propriedades, selecione uma propriedade em uma página de propriedades e, em seguida, selecione o botão de seta para a direita. Se a lista suspensa contiver **\<Edit>** , você poderá escolher para exibir o editor de propriedades dessa propriedade.
 
-![Menu suspenso&#95;editor de&#95;de propriedades](media/property_editor_dropdown.png "Property_Editor_Dropdown")
+![Um controle suspenso de propriedade é usado para acessar o editor de propriedade](media/property_editor_dropdown.png "Menu suspenso do editor de propriedades")
 
 No Editor de Propriedades, escolha o botão **Macros** para exibir as macros disponíveis e seus valores atuais. A ilustração a seguir mostra o Editor de Propriedades da propriedade **Diretórios de Inclusão Adicionais** depois de o botão **Macros** ser escolhido. Quando a caixa de seleção **Herdar do pai ou padrões de projeto** é marcada e você adiciona um novo valor, ele é acrescentado a todos os valores atualmente herdados. Se você desmarcar a caixa de seleção, o novo valor substituirá os valores herdados. Na maioria dos casos, deixe a caixa de seleção marcada.
 
-![Editor de propriedades, Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![A caixa de diálogo do editor de propriedades para a propriedade de diretórios de inclusão](media/propertyeditorvc.png "PropertyEditorVC")
 
 ## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>Adicionar um diretório de inclusão ao conjunto de diretórios padrão
 
@@ -117,7 +117,7 @@ Pesquisar somente em valores (subcadeia de caracteres sem diferenciação de mai
 
 ## <a name="set-environment-variables-for-a-build"></a>Definir variáveis de ambiente para uma compilação
 
-O compilador MSVC (CL. exe) reconhece determinadas variáveis de ambiente, especificamente LIB, LIBPATH, PATH e INCLUDE. Quando você compila com o IDE, as propriedades definidas na página de propriedades [Página de Propriedades de Diretórios do VC++](reference/vcpp-directories-property-page.md) são usadas para definir essas variáveis de ambiente. Se os valores LIB, LIBPATH e INCLUDE já tiverem sido definidos, por exemplo, por um prompt de comando do desenvolvedor, eles serão substituídos pelos valores das propriedades correspondentes do MSBuild. A compilação, em seguida, anexa o valor da propriedade de diretórios executáveis dos Diretórios VC++ como PATH. Defina uma variável de ambiente definida pelo usuário criando uma macro definida pelo usuário e, em seguida, marcando a caixa que indica **Definir esta macro como uma variável de ambiente no ambiente de build**.
+O compilador MSVC (cl.exe) reconhece determinadas variáveis de ambiente, especificamente LIB, LIBPATH, PATH e INCLUDE. Quando você compila com o IDE, as propriedades definidas na página de propriedades [Página de Propriedades de Diretórios do VC++](reference/vcpp-directories-property-page.md) são usadas para definir essas variáveis de ambiente. Se os valores LIB, LIBPATH e INCLUDE já tiverem sido definidos, por exemplo, por um prompt de comando do desenvolvedor, eles serão substituídos pelos valores das propriedades correspondentes do MSBuild. A compilação, em seguida, anexa o valor da propriedade de diretórios executáveis dos Diretórios VC++ como PATH. Defina uma variável de ambiente definida pelo usuário criando uma macro definida pelo usuário e, em seguida, marcando a caixa que indica **Definir esta macro como uma variável de ambiente no ambiente de build**.
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>Definir variáveis de ambiente para uma sessão de depuração
 

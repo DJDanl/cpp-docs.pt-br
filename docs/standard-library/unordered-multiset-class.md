@@ -1,6 +1,7 @@
 ---
 title: Classe unordered_multiset
-ms.date: 11/04/2016
+description: Referência de API para a classe de contêiner da biblioteca padrão C++ `unordered_multiset` , que descreve um objeto usado para o armazenamento e a recuperação de dados de uma coleção na qual os valores dos elementos contidos não precisam ser exclusivos e nos quais eles servem como valores de chave. Os dados não são ordenados automaticamente.
+ms.date: 9/10/2020
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -25,6 +26,7 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::cbegin
 - unordered_set/std::unordered_multiset::cend
 - unordered_set/std::unordered_multiset::clear
+- unordered_set/std::unordered_multiset::contains
 - unordered_set/std::unordered_multiset::count
 - unordered_set/std::unordered_multiset::emplace
 - unordered_set/std::unordered_multiset::emplace_hint
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_multiset::cbegin
 - std::unordered_multiset::cend
 - std::unordered_multiset::clear
+- std::unordered_multiset::contains
 - std::unordered_multiset::count
 - std::unordered_multiset::emplace
 - std::unordered_multiset::emplace_hint
@@ -134,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 83b2b1a97972fa63f7cf7d2b9a6a48b49dbeda8d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562513"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042024"
 ---
 # <a name="unordered_multiset-class"></a>Classe unordered_multiset
 
@@ -198,6 +201,7 @@ A classe do alocador.
 |[cbegin](#cbegin)|Designa o início da sequência controlada.|
 |[cend](#cend)|Designa o fim da sequência controlada.|
 |[formatação](#clear)|Remove todos os elementos.|
+|[contém](#contains)<sup>c++ 20</sup>|Verifica se há um elemento com a chave especificada.|
 |[contagem](#count)|Localiza o número de elementos que correspondem a uma chave especificada.|
 |[emplace](#emplace)|Adiciona um elemento construído no lugar.|
 |[emplace_hint](#emplace_hint)|Adiciona um elemento construído no lugar, com dica.|
@@ -549,7 +553,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso de encaminhamento que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio `cbegin() == cend()` ).
 
@@ -575,7 +579,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso de encaminhamento que aponta muito além do fim do intervalo.
 
@@ -845,6 +849,57 @@ int main()
 [c] [b] [a]
 ```
 
+## <a name="unordered_multisetcontains"></a><a name="contains"></a> unordered_multiset:: contém
+
+Verifica se há um elemento com a chave especificada no `unordered_multiset` .
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*C*\
+Tipo da chave.
+
+*chaves*\
+O valor de chave do elemento a ser pesquisado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se o elemento for encontrado no contêiner; `false` caso contrário.
+
+### <a name="remarks"></a>Comentários
+
+`contains()` é novo no C++ 20. Para usá-lo, especifique a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) .
+
+`template<class K> bool contains(const K& key) const` só participará da resolução de sobrecarga se `key_compare` for transparente.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_multiset<int> theUnorderedMultiset = { 1, 2, 3 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedMultiset.contains(1) << '\n';
+    std::cout << theUnorderedMultiset.contains(4) << '\n';
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="unordered_multisetcount"></a><a name="count"></a> unordered_multiset:: Count
 
 Localiza o número de elementos que correspondem a uma chave especificada.
@@ -973,7 +1028,7 @@ iterator emplace(Args&&... args);
 *argumento*\
 Os argumentos encaminhados para criar um elemento a ser inserido no unordered_multiset.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador para o elemento recém-inserido.
 
@@ -1004,7 +1059,7 @@ Os argumentos encaminhados para criar um elemento a ser inserido no unordered_mu
 *posição*\
 Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador para o elemento recém-inserido.
 
@@ -1248,7 +1303,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do unordered_multiset, se esse elemento não existir.
 
@@ -1493,7 +1548,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 As funções do membro de inserir elemento único, (1) e (2), retornam um iterador para a posição em que o novo elemento foi inserido no unordered_multiset.
 
