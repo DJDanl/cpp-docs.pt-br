@@ -1,6 +1,7 @@
 ---
 title: Classe basic_string
-ms.date: 11/12/2019
+description: Referência de API para a `basic_string` classe, que é a classe de cadeia de caracteres C++ padrão.
+ms.date: 9/10/2020
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -57,6 +58,8 @@ f1_keywords:
 - xstring/std::basic_string::shrink_to_fit
 - xstring/std::basic_string::size
 - xstring/std::basic_string::substr
+- xstring/std::basic_string::ends_with
+- xstring/std::basic_string::starts_with
 - xstring/std::basic_string::swap
 helpviewer_keywords:
 - std::basic_string [C++]
@@ -113,15 +116,17 @@ helpviewer_keywords:
 - std::basic_string [C++], rfind
 - std::basic_string [C++], shrink_to_fit
 - std::basic_string [C++], size
+- std::basic_string [C++], starts_with
+- std::basic_string [C++], ends_with
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 519d95d82e239084871489cfe8a825752cf6d9f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219190"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040298"
 ---
 # <a name="basic_string-class"></a>Classe basic_string
 
@@ -134,7 +139,7 @@ template <class CharType, class Traits = char_traits<CharType>, class Allocator 
 class basic_string;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *CharType*\
 O tipo de dados de um único caractere a ser armazenado na cadeia de caracteres. A biblioteca padrão C++ fornece especializações desse modelo de classe, com a cadeia de [caracteres](../standard-library/string-typedefs.md#string) de definições de tipo para elementos do tipo **`char`** , [wstring](../standard-library/string-typedefs.md#wstring), para, **`wchar_t`** [u16string](../standard-library/string-typedefs.md#u16string) para e **`char16_t`** [u32string](../standard-library/string-typedefs.md#u32string) para **`char32_t`** .
@@ -192,6 +197,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 |[data](#data)|Converte o conteúdo de uma cadeia de caracteres em uma matriz de caracteres.|
 |[empty](#empty)|Testa se a cadeia de caracteres contém caracteres.|
 |[completo](#end)|Retorna um iterador que trata o local após o último elemento em uma cadeia de caracteres.|
+|[ends_with](#ends_with)<sup>c++ 20</sup>|Verifica se a cadeia de caracteres termina com o sufixo especificado.|
 |[erase](#erase)|Remove um elemento ou um intervalo de elementos em uma cadeia de caracteres de uma posição especificada.|
 |[find](#find)|Pesquisa, para frente, em uma cadeia de caracteres, a primeira ocorrência de uma subcadeia que corresponde a uma sequência de caracteres especificada.|
 |[find_first_not_of](#find_first_not_of)|Pesquisa por uma cadeia de caracteres para o primeiro caractere que não é qualquer elemento de uma cadeia de caracteres especificada.|
@@ -213,6 +219,7 @@ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre 
 |[rfind](#rfind)|Pesquisa, para trás, em uma cadeia de caracteres, a primeira ocorrência de uma subcadeia que corresponde a uma sequência de caracteres especificada.|
 |[shrink_to_fit](#shrink_to_fit)|Descarta a capacidade excedente da cadeia de caracteres.|
 |[size](#size)|Retorna o número de elementos em uma cadeia de caracteres.|
+|[starts_with](#starts_with)<sup>c++ 20</sup>|Verifica se a cadeia de caracteres começa com o prefixo especificado.|
 |[subst](#substr)|Copia uma subcadeia de, no máximo, um número de caracteres, de uma cadeia com início em uma posição especificada.|
 |[permuta](#swap)|Troca o conteúdo das duas cadeias de caracteres.|
 
@@ -236,7 +243,7 @@ Referências, ponteiros e iteradores que designam elementos da sequência contro
 
 **Namespace:** std
 
-## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>basic_string:: allocator_type
+## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a> basic_string:: allocator_type
 
 Um tipo que representa a classe de alocador de um objeto de cadeia de caracteres.
 
@@ -267,7 +274,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringappend"></a><a name="append"></a>basic_string:: Append
+## <a name="basic_stringappend"></a><a name="append"></a> basic_string:: Append
 
 Acrescenta caracteres ao final de uma cadeia de caracteres.
 
@@ -305,7 +312,7 @@ basic_string<CharType, Traits, Allocator>& append(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 A cadeia de caracteres do C a ser acrescentada.
@@ -328,13 +335,13 @@ Um iterador de entrada que trata do primeiro elemento no intervalo a ser acresce
 *última*\
 Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo a ser acrescentados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao objeto de cadeia de caracteres que está sendo acrescentado com os caracteres passados pela função membro.
 
 ### <a name="remarks"></a>Comentários
 
-Os caracteres podem ser anexados a uma cadeia de caracteres usando o [operador + =](#op_add_eq) ou as funções de membro `append` ou [push_back](#push_back). `operator+=`acrescenta valores de argumento único enquanto a função de membro de vários argumentos `append` permite que uma parte específica de uma cadeia de caracteres seja especificada para adição.
+Os caracteres podem ser anexados a uma cadeia de caracteres usando o [operador + =](#op_add_eq) ou as funções de membro `append` ou [push_back](#push_back). `operator+=` acrescenta valores de argumento único enquanto a função de membro de vários argumentos `append` permite que uma parte específica de uma cadeia de caracteres seja especificada para adição.
 
 ### <a name="example"></a>Exemplo
 
@@ -428,7 +435,7 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.
 ```
 
-## <a name="basic_stringassign"></a><a name="assign"></a>basic_string:: atribuir
+## <a name="basic_stringassign"></a><a name="assign"></a> basic_string:: atribuir
 
 Atribui novos valores de caracteres ao conteúdo de uma cadeia de caracteres.
 
@@ -466,7 +473,7 @@ basic_string<CharType, Traits, Allocator>& assign(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 Um ponteiro para os caracteres da cadeia de caracteres do C a serem atribuídos à cadeia de caracteres de destino.
@@ -489,7 +496,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do caractere 
 *desconto*\
 A posição em que novos caracteres começarão a ser atribuídos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao objeto de cadeia de caracteres ao qual estão sendo atribuídos novos caracteres pela função membro.
 
@@ -589,7 +596,7 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.
 ```
 
-## <a name="basic_stringat"></a><a name="at"></a>basic_string:: at
+## <a name="basic_stringat"></a><a name="at"></a> basic_string:: at
 
 Fornece uma referência ao caractere com um índice especificado em uma cadeia de caracteres.
 
@@ -599,12 +606,12 @@ const_reference at(size_type offset) const;
 reference at(size_type offset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *desvio*\
 O índice da posição do elemento a ser referenciado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao caractere da cadeia de caracteres na posição especificada pelo índice de parâmetro.
 
@@ -657,7 +664,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringback"></a><a name="back"></a>basic_string:: voltar
+## <a name="basic_stringback"></a><a name="back"></a> basic_string:: voltar
 
 Retorna uma referência ao último elemento na cadeia de caracteres.
 
@@ -667,13 +674,13 @@ const_reference back() const;
 reference back();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao último elemento da cadeia de caracteres, que não deve ser vazio.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>basic_string:: basic_string
+## <a name="basic_stringbasic_string"></a><a name="basic_string"></a> basic_string:: basic_string
 
 Constrói uma cadeia de caracteres que é vazia, inicializada por caracteres específicos ou uma cópia total ou parcial de outro objeto de cadeia de caracteres ou de cadeia de caracteres do estilo C (terminadas em nulo).
 
@@ -745,7 +752,7 @@ basic_string(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 A cadeia de caracteres do C cujos caracteres devem ser usados para inicializar a `string` que está sendo construída. Esse valor não pode ser um ponteiro nulo.
@@ -771,7 +778,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro e
 *última*\
 Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao objeto de cadeia de caracteres que está sendo construído pelos construtores.
 
@@ -830,7 +837,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringbegin"></a><a name="begin"></a>basic_string:: Begin
+## <a name="basic_stringbegin"></a><a name="begin"></a> basic_string:: Begin
 
 Retorna um iterador que trata o primeiro elemento na cadeia de caracteres.
 
@@ -840,7 +847,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador de acesso aleatório que trata do primeiro elemento da sequência ou logo após o fim de uma sequência vazia.
 
@@ -880,7 +887,7 @@ int main( ) {
 }
 ```
 
-## <a name="basic_stringc_str"></a><a name="c_str"></a>basic_string:: c_str
+## <a name="basic_stringc_str"></a><a name="c_str"></a> basic_string:: c_str
 
 Converte o conteúdo de uma cadeia de caracteres em uma cadeia de caracteres do estilo C, terminada em nulo.
 
@@ -888,7 +895,7 @@ Converte o conteúdo de uma cadeia de caracteres em uma cadeia de caracteres do 
 const value_type *c_str() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um ponteiro para a versão do estilo C da cadeia de caracteres de invocação.  O valor do ponteiro não é válido após chamar uma função não const, incluindo o destruidor, na classe basic_string no objeto.
 
@@ -944,7 +951,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringcapacity"></a><a name="capacity"></a>basic_string:: capacidade
+## <a name="basic_stringcapacity"></a><a name="capacity"></a> basic_string:: capacidade
 
 Retorna o maior número de elementos que podem ser armazenados em uma cadeia de caracteres sem aumentar a alocação de memória da cadeia.
 
@@ -952,7 +959,7 @@ Retorna o maior número de elementos que podem ser armazenados em uma cadeia de 
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O tamanho de armazenamento alocado atualmente na memória para manter a cadeia de caracteres.
 
@@ -1014,7 +1021,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringcbegin"></a><a name="cbegin"></a>basic_string:: cbegin
+## <a name="basic_stringcbegin"></a><a name="cbegin"></a> basic_string:: cbegin
 
 Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 
@@ -1022,7 +1029,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso aleatório que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()` ).
 
@@ -1040,7 +1047,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="basic_stringcend"></a><a name="cend"></a>basic_string:: cend
+## <a name="basic_stringcend"></a><a name="cend"></a> basic_string:: cend
 
 Retorna um **`const`** iterador que aborda o local logo após o último elemento em um intervalo.
 
@@ -1048,7 +1055,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um **`const`** iterador de acesso aleatório que aponta muito além do fim do intervalo.
 
@@ -1068,7 +1075,7 @@ auto i2 = Container.cend();
 
 O valor retornado por `cend` não deve ser desreferenciado.
 
-## <a name="basic_stringclear"></a><a name="clear"></a>basic_string:: Clear
+## <a name="basic_stringclear"></a><a name="clear"></a> basic_string:: Clear
 
 Apaga todos os elementos de uma cadeia de caracteres.
 
@@ -1119,7 +1126,7 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.
 ```
 
-## <a name="basic_stringcompare"></a><a name="compare"></a>basic_string:: Compare
+## <a name="basic_stringcompare"></a><a name="compare"></a> basic_string:: Compare
 
 Executa uma comparação que diferencia maiúsculas de minúsculas com uma cadeia de caracteres especificada para determinar se as duas cadeias de caracteres são iguais ou se uma é lexicograficamente menor que a outra.
 
@@ -1154,7 +1161,7 @@ int compare(
     size_type number_2) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Str*\
 A cadeia de caracteres que deve ser comparada com a cadeia de caracteres do operando.
@@ -1177,7 +1184,7 @@ O número máximo de caracteres da cadeia de caracteres do parâmetro a serem co
 *PTR*\
 A cadeia de caracteres do C a ser comparada com a cadeia de caracteres do operando.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um valor negativo, se a cadeia de caracteres do operando for menor que a cadeia de caracteres do parâmetro, zero, se as duas cadeias de caracteres forem iguais ou um valor positivo se a cadeia de caracteres do operando for maior que a cadeia de caracteres do parâmetro.
 
@@ -1380,7 +1387,7 @@ The 3 characters from position 2 of the operand string are equal to
 the first 3 characters of the parameter C-string.
 ```
 
-## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>basic_string:: const_iterator
+## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a> basic_string:: const_iterator
 
 Um tipo que fornece um iterador de acesso aleatório que pode acessar e ler um **`const`** elemento na cadeia de caracteres.
 
@@ -1396,7 +1403,7 @@ Um tipo `const_iterator` não pode ser usado para modificar o valor de um caract
 
 Veja o exemplo de [begin](#begin) para obter um exemplo de como declarar e usar `const_iterator`.
 
-## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>basic_string:: const_pointer
+## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a> basic_string:: const_pointer
 
 Um tipo que fornece um ponteiro para um **`const`** elemento em uma cadeia de caracteres.
 
@@ -1436,7 +1443,7 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.
 ```
 
-## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>basic_string:: const_reference
+## <a name="basic_stringconst_reference"></a><a name="const_reference"></a> basic_string:: const_reference
 
 Um tipo que fornece uma referência a um **`const`** elemento armazenado em uma cadeia de caracteres para leitura e execução de **`const`** operações.
 
@@ -1454,7 +1461,7 @@ O tipo é um sinônimo de `allocator_type::const_reference`. Para String `type` 
 
 Veja o exemplo de [at](#at) que demonstra como declarar e usar `const_reference`.
 
-## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>basic_string:: const_reverse_iterator
+## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> basic_string:: const_reverse_iterator
 
 Um tipo que fornece um iterador de acesso aleatório que pode ler qualquer **`const`** elemento na cadeia de caracteres.
 
@@ -1470,7 +1477,7 @@ Um tipo `const_reverse_iterator` não pode modificar o valor de um caractere e �
 
 Veja o exemplo de [rbegin](#rbegin) que demonstra como declarar e usar `const_reverse_iterator`.
 
-## <a name="basic_stringcopy"></a><a name="copy"></a>basic_string:: copiar
+## <a name="basic_stringcopy"></a><a name="copy"></a> basic_string:: copiar
 
 Copia, no máximo, um número específico de caracteres de uma posição indexada em uma cadeia de caracteres de origem em um conjunto de caracteres de destino.
 
@@ -1483,7 +1490,7 @@ size_type copy(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *PTR*\
 A matriz de caracteres de destino à qual os elementos devem ser copiados.
@@ -1493,7 +1500,7 @@ A matriz de caracteres de destino à qual os elementos devem ser copiados.
 *desvio*\
 A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O número de caracteres realmente copiados.
 
@@ -1550,7 +1557,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>basic_string:: crbegin
+## <a name="basic_stringcrbegin"></a><a name="crbegin"></a> basic_string:: crbegin
 
 Retorna um iterador const que trata o primeiro elemento em uma cadeia de caracteres invertida.
 
@@ -1558,11 +1565,11 @@ Retorna um iterador const que trata o primeiro elemento em uma cadeia de caracte
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador inverso que aponta para logo após o fim da cadeia de caracteres. A posição designa o início da cadeia de caracteres inversa.
 
-## <a name="basic_stringcrend"></a><a name="crend"></a>basic_string:: crend
+## <a name="basic_stringcrend"></a><a name="crend"></a> basic_string:: crend
 
 Retorna um iterador const que trata o local após o último elemento em uma cadeia invertida.
 
@@ -1570,13 +1577,13 @@ Retorna um iterador const que trata o local após o último elemento em uma cade
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador const inverso que trata do local logo após o último elemento em uma cadeia de caracteres invertida (o local que precedia o primeiro elemento na cadeia de caracteres não invertida).
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="basic_string_copy_s"></a><a name="copy_s"></a>basic_string:: _Copy_s
+## <a name="basic_string_copy_s"></a><a name="copy_s"></a> basic_string:: _Copy_s
 
 Copia, no máximo, um número específico de caracteres de uma posição indexada em uma cadeia de caracteres de origem em um conjunto de caracteres de destino.
 
@@ -1588,7 +1595,7 @@ size_type _Copy_s(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dest*\
 A matriz de caracteres de destino à qual os elementos devem ser copiados.
@@ -1601,7 +1608,7 @@ O tamanho do *dest*.
 *desvio*\
 A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O número de caracteres realmente copiados.
 
@@ -1656,7 +1663,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringdata"></a><a name="data"></a>basic_string::d o ATA
+## <a name="basic_stringdata"></a><a name="data"></a> basic_string::d o ATA
 
 Converte o conteúdo de uma cadeia em uma matriz de caracteres terminada em nulo.
 
@@ -1665,7 +1672,7 @@ const value_type *data() const noexcept;
 value_type *data() noexcept;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um ponteiro para o primeiro elemento da matriz terminada em nulo que contém o conteúdo da cadeia de caracteres. Para uma cadeia de caracteres vazia, o ponteiro aponta para um único caractere nulo igual a `value_type()` .
 
@@ -1725,7 +1732,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>basic_string::d ifference_type
+## <a name="basic_stringdifference_type"></a><a name="difference_type"></a> basic_string::d ifference_type
 
 Um tipo que fornece a diferença entre dois iteradores que se referem a elementos na mesma cadeia.
 
@@ -1773,7 +1780,7 @@ The last character i is at position: 8.
 The difference is: 6.
 ```
 
-## <a name="basic_stringempty"></a><a name="empty"></a>basic_string:: Empty
+## <a name="basic_stringempty"></a><a name="empty"></a> basic_string:: Empty
 
 Testa se a cadeia de caracteres contém caracteres ou não.
 
@@ -1781,7 +1788,7 @@ Testa se a cadeia de caracteres contém caracteres ou não.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 **`true`** Se o objeto de cadeia de caracteres não contiver nenhum caractere; **`false`** se tiver pelo menos um caractere.
 
@@ -1821,7 +1828,7 @@ int main() {
 }
 ```
 
-## <a name="basic_stringend"></a><a name="end"></a>basic_string:: End
+## <a name="basic_stringend"></a><a name="end"></a> basic_string:: End
 
 Retorna um iterador que trata o local após o último elemento em uma cadeia de caracteres.
 
@@ -1831,13 +1838,13 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Retorna um iterador de acesso aleatório que trata do local após o último elemento em uma cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
-`end`geralmente é usado para testar se um iterador atingiu o final de sua cadeia de caracteres. O valor retornado por `end` não deve ser desreferenciado.
+`end` geralmente é usado para testar se um iterador atingiu o final de sua cadeia de caracteres. O valor retornado por `end` não deve ser desreferenciado.
 
 Se o valor retornado de `end` é atribuído a um `const_iterator`, o objeto de cadeia de caracteres não pode ser modificado. Se o valor de retorno de `end` for atribuído a um `iterator` , o objeto de cadeia de caracteres poderá ser modificado.
 
@@ -1869,7 +1876,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
-*str1_Iter = 'T';
+   *str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1894,7 +1901,67 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.
 ```
 
-## <a name="basic_stringerase"></a><a name="erase"></a>basic_string:: Erase
+## <a name="basic_stringends_with"></a><a name="ends_with"></a> basic_string:: ends_with
+
+Verifique se a cadeia de caracteres termina com o sufixo especificado.
+
+```cpp
+bool ends_with(const CharType c) const noexcept;
+bool ends_with(const CharType* const x) const noexcept;
+bool ends_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*&*\
+O sufixo de caractere único a ser pesquisado.
+
+*SV*\
+Uma exibição de cadeia de caracteres que contém o sufixo a ser pesquisado. \
+Você pode passar um `std::basic_string` , que converte para uma exibição de cadeia de caracteres.
+
+*w.x.y.*\
+Cadeia de caracteres terminada em nulo que contém o sufixo a ser procurado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` se a cadeia de caracteres terminar com o sufixo especificado; `false` caso contrário.
+
+### <a name="remarks"></a>Comentários
+
+`ends_with()` é novo no C++ 20. Para usá-lo, especifique a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) .
+
+Consulte [starts_with](#starts_with) para verificar se uma cadeia de caracteres começa com o prefixo especificado.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
+    std::cout << str.ends_with('g') << '\n';
+    std::cout << str.ends_with("eFg") << '\n';
+
+    std::basic_string<char> str2 = "efg";
+    std::cout << str.ends_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+true
+```
+
+## <a name="basic_stringerase"></a><a name="erase"></a> basic_string:: Erase
 
 Remove um elemento ou um intervalo de elementos em uma cadeia de caracteres de uma posição especificada.
 
@@ -1911,7 +1978,7 @@ basic_string<CharType, Traits, Allocator>& erase(
     size_type count = npos);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *primeiro*\
 Um iterador que trata da posição do primeiro elemento no intervalo a ser apagado.
@@ -1928,7 +1995,7 @@ O índice do primeiro caractere na cadeia de caracteres a ser removido.
 *contar*\
 O número de elementos que serão removidos se houver tantos no intervalo da cadeia de caracteres começando com *offset*.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Para as duas primeiras funções membro, um iterador que trata do primeiro caractere após o último caractere removido pela função membro. Para a terceira função membro, uma referência ao objeto de cadeia de caracteres do qual os elementos foram apagados.
 
@@ -1997,7 +2064,7 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .
 ```
 
-## <a name="basic_stringfind"></a><a name="find"></a>basic_string:: localizar
+## <a name="basic_stringfind"></a><a name="find"></a> basic_string:: localizar
 
 Pesquisa, para frente, em uma cadeia de caracteres, a primeira ocorrência de uma subcadeia que corresponde a uma sequência de caracteres especificada.
 
@@ -2020,7 +2087,7 @@ size_type find(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2037,7 +2104,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 *Str*\
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2172,7 +2239,7 @@ the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
-## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string:: find_first_not_of
+## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a> basic_string:: find_first_not_of
 
 Pesquisa uma cadeia de caracteres para o primeiro caractere que não é um elemento de uma cadeia de caracteres especificada.
 
@@ -2195,7 +2262,7 @@ size_type find_first_not_of(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2212,7 +2279,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 *Str*\
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2360,7 +2427,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 the 0th position is: 2
 ```
 
-## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>basic_string:: find_first_of
+## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a> basic_string:: find_first_of
 
 Pesquisa, em uma cadeia de caracteres, o primeiro caractere que corresponda a qualquer elemento de uma cadeia de caracteres especificada.
 
@@ -2383,7 +2450,7 @@ size_type find_first_of(
     size_type offset = 0) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2400,7 +2467,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 *Str*\
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2547,7 +2614,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string:: find_last_not_of
+## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a> basic_string:: find_last_not_of
 
 Pesquisa por uma cadeia de caracteres para o último caractere que não é qualquer elemento de uma cadeia de caracteres especificada.
 
@@ -2570,7 +2637,7 @@ size_type find_last_not_of(
     size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2587,7 +2654,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 *Str*\
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O índice do primeiro caractere da subsequência pesquisada quando for houver êxito, caso contrário, `npos`.
 
@@ -2736,7 +2803,7 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>basic_string:: find_last_of
+## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a> basic_string:: find_last_of
 
 Pesquisa em uma cadeia de caracteres o último caractere que corresponde a qualquer elemento de uma cadeia de caracteres especificada.
 
@@ -2759,7 +2826,7 @@ size_type find_last_of(
     size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -2776,7 +2843,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 *Str*\
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O índice do último caractere da subsequência pesquisada quando houver êxito, caso contrário, `npos`.
 
@@ -2910,7 +2977,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 the 0th position is: 9
 ```
 
-## <a name="basic_stringfront"></a><a name="front"></a>basic_string:: front
+## <a name="basic_stringfront"></a><a name="front"></a> basic_string:: front
 
 Retorna uma referência ao primeiro elemento em uma cadeia de caracteres.
 
@@ -2920,13 +2987,13 @@ const_reference front() const;
 reference front();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao primeiro elemento da cadeia de caracteres, que não deve ser vazio.
 
 ### <a name="remarks"></a>Comentários
 
-## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>basic_string:: get_allocator
+## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a> basic_string:: get_allocator
 
 Retorna uma cópia do objeto alocador usado para construir a cadeia de caracteres.
 
@@ -2934,7 +3001,7 @@ Retorna uma cópia do objeto alocador usado para construir a cadeia de caractere
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O alocador usado pela cadeia de caracteres.
 
@@ -2969,7 +3036,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringinsert"></a><a name="insert"></a>basic_string:: Insert
+## <a name="basic_stringinsert"></a><a name="insert"></a> basic_string:: Insert
 
 Insere um elemento ou um número de elementos ou um intervalo de elementos na cadeia de caracteres na posição especificada.
 
@@ -3026,7 +3093,7 @@ void insert(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *propostas*\
 O índice da posição atrás do ponto de inserção de novos caracteres.
@@ -3055,7 +3122,7 @@ Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro e
 *última*\
 Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao objeto de cadeia de caracteres ao qual estão sendo atribuídos novos caracteres pela função membro ou, no caso de inserções de caractere individual, um iterador que trata da posição do caractere inserido ou nenhum, dependendo da função membro específica.
 
@@ -3148,7 +3215,7 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ
 ```
 
-## <a name="basic_stringiterator"></a><a name="iterator"></a>basic_string:: iterador
+## <a name="basic_stringiterator"></a><a name="iterator"></a> basic_string:: iterador
 
 Um tipo que fornece um iterador de acesso aleatório que pode acessar e ler um **`const`** elemento na cadeia de caracteres.
 
@@ -3164,7 +3231,7 @@ Um tipo `iterator` pode ser usado para modificar o valor de um caractere e é us
 
 Veja o exemplo de [begin](#begin) para obter um exemplo de como declarar e usar `iterator`.
 
-## <a name="basic_stringlength"></a><a name="length"></a>basic_string:: comprimento
+## <a name="basic_stringlength"></a><a name="length"></a> basic_string:: comprimento
 
 Retorna o número de elementos em uma cadeia de caracteres.
 
@@ -3230,7 +3297,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringmax_size"></a><a name="max_size"></a>basic_string:: max_size
+## <a name="basic_stringmax_size"></a><a name="max_size"></a> basic_string:: max_size
 
 Retorna o número máximo de caracteres que uma cadeia de caracteres pode conter.
 
@@ -3238,7 +3305,7 @@ Retorna o número máximo de caracteres que uma cadeia de caracteres pode conter
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O número máximo de caracteres que uma cadeia de caracteres pode conter.
 
@@ -3300,7 +3367,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringnpos"></a><a name="npos"></a>basic_string:: nPos
+## <a name="basic_stringnpos"></a><a name="npos"></a> basic_string:: nPos
 
 Um valor integral não assinado inicializado como-1 que indica "não encontrado" ou "todos os caracteres restantes" quando uma função de pesquisa falha.
 
@@ -3316,7 +3383,7 @@ Quando o valor de retorno deve ser verificado quanto ao `npos` valor, ele pode n
 
 Veja o exemplo de [find](#find) que demonstra como declarar e usar `npos`.
 
-## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>basic_string:: Operator + =
+## <a name="basic_stringoperator"></a><a name="op_add_eq"></a> basic_string:: Operator + =
 
 Acrescenta caracteres a uma cadeia de caracteres.
 
@@ -3331,7 +3398,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O caractere a ser acrescentado.
@@ -3342,7 +3409,7 @@ Os caracteres da cadeia de caracteres do C a serem acrescentados.
 *Certo*\
 Os caracteres da cadeia de caracteres a serem acrescentados.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao objeto de cadeia de caracteres que está sendo acrescentado com os caracteres passados pela função membro.
 
@@ -3405,7 +3472,7 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_eq"></a>basic_string:: Operator =
+## <a name="basic_stringoperator"></a><a name="op_eq"></a> basic_string:: Operator =
 
 Atribui novos valores de caracteres ao conteúdo de uma cadeia de caracteres.
 
@@ -3423,7 +3490,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor do caractere a ser atribuído.
@@ -3434,7 +3501,7 @@ Um ponteiro para os caracteres da cadeia de caracteres do C a serem atribuídos 
 *Certo*\
 A cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao objeto de cadeia de caracteres ao qual estão sendo atribuídos novos caracteres pela função membro.
 
@@ -3499,7 +3566,7 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_at"></a>basic_string:: operator []
+## <a name="basic_stringoperator"></a><a name="op_at"></a> basic_string:: operator []
 
 Fornece uma referência ao caractere com um índice especificado em uma cadeia de caracteres.
 
@@ -3508,12 +3575,12 @@ const_reference operator[](size_type offset) const;
 reference operator[](size_type offset);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *desvio*\
 O índice da posição do elemento a ser referenciado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Uma referência ao caractere da cadeia de caracteres na posição especificada pelo índice de parâmetro.
 
@@ -3523,7 +3590,7 @@ O primeiro elemento da cadeia de caracteres tem um índice igual a zero e os ele
 
 `operator[]` é mais rápido que a função membro [at](#at) para fornecer acesso de leitura e gravação aos elementos de uma cadeia de caracteres.
 
-`operator[]`não verifica se o índice passado como um parâmetro é válido, mas a função membro `at` faz e, portanto, deve ser usada na validade não é certa. Um índice inválido (um índice menor que zero ou maior ou igual ao tamanho da cadeia de caracteres) passado para a função membro `at` gera uma exceção de [classe de out_of_range](../standard-library/out-of-range-class.md) . Um índice inválido passado para `operator[]` resulta em um comportamento indefinido, mas o índice igual ao comprimento da cadeia de caracteres é um índice válido para cadeias de caracteres const e o operador retorna o caractere nulo quando esse índice é passado.
+`operator[]` não verifica se o índice passado como um parâmetro é válido, mas a função membro `at` faz e, portanto, deve ser usada na validade não é certa. Um índice inválido (um índice menor que zero ou maior ou igual ao tamanho da cadeia de caracteres) passado para a função membro `at` gera uma exceção de [classe de out_of_range](../standard-library/out-of-range-class.md) . Um índice inválido passado para `operator[]` resulta em um comportamento indefinido, mas o índice igual ao comprimento da cadeia de caracteres é um índice válido para cadeias de caracteres const e o operador retorna o caractere nulo quando esse índice é passado.
 
 A referência retornada pode ser invalidada por realocações de cadeia de caracteres ou modificações para as não **`const`** cadeias.
 
@@ -3568,7 +3635,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringpointer"></a><a name="pointer"></a>basic_string::p ointer
+## <a name="basic_stringpointer"></a><a name="pointer"></a> basic_string::p ointer
 
 Um tipo que fornece um ponteiro para um elemento de caracteres em uma matriz de cadeia de caracteres ou caractere.
 
@@ -3605,7 +3672,7 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.
 ```
 
-## <a name="basic_stringpop_back"></a><a name="pop_back"></a>basic_string::p op_back
+## <a name="basic_stringpop_back"></a><a name="pop_back"></a> basic_string::p op_back
 
 Apaga o último elemento da cadeia de caracteres.
 
@@ -3617,7 +3684,7 @@ void pop_back();
 
 Essa função membro chama `erase(size() - 1)` efetivamente para apagar o último elemento da sequência, que não deve ser vazio.
 
-## <a name="basic_stringpush_back"></a><a name="push_back"></a>basic_string::p ush_back
+## <a name="basic_stringpush_back"></a><a name="push_back"></a> basic_string::p ush_back
 
 Adiciona um elemento ao final de uma cadeia de caracteres.
 
@@ -3625,7 +3692,7 @@ Adiciona um elemento ao final de uma cadeia de caracteres.
 void push_back(value_type char_value);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O caractere a ser adicionado ao final da cadeia de caracteres.
@@ -3672,7 +3739,7 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc
 ```
 
-## <a name="basic_stringrbegin"></a><a name="rbegin"></a>basic_string:: rbegin
+## <a name="basic_stringrbegin"></a><a name="rbegin"></a> basic_string:: rbegin
 
 Retorna um iterador ao primeiro elemento em uma cadeia invertida.
 
@@ -3682,7 +3749,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Retorna um iterador de acesso aleatório para o primeiro elemento em uma cadeia de caracteres invertida, indicando qual seria o último elemento na cadeia de caracteres não invertida correspondente.
 
@@ -3748,7 +3815,7 @@ AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreference"></a><a name="reference"></a>basic_string:: referência
+## <a name="basic_stringreference"></a><a name="reference"></a> basic_string:: referência
 
 Um tipo que fornece uma referência a um elemento armazenado em uma cadeia de caracteres.
 
@@ -3768,7 +3835,7 @@ Para o tipo `string` , é equivalente a `chr&` .
 
 Veja o exemplo de [at](#at) que demonstra como declarar e usar `reference`.
 
-## <a name="basic_stringrend"></a><a name="rend"></a>basic_string:: rend
+## <a name="basic_stringrend"></a><a name="rend"></a> basic_string:: rend
 
 Retorna um iterador que trata do local após o último elemento em uma cadeia de caracteres invertida.
 
@@ -3778,7 +3845,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um iterador de acesso aleatório inverso que trata do local após o último elemento em uma cadeia de caracteres invertida.
 
@@ -3846,7 +3913,7 @@ ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreplace"></a><a name="replace"></a>basic_string:: Replace
+## <a name="basic_stringreplace"></a><a name="replace"></a> basic_string:: Replace
 
 Substitui elementos em uma cadeia de caractere em uma posição especificada por caracteres especificados ou copiados de outros intervalos de cadeia de caracteres ou cadeias C.
 
@@ -3922,7 +3989,7 @@ basic_string<CharType, Traits, Allocator>& replace(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Str*\
 A cadeia de caracteres que deve ser uma fonte de caracteres para a cadeia de caracteres do operando.
@@ -3960,7 +4027,7 @@ Um iterador, const_pointer ou const_iterator, que trata do último caractere a s
 *contar*\
 O número de vezes que *char_value* é copiado para a cadeia de caracteres do operando.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 A cadeia de caracteres do operando com a substituição feita.
 
@@ -4143,7 +4210,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="basic_stringreserve"></a><a name="reserve"></a>basic_string:: Reserve
+## <a name="basic_stringreserve"></a><a name="reserve"></a> basic_string:: Reserve
 
 Define a capacidade da cadeia de caracteres para um número pelo menos tão grande quanto um número especificado.
 
@@ -4151,7 +4218,7 @@ Define a capacidade da cadeia de caracteres para um número pelo menos tão gran
 void reserve(size_type count = 0);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O número de caracteres para os quais a memória está sendo reservada.
@@ -4233,7 +4300,7 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.
 ```
 
-## <a name="basic_stringresize"></a><a name="resize"></a>basic_string:: redimensionar
+## <a name="basic_stringresize"></a><a name="resize"></a> basic_string:: redimensionar
 
 Especifica um novo tamanho para uma cadeia de caracteres, acrescentando ou apagando elementos conforme necessário.
 
@@ -4246,7 +4313,7 @@ void resize(
     value_type char_value);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *contar*\
 O novo tamanho da cadeia de caracteres.
@@ -4343,7 +4410,7 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.
 ```
 
-## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>basic_string:: reverse_iterator
+## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a> basic_string:: reverse_iterator
 
 Um tipo que fornece uma referência a um elemento armazenado em uma cadeia de caracteres.
 
@@ -4359,7 +4426,7 @@ Um tipo `reverse_iterator` pode ser usado para modificar o valor de um caractere
 
 Veja o exemplo de [rbegin](#rbegin) que demonstra como declarar e usar `reverse_iterator`.
 
-## <a name="basic_stringrfind"></a><a name="rfind"></a>basic_string:: rfind
+## <a name="basic_stringrfind"></a><a name="rfind"></a> basic_string:: rfind
 
 Pesquisa, para trás, em uma cadeia de caracteres, a primeira ocorrência de uma subcadeia que corresponde a uma sequência de caracteres especificada.
 
@@ -4382,7 +4449,7 @@ size_type rfind(
     size_type offset = npos) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *char_value*\
 O valor de caractere que a função membro deve pesquisar.
@@ -4399,7 +4466,7 @@ O número de caracteres, contando a partir do primeiro caractere, na cadeia de c
 *Str*\
 A cadeia de caracteres que a função membro deve pesquisar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O índice da última ocorrência, quando pesquisado no sentido inverso, do primeiro caractere da subsequência quando houver êxito, caso contrário, `npos`.
 
@@ -4534,7 +4601,7 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>basic_string:: shrink_to_fit
+## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a> basic_string:: shrink_to_fit
 
 Descarta a capacidade excedente da cadeia de caracteres.
 
@@ -4546,7 +4613,7 @@ void shrink_to_fit();
 
 Essa função membro elimina qualquer armazenamento desnecessário no contêiner.
 
-## <a name="basic_stringsize"></a><a name="size"></a>basic_string:: tamanho
+## <a name="basic_stringsize"></a><a name="size"></a> basic_string:: tamanho
 
 Retorna o número de elementos em uma cadeia de caracteres.
 
@@ -4554,7 +4621,7 @@ Retorna o número de elementos em uma cadeia de caracteres.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 O comprimento da cadeia de caracteres.
 
@@ -4612,7 +4679,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringsize_type"></a><a name="size_type"></a>basic_string:: size_type
+## <a name="basic_stringsize_type"></a><a name="size_type"></a> basic_string:: size_type
 
 Um tipo de inteiro sem sinal que pode representar o número de elementos e os índices em uma cadeia de caracteres.
 
@@ -4655,7 +4722,67 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="basic_stringsubstr"></a><a name="substr"></a>basic_string:: subst
+## <a name="basic_stringstarts_with"></a><a name="starts_with"></a> basic_string:: starts_with
+
+Verifique se a cadeia de caracteres começa com o prefixo especificado.
+
+```cpp
+bool starts_with(const CharType c) const noexcept;
+bool starts_with(const CharType* const x) const noexcept;
+bool starts_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*&*\
+O prefixo de caractere único a ser pesquisado.
+
+*SV*\
+Uma exibição de cadeia de caracteres que contém o prefixo a ser pesquisado. \
+Você pode passar um `std::basic_string` , que converte para uma exibição de cadeia de caracteres.
+
+*w.x.y.*\
+Cadeia de caracteres terminada em nulo que contém o prefixo a ser pesquisado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` se a cadeia de caracteres começar com o prefixo especificado; `false` caso contrário.
+
+### <a name="remarks"></a>Comentários
+
+`starts_with()` é novo no C++ 20. Para usá-lo, especifique a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) .
+
+Consulte [ends_with](#ends_with) para ver se uma cadeia de caracteres termina com o sufixo especificado.
+
+### <a name="example"></a>Exemplo
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << str.starts_with('b') << '\n';
+    std::cout << str.starts_with("aBc") << '\n';
+
+    std::basic_string<char> str2 = "abc";
+    std::cout << str.starts_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+false
+false
+true
+```
+
+## <a name="basic_stringsubstr"></a><a name="substr"></a> basic_string:: subst
 
 Copia uma subcadeia de, no máximo, um número de caracteres, de uma cadeia com início em uma posição especificada.
 
@@ -4665,7 +4792,7 @@ basic_string<CharType, Traits, Allocator> substr(
     size_type count = npos) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *desvio*\
 Um índice que localiza o elemento na posição da qual é feita a cópia da cadeia de caracteres, com um valor padrão igual a 0.
@@ -4673,7 +4800,7 @@ Um índice que localiza o elemento na posição da qual é feita a cópia da cad
 *contar*\
 O número de caracteres que devem ser copiados se estiverem presentes.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor de retorno
 
 Um objeto de subcadeia de caracteres que é uma cópia dos elementos do operando da cadeia de caracteres, começando na posição especificada pelo primeiro argumento.
 
@@ -4714,7 +4841,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="basic_stringswap"></a><a name="swap"></a>basic_string:: swap
+## <a name="basic_stringswap"></a><a name="swap"></a> basic_string:: swap
 
 Troca o conteúdo das duas cadeias de caracteres.
 
@@ -4723,7 +4850,7 @@ void swap(
     basic_string<CharType, Traits, Allocator>& str);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Str*\
 A cadeia de caracteres de origem cujos elementos devem ser trocados com os da cadeia de caracteres de destino.
@@ -4775,7 +4902,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>basic_string:: traits_type
+## <a name="basic_stringtraits_type"></a><a name="traits_type"></a> basic_string:: traits_type
 
 Um tipo para as características dos elementos armazenados em uma cadeia de caracteres.
 
@@ -4793,7 +4920,7 @@ Para o tipo `string` , é equivalente a **char_traits \<char> **.
 
 Veja o exemplo de [copy](../standard-library/char-traits-struct.md#copy) que demonstra como declarar e usar o `traits_type`.
 
-## <a name="basic_stringvalue_type"></a><a name="value_type"></a>basic_string:: value_type
+## <a name="basic_stringvalue_type"></a><a name="value_type"></a> basic_string:: value_type
 
 Um tipo que representa o tipo de caracteres armazenados em uma cadeia de caracteres.
 

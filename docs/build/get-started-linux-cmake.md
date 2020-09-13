@@ -3,16 +3,16 @@ title: Criar projetos multiplataforma do C++ no Visual Studio
 description: Como configurar, compilar e depurar um projeto de CMake de software livre C++ no Visual Studio destinado ao Linux e ao Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: aac536f488cf22adf5aa835c9fe5b884fc5d7298
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328752"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040477"
 ---
-# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: criar projetos de plataforma cruzada C++ no Visual Studio
+# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Criar projetos multiplataforma do C++ no Visual Studio
 
-Desenvolvimento do Visual Studio C e C++ não é mais apenas para Windows. Este tutorial mostra como usar o Visual Studio para desenvolvimento de plataforma cruzada C++ no Windows e no Linux. Ele é baseado em CMake, portanto, você não precisa criar nem gerar projetos do Visual Studio. Quando você abre uma pasta que contém um arquivo CMakeLists. txt, o Visual Studio configura o IntelliSense e as configurações de compilação automaticamente. Você pode começar rapidamente a editar, criar e depurar seu código localmente no Windows. Em seguida, alterne sua configuração para fazer o mesmo no Linux, tudo de dentro do Visual Studio.
+Desenvolvimento do Visual Studio C e C++ não é mais apenas para Windows. Este tutorial mostra como usar o Visual Studio para desenvolvimento de plataforma cruzada C++ no Windows e no Linux. Ele é baseado em CMake, portanto, você não precisa criar nem gerar projetos do Visual Studio. Quando você abre uma pasta que contém um arquivo de CMakeLists.txt, o Visual Studio configura o IntelliSense e as configurações de compilação automaticamente. Você pode começar rapidamente a editar, criar e depurar seu código localmente no Windows. Em seguida, alterne sua configuração para fazer o mesmo no Linux, tudo de dentro do Visual Studio.
 
 Neste tutorial, você aprenderá como:
 
@@ -61,7 +61,7 @@ Este tutorial usa o SDK de física do marcador no GitHub. Ele fornece detecção
 git clone https://github.com/bulletphysics/bullet3.git
 ```
 
-1. No menu principal do Visual Studio, escolha **arquivo > abrir > CMake**. Navegue até o arquivo CMakeLists. txt na raiz do repositório bullet3 que você acabou de baixar.
+1. No menu principal do Visual Studio, escolha **arquivo > abrir > CMake**. Navegue até o arquivo de CMakeLists.txt na raiz do repositório bullet3 que você acabou de baixar.
 
     ![Menu do Visual Studio para Arquivo > Abrir > CMake](media/cmake-open-cmake.png)
 
@@ -99,7 +99,7 @@ Quando você abre uma pasta que usa CMake, o Visual Studio gera automaticamente 
 
 ## <a name="add-an-explicit-windows-x64-debug-configuration"></a>Adicionar uma configuração x64-Debug do Windows explícita
 
-O Visual Studio cria uma configuração de **depuração x64** padrão para o Windows. As configurações são como o Visual Studio entende que destino de plataforma ele vai usar para o CMake. A configuração padrão não é representada no disco. Quando você adiciona uma configuração explicitamente, o Visual Studio cria um arquivo chamado *CMakeSettings. JSON*. Ele é populado com configurações para todas as configurações que você especificar.
+O Visual Studio cria uma configuração de **depuração x64** padrão para o Windows. As configurações são como o Visual Studio entende que destino de plataforma ele vai usar para o CMake. A configuração padrão não é representada no disco. Quando você adiciona uma configuração explicitamente, o Visual Studio cria um arquivo chamado *CMakeSettings.jsno*. Ele é populado com configurações para todas as configurações que você especificar.
 
 1. Adicione uma nova configuração. Abra a lista suspensa **configuração** na barra de ferramentas e selecione **gerenciar configurações**.
 
@@ -109,7 +109,7 @@ O Visual Studio cria uma configuração de **depuração x64** padrão para o Wi
 
    ![Caixa de diálogo Adicionar Configuração a CMakeSettings](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-   Essa caixa de diálogo mostra todas as configurações incluídas no Visual Studio, além de quaisquer configurações personalizadas que você criar. Se você quiser continuar usando uma configuração de **depuração x64** , ela deverá ser a primeira que você adicionar. Selecione **x64-depurar**e, em seguida, escolha o botão **selecionar** . O Visual Studio cria o arquivo CMakeSettings. JSON com uma configuração para **a depuração x64**e salva-o no disco. Você pode usar qualquer nome que desejar para suas configurações, alterando o parâmetro de nome diretamente no CMakeSettings.json.
+   Essa caixa de diálogo mostra todas as configurações incluídas no Visual Studio, além de quaisquer configurações personalizadas que você criar. Se você quiser continuar usando uma configuração de **depuração x64** , ela deverá ser a primeira que você adicionar. Selecione **x64-depurar**e, em seguida, escolha o botão **selecionar** . O Visual Studio cria o CMakeSettings.jsno arquivo com uma configuração para **a depuração x64**e salva-o no disco. Você pode usar qualquer nome que desejar para suas configurações, alterando o parâmetro de nome diretamente no CMakeSettings.json.
 
 ## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Definir um ponto de interrupção, compilar e executar no Windows
 
@@ -121,17 +121,17 @@ Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do 
 
 1. Defina um ponto de interrupção que é atingido quando você clica no aplicativo em execução. O evento de clique é tratado em um método dentro de uma classe auxiliar. Para rapidamente chegar lá:
 
-   1. Selecione `CommonRigidBodyBase` a qual a `BasicExample` estrutura é derivada. Em torno da linha 30.
+   1. Selecione `CommonRigidBodyBase` a qual a estrutura `BasicExample` é derivada. Em torno da linha 30.
 
    1. Clique com o botão direito do mouse e escolha **Ir para Definição**. Agora você está no cabeçalho CommonRigidBodyBase. h.
 
-   1. No modo de exibição de navegador acima da fonte, você verá que está no `CommonRigidBodyBase`. À direita, você pode selecionar membros para examinar. Abra a lista suspensa e selecione `mouseButtonCallback` para ir para a definição dessa função no cabeçalho.
+   1. No modo de exibição de navegador acima da fonte, você verá que está no `CommonRigidBodyBase` . À direita, você pode selecionar membros para examinar. Abra a lista suspensa e selecione `mouseButtonCallback` para ir para a definição dessa função no cabeçalho.
 
       ![Barra de ferramentas da lista de membros do Visual Studio](media/cmake-bullet3-member-list-toolbar.png)
 
 1. Coloque um ponto de interrupção na primeira linha nessa função. Ele é atingido quando você clica em um botão do mouse dentro da janela do aplicativo, quando executado no depurador do Visual Studio.
 
-1. Para iniciar o aplicativo, selecione a lista suspensa iniciar na barra de ferramentas. É aquele com o ícone de reprodução verde que indica "selecionar item de inicialização". Na lista suspensa, selecione AppBasicExampleGui. exe. O nome do executável agora é exibido no botão de inicialização:
+1. Para iniciar o aplicativo, selecione a lista suspensa iniciar na barra de ferramentas. É aquele com o ícone de reprodução verde que indica "selecionar item de inicialização". Na lista suspensa, selecione AppBasicExampleGui.exe. O nome do executável agora é exibido no botão de inicialização:
 
    ![Lista suspensa de inicialização da barra de ferramentas do Visual Studio para Selecionar Item de Inicialização](media/cmake-bullet3-launch-button.png)
 
@@ -143,7 +143,7 @@ Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do 
 
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Adicionar uma configuração do Linux e conectar-se ao computador remoto
 
-1. Adicione uma configuração do Linux. Clique com o botão direito do mouse no arquivo CMakeSettings.json na exibição **Gerenciador de Soluções** e selecione **Adicionar Configuração**. Você verá a mesma caixa de diálogo Adicionar Configuração a CMakeSettings de antes. Selecione **Linux-depurar** desta vez e salve o arquivo CMakeSettings. JSON (CTRL + s).
+1. Adicione uma configuração do Linux. Clique com o botão direito do mouse no arquivo CMakeSettings.json na exibição **Gerenciador de Soluções** e selecione **Adicionar Configuração**. Você verá a mesma caixa de diálogo Adicionar Configuração a CMakeSettings de antes. Selecione **Linux-depurar** desta vez e salve o CMakeSettings.jsno arquivo (CTRL + s).
 
 1. Selecione **Linux-depurar** na lista suspensa configuração.
 
@@ -155,21 +155,21 @@ Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do 
 
    Se você já tiver adicionado uma conexão remota, poderá abrir essa janela navegando até **ferramentas > opções > Gerenciador de conexões > plataforma cruzada**.
 
-1. Forneça as [informações de conexão para seu computador Linux](/cpp/linux/connect-to-your-remote-linux-computer) e escolha **conectar**. O Visual Studio adiciona esse computador como ao CMakeSettings. JSON como sua conexão padrão para o **Linux-Debug**. Ele também efetua pull dos cabeçalhos de seu computador remoto, para que você obtenha o [IntelliSense específico para essa conexão remota](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Em seguida, o Visual Studio envia os arquivos para o computador remoto e gera o cache CMake no sistema remoto. Essas etapas podem levar algum tempo, dependendo da velocidade da rede e da potência da sua máquina remota. Você saberá que ela está completa quando a mensagem "extração de informações de destino concluída" aparecer na janela saída do CMake.
+1. Forneça as [informações de conexão para seu computador Linux](../linux/connect-to-your-remote-linux-computer.md) e escolha **conectar**. O Visual Studio adiciona esse computador como para CMakeSettings.jscomo sua conexão padrão para o **Linux-Debug**. Ele também efetua pull dos cabeçalhos de seu computador remoto, para que você obtenha o [IntelliSense específico para essa conexão remota](../linux/configure-a-linux-project.md#remote_intellisense). Em seguida, o Visual Studio envia os arquivos para o computador remoto e gera o cache CMake no sistema remoto. Essas etapas podem levar algum tempo, dependendo da velocidade da rede e da potência da sua máquina remota. Você saberá que ela está completa quando a mensagem "extração de informações de destino concluída" aparecer na janela saída do CMake.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Definir um ponto de interrupção, compilar e executar no Linux
 
 Como é um aplicativo de área de trabalho, você precisa fornecer algumas informações de configuração adicionais para a configuração de depuração.
 
-1. Na exibição destinos de CMake, clique com o botão direito do mouse em AppBasicExampleGui e escolha **depurar e iniciar configurações** para abrir o arquivo launch. vs. JSON que está na subpasta Hidden **. vs** . Esse arquivo é local para seu ambiente de desenvolvimento. Você poderá movê-lo para a raiz do seu projeto se você quiser realizar o check-in e salvá-lo com sua equipe. Neste arquivo, uma configuração foi adicionada para AppBasicExampleGui. Essas configurações padrão funcionam na maioria dos casos, mas não aqui. Como é um aplicativo de área de trabalho, você precisa fornecer algumas informações adicionais para iniciar o programa para que possa vê-lo em seu computador Linux.
+1. Na exibição destinos de CMake, clique com o botão direito do mouse em AppBasicExampleGui e escolha **depurar e iniciar configurações** para abrir o launch.vs.jsno arquivo que está na subpasta oculta **. vs** . Esse arquivo é local para seu ambiente de desenvolvimento. Você poderá movê-lo para a raiz do seu projeto se você quiser realizar o check-in e salvá-lo com sua equipe. Neste arquivo, uma configuração foi adicionada para AppBasicExampleGui. Essas configurações padrão funcionam na maioria dos casos, mas não aqui. Como é um aplicativo de área de trabalho, você precisa fornecer algumas informações adicionais para iniciar o programa para que possa vê-lo em seu computador Linux.
 
-1. Para localizar o valor da variável `DISPLAY` de ambiente em seu computador Linux, execute este comando:
+1. Para localizar o valor da variável de ambiente `DISPLAY` em seu computador Linux, execute este comando:
 
    ```cmd
    echo $DISPLAY
    ```
 
-   Na configuração de AppBasicExampleGui, há uma matriz de parâmetros, "pipeArgs". Ele contém uma linha: "$ {debuggerCommand}". É o comando que inicia o gdb no computador remoto. O Visual Studio deve exportar a exibição para esse contexto antes que esse comando seja executado. Por exemplo, se o valor de sua exibição for `:1`, modifique essa linha da seguinte maneira:
+   Na configuração de AppBasicExampleGui, há uma matriz de parâmetros, "pipeArgs". Ele contém uma linha: "$ {debuggerCommand}". É o comando que inicia o gdb no computador remoto. O Visual Studio deve exportar a exibição para esse contexto antes que esse comando seja executado. Por exemplo, se o valor de sua exibição for `:1` , modifique essa linha da seguinte maneira:
 
    ```cmd
    "export DISPLAY=:1;${debuggerCommand}",
@@ -177,7 +177,7 @@ Como é um aplicativo de área de trabalho, você precisa fornecer algumas infor
 
 1. Inicie e depure seu aplicativo. Abra a lista suspensa **selecionar item de inicialização** na barra de ferramentas e escolha **AppBasicExampleGui**. Em seguida, escolha o ícone de reprodução verde na barra de ferramentas ou pressione **F5**. O aplicativo e suas dependências são criados no computador Linux remoto e, em seguida, iniciados com o depurador do Visual Studio anexado. Em seu computador Linux remoto, você deverá ver uma janela do aplicativo.
 
-1. Mova o mouse para a janela do aplicativo e clique em um botão. O ponto de interrupção é atingido. A execução do programa é pausada, o Visual Studio volta para o primeiro plano e você vê o ponto de interrupção. Você também deve ver uma Janela de Console do Linux ser exibida no Visual Studio. A janela fornece a saída do computador Linux remoto e também pode aceitar a entrada para `stdin`. Como qualquer janela do Visual Studio, você pode encaixá-la onde preferir vê-la. Sua posição é mantida em sessões futuras.
+1. Mova o mouse para a janela do aplicativo e clique em um botão. O ponto de interrupção é atingido. A execução do programa é pausada, o Visual Studio volta para o primeiro plano e você vê o ponto de interrupção. Você também deve ver uma Janela de Console do Linux ser exibida no Visual Studio. A janela fornece a saída do computador Linux remoto e também pode aceitar a entrada para `stdin` . Como qualquer janela do Visual Studio, você pode encaixá-la onde preferir vê-la. Sua posição é mantida em sessões futuras.
 
    ![Janela de Console do Linux do Visual Studio](media/cmake-bullet3-linux-console.png)
 
