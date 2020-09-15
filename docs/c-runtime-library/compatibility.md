@@ -1,22 +1,29 @@
 ---
 title: Compatibilidade
 description: Descreve a compatibilidade da Microsoft Universal C Runtime Library (UCRT) com a biblioteca C padrão, POSIX, o CRT seguro e aplicativos da Store.
-ms.date: 12/06/2019
+ms.date: 9/11/2020
 helpviewer_keywords:
 - CRT, compatibility
-- compatibility, C run-time libraries
+- compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 39b936acc43243973c2f66ef6fc7306026cc3259
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d6562be0abde8e9d51260b2d230f225ed159c199
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171041"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075744"
 ---
 # <a name="compatibility"></a>Compatibilidade
 
-A biblioteca UCRT (Biblioteca Em Tempo de Execução do C Universal) dá suporte à maioria das bibliotecas padrão C necessárias para conformidade com C++. Ele implementa a biblioteca C99 (ISO/IEC 9899:1999), com determinadas exceções: as macros de tipo genérico definidas em \<tgmath. h > e a compatibilidade de tipo estrito no \<Complex. h >. O UCRT também implementa um grande subconjunto do POSIX. 1 (ISO/IEC 9945-1:1996, a biblioteca de programa do aplicativo do sistema POSIX) C. No entanto, ele não está totalmente em conformidade com qualquer padrão POSIX específico. O UCRT também implementa várias funções e macros específicas da Microsoft que não fazem parte de um padrão.
+A Universal C Runtime Library (UCRT) oferece suporte à maior parte da biblioteca padrão C necessária para a conformidade com o C++. Ele implementa a biblioteca C99 (ISO/IEC 9899:1999), com determinadas exceções:
+- compatibilidade de tipo estrita no \<complex.h> . 
+- `aligned_alloc`, que provavelmente não será implementado porque o sistema operacional Windows não dá suporte a alocações alinhadas. Use o não padrão `_aligned_malloc` , em vez disso.
+-  `strerrorlen_s`
+- suporte Atomic no \<stdatomic.h>
+- suporte a Threading no \<threads.h>
+
+O UCRT também implementa um grande subconjunto do POSIX. 1 (ISO/IEC 9945-1:1996, a biblioteca de programa do aplicativo do sistema POSIX) C. No entanto, ele não está totalmente em conformidade com qualquer padrão POSIX específico. O UCRT também implementa várias funções e macros específicas da Microsoft que não fazem parte de um padrão.
 
 Funções específicas para a implementação pela Microsoft do Visual C++ são encontradas na biblioteca vcruntime.  Muitas dessas funções são para uso interno e não podem ser chamadas pelo código do usuário. Algumas estão documentadas para uso em compatibilidade de implementação e depuração.
 
@@ -28,9 +35,9 @@ Exceto conforme indicado na documentação para funções específicas, o UCRT �
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|Title|DESCRIÇÃO|
+|Título|Descrição|
 |-----------|-----------------|
-|[Os aplicativos UWP, o Windows Runtime e o tempo de execução C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Descreve quando as rotinas UCRT não são compatíveis com aplicativos universais do Windows ou Microsoft Store aplicativos.|
+|[Aplicativos UWP, o Windows Runtime e o tempo de execução do C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Descreve quando as rotinas UCRT não são compatíveis com aplicativos universais do Windows ou Microsoft Store aplicativos.|
 |[Conformidade com ANSI C](../c-runtime-library/ansi-c-compliance.md)|Descreve a nomenclatura em conformidade com padrão no UCRT.|
 |[UNIX](../c-runtime-library/unix.md)|Fornece diretrizes para portabilidade de programas em UNIX.|
 |[Plataformas Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Lista os sistemas operacionais aos quais o CRT dá suporte.|

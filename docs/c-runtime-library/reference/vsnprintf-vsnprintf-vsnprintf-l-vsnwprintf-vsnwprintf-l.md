@@ -1,5 +1,6 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
+description: Referência de API para vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf e _vsnwprintf_l; que grava a saída formatada usando um ponteiro para uma lista de argumentos.
 ms.date: 06/24/2020
 api_name:
 - _vsnprintf
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737587"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075758"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -159,7 +160,7 @@ A localidade a ser usada.
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valor Retornado
+## <a name="return-value"></a>Valor de retorno
 
 A função **vsnprintf** retorna o número de caracteres que são gravados, não contando o caractere nulo de terminação. Se o tamanho do buffer especificado pela *contagem* não for suficientemente grande para conter a saída especificada por *Format* e *argptr*, o valor de retorno de **vsnprintf** será o número de caracteres que seriam gravados, não contando o caractere nulo, se *Count* fosse suficientemente grande. Se o valor de retorno for maior que *Count* -1, a saída será truncada. Um valor retornado -1 indica que ocorreu um erro de codificação.
 
