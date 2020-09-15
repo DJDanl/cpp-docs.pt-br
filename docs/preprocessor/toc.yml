@@ -5,7 +5,7 @@
   items:
     - name: Pré-processador
       href: ../preprocessor/preprocessor.md
-    - name: Visão geral do pré-processador experimental
+    - name: Visão geral do novo pré-processador
       href: ../preprocessor/preprocessor-experimental-overview.md
     - name: Fases de translação
       href: ../preprocessor/phases-of-translation.md
@@ -35,7 +35,7 @@
               href: ../preprocessor/auto-search.md
             - name: embedded_idl
               href: ../preprocessor/embedded-idl.md
-            - name: 'exclude (#import)'
+            - name: exclude (#import)
               href: ../preprocessor/exclude-hash-import.md
             - name: high_method_prefix
               href: ../preprocessor/high-method-prefix.md
@@ -73,7 +73,7 @@
               href: ../preprocessor/raw-native-types.md
             - name: raw_property_prefixes
               href: ../preprocessor/raw-property-prefixes.md
-            - name: 'rename (#import)'
+            - name: rename (#import)
               href: ../preprocessor/rename-hash-import.md
             - name: rename_namespace
               href: ../preprocessor/rename-namespace.md
@@ -96,11 +96,11 @@
       items:
         - name: Operadores do pré-processador
           href: ../preprocessor/preprocessor-operators.md
-        - name: 'Operador stringizing (#)'
+        - name: Operador stringizing (#)
           href: ../preprocessor/stringizing-operator-hash.md
-        - name: 'Operador charizing (#@)'
+        - name: Operador charizing (#@)
           href: ../preprocessor/charizing-operator-hash-at.md
-        - name: 'Operador de colagem de token (##)'
+        - name: Operador de colagem de token (##)
           href: ../preprocessor/token-pasting-operator-hash-hash.md
     - name: Macros de pré-processador (C/C++)
       expanded: false

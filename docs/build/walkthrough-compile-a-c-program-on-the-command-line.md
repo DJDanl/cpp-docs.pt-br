@@ -1,21 +1,22 @@
 ---
-title: 'Instruções passo a passo: compilar um programa em C na linha de comando'
+title: 'Passo a passo: Compilar um programa em C na linha de comando'
+description: Walkthrough que mostra como criar um programa simples de estilo de Olá, Mundo C.
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 9/10/2020
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d807fa75b32b515c2222fec9ea9d070266303e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335256"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075602"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Instruções passo a passo: compilar um programa em C na linha de comando
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Passo a passo: Compilar um programa em C na linha de comando
 
 O Visual C++ inclui um compilador C que você pode usar para criar tudo, desde programas de console básicos até aplicativos completos de área de trabalho do Windows, aplicativos móveis e muito mais.
 
@@ -66,7 +67,7 @@ Se você estiver executando uma versão diferente do Windows, examine o menu ini
 
 ::: moniker-end
 
-Em seguida, verifique se o prompt de comando do Visual C++ Developer está configurado corretamente. Na janela do prompt de comando, `cl` Insira e verifique se a saída é semelhante a esta:
+Em seguida, verifique se o prompt de comando do Visual C++ Developer está configurado corretamente. Na janela do prompt de comando, insira `cl` e verifique se a saída é semelhante a esta:
 
 ```Output
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -81,14 +82,14 @@ Pode haver diferenças no diretório atual ou nos números de versão, dependend
 > [!NOTE]
 > Se você receber um erro como "' CL ' não é reconhecido como um comando interno ou externo, um programa ou arquivo de lote operável," erro C1034 ou erro LNK1104 ao executar o comando **CL** , você não está usando um prompt de comando do desenvolvedor ou algo está errado com a instalação do Visual C++. Você deve corrigir esse problema antes de continuar.
 
-Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se receber uma mensagem de erro quando `cl`inserir, a instalação do Visual C++ poderá ter um problema. Se você estiver usando o Visual Studio 2017 ou posterior, Tente reinstalar o **desenvolvimento de desktop com** a carga de trabalho do C++ no instalador do Visual Studio. Para obter detalhes, consulte [Instalar suporte a C++ no Visual Studio](vscpp-step-0-installation.md). Ou então, reinstale as ferramentas de Build da página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) . Não vá para a próxima seção até que isso funcione. Para obter mais informações sobre como instalar e solucionar problemas do Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
+Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se receber uma mensagem de erro quando inserir `cl` , a instalação do Visual C++ poderá ter um problema. Se você estiver usando o Visual Studio 2017 ou posterior, Tente reinstalar o **desenvolvimento de desktop com** a carga de trabalho do C++ no instalador do Visual Studio. Para obter detalhes, consulte [Instalar suporte a C++ no Visual Studio](vscpp-step-0-installation.md). Ou então, reinstale as ferramentas de Build da página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/) . Não vá para a próxima seção até que isso funcione. Para obter mais informações sobre como instalar e solucionar problemas do Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
 
 > [!NOTE]
 > Dependendo da versão do Windows no computador e da configuração de segurança do sistema, talvez seja necessário clicar com o botão direito do mouse para abrir o menu de atalho para o atalho do prompt de comando do desenvolvedor e escolher **Executar como administrador** para compilar e executar com êxito o programa que você criar, seguindo este passo a passos.
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Criar um arquivo de origem C e compilá-lo na linha de comando
 
-1. Na janela do prompt de comando do desenvolvedor `cd c:\` , digite para alterar o diretório de trabalho atual para a raiz da unidade C:. Em seguida, `md c:\simple` digite para criar um diretório e, em `cd c:\simple` seguida, digite para alterar para esse diretório. Esse diretório manterá o arquivo de origem e o programa compilado.
+1. Na janela do prompt de comando do desenvolvedor, digite `cd c:\` para alterar o diretório de trabalho atual para a raiz da unidade C:. Em seguida, digite `md c:\simple` para criar um diretório e, em seguida, digite `cd c:\simple` para alterar para esse diretório. Esse diretório manterá o arquivo de origem e o programa compilado.
 
 1. Digite `notepad simple.c` no prompt de comando do desenvolvedor. Na caixa de diálogo de alerta do bloco de notas que aparece, escolha **Sim** para criar um novo arquivo. c simples em seu diretório de trabalho.
 
@@ -104,7 +105,7 @@ Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se rec
     }
     ```
 
-1. Na barra de menus do bloco de notas, escolha **arquivo** > **salvar** para salvar Simple. c em seu diretório de trabalho.
+1. Na barra de menus do bloco de notas, escolha **arquivo**  >  **salvar** para salvar Simple. c em seu diretório de trabalho.
 
 1. Volte para a janela do prompt de comando do desenvolvedor. Digite `dir` no prompt de comando para listar o conteúdo do diretório c:\simple. Você deve ver o arquivo de origem Simple. c na listagem de diretório, que se parece com:
 
@@ -127,7 +128,7 @@ Se você não encontrar o atalho do prompt de comando do desenvolvedor ou se rec
 
 1. Para compilar seu programa, digite `cl simple.c` no prompt de comando do desenvolvedor.
 
-   Você pode ver o nome do programa executável, Simple. exe, nas linhas de informações de saída que o compilador exibe:
+   Você pode ver o nome do programa executável, simple.exe, nas linhas de informações de saída que o compilador exibe:
 
     ```Output
     c:\simple>cl simple.c
@@ -166,7 +167,7 @@ Você pode usar as etapas neste passo a passos para criar seu próprio código C
 
 `cl file1.c file2.c file3.c`
 
-O compilador gera um programa chamado arquivo1. exe. Para alterar o nome para Program1. exe, adicione uma opção de vinculador [/out](reference/out-output-file-name.md) :
+O compilador gera um programa chamado file1.exe. Para alterar o nome para program1.exe, adicione uma opção de vinculador [/out](reference/out-output-file-name.md) :
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
@@ -174,17 +175,17 @@ E para detectar mais erros de programação automaticamente, recomendamos que vo
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-O compilador, CL. exe, tem muitas outras opções que você pode aplicar para compilar, otimizar, depurar e analisar seu código. Para obter uma lista rápida, `cl /?` digite no prompt de comando do desenvolvedor. Você também pode compilar e vincular separadamente e aplicar opções de vinculador em cenários de compilação mais complexos. Para obter mais informações sobre as opções e o uso do compilador e do vinculador, consulte [referência de compilação do C/C++](reference/c-cpp-building-reference.md).
+O compilador, cl.exe, tem muito mais opções que você pode aplicar para compilar, otimizar, depurar e analisar seu código. Para obter uma lista rápida, digite `cl /?` no prompt de comando do desenvolvedor. Você também pode compilar e vincular separadamente e aplicar opções de vinculador em cenários de compilação mais complexos. Para obter mais informações sobre as opções e o uso do compilador e do vinculador, consulte  [referência de compilação do C/C++](reference/c-cpp-building-reference.md).
 
 Você pode usar NMAKE e makefiles, ou arquivos MSBuild e Project para configurar e compilar projetos mais complexos na linha de comando. Para obter mais informações sobre como usar essas ferramentas, consulte [referência do NMAKE](reference/nmake-reference.md) e [MSBuild](msbuild-visual-cpp.md).
 
 As linguagens C e C++ são semelhantes, mas não as mesmas. O compilador do Microsoft C/C++ (MSVC) usa uma regra simples para determinar qual idioma usar ao compilar seu código. Por padrão, o compilador MSVC trata todos os arquivos que terminam em. c como código-fonte C e todos os arquivos que terminam em. cpp como código-fonte C++. Para forçar o compilador a tratar todos os arquivos como C não dependente da extensão de nome de arquivo, use a opção de compilador [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
-O MSVC é compatível com o padrão ISO C99, mas não é estritamente compatível. Na maioria dos casos, o código C portátil será compilado e executado conforme o esperado. O Visual C++ não dá suporte à maioria das alterações no C11 ISO. Certas funções de biblioteca e nomes de função POSIX são preteridos pelo MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+O MSVC é compatível com o padrão ISO C99, mas não é estritamente compatível. Na maioria dos casos, o código C portátil será compilado e executado conforme o esperado. Visual C++ fornece suporte para as alterações no ISO C11/C17. Para compilar com o suporte a C11/C17, use o sinalizador do compilador `/std:c11` ou `/std:c17` . Certas funções de biblioteca e nomes de função POSIX são preteridos pelo MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Confira também
 
 [Passo a passo: criando um programa C++ padrão (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referência da linguagem C](../c-language/c-language-reference.md)<br/>
-[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br/>
+[Sistemas de build e projetos](projects-and-build-systems-cpp.md)<br/>
 [Compatibilidade](../c-runtime-library/compatibility.md)

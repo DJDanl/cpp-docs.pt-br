@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 84572d44cd994da07d44e736983270a1e7acd1ec
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: d9fbbc4f0eddba0ae6a7dbc3250a26d36155506e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086975"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075784"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabela de conformidade com a linguagem Microsoft C++
 
@@ -432,7 +432,7 @@ A opção do compilador [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttype
 
 <a name="note_B"></a>__B__ com suporte no [`/permissive-`](../build/reference/permissive-standards-conformance.md) modo no Visual Studio 2017 versão 15,7. Para obter mais informações, consulte o [suporte à pesquisa de nome de duas fases é MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
 
-<a name="note_C"></a>__C__ o suporte do compilador para regras de pré-processador do C99 está incompleto no Visual Studio 2017. Estamos sobrelançando o pré-processador e começamos a enviar essas alterações no Visual Studio 2017 versão 15,8 com a opção de compilador [/experimental: pré-processador](../build/reference/experimental-preprocessor.md) .
+<a name="note_C"></a>__C__ a partir do Visual Studio 2017 versão 15,8, o compilador fornece suporte para o pré-processador C99 por meio da opção de compilador [/experimental: pré-processador](../build/reference/experimental-preprocessor.md) . A partir do Visual Studio 2019 versão 16,6, o compilador implementa totalmente o pré-processador C99 por meio do [`/Zc:preprocessor`](../build/reference/zc-conformance.md) comutador. Ele é ativado por padrão quando a opção de compilador `/std:c11` ou `/std:c17` é especificada.
 
 <a name="note_D"></a>__D__ com suporte em [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) com um aviso de suppressible, [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) .
 
@@ -450,7 +450,7 @@ A opção do compilador [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttype
 
 <a name="note_byte"></a>__byte__ `std::byte` é habilitado pelo [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (ou [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) ), mas como pode entrar em conflito com os cabeçalhos de SDK do Windows em alguns casos, ele tem uma macro de aceitação refinada. Ele pode ser desabilitado, definindo `_HAS_STD_BYTE` como `0`.
 
-<a name="note_C11"></a> __C11__ O Universal CRT implementou as partes da Biblioteca Padrão do C11 que são exigidas pelo C++17, com exceção de especificadores de conversão alternativa de E/S do C99 `strftime()`, modo exclusivo do C11 `fopen()` e C11 `aligned_alloc()`. O último é improvável de ser implementado, porque o C11 especificou de `aligned_alloc()` forma incompatível com a implementação da Microsoft de `free()` : ou seja, que `free()` deve ser capaz de lidar com as alocações altamente alinhadas.
+<a name="note_C11"></a>__C11__ O suporte do compilador para C11 requer o Visual Studio versão 16,8 ou superior. O suporte à biblioteca C11 requer SDK do Windows versão 20211 ou superior. O CRT universal implementa as partes da biblioteca de C11 padrão que são exigidas pelo C++ 17, com exceção dos `strftime()` especificadores de conversão alternativa e/s de C99 e C11 `aligned_alloc()` . É improvável que o último seja implementado porque o sistema operacional Windows não dá suporte a alocações alinhadas.
 
 <a name="note_rem"></a>__REM__ Recursos removidos quando a [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) opção de [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) compilador (ou) é especificada. Esses recursos podem ser habilitados novamente de modo a facilitar a transição para os modos de idioma mais recentes pelo uso destas macros: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS` e `_HAS_UNEXPECTED`.
 
