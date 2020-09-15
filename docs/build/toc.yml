@@ -583,6 +583,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H (restringir comprimento de nomes externos)
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerUnit (usar unidade de cabeçalho IFC)
+                  href: ../build/reference/headerunit.md
                 - name: /HELP (ajuda da linha de comando do compilador)
                   href: ../build/reference/help-compiler-command-line-help.md
                 - name: /homeparams (copiar parâmetros de registro para pilha)
@@ -603,6 +605,10 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: '/MD, /MT, /LD (Usar biblioteca em tempo de execução)'
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: '/module:exportHeader (criar unidades de cabeçalho)'
+                  href: ../build/reference/module-exportheader.md
+                - name: '/module:reference (usar módulo nomeado IFC)'
+                  href: ../build/reference/module-reference.md
                 - name: /MP (compilar com vários processos)
                   href: ../build/reference/mp-build-with-multiple-processes.md
                 - name: /nologo (suprimir faixa de inicialização) (C++)
@@ -675,6 +681,8 @@
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: '/Tc, /Tp, /TC, /TP (especificar tipo de arquivo de origem)'
                   href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /translateInclude (converter diretivas de inclusão em diretivas de importação)
+                  href: ../build/reference/translateinclude.md
                 - name: '/U, /u (indefinir símbolos)'
                   href: ../build/reference/u-u-undefine-symbols.md
                 - name: /utf-8 (definir conjuntos de caracteres de origem e executáveis como UTF-8)
