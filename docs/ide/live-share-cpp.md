@@ -2,18 +2,18 @@
 title: Colaborar com o Live Share para C++ no Visual Studio
 description: Usar o Live Share para C++ no Visual Studio para colaborar e compartilhar código em tempo real.
 ms.date: 05/24/2019
-ms.openlocfilehash: 0ebdd77d0e277778b48cf69024b24841f775d968
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60830ad6c6b98f644e1c3ddb2e78fbf7397ae919
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377279"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684515"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>Colaborar usando o Live Share para C++
 
 No Visual Studio 2019 e no Visual Studio Code, você pode usar o **Live Share** para colaborar em projetos C++ em tempo real. Com o **Live Share**, outra pessoa pode editar e depurar o código sem precisar instalar o projeto ou uma de suas dependências. Vocês veem as edições um do outro conforme elas ocorrem, e cada edição é marcada com o nome da pessoa que a fez.
 
-![C&#43;&#43; Edição de Compartilhamento ao Vivo](../ide/media/live-share-edit-cpp.png "Edição de compartilhamento ao vivo em C++")
+![C&#43;&#43; Live Share edição](../ide/media/live-share-edit-cpp.png "Live Share edição em C++")
 
 ## <a name="live-share-host-and-guests"></a>Host e participantes do Live Share
 
@@ -33,17 +33,17 @@ O host e os participantes podem usar estes recursos do IntelliSense:
 - Realce de referência
 - Diagnóstico/erros/rabiscos
 
-![C&#43;&#43; Live Share Depuração](../ide/media/live-share-debug-cpp.png "Depuração de compartilhamento ao vivo em C++")
+![Depuração do C&#43;&#43; Live Share](../ide/media/live-share-debug-cpp.png "Live Share a depuração em C++")
 
 ## <a name="start-and-end-a-live-share-session"></a>Iniciar e encerrar uma sessão do Live Share
 
-Para iniciar uma sessão live share no Visual Studio, clique no botão Compartilhar no canto superior direito ou vá para Sessão**de Colaboração iniciar** **arquivos** > . Isso gerará um link que você poderá compartilhar com seus colaboradores.
+Para iniciar uma sessão de Live share no Visual Studio, clique no botão compartilhar na parte superior direita ou vá para **arquivo**  >  **iniciar a sessão de colaboração**. Isso gerará um link que você poderá compartilhar com seus colaboradores.
 
-![Botão de compartilhamento ao vivo do&#43;&#43; C](../ide/media/live-share-button-cpp.png "Botão de compartilhamento ao vivo")
+![Uma pequena captura de tela do botão Live Share.](../ide/media/live-share-button-cpp.png "Botão de Live Share")
 
 Para encerrar uma sessão, selecione **Encerrar Sessão de Colaboração** na lista suspensa **Compartilhamento**.
 
-![Botão de compartilhamento ao vivo do&#43;&#43; C](../ide/media/live-share-end-session-cpp.png "Botão de compartilhamento ao vivo")
+![Captura de tela da lista suspensa de compartilhamento com a opção encerrar sessão de colaboração realçada.](../ide/media/live-share-end-session-cpp.png "Botão de Live Share")
 
 ## <a name="for-more-information"></a>Para obter mais informações
 

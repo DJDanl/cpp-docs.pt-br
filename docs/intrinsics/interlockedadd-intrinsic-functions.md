@@ -1,5 +1,5 @@
 ---
-title: Funções intrínsecas _InterlockedAdd
+title: _InterlockedAdd funções intrínsecas
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217730"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683891"
 ---
-# <a name="_interlockedadd-intrinsic-functions"></a>Funções intrínsecas _InterlockedAdd
+# <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd funções intrínsecas
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 Essas funções executam uma adição atômica, que garante que a operação seja concluída com êxito quando mais de um thread tiver acesso a uma variável compartilhada.
 
@@ -81,7 +81,7 @@ __int64 _InterlockedAdd64_rel(
 *Adendo*\
 [entrada, saída] Ponteiro para o número inteiro a ser adicionado; substituído pelo resultado da adição.
 
-*Valor*\
+*Value*\
 no O valor a ser adicionado.
 
 ## <a name="return-value"></a>Valor retornado
@@ -90,7 +90,7 @@ Ambas as funções retornam o resultado da adição.
 
 ## <a name="requirements"></a>Requisitos
 
-|Intrínseco|Arquitetura|
+|Intrinsic|Arquitetura|
 |---------------|------------------|
 |`_InterlockedAdd`|ARM, ARM64|
 |`_InterlockedAdd_acq`|ARM, ARM64|
@@ -101,7 +101,7 @@ Ambas as funções retornam o resultado da adição.
 |`_InterlockedAdd64_nf`|ARM, ARM64|
 |`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Arquivo de cabeçalho** \<> intrin. h
+**Arquivo de cabeçalho** \<intrin.h>
 
 ## <a name="remarks"></a>Comentários
 
@@ -109,7 +109,7 @@ As versões dessas funções com os sufixos `_acq` ou `_rel` executam uma adiç�
 
 Essas rotinas somente estão disponíveis como intrínsecos.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 ```cpp
 // interlockedadd.cpp
@@ -135,8 +135,6 @@ int main()
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
-
-## <a name="example"></a>Exemplo
 
 ```cpp
 // interlockedadd64.cpp
@@ -167,9 +165,9 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)\
 [conflitos com o compilador x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b8c3ef419a4c6eaf9a674827cd5545a1f1b2bfe
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228746"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685496"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Aviso do compilador (nível 4) C4471
 
@@ -20,6 +20,8 @@ ms.locfileid: "87228746"
 Foi encontrada uma declaração de encaminhamento de uma enumeração sem escopo com um especificador para o tipo subjacente. Por padrão, o Visual C++ pressupõe **`int`** que é o tipo subjacente para uma enumeração. Isso pode causar problemas se um tipo diferente for usado na definição de enumeração, por exemplo, se um tipo explícito diferente for especificado ou se um tipo diferente for definido implicitamente por um inicializador. Você também pode ter problemas de portabilidade; outros compiladores não pressupõem **`int`** o tipo subjacente de uma enumeração.
 
 Esse aviso está desativado por padrão; Você pode usar/Wall ou/w*N*4471 para habilitá-lo na linha de comando ou usar #pragma [aviso](../../preprocessor/warning.md) no arquivo de origem.
+
+## <a name="examples"></a>Exemplos
 
 Em alguns casos, esse aviso é falso. Se uma declaração de encaminhamento para uma enumeração for exibida após a definição, esse aviso poderá ser acionado. Por exemplo, esse código é válido, embora possa causar C4471:
 
@@ -31,8 +33,6 @@ enum Example;    // Spurious C4471
 // ...
 ```
 
-## <a name="example"></a>Exemplo
-
 Em geral, é seguro usar a definição completa para uma enumeração sem escopo em vez de uma declaração de encaminhamento. Você pode colocar a definição em um arquivo de cabeçalho e incluí-lo em arquivos de origem que se referem a ele. Isso funciona em código escrito para C++ 98 e posterior. Recomendamos essa solução para portabilidade e facilidade de manutenção.
 
 ```cpp
@@ -43,8 +43,6 @@ enum Example;    // C4471
 // enum Example { item = 0x80000000UL };
 // ...
 ```
-
-## <a name="example"></a>Exemplo
 
 No C++ 11, você pode adicionar um tipo explícito a uma enumeração sem escopo e à sua declaração de encaminhamento. Recomendamos essa solução somente se a lógica de inclusão de cabeçalho complexa impedir o uso da definição em vez de uma declaração de encaminhamento. Essa solução pode levar a um problema de manutenção: se você alterar o tipo subjacente usado para a definição de enumeração, também deverá alterar todas as declarações de encaminhamento para corresponder ou poderá ter erros silenciosos em seu código. Você pode colocar a declaração Forward em um arquivo de cabeçalho para minimizar esse problema.
 
@@ -67,8 +65,6 @@ enum Example : unsigned { item = 0x80000000 }; // explicit type
 ```
 
 Se você especificar um tipo explícito para uma enumeração, recomendamos que você também habilite o aviso [C4369](compiler-warning-level-1-C4369.md), que está ativado por padrão. Isso identifica casos em que um item de enumeração requer um tipo diferente do tipo especificado explicitamente.
-
-## <a name="example"></a>Exemplo
 
 Você pode alterar seu código para usar uma enumeração com escopo, um recurso novo no C++ 11. A definição e qualquer código de cliente que usa o tipo de enumeração devem ser alterados para usar uma enumeração com escopo. Recomendamos que você use uma enumeração com escopo se tiver problemas com a poluição do namespace, pois os nomes dos itens de enumeração definidos são limitados ao escopo da enumeração. Outro recurso de uma enumeração com escopo é que seus membros não podem ser convertidos implicitamente em outro tipo integral ou de enumeração, que pode ser uma fonte de Bugs sutis.
 

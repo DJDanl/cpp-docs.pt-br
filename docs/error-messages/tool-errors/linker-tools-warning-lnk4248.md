@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 81f3c2abc41673e6e4c9e3f59ff1dd515e1cf365
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988104"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685419"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Aviso LNK4248 (Ferramentas de Vinculador)
 
@@ -25,13 +25,13 @@ Nessa situação, o vinculador fornecerá a definição de tipo nativo nos metad
 
 No entanto, se uma declaração de tipo de encaminhamento for um tipo CLR, a definição de tipo nativo do vinculador poderá não estar correta
 
-Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Para obter mais informações, consulte [/CLR (compilação em tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 1. Forneça a definição de tipo no módulo MSIL.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera LNK4248. Defina struct a para resolver.
 
@@ -47,8 +47,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 O exemplo a seguir tem uma definição de encaminhamento de um tipo.
 
 ```cpp
@@ -63,8 +61,6 @@ int main() {
    return valueA(a);
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera LNK4248.
 

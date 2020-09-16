@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042193"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683618"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Walkthrough: criar e usar sua própria biblioteca de vínculo dinâmico (C++)
 
@@ -91,7 +91,7 @@ Neste conjunto de tarefas, você cria um projeto para sua DLL, adiciona código 
 
 Quando a solução é criada, você pode ver o projeto gerado e os arquivos de origem na janela **Gerenciador de soluções** no Visual Studio.
 
-![Solução gerada no Visual Studio](media/mathlibrary-solution-explorer-162.png "Solução gerada no Visual Studio")
+![Captura de tela da janela de Gerenciador de Soluções do Visual Studio 2019 com a biblioteca de matemática realçada.](media/mathlibrary-solution-explorer-162.png "Solução gerada no Visual Studio")
 
 ::: moniker-end
 
@@ -103,13 +103,13 @@ Quando a solução é criada, você pode ver o projeto gerado e os arquivos de o
 
 1. No painel esquerdo da caixa de diálogo **novo projeto** , selecione **instalado**  >  **Visual C++**  >  **área de trabalho do Windows**. No painel central, selecione **biblioteca de vínculo dinâmico (DLL)**. Insira *MathLibrary* na caixa **nome** para especificar um nome para o projeto. Deixe os valores de **local** padrão e **nome da solução** . Defina a **solução** para **criar uma nova solução**. Marque **criar diretório para obter a solução** se ela estiver desmarcada.
 
-   ![Nomeie o projeto MathLibrary](media/mathlibrary-new-project-name-159.png "Nomeie o projeto MathLibrary")
+   ![Captura de tela da caixa de diálogo novo projeto do Visual Studio 2017 mostrando a biblioteca de matemática na caixa de texto nome.](media/mathlibrary-new-project-name-159.png "Nomeie o projeto MathLibrary")
 
 1. Escolha o botão **OK** para criar o projeto.
 
 Quando a solução é criada, você pode ver o projeto gerado e os arquivos de origem na janela **Gerenciador de soluções** no Visual Studio.
 
-![Solução gerada no Visual Studio](media/mathlibrary-solution-explorer-159.png "Solução gerada no Visual Studio")
+![Captura de tela da janela de Gerenciador de Soluções do Visual Studio 2017 com a biblioteca de matemática realçada.](media/mathlibrary-solution-explorer-159.png "Solução gerada no Visual Studio")
 
 ::: moniker-end
 
@@ -121,7 +121,7 @@ Quando a solução é criada, você pode ver o projeto gerado e os arquivos de o
 
 1. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **Modelos** > **Instalados** e escolha **Visual C++**. Em seguida, no painel central, escolha **Aplicativo de Console Win32**. Insira *MathLibrary* na caixa de edição de **nome** para especificar um nome para o projeto. Deixe os valores de **local** padrão e **nome da solução** . Defina a **solução** para **criar uma nova solução**. Marque **criar diretório para obter a solução** se ela estiver desmarcada.
 
-   ![Nomeie o projeto MathLibrary](media/mathlibrary-project-name.png "Nomeie o projeto MathLibrary")
+   ![Captura de tela da caixa de diálogo novo projeto do Visual Studio 2015 mostrando a biblioteca de matemática na caixa de texto nome.](media/mathlibrary-project-name.png "Nomeie o projeto MathLibrary")
 
 1. Escolha o botão **OK** para ignorar a caixa de diálogo **Novo Projeto** e iniciar o **Assistente de Aplicativo Win32**.
 
@@ -135,7 +135,7 @@ Quando a solução é criada, você pode ver o projeto gerado e os arquivos de o
 
 Quando o assistente concluir a solução, você verá os arquivos de projeto e de origem gerados na janela do **Gerenciador de Soluções** no Visual Studio.
 
-![Solução gerada no Visual Studio](media/mathlibrary-solution-explorer-153.png "Solução gerada no Visual Studio")
+![Captura de tela da janela de Gerenciador de Soluções do Visual Studio 2015 com a biblioteca de matemática realçada.](media/mathlibrary-solution-explorer-153.png "Solução gerada no Visual Studio")
 
 ::: moniker-end
 
@@ -405,7 +405,7 @@ Para evitar código fora de sincronia, recomendamos que você defina o caminho d
 
 1. Na página **configurar seu novo projeto** , digite *MathClient* na caixa **nome do projeto** para especificar um nome para o projeto. Deixe os valores de **local** padrão e **nome da solução** . Defina a **solução** para **criar uma nova solução**. Desmarque **a solução e o projeto do local no mesmo diretório** , se estiver marcado.
 
-   ![Nomear o projeto do cliente](media/mathclient-project-name-2019.png "Nomear o projeto do cliente")
+   ![Captura de tela da caixa de diálogo criar um novo projeto com a opção aplicativo de console realçada.](media/mathclient-project-name-2019.png "Nomear o projeto do cliente")
 
 1. Escolha o botão **Criar** para criar o projeto do cliente.
 
@@ -421,7 +421,7 @@ Um projeto de aplicativo de console mínimo é criado para você. O nome do arqu
 
 1. No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha **Windows Desktop** em **Visual C++** > **Instalado**. No painel central, selecione **aplicativo de console do Windows**. Especifique o nome do projeto, *MathClient*, na caixa de edição de **nome** .  Deixe os valores de **local** padrão e **nome da solução** . Defina a **solução** para **criar uma nova solução**. Marque **criar diretório para obter a solução** se ela estiver desmarcada.
 
-   ![Nomear o projeto do cliente](media/mathclient-new-project-name-159.png "Nomear o projeto do cliente")
+   ![Captura de tela da caixa de diálogo novo projeto com instalado > Visual C Plus Plus > Windows Desktop selecionado, aplicativo de console do Windows realçado e cliente matemático digitado na caixa de texto nome.](media/mathclient-new-project-name-159.png "Nomear o projeto do cliente")
 
 1. Escolha **OK** para criar o projeto de aplicativo cliente.
 
@@ -437,7 +437,7 @@ Um projeto de aplicativo de console mínimo é criado para você. O nome do arqu
 
 1. No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha **Win32** em **Modelos** > **Instalados do** > **Visual C++**. No painel central, escolha **Aplicativo de Console Win32**. Especifique o nome do projeto, *MathClient*, na caixa de edição de **nome** . Deixe os valores de **local** padrão e **nome da solução** . Defina a **solução** para **criar uma nova solução**. Marque **criar diretório para obter a solução** se ela estiver desmarcada.
 
-   ![Nomear o projeto do cliente](media/mathclient-project-name.png "Nomear o projeto do cliente")
+   ![Captura de tela da caixa de diálogo novo projeto com modelos de > instalados > Visual C Plus Plus > Win32 selecionado, aplicativo de console Win32 Visual C Plus mais realçado e cliente matemático digitado na caixa de texto nome.](media/mathclient-project-name.png "Nomear o projeto do cliente")
 
 1. Escolha o botão **OK** para ignorar a caixa de diálogo **Novo Projeto** e iniciar o **Assistente de Aplicativo Win32**. Na página **Visão geral** da caixa de diálogo **Assistente de Aplicativo Win32**, clique no botão **Avançar**.
 

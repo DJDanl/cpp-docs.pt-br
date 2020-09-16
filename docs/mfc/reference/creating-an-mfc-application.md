@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 115ca6b4ab32482707cffd08ef575c93b2f3bfa9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040087"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683449"
 ---
 # <a name="creating-an-mfc-application"></a>Criando um aplicativo MFC
 
@@ -42,7 +42,7 @@ A maneira mais fácil de criar um aplicativo MFC é usar o assistente de aplicat
 
 Para obter mais informações, consulte [criando um aplicativo MFC baseado em formulários](creating-a-forms-based-mfc-application.md).
 
-![Assistente de aplicativo do Visual Studio 2019 MFC](media/mfc-app-wizard.png)
+![Captura de tela do assistente de aplicativo do MFC no Visual estúdios 2019.](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Para criar um aplicativo de console do MFC
 
@@ -53,7 +53,7 @@ Um aplicativo de console do MFC é um programa de linha de comando que usa bibli
 1. Modifique o nome do projeto conforme necessário e, em seguida, pressione **Avançar** para abrir o **Assistente de área de trabalho do Windows**.
 1. Marque a caixa **cabeçalhos do MFC** e defina outros valores conforme necessário e pressione **concluir**.
 
-![Caixa de diálogo de projeto do Windows desktop do Visual Studio 2019](media/windows-desktop-wizard.png)
+![Captura de tela do assistente de área de trabalho do Windows no Visual estúdios 2019.](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ Um aplicativo de console do MFC é um programa de linha de comando que usa bibli
 
 Para obter mais informações, consulte [criando um aplicativo MFC baseado em formulários](creating-a-forms-based-mfc-application.md).
 
-![Assistente de aplicativo do Visual Studio 2017 MFC](media/mfc-app-wizard.png)
+![Captura de tela do assistente de aplicativo do MFC no Visual estúdios 2017.](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Para criar um aplicativo de console do MFC
 
@@ -80,7 +80,7 @@ Um aplicativo de console do MFC é um programa de linha de comando que usa bibli
 1. Modifique o nome do projeto conforme necessário e pressione **OK** para abrir o **Assistente de área de trabalho do Windows**.
 1. Marque a caixa **cabeçalhos do MFC** e defina outros valores conforme necessário e pressione **concluir**.
 
-![Caixa de diálogo de projeto do Windows desktop do Visual Studio 2017](media/windows-desktop-wizard-2017.png)
+![Captura de tela do assistente de área de trabalho do Windows no Visual estúdios 2017.](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ Um aplicativo de console do MFC é um programa de linha de comando que usa bibli
 
 Para obter mais informações, consulte [criando um aplicativo MFC baseado em formulários](creating-a-forms-based-mfc-application.md).
 
-![Assistente de aplicativo do Visual Studio 2015 MFC](media/mfc-app-wizard-2015.png)
+![Captura de tela do assistente de aplicativo do MFC no Visual estúdios 2015.](media/mfc-app-wizard-2015.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Para criar um aplicativo de console do MFC
 

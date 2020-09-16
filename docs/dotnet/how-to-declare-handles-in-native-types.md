@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 1aca21402122a0c8641a7e57ace2a3477ff96f01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: deba9804b9c5c278b3ffcef2923bc8f89fefa676
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221335"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684528"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Como declarar identificadores em tipos nativos
 
@@ -24,7 +24,7 @@ O `gcroot` modelo é implementado usando os recursos da classe de valor System::
 
 O tempo de execução manterá uma associação entre o identificador e o objeto CLR, ao qual ele faz referência. Quando o objeto CLR for movido com o heap coletado por lixo, o identificador retornará o novo endereço do objeto. Uma variável não precisa ser fixada antes de ser atribuída a um `gcroot` modelo.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Este exemplo mostra como criar um `gcroot` objeto na pilha nativa.
 
@@ -50,8 +50,6 @@ int main() {
 ```Output
 hello
 ```
-
-## <a name="example"></a>Exemplo
 
 Este exemplo mostra como criar um `gcroot` objeto no heap nativo.
 
@@ -80,8 +78,6 @@ int main() {
 ```Output
 hello
 ```
-
-## <a name="example"></a>Exemplo
 
 Este exemplo mostra como usar `gcroot` para manter referências a tipos de valor (não tipos de referência) em um tipo nativo usando `gcroot` no tipo boxed.
 

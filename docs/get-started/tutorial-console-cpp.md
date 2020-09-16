@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14e1e18da5cdabae5366d4ba97a2260d5e99f076
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230578"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685315"
 ---
 # <a name="create-a-console-calculator-in-c"></a>Criar uma calculadora de console em C++
 
@@ -75,11 +75,11 @@ O modelo para um novo aplicativo de console do Windows cria um aplicativo simple
 
 1. Para compilar o projeto, escolha **Compilar Solução** no menu **Compilar**. A janela de **Saída** mostra os resultados do processo de build.
 
-   ![Compilar o projeto](./media/calc-vs2019-build-your-project.png "Compilar o projeto")
+   ![Captura de tela do Visual Studio 2019 com a janela de saída mostrando o resultado do processo de compilação.](./media/calc-vs2019-build-your-project.png "Compilar o projeto")
 
 1. Para executar o código, na barra de menus, escolha **Depurar**, **Iniciar sem depuração**.
 
-   ![Iniciar o projeto](./media/calc-vs2019-hello-world-console.png "Iniciar o projeto")
+   ![Captura de tela do console de depuração do Visual Studio 2019 Microsoft Visual Studio mostrando que o código foi executado com êxito.](./media/calc-vs2019-hello-world-console.png "Iniciar o projeto")
 
    Uma janela do console é aberta e, em seguida, executa seu aplicativo. Quando você inicia um aplicativo de console no Visual Studio, ele é executado em seu código e, em seguida, imprime "Pressione qualquer tecla para fechar esta janela. . ." para dar a oportunidade de ver a saída. Parabéns! Você criou seu primeiro aplicativo de console "Olá, mundo!" no Visual Studio!
 
@@ -142,11 +142,11 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Vá para o menu **Projeto** e escolha **Adicionar Classe**. Na caixa de edição **Nome de Classe**, digite *Calculadora*. Selecione **OK**. Dois novos arquivos são adicionados ao seu projeto. Para salvar todos os arquivos alterados de uma vez, pressione **Ctrl+Shift+S**. É um atalho de teclado para **arquivo**  >  **salvar tudo**. Também há um botão de barra de ferramentas para **Salvar Tudo**, um ícone de dois disquetes, encontrado ao lado do botão **Salvar**. Em geral, é uma boa prática executar **Salvar Tudo** com frequência, para que você não perca nenhum arquivo ao salvar.
 
-   ![Criar a classe de calculadora](./media/calc-vs2019-create-calculator-class.png "Criar a classe de calculadora")
+   ![Captura de tela da caixa de diálogo Adicionar classe com a calculadora digitada na caixa de texto nome da classe.](./media/calc-vs2019-create-calculator-class.png "Criar a classe de calculadora")
 
    Uma classe é como um blueprint para um objeto que faz algo. Nesse caso, definimos uma calculadora e como ela deve funcionar. O assistente **Adicionar Classe** usado acima criou arquivos .h e .cpp que têm o mesmo nome que a classe. Você pode ver uma lista completa dos arquivos de projeto na janela **Gerenciador de soluções** , visível no lado do IDE. Se a janela não estiver visível, você poderá abri-la na barra de menus: escolha **Exibir**  >  **Gerenciador de soluções**.
 
-   ![Gerenciador de Soluções](./media/calc-vs2019-solution-explorer.png "Gerenciador de Soluções")
+   ![Captura de tela da janela Gerenciador de Soluções do Visual Studio 2019 exibindo o projeto do tutorial da calculadora.](./media/calc-vs2019-solution-explorer.png "Gerenciador de Soluções")
 
    Agora você deve ter três guias abertas no editor: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se você fechar acidentalmente um deles, poderá reabri-lo clicando duas vezes nele na janela **Gerenciador de soluções** .
 
@@ -170,7 +170,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Você verá um rabisco verde aparecer sob `Calculate`. Ocorre porque ainda não definimos a função `Calculate` no arquivo .cpp. Passe o mouse sobre a palavra, clique na lâmpada (neste caso, uma chave de fenda) que aparece em pop-up e escolha **Criar uma definição de 'Calculate' em Calculator.cpp**.
 
-   ![Criar definição de Calculate](./media/calc-vs2019-create-definition.png "Criar definição de Calculate")
+   ![Captura de tela do Visual Studio 2019 mostrando a opção Criar definição de calcular na calculadora C P P realçada.](./media/calc-vs2019-create-definition.png "Criar definição de Calculate")
 
    Um pop-up será exibido, possibilitando uma espiada na alteração de código que foi feita em outro arquivo. O código foi adicionado ao *Calculator.cpp*.
 
@@ -264,7 +264,7 @@ Agora é hora de testar o programa novamente para verificar se que tudo está fu
 
 1. Insira `5 + 5` e pressione **Enter**. Verifique se o resultado será 10.
 
-   ![O resultado de 5 + 5](./media/calc-vs2019-five-plus-five.png "O resultado de 5 + 5")
+   ![Captura de tela do console de depuração do Visual Studio 2019 Microsoft Visual Studio mostrando o resultado correto de 5 + 5.](./media/calc-vs2019-five-plus-five.png "O resultado de 5 + 5")
 
 ## <a name="debug-the-app"></a>Depurar o aplicativo
 
@@ -274,29 +274,29 @@ Uma vez que o usuário é livre para digitar qualquer coisa na janela do console
 
 1. Defina um ponto de interrupção na linha `result = c.Calculate(x, oper, y);`, logo após o usuário ter sido solicitado a inserir a entrada. Para definir um ponto de interrupção, clique Para fazer isso, clique ao lado da linha na barra vertical cinza ao longo da borda esquerda da janela do editor. Um ponto vermelho é exibido.
 
-   ![Definir um ponto de interrupção](./media/calc-vs2019-set-breakpoint.png "Definir um ponto de interrupção")
+   ![Captura de tela do Visual Studio 2019 mostrando o Red Dot que representa um ponto de interrupção.](./media/calc-vs2019-set-breakpoint.png "Definir um ponto de interrupção")
 
    Agora quando depuramos o programa, ele sempre pausa a execução nessa linha. Já temos uma ideia superficial de que o programa funciona para casos simples. Como não queremos pausar a execução toda vez, vamos tornar o ponto de interrupção condicional.
 
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção e escolha **Condições**. Na caixa de edição para a condição, insira `(y == 0) && (oper == '/')`. Escolha o botão **OK** quando tiver terminado. A condição é salva automaticamente.
 
-   ![Definir um ponto de interrupção condicional](./media/calc-vs2019-conditional-breakpoint.png "Definir um ponto de interrupção condicional")
+   ![Captura de tela do Visual Studio 2019 mostrando a seção Configurações de ponto de interrupção e uma condição adicionada ao valor é verdadeiro.](./media/calc-vs2019-conditional-breakpoint.png "Definir um ponto de interrupção condicional")
 
    Agora vamos pausar a execução no ponto de interrupção especificamente se você tentar uma divisão por 0.
 
 1. Para depurar o programa, pressione **F5** ou escolha o botão da barra de ferramentas **Depurador Local do Windows** que tem um ícone de seta verde. Em seu aplicativo de console, se você digitar algo como "0-5", o programa se comportará normalmente e continuará em execução. No entanto, se você digitar "10 / 0", ele fará uma pausa no ponto de interrupção. Você pode até mesmo colocar qualquer número de espaços entre o operador e os números. `cin` é inteligente o suficiente para analisar a entrada de modo adequado.
 
-   ![Pausar no ponto de interrupção condicional](./media/calc-vs2019-debug-breakpoint.png "Pausar no ponto de interrupção condicional")
+   ![Captura de tela do Visual estúdios 2019 mostrando que o programa está em pausa no ponto de interrupção condicional.](./media/calc-vs2019-debug-breakpoint.png "Pausar no ponto de interrupção condicional")
 
 ### <a name="useful-windows-in-the-debugger"></a>Janelas úteis no depurador
 
 Sempre que você depura seu código, pode perceber que algumas novas janelas aparecem. Essas janelas podem ajudar a sua experiência de depuração. Dê uma olhada na janela **Autos**. A janela **Autos** mostra os valores atuais das variáveis usadas pelo menos três linhas antes e até a linha atual. Para ver todas as variáveis dessa função, alterne para a janela **Locais**. Na verdade, você pode modificar os valores dessas variáveis enquanto depura para ver que efeito elas teriam sobre o programa. Neste caso, podemos deixá-las de lado.
 
-   ![A janela locais](./media/calc-vs2019-debug-locals.png "A janela locais")
+   ![Captura de tela da janela locais no Visual Studio 2019.](./media/calc-vs2019-debug-locals.png "A janela locais")
 
 Também é possível apenas focalizar variáveis no código em si para ver seus valores atuais em que a execução está em pausa momento. Verifique se a janela do editor está em foco clicando nela primeiro.
 
-   ![Focalizar para exibir valores de variáveis atuais](./media/calc-vs2019-hover-tooltip.png "Focalizar para exibir valores de variáveis atuais")
+   ![Captura de tela do Visual Studio 2019 mostrando a dica de ferramenta que aparece exibindo o valor da variável.](./media/calc-vs2019-hover-tooltip.png "Focalizar para exibir valores de variáveis atuais")
 
 ### <a name="to-continue-debugging"></a>Para continuar a depuração
 
@@ -308,7 +308,7 @@ Também é possível apenas focalizar variáveis no código em si para ver seus 
 
    Parece que o programa está fazendo o que é esperado: ele usa o primeiro número e o divide pelo segundo. Na linha `cout`, focalize a variável `result` ou dê uma olhada `result` na janela **Autos**. Você verá que seu valor está listado como "inf", o que não parece correto, então vamos corrigi-lo. A linha `cout` somente gera qualquer valor que esteja armazenado em `result`, portanto, quando você avança mais uma linha usando **F10**, a janela do console exibe:
 
-   ![O resultado da divisão por zero](./media/calc-vs2019-divide-by-zero-fail.png "O resultado da divisão por zero")
+   ![Captura de tela do console de depuração do Microsoft Visual Studio do Visual Studio 2019 mostrando o resultado da divisão por zero.](./media/calc-vs2019-divide-by-zero-fail.png "O resultado da divisão por zero")
 
    Esse resultado acontece porque a divisão por zero é indefinida, portanto, o programa não tem uma resposta numérica para a operação solicitada.
 
@@ -359,7 +359,7 @@ Vamos tratar da divisão por zero de modo mais simples para que um usuário poss
 
 1. Agora pressione **F5** uma vez. A execução do programa continua até ele precisar pausar para pedir entrada do usuário. Insira `10 / 0` novamente. Agora, é impressa uma mensagem mais útil. O usuário é solicitado a fornecer mais entradas e o programa continua em execução normalmente.
 
-   ![O resultado final após as alterações](./media/calc-vs2019-final-verification.png "O resultado final após as alterações")
+   ![Captura de tela do console de depuração do Microsoft Visual Studio do Visual Studio 2019 mostrando o resultado final após as alterações.](./media/calc-vs2019-final-verification.png "O resultado final após as alterações")
 
    > [!Note]
    > Quando você edita o código no modo de depuração, há um risco de o código se tornar obsoleto. Isso acontece quando o depurador ainda está executando seu código antigo e não ainda o atualizou com suas alterações. O depurador abre em pop-up uma caixa de diálogo para informá-lo quando isso acontece. Às vezes, pode ser necessário pressionar **F5** para atualizar o código que está sendo executado. Em particular, se você fizer uma alteração dentro de uma função enquanto o ponto de execução está dentro daquela função, precisará sair da função e voltar para ela para obter o código atualizado. Se isso não funcionar por alguma razão e você vir uma mensagem de erro, você poderá interromper a depuração clicando no quadrado vermelho na barra de ferramentas abaixo dos menus na parte superior do IDE e iniciar a depuração novamente inserindo **F5** ou escolhendo a seta " reproduzir" verde ao lado do botão Parar na barra de ferramentas.
@@ -437,11 +437,11 @@ O modelo para um novo aplicativo de console do Windows cria um aplicativo simple
 
 1. Para compilar o projeto, escolha **Compilar Solução** no menu **Compilar**. A janela de **Saída** mostra os resultados do processo de build.
 
-   ![Compilar o projeto](./media/calculator-initial-build-output.png "Compilar o projeto")
+   ![Captura de tela do Visual Studio com a janela de saída mostrando o resultado do processo de compilação.](./media/calculator-initial-build-output.png "Compilar o projeto")
 
 1. Para executar o código, na barra de menus, escolha **Depurar**, **Iniciar sem depuração**.
 
-   ![Iniciar o projeto](./media/calculator-hello-world-console.png "Iniciar o projeto")
+   ![Captura de tela da Microsoft Visual Studio console de depuração mostrando que o código foi executado com êxito.](./media/calculator-hello-world-console.png "Iniciar o projeto")
 
    Uma janela do console é aberta e, em seguida, executa seu aplicativo. Quando você inicia um aplicativo de console no Visual Studio, ele é executado em seu código e, em seguida, imprime "Pressione qualquer tecla para continuar. . ." para dar a oportunidade de ver a saída. Parabéns! Você criou seu primeiro aplicativo de console "Olá, mundo!" no Visual Studio!
 
@@ -508,11 +508,11 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Vá para o menu **Projeto** e escolha **Adicionar Classe**. Na caixa de edição **Nome de Classe**, digite *Calculadora*. Selecione **OK**. Dois novos arquivos são adicionados ao seu projeto. Para salvar todos os arquivos alterados de uma vez, pressione **Ctrl+Shift+S**. É um atalho de teclado para **arquivo**  >  **salvar tudo**. Também há um botão de barra de ferramentas para **Salvar Tudo**, um ícone de dois disquetes, encontrado ao lado do botão **Salvar**. Em geral, é uma boa prática executar **Salvar Tudo** com frequência, para que você não perca nenhum arquivo ao salvar.
 
-   ![Criar a classe de calculadora](./media/calculator-create-class.gif "Criar a classe de calculadora")
+   ![Vídeo curto mostrando o usuário abrindo a caixa de diálogo Adicionar classe, digitando calculadora no campo nome da classe e selecionando O K.](./media/calculator-create-class.gif "Criar a classe de calculadora")
 
    Uma classe é como um blueprint para um objeto que faz algo. Nesse caso, definimos uma calculadora e como ela deve funcionar. O assistente **Adicionar Classe** usado acima criou arquivos .h e .cpp que têm o mesmo nome que a classe. Você pode ver uma lista completa dos arquivos de projeto na janela **Gerenciador de soluções** , visível no lado do IDE. Se a janela não estiver visível, você poderá abri-la na barra de menus: escolha **Exibir**  >  **Gerenciador de soluções**.
 
-   ![Gerenciador de Soluções](./media/calculator-solution-explorer.png "Gerenciador de Soluções")
+   ![Captura de tela da janela de Gerenciador de Soluções exibindo o projeto de tutorial da calculadora.](./media/calculator-solution-explorer.png "Gerenciador de Soluções")
 
    Agora você deve ter três guias abertas no editor: *CalculatorTutorial. cpp*, *Calculator. h*e *Calculator. cpp*. Se você fechar acidentalmente um deles, poderá reabri-lo clicando duas vezes nele na janela **Gerenciador de soluções** .
 
@@ -536,7 +536,7 @@ Agora vamos examinar o código neste modelo em um aplicativo de calculadora.
 
 1. Você verá um rabisco verde aparecer sob `Calculate`. Ocorre porque ainda não definimos a função `Calculate` no arquivo .cpp. Passe o mouse sobre a palavra, clique na lâmpada que aparece em pop-up e escolha **criar uma definição de 'Calculate' em Calculator.cpp**. Um pop-up será exibido, possibilitando uma espiada na alteração de código que foi feita em outro arquivo. O código foi adicionado ao *Calculator.cpp*.
 
-   ![Criar definição de Calculate](./media/calculator-create-definition.gif "Criar definição de Calculate")
+   ![Vídeo curto mostrando o usuário selecionando a opção Criar definição de calculado na calculadora C P P.](./media/calculator-create-definition.gif "Criar definição de Calculate")
 
    Atualmente, retorna apenas 0,0. Vamos mudar isso. Pressione **Esc** para fechar o pop-up.
 
@@ -628,7 +628,7 @@ Agora é hora de testar o programa novamente para verificar se que tudo está fu
 
 1. Insira `5 + 5` e pressione **Enter**. Verifique se o resultado será 10.
 
-   ![O resultado de 5 + 5](./media/calculator-five-plus-five.png "O resultado de 5 + 5")
+   ![Captura de tela da Microsoft Visual Studio console de depuração mostrando o resultado correto de 5 + 5.](./media/calculator-five-plus-five.png "O resultado de 5 + 5")
 
 ## <a name="debug-the-app"></a>Depurar o aplicativo
 
@@ -638,19 +638,19 @@ Uma vez que o usuário é livre para digitar qualquer coisa na janela do console
 
 1. Defina um ponto de interrupção na linha `result = c.Calculate(x, oper, y);`, logo após o usuário ter sido solicitado a inserir a entrada. Para definir um ponto de interrupção, clique Para fazer isso, clique ao lado da linha na barra vertical cinza ao longo da borda esquerda da janela do editor. Um ponto vermelho é exibido.
 
-   ![Definir um ponto de interrupção](./media/calculator-set-breakpoint.gif "Definir um ponto de interrupção")
+   ![Vídeo curto do Visual estúdios mostrando o usuário que está criando o ponto vermelho que representa um pontos de interrupção.](./media/calculator-set-breakpoint.gif "Definir um ponto de interrupção")
 
    Agora quando depuramos o programa, ele sempre pausa a execução nessa linha. Já temos uma ideia superficial de que o programa funciona para casos simples. Como não queremos pausar a execução toda vez, vamos tornar o ponto de interrupção condicional.
 
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção e escolha **Condições**. Na caixa de edição para a condição, insira `(y == 0) && (oper == '/')`. Escolha o botão **OK** quando tiver terminado. A condição é salva automaticamente.
 
-   ![Definir um ponto de interrupção condicional](./media/calculator-conditional-breakpoint.gif "Definir um ponto de interrupção condicional")
+   ![Vídeo curto do Visual Studio 2019 mostrando o usuário abrindo a seção Configurações de ponto de interrupção e definindo um ponto de interrupção condicional.](./media/calculator-conditional-breakpoint.gif "Definir um ponto de interrupção condicional")
 
    Agora vamos pausar a execução no ponto de interrupção especificamente se você tentar uma divisão por 0.
 
 1. Para depurar o programa, pressione **F5** ou escolha o botão da barra de ferramentas **Depurador Local do Windows** que tem um ícone de seta verde. Em seu aplicativo de console, se você digitar algo como "0-5", o programa se comportará normalmente e continuará em execução. No entanto, se você digitar "10 / 0", ele fará uma pausa no ponto de interrupção. Você pode até mesmo colocar qualquer número de espaços entre o operador e os números. `cin` é inteligente o suficiente para analisar a entrada de modo adequado.
 
-   ![Pausar no ponto de interrupção condicional](./media/calculator-debug-conditional.gif "Pausar no ponto de interrupção condicional")
+   ![Vídeo curto do Visual estúdios mostrando que o programa está em pausa no ponto de interrupção condicional.](./media/calculator-debug-conditional.gif "Pausar no ponto de interrupção condicional")
 
 ### <a name="useful-windows-in-the-debugger"></a>Janelas úteis no depurador
 
@@ -660,11 +660,11 @@ Sempre que você depura seu código, pode perceber que algumas novas janelas apa
 
 Para ver todas as variáveis dessa função, alterne para a janela **Locais**. Na verdade, você pode modificar os valores dessas variáveis enquanto depura para ver que efeito elas teriam sobre o programa. Neste caso, podemos deixá-las de lado.
 
-   ![A janela locais](./media/calculator-locals.png "A janela locais")
+   ![Captura de tela da janela locais.](./media/calculator-locals.png "A janela locais")
 
 Também é possível apenas focalizar variáveis no código em si para ver seus valores atuais em que a execução está em pausa momento. Verifique se a janela do editor está em foco clicando nela primeiro.
 
-   ![Focalizar para exibir valores de variáveis atuais](./media/calculator-hover-tooltip.gif "Focalizar para exibir valores de variáveis atuais")
+   ![Vídeo curto mostrando a dica de ferramenta que aparece exibindo o valor da variável.](./media/calculator-hover-tooltip.gif "Focalizar para exibir valores de variáveis atuais")
 
 ### <a name="to-continue-debugging"></a>Para continuar a depuração
 
@@ -678,7 +678,7 @@ Também é possível apenas focalizar variáveis no código em si para ver seus 
 
    Parece que o programa está fazendo o que é esperado: ele usa o primeiro número e o divide pelo segundo. Na linha `cout`, focalize a variável `result` ou dê uma olhada `result` na janela **Autos**. Você verá que seu valor está listado como "inf", o que não parece correto, então vamos corrigi-lo. A linha `cout` somente gera qualquer valor que esteja armazenado em `result`, portanto, quando você avança mais uma linha usando **F10**, a janela do console exibe:
 
-   ![O resultado da divisão por zero](./media/calculator-divide-by-zero-fail.png "O resultado da divisão por zero")
+   ![Captura de tela da Microsoft Visual Studio console de depuração mostrando o resultado da divisão por zero.](./media/calculator-divide-by-zero-fail.png "O resultado da divisão por zero")
 
    Esse resultado acontece porque a divisão por zero é indefinida, portanto, o programa não tem uma resposta numérica para a operação solicitada.
 
@@ -730,7 +730,7 @@ Vamos tratar da divisão por zero de modo mais simples para que um usuário poss
 
 1. Agora pressione **F5** uma vez. A execução do programa continua até ele precisar pausar para pedir entrada do usuário. Insira `10 / 0` novamente. Agora, é impressa uma mensagem mais útil. O usuário é solicitado a fornecer mais entradas e o programa continua em execução normalmente.
 
-   ![O resultado final após as alterações](./media/calculator-final-verification.gif "O resultado final após as alterações")
+   ![Vídeo curto da Microsoft Visual Studio console de depuração mostrando o resultado final após as alterações.](./media/calculator-final-verification.gif "O resultado final após as alterações")
 
    > [!Note]
    > Quando você edita o código no modo de depuração, há um risco de o código se tornar obsoleto. Isso acontece quando o depurador ainda está executando seu código antigo e não ainda o atualizou com suas alterações. O depurador abre em pop-up uma caixa de diálogo para informá-lo quando isso acontece. Às vezes, pode ser necessário pressionar **F5** para atualizar o código que está sendo executado. Em particular, se você fizer uma alteração dentro de uma função enquanto o ponto de execução está dentro daquela função, precisará sair da função e voltar para ela para obter o código atualizado. Se isso não funcionar por alguma razão e você vir uma mensagem de erro, você poderá interromper a depuração clicando no quadrado vermelho na barra de ferramentas abaixo dos menus na parte superior do IDE e iniciar a depuração novamente inserindo **F5** ou escolhendo a seta " reproduzir" verde ao lado do botão Parar na barra de ferramentas.

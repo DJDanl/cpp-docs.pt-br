@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845686"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684897"
 ---
 # <a name="checked-iterators"></a>Iteradores verificados
 
@@ -73,7 +73,7 @@ Um iterador verificado refere-se a um iterador que chamará `invalid_parameter_h
 
 Os adaptadores de iterador que dão suporte a iteradores são [Classe checked_array_iterator](../standard-library/checked-array-iterator-class.md) e [Classe unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Quando você compila usando _ITERATOR_DEBUG_LEVEL definido como 1 ou 2, ocorrerá um erro de tempo de execução se você tentar acessar um elemento que está fora dos limites do contêiner usando o operador de indexação de determinadas classes.
 
@@ -102,8 +102,6 @@ int main()
 
 Esse programa imprime “67” e então abre em pop-up uma caixa de diálogo de falha de asserção com informações adicionais sobre a falha.
 
-## <a name="example"></a>Exemplo
-
 Da mesma forma, quando você compila usando _ITERATOR_DEBUG_LEVEL definido como 1 ou 2, ocorrerá um erro de tempo de execução se você tentar acessar um elemento usando `front` ou `back` em classes de contêiner quando o contêiner estiver vazio.
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 Esse programa abrirá em pop-up uma caixa de diálogo de falha de asserção com informações adicionais sobre a falha.
-
-## <a name="example"></a>Exemplo
 
 O código a seguir demonstra vários cenários de caso de uso de iterador com comentários sobre cada um. Por padrão, _ITERATOR_DEBUG_LEVEL é definido como 2 em compilações de depuração e como 0 em compilações de varejo.
 

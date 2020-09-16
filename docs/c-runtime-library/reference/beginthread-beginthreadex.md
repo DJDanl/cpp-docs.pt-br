@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5060c4b34005c1cc066e002d20ca70cbfea0fbef
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234270"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684814"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -77,7 +77,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *start_address*<br/>
 Endereço inicial de uma rotina que inicia a execução de um novo thread. Por **_beginthread**, a Convenção de chamada é [__cdecl](../../cpp/cdecl.md) (para código nativo) ou [__clrcall](../../cpp/clrcall.md) (para código gerenciado); por **_beginthreadex**, ele é [__stdcall](../../cpp/stdcall.md) (para código nativo) ou [__clrcall](../../cpp/clrcall.md) (para código gerenciado).
@@ -97,7 +97,7 @@ Sinalizadores que controlam o estado inicial de um novo thread. Defina *initflag
 *thrdaddr*<br/>
 Aponta para uma variável de 32 bits que recebe o identificador de thread. Se for **nulo**, ele não será usado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se for bem-sucedida, cada uma dessas funções retornará um identificador para o thread recém-criado; no entanto, se o thread recém-criado sair muito rapidamente, **_beginthread** poderá não retornar um identificador válido. (Consulte a discussão na seção comentários.) Em um erro, **_beginthread** retornará-1L e **errno** será definido como **EAGAIN** se houver muitos threads, para **EINVAL** se o argumento for inválido ou se o tamanho da pilha estiver incorreto, ou para **EACCES** se houver recursos insuficientes (como memória). Em um erro, **_beginthreadex** retorna 0 e **errno** e **_doserrno** são definidos.
 
@@ -157,7 +157,7 @@ Somente versões multi-threaded da [biblioteca em tempo de execução do C](../.
 
 Para usar **_beginthread** ou **_beginthreadex**, o aplicativo deve vincular-se a uma das bibliotecas de tempo de execução de C multi-threaded.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir usa **_beginthread** e **_endthread**.
 
@@ -276,8 +276,6 @@ void Bounce( void * parg )
 ```
 
 Pressione qualquer tecla para encerrar um aplicativo de exemplo.
-
-## <a name="example"></a>Exemplo
 
 O código de exemplo a seguir demonstra como você pode usar o identificador de thread que é retornado por **_beginthreadex** com a API de sincronização [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject). O thread principal aguarda o segundo thread encerrar antes de continuar. Quando o segundo thread chama **_endthreadex**, ele faz com que seu objeto de thread vá para o estado sinalizado. Isso permite que o thread principal continue em execução. Isso não pode ser feito com **_beginthread** e **_endthread**, porque **_endthread** chama **CloseHandle**, que destrói o objeto de thread antes que ele possa ser definido como o estado sinalizado.
 

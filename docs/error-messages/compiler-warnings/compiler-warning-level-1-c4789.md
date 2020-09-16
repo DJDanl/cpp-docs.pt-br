@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1e089c45598a53ff337e389feb2a6983a2997041
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518394"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684619"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Aviso do compilador (nível 1) C4789
 
@@ -33,7 +33,7 @@ O aviso ocorrerá se a cópia usar a forma intrínseca de uma dessas funções C
 
 O aviso também aparece quando você converte um parâmetro para um tipo de dados maior e, em seguida, faz uma atribuição de cópia de uma referência lvalue.
 
-O C++ visual pode gerar esse aviso para um caminho de código que nunca é executado. Você pode desabilitar temporariamente o aviso usando `#pragma`, conforme mostrado neste exemplo:
+Visual C++ pode gerar esse aviso para um caminho de código que nunca é executado. Você pode desabilitar temporariamente o aviso usando `#pragma` , conforme mostrado neste exemplo:
 
 ```cpp
 #pragma warning( push )
@@ -42,9 +42,9 @@ O C++ visual pode gerar esse aviso para um caminho de código que nunca é execu
 #pragma warning( pop )
 ```
 
-Esse idioma impede que C++ o Visual gere o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` alterá-lo. O `#pragma warning(pop)` restaura o estado enviado por push e remove os efeitos da `#pragma warning(disable:4789)`. Para obter mais informações sobre C++ a diretiva de pré-processador `#pragma`, consulte Diretivas de [aviso](../../preprocessor/warning.md) e [pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Esse idioma mantém Visual C++ de gerar o aviso para esse bloco específico de código. O `#pragma warning(push)` preserva o estado existente antes de `#pragma warning(disable: 4789)` alterá-lo. O `#pragma warning(pop)` restaura o estado enviado por push e remove os efeitos do `#pragma warning(disable:4789)` . Para obter mais informações sobre a diretiva de pré-processador do C++ `#pragma` , consulte Diretivas de [aviso](../../preprocessor/warning.md) e [pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C4789.
 
@@ -67,8 +67,6 @@ int main()
     memcpy(&c, &w, sizeof(wchar_t));
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir também gera C4789.
 

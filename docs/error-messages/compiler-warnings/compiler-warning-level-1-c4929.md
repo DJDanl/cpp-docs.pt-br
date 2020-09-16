@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 8f8f5f9febf762ddff1d35baa2686162ff6653e2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7627acbd359058566a5d14d880f4efb2980a8a93
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199297"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683852"
 ---
 # <a name="compiler-warning-level-1-c4929"></a>Aviso do compilador (nível 1) C4929
 
@@ -19,7 +19,7 @@ ms.locfileid: "80199297"
 
 O atributo embedded_idl de [#import](../../preprocessor/hash-import-directive-cpp.md) não pôde ser aplicado à biblioteca de tipos porque uma União está presente na biblioteca de tipos. Para resolver esse aviso, não use embedded_idl.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir define um componente.
 
@@ -52,8 +52,6 @@ struct C : I {
    HRESULT f(TD_TYPE*) { return 0; }
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4929.
 

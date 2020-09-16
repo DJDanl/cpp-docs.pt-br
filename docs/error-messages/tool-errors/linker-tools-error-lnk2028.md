@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-ms.openlocfilehash: ef9e3eae655a4fbee1c3da74f6036e5fb22434b1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 29aaed167f750186d956589e9daa0d21c441149e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194610"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684191"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Erro das Ferramentas de Vinculador LNK2028
 
@@ -23,7 +23,7 @@ Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as c
 
 A opção de compilador **/CLR: Pure** foi preterida no visual Studio 2015 e não tem suporte no visual Studio 2017.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Este exemplo de código gera um componente com uma função exportada, nativa, cuja Convenção de chamada é implicitamente [__cdecl](../../cpp/cdecl.md).
 
@@ -34,8 +34,6 @@ __declspec(dllexport) int func() {
    return 3;
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir cria um cliente puro que consome a função nativa. No entanto, a Convenção de chamada em **/CLR: Pure** é [__clrcall](../../cpp/clrcall.md). O exemplo a seguir gera LNK2028.
 

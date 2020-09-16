@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831366"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684580"
 ---
 # <a name="db_command"></a>db_command
 
@@ -24,7 +24,7 @@ Cria um comando OLE DB.
 ]
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *command*<br/>
 Uma cadeia de caracteres de comando que contém o texto de um comando OLE DB. Um exemplo simples é:
@@ -46,7 +46,7 @@ Um *bloco de parâmetro de associação* é definido da seguinte maneira:
 
 > **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
-onde:
+em que:
 
 - **(** marca o início do bloco de vinculação de dados.
 
@@ -123,7 +123,7 @@ Você pode usar **db_command** com o escopo de classe ou função; a principal d
 
 Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o compilador renomeará a classe como \_ acessador *YourClassName*, em que *YourClassName* é o nome que você forneceu à classe e o compilador também criará uma classe chamada *YourClassName*, que deriva de \_ acessador *YourClassName*.  Em Modo de Exibição de Classe, você verá ambas as classes.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Este exemplo define um comando que seleciona o nome e o sobrenome de uma tabela em que a coluna de estado corresponde a ' AC '. **db_command** cria e lê um conjunto de linhas no qual você pode chamar funções geradas pelo assistente, como [método OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), bem como `CRowset` funções de membro como [MoveNext](../../data/oledb/crowset-movenext.md).
 
@@ -163,8 +163,6 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a>Exemplo
-
 ```cpp
 // db_command.cpp
 // compile with: /c
@@ -192,8 +190,6 @@ int main(int argc, _TCHAR* argv[]) {
    CoUninitialize();
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 Este exemplo usa `db_source` em uma classe de fonte de dados `CMySource` e `db_command` em classes de comando `CCommand1` e `CCommand2` .
 
@@ -241,7 +237,7 @@ int main() {
 | Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`** , membro, método, local|
-|**Repetível**|Não|
+|**Repetível**|No|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 

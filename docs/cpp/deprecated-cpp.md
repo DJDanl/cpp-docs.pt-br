@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44cb33bae43b32b12dda95423aec5484f61aa596
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221673"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683410"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
@@ -28,7 +28,7 @@ Com as exceções indicadas abaixo, a **`deprecated`** declaração oferece a me
 
 Se o compilador encontrar o uso de um identificador substituído ou o atributo padrão [`[[deprecated]]`](attributes.md) , um aviso de [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) será gerado.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir mostra como marcar funções como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a função preterida for usada.
 
@@ -48,8 +48,6 @@ int main() {
    func3(1);   // C4996
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra como marcar classes como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a classe preterida for usada.
 
