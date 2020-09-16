@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756273"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686045"
 ---
 # <a name="compiler-error-c3915"></a>Erro do compilador C3915
 
@@ -21,7 +21,7 @@ Um tipo não tem uma propriedade indexada default.
 
 Para obter mais informações, consulte [Propriedade](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3915.
 
@@ -46,9 +46,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
-C3915 também pode ocorrer se você tentar consumir um indexador padrão no mesmo compiland em que foi definido com <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 também pode ocorrer se você tentar consumir um indexador padrão no mesmo compiland em que foi definido <xref:System.Reflection.DefaultMemberAttribute> .
 
 O exemplo a seguir gera C3915.
 

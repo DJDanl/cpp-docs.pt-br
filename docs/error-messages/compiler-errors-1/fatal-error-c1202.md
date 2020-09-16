@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1202
 ms.assetid: c859adb8-17a7-4fa1-a1f3-5820b7bf3849
-ms.openlocfilehash: 08694e8df4e72d730f19e08db7370f7bd866266e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 64e0ee6a98d7005bb2b15833f88c31d593b5b5c2
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747209"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686555"
 ---
 # <a name="fatal-error-c1202"></a>Erro fatal C1202
 
@@ -19,7 +19,7 @@ tipo recursivo ou contexto de dependência de função muito complexo
 
 Uma definição de modelo foi recursiva ou excedeu os limites de complexidade.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C1202.
 
@@ -35,8 +35,6 @@ public:
 };
 Factorial<7> facSeven;
 ```
-
-## <a name="example"></a>Exemplo
 
 Resolução possível.
 

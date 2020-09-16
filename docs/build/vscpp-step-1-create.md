@@ -5,12 +5,12 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749313"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686503"
 ---
 # <a name="create-a-c-console-app-project"></a>Criar um projeto de aplicativo de console C++
 
@@ -32,7 +32,7 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 1. No diálogo **configurar seu novo projeto** , digite *HelloWorld* na caixa de edição **nome do projeto** . Escolha **criar** para criar o projeto.
 
-   ![Nomeie e crie o novo projeto](media/vs2019-configure-new-project-hello-world.png "Nomeie e crie o novo projeto")
+   ![Captura de tela da caixa de diálogo Configurar seu novo projeto com Olá, Mundo digitados no campo de texto nome do projeto.](media/vs2019-configure-new-project-hello-world.png "Nomeie e crie o novo projeto")
 
    O Visual Studio cria um novo projeto. Ele está pronto para você adicionar e editar seu código-fonte. Por padrão, o modelo de aplicativo de console preenche o código-fonte com um aplicativo "Olá, Mundo":
 
@@ -52,7 +52,7 @@ O Visual Studio usa os *projetos* para organizar o código em um aplicativo e as
 
 1. Na caixa de diálogo **novo projeto** , selecione **instalado > Visual C++** se ele ainda não estiver selecionado e, em seguida, escolha o modelo de **projeto vazio** . No campo **nome** , digite *HelloWorld*. Escolha **OK** para criar o projeto.
 
-   ![Nomeie e crie o novo projeto](media/vscpp-concierge-project-name-callouts.png "Nomeie e crie o novo projeto")
+   ![Captura de tela da caixa de diálogo novo projeto com instalado > Visual C Plus Plus selecionado e chamado, a opção de projeto vazio chamada out e o hellow World digitado na caixa de texto nome.](media/vscpp-concierge-project-name-callouts.png "Nomeie e crie o novo projeto")
 
 O Visual Studio cria um projeto novo e vazio. Ele está pronto para você se especializar para o tipo de aplicativo que deseja criar e adicionar seus arquivos de código-fonte. Você fará isso em seguida.
 

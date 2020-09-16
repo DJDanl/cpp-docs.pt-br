@@ -3,12 +3,12 @@ title: Configurar um projeto C++ do MSBuild do Linux no Visual Studio
 ms.date: 08/06/2020
 description: Configure um projeto do Linux baseado em MSBuild no Visual Studio para que você possa compilá-lo.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043857"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685950"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurar um projeto C++ do MSBuild do Linux no Visual Studio
 
@@ -110,13 +110,13 @@ Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Pla
 
 ::: moniker range="vs-2017"
 
-![Cabeçalho remoto IntelliSense](media/remote-header-intellisense.png)
+![Captura de tela mostrando a caixa de diálogo opções com plataforma cruzada > Gerenciador de conexões > cabeçalhos remotos Gerenciador do IntelliSense selecionados.](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![Cabeçalho remoto IntelliSense](media/connection-manager-vs2019.png)
+![Captura de tela mostrando a caixa de diálogo opções com a plataforma cruzada > Gerenciador de conexões selecionado.](media/connection-manager-vs2019.png)
 
 Habilite o log ajudar a solucionar problemas:
 
@@ -124,11 +124,11 @@ Habilite o log ajudar a solucionar problemas:
 
 ::: moniker-end
 
-## <a name="linux-target-locale"></a><a name="locale"></a>Localidade de destino do Linux
+## <a name="linux-target-locale"></a><a name="locale"></a> Localidade de destino do Linux
 
 As configurações de linguagem do Visual Studio não são propagadas para destinos do Linux porque o Visual Studio não gerencia nem configura pacotes instalados. As mensagens mostradas na janela de **saída** , como erros de compilação, são mostradas usando o idioma e a localidade do destino do Linux. Você precisará configurar seus destinos do Linux para a localidade desejada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Defina propriedades de build e compilador](../build/working-with-project-properties.md)<br/>
 [Propriedades gerais de C++ (Linux C++)](prop-pages/general-linux.md)<br/>

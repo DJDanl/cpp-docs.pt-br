@@ -2,12 +2,12 @@
 title: Ler e entender o código C++ no Visual Studio
 description: Use o editor de código C++ no Visual Studio para formatar e entender o código.
 ms.date: 05/28/2019
-ms.openlocfilehash: 9ed0a20fb73e4cc976392bc5e5f698f9658a0b48
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3da4224592cabd11e449fa4be395eba046c0e554
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377295"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686123"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Ler e entender o código C++ no Visual Studio
 
@@ -17,7 +17,7 @@ O editor de códigos e o IDE do Visual Studio fornecem muitos recursos de codifi
 
 O Visual Studio colore elementos de sintaxe para diferenciar entre tipos de símbolos, como palavras-chave de linguagem, nomes de tipos, nomes de variáveis, parâmetros de função, literais de cadeia de caracteres e assim por diante.
 
-![Coloração de código](../ide/media/code-outline-colorization.png "Coloração C++")
+![Colorização de código](../ide/media/code-outline-colorization.png "Colorização de C++")
 
 O código não utilizado (como o código em um #if 0) tem uma cor mais esmaecida.
 
@@ -29,27 +29,27 @@ Personalize as cores digitando "Fontes" em **Início Rápido** e, em seguida, es
 
 Clique com o botão direito do mouse em qualquer lugar em um arquivo de código-fonte e escolha **Estrutura de Tópicos** para recolher ou expandir blocos de código e/ou regiões personalizadas, a fim de facilitar a navegação apenas pelo código de seu interesse. Para obter mais informações, consulte [Estrutura de tópicos](/visualstudio/ide/outlining).
 
-![C&#43;&#43; Delineamento](../ide/media/vs2015_cpp_outlining.png "Estrutura de tópicos")
+![Estrutura de tópicos do C&#43;&#43; ](../ide/media/vs2015_cpp_outlining.png "Estrutura de tópicos")
 
 Quando você coloca o cursor na frente de uma chave, '{' ou '}', o editor realça seu equivalente correspondente.
 
-Outras opções de delineamento estão localizadas em **Editar** > **delineamento** no menu principal.
+Outras opções de estrutura de tópicos estão localizadas em **Editar**  >  **estrutura de tópicos** no menu principal.
 
 ## <a name="line-numbers"></a>Números de linha
 
-Você pode adicionar números de linha ao seu projeto indo para **Tools** > **Options** > **Text Editor** > **All Languages** > **General** ou procurando por "line num" com Quick **Launch (Ctrl + Q)**. Os números de linha podem ser definidos para todas as linguagens ou para linguagens específicas, incluindo C++.
+Você pode adicionar números de linha ao seu projeto acessando **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **todos os idiomas**  >  **geral** ou procurando por "número de linha" com **início rápido (Ctrl + Q)**. Os números de linha podem ser definidos para todas as linguagens ou para linguagens específicas, incluindo C++.
 
 ## <a name="scroll-and-zoom"></a>Rolar e aplicar zoom
 
 Você pode ampliar ou reduzir a página no editor pressionando a tecla **Ctrl** e rolando a página com o botão de rolagem do mouse. Também é possível aplicar zoom usando a configuração de zoom no canto inferior esquerdo.
 
-![Controle de zoom de&#43;&#43; C](../ide/media/zoom-control.png "Controle de zoom")
+![Controle de zoom em C&#43;&#43; ](../ide/media/zoom-control.png "Controle de zoom")
 
 O **Modo de Mapa** da barra de rolagem permite que você role a página e navegue por um arquivo de código rapidamente sem sair da localização atual. Clique em qualquer lugar no mapa de códigos para ir diretamente para essa localização.
 
-![Mapa de código em c&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa de Códigos")
+![Mapa de códigos em C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa de Códigos")
 
-Para ativar o **modo mapa,** digite "mapa" na caixa de pesquisa **De lançamento rápido** na barra de ferramentas principal e escolha Usar o modo mapa de **rolagem**. Para obter mais informações, confira [Como acompanhar o código personalizando a barra de rolagem](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Para ativar o **modo de mapa**, digite "mapa" na caixa de pesquisa **início rápido** na barra de ferramentas principal e escolha **usar modo de mapa de rolagem**. Para obter mais informações, confira [Como acompanhar o código personalizando a barra de rolagem](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 Quando o **Modo de Mapa** estiver desativado, a barra de rolagem ainda realçará as alterações feitas no arquivo. A cor verde indica as alterações salvas e a cor amarela indica as alterações não salvas.
 
@@ -59,9 +59,9 @@ Passe o mouse sobre qualquer variável, função ou outro símbolo para obter in
 
 ::: moniker range="vs-2019"
 
-![Informações rápidas em C&#43;&#43;](../ide/media/quick-info-vs2019.png "Informação Rápida")
+![Captura de tela mostrando o dica de ferramenta Informações Rápidas no Visual Studio 2019.](../ide/media/quick-info-vs2019.png "Informação Rápida")
 
-A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online**. Vá para **Ferramentas** > **Opções** > **Editor de** > texto**C++** > **Para** especificar o provedor de pesquisa.
+A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online**. Vá para **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **C++**  >  **Exibir** para especificar o provedor de pesquisa.
 
 Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela Lista de Erros.
 
@@ -71,7 +71,7 @@ Se houver um erro no código, passe o mouse sobre ele, e as **Informações Ráp
 
 ::: moniker range="<=vs-2017"
 
-![Informações rápidas em C&#43;&#43;](../ide/media/quick-info.png "Informação Rápida")
+![Captura de tela mostrando o dica de ferramenta Informações Rápidas no Visual Studio 2017.](../ide/media/quick-info.png "Informação Rápida")
 
 Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela **Lista de Erros**.
 
@@ -81,13 +81,13 @@ Se houver um erro no código, passe o mouse sobre ele, e as **Informações Ráp
 
 Quando você chama uma função, a opção **Informações de Parâmetro** mostra os tipos de parâmetros e a ordem na qual eles são esperados.
 
-![Informações de parâmetros em&#43;&#43;C](../ide/media/parameter-info.png "Informações de Parâmetro")
+![Informações de parâmetro em C&#43;&#43;](../ide/media/parameter-info.png "Informações de Parâmetro")
 
 ## <a name="peek-definition"></a>Inspecionar Definição
 
 Passe o mouse sobre uma variável ou uma declaração da função, clique com o botão direito do mouse e, em seguida, escolha **Inspecionar Definição** para ver uma exibição embutida de sua definição sem sair da localização atual. Para obter mais informações, confira [Inspecionar Definição (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
-![C&#43;&#43; Peek Definição](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+![C&#43;&#43; definição de Peek](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ## <a name="f1-help"></a>Ajuda F1
 
@@ -97,19 +97,19 @@ Posicione o cursor sobre qualquer tipo, palavra-chave ou função ou imediatamen
 
 O **Modo de Exibição de Classe** exibe um conjunto pesquisável de árvores de todos os símbolos de códigos e suas hierarquias de pai/filho e escopo, organizadas por projeto. Configure o que o **Modo de Exibição de Classe** exibe em **Configurações do Modo de Exibição de Classe** (clique no ícone da caixa de engrenagem na parte superior da janela).
 
-![Exibição de classe em&#43;&#43;C](../ide/media/class-view.png "Exibição de Classe")
+![Modo de Exibição de Classe em C&#43;&#43;](../ide/media/class-view.png "Exibição de Classe")
 
 ## <a name="generate-graph-of-include-files"></a>Gerar grafo de arquivos de inclusão
 
 Clique com o botão direito do mouse em um arquivo de código no projeto e escolha **Gerar grafo de arquivos de inclusão** para ver um grafo de quais arquivos são incluídos por outros arquivos.
 
-![C gráfico&#43;&#43; de incluir arquivos](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
+![C&#43;&#43; grafo de arquivos de inclusão](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 
 ## <a name="view-call-hierarchy"></a>Exibir Hierarquia de Chamada
 
 Clique com o botão direito do mouse em qualquer chamada de função e exiba uma lista recursiva de todas as funções chamadas por ela e de todas as funções que a chamam. Cada função na lista pode ser expandida da mesma maneira. Para obter mais informações, confira [Hierarquia de chamada](/visualstudio/ide/reference/call-hierarchy).
 
-![Hierarquia de chamadas de&#43;&#43; C](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![C&#43;&#43; hierarquia de chamadas](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ## <a name="see-also"></a>Consulte Também
 

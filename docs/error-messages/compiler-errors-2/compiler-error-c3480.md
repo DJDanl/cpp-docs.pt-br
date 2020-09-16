@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3480
 ms.assetid: 7b2e055a-9604-4d13-861b-b38bda1a6940
-ms.openlocfilehash: 255fb12d587a94aac798814736f0b26770f608b0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a2fa1a8b02cf05d332210f359ae3ff33ed7d6e35
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760472"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686300"
 ---
 # <a name="compiler-error-c3480"></a>Erro do compilador C3480
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760472"
 
 A variável de captura de lambda não é de um escopo de função delimitadora.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Remova a variável da lista de captura da expressão lambda.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3480 porque a variável `global` não é de um escopo de função delimitadora:
 
@@ -37,8 +37,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 O exemplo a seguir resolve C3480 removendo a variável `global` da lista de captura da expressão lambda:
 
 ```cpp
@@ -51,6 +49,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)

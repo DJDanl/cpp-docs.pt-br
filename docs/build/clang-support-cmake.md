@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: 46bfe788c13df3a37dd9cba654d16cfe4c3fe177
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a23526cf5216e4cc37c3131a0d1ba94a6e923f56
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323189"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686425"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Suporte a Clang/LLVM em projetos do Visual Studio CMake
 
@@ -25,7 +25,7 @@ Você pode usar o Visual Studio com Clang para editar e depurar projetos de CMak
 
 **Windows**: o Visual Studio 2019 versão 16,1 inclui suporte para edição, criação e depuração com CLANG/LLVM em projetos CMake destinados ao Windows.
 
-**Linux**: para projetos CMake do Linux, nenhum suporte especial ao Visual Studio é necessário. Você pode instalar o Clang usando o Gerenciador de pacotes do distribuição e adicionar os comandos apropriados no arquivo CMakeLists. txt.
+**Linux**: para projetos CMake do Linux, nenhum suporte especial ao Visual Studio é necessário. Você pode instalar o Clang usando o Gerenciador de pacotes do distribuição e adicionar os comandos apropriados no arquivo de CMakeLists.txt.
 
 ## <a name="install"></a>Instalar
 
@@ -37,7 +37,7 @@ Para obter o melhor suporte ao IDE no Visual Studio, é recomendável usar as fe
 
 Para adicionar uma nova configuração de Clang a um projeto CMake:
 
-1. Clique com o botão direito do mouse em CMakeLists. txt em **Gerenciador de soluções** e escolha **configurações de CMake para o projeto**.
+1. Clique com o botão direito do mouse em CMakeLists.txt em **Gerenciador de soluções** e escolha **configurações de CMake para o projeto**.
 
 1. Em **configurações**, pressione o botão **Adicionar configuração** :
 
@@ -53,11 +53,11 @@ Para adicionar uma nova configuração de Clang a um projeto CMake:
 
 Para modificar uma configuração existente para usar o Clang, siga estas etapas:
 
-1. Clique com o botão direito do mouse em CMakeLists. txt em **Gerenciador de soluções** e escolha **configurações de CMake para o projeto**.
+1. Clique com o botão direito do mouse em CMakeLists.txt em **Gerenciador de soluções** e escolha **configurações de CMake para o projeto**.
 
 1. Em **geral** , selecione o menu suspenso **conjunto de ferramentas** e escolha o conjunto de ferramentas Clang desejado:
 
-   ![Conjunto de ferramentas CMake Clang](media/cmake-clang-toolset.png)
+   ![Captura de tela da caixa de diálogo geral mostrando que o conjunto de ferramentas está selecionado e Clang CL x 86 está realçado.](media/cmake-clang-toolset.png)
 
 ## <a name="custom-clang-locations"></a>Locais de Clang personalizados
 
@@ -68,13 +68,13 @@ Por padrão, o Visual Studio procura Clang em dois locais:
 
 Você pode especificar outro local definindo as variáveis **CMAKE_C_COMPILER** e **CMAKE_CXX_COMPILER** CMAKE nas **configurações do CMAKE**:
 
-![Conjunto de ferramentas CMake Clang](media/clang-location-cmake.png)
+![Captura de tela da caixa de diálogo C Make Settings com o compilador c X X realçado.](media/clang-location-cmake.png)
 
 ## <a name="clang-compatibility-modes"></a>Modos de compatibilidade do Clang
 
-Para configurações do Windows, o CMake, por padrão, invoca Clang no modo [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) e links com a implementação da biblioteca padrão da Microsoft. Por padrão, o **Clang-CL. exe** está localizado `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`em.
+Para configurações do Windows, o CMake, por padrão, invoca Clang no modo [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) e links com a implementação da biblioteca padrão da Microsoft. Por padrão, o **clang-cl.exe** está localizado em `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin` .
 
-Você pode modificar esses valores em **configurações de CMake** em **cache Variables and CMake**. Clique em **Mostrar variáveis avançadas**. Role para baixo até localizar **CMAKE_CXX_COMPILER**e, em seguida, clique no botão **procurar** para especificar um caminho de compilador diferente.
+Você pode modificar esses valores em **configurações de CMake** em **cache Variables and CMake**. Clique em **Mostrar variáveis avançadas**. Role para baixo até localizar **CMAKE_CXX_COMPILER**e, em seguida, clique no botão **procurar**  para especificar um caminho de compilador diferente.
 
 ## <a name="edit-build-and-debug"></a>Editar, compilar e depurar
 

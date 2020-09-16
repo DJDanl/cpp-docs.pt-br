@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: a882fa7f78f68cb2400e4924a9ba2f17e6ee7003
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 25b97cfb50847a0929f3d3a97b822209e6a11900
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991450"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686672"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>Aviso do compilador (nível 4) C4239
 
 extensão não padrão usada: ' token ': conversão de ' type ' para ' type '
 
-Essa conversão de C++ tipo não é permitida pelo padrão, mas é permitida aqui como uma extensão. Esse aviso é sempre seguido por pelo menos uma linha de explicação que descreve a regra de idioma que está sendo violada.
+Essa conversão de tipo não é permitida pelo padrão C++, mas é permitida aqui como uma extensão. Esse aviso é sempre seguido por pelo menos uma linha de explicação que descreve a regra de idioma que está sendo violada.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C4239.
 
@@ -36,8 +36,6 @@ void func(void) {
    rC2;
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 A conversão do tipo integral para o tipo enum não é estritamente permitida.
 

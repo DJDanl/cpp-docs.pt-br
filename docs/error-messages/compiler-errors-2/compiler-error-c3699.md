@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d313168e8033395da1749e000e52421939f77af4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758028"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686646"
 ---
 # <a name="compiler-error-c3699"></a>Erro do compilador C3699
 
 ' operator ': não é possível usar esta indireção no tipo ' type '
 
-Foi feita uma tentativa de usar indireção que não é permitido em `type`.
+Foi feita uma tentativa de usar indireção que não é permitido em `type` .
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3699.
 
@@ -34,8 +34,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 Uma propriedade trivial não pode ter tipo de referência. Consulte a [Propriedade](../../extensions/property-cpp-component-extensions.md) para obter mais informações. O exemplo a seguir gera C3699.
 
 ```cpp
@@ -46,8 +44,6 @@ ref struct C {
    property System::String ^ y;   // OK
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 O equivalente a uma sintaxe "ponteiro para um ponteiro" é um identificador para uma referência de rastreamento. O exemplo a seguir gera C3699.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833109"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686477"
 ---
 # <a name="db_column"></a>db_column
 
@@ -23,9 +23,9 @@ Associa uma coluna especificada a uma variável no conjunto de linhas.
 [ db_column(ordinal, dbtype, precision, scale, status, length) ]
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*ordinal*<br/>
+*numera*<br/>
 O número ordinal da coluna ( `DBCOLUMNINFO` ordinal) ou o nome da coluna (cadeia de caracteres ANSI ou Unicode) correspondente a um campo no conjunto de linhas ao qual associar os dados. Se você usar números, poderá ignorar ordinais consecutivos (por exemplo: 1, 2, 3, 5). O nome poderá conter espaços se o provedor de OLE DB usado oferecer suporte a ele. Por exemplo, você pode usar qualquer um dos seguintes formatos:
 
 ```cpp
@@ -58,7 +58,7 @@ Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o
 
 Para obter um exemplo desse atributo usado em um aplicativo, consulte [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Este exemplo associa uma coluna em uma tabela a um **`long`** membro de dados e especifica os campos de status e comprimento.
 
@@ -77,8 +77,6 @@ class CProducts {
    [ db_column("1", status="m_dwProductIDStatus", length="m_dwProductIDLength") ] LONG m_ProductID;
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 Este exemplo associa quatro colunas a um **`long`** , uma cadeia de caracteres, um carimbo de data/hora e um `DB_NUMERIC` inteiro, nessa ordem.
 
@@ -103,7 +101,7 @@ class CProducts {
 | Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`** , membro, método|
-|**Repetível**|Não|
+|**Repetível**|No|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 

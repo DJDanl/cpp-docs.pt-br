@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a39c625e63936700661790023a983fa39eeda369
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738421"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685786"
 ---
 # <a name="compiler-error-c3488"></a>Erro do compilador C3488
 
@@ -19,7 +19,7 @@ ms.locfileid: "74738421"
 
 Quando você especifica que o modo de captura padrão para uma expressão lambda é por referência, não é possível passar uma variável por referência à cláusula Capture dessa expressão.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Não passe explicitamente a variável para a cláusula Capture ou
 
@@ -29,9 +29,9 @@ Quando você especifica que o modo de captura padrão para uma expressão lambda
 
 - Passe a variável por valor para a cláusula Capture. (Isso pode alterar o comportamento da expressão lambda.)
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
-O exemplo a seguir gera C3488 porque uma referência à variável `n` aparece na cláusula Capture de uma expressão lambda cujo modo padrão é por referência:
+O exemplo a seguir gera C3488 porque uma referência à variável `n` é exibida na cláusula Capture de uma expressão lambda cujo modo padrão é por referência:
 
 ```cpp
 // C3488a.cpp
@@ -42,8 +42,6 @@ int main()
    [&, &n]() { return n; } (); // C3488
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra quatro resoluções possíveis para C3488:
 
@@ -72,6 +70,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)
