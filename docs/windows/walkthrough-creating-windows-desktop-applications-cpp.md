@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231566"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686594"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Walkthrough: criar um aplicativo de área de trabalho do Windows tradicional (C++)
 
@@ -55,11 +55,11 @@ Siga estas etapas para criar seu primeiro projeto de área de trabalho do Window
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DesktopApp** , escolha **Adicionar**e, em seguida, escolha **novo item**.
 
-   ![Adicionar novo item ao projeto DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Adicionar novo item ao projeto DesktopApp")
+   ![Vídeo curto mostrando o usuário adicionando um novo item ao projeto DesktopApp no Visual Studio 2019.](../build/media/desktop-app-project-add-new-item-153.gif "Adicionar novo item ao projeto DesktopApp")
 
 1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**. Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp*. Escolha **Adicionar**.
 
-   ![Adicionar arquivo. cpp ao projeto DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Adicionar arquivo. cpp ao projeto DesktopApp")
+   ![Captura de tela da caixa de diálogo Adicionar novo item no Visual Studio 2019 com instalado > Visual C Plus Plus selecionado e a opção de arquivo C Plus Plus realçada.](../build/media/desktop-app-add-cpp-file-153.png "Adicionar arquivo. cpp ao projeto DesktopApp")
 
 Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para continuar, pule para [criar o código](#create-the-code).
 
@@ -75,17 +75,17 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
    Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Selecione **OK**.
 
-   ![Nomeie o projeto DesktopApp](../build/media/desktop-app-new-project-name-153.png "Nomeie o projeto DesktopApp")
+   ![Captura de tela da caixa de diálogo novo projeto no Visual Studio 2017 com instalada > Visual C Plus Plus > área de trabalho do Windows selecionada, a opção assistente de área de trabalho do Windows realçada e DesktopApp digitados na caixa de texto nome.](../build/media/desktop-app-new-project-name-153.png "Nomeie o projeto DesktopApp")
 
 1. Na caixa de diálogo **projeto de área de trabalho do Windows** , em tipo de **aplicativo**, selecione **aplicativo do Windows (. exe)**. Em **Opções adicionais**, selecione **projeto vazio**. Verifique se o **cabeçalho pré-compilado** não está selecionado. Escolha **OK** para criar o projeto.
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DesktopApp** , escolha **Adicionar**e, em seguida, escolha **novo item**.
 
-   ![Adicionar novo item ao projeto DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Adicionar novo item ao projeto DesktopApp")
+   ![Vídeo curto mostrando o usuário adicionando um novo item ao projeto DesktopApp no Visual Studio 2017.](../build/media/desktop-app-project-add-new-item-153.gif "Adicionar novo item ao projeto DesktopApp")
 
 1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**. Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp*. Escolha **Adicionar**.
 
-   ![Adicionar arquivo. cpp ao projeto DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Adicionar arquivo. cpp ao projeto DesktopApp")
+   ![Captura de tela da caixa de diálogo Adicionar novo item no Visual Studio 2017 com instalado > Visual C Plus Plus selecionado e a opção de arquivo C Plus Plus realçada.](../build/media/desktop-app-add-cpp-file-153.png "Adicionar arquivo. cpp ao projeto DesktopApp")
 
 Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para continuar, pule para [criar o código](#create-the-code).
 
@@ -101,7 +101,7 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
    Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Selecione **OK**.
 
-   ![Nomeie o projeto DesktopApp](../build/media/desktop-app-new-project-name-150.png "Nomeie o projeto DesktopApp")
+   ![Captura de tela da caixa de diálogo novo projeto no Visual Studio 2015 com modelos de > instalados > Visual C Plus Plus > Win32 selecionado, a opção de projeto Win32 realçada e DesktopApp digitados na caixa de texto nome.](../build/media/desktop-app-new-project-name-150.png "Nomeie o projeto DesktopApp")
 
 1. Na página **visão geral** do **Assistente de aplicativo Win32**, escolha **Avançar**.
 
@@ -111,11 +111,11 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto DesktopApp, escolha **Adicionar**e, em seguida, escolha **novo item**.
 
-   ![Adicionar novo item ao projeto DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Adicionar novo item ao projeto DesktopApp")
+   ![Vídeo curto mostrando o usuário adicionando um novo item ao projeto DesktopApp no Visual Studio 2015.](../build/media/desktop-app-project-add-new-item-150.gif "Adicionar novo item ao projeto DesktopApp")
 
 1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**. Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp*. Escolha **Adicionar**.
 
-   ![Adicionar arquivo. cpp ao projeto DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Adicionar arquivo. cpp ao projeto DesktopApp")
+   ![Captura de tela da caixa de diálogo Adicionar novo item no Visual Studio 2015 com instalado > Visual C Plus Plus selecionado e a opção de arquivo C Plus Plus realçada.](../build/media/desktop-app-add-cpp-file-150.png "Adicionar arquivo. cpp ao projeto DesktopApp")
 
 Seu projeto agora é criado e o arquivo de origem é aberto no editor.
 
@@ -127,7 +127,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
 
 ### <a name="to-start-a-windows-desktop-application"></a>Para iniciar um aplicativo da área de trabalho do Windows
 
-1. Assim como todos os aplicativos C e C++ devem ter uma `main` função como ponto de partida, todos os aplicativos da área de trabalho do Windows devem ter uma `WinMain` função. `WinMain`tem a sintaxe a seguir.
+1. Assim como todos os aplicativos C e C++ devem ter uma `main` função como ponto de partida, todos os aplicativos da área de trabalho do Windows devem ter uma `WinMain` função. `WinMain` tem a sintaxe a seguir.
 
    ```cpp
    int CALLBACK WinMain(
@@ -150,7 +150,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    #include <tchar.h>
    ```
 
-1. Junto com a `WinMain` função, todos os aplicativos da área de trabalho do Windows também devem ter uma função de procedimento de janela. Normalmente, essa função é chamada `WndProc` , mas você pode nomeá-la como desejar. `WndProc`tem a sintaxe a seguir.
+1. Junto com a `WinMain` função, todos os aplicativos da área de trabalho do Windows também devem ter uma função de procedimento de janela. Normalmente, essa função é chamada `WndProc` , mas você pode nomeá-la como desejar. `WndProc` tem a sintaxe a seguir.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -388,7 +388,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    }
    ```
 
-   `HDC`no código, há um identificador para um contexto de dispositivo, que é usado para desenhar na área do cliente da janela. Use as `BeginPaint` `EndPaint` funções e para se preparar e concluir o desenho na área do cliente. `BeginPaint`Retorna um identificador para o contexto do dispositivo de vídeo usado para desenhar na área do cliente; `EndPaint`encerra a solicitação de pintura e libera o contexto do dispositivo.
+   `HDC` no código, há um identificador para um contexto de dispositivo, que é usado para desenhar na área do cliente da janela. Use as `BeginPaint` `EndPaint` funções e para se preparar e concluir o desenho na área do cliente. `BeginPaint` Retorna um identificador para o contexto do dispositivo de vídeo usado para desenhar na área do cliente; `EndPaint` encerra a solicitação de pintura e libera o contexto do dispositivo.
 
 1. Um aplicativo normalmente lida com muitas outras mensagens. Por exemplo, [WM_CREATE](/windows/win32/winmsg/wm-create) quando uma janela é criada pela primeira vez e [WM_DESTROY](/windows/win32/winmsg/wm-destroy) quando a janela é fechada. O código a seguir mostra uma função básica, mas completa `WndProc` .
 

@@ -4,12 +4,12 @@ description: Use o editor de código C++ no Visual Studio para formatar, navegar
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206213"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686326"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Editar e refatorar o código C++ no Visual Studio
 
@@ -98,17 +98,17 @@ Para alguns tipos de erros, bem como padrões de codificação comuns, o editor 
 
 No exemplo a seguir, um `vector` foi declarado, mas nenhuma definição foi encontrada e, portanto, o editor oferece a inclusão do arquivo de cabeçalho necessário:
 
-![Correção rápida do C&#43;&#43; ](../ide/media/quick-fix-for-header-cpp.png "Correção rápida do C++")
+![Captura de tela mostrando rabiscos de erro e a correção rápida que o editor oferece.](../ide/media/quick-fix-for-header-cpp.png "Correção rápida do C++")
 
 O editor também oferece Correções Rápidas para algumas oportunidades de refatoração. Por exemplo, se você declarar uma classe em um arquivo de cabeçalho, o Visual Studio oferecerá a criação de uma definição para ele em um arquivo .cpp separado.
 
-![Correção rápida do C&#43;&#43; ](../ide/media/quick-fix.png "Correção rápida do C++")
+![Captura de tela mostrando a correção rápida com a opção Criar definição de iterador de rota de canal nos canais no ponto C P p, realçado.](../ide/media/quick-fix.png "Correção rápida do C++")
 
-## <a name="change-tracking"></a>controle de alterações
+## <a name="change-tracking"></a>Change tracking
 
 Sempre que você fizer uma alteração em um arquivo, uma barra amarela será exibida à esquerda para indicar que alterações não salvas foram feitas. Quando você salvar o arquivo, a barra ficará verde. As barras verde e amarela serão preservadas, desde que o documento esteja aberto no editor. Elas representam as alterações feitas desde que você abriu o documento pela última vez.
 
-![C&#43;&#43; controle de alterações](../ide/media/change-tracking-cpp.png "controle de alterações")
+![C&#43;&#43; controle de alterações](../ide/media/change-tracking-cpp.png "Change tracking")
 
 ## <a name="move-code"></a>Mover o código
 

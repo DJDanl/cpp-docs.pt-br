@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3484
 ms.assetid: 2fe847fa-f6ee-4978-bc1d-b6dc6ae906ac
-ms.openlocfilehash: c9895a3e5a8ae7e941fccde2da85fedfb3d2c6dd
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ded4a183f69e4903afb4c9dfeae22f7751ef76ad
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743114"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686274"
 ---
 # <a name="compiler-error-c3484"></a>Erro do compilador C3484
 
@@ -19,11 +19,11 @@ ms.locfileid: "74743114"
 
 Você deve fornecer `->` antes do tipo de retorno de uma expressão lambda.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Forneça `->` antes do tipo de retorno.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3484:
 
@@ -36,9 +36,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
-
-O exemplo a seguir resolve C3484 fornecendo `->` antes do tipo de retorno da expressão lambda:
+O exemplo a seguir resolve C3484 fornecendo `->` antes o tipo de retorno da expressão lambda:
 
 ```cpp
 // C3484b.cpp
@@ -49,6 +47,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)

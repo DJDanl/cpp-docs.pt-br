@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758483"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686032"
 ---
 # <a name="compiler-error-c3918"></a>Erro do compilador C3918
 
@@ -19,7 +19,7 @@ uso requer que ' member ' seja um membro de dados
 
 O C3918 pode ocorrer por vários motivos relacionados a eventos.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 C3918 pode ocorrer porque um membro de classe é necessário no contexto atual. O exemplo a seguir gera C3918.
 
@@ -40,8 +40,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 C3918 também será causado se você tentar verificar se um evento trivial é nulo (o nome do evento não fornecerá mais acesso direto ao delegado de armazenamento de backup para o evento).
 
@@ -65,8 +63,6 @@ ref struct EventSource : public IEFace {
    }
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 C3918 também pode ocorrer se você assinar incorretamente um evento. O exemplo a seguir gera C3918.
 

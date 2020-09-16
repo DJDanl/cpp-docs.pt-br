@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 40825bf92a892917f815c955ee4ba1fb6fa906c3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756845"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686412"
 ---
 # <a name="compiler-error-c3867"></a>Erro do compilador C3867
 
-' Func ': lista de argumentos ausente na chamada de função; Use ' & Func ' para criar um ponteiro para membro
+' Func ': lista de argumentos ausente na chamada de função; Use ' &Func ' para criar um ponteiro para membro
 
 Você tentou pegar o endereço de uma função membro sem qualificar a função membro com seu nome de classe e o operador address-of.
 
 Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: conformidade aprimorada de ponteiro para membro. O código que compilou antes do Visual Studio 2005 agora irá gerar C3867.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O C3867 pode ser emitido a partir do compilador com uma resolução sugerida enganosa. Sempre que possível, use a classe mais derivada.
 
@@ -44,8 +44,6 @@ void Derived::Bar() {
    &Derived::Test;   // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3867 e mostra como corrigi-lo.
 
@@ -77,8 +75,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 O exemplo a seguir gera C3867 e mostra como corrigi-lo.
 
 ```cpp
@@ -95,8 +91,6 @@ int main() {
    void (X::*pmf2)() = &X::mf;
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3867.
 
@@ -119,8 +113,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3867.
 

@@ -3,14 +3,14 @@ title: Implantar, executar e depurar seu projeto do C++ do MSBuild do Linux no V
 description: Descreve como compilar, executar e depurar código no destino remoto de dentro de um projeto C++ do Linux baseado em MSBuild no Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4200e30b445f4a09fc60083db0067996c96ea953
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043883"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686698"
 ---
-# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Implantar, executar e depurar seu projeto do MSBuild do Linux
+# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Implantar, executar e depurar o projeto do Linux com o MSBuild
 
 ::: moniker range="vs-2015"
 O suporte ao Linux está disponível no Visual Studio 2017 e posterior. Para ver a documentação dessas versões, defina a lista suspensa **versão** localizada acima do Sumário para o **Visual Studio 2017** ou **Visual Studio 2019**.
@@ -38,7 +38,7 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
    O GDB é usado para depurar aplicativos em execução no Linux. Durante a depuração em um sistema remoto (exceto o WSL), o GDB pode ser executado em dois modos diferentes, que podem ser selecionados na opção **Modo de Depuração**, na página de propriedades **Depuração** do projeto:
 
-   ![Opções do GDB](media/vs2019-debugger-settings.png)
+   ![Captura de tela da caixa de diálogo páginas de propriedades do aplicativo console do Visual Studio 2019 Linux com propriedades de configuração > depuração selecionada e modo de depuração realçado com G B D selecionado e realçado na lista suspensa.](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
@@ -46,7 +46,7 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
    O GDB é usado para depurar aplicativos em execução no Linux. O GDB pode ser executado em dois modos diferentes, que podem ser selecionados na opção **Modo de Depuração**, na página de propriedades **Depuração** do projeto:
 
-   ![Opções do GDB](media/vs2017-debugger-settings.png)
+   ![Captura de tela da caixa de diálogo páginas de propriedades do aplicativo console do Visual Studio 2017 Linux com propriedades de configuração > depuração selecionada e modo de depuração realçado com G B D selecionado e realçado na lista suspensa.](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 
@@ -123,7 +123,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a>Especificar computadores diferentes para compilar e depurar em projetos do Linux baseados em MSBuild
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a> Especificar computadores diferentes para compilar e depurar em projetos do Linux baseados em MSBuild
 
 No Visual Studio 2019 versão 16,1, você pode separar o computador de compilação remota do computador de depuração remota para projetos do Linux baseados no MSBuild e projetos CMake destinados a um computador Linux remoto. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT.
 
@@ -188,6 +188,6 @@ Se quiser controle completo sobre a implantação, você poderá acrescentar os 
 
 - Para depurar dispositivos ARM no Linux, consulte esta postagem no blog: [Debugging an embedded ARM device in Visual Studio](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/) (Depurando um dispositivo ARM inserido no Visual Studio).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Propriedades do depurador C++ (Linux C++)](prop-pages/debugging-linux.md)

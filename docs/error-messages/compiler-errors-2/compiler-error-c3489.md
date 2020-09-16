@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3b192a14a39b7c0c9d264bda8073c54f0f395924
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738408"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685760"
 ---
 # <a name="compiler-error-c3489"></a>Erro do compilador C3489
 
@@ -19,7 +19,7 @@ ms.locfileid: "74738408"
 
 Quando você especifica que o modo de captura padrão para uma expressão lambda é por valor, não é possível passar uma variável por valor para a cláusula Capture dessa expressão.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Não passe explicitamente a variável para a cláusula Capture ou
 
@@ -29,9 +29,9 @@ Quando você especifica que o modo de captura padrão para uma expressão lambda
 
 - Passe a variável por referência à cláusula Capture. (Isso pode alterar o comportamento da expressão lambda.)
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
-O exemplo a seguir gera a variável C3489 `n` aparece pelo valor na cláusula Capture de uma expressão lambda cujo modo padrão é por valor:
+O exemplo a seguir gera a variável C3489, que é `n` exibida pelo valor na cláusula Capture de uma expressão lambda cujo modo padrão é por valor:
 
 ```cpp
 // C3489a.cpp
@@ -42,8 +42,6 @@ int main()
    [=, n]() { return n; } (); // C3489
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra quatro resoluções possíveis para C3489:
 
@@ -72,6 +70,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)

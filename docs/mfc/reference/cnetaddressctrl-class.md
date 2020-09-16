@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 30fc510272afc90ae37b583e807d10c3374df052
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562123"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686581"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
 
@@ -41,13 +41,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Constrói um objeto `CNetAddressCtrl`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
+|Name|Descrição|
 |----------|-----------------|
 |[CNetAddressCtrl:: criar](#create)|Cria um controle de endereço de rede com os estilos especificados e anexa-o ao `CNetAddressCtrl` objeto atual.|
 |[CNetAddressCtrl::CreateEx](#createex)|Cria um controle de endereço de rede com os estilos estendidos especificados e anexa-o ao `CNetAddressCtrl` objeto atual.|
@@ -66,13 +66,11 @@ A figura a seguir descreve uma caixa de diálogo que contém um controle de ende
 
 ![Caixa de diálogo com um controle de endereço de rede e InfoTip.](../../mfc/reference/media/cnetaddctrl.png "Caixa de diálogo com um controle de endereço de rede e InfoTip.")
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo de código a seguir é uma parte de uma caixa de diálogo que valida um endereço de rede. Os manipuladores de eventos para três botões de opção especificam que o endereço de rede pode ser um dos três tipos de endereço. O usuário insere um endereço na caixa de texto do controle de rede e, em seguida, pressiona um botão para validar o endereço. Se o endereço for válido, uma mensagem de êxito será exibida; caso contrário, a mensagem de erro InfoTip predefinida será exibida.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
-
-## <a name="example"></a>Exemplo
 
 O exemplo de código a seguir do arquivo de cabeçalho de caixa de diálogo define as variáveis [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) e [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) exigidas pelo método [CNetAddressCtrl:: GetAddress](#getaddress) .
 
@@ -136,7 +134,7 @@ no Um ponteiro não nulo para um objeto [CWnd](../../mfc/reference/cwnd-class.md
 *nID*\
 no A ID do controle.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -170,7 +168,7 @@ no Um ponteiro não nulo para um objeto [CWnd](../../mfc/reference/cwnd-class.md
 *nID*\
 no A ID do controle.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 TRUE se esse método for bem-sucedido; caso contrário, FALSE.
 
@@ -182,7 +180,7 @@ Exibe uma mensagem de erro na dica de balão associada ao controle de endereço 
 HRESULT DisplayErrorTip();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor `S_OK` se esse método for bem-sucedido; caso contrário, um código de erro.
 
@@ -205,7 +203,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 *pAddress*<br/>
 [entrada, saída] Ponteiro para uma estrutura de [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) .  Defina o membro *pAddrInfo* dessa estrutura como o endereço de uma estrutura de [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) antes de chamar o método GetAddress.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O valor S_OK se esse método for bem-sucedido; caso contrário, um código de erro COM. Para obter mais informações sobre os possíveis códigos de erro, consulte a seção valor de retorno da macro [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress) .
 
@@ -225,7 +223,7 @@ Recupera o tipo de endereço de rede ao qual o controle de endereço de rede atu
 DWORD GetAllowType() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma combinação de bits (ou) de sinalizadores que especifica os tipos de endereços aos quais o controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](/windows/win32/shell/net-string).
 
@@ -246,7 +244,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 *dwAddrMask*\
 no Uma combinação de bits (ou) de sinalizadores que especifica os tipos de endereços aos quais o controle de endereço de rede pode dar suporte. Para obter mais informações, consulte [NET_STRING](/windows/win32/shell/net-string).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 S_OK se esse método for bem-sucedido; caso contrário, um código de erro COM.
 

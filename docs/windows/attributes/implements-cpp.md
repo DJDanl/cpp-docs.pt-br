@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842345"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686737"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -24,7 +24,7 @@ Especifica as interfaces de expedição que são forçadas a serem membros da co
    interfaces={interfaces}, dispinterfaces={dispinterfaces})]
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *interfaces*<br/>
 Uma lista separada por vírgula das interfaces que serão membros da coclasse IDL. Um método abreviado para especificar uma única interface é **Implements (** *interface_name* **)**.
@@ -41,13 +41,13 @@ Por padrão, somente as interfaces COM que são classes base do `coclass` são a
 | Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`**|
-|**Repetível**|Sim|
+|**Repetível**|Yes|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir é em três partes: um arquivo. idl e seu arquivo. h associado e um arquivo C++.
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 E o arquivo. h a seguir, que também precisa estar disponível para o compilador.
 
@@ -376,8 +374,6 @@ CBar;
 #endif
 #endif
 ```
-
-## <a name="example"></a>Exemplo
 
 No programa a seguir, sem Implements,, `IBar1` `IBar2` e `ISna` não estarão no `coclass` IDL gerado.
 

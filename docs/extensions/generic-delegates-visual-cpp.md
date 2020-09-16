@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228707"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686607"
 ---
 # <a name="generic-delegates-ccli"></a>Delegados Genéricos (C++/CLI)
 
@@ -27,7 +27,7 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *attributes*<br/>
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em Atributos.
@@ -50,7 +50,7 @@ O nome do delegado.
 *formal-parameters*<br/>
 (Opcional) A lista de parâmetros do delegado.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Os parâmetros de tipo delegado são especificados no ponto em que um objeto delegado é criado. Tanto o delegado quanto o método associado a ele devem ter a mesma assinatura. Veja a seguir um exemplo de uma declaração de delegado genérico.
 
@@ -60,8 +60,6 @@ Os parâmetros de tipo delegado são especificados no ponto em que um objeto del
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra que
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir declara um delegado genérico `GenDelegate<ItemType>` e, em seguida, instancia-o associando-o ao método `MyMethod` que usa o parâmetro de tipo `ItemType`. Duas instâncias do delegado (um inteiro e um duplo) são criadas e invocadas.
 

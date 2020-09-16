@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219748"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686750"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
 
@@ -27,7 +27,7 @@ Restrições são opcionais; não especificar uma restrição em um parâmetro �
 where type-parameter: constraint list
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *parâmetro de tipo*<br/>
 Um dos parâmetros de tipo a ser restringido.
@@ -113,7 +113,7 @@ Para resumir, use restrições em seu código de acordo com as regras a seguir:
     ref class G2{};
     ```
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir demonstra como usar restrições para chamar métodos de instância em parâmetros de tipo.
 
@@ -174,8 +174,6 @@ int main() {
 "parent" is not a senior
 "grandfather" is a senior
 ```
-
-## <a name="example"></a>Exemplo
 
 Quando um parâmetro de tipo genérico for usado como restrição, será chamado de restrição de tipo naked. As restrições de tipo naked são úteis quando uma função membro com parâmetro de tipo próprio tiver que restringir esse parâmetro ao parâmetro de tipo do tipo recipiente.
 

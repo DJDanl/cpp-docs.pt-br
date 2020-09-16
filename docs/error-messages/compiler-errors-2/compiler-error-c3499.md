@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49c868b696df75a5b5148d32fb286019c6293e4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228837"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686129"
 ---
 # <a name="compiler-error-c3499"></a>Erro do compilador C3499
 
@@ -27,7 +27,7 @@ O compilador gera esse erro quando uma expressão lambda que especifica **`void`
 
 - Combine as instruções que compõem o corpo da expressão lambda em uma única instrução.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3499 porque o corpo de uma expressão lambda contém várias instruções e retorna um valor, mas a expressão lambda não especifica o tipo de retorno:
 
@@ -39,8 +39,6 @@ int main()
    [](int x) { int n = x * 2; return n; } (5); // C3499
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra duas resoluções possíveis para C3499. A primeira resolução fornece o tipo de retorno da expressão lambda. A segunda resolução combina as instruções que compõem o corpo da expressão lambda em uma única instrução.
 

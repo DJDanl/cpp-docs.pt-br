@@ -7,18 +7,18 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b2b98ff3c4bbd857e3f5d861c1e0e8e2bd2f357b
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988199"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685799"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Como carregar recursos não gerenciados em uma matriz de bytes
 
 Este tópico discute várias maneiras de carregar recursos não gerenciados em uma <xref:System.Byte> matriz.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Se você souber o tamanho do recurso não gerenciado, poderá prealocar uma matriz CLR e, em seguida, carregar o recurso na matriz usando um ponteiro para o bloco de matriz da matriz CLR.
 
@@ -54,8 +54,6 @@ int main() {
 0123456789
 ```
 
-## <a name="example"></a>Exemplo
-
 Este exemplo mostra como copiar dados de um bloco de memória não gerenciada para uma matriz gerenciada.
 
 ```cpp
@@ -75,6 +73,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Usando a interoperabilidade C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

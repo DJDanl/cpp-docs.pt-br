@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190151"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686313"
 ---
 # <a name="cast-operator-"></a>Operador cast: ()
 
@@ -28,7 +28,7 @@ Qualquer expressão unária é considerada uma expressão de conversão.
 
 O compilador trata *cast-expression* como tipo *type-name* depois que uma conversão de tipo é feita. As conversões podem ser usadas para converter objetos de qualquer tipo escalar em ou de qualquer outro tipo escalar. As conversões de tipo explícito são restringidas pelas mesmas regras que determinam os efeitos de conversões implícitas. As restrições adicionais de conversões podem resultar de tamanhos reais ou de representação de tipos específicos.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -121,7 +119,7 @@ Raw Bytes after cast:   Exciting
 ## <a name="see-also"></a>Confira também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
-[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores internos C++, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Operador de conversão de tipo explícito: ()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
 [Operadores de conversão](../cpp/casting-operators.md)<br/>
-[Operadores cast](../c-language/cast-operators.md)
+[Operadores de conversão](../c-language/cast-operators.md)

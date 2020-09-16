@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdaeb8797eb71b205f737d08e74430f161cb8caa
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738304"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686542"
 ---
 # <a name="compiler-error-c3492"></a>Erro do compilador C3492
 
@@ -19,11 +19,11 @@ ms.locfileid: "74738304"
 
 Você não pode capturar um membro de uma União sem nome.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 - Dê um nome à União e passe a estrutura de união completa para a lista de captura da expressão lambda.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3492 porque ele captura um membro de uma União anônima:
 
@@ -43,8 +43,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 O exemplo a seguir resolve o C3492 fornecendo um nome de União e passando a estrutura de união completa para a lista de captura da expressão lambda:
 
 ```cpp
@@ -63,6 +61,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+[Expressões lambda](../../cpp/lambda-expressions-in-cpp.md)

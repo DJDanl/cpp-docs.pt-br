@@ -6,22 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162030"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686516"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Aviso do compilador (nível 2) C4250
 
 ' class1 ': herda ' class2:: member ' via predominância
 
-Dois ou mais membros têm o mesmo nome. A `class2` é herdada porque é uma classe base para as outras classes que continham esse membro.
+Dois ou mais membros têm o mesmo nome. O no `class2` é herdado porque é uma classe base para as outras classes que continham esse membro.
 
 Para suprimir C4250, use o pragma de [aviso](../../preprocessor/warning.md) .
 
 Como uma classe base virtual é compartilhada entre várias classes derivadas, um nome em uma classe derivada domina um nome em uma classe base. Por exemplo, considerando a seguinte hierarquia de classe, há duas definições de Func herdadas dentro de Diamond: a instância vbc:: Func () por meio da classe fraca e a dominante:: Func () por meio da classe dominante. Uma chamada não qualificada de Func () por meio de um objeto de classe Diamond, sempre chama a instância dominable:: Func ().  Se a classe fraca fosse introduzir uma instância de Func (), nenhuma definição dominaria e a chamada seria sinalizada como ambígua.
+
+## <a name="examples"></a>Exemplos
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C4250.
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 Este exemplo mostra uma situação mais complexa. O exemplo a seguir gera C4250.
 
