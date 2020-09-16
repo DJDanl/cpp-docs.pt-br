@@ -1,5 +1,6 @@
 ---
 title: Recomendações para escolher entre funções e macros
+description: Explica as diferenças entre usar macros vs. funções no Microsoft C Runtime Library (CRT)
 ms.date: 11/04/2016
 f1_keywords:
 - c.functions
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: 234fcd8a0439240bc7585414254c5687dcb8f21b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8c47bf1924aeb94e2e4c9ee9358627cafcf90cba
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749302"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569532"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recomendações para escolher entre funções e macros
 
@@ -42,6 +43,7 @@ Se você precisa escolher entre uma função e uma implementação de macro de u
 
 - **Verificação de tipo** Ao declarar uma função, o compilador pode verificar os tipos de argumento. Como você não pode declarar uma macro, o compilador não pode verificar tipos de argumento de macro; embora ele possa verificar o número de argumentos que você passar para uma macro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
+[Tipo-matemática genérica](tgmath.md)\
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

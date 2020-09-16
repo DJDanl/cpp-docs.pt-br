@@ -1,5 +1,6 @@
 ---
 title: Suporte a expressões matemáticas complexas de C
+description: Descreve o suporte a matemática complexa de linguagem C na biblioteca de tempo de execução da Microsoft C (CRT)
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215173"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569549"
 ---
 # <a name="c-complex-math-support"></a>Suporte a expressões matemáticas complexas de C
 
@@ -28,9 +29,9 @@ A implementação da Microsoft do cabeçalho complex.h define esses tipos como e
 
 |Tipo padrão|Tipo da Microsoft|
 |-|-|
-|**`float complex`** or**`float _Complex`**|**_Fcomplex**|
-|**`double complex`** or**`double _Complex`**|**_Dcomplex**|
-|**`long double complex`** or**`long double _Complex`**|**_Lcomplex**|
+|**`float complex`** or **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** or **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** or **`long double _Complex`**|**_Lcomplex**|
 
 O cabeçalho math.h define um tipo separado, **struct _complex**, usado para a função [_cabs](../c-runtime-library/reference/cabs.md). O tipo **struct _complex** não é usado pelas funções matemáticas complexas equivalentes [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
@@ -99,4 +100,5 @@ Uma vez que os números complexos não são um tipo nativo no compilador da Micr
 
 ## <a name="see-also"></a>Confira também
 
-[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Tipo-matemática genérica](tgmath.md)\
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)
