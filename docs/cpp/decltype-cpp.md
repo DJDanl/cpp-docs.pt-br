@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561382"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683475"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -29,7 +29,7 @@ O **`decltype`** especificador de tipo produz o tipo de uma expressão especific
 *expressão*\
 Uma expressão. Para obter mais informações, consulte [expressões](../cpp/expressions-cpp.md).
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 O tipo do parâmetro da *expressão* .
 
@@ -56,7 +56,7 @@ const A* a = new A();
 
 Em seguida, examine os tipos que são retornados pelas quatro **`decltype`** instruções na tabela a seguir.
 
-|de|Type|Observações|
+|Instrução|Type|Observações|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|Uma [referência rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) a um **`const int`** .|
 |`decltype(var);`|**`int`**|O tipo da variável `var`.|
@@ -100,7 +100,7 @@ As funções de encaminhamento encapsulam chamadas para outras funções. Consid
 
 Nesse cenário, você não pode gravar uma expressão de tipo apropriada sem o **`decltype`** especificador de tipo. O **`decltype`** especificador de tipo habilita funções de encaminhamento genéricas porque não perde as informações necessárias sobre se uma função retorna um tipo de referência. Para obter um exemplo de código de uma função de encaminhamento, consulte o exemplo anterior da função de modelo `myFunc`.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo de código a seguir declara o tipo de retorno com especificação tardia da função de modelo `Plus()`. A `Plus` função processa seus dois operandos com a **`operator+`** sobrecarga. Consequentemente, a interpretação do operador de adição ( **`+`** ) e o tipo de retorno da `Plus` função dependem dos tipos dos argumentos da função.
 
@@ -173,8 +173,6 @@ Plus(dx, dy) = 13.5
 Hello, world!
 x3.Dump() = 42
 ```
-
-## <a name="example"></a>Exemplo
 
 **Visual Studio 2017 e posterior:** O compilador analisa **`decltype`** argumentos quando os modelos são declarados em vez de instanciados. Consequentemente, se uma especialização não dependente for encontrada no **`decltype`** argumento, ela não será adiada para tempo de instanciação e será processada imediatamente e quaisquer erros resultantes serão diagnosticados nesse momento.
 

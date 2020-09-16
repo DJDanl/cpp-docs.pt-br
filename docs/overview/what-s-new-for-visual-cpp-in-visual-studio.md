@@ -4,12 +4,12 @@ description: Os novos recursos e correções no compilador e nas ferramentas do 
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041673"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684739"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
@@ -649,7 +649,7 @@ O conjunto de ferramentas Clang/C2 que acompanha o Visual Studio 2017 agora dá 
 
 Os verificadores principais do C++ para impor as [principais diretrizes do C++](https://github.com/isocpp/CppCoreGuidelines) agora são distribuídas com o Visual Studio. Habilite os verificadores na página de **extensões de análise de código** nas páginas de propriedades do projeto. As extensões são então incluídas quando você executa a análise de código. Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-![Mostra como usar a página de propriedades de análise de código para selecionar Verificação Principal do C++ RuleSets.](media/CppCoreCheck.png "Página de propriedades do CppCoreCheck")
+![Captura de tela da caixa de diálogo páginas de propriedades mostrando Propriedades de configuração > análise de código > geral selecionada e várias verificações principais listadas na seção executar este conjunto de regras.](media/CppCoreCheck.png "Página de propriedades do CppCoreCheck")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versão 15.3
 
@@ -697,7 +697,7 @@ Ferramentas de Diagnóstico de Gráficos do Visual Studio: você pode usá-las p
 
 - **Pesquisa e filtro na tabela de objetos:** fornece uma maneira rápida e fácil de localizar os recursos que você está procurando.
 
-  ![Mostra o local dos controles de filtro e de pesquisa na janela de tabela de objetos.](media/search.png)
+  ![Captura de tela da seção de tabela de objeto com a lista suspensa de tipos e a caixa de texto de pesquisa chamada out.](media/search.png)
 
 - **Histórico de Recursos:** esse novo modo de exibição fornece uma maneira simplificada de ver todo o histórico de modificações de um recurso, enquanto ele foi usado durante a renderização de um quadro capturado. Para invocar o histórico de qualquer recurso, clique no ícone de relógio ao lado de qualquer hiperlink de recurso.
 

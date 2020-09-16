@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85c99feee72d94f50ec19394cf8aec7a3c9811bc
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198127"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684974"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Aviso do compilador (nível 4) C4754
 
@@ -21,7 +21,7 @@ O aviso C4754 é emitido porque o resultado da comparação é sempre o mesmo. I
 
 As regras de conversão de inteiros são complexas e há muitas armadilhas sutis. Como alternativa para corrigir cada aviso de C4754, você pode atualizar o código para usar a [biblioteca SafeInt](../../safeint/safeint-library.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Este exemplo gera C4754:
 
@@ -43,7 +43,7 @@ int sum_overflow(unsigned long a, unsigned long b)
 }
 ```
 
-A `a + b` de adição pode causar um estouro aritmético antes de o resultado ser convertido em um valor de 64 bits e atribuído à variável de 64 bits `x`. Isso significa que a verificação no `x` é redundante e nunca detectará um estouro. Nesse caso, o compilador emite este aviso:
+A adição `a + b` pode causar um estouro aritmético antes que o resultado seja convertido em um valor de 64 bits e atribuído à variável de 64 bits `x` . Isso significa que o check-in `x` é redundante e nunca detectará um estouro. Nesse caso, o compilador emite este aviso:
 
 ```Output
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).
@@ -58,8 +58,6 @@ Para eliminar o aviso, você pode alterar a instrução de atribuição para con
 unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;
 ```
-
-## <a name="example"></a>Exemplo
 
 O próximo exemplo também gera C4754.
 
@@ -79,13 +77,13 @@ int wrap_overflow(unsigned long a)
 }
 ```
 
-O operador `sizeof()` retorna um `size_t`, cujo tamanho é dependente da arquitetura. O código de exemplo funciona em arquiteturas de 32 bits em que um `size_t` é um tipo de bit 32. No entanto, em arquiteturas de 64 bits, `size_t` é um tipo de 64 bits. As regras de conversão para inteiros significam que `a` é feito o upcast para um valor de 64 bits na expressão `a + b < a` como se ele fosse gravado `(size_t)a + (size_t)b < (size_t)a`. Quando `a` e `b` são inteiros de 32 bits, a operação de adição de 64 bits nunca pode exceder e a restrição nunca é mantida. Como resultado, o código nunca detecta uma condição de estouro de número inteiro em arquiteturas de 64 bits. Este exemplo faz com que o compilador emita este aviso:
+O `sizeof()` operador retorna um `size_t` , cujo tamanho é dependente da arquitetura. O código de exemplo funciona em arquiteturas de 32 bits em que um `size_t` é um tipo de 32 bits. No entanto, em arquiteturas de 64 bits, `size_t` é um tipo de bit 64. As regras de conversão para inteiros significam que `a` é feito o upcast para um valor de 64 bits na expressão `a + b < a` como se ele fosse gravado `(size_t)a + (size_t)b < (size_t)a` . Quando `a` e `b` são inteiros de 32 bits, a operação de adição de 64 bits nunca pode exceder e a restrição nunca é mantida. Como resultado, o código nunca detecta uma condição de estouro de número inteiro em arquiteturas de 64 bits. Este exemplo faz com que o compilador emita este aviso:
 
 ```Output
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).
 ```
 
-Observe que a mensagem de aviso lista explicitamente o valor de constante 4 em vez da cadeia de caracteres de origem original — no momento em que a análise de aviso encontra o código incorreto, `sizeof(unsigned long)` já foi convertida em uma constante. Portanto, talvez você precise rastrear qual expressão no código-fonte está associada ao valor constante na mensagem de aviso. As fontes de código mais comuns resolvidas para constantes em mensagens de aviso C4754 são expressões como `sizeof(TYPE)` e `strlen(szConstantString)`.
+Observe que a mensagem de aviso lista explicitamente o valor de constante 4 em vez da cadeia de caracteres de origem original — no momento em que a análise de aviso encontra o código incorreto, `sizeof(unsigned long)` já foi convertida em uma constante. Portanto, talvez você precise rastrear qual expressão no código-fonte está associada ao valor constante na mensagem de aviso. As fontes de código mais comuns resolvidas para constantes em mensagens de aviso C4754 são expressões como `sizeof(TYPE)` e `strlen(szConstantString)` .
 
 Nesse caso, o código fixo seria semelhante a este:
 

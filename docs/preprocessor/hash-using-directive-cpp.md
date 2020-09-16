@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219424"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684255"
 ---
 # <a name="using-directive-ccli"></a>diretiva #using (C++/CLI)
 
@@ -27,10 +27,10 @@ Importa metadados para um programa compilado com [/CLR](../build/reference/clr-c
 
 > **`#using`***arquivo* [ **`as_friend`** ]
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Grupo*\
-Um arquivo MSIL (Microsoft Intermediate Language) *`.dll`* ,, *`.exe`* *`.netmodule`* ou *`.obj`* . Por exemplo:
+Um arquivo MSIL (Microsoft Intermediate Language) *`.dll`* ,, *`.exe`* *`.netmodule`* ou *`.obj`* . Por exemplo,
 
 `#using <MyComponent.dll>`
 
@@ -72,7 +72,7 @@ O compilador procura referências ao longo do seguinte caminho:
 
 - Diretórios na variável de ambiente LIBPATH.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Você pode criar um assembly que faz referência a um segundo assembly que, por sua vez, faz referência a um terceiro assembly. Você só precisa referenciar explicitamente o terceiro assembly do primeiro, se você usar explicitamente um de seus tipos.
 
@@ -81,8 +81,6 @@ Você pode criar um assembly que faz referência a um segundo assembly que, por 
 // compile with: /clr /LD
 public ref class A {};
 ```
-
-## <a name="example"></a>Exemplo
 
 ```cpp
 // using_assembly_B.cpp
@@ -94,8 +92,6 @@ public:
    void Test() {}
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 No exemplo a seguir, o compilador não relata um erro sobre como referenciar *using_assembly_A.dll*, porque o programa não usa nenhum dos tipos definidos em *using_assembly_A. cpp*.
 
