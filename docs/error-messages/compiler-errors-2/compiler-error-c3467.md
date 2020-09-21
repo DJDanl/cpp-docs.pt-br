@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: bba505b01df8eb1b253fbecb0db93d94ae62d5ac
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dd7046fcf87a6b8f095092ef0de4b94326151e87
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756364"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742821"
 ---
 # <a name="compiler-error-c3467"></a>Erro do compilador C3467
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756364"
 
 O compilador encontrou mais de uma declaração de tipo forward para o mesmo tipo. Somente uma declaração por tipo é permitida.
 
-Para obter mais informações, consulte [tipo encaminhamentoC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obter mais informações, veja [tipo encaminhamento (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir cria um componente.
 
@@ -30,8 +30,6 @@ O exemplo a seguir cria um componente.
 // compile with: /LD /clr
 public ref class R {};
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3467.
 

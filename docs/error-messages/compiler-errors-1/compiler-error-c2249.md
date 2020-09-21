@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac396fe5fa3505311f5a45ebb49dae283e35248c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212794"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741403"
 ---
 # <a name="compiler-error-c2249"></a>Erro do compilador C2249
 
@@ -19,7 +19,7 @@ ms.locfileid: "87212794"
 
 O `member` é herdado de uma **`virtual`** classe base ou estrutura não pública.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2249.
 
@@ -39,8 +39,6 @@ int main() {
    b.pubFunc();    // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 C2249 também pode ocorrer se você tentar atribuir um fluxo da biblioteca padrão C++ para outro fluxo.  O exemplo a seguir gera C2249.
 

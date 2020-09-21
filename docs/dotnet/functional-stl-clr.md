@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221426"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743302"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -126,7 +126,7 @@ Inclua o cabeçalho STL/CLR `<cliext/functional>` para definir um número de cla
 
 ## <a name="members"></a>Membros
 
-## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
 A classe genereic descreve um delegado de dois argumentos. Use-o para especificar um delegado em termos de seus tipos de retorno e argumento.
 
@@ -139,7 +139,7 @@ generic<typename Arg1,
     delegate Result binary_delegate(Arg1, Arg2);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Arg1*<br/>
 O tipo do primeiro argumento.
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
 
 A classe genereic descreve um delegado de dois argumentos que retorna **`void`** . Use-o para especificar um delegado em termos de seu argumento.
 
@@ -214,7 +214,7 @@ generic<typename Arg1,
     delegate void binary_delegate(Arg1, Arg2);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Arg1*<br/>
 O tipo do primeiro argumento.
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a> binary_negate (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna a lógica não de seu functor de dois argumentos armazenado. Use-o para especificar um objeto de função em termos de seu functor armazenado.
 
@@ -300,12 +300,12 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Diversão*<br/>
 O tipo do functor armazenado.
 
-## <a name="member-functions"></a>Funções de membro
+### <a name="member-functions"></a>Funções de membro
 
 |Definição de tipo|Descrição|
 |---------------------|-----------------|
@@ -315,7 +315,7 @@ O tipo do functor armazenado.
 |second_argument_type|O tipo do functor segundo argumento.|
 |stored_function_type|O tipo de functor.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |binary_negate|Constrói o functor.|
 
@@ -386,7 +386,7 @@ int main()
 1 0
 ```
 
-## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a> bind1st (STL/CLR)
 
 Gera um `binder1st` para um argumento e functor.
 
@@ -412,7 +412,7 @@ O tipo de functor.
 *functor*<br/>
 O functor a ser quebrado.
 
-*mantida*<br/>
+*esquerda*<br/>
 O primeiro argumento a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
@@ -467,7 +467,7 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a> bind2nd (STL/CLR)
 
 Gera um `binder2nd` para um argumento e functor.
 
@@ -493,7 +493,7 @@ O tipo de functor.
 *functor*<br/>
 O functor a ser quebrado.
 
-*Certo*<br/>
+*direita*<br/>
 O segundo argumento a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
@@ -548,7 +548,7 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a> binder1st (STL/CLR)
 
 A classe de modelo descreve um functor de um argumento que, quando chamado, retorna seu functor de dois argumentos armazenado chamado com seu primeiro argumento armazenado e o segundo argumento fornecido. Use-o para especificar um objeto de função em termos de seu functor armazenado.
 
@@ -575,7 +575,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Diversão*<br/>
 O tipo do functor armazenado.
@@ -590,7 +590,7 @@ O tipo do functor armazenado.
 |second_argument_type|O tipo do functor segundo argumento.|
 |stored_function_type|O tipo de functor.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |binder1st|Constrói o functor.|
 
@@ -653,7 +653,7 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a> binder2nd (STL/CLR)
 
 A classe de modelo descreve um functor de um argumento que, quando chamado, retorna seu functor de dois argumentos armazenado chamado com o primeiro argumento fornecido e seu segundo argumento armazenado. Use-o para especificar um objeto de função em termos de seu functor armazenado.
 
@@ -680,12 +680,12 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Diversão*<br/>
 O tipo do functor armazenado.
 
-## <a name="member-functions"></a>Funções de membro
+### <a name="member-functions"></a>Funções de membro
 
 |Definição de tipo|Descrição|
 |---------------------|-----------------|
@@ -695,7 +695,7 @@ O tipo do functor armazenado.
 |second_argument_type|O tipo do functor segundo argumento.|
 |stored_function_type|O tipo de functor.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |binder2nd|Constrói o functor.|
 
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides-stlclr"></a><a name="divides"></a>divisões (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a> divisões (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento dividido pelo segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -785,7 +785,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos e o valor de retorno.
@@ -799,7 +799,7 @@ O tipo dos argumentos e o valor de retorno.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |divides|Constrói o functor.|
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a> equal_to (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento for igual ao segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -886,7 +886,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -900,7 +900,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |equal_to|Constrói o functor.|
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater-stlclr"></a><a name="greater"></a>maior (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a> maior (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento for maior que o segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -987,7 +987,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1001,7 +1001,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |greater|Constrói o functor.|
 
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a> greater_equal (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento for maior ou igual ao segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1088,7 +1088,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1102,7 +1102,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |greater_equal|Constrói o functor.|
 
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less-stlclr"></a><a name="less"></a>Less (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a> Less (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento for menor que o segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1189,7 +1189,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1203,7 +1203,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |less|Constrói o functor.|
 
@@ -1263,7 +1263,7 @@ int main()
 0 1
 ```
 
-## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a> less_equal (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento for menor ou igual ao segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1290,7 +1290,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1304,7 +1304,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |less_equal|Constrói o functor.|
 
@@ -1364,7 +1364,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a> logical_and (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna true somente se o primeiro argumento e o segundo teste forem verdadeiros. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1391,7 +1391,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1405,7 +1405,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |logical_and|Constrói o functor.|
 
@@ -1465,7 +1465,7 @@ int main()
 1 0
 ```
 
-## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a> logical_not (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna true somente se o argumento for testado como falso. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1490,7 +1490,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1503,7 +1503,7 @@ O tipo dos argumentos.
 |delegate_type|O tipo do delegado genérico.|
 |result_type|O tipo do resultado de functor.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |logical_not|Constrói o functor.|
 
@@ -1555,7 +1555,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a> logical_or (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna true somente se o primeiro argumento ou o segundo é testado como verdadeiro. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1582,7 +1582,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1596,7 +1596,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |logical_or|Constrói o functor.|
 
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus-stlclr"></a><a name="minus"></a>menos (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a> menos (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento menos o segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1683,7 +1683,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos e o valor de retorno.
@@ -1697,7 +1697,7 @@ O tipo dos argumentos e o valor de retorno.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |minus|Constrói o functor.|
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus-stlclr"></a><a name="modulus"></a>módulo (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a> módulo (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna o primeiro módulo de argumento para o segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1784,7 +1784,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos e o valor de retorno.
@@ -1798,7 +1798,7 @@ O tipo dos argumentos e o valor de retorno.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |módulo|Constrói o functor.|
 
@@ -1858,7 +1858,7 @@ int main()
 1 0
 ```
 
-## <a name="multiplies-stlclr"></a><a name="multiplies"></a>multiplicações (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a> multiplicações (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento vezes o segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1885,7 +1885,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos e o valor de retorno.
@@ -1899,7 +1899,7 @@ O tipo dos argumentos e o valor de retorno.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |multiplies|Constrói o functor.|
 
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate-stlclr"></a><a name="negate"></a>negação (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a> negação (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna seu argumento negado. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -1984,7 +1984,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -1997,7 +1997,7 @@ O tipo dos argumentos.
 |delegate_type|O tipo do delegado genérico.|
 |result_type|O tipo do resultado de functor.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |negate|Constrói o functor.|
 
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retornará true somente se o primeiro argumento não for igual ao segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -2076,7 +2076,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos.
@@ -2090,7 +2090,7 @@ O tipo dos argumentos.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |not_equal_to|Constrói o functor.|
 
@@ -2150,7 +2150,7 @@ int main()
 0 1
 ```
 
-## <a name="not1-stlclr"></a><a name="not1"></a>not1 (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a> not1 (STL/CLR)
 
 Gera um `unary_negate` para um functor.
 
@@ -2222,7 +2222,7 @@ int main()
 1 0
 ```
 
-## <a name="not2-stlclr"></a><a name="not2"></a>not2 (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a> not2 (STL/CLR)
 
 Gera um `binary_negate` para um functor.
 
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus-stlclr"></a><a name="plus"></a>mais (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a> mais (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna o primeiro argumento mais o segundo. Use-o para especificar um objeto de função em termos de seu tipo de argumento.
 
@@ -2330,7 +2330,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo dos argumentos e o valor de retorno.
@@ -2344,7 +2344,7 @@ O tipo dos argumentos e o valor de retorno.
 |result_type|O tipo do resultado de functor.|
 |second_argument_type|O tipo do functor segundo argumento.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |plus|Constrói o functor.|
 
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a> unary_delegate (STL/CLR)
 
 A classe genereic descreve um delegado de um argumento. Use-o para especificar um delegado em termos de seus tipos de retorno e argumento.
 
@@ -2416,7 +2416,7 @@ generic<typename Arg,
     delegate Result unary_delegate(Arg);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo do argumento.
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
 
 A classe genereic descreve um delegado de um argumento que retorna **`void`** . Use-o para especificar um delegado em termos de seu tipo de argumento.
 
@@ -2481,7 +2481,7 @@ generic<typename Arg>
     delegate void unary_delegate_noreturn(Arg);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ARG*<br/>
 O tipo do argumento.
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a> unary_negate (STL/CLR)
 
 A classe de modelo descreve um functor que, quando chamado, retorna a lógica não de seu functor de um argumento armazenado. Use-o para especificar um objeto de função em termos de seu functor armazenado.
 
@@ -2559,7 +2559,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Diversão*<br/>
 O tipo do functor armazenado.
@@ -2572,7 +2572,7 @@ O tipo do functor armazenado.
 |delegate_type|O tipo do delegado genérico.|
 |result_type|O tipo do resultado de functor.|
 
-|Membro|Descrição|
+|Membro|DESCRIÇÃO|
 |------------|-----------------|
 |unary_negate|Constrói o functor.|
 

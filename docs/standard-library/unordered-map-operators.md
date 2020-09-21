@@ -5,12 +5,12 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 0ecedcfa8444b5cbae8fbe64b528a593ed3498b4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844243"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741951"
 ---
 # <a name="ltunordered_mapgt-operators"></a>Operadores &lt;unordered_map&gt;
 
@@ -27,7 +27,7 @@ Testa se o objeto [unordered_map](../standard-library/unordered-map-class.md) à
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Um objeto do tipo `unordered_map`.
@@ -89,7 +89,7 @@ Testa se o objeto [unordered_map](../standard-library/unordered-map-class.md) à
 bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Um objeto do tipo `unordered_map`.
@@ -143,7 +143,7 @@ um2 == um3: false
 */
 ```
 
-## <a name="operator"></a><a name="op_neq_multimap"></a> operador! =
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a> operador! = (Multimap)
 
 Testa se o objeto [unordered_multimap](../standard-library/unordered-multimap-class.md) à esquerda do operador é diferente do objeto unordered_multimap à direita.
 
@@ -151,7 +151,7 @@ Testa se o objeto [unordered_multimap](../standard-library/unordered-multimap-cl
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Um objeto do tipo `unordered_multimap`.
@@ -206,7 +206,7 @@ um2 != um3: true
 */
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a> operador = =
+## <a name="operator-multimap"></a><a name="op_eq_eq_multimap"></a> Operator = = (Multimap)
 
 Testa se o objeto [unordered_multimap](../standard-library/unordered-multimap-class.md) à esquerda do operador é igual ao objeto unordered_multimap à direita.
 
@@ -214,7 +214,7 @@ Testa se o objeto [unordered_multimap](../standard-library/unordered-multimap-cl
 bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *mantida*\
 Um objeto do tipo `unordered_multimap`.

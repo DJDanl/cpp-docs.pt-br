@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 839002a614b54990fdc9180fa06737ff43039a4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226926"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742951"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
@@ -30,7 +30,7 @@ template <typename T>
 class Agile;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 O typename para a classe não Agile.
@@ -82,11 +82,11 @@ A classe `Agile<T>` é uma classe do C++ nativa e padrão e requer o `agile.h`. 
 
 **Cabeçalho:** agile.h
 
-## <a name="agileagile-constructor"></a><a name="ctor"></a>Construtor Agile:: Agile
+## <a name="agileagile-constructor"></a><a name="ctor"></a> Construtor Agile:: Agile
 
 Inicializa uma nova instância da classe Agile.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 Agile();
@@ -95,7 +95,7 @@ Agile(const Agile<T>& object);
 Agile(Agile<T>&& object);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Um tipo especificado pelo parâmetro typename do modelo.
@@ -107,11 +107,11 @@ Na segunda versão desse construtor, um objeto usado para inicializar uma nova i
 
 A primeira versão desse construtor é o construtor padrão. A segunda versão inicializa a nova classe da instância de Agile do objeto especificado pelo parâmetro `object`. A terceira versão é o construtor de cópia. A quarta versão é o construtor de movimento. Esse construtor não pode gerar exceções.
 
-## <a name="agileagile-destructor"></a><a name="dtor"></a>Agile:: ~ destruidor Agile
+## <a name="agileagile-destructor"></a><a name="dtor"></a> Agile:: ~ destruidor Agile
 
 Destrói a instância atual da classe Agile.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 ~Agile();
@@ -121,11 +121,11 @@ Destrói a instância atual da classe Agile.
 
 Este destruidor também libera o objeto representado pelo objeto Agile atual.
 
-## <a name="agileget-method"></a><a name="get"></a>Método Agile:: Get
+## <a name="agileget-method"></a><a name="get"></a> Método Agile:: Get
 
 Retorna um identificador para o objeto representado pelo objeto Agile atual.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 T^ Get() const;
@@ -137,22 +137,22 @@ Um identificador para o objeto representado pelo objeto Agile atual.
 
 O tipo do valor retornado é, de fato, um tipo interno não revelado. Uma maneira conveniente de manter o valor de retorno é atribuí-lo a uma variável declarada com a **`auto`** palavra-chave dedução de tipo. Por exemplo, `auto x = myAgileTvariable->Get();`.
 
-## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Método Agile:: getaddressof
+## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Método Agile:: getaddressof
 
 Reinicializa o objeto Agile atual e retorna o endereço de um identificador para um objeto do tipo `T`.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 T^* GetAddressOf() throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Um tipo especificado pelo parâmetro typename do modelo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O endereço de um identificador para um objeto do tipo `T`.
 
@@ -160,22 +160,22 @@ O endereço de um identificador para um objeto do tipo `T`.
 
 Esta operação libera a representação atual de um objeto do tipo `T`, se houver; reinicializa membros de dados do objeto Agile; adquire o contexto atual de threading; e retorna o endereço de uma variável de identificador para objeto que pode representar um objeto não Agile. Para fazer com que uma instância de classe Agile represente um objeto, use o operador de atribuição ([Agile:: Operator =](#operator-assign)) para atribuir o objeto à instância da classe Agile.
 
-## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Método Agile:: GetAddressOfForInOut
+## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a> Método Agile:: GetAddressOfForInOut
 
 Retorna o endereço de um identificador para o objeto representado pelo objeto Agile atual.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 T^* GetAddressOfForInOut()  throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Um tipo especificado pelo parâmetro typename do modelo.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O endereço de um identificador para o objeto representado pelo objeto Agile atual.
 
@@ -183,11 +183,11 @@ O endereço de um identificador para o objeto representado pelo objeto Agile atu
 
 Esta operação adquire o contexto de threading atual e retorna o endereço de um identificador para o objeto subjacente.
 
-## <a name="agilerelease-method"></a><a name="release"></a>Método Agile:: Release
+## <a name="agilerelease-method"></a><a name="release"></a> Método Agile:: Release
 
 Descarta o objeto e o contexto subjacentes do objeto Agile atual.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 void Release() throw();
@@ -201,7 +201,7 @@ O objeto e o contexto subjacentes do objeto Agile atual serão descartados, caso
 
 Recupera um endereço de um identificador para o objeto representado pelo objeto Agile atual.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 T^ operator->() const throw();
@@ -213,11 +213,11 @@ Um identificador para o objeto representado pelo objeto Agile atual.
 
 Esse operador retorna, na verdade, um tipo interno não revelado. Uma maneira conveniente de manter o valor de retorno é atribuí-lo a uma variável declarada com a **`auto`** palavra-chave dedução de tipo.
 
-## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Operador Agile:: Operator =
+## <a name="agileoperator-operator"></a><a name="operator-assign"></a> Operador Agile:: Operator =
 
 Atribui o objeto especificado ao objeto Agile atual.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 Agile<T> operator=( T^ object ) throw();
@@ -226,7 +226,7 @@ Agile<T> operator=( Agile<T>&& object ) throw();
 T^ operator=( IUnknown* lp ) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 O tipo especificado pelo typename do modelo.
@@ -237,7 +237,7 @@ O objeto ou o identificador de um objeto que é copiado ou movido para o objeto 
 *LP*<br/>
 O ponteiro de interface de IUnknown de um objeto.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador para um objeto do tipo `T`
 

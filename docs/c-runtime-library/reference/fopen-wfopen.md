@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216954"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743055"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -62,7 +62,7 @@ FILE *_wfopen(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nome do arquivo*<br/>
 Nome do arquivo.
@@ -70,7 +70,7 @@ Nome do arquivo.
 *mode*<br/>
 Tipo de acesso habilitado.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Cada uma dessas funções retorna um ponteiro para o arquivo aberto. Um valor de ponteiro nulo indica um erro. Se o *nome do arquivo* ou o *modo* for **nulo** ou uma cadeia de caracteres vazia, essas funções dispararão o manipulador de parâmetro inválido, que é descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **NULL** e definirá **errno** como **EINVAL**.
 
@@ -123,7 +123,7 @@ Se *Mode* for **"a, CCS =**_Encoding_**"**, o **fopen** primeiro tentará abrir 
 
 O *modo* de cadeia de caracteres especifica o tipo de acesso solicitado para o arquivo, como a seguir.
 
-|*mode*|Acesso|
+|*mode*|Access|
 |-|-|
 | **d** | Abre para leitura. Se o arquivo não existir ou não puder ser encontrado, a chamada **fopen** falhará. |
 | **Mostrar** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
@@ -157,8 +157,9 @@ As opções a seguir podem ser acrescentadas ao *modo* para especificar comporta
 
 |modificador de *modo*|Comportamento|
 |-|-|
-| **&** | Habilite o sinalizador de confirmação para o *nome de arquivo* associado para que o conteúdo do buffer de arquivo seja gravado diretamente no disco se **fflush** ou **_flushall** for chamado. |
-| **n** | Redefina o sinalizador de confirmação para o *nome de arquivo* associado como "sem confirmação". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a COMMODE.OBJ. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a COMMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)). |
+| **x** | Força a função a falhar se o *nome de arquivo* já existir. Só pode ser usado com os especificadores "w" ou "w +". |
+| **c** | Habilite o sinalizador de confirmação para o *nome de arquivo* associado para que o conteúdo do buffer de arquivo seja gravado diretamente no disco se **fflush** ou **_flushall** for chamado. |
+| **n** | Redefina o sinalizador de confirmação para o *nome de arquivo* associado como "sem confirmação". Este é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a COMMODE.OBJ. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a COMMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)). |
 | **N** | Especifica que o arquivo não é herdado por processos filhos. |
 | **S** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
 | **R** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
@@ -178,7 +179,8 @@ Os caracteres válidos para a cadeia de caracteres de *modo* usada em **fopen** 
 |**w +**|** \_ O \_ RDWR** (geralmente ** \_ o \_ RDWR** &#124; ** \_ o \_ cri** &#124; ** \_ o \_ trunc**)|
 |**b**|**\_O \_ binário**|
 |**t**|**\_O \_ texto**|
-|**&**|Nenhum|
+|**x**|**\_O \_ excl**|
+|**c**|Nenhum|
 |**n**|Nenhum|
 |**S**|**\_O \_ sequencial**|
 |**R**|**\_O \_ aleatório**|

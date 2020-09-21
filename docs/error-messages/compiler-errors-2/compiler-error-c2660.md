@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 179cdc6379fd26f5acd436d5ca6cacc08df8dce3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756052"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743237"
 ---
 # <a name="compiler-error-c2660"></a>Erro do compilador C2660
 
@@ -23,9 +23,9 @@ C2660 pode ocorrer se você chamar acidentalmente uma função de API do Windows
 
 - Ajuste a chamada de função para estar de acordo com o formato da chamada de função de membro.
 
-- Use o operador de resolução de escopo (`::`) para instruir o compilador a buscar o nome da função no espaço de nome global.
+- Use o operador de resolução de escopo ( `::` ) para instruir o compilador a buscar o nome da função no espaço de nome global.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2660.
 
@@ -38,8 +38,6 @@ int main() {
    func( 1, 0 );   // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 C2660 também pode ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.
 
@@ -60,8 +58,6 @@ int main() {
    stateTimer->~Timer();   // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 C2660 ocorrerá se uma classe derivada ocultar uma função.
 
@@ -92,8 +88,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.
 
 ```cpp
@@ -117,8 +111,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.
 
 ```cpp
@@ -139,8 +131,6 @@ int main() {
    int x2 = a[3,5];   // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente do tipo delimitador.
 

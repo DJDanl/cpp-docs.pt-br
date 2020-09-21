@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2804
 ms.assetid: b066e563-cca4-450c-8ba7-3b0d7a89f3ea
-ms.openlocfilehash: 62af8cca5131a5cb21df45f09c55ee5beb3fc718
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdd1b4155d30dd2513d87ac217ca20ca7baabd8a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760641"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743159"
 ---
 # <a name="compiler-error-c2804"></a>Erro do compilador C2804
 
@@ -19,7 +19,7 @@ o ' operator Operator ' binário tem muitos parâmetros
 
 A função de membro de operador binário sobrecarregado é declarada com mais de um parâmetro. O primeiro parâmetro de operando de uma função de membro de operador binário, cujo tipo é o tipo de delimitador do operador, é implícito.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2804 e mostra como corrigi-lo.
 
@@ -37,8 +37,6 @@ int main() {
    x += y;   // equivalent to x.operator+=(y)
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2804 e mostra como corrigi-lo.
 

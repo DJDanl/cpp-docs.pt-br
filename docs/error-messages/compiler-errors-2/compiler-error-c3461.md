@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: d1bf4af63bac2aaee1da4bb98f23c3b15e98c671
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c5195e0a9bba1bc9e5962f3d3ae1795bb098be3d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756624"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742873"
 ---
 # <a name="compiler-error-c3461"></a>Erro do compilador C3461
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756624"
 
 O encaminhamento de tipo só pode ocorrer em tipos CLR.  Consulte [classes e estruturas](../../extensions/classes-and-structs-cpp-component-extensions.md) para obter mais informações.
 
-Para obter mais informações, consulte [tipo encaminhamentoC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obter mais informações, veja [tipo encaminhamento (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir cria um componente.
 
@@ -30,8 +30,6 @@ O exemplo a seguir cria um componente.
 // compile with: /clr /LD
 public ref class R {};
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3461.
 

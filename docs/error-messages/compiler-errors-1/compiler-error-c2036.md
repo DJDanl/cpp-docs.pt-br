@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2036
 ms.assetid: 895821a9-65d1-44b5-bde1-dae827f3e486
-ms.openlocfilehash: df36dc5d6e399a0fc35b71e6d3a82ea77aeb5105
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 06d292224108434065dfdca2a75d38fd3bb0243c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302075"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742691"
 ---
 # <a name="compiler-error-c2036"></a>Erro do compilador C2036
 
@@ -19,7 +19,7 @@ ms.locfileid: "75302075"
 
 Uma operação em `identifier` requer o tamanho do objeto de dados, que não pode ser determinado.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2036.
 
@@ -35,8 +35,6 @@ int main() {
    pB++;   // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2036.
 

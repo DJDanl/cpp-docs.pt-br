@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560628"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742964"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ O compilador examina a **`static_assert`** declaração de erros de sintaxe quan
 
 Você pode usar a **`static_assert`** palavra-chave em namespace, classe ou escopo de bloco. (A **`static_assert`** palavra-chave é tecnicamente uma declaração, mesmo que não introduza um novo nome em seu programa, pois ela pode ser usada no escopo do namespace.)
 
-## <a name="description"></a>Descrição
+## <a name="description-of-static_assert-with-namespace-scope"></a>Descrição de static_assert com escopo de namespace
 
 No exemplo a seguir, a **`static_assert`** declaração tem escopo de namespace. Como o compilador conhece o tamanho do tipo `void *`, a expressão é avaliada imediatamente.
 
-## <a name="example"></a>Exemplo
+## <a name="example-of-static_assert-with-namespace-scope"></a>Exemplo de static_assert com escopo de namespace
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description-of-static_assert-with-class-scope"></a>Descrição de static_assert com escopo de classe
 
 No exemplo a seguir, a **`static_assert`** declaração tem escopo de classe. O **`static_assert`** verifica se um parâmetro de modelo é um tipo Pod ( *dados antigos simples* ). O compilador examina a **`static_assert`** declaração quando ela é declarada, mas não avalia o parâmetro de *expressão constante* até que o `basic_string` modelo de classe seja instanciado no `main()` .
 
-## <a name="example"></a>Exemplo
+## <a name="example-of-static_assert-with-class-scope"></a>Exemplo de static_assert com escopo de classe
 
 ```cpp
 #include <type_traits>

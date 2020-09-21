@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3462
 ms.assetid: 56b75f35-9fad-42d9-a969-eeca5d709bec
-ms.openlocfilehash: 56227f124d49630d8776f291ada302bd6cd6e983
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f267d195ba851a9d585961848062fa271168aeb8
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756598"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743328"
 ---
 # <a name="compiler-error-c3462"></a>Erro do compilador C3462
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756598"
 
 O atributo TypeForwardedTo deve ser aplicado a um tipo em metadados referenciados.
 
-Para obter mais informações, consulte [tipo encaminhamentoC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obter mais informações, veja [tipo encaminhamento (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir cria um componente.
 
@@ -30,8 +30,6 @@ O exemplo a seguir cria um componente.
 // compile with: /clr /LD
 public ref class R {};
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3462.
 

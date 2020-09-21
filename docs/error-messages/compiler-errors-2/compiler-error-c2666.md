@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755987"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743211"
 ---
 # <a name="compiler-error-c2666"></a>Erro do compilador C2666
 
 ' identifier ': sobrecargas de número têm conversões semelhantes
 
 Uma função ou um operador sobrecarregado é ambíguo.   Listas de parâmetros formais podem ser muito semelhantes para que o compilador resolva a ambiguidade.  Para resolver esse erro, converta explicitamente um ou mais dos parâmetros reais.
+
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2666:
 
@@ -41,11 +43,9 @@ Esse erro também pode ser gerado como resultado do trabalho de conformidade do 
 
 - a conversão de qualificação não é igual à conversão de identidades
 
-Para os operadores binários \<, >, \<= e > =, um parâmetro passado agora será convertido implicitamente no tipo do operando se o tipo do parâmetro definir um operador de conversão definido pelo usuário para converter para o tipo do operando. Agora há potencial para ambigüidade.
+Para os operadores binários \<, > , \<=, and > =, um parâmetro passado agora é convertido implicitamente no tipo do operando se o tipo do parâmetro definir um operador de conversão definido pelo usuário para converter para o tipo do operando. Agora há potencial para ambigüidade.
 
-Para o código que é válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do C++Visual, chame o operador de classe explicitamente usando a sintaxe de função.
-
-## <a name="example"></a>Exemplo
+Para o código que é válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do Visual C++, chame o operador de classe explicitamente usando a sintaxe de função.
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C2666
 
