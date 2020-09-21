@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b0539e7c794852f7e4b28d60f4b402a020bed1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177151"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743198"
 ---
 # <a name="compiler-error-c2668"></a>Erro do compilador C2668
 
@@ -21,7 +21,7 @@ Não foi possível resolver a chamada de função sobrecarregada especificada. T
 
 Você também pode obter esse erro por meio de uso de modelo. Se, na mesma classe, você tiver uma função de membro regular e uma função de membro de modelo com a mesma assinatura, o modelo um deverá vir primeiro. Essa é uma limitação da implementação atual do Visual C++.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2668:
 
@@ -40,8 +40,6 @@ int main() {
    func( (X)d, (X)d );   // OK, uses func( X, X )
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 Outra maneira de resolver esse erro é com uma [declaração using](../../cpp/using-declaration.md):
 
@@ -84,11 +82,9 @@ class MyTestCase : public AppTestCase {
 };
 ```
 
-## <a name="example"></a>Exemplo
-
 Esse erro também pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio .NET 2003: conversão ambígua na conversão da constante 0.
 
-A conversão em uma conversão usando constante 0 é ambígua, pois int requer uma conversão tanto para Long quanto para void *. Para resolver esse erro, converta 0 para o tipo exato do parâmetro de função que está sendo usado para que nenhuma conversão precise ocorrer (esse código será válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET C++).
+A conversão em uma conversão usando constante 0 é ambígua, pois int requer uma conversão tanto para Long quanto para void *. Para resolver esse erro, converta 0 para o tipo exato do parâmetro de função que está sendo usado para que nenhuma conversão precise ocorrer (esse código será válido nas versões do Visual Studio .NET 2003 e do Visual Studio .NET do Visual C++).
 
 ```cpp
 // C2668c.cpp
@@ -108,8 +104,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 Esse erro pode ocorrer porque o CRT agora tem formas flutuantes e duplas de todas as funções matemáticas.
 
 ```cpp
@@ -123,8 +117,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
 Esse erro pode ocorrer porque o pow (int, int) foi removido do Math. h no CRT.
 
 ```cpp
@@ -135,8 +127,6 @@ int main() {
    pow((double)9,9);   // OK
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 Esse código tem êxito no Visual Studio 2015, mas falha no Visual Studio 2017 e posterior com C2668. No Visual Studio 2015, o compilador tratou a inicialização de lista de cópia de maneira incorreta da mesma maneira que a inicialização de cópia regular; ele considerou somente a conversão de construtores para a resolução de sobrecarga.
 

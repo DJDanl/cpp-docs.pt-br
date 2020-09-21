@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ed645535300e0a7c4d27f8bed43d3143bae7e97a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757612"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742860"
 ---
 # <a name="compiler-error-c3225"></a>Erro do compilador C3225
 
@@ -21,7 +21,7 @@ O argumento de tipo genérico não era do tipo correto.
 
 Para obter mais informações, consulte [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 Você não pode criar uma instância de um tipo genérico com um tipo nativo. O exemplo a seguir gera C3225.
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
-
-O exemplo a seguir cria um componente C#usando. Observe que a restrição especifica que o tipo genérico só pode ser instanciado com um tipo de valor.
+O exemplo a seguir cria um componente usando C#. Observe que a restrição especifica que o tipo genérico só pode ser instanciado com um tipo de valor.
 
 ```
 // C3225_b.cs
@@ -52,9 +50,7 @@ O exemplo a seguir cria um componente C#usando. Observe que a restrição especi
 public class MyList<T> where T: struct {}
 ```
 
-## <a name="example"></a>Exemplo
-
-Esta amostra consome o C#componente-autoria e viola a restrição de que myList só pode ser instanciada com um tipo de valor diferente de <xref:System.Nullable>. O exemplo a seguir gera C3225.
+Este exemplo consome o componente de autoria do C# e viola a restrição de que myList só pode ser instanciada com um tipo de valor diferente de <xref:System.Nullable> . O exemplo a seguir gera C3225.
 
 ```cpp
 // C3225_c.cpp

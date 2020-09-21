@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: 9df3831e085f1dea1df45ff9368479fa516b944e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 040d140fa4250ad33e20d1c2724b6f563e865e6b
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685763"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742652"
 ---
 # <a name="time_get_byname-class"></a>Classe time_get_byname
 
-O modelo de classe derivada descreve um objeto que pode servir como uma faceta de localidade do tipo `time_get` \<CharType, InputIterator >.
+O modelo de classe derivada descreve um objeto que pode servir como uma faceta de localidade do tipo `time_get` \<CharType, InputIterator> .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,22 +40,20 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-@No__t_1 *_Locname*
+*_Locname*\
 Uma localidade nomeada.
 
-@No__t_1 *_Refs*
+*_Refs*\
 Uma contagem de referência inicial.
 
 ## <a name="requirements"></a>Requisitos
 
-Seu comportamento é determinado pela localidade nomeada *_Locname*. Cada construtor inicializa seu objeto base com [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
+Seu comportamento é determinado pela localidade nomeada *_Locname*. Cada construtor inicializa seu objeto base com [time_get](../standard-library/time-get-class.md#time_get) \<CharType, InputIterator> ( `_Refs` ).
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<locale>
+**Cabeçalho:**\<locale>
 
 **Namespace:** std
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

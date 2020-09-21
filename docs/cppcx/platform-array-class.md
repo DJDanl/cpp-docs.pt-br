@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837753"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742938"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -66,14 +66,14 @@ Opção do compilador: **/zw**
 
 Inicializa uma matriz unidimensional e modificável de tipos especificados pelo parâmetro do modelo de classe, *T*.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 Array(unsigned int size);
 Array(T* data, unsigned int size);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Parâmetro de modelo de classe.
@@ -92,13 +92,13 @@ Para obter mais informações sobre como criar instâncias de Platform:: Array, 
 
 Recupera uma referência ao elemento de matriz no local do índice especificado.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 T& get(unsigned int index)  const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *index*<br/>
 Um índice com base zero que identifica um elemento na matriz. O índice mínimo é 0 e o índice máximo é o valor especificado pelo `size` parâmetro no construtor de [matriz](#ctor).
@@ -111,7 +111,7 @@ O elemento de matriz especificado pelo parâmetro `index`.
 
 Recupera um identificador para a matriz atual.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 property Array^ Value;

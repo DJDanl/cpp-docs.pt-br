@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1f238a3be27023c755544438166aae1b2b2967d3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759354"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741977"
 ---
 # <a name="compiler-error-c3238"></a>Erro do compilador C3238
 
@@ -19,9 +19,9 @@ ms.locfileid: "74759354"
 
 Um tipo foi definido em um aplicativo cliente que também é definido, por meio da sintaxe de encaminhamento de tipo, em um assembly referenciado. Os dois tipos não podem ser definidos no escopo do aplicativo.
 
-Consulte o [encaminhamento deC++tipo (/CLI)](../../extensions/type-forwarding-cpp-cli.md) para obter mais informações.
+Confira [tipo encaminhamento (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) para obter mais informações.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir cria um assembly que contém um tipo que foi encaminhado de outro assembly.
 
@@ -31,8 +31,6 @@ O exemplo a seguir cria um assembly que contém um tipo que foi encaminhado de o
 public ref class R {};
 ```
 
-## <a name="example"></a>Exemplo
-
 O exemplo a seguir cria um assembly que costumava conter a definição de tipo, mas não só contém a sintaxe de encaminhamento de tipo.
 
 ```cpp
@@ -41,8 +39,6 @@ O exemplo a seguir cria um assembly que costumava conter a definição de tipo, 
 #using "C3238.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3238.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: b4af5dd3839672152c53c902b73c1ea51b7feb6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835462"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742782"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funções globais de relatório de depuração e de erro
 
@@ -51,7 +51,7 @@ Converte um código de erro do Win32 em HRESULT.
 AtlHresultFromWin32(DWORD error);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *error*<br/>
 O valor de erro a ser convertido.
@@ -117,9 +117,9 @@ HRESULT WINAPI AtlReportError(
     HINSTANCE hInst = _AtlBaseModule.GetResourceInstance());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O CLSID do objeto que relata o erro.
 
 *lpszDesc*<br/>
@@ -170,7 +170,7 @@ Chame essa função para sinalizar um erro com base em um código de status HRES
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *h*<br/>
 Valor de HRESULT padrão.
@@ -195,7 +195,7 @@ Para projetos da ATL, é possível fornecer sua própria implementação dessa f
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldef. h
 
@@ -217,7 +217,7 @@ Se _ATL_NO_EXCEPTIONS não estiver definido em um projeto do ATL, a função lan
 
 Se _ATL_NO_EXCEPTIONS for definido, a função causará uma falha de asserção em vez de lançar uma exceção.
 
-## <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldef. h
 

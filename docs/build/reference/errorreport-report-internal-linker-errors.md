@@ -1,6 +1,6 @@
 ---
 title: /ERRORREPORT (erros de vinculador internos do relatório)
-description: Guia de referência para as opções de linha de comando do Microsoft NMAKE.
+description: Saiba como usar o/ERRORREPORT.
 ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 7d16904da8490018235278347f23e37339739415
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257683"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742730"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (erros de vinculador internos do relatório)
 
@@ -23,7 +23,7 @@ A opção **/errorreport** é preterida. A partir do Windows Vista, o relatório
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Errorreport:** \[ **None** \| **prompt** de \| **fila** \| **Enviar** )
+> **/Errorreport:** \[ **nenhum** \| **aviso** \| **fila** \| **Enviar** ]
 
 ## <a name="remarks"></a>Comentários
 
@@ -33,7 +33,7 @@ Os argumentos **/errorreport** são substituídos pelas configurações do servi
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Abra as **Propriedades de configuração** > **vinculador** > página de propriedades **avançada** .
+1. Abra a **Configuration Properties**  >  página de propriedade avançada do**vinculador**de propriedades de configuração  >  **Advanced** .
 
 1. Modifique a propriedade **relatório de erros** .
 
@@ -43,5 +43,5 @@ Os argumentos **/errorreport** são substituídos pelas configurações do servi
 
 ## <a name="see-also"></a>Confira também
 
-\ de [referência do vinculador MSVC](linking.md)
-[Opções do vinculador MSVC](linker-options.md)
+[Referência do vinculador MSVC](linking.md)\
+[Opções de vinculador MSVC](linker-options.md)

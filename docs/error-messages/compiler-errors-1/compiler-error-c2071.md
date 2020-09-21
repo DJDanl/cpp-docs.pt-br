@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: cd815bf90b135f65072a56911c7c4b0f054fcfec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7619d968379bfc35e98bd87071b75296d10c382c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210066"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743276"
 ---
 # <a name="compiler-error-c2071"></a>Erro do compilador C2071
 
 "identificador": classe de armazenamento inválido
 
-`identifier`foi declarado com uma [classe de armazenamento](../../c-language/c-storage-classes.md)inválida. Esse erro pode ser causado quando mais de uma classe de armazenamento for especificada para um identificador ou quando a definição for incompatível com a declaração de classe de armazenamento.
+`identifier` foi declarado com uma [classe de armazenamento](../../c-language/c-storage-classes.md)inválida. Esse erro pode ser causado quando mais de uma classe de armazenamento for especificada para um identificador ou quando a definição for incompatível com a declaração de classe de armazenamento.
 
 Para corrigir esse problema, entenda a classe de armazenamento pretendida do identificador — por exemplo, **`static`** ou **`extern`** — e corrija a declaração para corresponder.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O seguinte exemplo gera C2071.
 
@@ -35,8 +35,6 @@ struct D {
    int i;   // OK, no extern on an automatic
 };
 ```
-
-## <a name="example"></a>Exemplo
 
 O seguinte exemplo gera C2071.
 
