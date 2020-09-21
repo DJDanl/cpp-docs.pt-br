@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5f72af3d7149db7362df9fa23ac5ad6c058c552b
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755846"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743458"
 ---
 # <a name="compiler-error-c3104"></a>Erro do compilador C3104
 
@@ -23,7 +23,7 @@ Consulte [tipos de parâmetro de atributo](../../extensions/attribute-parameter-
 
 Esse erro pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual Studio 2005: ao passar matrizes gerenciadas para atributos personalizados, o tipo da matriz não é mais deduzido da lista de inicialização de agregação. O compilador agora exige que você especifique o tipo da matriz, bem como a lista de inicializadores.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C3104.
 
@@ -43,8 +43,6 @@ public ref struct ABC : public Attribute {
 // [ABC( gcnew array<int> {1,2,3}, param = gcnew array<double>{2.71, 3.14})]
 ref struct AStruct{};
 ```
-
-## <a name="example"></a>Exemplo
 
 O exemplo a seguir gera C3104.
 

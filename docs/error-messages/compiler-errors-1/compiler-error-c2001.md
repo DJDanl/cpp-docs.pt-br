@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6b40a3bd186b5c45a0ea5163f433635ab1e7b07f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756832"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743484"
 ---
 # <a name="compiler-error-c2001"></a>Erro do compilador C2001
 
@@ -25,7 +25,7 @@ Uma constante de cadeia de caracteres não pode continuar em uma segunda linha, 
 
 O encerramento da primeira linha com \n não é suficiente.
 
-## <a name="example"></a>Exemplo
+## <a name="examples"></a>Exemplos
 
 O exemplo a seguir gera C2001:
 
@@ -42,8 +42,6 @@ int main()
              world");
 }
 ```
-
-## <a name="example"></a>Exemplo
 
 Espaços no início da próxima linha após um caractere de continuação de linha são incluídos na constante de cadeia de caracteres. Nenhum dos exemplos mostrados acima insere um caractere de nova linha na constante de cadeia de caracteres. Você pode inserir um caractere de nova linha como mostrado aqui:
 

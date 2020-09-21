@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 6158bffceda7ac83b79b6ff8bd7fce0378759819
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837457"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743445"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml macros auxiliares
 
@@ -56,7 +56,7 @@ DDX_DHtml_Anchor_Href(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -67,7 +67,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLANCHORELEMENT_HREF.
 
@@ -82,7 +82,7 @@ DDX_DHtml_Anchor_Target(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -93,7 +93,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLANCHORELEMENT_TARGET.
 
@@ -108,7 +108,7 @@ DDX_DHtml_ElementInnerHtml(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -119,7 +119,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLELEMENT_INNERHTML.
 
@@ -134,7 +134,7 @@ DDX_DHtml_ElementInnerText(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -145,7 +145,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLELEMENT_INNERTEXT.
 
@@ -160,7 +160,7 @@ DDX_DHtml_ElementValue(
     var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -171,7 +171,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado. Confira o *valor* em [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro só terá sucesso quando executada em controles que tenham uma propriedade Value. Controles que têm uma propriedade Value incluem caixas de edição, caixas de listagem e caixas de combinação.
 
@@ -188,7 +188,7 @@ DDX_DHtml_Frame_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -199,7 +199,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -214,7 +214,7 @@ DDX_DHtml_IFrame_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -225,7 +225,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Essa macro chama a função [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) usando a ID de expedição DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -240,7 +240,7 @@ DDX_DHtml_Img_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *DX*<br/>
 Um ponteiro para um objeto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
@@ -251,7 +251,7 @@ O valor que você especificou para o parâmetro ID do controle HTML.
 *var*<br/>
 O valor que está sendo trocado.
 
-## <a name="remarks"></a>Comentários
+### <a name="remarks"></a>Comentários
 
 Ao usar a macro DDX_DHtml_Img_Src para recuperar a propriedade src para um elemento IMAGE, o objeto de imagem do Internet Explorer retornará a URL de saída completa para a origem da imagem. Por exemplo, se você usar a macro DDX_DHtml_Img_Src para definir a propriedade src de um elemento IMAGE como a cadeia de caracteres "alguma imagem interessante", quando você recuperar essa propriedade, o Internet Explorer retornará a cadeia de caracteres "res://d:\myapplication\myapp.exe/some%20interesting%20picture."
 
