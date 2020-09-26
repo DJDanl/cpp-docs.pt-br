@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b1fea925c5f6d657e398933b5fb26cf09c28055
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321684"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353149"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistente de componente de COM+ 1.0 da ATL
 
@@ -29,7 +29,7 @@ Você pode especificar se o objeto é compatível com interfaces duplas e à aut
 
 A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER**, e não em **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
 
-## <a name="names"></a>Names
+## <a name="names"></a>Nomes
 
 Especifique os nomes para o objeto, a interface e as classes a ser adicionados ao seu projeto. Com exceção de **Nome curto**, todas as demais caixas podem ser editadas de forma independente. Se você alterar o texto para **Nome curto**, a alteração será refletida nos nomes de todas as outras caixas dessa página. Se você alterar o nome **Coclass** na seção COM, a alteração será refletida nas caixas **Tipo** e **ProgID**, mas o nome da **Interface** não mudará. Esse comportamento de nomenclatura foi criado para tornar todos os nomes facilmente identificáveis à medida que você desenvolve seu controle.
 
@@ -61,7 +61,7 @@ Especifique os nomes para o objeto, a interface e as classes a ser adicionados a
 
    Qualquer objeto que você adiciona após definir essa opção será designado como atribuído por padrão (a caixa de seleção fica marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
 
-   Confira mais informações em [Configurações do aplicativo, Assistente de Projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md).
+   Consulte [configurações do aplicativo, assistente de projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) para obter mais informações.
 
 ### <a name="com"></a>COM
 

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319208"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352681"
 ---
 # <a name="atl-simple-object-wizard"></a>Assistente de objeto simples da ATL
 
-Este assistente insere no projeto um objeto COM mínimo. Use esta página do assistente para especificar os nomes que identificam a classe C++ e arquivos para o seu objeto e sua funcionalidade COM.
+Este assistente insere no projeto um objeto COM mínimo. Use esta página do assistente para especificar os nomes que identificam a classe e os arquivos do C++ para seu objeto e sua funcionalidade COM.
 
-Use a página [Opções](../../atl/reference/options-atl-simple-object-wizard.md) deste assistente para especificar o modelo de rosca do objeto, seu suporte à agregação e se ele suporta interfaces duplas e automação. Você também pode indicar suporte para a interface de informações de erro, pontos de conexão, suporte ao Internet Explorer e empacotamento com threading livre.
+Use a página [Opções](../../atl/reference/options-atl-simple-object-wizard.md) deste assistente para especificar o modelo de Threading do objeto, seu suporte à agregação e se ele dá suporte a interfaces duplas e automação. Você também pode indicar suporte para a interface de informações de erro, pontos de conexão, suporte do Internet Explorer e marshaling de threads livres.
 
 ## <a name="remarks"></a>Comentários
 
 A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER**, e não em **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
 
-## <a name="names"></a>Names
+## <a name="names"></a>Nomes
 
 Especifique os nomes para o objeto, a interface e as classes a ser adicionados ao seu projeto. Com a exceção de **Nome curto**, todas as demais caixas podem ser editadas de forma independente. Se você alterar o texto para **Nome curto**, a alteração será refletida nos nomes de todas as outras caixas dessa página. Se você alterar o nome **Coclass** na seção COM, a alteração será refletida nas caixas **Tipo** e **ProgID**, mas o nome da **Interface** não mudará. Esse comportamento de nomenclatura foi criado para tornar todos os nomes facilmente identificáveis à medida que você desenvolve seu controle.
 
@@ -63,7 +63,7 @@ Fornece informações para a classe C++ criada para o objeto.
 
    Por padrão, qualquer objeto que você adiciona após definir essa opção é designado como atribuído (a caixa de seleção fica marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
 
-   Confira mais informações em [Configurações do aplicativo, Assistente de Projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md).
+   Consulte [configurações do aplicativo, assistente de projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) para obter mais informações.
 
 ## <a name="com"></a>COM
 
@@ -74,7 +74,7 @@ Fornece informações sobre a funcionalidade COM do objeto.
    Define o nome da classe do componente que contém uma lista de interfaces compatíveis com o objeto.
 
    > [!NOTE]
-   > Se você criar seu projeto usando atributos ou se indicar nesta página do assistente que o objeto `coclass` usa atributos, não poderá alterar essa opção porque a ATL não inclui o atributo.
+   > Se você criar seu projeto usando atributos, ou se você indicar nessa página do assistente que o objeto usa atributos, não poderá alterar essa opção porque a ATL não inclui o `coclass` atributo.
 
 - **Tipo**
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833550"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353110"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle composto
 
@@ -65,7 +65,7 @@ ATLAPI_(int) AtlAxDialogBox(
     LPARAM dwInitParam);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hInstance*<br/>
 no Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
@@ -82,7 +82,7 @@ no Aponta para o procedimento da caixa de diálogo. Para obter mais informaçõe
 *dwInitParam*<br/>
 no Especifica o valor a ser passado para a caixa de diálogo no parâmetro *lParam* da mensagem de WM_INITDIALOG.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Para obter mais informações sobre como editar scripts de recursos, consulte [como abrir um arquivo de script de recurso em formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre como controlar as instruções de definição de recurso, consulte [parâmetros de controle comuns](/windows/win32/menurc/common-control-parameters) em SDK do Windows: SDK Tools.
+Para obter mais informações sobre como editar scripts de recursos, consulte [como: criar recursos](../../windows/how-to-create-a-resource-script-file.md). Para obter mais informações sobre como controlar as instruções de definição de recurso, consulte [parâmetros de controle comuns](/windows/win32/menurc/common-control-parameters) em SDK do Windows: SDK Tools.
 
 Para obter mais informações sobre caixas de diálogo em geral, consulte [caixa](/windows/win32/api/winuser/nf-winuser-dialogboxw) e [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) no SDK do Windows.
 
@@ -112,7 +112,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
     LPARAM dwInitParam);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hInstance*<br/>
 no Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
@@ -129,7 +129,7 @@ no Aponta para o procedimento da caixa de diálogo. Para obter mais informaçõe
 *dwInitParam*<br/>
 no Especifica o valor a ser passado para a caixa de diálogo no parâmetro *lParam* da mensagem de WM_INITDIALOG.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -151,7 +151,7 @@ ATLAPI AtlAxCreateControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -178,7 +178,7 @@ no Um ponteiro para um fluxo que é usado para inicializar as propriedades do co
 *ppUnkContainer*<br/>
 fora O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NULL.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -203,7 +203,7 @@ ATLAPI AtlAxCreateControlEx(
     IUnknown* punkSink = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -239,7 +239,7 @@ O identificador de interface de uma interface de saída no objeto contido.
 *punkSink*<br/>
 Um ponteiro para a `IUnknown` interface do objeto de coletor a ser conectado ao ponto de conexão especificado por *iidSink* no objeto contido depois que o objeto contido tiver sido criado com êxito.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -262,7 +262,7 @@ ATLAPI AtlAxCreateControlLic(
     BSTR bstrLic = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -292,13 +292,13 @@ O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode ser NU
 *bstrLic*<br/>
 O BSTR que contém a licença do controle.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
 ### <a name="example"></a>Exemplo
 
-Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter uma amostra de como usar `AtlAxCreateControlLic` .
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) para obter uma amostra de como usar `AtlAxCreateControlLic` .
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -316,7 +316,7 @@ ATLAPI AtlAxCreateControlLicEx(
     BSTR bstrLic = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres a ser passada para o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -355,7 +355,7 @@ Um ponteiro para a `IUnknown` interface do objeto de coletor a ser conectado ao 
 *bstrLic*<br/>
 O BSTR que contém a licença do controle.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -365,7 +365,7 @@ Um dos valores de HRESULT padrão.
 
 ### <a name="example"></a>Exemplo
 
-Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter uma amostra de como usar `AtlAxCreateControlLicEx` .
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) para obter uma amostra de como usar `AtlAxCreateControlLicEx` .
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 
@@ -378,7 +378,7 @@ ATLAPI AtlAxAttachControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pControl*<br/>
 no Um ponteiro para o `IUnknown` do controle.
@@ -389,7 +389,7 @@ no Identificador para a janela que hospedará o controle.
 *ppUnkContainer*<br/>
 fora Um ponteiro para um ponteiro para o `IUnknown` do objeto de contêiner.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -408,7 +408,7 @@ Obtém um ponteiro de interface direta para o contêiner para uma janela especif
 ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *h*<br/>
 no Um identificador para a janela que está hospedando o controle.
@@ -416,7 +416,7 @@ no Um identificador para a janela que está hospedando o controle.
 *PP*<br/>
 fora O `IUnknown` do contêiner do controle.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -428,7 +428,7 @@ Obtém um ponteiro de interface direta para o controle contido em uma janela esp
 ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *h*<br/>
 no Um identificador para a janela que está hospedando o controle.
@@ -436,7 +436,7 @@ no Um identificador para a janela que está hospedando o controle.
 *PP*<br/>
 fora O `IUnknown` do controle que está sendo hospedado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um dos valores de HRESULT padrão.
 
@@ -448,7 +448,7 @@ Chame essa função para definir o site do objeto filho como o `IUnknown` do obj
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *punkChild*<br/>
 no Um ponteiro para a `IUnknown` interface do filho.
@@ -456,7 +456,7 @@ no Um ponteiro para a `IUnknown` interface do filho.
 *punkParent*<br/>
 no Um ponteiro para a `IUnknown` interface do pai.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -468,7 +468,7 @@ Essa função inicializa o código de hospedagem do controle da ATL ao registrar
 ATLAPI_(BOOL) AtlAxWinInit();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Diferente de zero se a inicialização do código de hospedagem do controle foi bem-sucedida; caso contrário, FALSE.
 
@@ -484,7 +484,7 @@ Essa função cancela a inicialização do código de hospedagem do controle da 
 inline BOOL AtlAxWinTerm();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Sempre retorna TRUE.
 
@@ -507,7 +507,7 @@ ATLAPI AtlGetObjectSourceInterface(
     unsigned short* pdwMinor);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *punkObj*<br/>
 no Um ponteiro para o objeto para o qual as informações serão retornadas.
@@ -524,7 +524,7 @@ fora Um ponteiro para o número de versão principal da biblioteca de tipos que 
 *pdwMinor*<br/>
 fora Um ponteiro para o número de versão secundária da biblioteca de tipos que contém a definição da interface de origem.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 

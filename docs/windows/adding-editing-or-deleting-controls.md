@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831678"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352746"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
 
@@ -201,7 +201,7 @@ Para usar controles RichEdit, você deve chamar `LoadLibrary` . Para obter mais 
 >
 > Você pode usar a classe [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) atual com o controle RichEdit 1,0 mais antigo, mas `CRichEditCtrl` é projetado apenas para dar suporte ao controle RichEdit 2,0. Como o RichEdit 1,0 e o RichEdit 2,0 são semelhantes, a maioria dos métodos funcionará. No entanto, há algumas diferenças entre os controles 1,0 e 2,0, de modo que alguns métodos podem funcionar incorretamente ou não funcionar.
 
-### <a name="activex-controls"></a>Controles ActiveX
+## <a name="insert-activex-controls"></a>Inserir controles ActiveX
 
 O Visual Studio permite que você insira controles ActiveX em sua caixa de diálogo. Para obter mais informações, consulte [controles ActiveX do MFC](../mfc/mfc-activex-controls.md) e [contêineres de controle ActiveX](../mfc/activex-control-containers.md).
 
@@ -215,7 +215,7 @@ A caixa de diálogo **Inserir controle ActiveX** permite que você insira contro
 > [!CAUTION]
 > Talvez não seja legal distribuir todos os controles ActiveX em seu sistema. Consulte o contrato de licença para o software que instalou os controles ou contate a empresa do software.
 
-#### <a name="to-add-an-activex-control"></a>Para adicionar um controle ActiveX
+### <a name="to-add-an-activex-control"></a>Para adicionar um controle ActiveX
 
 1. Abra uma caixa de diálogo no **Editor de caixas de diálogo**.
 
@@ -230,7 +230,7 @@ A caixa de diálogo **Inserir controle ActiveX** permite que você insira contro
 > [!TIP]
 > Você pode usar o menu de atalho no **Editor** de caixa de diálogo para adicionar rapidamente controles ActiveX registrados a uma caixa de diálogo ou tentar adicionar controles ActiveX à janela **caixa de ferramentas** para facilitar o acesso.
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>Para editar as propriedades de um controle ActiveX
+### <a name="to-edit-properties-for-an-activex-control"></a>Para editar as propriedades de um controle ActiveX
 
 Os controles ActiveX fornecidos por fornecedores independentes podem vir equipados com suas próprias propriedades e características. Essas propriedades são exibidas na janela **Propriedades** . Todas as páginas de propriedades criadas pelos gravadores do controle ActiveX são exibidas na caixa de diálogo **páginas de propriedades** . (Para exibir a **página de propriedades** de um controle ActiveX específico, selecione o botão **página de propriedades** na [janela Propriedades](/visualstudio/ide/reference/properties-window)).
 

@@ -1,5 +1,5 @@
 ---
-title: Editores de recursosC++()
+title: Editores de recursos (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2552f9eea79aa0a3545d9746d85cacfbd9a3f25d
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167882"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353162"
 ---
-# <a name="resource-editors-c"></a>Editores de recursosC++()
+# <a name="resource-editors-c"></a>Editores de recursos (C++)
 
 Um editor de recursos é um ambiente especializado para criar ou modificar recursos que são incluídos em um projeto do Visual Studio. Os editores de recursos do Visual Studio compartilham técnicas e interfaces para ajudá-lo a criar e modificar recursos de aplicativos de forma rápida e fácil. Os editores de recursos permitem exibir e editar recursos no editor apropriado e recursos de visualização.
 
@@ -39,26 +39,26 @@ O editor apropriado é aberto automaticamente quando você cria ou abre um recur
 
 |Use o...|Para editar...|
 |----------------|----------------|
-|[Editor de aceleradores](../windows/accelerator-editor.md)|Tabelas de aceleração em C++ projetos do Visual Studio.|
-|[Editor binário](binary-editor.md)|Informações de dados binários e recursos personalizados C++em projetos visual, Visual Basic C# ou Visual.|
-|[Editor de caixa de diálogo](../windows/dialog-editor.md)|Caixas de diálogo em projetos C++ do Visual Studio.|
-|[Editor de Imagens](../windows/image-editor-for-icons.md)|Bitmaps, ícones, cursores e outros arquivos de imagem em projetos C++visual, Visual Basic ou Visual C# .|
-|[Editor de Menu](../windows/menu-editor.md)|Recursos de menu em projetos C++ do Visual Studio.|
+|[Editor de acelerador](../windows/accelerator-editor.md)|Tabelas de aceleração em projetos do Visual Studio C++.|
+|[Editor de binários](binary-editor.md)|Informações de dados binários e recursos personalizados em projetos Visual C++, Visual Basic ou Visual C#.|
+|[Editor de diálogo](../windows/dialog-editor.md)|Caixas de diálogo em projetos do Visual Studio C++.|
+|[Editor de imagem](../windows/image-editor-for-icons.md)|Bitmaps, ícones, cursores e outros arquivos de imagem em projetos Visual C++, Visual Basic ou Visual C#.|
+|[Editor de menu](../windows/menu-editor.md)|Recursos de menu em projetos do Visual Studio C++.|
 |[Editor de faixa de Ribbon](../mfc/ribbon-designer-mfc.md)|Recursos da faixa de das de MFC.|
-|[Editor de cadeias de caracteres](../windows/string-editor.md)|Tabelas de cadeia de caracteres C++ em projetos do Visual Studio.|
-|[Editor de barra de ferramentas](../windows/toolbar-editor.md)|Recursos da barra de ferramentas C++ em projetos do Visual Studio. O **Editor de barra de ferramentas** faz parte do **Editor de imagem**.|
-|[Editor de informações de versão](../windows/version-information-editor.md)|Informações de versão em projetos C++ do Visual Studio.|
+|[Editor de cadeia de caracteres](../windows/string-editor.md)|Tabelas de cadeia de caracteres em projetos do Visual Studio C++.|
+|[Editor de barra de ferramentas](../windows/toolbar-editor.md)|Recursos da barra de ferramentas em projetos do Visual Studio C++. O **Editor de barra de ferramentas** faz parte do **Editor de imagem**.|
+|[Editor de informações de versão](../windows/version-information-editor.md)|Informações de versão em projetos do Visual Studio C++.|
 
 > [!NOTE]
 > Se o seu projeto ainda não contiver um arquivo. rc, consulte [como: criar recursos](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="view-and-edit-resources"></a>Exibir e editar recursos
 
-Cada tipo de recurso tem um editor de recursos específico para esse tipo de recurso. Você pode reorganizar, redimensionar, adicionar controles e recursos ou, de outra forma, modificar aspectos de um recurso usando o editor associado. Você também pode editar um recurso em [formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md) e [formato binário](../windows/opening-a-resource-for-binary-editing.md).
+Cada tipo de recurso tem um editor de recursos específico para esse tipo de recurso. Você pode reorganizar, redimensionar, adicionar controles e recursos ou, de outra forma, modificar aspectos de um recurso usando o editor associado. Você também pode editar um recurso em formato de texto e formato binário. Para obter mais informações, consulte [como: criar recursos](../windows/how-to-create-a-resource-script-file.md).
 
 Alguns tipos de recursos são arquivos individuais que podem ser importados e usados de várias maneiras; Eles incluem bitmaps, ícones, cursores, barras de ferramentas e arquivos HTML. Esses recursos têm nomes de arquivo e [identificadores de recurso](../windows/symbols-resource-identifiers.md). Outros, como caixas de diálogo, menus e tabelas de cadeia de caracteres em projetos Win32, existem somente como parte de um arquivo de script de recurso (. rc) ou de um arquivo de modelo de recurso (. rct).
 
-Os recursos também podem ser editados fora do projeto sem que o projeto seja aberto, consulte [como: criar recursos](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Os recursos também podem ser editados fora do projeto sem que o projeto seja aberto. Para obter mais informações, consulte [como: criar recursos](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 > [!NOTE]
 > As propriedades de um recurso podem ser modificadas usando a janela **Propriedades** .
@@ -73,7 +73,7 @@ Você pode acessar recursos do Win32 no painel de [modo de exibição de recurso
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Para exibir um recurso do Win32 em um editor de recursos
 
-1. Acesse o **modo de exibição** de menu > outros **modo de exibição de recursos**de > do **Windows** .
+1. Vá para o menu **Exibir**  >  **outras**  >  **modo de exibição de recursos**do Windows.
 
 1. Se a janela de **modo de exibição de recursos** não for a janela superior, selecione a guia **modo de exibição de recursos** para trazê-la para a parte superior.
 
@@ -96,7 +96,7 @@ Você pode acessar recursos do Win32 no painel de [modo de exibição de recurso
 
 Como os projetos gerenciados não usam arquivos de script de recurso, você deve abrir seus recursos de **Gerenciador de soluções**. Use o [Editor de imagem](../windows/image-editor-for-icons.md) e o [Editor binário](binary-editor.md) para trabalhar com arquivos de recursos em projetos gerenciados. Os recursos gerenciados que você deseja editar devem ser recursos vinculados e os editores de recursos do Visual Studio não dão suporte à edição de recursos incorporados.
 
-- Para exibir um recurso gerenciado em um editor de recursos, em **Gerenciador de soluções**, clique duas vezes no recurso, por exemplo, *Bitmap1. bmp*, e o recurso será aberto no editor apropriado.
+- Para exibir um recurso gerenciado em um editor de recursos, em **Gerenciador de soluções**, clique duas vezes no recurso, por exemplo, *Bitmap1.bmp*, e o recurso será aberto no editor apropriado.
 
 - Para excluir um recurso gerenciado existente, em **Gerenciador de soluções**, clique com o botão direito do mouse no recurso que você deseja excluir e escolha **excluir**.
 
@@ -118,7 +118,7 @@ Os recursos a seguir não fornecem uma visualização Visual: acelerador, manife
 1. No [janela Propriedades](/visualstudio/ide/reference/properties-window), selecione o botão **páginas de propriedades** .
 
    > [!TIP]
-   > Use um atalho, vá para a **exibição** de menu > **páginas de propriedades**.
+   > Use um atalho, vá para o menu **Exibir**  >  **páginas de propriedades**.
 
    A página de **Propriedades** do recurso é aberta exibindo uma visualização desse recurso. Você pode usar as teclas de seta para **cima** e para **baixo** para navegar pelo controle de árvore em **modo de exibição de recursos** ou na janela do documento. A página de **Propriedades** permanecerá aberta e mostrará qualquer recurso que tenha foco e possa ser visualizado.
 
@@ -130,4 +130,4 @@ Nenhum
 
 [Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
 [Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
-[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificadores de recurso (símbolos)](../windows/symbols-resource-identifiers.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 16b2863bc3919edadeef29691c4588838010d9dc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7bdc371e5575375f5e72a1a6c0c51890921b1f4
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319267"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353123"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 
@@ -28,7 +28,7 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
 
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário
 
-- **Fonte de dados**
+- **Fonte de Dados**
 
    O botão **Fonte de Dados** permite que você configure a fonte de dados especificada usando o provedor OLE DB especificado. Quando você clica nesse botão, a caixa de diálogo **Propriedades do Link de Dados** é exibida. Saiba mais sobre como criar cadeias de conexão e a caixa de diálogo **Propriedades do Link de Dados** em [Visão geral da API do link de dados](/previous-versions/windows/desktop/ms718102(v=vs.85)) na documentação de SDK do Windows.
 
@@ -38,55 +38,55 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
 
       Selecione um provedor apropriado para gerenciar a conexão com a fonte de dados. O tipo do provedor normalmente é determinado pelo tipo de banco de dados ao qual você está se conectando. Clique no botão **Avançar** ou clique na guia **Conexão**.
 
-  - **Guia de conexão**
+  - Guia **conexão**
 
-      O conteúdo dessa guia depende do provedor selecionado. Embora existam muitos tipos de provedores, esta seção abrange conexões para os dois dados mais comuns: dados SQL e ODBC. Os outros são variações semelhantes nos campos descritos aqui.
+      O conteúdo dessa guia depende do provedor selecionado. Embora existam muitos tipos de provedores, esta seção aborda conexões para os dois dados mais comuns: SQL e ODBC. Os outros são variações semelhantes nos campos descritos aqui.
 
       Para dados do SQL:
 
-      1. **Selecione ou digite um nome de servidor:** Clique no menu da lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
+      1. **Selecione ou insira um nome de servidor:** Clique no menu de lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
 
-      1. **Insira informações para fazer logon no servidor:** Digite um nome de usuário e senha para fazer logon no servidor de dados.
+      1. **Insira as informações para fazer logon no servidor:** Insira um nome de usuário e uma senha para fazer logon no servidor de dados.
 
          > [!NOTE]
          > Há um problema de segurança com o recurso "Permitir salvamento de senha" da caixa de diálogo Propriedades do Link de Dados. Em "Digite as informações para fazer logon no servidor", há dois botões de opção:
          >
-         > - **Use a segurança integrada do Windows NT**
+         > - **Usar a segurança integrada do Windows NT**
          > - **Usar nome de usuário e senha específicos**
          >
          > Selecionando **Usar nome de usuário e senha específicos**, você terá a opção de salvar a senha (usando a caixa de seleção "Permitir salvamento de senha"). No entanto, essa opção não é segura. É recomendável selecionar **Usar segurança integrada do Windows NT**. Essa opção é segura porque criptografa a senha.
          > Pode haver situações em que você queira selecionar "Permitir salvamento de senha". Por exemplo, se estiver liberando uma biblioteca com uma solução de banco de dados particular, você não deverá acessar o banco de dados diretamente, mas em vez disso, usar um aplicativo de camada intermediária para verificar o usuário (por meio de qualquer esquema de autenticação escolhido) e, em seguida, limitar a classificação de dados disponível para o usuário.
 
-      1. **Selecione o banco de dados no servidor:** Clique no menu da lista suspensa para exibir todos os bancos de dados registrados no servidor de dados e selecione um.
+      1. **Selecione o banco de dados no servidor:** Clique no menu de lista suspensa para exibir todos os bancos de dados registrados no servidor e selecione um.
 
          \- ou –
 
-         **Anexar um arquivo de banco de dados como nome de banco de dados:** Especificar um arquivo a ser usado como banco de dados; digite o nome de caminho explícito.
+         **Anexar um arquivo de banco de dados como um nome de banco de dados:** Especifique um arquivo a ser usado como banco de dados; Insira o nome de caminho explícito.
 
       Para dados ODBC:
 
-      1. **Especificar a fonte de dados:** Você pode usar um nome de origem de dados ou uma seqüência de conexão.
+      1. **Especifique a fonte de dados:** Você pode usar um nome de fonte de dados ou uma cadeia de conexão.
 
-         **Use o nome da fonte de dados:** Esta lista suspensa exibe fontes de dados registradas em sua máquina. Você pode configurar fontes de dados antecipadamente usando o Administrador de Fonte de Dados ODBC
+         **Usar nome da fonte de dados:** Essa lista suspensa exibe as fontes de dados registradas em seu computador. Você pode configurar fontes de dados antecipadamente usando o Administrador de Fonte de Dados ODBC
 
          \- ou –
 
-         **Use a seqüência de conexões:** Digite uma seqüência de conexão que você já obteve ou clique no botão **Construir;** a caixa de diálogo **Selecionar fonte de dados** é exibida. Selecione uma fonte de dados de computador ou arquivo e clique em **OK**.
+         **Usar cadeia de conexão:** Insira uma cadeia de conexão que você já obteve ou clique no botão **Compilar** ; a caixa de diálogo **selecionar fonte de dados** é exibida. Selecione uma fonte de dados de computador ou arquivo e clique em **OK**.
 
          > [!NOTE]
          > Você pode obter uma cadeia de conexão ao exibir as propriedades de uma conexão existente no **Gerenciador de Servidores** ou criar uma conexão clicando duas vezes em **Adicionar Conexão** no **Gerenciador de Servidores**.
 
-      1. **Insira informações para fazer logon no servidor:** Digite um nome de usuário e senha para fazer logon no servidor de dados.
+      1. **Insira as informações para fazer logon no servidor:** Insira um nome de usuário e uma senha para fazer logon no servidor de dados.
 
       1. Insira o catálogo inicial a ser usado.
 
       1. Clique em **Testar Conexão**; se o teste for bem-sucedido, clique em **OK**. Caso contrário, verifique suas informações de logon, tente outro banco de dados ou tente outro servidor de dados.
 
-  - **Guia avançada**
+  - Guia **avançado**
 
-      **Configurações da rede:** Especifique o **nível de personificação** (o nível de representação que o servidor pode usar ao se passar pelo cliente; corresponde diretamente aos níveis de representação do RPC) e nível de **Proteção** (o nível de proteção dos dados enviados entre cliente e servidor; corresponde diretamente aos níveis de proteção RPC).
+      **Configurações de rede:** Especifique o **nível de representação** (o nível de representação que o servidor pode usar ao representar o cliente; corresponde diretamente aos níveis de representação RPC) e **nível de proteção** (o nível de proteção dos dados enviados entre o cliente e o servidor; corresponde diretamente aos níveis de proteção de RPC).
 
-      **Outro:** No **tempo de conexão,** especifique o número de segundos de tempo ocioso permitido antes que ocorra um intervalo. Em **Permissões de acesso**, especifique as permissões de acesso na conexão de dados.
+      **Outros:** Em **tempo limite de conexão**, especifique o número de segundos de tempo ocioso permitido antes que ocorra um tempo limite. Em **Permissões de acesso**, especifique as permissões de acesso na conexão de dados.
 
       Saiba mais sobre propriedades de inicialização avançadas na documentação fornecida com cada provedor OLE DB específico.
 
@@ -155,13 +155,13 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
     // for consumer type of 'table'
     ```
 
-     Confira mais informações em [Mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md).
+     Consulte [mecânica básica de atributos](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) para obter mais informações.
 
 - **Tipo**
 
    Selecione um desses botões de opção para especificar se a classe de consumidor será derivada de `CTable` ou `CCommand` (padrão).
 
-  - **Tabela**
+  - **Table**
 
       Selecione essa opção se quiser usar `CTable` ou `db_table` para criar a tabela e a definição de classe do acessador de tabela.
 
@@ -173,15 +173,15 @@ Esse assistente configura uma classe de consumidor do OLE DB com as associaçõe
 
    Marque as caixas de seleção para especificar os tipos de atualização a ser suportados no consumidor (o padrão é nenhum). Cada um definirá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) e as entradas apropriadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) no mapa do conjunto de propriedades.
 
-  - **Mudar**
+  - **Alteração**
 
       Especifica que o consumidor é compatível com as atualizações dos dados da linha no conjunto de linhas.
 
-  - **Inserir**
+  - **Inserção**
 
       Especifica que o consumidor é compatível com a inserção de linhas no conjunto de linhas.
 
-  - **Excluir**
+  - **Delete (excluir)**
 
       Especifica que o consumidor é compatível com a exclusão de linhas do conjunto de linhas.
 
