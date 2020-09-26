@@ -4,12 +4,12 @@ description: Descreve as novas linguagens de programação no C++ moderno e suas
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232190"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353045"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Bem-vindo de volta ao C++ – C++ moderno
 
@@ -75,7 +75,7 @@ Quando a otimização de desempenho for necessária, considere o uso de:
 
 - Contêineres associativos não ordenados, como [`unordered_map`](../standard-library/unordered-map-class.md) . Elas têm uma sobrecarga por elemento menor e uma pesquisa em tempo constante, mas podem ser mais difíceis de usar de forma correta e eficiente.
 
-- Classificado `vector` . Para obter mais informações, consulte [Algoritmos](../cpp/algorithms-modern-cpp.md).
+- Classificado `vector` . Para obter mais informações, consulte [Algoritmos](../standard-library/algorithms.md).
 
 Não use matrizes de estilo C. Para APIs mais antigas que precisam de acesso direto aos dados, use métodos de acessador, como `f(vec.data(), vec.size());` em vez disso. Para obter mais informações sobre contêineres, consulte [contêineres de biblioteca padrão C++](../standard-library/stl-containers.md).
 
@@ -214,7 +214,7 @@ Use o struct da biblioteca padrão C++ [`std::atomic`](../standard-library/atomi
 
 As uniões são comumente usadas na programação em estilo C para conservar a memória, permitindo que os membros de diferentes tipos ocupem o mesmo local de memória. No entanto, as uniões não são de tipo seguro e estão sujeitas a erros de programação. O c++ 17 apresenta a [`std::variant`](../standard-library/variant-class.md) classe como uma alternativa mais robusta e segura para as uniões. A [`std::visit`](../standard-library/variant-functions.md#visit) função pode ser usada para acessar os membros de um `variant` tipo de maneira segura de tipo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)\
 [Expressões lambda](../cpp/lambda-expressions-in-cpp.md)\

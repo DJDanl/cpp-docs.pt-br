@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623489"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353084"
 ---
 # <a name="accelerator-editor-c"></a>Editor de acelerador (C++)
 
@@ -72,7 +72,7 @@ Veja a seguir as entradas legais para a propriedade **modificador** na tabela ac
    |Valor|Descrição|
    |-----------|-----------------|
    |**Nenhuma**|O usuário pressiona apenas o valor da **chave** .<br/><br/>Esse valor é usado com mais eficiência com os valores ASCII/ANSI 001 a 026, que é interpretado como ^ A a ^ Z (**Ctrl + a** através de **Ctrl + Z**).|
-   |**Alt**|O usuário deve pressionar **ALT** antes do valor da **chave** .|
+   |**Pressionando**|O usuário deve pressionar **ALT** antes do valor da **chave** .|
    |**Teclas**|O usuário deve pressionar **Ctrl** antes do valor da **chave** , não é válido com o tipo ASCII.|
    |**Alternância**|O usuário deve pressionar **Shift** antes do valor da **chave** .|
    |**CTRL + ALT**|O usuário deve pressionar **Ctrl** e **ALT** antes do valor da **chave** , não é válido com o tipo ASCII.|
@@ -184,13 +184,13 @@ Os procedimentos a seguir referem-se ao uso de páginas de propriedades padrão,
 1. Vá para a [janela Propriedades](/visualstudio/ide/reference/properties-window) e digite os valores que você deseja que todos os aceleradores selecionados compartilhem.
 
 > [!NOTE]
-> Cada valor de modificador é exibido como uma propriedade booliana na janela **Propriedades** . Se você alterar um valor de [modificador](../windows/accelerator-modifier-property.md) na janela **Propriedades** , a tabela aceleradora tratará o novo modificador como uma adição de quaisquer modificadores que estavam anteriormente. Por isso, se você definir qualquer valor de modificador, precisará definir todos eles para garantir que cada acelerador Compartilhe as mesmas configurações de **modificador** .
+> Cada valor de modificador é exibido como uma propriedade booliana na janela **Propriedades** . Se você alterar um valor de modificador na janela **Propriedades** , a tabela aceleradora tratará o novo modificador como uma adição de quaisquer modificadores que estavam anteriormente. Por isso, se você definir qualquer valor de modificador, precisará definir todos eles para garantir que cada acelerador Compartilhe as mesmas configurações de **modificador** .
 
 ## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Editores de recursos](resource-editors.md)<br/>
 [Teclas de aceleração](predefined-accelerator-keys.md)<br/>

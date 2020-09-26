@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 675f6919b6804cfb1d2c5395d046cb5fa39e625d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229188"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353032"
 ---
-# <a name="auto-c"></a>`auto`C
+# <a name="auto-c"></a>`auto` C
 
 Deduz o tipo de uma variável declarada da expressão de inicialização.
 
@@ -61,11 +61,11 @@ Você também pode usar **`auto`** para declarar e inicializar uma variável par
 
 ## <a name="trailing-return-types"></a>Rastreamento de tipos de retorno
 
-Você pode usar **`auto`** , junto com o **`decltype`** especificador de tipo, para ajudar a gravar bibliotecas de modelos. Use **`auto`** e **`decltype`** para declarar uma função de modelo cujo tipo de retorno depende dos tipos de seus argumentos de modelo. Ou use **`auto`** e **`decltype`** para declarar uma função de modelo que encapsula uma chamada para outra função e, em seguida, retorna qualquer que seja o tipo de retorno dessa outra função. Para obter mais informações, consulte [`decltype`](../cpp/decltype-cpp.md).
+Você pode usar **`auto`** , junto com o **`decltype`** especificador de tipo, para ajudar a gravar bibliotecas de modelos. Use **`auto`** e **`decltype`** para declarar uma função de modelo cujo tipo de retorno depende dos tipos de seus argumentos de modelo. Ou use **`auto`** e **`decltype`** para declarar uma função de modelo que encapsula uma chamada para outra função e, em seguida, retorna qualquer que seja o tipo de retorno dessa outra função. Para obter mais informações, confira [`decltype`](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Referências e qualificadores CV
 
-Observe que o uso **`auto`** de referências de Descartes, **`const`** qualificadores e **`volatile`** qualificadores. Considere o exemplo a seguir:
+Observe que o uso **`auto`** de referências de Descartes, **`const`** qualificadores e **`volatile`** qualificadores. Considere o seguinte exemplo:
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -220,10 +220,9 @@ int main()
 
 ## <a name="see-also"></a>Confira também
 
-[`auto`Chaves](../cpp/auto-keyword.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
-[`/Zc:auto`(Deduzir tipo de variável)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[`sizeof`Operador](../cpp/sizeof-operator.md)<br/>
+[`/Zc:auto` (Deduzir tipo de variável)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[`sizeof` Operador](../cpp/sizeof-operator.md)<br/>
 [`typeid`](../extensions/typeid-cpp-component-extensions.md)<br/>
 [`operator new`](new-operator-cpp.md)<br/>
 [Declarações e definições](declarations-and-definitions-cpp.md)<br/>

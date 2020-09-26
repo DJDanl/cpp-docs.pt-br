@@ -1,17 +1,17 @@
 ---
-title: Assistente de Componente Active Server Page da ATL
+title: Assistente do componente Active Server Page da ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: a78beeab663ef1b467cdec32ca51132e8134a9b2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 3e29d049c50f0410daf16b4bd1322676fd499fd2
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707045"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352668"
 ---
-# <a name="atl-active-server-page-component-wizard"></a>Assistente de Componente Active Server Page da ATL
+# <a name="atl-active-server-page-component-wizard"></a>Assistente do componente Active Server Page da ATL
 
 ::: moniker range="vs-2019"
 
@@ -49,7 +49,7 @@ Fornece informações para a classe C++ criada para o objeto.
 
    O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-- **Class**
+- **Classe**
 
    Define o nome da classe a ser criada. Esse nome é baseado no nome fornecido em **Nome curto**, precedido por "C", o prefixo típico de um nome de classe.
 
@@ -63,11 +63,11 @@ Fornece informações para a classe C++ criada para o objeto.
 
    Indica se o objeto usa atributos. Se você estiver adicionando um objeto a um projeto ATL atribuído, essa opção será selecionada e não estará disponível para alteração. Ou seja, você pode adicionar somente objetos atribuídos a um projeto criado com suporte a atributos.
 
-   Se você selecionar essa opção para um projeto ATL que não tenha suporte a atributo, o assistente solicitará que você especifique se deseja adicionar suporte a atributo ao projeto.
+   Se você selecionar essa opção para um projeto ATL que não seja compatível com o atributo, o assistente solicitará que você especifique se deseja adicionar suporte a atributo ao projeto.
 
    Por padrão, para projetos não atribuídos, qualquer objeto que você adicionar depois de definir essa opção será designado como atribuído (a caixa de seleção estará marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
 
-   Confira mais informações em [Configurações do aplicativo, Assistente de Projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md).
+   Consulte [configurações do aplicativo, assistente de projeto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) para obter mais informações.
 
 ### <a name="com"></a>COM
 
@@ -91,6 +91,6 @@ Fornece informações sobre a funcionalidade COM do objeto.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Componente Active Server Page da ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

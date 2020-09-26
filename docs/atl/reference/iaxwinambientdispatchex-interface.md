@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833381"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352980"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Interface IAxWinAmbientDispatchEx
 
@@ -46,7 +46,7 @@ Essa interface é exposta pelos objetos de hospedagem do controle ActiveX da ATL
 
 Se você estiver vinculando a ATL90.dll, **AxHost** carregará as informações de tipo da biblioteca de tipos na dll.
 
-Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter mais detalhes.
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) para obter mais detalhes.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,12 +66,12 @@ Esse método é chamado para complementar a interface de propriedade de ambiente
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDispatch*<br/>
 Ponteiro para a nova interface.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna S_OK em caso de êxito ou um erro HRESULT em caso de falha.
 

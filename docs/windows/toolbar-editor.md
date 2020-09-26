@@ -1,5 +1,5 @@
 ---
-title: Editor de barraC++de ferramentas ()
+title: Editor de barra de ferramentas (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
@@ -50,14 +50,14 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: ca7f031cbdcfc3378a0917e84b257fd7212563e1
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514683"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353019"
 ---
-# <a name="toolbar-editor-c"></a>Editor de barraC++de ferramentas ()
+# <a name="toolbar-editor-c"></a>Editor de barra de ferramentas (C++)
 
 O **Editor de barra de ferramentas** permite que você crie recursos da barra de ferramentas e converta bitmaps em recursos da barra de ferramentas. O **Editor da barra de ferramentas** usa uma exibição gráfica para mostrar uma barra de ferramentas e botões que se assemelham exatamente à forma como eles aparecerão em um aplicativo concluído.
 
@@ -68,9 +68,9 @@ A janela **Editor da barra de ferramentas** mostra dois modos de exibição de u
 
 O **Editor de barra de ferramentas** é semelhante ao **Editor de imagens** na funcionalidade e os itens de menu, as ferramentas gráficas e a grade de bitmap entre os dois são os mesmos. Há um comando de menu no menu **imagem** para alternar entre o **Editor de barra de ferramentas** e o editor de **imagem**. Para obter mais informações sobre como usar a barra de ferramentas de **gráficos** , a paleta de **cores** ou o menu **imagem** , consulte [Editor de imagem](../windows/image-editor-for-icons.md).
 
-Você pode criar uma nova barra de ferramentas C++ em um projeto convertendo um bitmap. O gráfico do bitmap é convertido para as imagens de botão de uma barra de ferramentas. Normalmente, o bitmap contém várias imagens de botão em um único bitmap, com uma imagem para cada botão. As imagens podem ter qualquer tamanho, pois o padrão tem 16 pixels de largura e a altura da imagem. Você pode especificar o tamanho das imagens de botão na caixa de diálogo **novo recurso de barra de ferramentas** ao escolher **Editor de barra de ferramentas** no menu **imagem** enquanto estiver no **Editor de imagem**.
+Você pode criar uma nova barra de ferramentas em um projeto C++ convertendo um bitmap. O gráfico do bitmap é convertido para as imagens de botão de uma barra de ferramentas. Normalmente, o bitmap contém várias imagens de botão em um único bitmap, com uma imagem para cada botão. As imagens podem ter qualquer tamanho, pois o padrão tem 16 pixels de largura e a altura da imagem. Você pode especificar o tamanho das imagens de botão na caixa de diálogo **novo recurso de barra de ferramentas** ao escolher **Editor de barra de ferramentas** no menu **imagem** enquanto estiver no **Editor de imagem**.
 
-A caixa de diálogo **novo recurso de barra de ferramentas** permite especificar a largura e a altura dos botões que você está adicionando a um recurso C++ da barra de ferramentas em um projeto. O padrão é 16 × 15 pixels.
+A caixa de diálogo **novo recurso de barra de ferramentas** permite especificar a largura e a altura dos botões que você está adicionando a um recurso da barra de ferramentas em um projeto C++. O padrão é 16 × 15 pixels.
 
 Um bitmap que é usado para criar uma barra de ferramentas tem uma largura máxima de 2048, portanto, se você definir a **largura do botão** como *512*, só poderá ter quatro botões. Se você definir a largura como *513*, só poderá ter três botões.
 
@@ -93,11 +93,11 @@ Um botão da barra de ferramentas tem as seguintes propriedades:
 |**ID**|Define a ID do botão. A lista suspensa fornece nomes de **ID** comuns.|
 |**Largura**|Define a largura do botão. é recomendável 16 pixels.|
 |**Altura**|Define a altura do botão. A altura de um botão altera a altura de todos os botões na barra de ferramentas. são recomendados 15 pixels.|
-|**Aviso**|Define a mensagem exibida na barra de status. Adicionar *\n* e um nome adiciona uma **dica de ferramenta** a esse botão da barra de ferramentas. Para obter mais informações, consulte [criando uma dica de ferramenta](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+|**Prompt**|Define a mensagem exibida na barra de status. Adicionar *\n* e um nome adiciona uma **dica de ferramenta** a esse botão da barra de ferramentas. Para obter mais informações, consulte [para criar uma dica de ferramenta para um botão da barra de ferramentas](#to-create-a-tool-tip-for-a-toolbar-button).|
 
 A **largura** e a **altura** se aplicam a todos os botões. Um bitmap que é usado para criar uma barra de ferramentas tem uma largura máxima de 2048, portanto, se você definir a largura do botão como *512*, só poderá ter quatro botões e, se definir a largura como *513*, só poderá ter três botões.
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
 O **Editor de barra de ferramentas** permite que você:
 
@@ -113,7 +113,7 @@ O **Editor de barra de ferramentas** permite que você:
 
 1. Abra um recurso de bitmap existente no [Editor de imagens](../windows/image-editor-for-icons.md). Se o bitmap ainda não estiver no arquivo *. rc* , clique com o botão direito do mouse no arquivo *. rc* e escolha **importar**e, em seguida, navegue até o bitmap que você deseja adicionar ao arquivo *. rc* e selecione **abrir**.
 
-1. Vá para a **imagem** de menu > **Editor de barra de ferramentas**.
+1. Acesse o **Image**menu  >  **Editor da barra de ferramentas**de imagem.
 
    A caixa de diálogo **novo recurso de barra de ferramentas** é exibida. Você pode alterar a largura e a altura das imagens de ícone para corresponder ao bitmap. A imagem da barra de ferramentas é exibida no **Editor da barra de ferramentas**.
 
@@ -134,7 +134,7 @@ O **Editor de barra de ferramentas** permite que você:
 
    - Atribua uma ID ao botão em branco na extremidade direita da barra de ferramentas. Você pode fazer isso editando a propriedade **ID** na [janela Propriedades](/visualstudio/ide/reference/properties-window). Por exemplo, você pode desejar dar um botão de barra de ferramentas com a mesma ID como uma opção de menu. Nesse caso, use a caixa de listagem suspensa para selecionar a **ID** da opção de menu.
 
-   - Selecione o botão em branco na extremidade direita da barra de ferramentas no painel **exibição da barra de ferramentas** e comece a desenhar. Uma ID de comando de botão padrão é atribuída (ID_BUTTON\<n >).
+   - Selecione o botão em branco na extremidade direita da barra de ferramentas no painel **exibição da barra de ferramentas** e comece a desenhar. Uma ID de comando de botão padrão é atribuída (ID_BUTTON \<n> ).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para adicionar uma imagem a uma barra de ferramentas como um botão
 
@@ -145,11 +145,11 @@ O **Editor de barra de ferramentas** permite que você:
    > [!NOTE]
    > Se você abrir a imagem no Visual Studio, ela será aberta no **Editor de imagem**. Você também pode abrir a imagem em outros programas gráficos.
 
-1. Vá para o menu **editar** > **cópia**.
+1. Vá para o menu **Editar**  >  **cópia**.
 
 1. Alterne para a barra de ferramentas selecionando sua guia na parte superior da janela de origem.
 
-1. Vá para o menu **editar** > **colar**.
+1. Vá para o menu **Editar**  >  **colar**.
 
    A imagem será exibida na barra de ferramentas como um novo botão.
 
@@ -163,7 +163,7 @@ No painel **exibição da barra de ferramentas** , arraste o botão que você de
 
 - Para inserir ou remover espaço entre os botões em uma barra de ferramentas, arraste-os para longe ou para outro na barra de ferramentas.
 
-|Action|Etapa|
+|Ação|Etapa|
 |------|------|
 |Para inserir um espaço antes de um botão que não é seguido por um espaço|Arraste o botão para a direita ou para baixo até que ele se sobreponha ao próximo botão sobre a metade.|
 |Para inserir um espaço antes de um botão seguido por um espaço e manter o espaço à direita|Arraste o botão até que a borda direita ou inferior esteja apenas tocando no botão Avançar ou simplesmente sobreponha-o.|
@@ -175,7 +175,7 @@ No painel **exibição da barra de ferramentas** , arraste o botão que você de
 
 #### <a name="to-change-the-properties-of-a-toolbar-button"></a>Para alterar as propriedades de um botão da barra de ferramentas
 
-1. Em um C++ projeto, selecione o botão da barra de ferramentas.
+1. Em um projeto C++, selecione o botão da barra de ferramentas.
 
 1. Digite a nova ID na propriedade **ID** na [janela Propriedades](/visualstudio/ide/reference/properties-window)ou use a lista suspensa para selecionar uma nova **ID**.
 
@@ -191,18 +191,18 @@ Por exemplo, para ver a dica de ferramenta do botão **Imprimir** no **WordPad**
 
 1. Focalize o ponteiro do mouse sobre o botão da barra de ferramentas **Imprimir** e observe que a palavra `Print` agora está flutuando no ponteiro do mouse.
 
-1. Examine a barra de status na parte inferior da janela do **WordPad** e observe que agora ela mostra o texto `Prints the active document`.
+1. Examine a barra de status na parte inferior da janela do **WordPad** e observe que agora ela mostra o texto `Prints the active document` .
 
 `Print` é o nome da dica de ferramenta e `Prints the active document` é a descrição do botão da barra de status.
 
-Se você quiser esse efeito usando o **Editor da barra de ferramentas**, defina a propriedade **prompt** como `Prints the active document\nPrint`.
+Se você quiser esse efeito usando o **Editor de barra de ferramentas**, defina a propriedade **prompt** como `Prints the active document\nPrint` .
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 MFC ou ATL
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Menus e outros recursos](../windows/resource-editors.md)
-[dos editores de recursos](/windows/win32/menurc/resources)<br/>
+[Editores](../windows/resource-editors.md) 
+ de recursos [Menus e outros recursos](/windows/win32/menurc/resources)<br/>
 [Propriedades do botão de barra de ferramentas](../windows/toolbar-button-properties.md)<br/>

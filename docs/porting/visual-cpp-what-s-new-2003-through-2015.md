@@ -2,12 +2,12 @@
 title: Novidades do Visual C++ de 2003 até 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: eb76e5455f053717859d0ac571b9d1110d11c33b
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389929"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352629"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -32,7 +32,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
 - [Melhorias de conformidade no Visual Studio 2015, Atualização 3](#VS_Update3)
 
-### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Melhorias de conformidade no Visual Studio 2015
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Melhorias de conformidade no Visual Studio 2015
 
 - **Opção /Zc:forScope-**
 
@@ -510,7 +510,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    No Visual Studio 2013 e Visual Studio 2015, o compilador gera um construtor de cópia para uma classe quando essa classe tem um construtor de movimento definido pelo usuário, mas nenhum construtor de cópia definido pelo usuário. No Dev14, esse construtor de cópia implicitamente gerado também é marcado "= delete".
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a>Melhorias de conformidade no Visual Studio 2015 atualização 1
+### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a> Melhorias de conformidade no Visual Studio 2015 atualização 1
 
 - **Classes base virtuais particulares e herança indireta**
 
@@ -1013,7 +1013,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     }
    ```
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a>Melhorias de conformidade no Visual Studio 2015 atualização 2
+### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a> Melhorias de conformidade no Visual Studio 2015 atualização 2
 
 - **Erros e avisos adicionais podem ser emitidos como resultado do suporte parcial à expressão SFINAE**
 
@@ -1273,7 +1273,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    A correção do código escrito dessa maneira pode exigir que as definições de operador sejam retiradas de um arquivo de cabeçalho e movidas para um arquivo de origem correspondente.
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a>Melhorias de conformidade no Visual Studio 2015 atualização 3
+### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a> Melhorias de conformidade no Visual Studio 2015 atualização 3
 
 - **std::is_convertable agora detecta autoatribuição**(biblioteca padrão) Versões anteriores da característica de tipo `std::is_convertable` não detectam corretamente autoatribuição de um tipo de classe quando o construtor de cópia é particular ou excluído. Agora, `std::is_convertable<>::value` é definido corretamente como **`false`** quando aplicado a um tipo de classe com um construtor de cópia excluído ou privado.
 
@@ -1552,8 +1552,8 @@ Suporte para estes recursos do C++14:
 - "Transparent operator functors" less<>, greater<>, plus<>, multiplies<>, e assim por diante.
 - make_unique\<T>(args...) e make_unique<T[]>(n)
 - funções de não membro cbegin()/cend(), rbegin()/rend() e crbegin()/crend().
-- \<atomic>foram recebidos inúmeros aprimoramentos de desempenho.
-- \<type_traits>maior estabilização e correções de código recebidas.
+- \<atomic> foram recebidos inúmeros aprimoramentos de desempenho.
+- \<type_traits> maior estabilização e correções de código recebidas.
 
 ### <a name="breaking-changes"></a>Alterações de quebra
 
@@ -1790,7 +1790,7 @@ A cobertura de código foi atualizada para instrumentar dinamicamente arquivos b
 **Palavras-chave nullptr e __nullptr.** O MSVC permite que você use a **`nullptr`** palavra-chave com código nativo ou com código gerenciado. A **`nullptr`** palavra-chave indica que um identificador de objeto, um ponteiro interior ou um tipo de ponteiro nativo não aponta para um objeto. O compilador interpreta o **`nullptr`** código gerenciado quando você usa a opção do `/clr` compilador e o código nativo quando você não usa a `/clr` opção.
 A palavra-chave **__nullptr** específica da Microsoft tem o mesmo significado que **`nullptr`** , mas aplica-se apenas ao código nativo. Se você compilar código C/C++ nativo usando a `/clr` opção do compilador, o compilador não poderá determinar se a **`nullptr`** palavra-chave é um termo nativo ou gerenciado. Para tornar sua intenção clara para o compilador, use a palavra-chave nullptr para especificar o termo gerenciado e **__nullptr** para especificar o termo nativo.
 
-**`/Zc:trigraphs`Opção do compilador.** Por padrão, o suporte para trígrafos está desabilitado. Use a **`/Zc:trigraphs`** opção do compilador para habilitar o suporte a trigrafos.
+**`/Zc:trigraphs` Opção do compilador.** Por padrão, o suporte para trígrafos está desabilitado. Use a **`/Zc:trigraphs`** opção do compilador para habilitar o suporte a trigrafos.
 Um trígrafo consiste em dois pontos de interrogação consecutivos (??) seguidos por um terceiro caractere exclusivo. O compilador substitui um trígrafo por um caractere de pontuação correspondente. Por exemplo, o compilador substitui o trígrafo ??= pelo caractere # (sinal de número). Use trígrafos em arquivos de origem C que utilizam um conjunto de caracteres sem determinados caracteres de pontuação.
 
 **Nova opção de Otimização guiada por perfil.** PogoSafeMode é uma nova opção de otimização guiada por perfil que permite que você especifique se quer usar o modo de segurança ou o modo rápido ao otimizar o aplicativo. O modo de segurança é thread-safe, mas é mais lento do que o modo rápido. Modo rápido é o comportamento padrão.
@@ -1870,7 +1870,7 @@ Como o IntelliSense só processa as informações que você precisa no momento, 
 
 **Depuração e criação de perfil paralelas.** O depurador do Visual Studio está ciente do Runtime de Simultaneidade e ajuda você a solucionar problemas de aplicativos de processamento paralelo. Use a nova ferramenta de criador de perfil de simultaneidade para visualizar o comportamento geral do aplicativo. Use também a nova janela de ferramentas para visualizar o estado de tarefas e suas pilhas de chamadas.
 
-**Designer de Faixa de Opções.** O **Designer de Faixa de Opções** é um editor gráfico que permite criar e modificar uma interface do usuário da faixa de opções do MFC. A faixa de opções final da interface do usuário é representada por um arquivo de recurso baseado em XML (.mfcribbon-ms). Para aplicativos existentes, capture a interface do usuário da faixa de opções atual adicionando temporariamente algumas linhas de código e invocando o **Designer de Faixa de Opções**. Depois que o arquivo de recursos da faixa de opções é criado, substitua a interface do usuário da faixa de opções manuscrita com algumas instruções que carregam o recurso de faixa de opções.
+**Designer de faixa de Ribbon.** O **Designer de Faixa de Opções** é um editor gráfico que permite criar e modificar uma interface do usuário da faixa de opções do MFC. A faixa de opções final da interface do usuário é representada por um arquivo de recurso baseado em XML (.mfcribbon-ms). Para aplicativos existentes, capture a interface do usuário da faixa de opções atual adicionando temporariamente algumas linhas de código e invocando o **Designer de Faixa de Opções**. Depois que o arquivo de recursos da faixa de opções é criado, substitua a interface do usuário da faixa de opções manuscrita com algumas instruções que carregam o recurso de faixa de opções.
 
 **Hierarquia de chamada.** A janela **hierarquia de chamadas** permite que você navegue para todas as funções que são chamadas por uma função específica ou para todas as funções que chamam uma função específica.
 
@@ -1878,7 +1878,7 @@ Como o IntelliSense só processa as informações que você precisa no momento, 
 
 **Assistente de classe MFC.** O Visual C++ 2010 recupera a conceituada ferramenta Assistente de classe do MFC. O Assistente de classe MFC é uma maneira conveniente de adicionar classes, mensagens e variáveis em um projeto sem a necessidade de modificar manualmente os conjuntos de arquivos de origem.
 
-**Assistente de controle do ATL.** O Assistente de Controle de ATL não preenche mais o campo `ProgID` automaticamente. Se um controle de ATL não tiver um `ProgID`, outras ferramentas poderão não funcionar com ele. Um exemplo de uma ferramenta que requer que os controles tenham uma `ProgID` é a caixa de diálogo **Inserir Controle Ativo**. Para obter mais informações sobre a caixa de diálogo, consulte **Inserir controle ActiveX caixa de diálogo**.
+**Assistente de controle do ATL.** O Assistente de Controle de ATL não preenche mais o campo `ProgID` automaticamente. Se um controle de ATL não tiver um `ProgID`, outras ferramentas poderão não funcionar com ele. Um exemplo de uma ferramenta que requer que os controles tenham uma `ProgID` é a caixa de diálogo **Inserir Controle Ativo**. Para obter mais informações sobre a caixa de diálogo, consulte [inserir controles ActiveX](../windows/adding-editing-or-deleting-controls.md#insert-activex-controls).
 
 ### <a name="microsoft-macro-assembler-reference"></a>Referência do Microsoft Macro Assembler
 
@@ -2052,7 +2052,7 @@ O compilador tem alterações significativas nesta versão.
 - O modificador `restrictdeclspec` foi adicionado.
 - **`__thiscall`** Agora é uma palavra-chave.
 - **`__unaligned`** a palavra-chave está documentada agora.
-- **`volatile`**(C++) atualizou o comportamento em relação às otimizações.
+- **`volatile`** (C++) atualizou o comportamento em relação às otimizações.
 
 ### <a name="new-preprocessor-features"></a>Novos recursos do pré-processador
 
@@ -2185,7 +2185,7 @@ O compilador tem alterações significativas nesta versão.
 - Em cada tópico de função, foi adicionada uma seção em equivalentes do .NET Framework.
 - Várias funções de cadeia de caracteres agora têm a opção de truncamento de cadeias de caracteres em vez de falha quando os buffers de saída são muito pequenos. Confira **_TRUNCATE**.
 - O `_set_se_translator` agora requer o uso da opção do compilador `/EHa`.
-- `fpos_t`está agora **`__int64`** em `/Za` (para código C) e quando __stdc__ é definido manualmente (para código C++). Ele costumava ser um **`struct`** .
+- `fpos_t` está agora **`__int64`** em `/Za` (para código C) e quando __stdc__ é definido manualmente (para código C++). Ele costumava ser um **`struct`** .
 - _CRT_DISABLE_PERFCRIT_LOCKS pode melhorar o desempenho de E/S de programas single-threaded.
 - Os nomes de POSIX foram preteridos e substituídos pelos nomes compatíveis com a ISO C++ (por exemplo, use `_getch` em vez de `getch`).
 - Novos arquivos. obj das opções de link estão disponíveis para o modo pure

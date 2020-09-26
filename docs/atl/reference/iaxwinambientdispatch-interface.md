@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: a53481a57676b5b4a253a3501d3536e5115907a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dbd682451ca5499aef4b16b3b51feba8411bdd12
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833407"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352954"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interface IAxWinAmbientDispatch
 
@@ -98,7 +98,7 @@ Essa interface é exposta pelos objetos de hospedagem do controle ActiveX da ATL
 
 Se você estiver vinculando a ATL90.dll, **AxHost** carregará as informações de tipo do TypeLib na dll.
 
-Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter mais detalhes.
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) para obter mais detalhes.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -118,12 +118,12 @@ A `AllowContextMenu` propriedade especifica se o controle hospedado tem permiss�
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbAllowContextMenu*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -139,12 +139,12 @@ A `AllowShowUI` propriedade especifica se o controle hospedado tem permissão pa
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbAllowShowUI*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -160,12 +160,12 @@ A `AllowWindowlessActivation` propriedade especifica se o contêiner permitirá 
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbAllowWindowless*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -181,12 +181,12 @@ A `BackColor` propriedade especifica a cor do plano de fundo ambiente do contêi
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pclrBackground*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -202,12 +202,12 @@ A implementação do objeto de host ATL usa COLOR_BTNFACE ou COLOR_WINDOW como o
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbDisplayAsDefault*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -223,12 +223,12 @@ A `DocHostDoubleClickFlags` propriedade especifica a operação que deve ocorrer
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pdwDocHostDoubleClickFlags*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -244,12 +244,12 @@ A `DocHostFlags` propriedade especifica os recursos de interface do usuário do 
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pdwDocHostFlags*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -265,12 +265,12 @@ A `Font` propriedade especifica a fonte de ambiente do contêiner.
 STDMETHOD(get_Font)(IFontDisp** pFont);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pFont*<br/>
 fora O endereço de um `IFontDisp` ponteiro de interface usado para receber o valor atual dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -286,12 +286,12 @@ A `ForeColor` propriedade especifica a cor de primeiro plano de ambiente do cont
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pclrForeground*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -307,12 +307,12 @@ A `LocaleID` propriedade especifica a ID de localidade ambiente do contêiner.
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *plcidLocaleID*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -330,12 +330,12 @@ A `MessageReflect` propriedade ambiente especifica se o contêiner refletirá as
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbMessageReflect*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -351,12 +351,12 @@ A `OptionKeyPath` propriedade especifica o caminho da chave do registro para as 
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbstrOptionKeyPath*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -368,12 +368,12 @@ A `ShowGrabHandles` propriedade ambiente permite que o controle descubra se ele 
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbShowGrabHandles*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -389,12 +389,12 @@ A `ShowHatching` propriedade ambiente permite que o controle descubra se ele dev
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbShowHatching*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -410,12 +410,12 @@ A `UserMode` propriedade especifica o modo de usuário ambiente do contêiner.
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pbUserMode*<br/>
 fora O endereço de uma variável para receber o valor atual desta propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -431,12 +431,12 @@ A `AllowContextMenu` propriedade especifica se o controle hospedado tem permiss�
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bAllowContextMenu*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -452,12 +452,12 @@ A `AllowShowUI` propriedade especifica se o controle hospedado tem permissão pa
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bAllowShowUI*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -473,12 +473,12 @@ A `AllowWindowlessActivation` propriedade especifica se o contêiner permitirá 
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bAllowWindowless*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -494,12 +494,12 @@ A `BackColor` propriedade especifica a cor do plano de fundo ambiente do contêi
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *clrBackground*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -515,12 +515,12 @@ A implementação do objeto de host ATL usa COLOR_BTNFACE ou COLOR_WINDOW como o
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bDisplayAsDefault*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -536,12 +536,12 @@ A `DocHostDoubleClickFlags` propriedade especifica a operação que deve ocorrer
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDocHostDoubleClickFlags*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -557,12 +557,12 @@ A `DocHostFlags` propriedade especifica os recursos de interface do usuário do 
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwDocHostFlags*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -578,12 +578,12 @@ A `Font` propriedade especifica a fonte de ambiente do contêiner.
 STDMETHOD(put_Font)(IFontDisp* pFont);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pFont*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -599,12 +599,12 @@ A `ForeColor` propriedade especifica a cor de primeiro plano de ambiente do cont
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *clrForeground*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -620,12 +620,12 @@ A `LocaleID` propriedade especifica a ID de localidade ambiente do contêiner.
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lcidLocaleID*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -641,12 +641,12 @@ A `MessageReflect` propriedade ambiente especifica se o contêiner refletirá as
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bMessageReflect*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -662,12 +662,12 @@ A `OptionKeyPath` propriedade especifica o caminho da chave do registro para as 
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bstrOptionKeyPath*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -679,12 +679,12 @@ A `UserMode` propriedade especifica o modo de usuário ambiente do contêiner.
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *bUserMode*<br/>
 no O novo valor dessa propriedade.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 

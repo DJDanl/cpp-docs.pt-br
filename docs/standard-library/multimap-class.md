@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: e2d0236a0e643ac92bb771b90a1f021807f03fda
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040672"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353188"
 ---
 # <a name="multimap-class"></a>Classe multimap
 
@@ -187,7 +187,7 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 |[Comece](#begin)|Retorna um iterador que trata o primeiro elemento no `multimap`.|
 |[cbegin](#cbegin)|Retorna um iterador const que trata o primeiro elemento no `multimap`.|
 |[cend](#cend)|Retorna um iterador const que trata o local após o último elemento em um `multimap`.|
-|[formatação](#clear)|Apaga todos os elementos de um `multimap`.|
+|[clear](#clear)|Apaga todos os elementos de um `multimap`.|
 |[contém](#contains)<sup>c++ 20</sup>|Verifica se há um elemento com a chave especificada no `multimap` .|
 |[contagem](#count)|Retorna o número de elementos em um `multimap` cuja chave corresponde a uma chave especificada pelo parâmetro.|
 |[crbegin](#crbegin)|Retorna um iterador const que trata o primeiro elemento em um `multimap` invertido.|
@@ -195,7 +195,7 @@ No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predica
 |[emplace](#emplace)|Insere um elemento construído adequadamente em um `multimap`.|
 |[emplace_hint](#emplace_hint)|Insere um elemento construído adequadamente em um `multimap`, com uma dica de posicionamento|
 |[empty](#empty)|Testa se `multimap` está vazio.|
-|[completo](#end)|Retorna um iterador que trata o local após o último elemento em um `multimap`.|
+|[end](#end)|Retorna um iterador que trata o local após o último elemento em um `multimap`.|
 |[equal_range](#equal_range)|Localiza o intervalo de elementos em que a chave do elemento corresponde a um valor especificado.|
 |[erase](#erase)|Remove um elemento ou um intervalo de elementos em um `multimap` das posições especificadas ou remove elementos que correspondem a uma chave especificada.|
 |[find](#find)|Retorna um iterador que trata o primeiro local de um elemento em um `multimap` que tem uma chave equivalente a uma chave especificada.|
@@ -245,7 +245,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador bidirecional que trata do primeiro elemento no multimap ou do local que sucede um multimap vazio.
 
@@ -298,7 +298,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um **`const`** iterador de acesso bidirecional que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()` ).
 
@@ -324,7 +324,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um **`const`** iterador de acesso bidirecional que aponta muito além do fim do intervalo.
 
@@ -513,7 +513,7 @@ Tipo da chave.
 *chaves*\
 O valor de chave do elemento a ser pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o elemento for encontrado no contêiner; `false` caso contrário.
 
@@ -567,7 +567,7 @@ size_type count(const Key& key) const;
 *chaves*\
 A chave dos elementos a serem correspondidos do multimap.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O número de elementos cujas chaves de classificação correspondem à chave de parâmetro; 0 se o multimap não contiver um elemento com uma chave correspondente.
 
@@ -631,7 +631,7 @@ Retorna um iterador const que trata o primeiro elemento em um multimap invertido
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador bidirecional invertido const que trata do primeiro elemento em um [multimap](../standard-library/multimap-class.md) invertido ou que trata do que foi o último elemento do `multimap` não invertido.
 
@@ -681,7 +681,7 @@ Retorna um iterador const que trata o local após o último elemento em um multi
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador bidirecional inverso const que trata da localização que vem após o último elemento em um [multimap](../standard-library/multimap-class.md) invertido (o local que precedeu o primeiro elemento no `multimap` não invertido).
 
@@ -798,7 +798,7 @@ iterator emplace(Args&&... args);
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multimap.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -870,7 +870,7 @@ Os argumentos encaminhados para construir um elemento a ser inserido no multimap
 *posição*\
 O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -892,7 +892,7 @@ Testa se um multimap está vazio.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 **`true`** Se o Multimap estiver vazio; **`false`** se o Multimap não estiver vazio.
 
@@ -939,7 +939,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O iterador que ultrapassa o fim. Se o multimap estiver vazio, então, `multimap::end() == multimap::begin()`.
 
@@ -966,7 +966,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um par de iteradores em que o primeiro é o [lower_bound](#lower_bound) da chave e o segundo é o [upper_bound](#upper_bound) da chave.
 
@@ -1062,7 +1062,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 A chave de elementos a serem removidos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do mapa, se esse elemento não existir.
 
@@ -1087,7 +1087,7 @@ const_iterator find(const Key& key) const;
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do multimap que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador que se refere ao local de um elemento com uma chave especificada ou o local seguinte ao último elemento no multimap (`multimap::end()`) se nenhuma correspondência for encontrada para a chave.
 
@@ -1167,7 +1167,7 @@ Retorna uma cópia do objeto alocador usado para construir o multimap.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O alocador usado pelo multimap.
 
@@ -1292,7 +1292,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 As funções do membro de inserir elemento único, (1) e (2), retornam um iterador para a posição em que o novo elemento foi inserido no multimapa.
 
@@ -1432,7 +1432,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar chaves em um mu
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o objeto de função que um multimap usa para ordenar seus elementos.
 
@@ -1546,7 +1546,7 @@ const_iterator lower_bound(const Key& key) const;
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador ou `const_iterator` que tratará a localização de um elemento em um multimap com uma chave, que é igual ou maior que a chave de argumento ou que tratará o local após o último elemento no multimap se nenhuma correspondência for encontrada para a chave.
 
@@ -1645,7 +1645,7 @@ Retorna o comprimento máximo do multimap.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O comprimento máximo possível do multimap.
 
@@ -1946,7 +1946,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador bidirecional invertido que trata do primeiro elemento em um multimap invertido ou que trata do que foi o último elemento do multimap não invertido.
 
@@ -2083,7 +2083,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador bidirecional inverso que trata da localização que vem após o último elemento em um multimap invertido (o local que precedeu o primeiro elemento no multimap não invertido).
 
@@ -2187,7 +2187,7 @@ Retorna o número de elementos no multimap.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 O comprimento atual do multimap.
 
@@ -2319,7 +2319,7 @@ const_iterator upper_bound(const Key& key) const;
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador ou `const_iterator` que tratará a localização de um elemento em um multimap com uma chave, que é maior que a chave de argumento ou que tratará o local após o último elemento no multimap se nenhuma correspondência for encontrada para a chave.
 
@@ -2391,7 +2391,7 @@ A função membro retorna um objeto de função que determina a ordem dos elemen
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Retorna o objeto da função de comparação que um multimap usa para ordenar seus elementos.
 
@@ -2517,6 +2517,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Confira também
 
-[Recipientes](../cpp/containers-modern-cpp.md)\
+[Recipientes](./stl-containers.md)\
 [Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

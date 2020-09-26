@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 1301baef874ac4e482a1b2a7f0a2ee6b1b63396f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833823"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353071"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -82,7 +82,7 @@ HRESULT AttachControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pControl*<br/>
 no Um ponteiro para o `IUnknown` do controle.
@@ -90,7 +90,7 @@ no Um ponteiro para o `IUnknown` do controle.
 *ppUnkContainer*<br/>
 fora Um ponteiro para o `IUnknown` do host (o `AxWin` objeto).
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -106,7 +106,7 @@ Constrói um `CAxWindow` objeto usando um identificador de objeto de janela exis
 CAxWindow(HWND hWnd = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
 Um identificador para um objeto de janela existente.
@@ -127,7 +127,7 @@ HRESULT CreateControl(
     IUnknown** ppUnkContainer = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -154,7 +154,7 @@ fora O endereço de um ponteiro que receberá o `IUnknown` do contêiner. Pode s
 *dwResID*<br/>
 A ID de recurso de um recurso HTML. O controle WebBrowser será criado e carregado com o recurso especificado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -170,7 +170,7 @@ Consulte [CAxWindow2T:: CreateControlLic](../../atl/reference/caxwindow2t-class.
 
 ### <a name="example"></a>Exemplo
 
-Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo que usa `CreateControl` .
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) para obter um exemplo que usa `CreateControl` .
 
 ## <a name="caxwindowcreatecontrolex"></a><a name="createcontrolex"></a> CAxWindow::CreateControlEx
 
@@ -194,7 +194,7 @@ HRESULT CreateControlEx(
     IUnknown* punkSink = NULL);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszName*<br/>
 Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser formatada de uma das seguintes maneiras:
@@ -230,7 +230,7 @@ no Um ponteiro para a `IUnknown` interface do objeto de coletor a ser conectado 
 *dwResID*<br/>
 no A ID de recurso de um recurso HTML. O controle WebBrowser será criado e carregado com o recurso especificado.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -242,7 +242,7 @@ Consulte [CAxWindow2T:: CreateControlLicEx](../../atl/reference/caxwindow2t-clas
 
 ### <a name="example"></a>Exemplo
 
-Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obter um exemplo que usa `CreateControlEx` .
+Consulte [hospedando controles ActiveX usando o ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) para obter um exemplo que usa `CreateControlEx` .
 
 ## <a name="caxwindowgetwndclassname"></a><a name="getwndclassname"></a> CAxWindow::GetWndClassName
 
@@ -252,7 +252,7 @@ Recupera o nome da classe de janela.
 static LPCTSTR GetWndClassName();
 ```
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um ponteiro para uma cadeia de caracteres que contém o nome da classe de janela que pode hospedar controles ActiveX não licenciados.
 
@@ -264,12 +264,12 @@ Atribui um HWND a um `CAxWindow` objeto existente.
 CAxWindow<TBase>& operator=(HWND hWnd);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
 Um identificador para uma janela existente.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Retorna uma referência ao objeto atual `CAxWindow` .
 
@@ -283,7 +283,7 @@ template <class  Q>
 HRESULT QueryControl(Q** ppUnk);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *IID*<br/>
 no Especifica o IID da interface do controle.
@@ -294,7 +294,7 @@ fora Um ponteiro para a interface do controle. Na versão de modelo deste métod
 *Perguntas*<br/>
 no A interface que está sendo consultada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -308,7 +308,7 @@ template <class  Q>
 HRESULT QueryHost(Q** ppUnk);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *IID*<br/>
 no Especifica o IID da interface do controle.
@@ -319,7 +319,7 @@ fora Um ponteiro para a interface no host. Na versão de modelo deste método, n
 *Perguntas*<br/>
 no A interface que está sendo consultada.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -335,12 +335,12 @@ Define a interface de expedição externa para o `CAxWindow` objeto.
 HRESULT SetExternalDispatch(IDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pDisp*<br/>
 no Um ponteiro para uma `IDispatch` interface.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 
@@ -352,12 +352,12 @@ Define a interface [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihan
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pUIHandler*<br/>
 no Um ponteiro para uma `IDocHostUIHandlerDispatch` interface.
 
-### <a name="return-value"></a>Valor Retornado
+### <a name="return-value"></a>Valor retornado
 
 Um valor HRESULT padrão.
 

@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0730f4eb6ba8e625c2c40cecddc4f689ec775d17
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042024"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352772"
 ---
 # <a name="unordered_multiset-class"></a>Classe unordered_multiset
 
@@ -200,13 +200,13 @@ A classe do alocador.
 |[bucket_size](#bucket_size)|Obtém o tamanho de um bucket.|
 |[cbegin](#cbegin)|Designa o início da sequência controlada.|
 |[cend](#cend)|Designa o fim da sequência controlada.|
-|[formatação](#clear)|Remove todos os elementos.|
+|[clear](#clear)|Remove todos os elementos.|
 |[contém](#contains)<sup>c++ 20</sup>|Verifica se há um elemento com a chave especificada.|
 |[contagem](#count)|Localiza o número de elementos que correspondem a uma chave especificada.|
 |[emplace](#emplace)|Adiciona um elemento construído no lugar.|
 |[emplace_hint](#emplace_hint)|Adiciona um elemento construído no lugar, com dica.|
 |[empty](#empty)|Testa se nenhum elemento está presente.|
-|[completo](#end)|Designa o fim da sequência controlada.|
+|[end](#end)|Designa o fim da sequência controlada.|
 |[equal_range](#equal_range)|Localiza o intervalo que corresponde a uma chave especificada.|
 |[erase](#erase)|Remove os elementos em posições especificadas.|
 |[find](#find)|Localiza um elemento que corresponde a uma chave especificada.|
@@ -553,7 +553,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um **`const`** iterador de acesso de encaminhamento que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio `cbegin() == cend()` ).
 
@@ -579,7 +579,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um **`const`** iterador de acesso de encaminhamento que aponta muito além do fim do intervalo.
 
@@ -866,7 +866,7 @@ Tipo da chave.
 *chaves*\
 O valor de chave do elemento a ser pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 `true` Se o elemento for encontrado no contêiner; `false` caso contrário.
 
@@ -1028,7 +1028,7 @@ iterator emplace(Args&&... args);
 *argumento*\
 Os argumentos encaminhados para criar um elemento a ser inserido no unordered_multiset.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -1059,7 +1059,7 @@ Os argumentos encaminhados para criar um elemento a ser inserido no unordered_mu
 *posição*\
 Uma dica relacionada ao local do qual se começa a procurar pelo ponto de inserção correto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -1303,7 +1303,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do unordered_multiset, se esse elemento não existir.
 
@@ -1548,7 +1548,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor retornado
 
 As funções do membro de inserir elemento único, (1) e (2), retornam um iterador para a posição em que o novo elemento foi inserido no unordered_multiset.
 
@@ -2595,6 +2595,6 @@ int main()
 ## <a name="see-also"></a>Confira também
 
 [<unordered_set>](../standard-library/unordered-set.md)\
-[Recipientes](../cpp/containers-modern-cpp.md)\
+[Recipientes](./stl-containers.md)\
 [Segurança de thread na biblioteca padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referência da biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)

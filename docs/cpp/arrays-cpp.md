@@ -6,16 +6,16 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: cb949f9a17a6b751dae40202bf82e6cb321b526b
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565957"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352785"
 ---
 # <a name="arrays-c"></a>Matrizes (C++)
 
-Uma matriz é uma sequência de objetos do mesmo tipo que ocupam uma área contígua de memória. As matrizes tradicionais de estilo C são a fonte de muitos bugs, mas ainda são comuns, especialmente em bases de código mais antigas. No C++ moderno, é altamente recomendável usar [std:: vector](../standard-library/vector-class.md) ou [std:: array](../standard-library/array-class-stl.md) em vez de matrizes de estilo C descritos nesta seção. Ambos os tipos de biblioteca padrão armazenam seus elementos como um bloco contíguo de memória. No entanto, eles fornecem segurança de tipo muito maior e iteradores de suporte que têm garantia de apontar para um local válido dentro da sequência. Para obter mais informações, consulte [contêineres (C++ moderno)](containers-modern-cpp.md).
+Uma matriz é uma sequência de objetos do mesmo tipo que ocupam uma área contígua de memória. As matrizes tradicionais de estilo C são a fonte de muitos bugs, mas ainda são comuns, especialmente em bases de código mais antigas. No C++ moderno, é altamente recomendável usar [std:: vector](../standard-library/vector-class.md) ou [std:: array](../standard-library/array-class-stl.md) em vez de matrizes de estilo C descritos nesta seção. Ambos os tipos de biblioteca padrão armazenam seus elementos como um bloco contíguo de memória. No entanto, eles fornecem segurança de tipo muito maior e iteradores de suporte que têm garantia de apontar para um local válido dentro da sequência. Para obter mais informações, consulte [contêineres](../standard-library/stl-containers.md).
 
 ## <a name="stack-declarations"></a>Declarações de pilha
 
