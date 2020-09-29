@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221478"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414003"
 ---
 # <a name="double-thunking-c"></a>Conversão dupla (C++)
 
@@ -29,9 +29,9 @@ Da mesma forma, se você exportar ([dllexport, DllImport](../cpp/dllexport-dllim
 
 O compilador foi atualizado para reduzir a conversão dupla desnecessária. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo tipo de retorno) será marcada implicitamente como `__clrcall` .
 
-## <a name="example"></a>Exemplo
+## <a name="example-double-thunking"></a>Exemplo: conversão dupla
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 O exemplo a seguir demonstra a conversão dupla. Quando o nativo compilado (sem **/CLR**), a chamada para a função virtual no `main` gera uma chamada para `T` o construtor de cópia e uma chamada para o destruidor. Um comportamento semelhante é obtido quando a função virtual é declarada com **/CLR** e `__clrcall` . No entanto, quando acabamos de ser compilado com **/CLR**, a chamada de função gera uma chamada para o construtor de cópia, mas há outra chamada para o construtor de cópia devido à conversão nativa para gerenciada.
 
@@ -87,9 +87,9 @@ after calling struct S
 __thiscall T::~T(void)
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-effect-of-double-thunking"></a>Exemplo: efeito de conversão dupla
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 O exemplo anterior demonstrou a existência de uma conversão dupla. Este exemplo mostra seu efeito. O **`for`** loop chama a função virtual e o programa informa o tempo de execução. A hora mais lenta é relatada quando o programa é compilado com **/CLR**. As horas mais rápidas são relatadas durante a compilação sem **/CLR** ou se a função virtual for declarada com `__clrcall` .
 

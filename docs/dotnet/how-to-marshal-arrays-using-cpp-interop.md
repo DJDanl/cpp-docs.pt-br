@@ -9,22 +9,22 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0ccf71d40db0bc6989620d2ca126ce74311805da
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988195"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413821"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Como realizar marshaling de matrizes usando interop C++
 
-Este tópico demonstra uma faceta da interoperabilidade Visual C++ . Para obter mais informações, [consulte C++ usando a interoperabilidade (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Este tópico demonstra uma faceta da interoperabilidade do Visual C++. Para obter mais informações, consulte [usando a interoperabilidade C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 Os exemplos de código a seguir usam as diretivas de #pragma [gerenciadas e não gerenciadas](../preprocessor/managed-unmanaged.md) para implementar funções gerenciadas e não gerenciadas no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definidas em arquivos separados. Os arquivos que contêm apenas funções não gerenciadas não precisam ser compilados com [/CLR (compilação em tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-pass-managed-array-to-unmanaged-function"></a>Exemplo: passar a matriz gerenciada para a função não gerenciada
 
-O exemplo a seguir demonstra como passar uma matriz gerenciada para uma função não gerenciada. A função gerenciada usa [pin_ptrC++(/CLI)](../extensions/pin-ptr-cpp-cli.md) para suprimir a coleta de lixo da matriz antes de chamar a função não gerenciada. Ao fornecer a função não gerenciada com um ponteiro fixado no heap de GC, a sobrecarga de fazer uma cópia da matriz pode ser evitada. Para demonstrar que a função não gerenciada está acessando a memória de heap de GC, ela modifica o conteúdo da matriz e as alterações são refletidas quando a função gerenciada retoma o controle.
+O exemplo a seguir demonstra como passar uma matriz gerenciada para uma função não gerenciada. A função gerenciada usa [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para suprimir a coleta de lixo da matriz antes de chamar a função não gerenciada. Ao fornecer a função não gerenciada com um ponteiro fixado no heap de GC, a sobrecarga de fazer uma cópia da matriz pode ser evitada. Para demonstrar que a função não gerenciada está acessando a memória de heap de GC, ela modifica o conteúdo da matriz e as alterações são refletidas quando a função gerenciada retoma o controle.
 
 ```cpp
 // PassArray1.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-pass-unmanaged-array-to-managed-function"></a>Exemplo: passar a matriz não gerenciada para a função gerenciada
 
 O exemplo a seguir demonstra a passagem de uma matriz não gerenciada para uma função gerenciada. A função gerenciada acessa a memória da matriz diretamente (em vez de criar uma matriz gerenciada e copiar o conteúdo da matriz), o que permite que as alterações feitas pela função gerenciada sejam refletidas na função não gerenciada quando ele recupera o controle.
 
@@ -129,6 +129,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Usando a interoperabilidade C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

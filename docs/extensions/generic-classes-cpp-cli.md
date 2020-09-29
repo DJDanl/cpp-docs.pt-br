@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216018"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414120"
 ---
 # <a name="generic-classes-ccli"></a>Classes genéricas (C++/CLI)
 
@@ -41,7 +41,7 @@ Na sintaxe acima, os seguintes termos são usados:
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em Atributos.
 
 *class-key*<br/>
-Um **`class`** ou**`typename`**
+Um **`class`** ou **`typename`**
 
 *type-parameter-identifier(s)*, lista de identificadores separados por vírgula que especificam os nomes dos parâmetros de tipo.
 
@@ -157,7 +157,7 @@ Esta seção demonstra o uso de instância e campos estáticos em classes genér
 
 As variáveis de instância de uma classe genérica podem ter tipos e inicializadores de variável que incluam quaisquer parâmetros de tipo da classe delimitadora.
 
-## <a name="example"></a>Exemplo
+## <a name="example-different-generic-classes"></a>Exemplo: classes genéricas diferentes
 
 No exemplo a seguir, três instâncias diferentes da classe genérica, MyClass \<ItemType> , são criadas usando os argumentos de tipo apropriados ( **`int`** , e a cadeia de **`double`** **caracteres**).
 
@@ -205,7 +205,7 @@ Na criação de um novo tipo genérico, são criadas novas instâncias de todas 
 
 Variáveis estáticas podem usar quaisquer parâmetros de tipo da classe delimitadora.
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-static-variables"></a>Exemplo: usar variáveis estáticas
 
 O exemplo a seguir demonstra como usar campos estáticos e um construtor estático em uma classe genérica.
 
@@ -282,7 +282,7 @@ A assinatura de um método não genérico não pode incluir um ou mais parâmetr
 
 O corpo desses métodos também pode usar esses parâmetros de tipo.
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-non-generic-method"></a>Exemplo: declarar um método não genérico
 
 O exemplo a seguir declara um método não genérico, `ProtectData`, dentro de uma classe genérica, `MyClass<ItemType>`. O método usa o parâmetro de tipo de classe `ItemType` na sua assinatura em um tipo construído aberto.
 
@@ -343,7 +343,7 @@ Amount: $123.00**
 
 É possível declarar métodos genéricos em classes genéricas e não genéricas. Por exemplo:
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-generic-and-non-generic-methods"></a>Exemplo: declarar métodos genéricos e não genéricos
 
 ```cpp
 // generics_method2.cpp
@@ -369,7 +369,7 @@ O método não genérico ainda é genérico no sentido de que é parametrizado p
 
 Todos os tipos de métodos em classes genéricas podem ser genéricos, incluindo os métodos static, instance e virtual.
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-and-use-generic-methods"></a>Exemplo: declarar e usar métodos genéricos
 
 O exemplo a seguir demonstra como declarar e usar os métodos genéricos em classes genéricas:
 
@@ -453,9 +453,9 @@ Como não há nenhuma maneira de se referir ao parâmetro de tipo externo, o com
 
 Quando tipos genéricos construídos e aninhados são nomeados, o parâmetro para o tipo externo não é incluído na lista de parâmetros para o tipo interno, mesmo que o tipo interno seja parametrizado implicitamente pelo parâmetro do tipo externo. No caso acima, um nome de tipo construído seria `Outer<int>::Inner<string>`.
 
-O exemplo a seguir demonstra a criação e a leitura de uma lista vinculada usando tipos aninhados em classes genéricas.
+## <a name="example-build-and-read-linked-list"></a>Exemplo: criar e ler lista vinculada
 
-## <a name="example"></a>Exemplo
+O exemplo a seguir demonstra a criação e a leitura de uma lista vinculada usando tipos aninhados em classes genéricas.
 
 ```cpp
 // generics_linked_list.cpp
@@ -556,7 +556,7 @@ Reading nodes:
 
 - Propriedades, eventos, indexadores e operadores não podem ser parametrizados.
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-instance-property"></a>Exemplo: declarar a propriedade de instância
 
 Este exemplo mostra declarações de uma propriedade de instância em uma classe genérica.
 
@@ -596,7 +596,7 @@ int main() {
 John, 234
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-generic-class-with-event"></a>Exemplo: classe genérica com evento
 
 O exemplo a seguir mostra uma classe genérica com um evento.
 
@@ -663,7 +663,7 @@ int main() {
 
 As regras para declarar e usar structs genéricos são as mesmas das classes genéricas, exceto pelas diferenças observadas na referência da linguagem do Visual C++.
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-generic-struct"></a>Exemplo: declarar struct genérico
 
 O exemplo a seguir declara um struct genérico, `MyGenStruct` , com um campo, `myField` e atribui valores de tipos diferentes ( **`int`** , **`double`** , `String^` ) a esse campo.
 

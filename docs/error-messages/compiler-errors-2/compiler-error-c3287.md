@@ -1,25 +1,28 @@
 ---
 title: Erro do compilador C3287
-ms.date: 11/04/2016
+description: Descreve o erro C3287 do compilador do Microsoft C++.
+ms.date: 09/25/2020
 f1_keywords:
 - C3287
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4067355ef1bc1992d0f8519656bcd1063179aef4
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749601"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414314"
 ---
 # <a name="compiler-error-c3287"></a>Erro do compilador C3287
 
-o tipo ' type ' (tipo de retorno de GetEnumerator) deve ter uma função de membro MoveNext pública adequada e uma propriedade Current pública
+> o tipo '*Type*' (tipo de retorno de GetEnumerator) deve ter uma função de membro MoveNext pública adequada e uma propriedade Current pública
 
-As classes de coleção definidas pelo usuário devem conter definições para `MoveNext` e `Current`.
+## <a name="remarks"></a>Comentários
 
-Consulte [como: iterar em uma coleção definida pelo usuário com for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) para obter mais informações.
+As classes de coleção definidas pelo usuário devem conter definições para `MoveNext` e `Current` .
+
+Para obter mais informações, consulte [for each, in](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Exemplo
 

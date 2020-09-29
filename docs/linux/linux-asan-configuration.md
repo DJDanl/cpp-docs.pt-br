@@ -1,13 +1,13 @@
 ---
 title: Configurar projetos do Linux para usar o Address Sanitizer
 description: Descreve como configurar projetos do C++ Linux no Visual Studio para usar o Address Sanitizer.
-ms.date: 06/07/2019
-ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.date: 09/25/2020
+ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686659"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414186"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurar projetos do Linux para usar o Address Sanitizer
 
@@ -33,7 +33,7 @@ Também é possível ver a saída completa do ASan (incluindo a localização em
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Habilitar o ASan em projetos do Linux baseados no MSBuild
 
 > [!NOTE]
-> A partir do Visual Studio 2019 versão 16,4, o AddressSanitizer para projetos do Linux é habilitado por meio **das propriedades de configuração**  >  **C/C++**  >  **habilitar o desativador de endereço**.
+> A partir do Visual Studio 2019 versão 16,4, o AddressSanitizer para projetos do Linux é habilitado por meio das propriedades do **projeto**  >  **Propriedades de configuração**  >  **C/C++**  >  **habilitar endereço limpeza**.
 
 Para habilitar o ASan em projetos do Linux baseados no MSBuild, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Propriedades**. Em seguida, navegue até **Propriedades de configuração**  >  limpezas**C/C++**  >  **Sanitizers**. O ASan é habilitado por meio de sinalizadores do compilador e do vinculador e, para funcionar, exige a recompilação do projeto.
 
@@ -51,7 +51,7 @@ Verifique se você tem uma configuração do Linux (por exemplo, **Linux-Debug**
 
 ![Captura de tela do painel esquerdo com depuração do Linux listada como uma das opções de configuração.](media/linux-debug-configuration.png)
 
-As opções do ASan estão na guia **Geral**. Insira os sinalizadores de runtime do ASan no formato "sinalizador=valor", separados por ponto-e-vírgula.
+As opções do ASan estão na guia **Geral**. Insira os sinalizadores de tempo de execução ASan no formato "Flag = valor", separados por espaços. A interface do usuário sugere incorretamente o uso de ponto e vírgula. Use espaços ou dois-pontos para separar sinalizadores.
 
 ![Captura de tela da opção de limpeza de endereço de habilitação mostrando alguns sinalizadores de tempo de execução de correção de endereço.](media/cmake-settings-asan-options.png)
 
