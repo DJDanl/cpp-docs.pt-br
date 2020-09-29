@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743302"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499711"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -417,7 +417,7 @@ O primeiro argumento a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo retorna [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` . Você o usa como uma maneira conveniente de encapsular um functor de dois argumentos e seu primeiro argumento em um functor de um argumento que o chama com um segundo argumento.
+A função de modelo retorna [binder1st (STL/CLR)](#binder1st) `<Fun>(functor, left)` . Você o usa como uma maneira conveniente de encapsular um functor de dois argumentos e seu primeiro argumento em um functor de um argumento que o chama com um segundo argumento.
 
 ### <a name="example"></a>Exemplo
 
@@ -498,7 +498,7 @@ O segundo argumento a ser encapsulado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo retorna [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` . Você o usa como uma maneira conveniente de encapsular um functor de dois argumentos e seu segundo argumento em um functor de um argumento que o chama com um primeiro argumento.
+A função de modelo retorna [binder2nd (STL/CLR)](#binder2nd) `<Fun>(functor, right)` . Você o usa como uma maneira conveniente de encapsular um functor de dois argumentos e seu segundo argumento em um functor de um argumento que o chama com um primeiro argumento.
 
 ### <a name="example"></a>Exemplo
 
@@ -2173,7 +2173,7 @@ O functor a ser quebrado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo retorna [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` . Você o usa como uma maneira conveniente de encapsular um functor de um argumento em um functor que entrega seu não lógico.
+A função de modelo retorna [unary_negate (STL/CLR)](#unary_negate) `<Fun>(functor)` . Você o usa como uma maneira conveniente de encapsular um functor de um argumento em um functor que entrega seu não lógico.
 
 ### <a name="example"></a>Exemplo
 
@@ -2245,7 +2245,7 @@ O functor a ser quebrado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de modelo retorna [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` . Você o usa como uma maneira conveniente de encapsular um functor de dois argumentos em um functor que entrega seu não lógico.
+A função de modelo retorna [binary_negate (STL/CLR)](#negate) `<Fun>(functor)` . Você o usa como uma maneira conveniente de encapsular um functor de dois argumentos em um functor que entrega seu não lógico.
 
 ### <a name="example"></a>Exemplo
 

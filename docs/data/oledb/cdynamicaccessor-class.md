@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838198"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498682"
 ---
 # <a name="cdynamicaccessor-class"></a>Classe CDynamicAccessor
 
@@ -176,7 +176,7 @@ class CDynamicAccessor : public CAccessorBase
 
 Use `CDynamicAccessor` métodos para obter informações de coluna, como nomes de coluna, contagem de colunas, tipo de dados e assim por diante. Em seguida, você usa essas informações de coluna para criar um acessador dinamicamente em tempo de execução.
 
-As informações de coluna são armazenadas em um buffer que é criado e gerenciado por essa classe. Obtenha dados do buffer usando [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).
+As informações de coluna são armazenadas em um buffer que é criado e gerenciado por essa classe. Obtenha dados do buffer usando [GetValue](#getvalue).
 
 Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).
 
@@ -190,7 +190,7 @@ Adiciona uma entrada de associação às colunas de saída.
 HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *detalhes*<br/>
 no Uma `DBCOLUMNINFO` estrutura que contém informações de coluna. Consulte "estruturas DBCOLUMNINFO" em [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
@@ -214,13 +214,13 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
    DBLENGTH nBlobSize = 8000);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *eBlobHandling*<br/>
-Especifica como os dados do objeto binário grande (BLOB) serão manipulados. O valor padrão é DBBLOBHANDLING_DEFAULT. Consulte [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) para obter uma descrição dos valores de DBBLOBHANDLINGENUM.
+Especifica como os dados do objeto binário grande (BLOB) serão manipulados. O valor padrão é DBBLOBHANDLING_DEFAULT. Consulte [SetBlobHandling](#setblobhandling) para obter uma descrição dos valores de DBBLOBHANDLINGENUM.
 
 *nBlobSize*<br/>
-O tamanho máximo do BLOB em bytes; os dados de coluna sobre esse valor são tratados como um BLOB. O valor padrão é 8.000. Consulte [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) para obter detalhes.
+O tamanho máximo do BLOB em bytes; os dados de coluna sobre esse valor são tratados como um BLOB. O valor padrão é 8.000. Consulte [SetBlobSizeLimit](#setblobsizelimit) para obter detalhes.
 
 ### <a name="remarks"></a>Comentários
 
@@ -250,7 +250,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### <a name="remarks"></a>Comentários
 
-Retorna o valor de manipulação de BLOB *eBlobHandling* conforme definido por [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
+Retorna o valor de manipulação de BLOB *eBlobHandling* conforme definido por [SetBlobHandling](#setblobhandling).
 
 ## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
 
@@ -264,7 +264,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### <a name="remarks"></a>Comentários
 
-Retorna o valor de manipulação de BLOB *nBlobSize* conforme definido por [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
+Retorna o valor de manipulação de BLOB *nBlobSize* conforme definido por [SetBlobSizeLimit](#setblobsizelimit).
 
 ## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor:: GetBookmark
 
@@ -276,7 +276,7 @@ Recupera o indicador para a linha atual.
 HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pBookmark*<br/>
 fora Um ponteiro para o objeto [CBookmark](../../data/oledb/cbookmark-class.md) .
@@ -314,7 +314,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
    DBCOLUMNFLAGS* pFlags) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -343,7 +343,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
    OLECHAR** ppStringsBuffer) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pRowset*<br/>
 no Um ponteiro para a interface [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) .
@@ -375,7 +375,7 @@ Recupera o nome da coluna especificada.
 LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -395,7 +395,7 @@ bool GetColumnType(DBORDINAL nColumn,
    DBTYPE* pType) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -424,7 +424,7 @@ bool GetLength(const WCHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -457,7 +457,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
    DBORDINAL* pOrdinal) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pColumnName*<br/>
 no Um ponteiro para uma cadeia de caracteres que contém o nome da coluna.
@@ -486,7 +486,7 @@ bool GetStatus(const WCHAR* pColumnName,
    DBSTATUS* pStatus) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -524,7 +524,7 @@ template < class ctype >
 bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ctype*<br/>
 no Um parâmetro de modelo que manipula qualquer tipo de dados, exceto os tipos de cadeia de caracteres ( `CHAR*` , `WCHAR*` ), que exigem tratamento especial. `GetValue` usa o tipo de dados apropriado com base no que você especificar aqui.
@@ -560,7 +560,7 @@ Define o valor de manipulação de BLOB para a linha atual.
 bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *eBlobHandling*<br/>
 Especifica como os dados de BLOB serão manipulados. Ele pode usar os seguintes valores:
@@ -587,7 +587,7 @@ Define o tamanho máximo do BLOB em bytes.
 void SetBlobSizeLimit(DBLENGTH nBlobSize);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nBlobSize*<br/>
 Especifica o limite de tamanho do BLOB.
@@ -615,7 +615,7 @@ bool SetLength(const WCHAR* pColumnName,
    DBLENGTH nLength) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -647,7 +647,7 @@ bool SetStatus(const WCHAR* pColumnName,
    DBSTATUS status) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -685,7 +685,7 @@ bool SetValue(
    const ctype& data) throw( );
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ctype*<br/>
 no Um parâmetro de modelo que manipula qualquer tipo de dados, exceto os tipos de cadeia de caracteres ( `CHAR*` , `WCHAR*` ), que exigem tratamento especial. `GetValue` usa o tipo de dados apropriado com base no que você especificar aqui.
@@ -705,7 +705,7 @@ Se você quiser definir dados de cadeia de caracteres, use as versões não mode
 
 Para todos os outros tipos de dados, é mais simples usar as versões do modelo do `GetValue` . As versões do modelo retornam **`true`** em caso de êxito ou **`false`** em caso de falha.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

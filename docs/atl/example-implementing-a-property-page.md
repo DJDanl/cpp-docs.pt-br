@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224351"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499617"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: implementando uma página de propriedades
 
@@ -133,12 +133,12 @@ Quando os usuários quiserem aplicar suas alterações nos objetos, o site da p�
 
 Para exibir essa página, você precisa criar um objeto auxiliar simples. O objeto auxiliar fornecerá um método que simplifica a API `OleCreatePropertyFrame` para a exibição de uma única página conectada a um único objeto. Esse auxiliar será criado para que possa ser usado no Visual Basic.
 
-Use a [caixa de diálogo Adicionar Classe](../ide/add-class-dialog-box.md) e o [Assistente de Objeto Simples de ATL](../atl/reference/atl-simple-object-wizard.md) para gerar uma nova classe e usar `Helper` como seu nome curto. Depois de criado, adicione um método, conforme mostrado na tabela abaixo.
+Use a [caixa de diálogo Adicionar Classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) e o [Assistente de Objeto Simples de ATL](../atl/reference/atl-simple-object-wizard.md) para gerar uma nova classe e usar `Helper` como seu nome curto. Depois de criado, adicione um método, conforme mostrado na tabela abaixo.
 
 |Item|Valor|
 |----------|-----------|
 |Nome do método|`ShowPage`|
-|parâmetros|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
+|Parâmetros|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
 
 O parâmetro *bstrCaption* é a legenda a ser exibida como o título da caixa de diálogo. O parâmetro *bstrID* é uma cadeia de caracteres que representa uma CLSID ou ProgID da página de propriedades a ser exibida. O parâmetro *pUnk* será o ponteiro `IUnknown` do objeto cujas propriedades serão definidas pela página de propriedades.
 
@@ -171,7 +171,7 @@ Quando você executar essa macro, a página de propriedades será exibida mostra
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Páginas de propriedade](../atl/atl-com-property-pages.md)<br/>
 [Exemplo de páginas ATL](../overview/visual-cpp-samples.md)

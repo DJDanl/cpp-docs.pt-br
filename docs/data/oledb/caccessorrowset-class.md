@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843281"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498720"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -46,7 +46,7 @@ template <class TAccessor = CNoAccessor,
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TAccessor*<br/>
 Uma classe de acessador.
@@ -64,7 +64,7 @@ Uma classe de conjunto de linhas.
 
 | Nome | Descrição |
 |--|--|
-| [Associa](#bind) | Cria associações (usadas quando `bBind` é especificado como **`false`** em [CCommand:: Open](../../data/oledb/ccommand-open.md)). |
+| [Associa](#bind) | Cria associações (usadas quando `bBind` é especificado como **`false`** em [CCommand:: Open](./ccommand-class.md#open)). |
 | [CAccessorRowset](#caccessorrowset) | Construtor. |
 | [Fechar](#close) | Fecha o conjunto de linhas e todos os acessadores. |
 | [FreeRecordMemory](#freerecordmemory) | Libera Todas as colunas no registro atual que precisam ser liberadas. |
@@ -76,7 +76,7 @@ Uma classe de conjunto de linhas.
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: bind
 
-Cria as associações se você tiver especificado `bBind` como **`false`** em [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Cria as associações se você tiver especificado `bBind` como **`false`** em [CCommand:: Open](./ccommand-class.md#open).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -137,7 +137,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
    DBCOLUMNINFO** ppColumnInfo);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
 
@@ -151,7 +151,7 @@ O usuário deve liberar as informações da coluna retornada e o buffer de cadei
 
 Para obter mais informações, consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

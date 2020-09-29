@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
-ms.openlocfilehash: 48d0fef86908f3ba5a547417d0625febc5226454
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7235d86ed00663b81aaddb87fdeae957c0f73053
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752698"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500424"
 ---
 # <a name="compiler-error-c3739"></a>Erro do compilador C3739
 
 ' class ': há suporte para sintaxe somente quando o parâmetro ' layout_dependent ' de event_receiver é true
 
-Você tentou vincular uma interface inteira de eventos, mas `layout_dependent` no atributo [event_receiver](../../windows/event-receiver.md) não é verdadeiro; Você deve conectar um único evento por vez.
+Você tentou vincular uma interface inteira de eventos, mas `layout_dependent` em [event_receiver](../../windows/attributes/event-receiver.md) atributo não é verdadeiro; você deve vincular um único evento por vez.
 
 O exemplo a seguir gera C3739:
 

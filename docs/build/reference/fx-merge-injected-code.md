@@ -12,16 +12,16 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292296"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500096"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (mesclar código injetado)
 
-Produz uma cópia de cada arquivo de origem com o código injetado mesclado com o código-fonte.
+Produz uma cópia de cada arquivo de origem com o código injetado mesclado na origem.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +31,7 @@ Produz uma cópia de cada arquivo de origem com o código injetado mesclado com 
 
 ## <a name="remarks"></a>Comentários
 
-Para distinguir um arquivo de origem mesclada de um arquivo de origem original **/Fx** adiciona uma extensão. mrg entre o nome de arquivo e extensão de arquivo. Por exemplo, um arquivo chamado MyCode.cpp que contém o código atribuído e compilados com **/Fx** cria um arquivo chamado MyCode.mrg.cpp que contém o código a seguir:
+Para distinguir um arquivo de origem mesclado de um arquivo de origem original, o **/FX** adiciona uma extensão. mrg entre o nome do arquivo e a extensão do arquivo. Por exemplo, um arquivo chamado myCode. cpp contendo código atribuído e criado com **/FX** cria um arquivo chamado myCode. mrg. cpp que contém o código a seguir:
 
 ```
 //+++ Start Injected Code
@@ -44,7 +44,7 @@ Para distinguir um arquivo de origem mesclada de um arquivo de origem original *
 //--- End Injected Code
 ```
 
-Em um arquivo. mrg, o código que foi inserido por causa de um atributo será delimitado da seguinte maneira:
+Em um arquivo. mrg, o código que foi injetado devido a um atributo será delimitado da seguinte maneira:
 
 ```
 //+++ Start Injected Code
@@ -52,23 +52,23 @@ Em um arquivo. mrg, o código que foi inserido por causa de um atributo será de
 //--- End Injected Code
 ```
 
-O [no_injected_text](../../windows/no-injected-text.md) é inserido em um arquivo. mrg, que permite a compilação do arquivo. mrg sem texto sendo reinjected.
+O atributo [no_injected_text](../../windows/attributes/no-injected-text.md) é inserido em um arquivo. mrg, que permite a compilação do arquivo. mrg sem que o texto seja reinjetado.
 
-Você deve estar ciente de que o arquivo de origem. mrg destina-se para ser uma representação do código-fonte injetado pelo compilador. O arquivo. mrg não pode compilar ou executar exatamente como o arquivo de origem.
+Você deve estar ciente de que o arquivo de origem. mrg se destina a ser uma representação do código-fonte injetado pelo compilador. O arquivo. mrg pode não compilar ou executar exatamente como o arquivo de origem original.
 
 As macros não são expandidas no arquivo. mrg.
 
-Se seu programa inclui um arquivo de cabeçalho que usa o código injetado **/Fx** gera um. arquivo mrg.h desse cabeçalho. **/FX** direta não inclui arquivos que não usam o código injetado.
+Se o seu programa incluir um arquivo de cabeçalho que usa código injetado, o **/FX** gerará um arquivo. mrg. h para esse cabeçalho. **/FX** não mescla arquivos de inclusão que não usam código injetado.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [propriedades de compilador e de build definida C++ no Visual Studio](../working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
+1. Clique na pasta **C/C++** .
 
-1. Clique o **arquivos de saída** página de propriedades.
+1. Clique na página de propriedades **arquivos de saída** .
 
-1. Modificar a **expandir origem atribuída** propriedade.
+1. Modifique a propriedade **expandir fonte atribuída** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -76,6 +76,6 @@ Se seu programa inclui um arquivo de cabeçalho que usa o código injetado **/Fx
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do arquivo de saída (/F)](output-file-f-options.md)<br/>
+[Opções de arquivo de saída (/F)](output-file-f-options.md)<br/>
 [Opções do compilador MSVC](compiler-options.md)<br/>
-[Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

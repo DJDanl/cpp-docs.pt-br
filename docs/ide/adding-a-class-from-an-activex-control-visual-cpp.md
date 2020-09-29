@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-ms.openlocfilehash: 1d91d98082a5c5d6d45bfa31e81c59e8925aa2c2
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694212"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500366"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Adicionar uma classe de um controle ActiveX
 
@@ -28,13 +28,13 @@ Use este assistente para criar uma classe MFC por meio de uma interface em um co
 
 Um controle ActiveX é um componente de software reutilizável baseado no COM (Component Object Model) que dá suporte a uma ampla variedade de funcionalidades OLE. Ele pode ser personalizado para atender às várias necessidades de software. É possível usar os controles ActiveX em contêineres comuns de controle ActiveX ou na Internet em páginas da World Wide Web.
 
-**Para adicionar uma classe MFC por meio de um controle ActiveX:**
+**Para adicionar uma classe do MFC a partir de um controle ActiveX:**
 
 1. No **Gerenciador de Soluções** ou em [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code), clique com o botão direito do mouse no nome do projeto ao qual deseja adicionar a classe de controle ActiveX.
 
 1. No menu de atalho, escolha **Adicionar** e, depois, **Adicionar classe**.
 
-1. Na caixa de diálogo [Adicionar Classe](../ide/add-class-dialog-box.md), no painel **Modelos**, selecione **Classe MFC de controle ActiveX** e, em seguida, escolha **Abrir** para exibir a opção [Assistente para adicionar classe por meio de controle ActiveX](#add-class-from-activex-control-wizard).
+1. Na caixa de diálogo [Adicionar Classe](./adding-a-class-visual-cpp.md#add-class-dialog-box), no painel **Modelos**, selecione **Classe MFC de controle ActiveX** e, em seguida, escolha **Abrir** para exibir a opção [Assistente para adicionar classe por meio de controle ActiveX](#add-class-from-activex-control-wizard).
 
 No assistente, adicione mais de uma interface em um controle ActiveX. Você também pode criar classes por meio de mais de um controle ActiveX em uma única sessão do assistente.
 
@@ -44,7 +44,7 @@ O assistente cria uma classe MFC, derivada de [CWnd](../mfc/reference/cwnd-class
 
 ## <a name="in-this-section"></a>Nesta seção
 
-- [Assistente para adicionar classe por meio de controle ActiveX](#add-class-from-activex-control-wizard)
+- [Assistente para adicionar classe do controle ActiveX](#add-class-from-activex-control-wizard)
 
 ## <a name="add-class-from-activex-control-wizard"></a>Assistente para adicionar classe por meio de controle ActiveX
 
@@ -56,16 +56,16 @@ Use este assistente para adicionar uma classe MFC por meio de um controle Active
 
   |Opção|Descrição|
   |------------|-----------------|
-  |**Registry**|A biblioteca de tipos é registrada no sistema. As bibliotecas de tipos registradas são listadas em **Controles ActiveX disponíveis**.|
+  |**Registro**|A biblioteca de tipos é registrada no sistema. As bibliotecas de tipos registradas são listadas em **Controles ActiveX disponíveis**.|
   |**Arquivo**|A biblioteca de tipos não está necessariamente registrada no sistema, mas está armazenada em um arquivo. Forneça a localização do arquivo em **Localização**.|
 
 - **Controles ActiveX disponíveis**
 
-  Especifica os controles ActiveX atualmente registrados no sistema. Selecione um controle ActiveX nessa lista para exibir suas interfaces na lista **Interfaces**. Confira [Controles ActiveX MFC: distribuindo controles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) para obter mais informações sobre como registrar controles ActiveX.
+  Especifica os controles ActiveX atualmente registrados no sistema. Selecione um controle ActiveX nessa lista para exibir suas interfaces na lista **Interfaces**. Consulte [controles ActiveX do MFC: distribuindo controles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) para obter mais informações sobre como registrar controles ActiveX.
 
   Se você selecionar **Arquivo** em **Adicionar Classe por meio de**, essa caixa não ficará disponível para alteração.
 
-- **Local**
+- **Localidade**
 
   Especifica o local do controle ActiveX. Se você selecionar **Arquivo** em **Adicionar Classe por meio de**, poderá fornecer a localização do arquivo que guarda a biblioteca de tipos. Para procurar a localização do arquivo, selecione o botão de reticências.
 
@@ -84,11 +84,11 @@ Use este assistente para adicionar uma classe MFC por meio de um controle Active
 
 - **classes geradas**
 
-  Especifica os nomes de classe a serem gerados com base nas interfaces adicionadas por meio do botão **>** ou **>>**. Você pode selecionar esta caixa para selecionar uma classe e, em seguida, usar as teclas para cima ou para baixo para rolar a lista. Quando você seleciona **Concluir**, pode exibir cada nome de classe gerado na caixa **Classe** e cada nome de arquivo gerado na caixa **arquivo .h**. Selecione apenas uma classe por vez nessa caixa.
+  Especifica os nomes de classe a serem gerados a partir das interfaces adicionadas usando o **>** **>>** botão ou. Você pode selecionar esta caixa para selecionar uma classe e, em seguida, usar as teclas para cima ou para baixo para rolar a lista. Quando você seleciona **Concluir**, pode exibir cada nome de classe gerado na caixa **Classe** e cada nome de arquivo gerado na caixa **arquivo .h**. Selecione apenas uma classe por vez nessa caixa.
 
-  Para remover uma classe, selecione-a na lista e escolha **<**. Você não precisa selecionar uma classe na caixa **Classes geradas** para remover todas as classes. Selecionando **<<**, você remove todas as classes na caixa **Classes geradas**.
+  Você pode remover uma classe selecionando-a nessa lista e selecionando **<** . Você não precisa selecionar uma classe na caixa **Classes geradas** para remover todas as classes. Ao selecionar **<<** , você remove todas as classes na caixa **classes geradas** .
 
-- **Class**
+- **Classe**
 
    Especifica o nome da classe selecionada na caixa **Classes geradas** adicionada pelo assistente quando você seleciona **Concluir**. É possível editar o nome na caixa **Classe**.
 

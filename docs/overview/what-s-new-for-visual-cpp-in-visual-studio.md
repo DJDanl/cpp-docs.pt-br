@@ -4,18 +4,18 @@ description: Os novos recursos e correções no compilador e nas ferramentas do 
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5e82e39b9480b83e2d1c8143338654467a08b7d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684739"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500263"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novidades do C++ no Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-O Visual Studio 2019 traz muitas atualizações e correções para o ambiente do Microsoft C++. Corrigimos vários bugs e problemas no compilador e nas ferramentas. Muitos deles enviados pelos clientes pelas opções [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) e [Fornecer uma Sugestão](https://developercommunity.visualstudio.com/spaces/62/index.html) em **Enviar Comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Para saber mais sobre novidades de C++ no Visual Studio 2017, confira [Novidades de C++ no Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+O Visual Studio 2019 traz muitas atualizações e correções para o ambiente do Microsoft C++. Corrigimos vários bugs e problemas no compilador e nas ferramentas. Muitos deles enviados pelos clientes pelas opções [Relatar um Problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) e [Fornecer uma Sugestão](https://developercommunity.visualstudio.com/spaces/62/index.html) em **Enviar Comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Para saber mais sobre novidades de C++ no Visual Studio 2017, confira [Novidades de C++ no Visual Studio 2017](?preserve-view=true&view=vs-2017). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ## <a name="c-compiler"></a>compilador C++
 
@@ -240,7 +240,7 @@ O modelo de projeto de teste do C++ gerenciado não está mais disponível. Voc�
 
 ::: moniker range="=vs-2017"
 
-O Visual Studio 2017 traz muitas atualizações e correções para o ambiente do C++. Corrigimos mais de 250 bugs e relataram problemas no compilador e nas ferramentas. Muitos foram enviados por clientes por meio do [relatório de um problema e fornecem uma sugestão de](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) opções em **enviar comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Para saber mais sobre novidades de C++ no Visual Studio 2019, confira [Novidades de C++ no Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+O Visual Studio 2017 traz muitas atualizações e correções para o ambiente do C++. Corrigimos mais de 250 bugs e relataram problemas no compilador e nas ferramentas. Muitos foram enviados por clientes por meio do [relatório de um problema e fornecem uma sugestão de](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) opções em **enviar comentários**. Obrigado por relatar bugs! Para saber mais sobre todas as novidades do Visual Studio, visite [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Para saber mais sobre novidades de C++ no Visual Studio 2019, confira [Novidades de C++ no Visual Studio](?preserve-view=true&view=vs-2019). Para saber mais sobre as novidades de C++ no Visual Studio 2015 e em versões anteriores, confira [O que há de novo no Visual C++ de 2003 a 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ## <a name="visual-studio-2017-c-compiler"></a>Compilador do Visual Studio 2017 C++
 
@@ -254,7 +254,7 @@ O compilador dá suporte a cerca de 75% dos recursos que são novos no C++ 17, i
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versão 15.7
 
-Agora, o conjunto de ferramentas do compilador do MSVC no Visual Studio versão 15.7 é compatível com o padrão do C++. Para obter mais informações, consulte [anunciando: MSVC está em conformidade com a compatibilidade de linguagem C++ Standard](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) e [Microsoft C++](../visual-cpp-language-conformance.md).
+Agora, o conjunto de ferramentas do compilador do MSVC no Visual Studio versão 15.7 é compatível com o padrão do C++. Para obter mais informações, consulte [anunciando: MSVC está em conformidade com a compatibilidade de linguagem C++ Standard](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) e [Microsoft C++](./visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 versão 15.8
 
@@ -363,7 +363,7 @@ Há mais melhorias na biblioteca Standard no Visual Studio 2017 RTM. Para obter 
 - Adicionado \<optional\> , \<variant\> , e `shared_ptr::weak_type` \<cstdalign\> .
 - Habilitado C++ 14 **`constexpr`** em `min(initializer_list)` , `max(initializer_list)` , e, `minmax(initializer_list)` e `min_element()` , e `max_element()` `minmax_element()` .
 
-Para obter mais informações, consulte [tabela de conformidade da linguagem Microsoft C++](../visual-cpp-language-conformance.md).
+Para obter mais informações, consulte [tabela de conformidade da linguagem Microsoft C++](./visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versão 15.3
 
@@ -425,7 +425,7 @@ Para obter mais informações, consulte [tabela de conformidade da linguagem Mic
 - `constexpr char_traits`
 - Guias de dedução da biblioteca padrão
 
-Para obter mais informações, consulte [tabela de conformidade da linguagem Microsoft C++](../visual-cpp-language-conformance.md).
+Para obter mais informações, consulte [tabela de conformidade da linguagem Microsoft C++](./visual-cpp-language-conformance.md).
 
 ### <a name="performance-and-throughput-fixes"></a>Correções de desempenho e taxa de transferência
 
@@ -647,7 +647,7 @@ O conjunto de ferramentas Clang/C2 que acompanha o Visual Studio 2017 agora dá 
 
 ## <a name="c-code-analysis"></a>Análise de código C++
 
-Os verificadores principais do C++ para impor as [principais diretrizes do C++](https://github.com/isocpp/CppCoreGuidelines) agora são distribuídas com o Visual Studio. Habilite os verificadores na página de **extensões de análise de código** nas páginas de propriedades do projeto. As extensões são então incluídas quando você executa a análise de código. Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
+Os verificadores principais do C++ para impor as [principais diretrizes do C++](https://github.com/isocpp/CppCoreGuidelines) agora são distribuídas com o Visual Studio. Habilite os verificadores na página de **extensões de análise de código** nas páginas de propriedades do projeto. As extensões são então incluídas quando você executa a análise de código. Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](../code-quality/using-the-cpp-core-guidelines-checkers.md).
 
 ![Captura de tela da caixa de diálogo páginas de propriedades mostrando Propriedades de configuração > análise de código > geral selecionada e várias verificações principais listadas na seção executar este conjunto de regras.](media/CppCoreCheck.png "Página de propriedades do CppCoreCheck")
 
@@ -668,7 +668,7 @@ Os verificadores principais do C++ para impor as [principais diretrizes do C++](
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versão 15.7
 
 - Suporte adicionado para [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) , que permite especificar as regras de análise de código a serem executadas.
-- Suporte adicionado para regras de Diretrizes Principais do C++ adicionais.  Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
+- Suporte adicionado para regras de Diretrizes Principais do C++ adicionais.  Para saber mais, veja [Uso dos verificadores de diretrizes de núcleo do C++](../code-quality/using-the-cpp-core-guidelines-checkers.md).
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Testes de unidade no Visual Studio 2017
 
@@ -737,12 +737,12 @@ Ferramentas de Diagnóstico de Gráficos do Visual Studio: você pode usá-las p
 
 ::: moniker range="=vs-2015"
 
-Para obter uma lista do que há de novo até o Visual Studio 2015, Atualização 3, confira [Visual C++ What's New 2003 through 2015 (Novidades do Visual C++ 2003 a 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Para obter uma lista do que há de novo até o Visual Studio 2015, Atualização 3, confira [Visual C++ What's New 2003 through 2015 (Novidades do Visual C++ 2003 a 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 Para obter mais informações sobre as novidades em todo o Visual Studio 2015, consulte as notas de versão. Eles estão vinculados do [histórico das notas de versão do Visual Studio 2015](/visualstudio/releasenotes/vs2015-version-history).
 
-Para obter informações sobre as novidades do C++ no Visual Studio 2019, consulte [What ' s New for c++ in Visual studio 2019](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true).
+Para obter informações sobre as novidades do C++ no Visual Studio 2019, consulte [What ' s New for c++ in Visual studio 2019](?preserve-view=true&view=vs-2019).
 
-Para saber mais sobre novidades de C++ no Visual Studio 2017, confira [Novidades de C++ no Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true).
+Para saber mais sobre novidades de C++ no Visual Studio 2017, confira [Novidades de C++ no Visual Studio 2017](?preserve-view=true&view=vs-2017).
 
 ::: moniker-end

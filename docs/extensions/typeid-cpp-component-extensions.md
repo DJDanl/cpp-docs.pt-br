@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225105"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500389"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI e C++/CX)
 
@@ -27,7 +27,7 @@ Obtém um valor que indica o tipo de um objeto.
 T::typeid
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 O nome de um tipo.
@@ -40,7 +40,7 @@ O nome de um tipo.
 Platform::Type^ type = T::typeid;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 O nome de um tipo.
@@ -61,7 +61,7 @@ Opção do compilador: `/ZW`
 type::typeid
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *tipo*<br/>
 O nome de um tipo (declarador abstrato) para o qual você deseja o objeto `System::Type`.
@@ -74,7 +74,7 @@ O nome de um tipo (declarador abstrato) para o qual você deseja o objeto `Syste
 
 **`typeid`** deve ser capaz de avaliar um nome de tipo (tipo) em tempo de compilação, enquanto GetType avalia o tipo a ser retornado em tempo de execução.
 
-**`typeid`** pode usar um nome de tipo nativo ou alias de Common Language Runtime para o nome do tipo nativo; Confira [.NET Framework equivalentes a tipos nativos c++ (c++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) para obter mais informações.
+**`typeid`** pode usar um nome de tipo nativo ou alias de Common Language Runtime para o nome do tipo nativo; Confira [.NET Framework equivalentes a tipos nativos c++ (c++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet) para obter mais informações.
 
 **`typeid`** também funciona com tipos nativos, embora ainda retorne um `System::Type` .  Para obter uma estrutura de type_info, use o [ `typeid` operador](../cpp/typeid-operator.md).
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

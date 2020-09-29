@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838159"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498662"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
 
@@ -51,7 +51,7 @@ O tipo nativo de dados de coluna no repositório de dados não importa; desde qu
 
 Use `CDynamicStringAccessor` métodos para obter informações de coluna. Use essas informações de coluna para criar um acessador dinamicamente em tempo de execução.
 
-As informações de coluna são armazenadas em um buffer criado e gerenciado por essa classe. Obtenha dados do buffer usando [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)ou armazene-os no buffer usando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+As informações de coluna são armazenadas em um buffer criado e gerenciado por essa classe. Obtenha dados do buffer usando [GetString](#getstring)ou armazene-os no buffer usando [SetString](#setstring).
 
 Para obter uma discussão e exemplos de como usar as classes de acessador dinâmico, consulte [usando acessadores dinâmicos](../../data/oledb/using-dynamic-accessors.md).
 
@@ -69,7 +69,7 @@ BaseType* GetString(const CHAR* pColumnName) const throw();
 BaseType* GetString(const WCHAR* pColumnName) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. Um valor de 0 se refere à coluna de indicador, se houver.
@@ -102,7 +102,7 @@ HRESULT SetString(const WCHAR* pColumnName,
    BaseType* data) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nColumn*<br/>
 no O número da coluna. Os números de coluna começam com 1. O valor especial de 0 se refere à coluna de indicador, se houver.
@@ -123,7 +123,7 @@ O segundo formulário de substituição usa o nome da coluna como uma cadeia de 
 
 Se _SECURE_ATL for definido para ter um valor diferente de zero, uma falha de asserção de tempo de execução será gerada se a cadeia de caracteres de *dados* de entrada for maior do que o comprimento máximo permitido da coluna de dados referenciada. Caso contrário, a cadeia de caracteres de entrada será truncada se for maior do que o comprimento máximo permitido.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

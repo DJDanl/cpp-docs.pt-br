@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c786c7746cd40a970af3a5ae4436119def4c805b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225664"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499686"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Como usar propriedades em C++/CLI
 
@@ -88,7 +88,7 @@ Uma propriedade indexada normalmente expõe uma estrutura de dados que é acessa
 
 Se você usar uma propriedade indexada padrão, poderá acessar a estrutura de dados apenas referindo-se ao nome da classe, mas se você usar uma propriedade indexada definida pelo usuário, deverá especificar o nome da propriedade para acessar a estrutura de dados.
 
-Para obter informações sobre como consumir um indexador escrito em C#, consulte [como: consumir um indexador C# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Para obter informações sobre como consumir um indexador escrito em C#, consulte [como: consumir um indexador C# (C++/CLI)](./interoperability-with-other-dotnet-languages-cpp-cli.md#consume_indexer).
 
 Este exemplo de código mostra como usar as propriedades indexadas padrão e definidas pelo usuário:
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [property](../extensions/property-cpp-component-extensions.md)
