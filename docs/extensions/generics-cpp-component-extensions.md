@@ -1,6 +1,7 @@
 ---
 title: Genéricos (C++/CLI e C++/CX)
-ms.date: 10/12/2018
+description: Links para conteúdo sobre os recursos, tipos e métodos do C++/CLI e C++/CX genéricos.
+ms.date: 09/25/2020
 ms.topic: reference
 f1_keywords:
 - generic_cpp
@@ -8,23 +9,23 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d98084df876b5e68701696239a9fc8a88377fa9d
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181987"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414640"
 ---
 # <a name="generics--ccli-and-ccx"></a>Genéricos (C++/CLI e C++/CX)
 
-Genéricos são métodos e tipos parametrizados. Nesta seção, descubra quais recursos genéricos são compatíveis com o Windows Runtime e o Common Language Runtime e quais são compatíveis apenas com o Common Language Runtime. Além disso, saiba como criar seus próprios métodos e tipos genéricos em C++/CLI e como usar tipos genéricos criados em uma linguagem .NET Framework em C++/CLI. Por fim, esta seção fornece uma comparação dos genéricos e modelos de C++.
+Genéricos são métodos e tipos parametrizados. Nesta seção, descubra quais recursos genéricos o Windows Runtime e o Common Language Runtime dão suporte e quais somente o Common Language Runtime dá suporte. Você também descobrirá como criar seus próprios métodos e tipos genéricos em C++/CLI e como usar tipos genéricos criados em uma linguagem de .NET Framework em C++/CLI. Por fim, esta seção fornece uma comparação dos genéricos e modelos de C++.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Compatível com Windows Runtime e Common Language Runtime
 
 [Visão geral de genéricos em C++/CLI](overview-of-generics-in-visual-cpp.md)<br/>
-Informações sobre o que são genéricos, a motivação para o recurso de linguagem, definições de termos usados para descrever genéricos e informações sobre o uso de tipos de referência e tipos de valor como parâmetros de tipo para genéricos.
+Informações sobre quais são os genéricos, a motivação para o recurso de linguagem e definições de termos que são usados para descrever os genéricos. Além disso, informações sobre o uso de tipos de referência e tipos de valor como parâmetros de tipo para genéricos.
 
 [Interfaces genéricas (C++/CLI)](generic-interfaces-visual-cpp.md)<br/>
 Informações sobre como definir e usar interfaces genéricas.
@@ -32,7 +33,7 @@ Informações sobre como definir e usar interfaces genéricas.
 [Delegados genéricos (C++/CLI)](generic-delegates-visual-cpp.md)<br/>
 Informações sobre como definir e usar delegados genéricos.
 
-[Restrições de parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)<br/>
+[Restrições em parâmetros de tipo genérico (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informações sobre como usar restrições em tipos genéricos.
 
 [Consumindo genéricos (C++/CLI)](consuming-generics-cpp-cli.md)<br/>
@@ -51,9 +52,8 @@ Informações sobre como definir e usar classes genéricas.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Como iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Uso da palavra-chave [for each, in](../dotnet/for-each-in.md) em uma coleção genérica.
 
 ## <a name="see-also"></a>Confira também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)

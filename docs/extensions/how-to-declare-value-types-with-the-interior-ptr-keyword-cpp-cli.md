@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195571"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414484"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Como declarar tipos de valores com a palavra-chave interior_ptr (C++/CLI)
 
@@ -20,9 +20,9 @@ Um **interior_ptr** pode ser usado com um tipo de valor.
 > [!IMPORTANT]
 > Esse recurso de linguagem é compatível com a opção do compilador `/clr`, mas não pela opção do compilador `/ZW`.
 
-## <a name="example"></a>Exemplo
+## <a name="example-interior_ptr-with-value-type"></a>Exemplo: interior_ptr com tipo de valor
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 O seguinte exemplo em C++/CLI mostra como usar um **interior_ptr** com um tipo de valor.
 
@@ -65,9 +65,9 @@ int main() {
 3
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-this-pointer"></a>Exemplo: esse ponteiro
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 Em um tipo de valor, o **`this`** ponteiro é avaliado como um interior_ptr.
 
@@ -87,9 +87,9 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-address-of-operator"></a>Exemplo: operador de endereço
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 O exemplo a seguir mostra como usar o operador address-of com membros estáticos.
 

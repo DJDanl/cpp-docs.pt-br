@@ -10,26 +10,26 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5d0427962ddb7d6409f07b99c0f618b340ee00df
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988190"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414289"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Como realizar marshal de retornos de chamadas e delegados usando o C++ Interop
 
-Este tópico demonstra o marshaling de retornos de chamada e delegados (a versão gerenciada de um retorno de chamada) entre códigos gerenciados C++e não gerenciados usando o Visual.
+Este tópico demonstra o marshaling de retornos de chamada e delegados (a versão gerenciada de um retorno de chamada) entre código gerenciado e não gerenciado usando o Visual C++.
 
 Os exemplos de código a seguir usam as diretivas de #pragma [gerenciadas e não gerenciadas](../preprocessor/managed-unmanaged.md) para implementar funções gerenciadas e não gerenciadas no mesmo arquivo, mas as funções também podem ser definidas em arquivos separados. Os arquivos que contêm apenas funções não gerenciadas não precisam ser compilados com a [compilação/CLR (Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-configure-unmanaged-api-to-trigger-managed-delegate"></a>Exemplo: configurar a API não gerenciada para disparar o delegado gerenciado
 
-O exemplo a seguir demonstra como configurar uma API não gerenciada para disparar um delegado gerenciado. Um delegado gerenciado é criado e um dos métodos de interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, é usado para recuperar o ponto de entrada subjacente para o delegado. Esse endereço é passado para a função não gerenciada, que o chama sem conhecimento do fato de que ele é implementado como uma função gerenciada.
+O exemplo a seguir demonstra como configurar uma API não gerenciada para disparar um delegado gerenciado. Um delegado gerenciado é criado e um dos métodos de interoperabilidade, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A> , é usado para recuperar o ponto de entrada subjacente para o delegado. Esse endereço é passado para a função não gerenciada, que o chama sem conhecimento do fato de que ele é implementado como uma função gerenciada.
 
 Observe que é possível, mas não necessário, fixar o delegado usando [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para impedir que ele seja realocado ou Descartado pelo coletor de lixo. A proteção da coleta de lixo prematura é necessária, mas a fixação fornece mais proteção do que o necessário, pois impede a coleta, mas também impede a relocação.
 
-Se um delegado for realocado por uma coleta de lixo, ele não afetará o retorno de chamada gerenciado de subposição, portanto <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> será usado para adicionar uma referência ao delegado, permitindo a realocação do delegado, mas impedindo a alienação. O uso de GCHandle em vez de pin_ptr reduz o potencial de fragmentação do heap gerenciado.
+Se um delegado for realocado por uma coleta de lixo, ele não afetará o retorno de chamada gerenciado de subposição, por isso <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> é usado para adicionar uma referência ao delegado, permitindo a realocação do delegado, mas impedindo a alienação. O uso de GCHandle em vez de pin_ptr reduz o potencial de fragmentação do heap gerenciado.
 
 ```cpp
 // MarshalDelegate1.cpp
@@ -77,7 +77,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-function-pointer-stored-by-unmanaged-api"></a>Exemplo: ponteiro de função armazenado por API não gerenciada
 
 O exemplo a seguir é semelhante ao exemplo anterior, mas, nesse caso, o ponteiro de função fornecido é armazenado pela API não gerenciada, portanto, ele pode ser invocado a qualquer momento, exigindo que a coleta de lixo seja suprimida por um período de tempo arbitrário. Como resultado, o exemplo a seguir usa uma instância global do <xref:System.Runtime.InteropServices.GCHandle> para impedir que o delegado seja realocado, independentemente do escopo da função. Conforme discutido no primeiro exemplo, o uso de pin_ptr é desnecessário para esses exemplos, mas nesse caso não funcionaria mesmo assim, pois o escopo de uma pin_ptr é limitado a uma única função.
 
@@ -139,6 +139,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Usando a interoperabilidade C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

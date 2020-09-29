@@ -1,5 +1,5 @@
 ---
-title: 'Como: melhorar o desempenho com os genéricos (C++/CLI)'
+title: Como melhorar o desempenho com genéricos (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181935"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414159"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Como: melhorar o desempenho com os genéricos (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Como melhorar o desempenho com genéricos (C++/CLI)
 
 Com genéricos, você pode criar um código reutilizável com base em um parâmetro de tipo. O tipo real do parâmetro de tipo é adiado até ser chamado pelo código do cliente. Confira mais informações sobre genéricos em [Genéricos](generics-cpp-component-extensions.md).
 
 Este artigo discutirá como os genéricos podem ajudar a aumentar o desempenho de um aplicativo que usa coleções.
 
-## <a name="example"></a>Exemplo
+## <a name="example-two-main-drawbacks-of-net-framework-collections"></a>Exemplo: duas desvantagens principais das coleções de .NET Framework
 
 O .NET Framework acompanha várias classes de coleções no namespace <xref:System.Collections?displayProperty=fullName>. A maioria dessas coleções opera em objetos do tipo <xref:System.Object?displayProperty=fullName>. Isso permite que as coleções armazenem qualquer tipo, já que todos os tipos no .NET Framework, até mesmo os tipos de valores, são derivados de <xref:System.Object?displayProperty=fullName>. No entanto, existem duas desvantagens nessa abordagem.
 
@@ -78,7 +78,7 @@ Popped a String: Seven
 Popped an int: 7
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-benefit-of-using-generic-collection"></a>Exemplo: benefício de usar a coleção genérica
 
 O novo namespace <xref:System.Collections.Generic?displayProperty=fullName> contém muitas das mesmas coleções encontradas no namespace <xref:System.Collections?displayProperty=fullName>, mas estas foram modificadas para aceitar parâmetros de tipo genérico. Isso elimina as duas desvantagens das coleções não genéricas: a conversão boxing e a conversão unboxing dos tipos de valores, bem como a incapacidade de especificar os tipos a serem armazenados nas coleções. As operações nas duas coleções são idênticas, diferindo apenas na maneira como são instanciadas.
 
