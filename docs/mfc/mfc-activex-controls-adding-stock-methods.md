@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 42d8dfecd32b4aecd0daa4034497ec9abff6d11a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b4b01e4fb202cfd7a923d22cb57ce5ec6988e11d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619933"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502286"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: adicionando métodos de estoque
 
@@ -20,16 +20,16 @@ Um método stock é diferente de um método personalizado no qual ele já está 
 >[!IMPORTANT]
 > O ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre as tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
-`COleControl`dá suporte a dois métodos de ação: doclique e atualizar. A atualização é invocada pelo usuário do controle para atualizar imediatamente a aparência do controle; DoClick é invocado para acionar o evento de clique do controle.
+`COleControl` dá suporte a dois métodos de ação: doclique e atualizar. A atualização é invocada pelo usuário do controle para atualizar imediatamente a aparência do controle; DoClick é invocado para acionar o evento de clique do controle.
 
 |Método|Entrada do mapa de expedição|Comentário|
 |------------|------------------------|-------------|
 |`DoClick`|**DISP_STOCKPROP_DOCLICK ()**|Dispara um evento de clique.|
 |`Refresh`|**DISP_STOCKPROP_REFRESH ()**|Atualiza imediatamente a aparência do controle.|
 
-## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a>Adicionando um método stock usando o assistente para adicionar método
+## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a> Adicionando um método stock usando o assistente para adicionar método
 
-Adicionar um método stock é simples usando o [Assistente para adicionar método](../ide/add-method-wizard.md). O procedimento a seguir demonstra como adicionar o método Refresh a um controle criado usando o assistente de controle ActiveX do MFC.
+Adicionar um método stock é simples usando o [Assistente para adicionar método](../ide/adding-a-method-visual-cpp.md#add-method-wizard). O procedimento a seguir demonstra como adicionar o método Refresh a um controle criado usando o assistente de controle ActiveX do MFC.
 
 #### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Para adicionar o método de atualização de estoque usando o assistente para adicionar método
 
@@ -47,7 +47,7 @@ Adicionar um método stock é simples usando o [Assistente para adicionar métod
 
 1. Clique em **Concluir**.
 
-## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a>Adicionar alterações do assistente de método para métodos de ações
+## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a> Adicionar alterações do assistente de método para métodos de ações
 
 Como o método de atualização de estoque é suportado pela classe base do controle, o **Assistente para adicionar método** não altera a declaração de classe do controle de forma alguma. Ele adiciona uma entrada para o método ao mapa de expedição do controle e ao seu. Arquivo IDL. A linha a seguir é adicionada ao mapa de expedição do controle, localizado em sua implementação (. CPP) arquivo:
 

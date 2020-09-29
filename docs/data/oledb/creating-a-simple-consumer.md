@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: cc24df1f15d43c384e6bf3853766fad82cf51255
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0b142a73f66a796f3e22bae0aeacb88dc018aea9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707709"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501860"
 ---
 # <a name="creating-a-simple-consumer"></a>Criando um consumidor simples
 
@@ -25,9 +25,9 @@ Use o **Assistente de Projeto da ATL** e o **Assistente de Consumidor OLE DB do 
 
 ## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Para criar um aplicativo de console para um consumidor de OLE DB
 
-1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.
+1. No menu **Arquivo**, clique em **Novo** e em **Projeto**.
 
-   A caixa de diálogo **Novo Projeto** é exibida.
+   A caixa de diálogo **Novo Projeto** aparecerá.
 
 1. No painel **Tipos de projeto**, clique na pasta **Instalado** > **Visual C++** > **Área de Trabalho do Windows** e clique no ícone **Assistente do Windows Desktop** no painel **Modelos**. Na caixa **Nome**, digite o nome do seu projeto, por exemplo, *MeusConsoles*.
 
@@ -43,13 +43,13 @@ Em seguida, use o **Assistente de Consumidor OLE DB do ATL** para adicionar um o
 
 ## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Criação de um consumidor com o Assistente de Consumidor OLE DB do ATL
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto `MyCons`.
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no `MyCons` projeto.
 
 1. No menu de atalho, clique em **Adicionar**, depois em **Novo Item**.
 
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar Novo Item** aparecerá.
 
-1. No painel **Categorias**, clique em **Instalado** > **Visual C++**  > **ATL**, clique no ícone do **Consumidor de OLEDB da ATL** no painel **Modelos** e clique em **Adicionar**.
+1. No painel **Categorias**, clique em **Instalado** > **Visual C++ ** > **ATL**, clique no ícone do **Consumidor de OLEDB da ATL** no painel **Modelos** e clique em **Adicionar**.
 
    O **Assistente de Consumidor OLEDB do ATL** é exibido.
 
@@ -64,7 +64,7 @@ Em seguida, use o **Assistente de Consumidor OLE DB do ATL** para adicionar um o
    1. Na guia **Conexão**, especifique as informações necessárias, como nome do servidor, ID de logon e senha para a fonte de dados e o banco de dados no servidor.
 
       > [!NOTE]
-      > Há um problema de segurança com o recurso **Permitir salvamento de senha** da caixa de diálogo **Propriedades de associação de dados**. Em **Digite as informações para fazer logon no servidor**, há dois botões de opção: **Usar Segurança Integrada do Windows NT** e **Usar nome de usuário e senha específicos**.
+      > Há um problema de segurança com o recurso **Permitir salvamento de senha** da caixa de diálogo **Propriedades de associação de dados**. Em **inserir informações para fazer logon no servidor**, há dois botões de opção: **use a segurança integrada do Windows NT** e **use um nome de usuário e senha específicos**.
 
       > [!NOTE]
       > Se você selecionar **Usar nome de usuário e senha específicos**, terá a opção de salvar a senha (usando a caixa de seleção **Permitir salvamento de senha**); no entanto, essa opção não é segura. É recomendável selecionar **Usar Segurança Integrada do Windows NT**; essa opção usa o Windows NT para verificar sua identidade.
@@ -82,7 +82,7 @@ Em seguida, use o **Assistente de Consumidor OLE DB do ATL** para adicionar um o
 
 1. O assistente preenche os nomes de `Class` e do **arquivo .h** com base no nome da tabela, exibição ou procedimento armazenado selecionado. Você pode editar esses nomes se quiser.
 
-1. Desmarque a caixa de seleção **Atribuído** para que o assistente crie o código de consumidor usando [Classes de modelo OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) em vez do padrão [Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).
+1. Desmarque a caixa de seleção **Atribuído** para que o assistente crie o código de consumidor usando [Classes de modelo OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) em vez do padrão [Atributos de consumidor OLE DB](../../windows/attributes/ole-db-consumer-attributes.md).
 
 1. Em **Tipo**, selecione **Comando**.
 
@@ -110,4 +110,4 @@ O assistente gera uma classe de comando e uma classe de registro de usuário, co
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Criando um consumidor OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

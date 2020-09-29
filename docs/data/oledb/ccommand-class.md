@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838432"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501004"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 
@@ -72,7 +72,7 @@ class CCommand :
    public TMultiple
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TAccessor*<br/>
 O tipo de classe de acessador (como `CDynamicParameterAccessor` , `CDynamicStringAccessor` ou `CEnumeratorAccessor` ) que você deseja que o comando use. O padrão é `CNoAccessor` , que especifica que a classe não dá suporte a parâmetros ou colunas de saída.
@@ -104,7 +104,7 @@ Para usar um comando OLE DB que pode retornar vários resultados, especifique [C
 |[Criar](#create)|Cria um novo comando para a sessão especificada e, em seguida, define o texto do comando.|
 |[CreateCommand](#createcommand)|Cria um novo comando.|
 |[GetParameterInfo](#getparameterinfo)|Obtém uma lista dos parâmetros do comando, seus nomes e seus tipos.|
-|[Deixar](#prepare)|Valida e otimiza o comando atual.|
+|[Preparar](#prepare)|Valida e otimiza o comando atual.|
 |[ReleaseCommand](#releasecommand)|Libera o acessador de parâmetro, se necessário, e libera o comando.|
 |[SetParameterInfo](#setparameterinfo)|Especifica o tipo nativo de cada parâmetro de comando.|
 |[Unprepare](#unprepare)|Descarta o plano de execução do comando atual.|
@@ -131,7 +131,7 @@ void Close();
 
 Um comando usa um conjunto de linhas, acessador de conjunto de resultados e (opcionalmente) um acessador de parâmetro (ao contrário de tabelas, que não dão suporte a parâmetros e não precisam de um acessador de parâmetro).
 
-Ao executar um comando, você deve chamar ambos `Close` e [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) após o comando.
+Ao executar um comando, você deve chamar ambos `Close` e [ReleaseCommand](#releasecommand) após o comando.
 
 Quando você quiser executar o mesmo comando repetidamente, deverá liberar cada acessador de conjunto de resultados chamando `Close` antes de chamar `Execute` . No final da série, você deve liberar o acessador de parâmetro chamando `ReleaseCommand` . Outro cenário comum é chamar um procedimento armazenado que tem parâmetros de saída. Em muitos provedores (como o provedor de OLE DB para SQL Server), os valores de parâmetros de saída não estarão acessíveis até que você feche o acessador de conjunto de resultados. Chame `Close` para fechar o conjunto de linhas retornado e o acessador de conjunto de resultados, mas não o acessador de parâmetro, permitindo assim que você recupere os valores de parâmetro de saída.
 
@@ -152,7 +152,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
    bool bBind = true) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pulRowsAffected*<br/>
 [entrada/saída] Um ponteiro para a memória em que a contagem de linhas afetadas por um comando é retornada.
@@ -207,13 +207,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
    ULONG ulPropSets = 0) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *sessão*<br/>
 no A sessão na qual executar o comando.
 
 *wszCommand*<br/>
-no O comando a ser executado, passado como uma cadeia de caracteres Unicode. Pode ser NULL ao usar `CAccessor` , caso em que o comando será recuperado do valor passado para a macro [DEFINE_COMMAND](../../data/oledb/define-command.md) . Consulte [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) na *referência do programador de OLE DB* para obter detalhes.
+no O comando a ser executado, passado como uma cadeia de caracteres Unicode. Pode ser NULL ao usar `CAccessor` , caso em que o comando será recuperado do valor passado para a macro [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Consulte [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) na *referência do programador de OLE DB* para obter detalhes.
 
 *szCommand*<br/>
 no O mesmo que *wszCommand* , exceto pelo fato de que esse parâmetro usa uma cadeia de caracteres de comando ANSI. A quarta forma desse método pode usar um valor nulo. Consulte "Comentários" mais adiante neste tópico para obter detalhes.
@@ -224,7 +224,7 @@ no Um ponteiro para uma matriz de estruturas [DBPROPSET](/previous-versions/wind
 *pRowsAffected*<br/>
 [entrada/saída] Um ponteiro para a memória em que a contagem de linhas afetadas por um comando é retornada. Se * \* PROWSAFFECTED* for nulo, nenhuma contagem de linhas será retornada. Caso contrário, o `Open` define * \* pRowsAffected* de acordo com as seguintes condições:
 
-|Se|Então|
+|If|Então|
 |--------|----------|
 |O `cParamSets` elemento de `pParams` é maior que 1|* \* pRowsAffected* representa o número total de linhas afetadas por todos os conjuntos de parâmetros especificados na execução.|
 |O número de linhas afetadas não está disponível|* \* pRowsAffected* é definido como-1.|
@@ -253,14 +253,14 @@ A segunda forma de `Open` usa uma cadeia de caracteres de comando ANSI e nenhum 
 
 A terceira forma de `Open` permite que a cadeia de caracteres de comando seja nula, devido **`int`** ao tipo com um valor padrão de NULL. Ele é fornecido para chamada `Open(session, NULL);` ou `Open(session);` porque NULL é do tipo **`int`** . Essa versão requer e declara que o **`int`** parâmetro é nulo.
 
-Use a quarta forma de `Open` quando você já criou um comando e deseja executar uma única [preparação](../../data/oledb/ccommand-prepare.md) e várias execuções.
+Use a quarta forma de `Open` quando você já criou um comando e deseja executar uma única [preparação](#prepare) e várias execuções.
 
 > [!NOTE]
 > `Open` chamadas `Execute` que, por sua vez, chamam `GetNextResult` .
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: criar
 
-Chama [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) para criar um comando para a sessão especificada e, em seguida, chama [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) para especificar o texto do comando.
+Chama [CCommand:: CreateCommand](#createcommand) para criar um comando para a sessão especificada e, em seguida, chama [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) para especificar o texto do comando.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -274,7 +274,7 @@ HRESULT CCommandBase::Create(const CSession& session,
    REFGUID guidCommand = DBGUID_DEFAULT) throw ();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *sessão*<br/>
 no Uma sessão na qual o comando será criado.
@@ -306,7 +306,7 @@ Cria um novo comando.
 HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *sessão*<br/>
 no Um `CSession` objeto a ser associado ao novo comando.
@@ -331,7 +331,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
    OLECHAR** ppNamesBuffer) throw ();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -349,7 +349,7 @@ Valida e otimiza o comando atual.
 HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *cExpectedRuns*<br/>
 no O número de vezes que você espera executar o comando.
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Comentários
 
-`ReleaseCommand` é usado em conjunto com `Close` . Consulte [fechar](../../data/oledb/ccommand-close.md) para obter detalhes de uso.
+`ReleaseCommand` é usado em conjunto com `Close` . Consulte [fechar](#close) para obter detalhes de uso.
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
@@ -388,7 +388,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
    const DBPARAMBINDINFO* pParamInfo) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ICommandWithParameters:: SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -414,7 +414,7 @@ Um HRESULT padrão.
 
 Esse método encapsula o método OLE DB [ICommandPrepare:: Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

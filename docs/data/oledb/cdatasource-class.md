@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838341"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502545"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 
@@ -95,7 +95,7 @@ class CDataSource
 
 ## <a name="remarks"></a>Comentários
 
-Uma ou mais sessões de banco de dados podem ser criadas para uma única conexão. Essas sessões são representadas por `CSession` . Você deve chamar [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir a conexão antes de criar uma sessão com `CSession::Open` .
+Uma ou mais sessões de banco de dados podem ser criadas para uma única conexão. Essas sessões são representadas por `CSession` . Você deve chamar [CDataSource:: Open](#open) para abrir a conexão antes de criar uma sessão com `CSession::Open` .
 
 Para obter um exemplo de como usar `CDataSource` o, consulte o exemplo [CatDB](../../overview/visual-cpp-samples.md) .
 
@@ -120,7 +120,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
    bool bIncludePassword = false) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pInitializationString*<br/>
 fora Um ponteiro para a cadeia de inicialização.
@@ -149,7 +149,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
    DBPROPSET** ppPropsets) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) na *referência do programador de OLE DB* no SDK do Windows.
 
@@ -159,7 +159,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter uma única propriedade, use [GetProperty](../../data/oledb/cdatasource-getproperty.md).
+Para obter uma única propriedade, use [GetProperty](#getproperty).
 
 ## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource:: GetProperty
 
@@ -173,7 +173,7 @@ HRESULT GetProperty(const GUID& guid,
    VARIANT* pVariant) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no Um GUID que identifica o conjunto de propriedades para o qual retornar a propriedade.
@@ -190,7 +190,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Para obter várias propriedades, use [GetProperties](../../data/oledb/cdatasource-getproperties.md).
+Para obter várias propriedades, use [GetProperties](#getproperties).
 
 ## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource:: abrir
 
@@ -237,9 +237,9 @@ HRESULT Open(LPCSTR szProgID,
    long nInitMode = 0) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O `CLSID` do provedor de dados.
 
 *pPropSet*<br/>
@@ -298,7 +298,7 @@ Abre uma fonte de dados de um arquivo especificado pelo nome de arquivo fornecid
 HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *szFileName*<br/>
 no O nome de um arquivo, geralmente uma conexão de fonte de dados (. UDL).
@@ -324,7 +324,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
    bool fPromptForInfo= false) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *szInitializationString*<br/>
 no A cadeia de inicialização.
@@ -354,7 +354,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
    LPCOLESTR szInitialDirectory = NULL) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hWnd*<br/>
 no Manipule a janela que será o pai da caixa de diálogo.
@@ -389,9 +389,9 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
    ULONG ulPropSets = 1);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*clsid*<br/>
+*CLSID*<br/>
 no O `CLSID` de um provedor de dados.
 
 *szProgID*<br/>
@@ -411,7 +411,7 @@ Um HRESULT padrão.
 
 Esse método abre um objeto de fonte de dados usando os componentes de serviço no oledb32.dll; Essa DLL contém a implementação de recursos de componentes de serviço, como pool de recursos, inscrição automática de transações e assim por diante. Para obter mais informações, consulte a referência de OLE DB no [Guia do programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

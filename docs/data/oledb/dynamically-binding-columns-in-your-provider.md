@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3eee52004e1418b3e756a78c8c2a04040d0bd7ff
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210971"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501849"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Colunas de associação dinâmicas no provedor
 
@@ -23,7 +23,7 @@ Verifique se você realmente precisa de uma associação de coluna dinâmica. Ta
 
 ## <a name="to-implement-dynamic-column-binding"></a>Para implementar a associação de coluna dinâmica
 
-1. Remova qualquer `PROVIDER_COLUMN_MAP`s do seu código.
+1. Remova qualquer `PROVIDER_COLUMN_MAP` s do seu código.
 
 1. No registro de usuário (sua estrutura), adicione a seguinte declaração:
 
@@ -31,9 +31,9 @@ Verifique se você realmente precisa de uma associação de coluna dinâmica. Ta
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Implemente a função `GetColumnInfo`. Essa função descreve como as informações são armazenadas. Talvez seja necessário obter propriedades ou outras informações para essa função. Talvez você queira criar uma macro, semelhante à macro [COLUMN_ENTRY](../../data/oledb/column-entry.md) , para adicionar suas próprias informações.
+1. Implemente a `GetColumnInfo` função. Essa função descreve como as informações são armazenadas. Talvez seja necessário obter propriedades ou outras informações para essa função. Talvez você queira criar uma macro, semelhante à macro [COLUMN_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry) , para adicionar suas próprias informações.
 
-   O exemplo a seguir mostra uma função `GetColumnInfo`.
+   O exemplo a seguir mostra uma `GetColumnInfo` função.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero
@@ -86,6 +86,6 @@ Verifique se você realmente precisa de uma associação de coluna dinâmica. Ta
     }
     ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Trabalhando com modelos de provedor de OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 5c26a3f1e8b5589afebd72c7b722ab9ed9e4229d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838302"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502511"
 ---
 # <a name="cdberrorinfo-class"></a>Classe CDBErrorInfo
 
@@ -74,7 +74,7 @@ class CDBErrorInfo
 
 ## <a name="remarks"></a>Comentários
 
-Essa interface retorna um ou mais registros de erro ao usuário. Chame [CDBErrorInfo:: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) primeiro para obter uma contagem de registros de erro. Em seguida, chame uma das funções de acesso, como [CDBErrorInfo:: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), para recuperar informações de erro para cada registro.
+Essa interface retorna um ou mais registros de erro ao usuário. Chame [CDBErrorInfo:: GetErrorRecords](#geterrorrecords) primeiro para obter uma contagem de registros de erro. Em seguida, chame uma das funções de acesso, como [CDBErrorInfo:: GetAllErrorInfo](#getallerrorinfo), para recuperar informações de erro para cada registro.
 
 ## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a> CDBErrorInfo::GetAllErrorInfo
 
@@ -235,7 +235,7 @@ Um HRESULT padrão.
 
 Use a primeira forma da função se você quiser verificar de qual interface obter as informações de erro. Caso contrário, use o segundo formulário.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

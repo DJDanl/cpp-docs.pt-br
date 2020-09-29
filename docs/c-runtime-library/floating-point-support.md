@@ -9,12 +9,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
-ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.openlocfilehash: d1caaf5c9c0cfc7a3b6650bcb72a66b4c0028e28
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90569601"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502117"
 ---
 # <a name="math-and-floating-point-support"></a>Suporte matemático e de ponto flutuante
 
@@ -138,7 +138,7 @@ As versões anteriores de 16 bits do Microsoft C/C++ e Microsoft Visual C++ supo
 [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Converte uma cadeia de caracteres larga em um **`double`**
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula a função Bessel
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Rotinas de tempo de execução C universal por categoria](../c-runtime-library/run-time-routines-by-category.md)\
 [Primitivos de ponto flutuante](../c-runtime-library/reference/floating-point-primitives.md)

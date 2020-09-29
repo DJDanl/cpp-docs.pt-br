@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47f68bcf5c62aa54cc5ee60de166e1085f5a3fc5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500934"
 ---
 # <a name="defining-stored-procedures"></a>Definindo procedimentos armazenados
 
-Antes de chamar um procedimento armazenado, você deve primeiro defini-lo, usando a macro [DEFINE_COMMAND](../../data/oledb/define-command.md) . Quando você define o comando, denota os parâmetros com um ponto de interrogação (?) como o marcador de parâmetro:
+Antes de chamar um procedimento armazenado, você deve primeiro defini-lo, usando a macro [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Quando você define o comando, denota os parâmetros com um ponto de interrogação (?) como o marcador de parâmetro:
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
@@ -35,7 +35,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-O exemplo anterior define um procedimento armazenado como ele vai. Normalmente, para uma reutilização eficiente de código, um banco de dados contém um conjunto de procedimentos armazenados predefinidos com nomes como `Sales by Year` ou `dt_adduserobject`. Você pode exibir suas definições usando o Gerenciador de SQL Server Enterprise. Você os chama da seguinte maneira (o posicionamento do *?* os parâmetros dependem da interface do procedimento armazenado):
+O exemplo anterior define um procedimento armazenado como ele vai. Normalmente, para uma reutilização eficiente de código, um banco de dados contém um conjunto de procedimentos armazenados predefinidos com nomes como `Sales by Year` ou `dt_adduserobject` . Você pode exibir suas definições usando o Gerenciador de SQL Server Enterprise. Você os chama da seguinte maneira (o posicionamento do *?* os parâmetros dependem da interface do procedimento armazenado):
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
@@ -48,7 +48,7 @@ Em seguida, declare a classe de comando:
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
 ```
 
-Por fim, chame o procedimento armazenado em `OpenRowset` da seguinte maneira:
+Por fim, chame o procedimento armazenado no da `OpenRowset` seguinte maneira:
 
 ```cpp
 CSession m_session;
@@ -59,12 +59,12 @@ HRESULT OpenRowset()
 }
 ```
 
-Observe também que você pode definir um procedimento armazenado usando o atributo de banco de dados [db_command](../../windows/db-command.md) da seguinte maneira:
+Observe também que você pode definir um procedimento armazenado usando o atributo de banco de dados [db_command](../../windows/attributes/db-command.md) da seguinte maneira:
 
 ```cpp
 db_command("{ ? = CALL dbo.dt_adduserobject }")
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Usando procedimentos armazenados](../../data/oledb/using-stored-procedures.md)

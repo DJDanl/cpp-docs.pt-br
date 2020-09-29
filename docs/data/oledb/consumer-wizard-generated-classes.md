@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 86da5081fbe63728b062879838ac3ffe78504ccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80a43446f0367acb89a04fdaa8198b5cff5a6697
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211470"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500972"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes geradas pelo Assistente do Consumidor
 
@@ -150,7 +150,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>Classes de registro de usuário injetadas por atributos
 
-Se você criar um consumidor de OLE DB usando os atributos de banco de dados ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), os atributos injetarão uma classe de registro de usuário com um nome no formato "_*NomeClasse*Acessador". Por exemplo, se você nomear sua classe de comando como `COrders`, a classe de registro de usuário será `_COrdersAccessor`. Embora a classe de registro de usuário apareça em **Modo de Exibição de Classe**, clicar duas vezes nela navega para a classe de comando ou de tabela no arquivo de cabeçalho. Nesses casos, só é possível visualizar a declaração real da classe de registro de usuário exibindo o código injetado por atributo.
+Se você criar um consumidor de OLE DB usando os atributos de banco de dados ([db_command](../../windows/attributes/db-command.md) ou [db_table](../../windows/attributes/db-table.md)), os atributos injetarão uma classe de registro de usuário com um nome no formato "_*NomeClasse*Acessador". Por exemplo, se você nomear sua classe de comando como `COrders`, a classe de registro de usuário será `_COrdersAccessor`. Embora a classe de registro de usuário apareça em **Modo de Exibição de Classe**, clicar duas vezes nela navega para a classe de comando ou de tabela no arquivo de cabeçalho. Nesses casos, só é possível visualizar a declaração real da classe de registro de usuário exibindo o código injetado por atributo.
 
 É possível que haja complicações se você adicionar ou substituir métodos em consumidores atribuídos. Por exemplo, você pode adicionar um construtor `_COrdersAccessor` à declaração `COrders`, mas observe que, na verdade, isso adiciona um construtor à classe injetada `COrdersAccessor`. Esse construtor pode iniciar as colunas/parâmetros, mas não é possível criar um construtor de cópia dessa forma, porque ele não pode instanciar diretamente o objeto `COrdersAccessor`. Se você precisar de um construtor (ou outro método) diretamente na classe `COrders`, é recomendável definir uma nova classe que derive de `COrders` e adicionar os métodos necessários lá.
 
@@ -188,6 +188,6 @@ Saiba mais sobre como exibir o código injetado em [Depuração de código injet
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Criando um consumidor OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

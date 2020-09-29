@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182234"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500889"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Arrays (C++/CLI e C++/CX)
 
@@ -32,11 +32,11 @@ Ao contrário do C++ padrão, a subscrição não é um sinônimo para aritméti
 
 Saiba mais sobre matrizes em:
 
-- [Como usar matrizes no C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Como: usar matrizes em C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Listas de argumentos variáveis (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
-## <a name="windows-runtime"></a>Tempo de Execução do Windows
+## <a name="windows-runtime"></a>Windows Runtime
 
 As matrizes são membros do namespace `Platform`. As matrizes só podem ser unidimensionais.
 
@@ -53,15 +53,15 @@ O primeiro exemplo da sintaxe usa a palavra-chave agregada **ref new** para aloc
 ```
 
 *qualificadores*<br/>
-(Opcional) Um ou mais destes especificadores de classe de armazenamento: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+(Opcional) Um ou mais destes especificadores de classe de armazenamento: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*tipo de matriz*<br/>
 O tipo de variável da matriz. Os tipos válidos são classes do Windows Runtime e tipos fundamentais, classes e structs ref, classes e structs value e ponteiros nativos (`type*`).
 
-*rank*<br/>
+*Fique*<br/>
 (Opcional) O número de dimensões da matriz. Deve ser 1.
 
-*identifier*<br/>
+*ID*<br/>
 O nome da variável da matriz.
 
 *initialization-type*<br/>
@@ -109,15 +109,15 @@ O primeiro exemplo da sintaxe usa a palavra-chave **gcnew** para alocar uma matr
 ```
 
 *qualificadores*<br/>
-(Opcional) Um ou mais destes especificadores de classe de armazenamento: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+(Opcional) Um ou mais destes especificadores de classe de armazenamento: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*tipo de matriz*<br/>
 O tipo de variável da matriz. Os tipos válidos são classes do Windows Runtime e tipos fundamentais, classes ref e structs, classes de valor e structs, ponteiros nativos (`type*`) e tipos POD (dados antigos simples) nativos.
 
-*rank*<br/>
+*Fique*<br/>
 (Opcional) O número de dimensões da matriz. O padrão é 1; o máximo é 32. Cada dimensão da matriz é, por si só, uma matriz.
 
-*identifier*<br/>
+*ID*<br/>
 O nome da variável da matriz.
 
 *initialization-type*<br/>
@@ -141,7 +141,7 @@ Todas as matrizes gerenciadas herdam de `System::Array`. Qualquer método ou pro
 
 Quando você aloca uma matriz, cujo tipo de elemento é o ponteiro, para uma classe gerenciada, os elementos são inicializados para 0.
 
-Quando você aloca uma matriz cujo tipo de elemento é um tipo de valor `V`, o construtor padrão para `V` é aplicado a cada elemento da matriz. Saiba mais em [Equivalentes do .NET Framework aos tipos nativos do C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+Quando você aloca uma matriz cujo tipo de elemento é um tipo de valor `V`, o construtor padrão para `V` é aplicado a cada elemento da matriz. Saiba mais em [Equivalentes do .NET Framework aos tipos nativos do C++ (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet).
 
 Em tempo de compilação, você pode detectar se um tipo é uma matriz CLR (common language runtime) com `__is_ref_array(type)`. Saiba mais em [Suporte para compilador de traços de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)
+[Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)
