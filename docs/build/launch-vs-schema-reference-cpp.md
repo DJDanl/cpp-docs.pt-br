@@ -3,20 +3,20 @@ title: launch.vs.jsna referência de esquema (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841981"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505668"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jsna referência de esquema (C++)
 
-Use o *launch.vs.jsno* arquivo para configurar parâmetros de depuração. Para criar o arquivo. Clique com o botão direito do mouse em um arquivo executável em **Gerenciador de soluções** e escolha **depurar e iniciar configurações**. Escolha a opção que mais se aproximará do seu projeto e, em seguida, use as propriedades a seguir para modificar a configuração conforme necessário. Para obter mais informações sobre como depurar projetos do CMake, consulte [Configurar sessões de depuração do cmake](/cpp/build/configure-cmake-debugging-sessions).
+Use o *launch.vs.jsno* arquivo para configurar parâmetros de depuração. Para criar o arquivo. Clique com o botão direito do mouse em um arquivo executável em **Gerenciador de soluções** e escolha **depurar e iniciar configurações**. Escolha a opção que mais se aproximará do seu projeto e, em seguida, use as propriedades a seguir para modificar a configuração conforme necessário. Para obter mais informações sobre como depurar projetos do CMake, consulte [Configurar sessões de depuração do cmake](./configure-cmake-debugging-sessions.md).
 
 ## <a name="default-properties"></a>Propriedades padrão
 
-|Propriedade|Type|Descrição|
+|Propriedade|Tipo|Descrição|
 |-|-|-|
 |`name`|string|Especifica o nome da entrada no menu suspenso de destino de depuração.|
 |`type`|string|Especifica se o projeto é uma DLL ou. exe (o padrão é. exe)|
@@ -35,10 +35,10 @@ Use o *launch.vs.jsno* arquivo para configurar parâmetros de depuração. Para 
 
 ## <a name="c-linux-properties"></a>Propriedades do C++ Linux
 
-|Propriedade|Type|Descrição|
+|Propriedade|Tipo|Descrição|
 |-|-|-|
 |`program`|string|Caminho completo para o executável do programa no computador remoto. Ao usar CMake, a macro `${debugInfo.fullTargetPath}` pode ser usada como o valor desse campo.|
-|`processId`|inteiro|ID de processo opcional para anexar o depurador.|
+|`processId`|Número inteiro|ID de processo opcional para anexar o depurador.|
 |`sourceFileMap`|objeto|Mapeamentos de arquivo de origem opcionais passados para o mecanismo de depuração. Formato: `{ "\<Compiler source location>": "\<Editor source location>" }` ou `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }` . Exemplo: `{ "/home/user/foo": "C:\\foo" }` ou `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Consulte [Opções de mapa do arquivo de origem](#source_file_map_options).|
 |`additionalProperties`|string|Um dos sourceFileMapOptions. (Veja abaixo.)|
 |`MIMode`|string|Indica o tipo de depurador de console habilitado para MI ao qual o MIDebugEngine se conectará. Os valores permitidos são "gdb", "lldb".|
@@ -65,7 +65,7 @@ externalConsole|booleano|Se for true, um console será iniciado para o depurado.
 
 Usado com a `setupCommands` Propriedade:
 
-|Propriedade|Type|Descrição|
+|Propriedade|Tipo|Descrição|
 |-|-|-|
 |`text`|string|O comando do depurador a ser executado.|
 |`description`|string|Descrição opcional para o comando.|
@@ -75,7 +75,7 @@ Usado com a `setupCommands` Propriedade:
 
 Usado com a `pipeTransport` Propriedade:
 
-|Propriedade|Type|Descrição|
+|Propriedade|Tipo|Descrição|
 |-|-|-|
 |`pipeCwd`|string|O caminho totalmente qualificado para o diretório de trabalho para o programa de pipe.|
 |`pipeProgram`|string|O comando de pipe totalmente qualificado a ser executado.|
@@ -88,7 +88,7 @@ Usado com a `pipeTransport` Propriedade:
 
 Use com a `sourceFileMap` Propriedade:
 
-|Propriedade|Type|Descrição|
+|Propriedade|Tipo|Descrição|
 |-|-|-|
 |`editorPath`|string|O local do código-fonte do editor a ser localizado.|
 |`useForBreakpoints`|booleano|Ao definir pontos de interrupção, esse mapeamento de origem deve ser usado. Se **`false`** , somente o nome do arquivo e o número da linha serão usados para definir pontos de interrupção. Se **`true`** , os pontos de interrupção serão definidos com o caminho completo para o arquivo e o número de linha somente quando esse mapeamento de origem for usado. Caso contrário, apenas o nome do arquivo e o número da linha serão usados ao definir pontos de interrupção. O padrão é **`true`** .|

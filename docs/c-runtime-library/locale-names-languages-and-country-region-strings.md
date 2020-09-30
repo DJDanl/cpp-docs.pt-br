@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c7695b3e51eac44853dc89a0f2a683192562cea2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842943"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505616"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Nomes de localidades, idiomas e cadeias de caracteres de país–região do UCRT
 
@@ -48,13 +48,11 @@ _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 ```
 
-
 ## <a name="utf-8-support"></a>Suporte a UTF-8
 
 O suporte a UTF-8 pode ser habilitado usando-se a página de código UTF-8 na sua cadeia de caracteres de localidade. Consulte a [seção suporte a UTF-8 `setlocale` de](../c-runtime-library/reference/setlocale-wsetlocale.md#utf-8-support) para obter mais informações.
 
-
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da biblioteca de tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>

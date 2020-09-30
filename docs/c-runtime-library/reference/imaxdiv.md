@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954627"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505633"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -46,19 +46,19 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>Parâmetros
 
-*numer*<br/>
+*número*<br/>
 O numerador.
 
 *denom*<br/>
 O denominador.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 **imaxdiv** chamado com argumentos do tipo [intmax_t](../../c-runtime-library/standard-types.md) retorna uma estrutura do tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) que compreende o quociente e o resto.
 
 ## <a name="remarks"></a>Comentários
 
-A função **imaxdiv** divide *número* por *denom* e, portanto, computa o quociente e o resto. A estrutura **imaxdiv_t** contém o quociente, **intmax_t** **quot**e o resto, **intmax_t** **REM**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.
+A função **imaxdiv** divide *número* por *denom* e, portanto, computa o quociente e o resto. A estrutura de **imaxdiv_t** contém o quociente, **intmax_t** **quot**e o resto, **intmax_t** **REM**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador for 0, o programa será encerrado com uma mensagem de erro.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,7 +66,7 @@ A função **imaxdiv** divide *número* por *denom* e, portanto, computa o quoci
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -105,6 +105,6 @@ results in a quotient of 1079252848505, and a remainder of 5170
 
 ## <a name="see-also"></a>Consulte também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv](./div.md)<br/>

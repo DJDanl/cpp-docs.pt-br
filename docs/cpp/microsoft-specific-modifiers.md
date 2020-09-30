@@ -2,12 +2,12 @@
 title: Modificadores específicos da Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: 2d65c0fe99895949d537ccf4368df2add3ff91ad
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2f56220ba15027a522264b91366cab9cf0b65d21
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857418"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506536"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificadores específicos da Microsoft
 
@@ -23,7 +23,7 @@ Esta seção descreve extensões específicas da Microsoft para C++ nas seguinte
 
 ## <a name="microsoft-specific-keywords"></a>palavras-chave específicas da Microsoft
 
-Várias das palavras-chave específicas da Microsoft podem ser usadas para modificar declaradores para formar tipos derivados. Para obter mais informações sobre declaradores, consulte [declaradores](overview-of-declarators.md).
+Várias das palavras-chave específicas da Microsoft podem ser usadas para modificar declaradores para formar tipos derivados. Para obter mais informações sobre declaradores, consulte [declaradores](./declarations-and-definitions-cpp.md).
 
 |Palavra-chave|Significado|Usada para formar tipos derivados?|
 |-------------|-------------|---------------------------------|

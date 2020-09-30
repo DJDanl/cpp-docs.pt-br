@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042050"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505759"
 ---
 # <a name="pair-structure"></a>Estrutura pair
 
@@ -68,14 +68,13 @@ O valor que inicializa o segundo elemento de `pair`.
 *Certo*\
 Um par cujos valores devem ser usados para inicializar os elementos de outro par.
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 O primeiro Construtor (padrão) inicializa o primeiro elemento do par para o padrão do tipo `T1` e o segundo elemento como padrão do tipo `T2` .  Ele será definido se ambos os tipos forem default-constructible.
 
 O segundo construtor inicializa o primeiro elemento do par para *val1* e o segundo para *Val2.*  Ele será definido se ambos os tipos forem Copy-constructible.
 
 O terceiro Construtor (modelo) inicializa o primeiro elemento do par para `Right` . **primeiro** e o segundo a `Right` . **segundo**.  Ele será definido se ambos os tipos do par forem constructible dos tipos de valor fornecidos.
-
 
 O quarto construtor inicializa o primeiro elemento do par para *val1* e o segundo a *Val2* usando o [Declarador de referência rvalue:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Ele será definido se ambos os tipos do par forem constructible dos tipos de valor fornecidos.
 

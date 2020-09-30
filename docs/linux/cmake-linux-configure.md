@@ -2,12 +2,12 @@
 title: Configurar um projeto do Linux CMake no Visual Studio
 description: Como definir as configurações de CMake do Linux no Visual Studio
 ms.date: 08/08/2020
-ms.openlocfilehash: 762f135988587e777c2a33a1bd402770c297226b
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414524"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504728"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Configurar um projeto do Linux CMake no Visual Studio
 
@@ -53,6 +53,7 @@ A configuração padrão para Linux-debug no Visual Studio 2017 (e no Visual Stu
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -97,6 +98,7 @@ No Visual Studio 2019 versão 16,6 ou posterior, ninja é o gerador padrão para
 Para saber mais informações sobre essas configurações, confira [Referência do CMakeSettings.json](../build/cmakesettings-reference.md).
 
 Quando você faz uma compilação:
+
 - Se você estiver direcionando a um sistema remoto, o Visual Studio escolherá o primeiro sistema remoto na lista em **ferramentas** > **Opções** > **Cross Platform** > **Gerenciador de conexões** entre plataformas por padrão para destinos remotos.
 - Se nenhuma conexão remota for encontrada, você será solicitado a criar uma. Para obter mais informações, confira [Conectar-se ao seu computador Linux remoto](connect-to-your-remote-linux-computer.md).
 
@@ -155,7 +157,7 @@ Use as configurações a seguir para executar comandos no sistema Linux antes e 
 
 [Configurar sessões de depuração do CMake](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Trabalhando com propriedades de projeto](../build/working-with-project-properties.md)<br/>
 [Personalizar as configurações do CMake](../build/customize-cmake-settings.md)<br/>

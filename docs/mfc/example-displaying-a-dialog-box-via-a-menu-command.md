@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1cada8124cd7ea71a24367626508782b522cc746
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616030"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506759"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemplo: exibindo uma caixa de diálogo por meio de um comando Menu
 
@@ -38,7 +38,7 @@ Os procedimentos usam os seguintes nomes e valores:
 
 ### <a name="to-display-a-modal-dialog-box"></a>Para exibir uma caixa de diálogo modal
 
-1. Criar o comando de menu; consulte [criando menus ou itens de menu](../windows/creating-a-menu.md).
+1. Criar o comando de menu; consulte [criando menus ou itens de menu](../windows/menu-editor.md).
 
 1. Criar a caixa de diálogo; consulte [iniciando o editor de caixa de diálogo](../windows/creating-a-new-dialog-box.md).
 

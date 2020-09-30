@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: cf7f071ab98cb872537af076b89e0a1b07a1a6a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353175"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505881"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -243,7 +243,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional que trata do primeiro elemento no multiset ou do local que sucede um multiset vazio.
 
@@ -294,7 +294,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** iterador de acesso bidirecional que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio, `cbegin() == cend()` ).
 
@@ -320,7 +320,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** iterador de acesso bidirecional que aponta muito além do fim do intervalo.
 
@@ -482,7 +482,7 @@ Tipo da chave.
 *chaves*\
 O valor de chave do elemento a ser pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 `true` Se o elemento for encontrado no contêiner; `false` caso contrário.
 
@@ -490,7 +490,7 @@ O valor de chave do elemento a ser pesquisado.
 
 `contains()` é novo no C++ 20. Para usá-lo, especifique a opção de compilador [/std: c + + mais recente](../build/reference/std-specify-language-standard-version.md) .
 
-`template<class K> bool contains(const K& key) const` só participará da resolução de sobrecarga se `key_compare` for transparente. Consulte [pesquisa heterogênea em contêineres associativos](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) para obter mais informações.
+`template<class K> bool contains(const K& key) const` só participará da resolução de sobrecarga se `key_compare` for transparente. Consulte [pesquisa heterogênea em contêineres associativos](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) para obter mais informações.
 
 ### <a name="example"></a>Exemplo
 
@@ -506,7 +506,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theMultiSet.contains(2) << '\n';
     std::cout << theMultiSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```
@@ -529,7 +529,7 @@ size_type count(const Key& key) const;
 *chaves*\
 A chave dos elementos a serem correspondidos do multiset.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O número de elementos no multiset cuja chave de classificação corresponde à chave de parâmetro.
 
@@ -589,7 +589,7 @@ Retorna um iterador const que trata o primeiro elemento em um multiset invertido
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional invertido const que trata do primeiro elemento em um multiset invertido ou que trata do que foi o último elemento do multiset não invertido.
 
@@ -637,7 +637,7 @@ Retorna um iterador const que trata o local após o último elemento em um multi
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional inverso const que trata da localização que vem após o último elemento em um multiset invertido (o local que precedeu o primeiro elemento no multiset não invertido).
 
@@ -761,7 +761,7 @@ iterator emplace(Args&&... args);
 *argumento*\
 Os argumentos encaminhados para construir um elemento a ser inserido no multiset.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -831,7 +831,7 @@ Os argumentos encaminhados para construir um elemento a ser inserido no multiset
 *posição*\
 O local a partir do qual se começa a procurar pelo ponto de inserção correto. (Se esse ponto precede imediatamente *onde*, a inserção pode ocorrer no tempo constante amortizado em vez da hora logarítmica.)
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -851,7 +851,7 @@ Testa se um multiset está vazio.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 **`true`** Se o MultiSet estiver vazio; **`false`** se MultiSet não estiver vazio.
 
@@ -896,7 +896,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O iterador que ultrapassa o fim. Se o multiconjunto estiver vazio, então, `multiset::end() == multiset::begin()`.
 
@@ -923,7 +923,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um par de iteradores em que o primeiro é o [lower_bound](#lower_bound) da chave e o segundo é o [upper_bound](#upper_bound) da chave.
 
@@ -1017,7 +1017,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do multiset, se esse elemento não existir.
 
@@ -1042,7 +1042,7 @@ const_iterator find(const Key& key) const;
 *chaves*\
 O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador que se refere ao local de um elemento com uma chave especificada ou o local após o último elemento no multiset (`multiset::end()`) se nenhuma correspondência for encontrada para a chave.
 
@@ -1121,7 +1121,7 @@ Retorna uma cópia do objeto alocador usado para construir o multiset.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O alocador usado pelo multiset.
 
@@ -1242,7 +1242,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 As funções do membro de inserir elemento único, (1) e (2), retornam um iterador para a posição em que o novo elemento foi inserido no multiset.
 
@@ -1372,7 +1372,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar chaves em um mu
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o objeto de função que um multiset usa para ordenar seus elementos, que é o parâmetro de modelo `Compare`.
 
@@ -1490,7 +1490,7 @@ iterator lower_bound(const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um `iterator` ou `const_iterator` que aborda o local de um elemento em um multiconjunto que tem uma chave que é igual ou maior que a chave de argumento, ou que resolve o local com sucesso do último elemento no MultiSet, se nenhuma correspondência for encontrada para a chave.
 
@@ -1551,7 +1551,7 @@ Retorna o comprimento máximo do multiset.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento máximo possível do multiset.
 
@@ -1845,7 +1845,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional invertido que trata do primeiro elemento em um multiset invertido ou que trata do que foi o último elemento do multiset não invertido.
 
@@ -1958,7 +1958,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador bidirecional inverso que trata da localização que vem após o último elemento em um multiset invertido (o local que precedeu o primeiro elemento no multiset não invertido).
 
@@ -2045,7 +2045,7 @@ Retorna o número de elementos no multiset.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O comprimento atual do multiset.
 
@@ -2173,7 +2173,7 @@ iterator upper_bound(const Key& key);
 *chaves*\
 A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **iterador** ou `const_iterator` que tratará a localização de um elemento em um multiset com uma chave, que é maior que a chave de argumento ou que tratará o local após o último elemento no multiset se nenhuma correspondência for encontrada para a chave.
 
@@ -2234,7 +2234,7 @@ Recupera uma cópia do objeto de comparação usada para ordenar valores de elem
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Retorna o objeto de função que um multiset usa para ordenar seus elementos, que é o parâmetro de modelo `Compare`.
 

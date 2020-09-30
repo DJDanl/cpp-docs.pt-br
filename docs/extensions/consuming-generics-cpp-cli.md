@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 9abe97e3ec2b04bf631dcad7644f3c7dd668440e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414133"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505991"
 ---
 # <a name="consuming-generics-ccli"></a>Consumindo genéricos (C++/CLI)
 
@@ -18,7 +18,7 @@ Os genéricos criados em uma linguagem .NET (ou UWP) podem ser usados ​​em o
 
 ## <a name="example-generic-class-defined-in-c"></a>Exemplo: classe genérica definida em C #
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrição
 
 Este exemplo mostra uma classe genérica definida em C#.
 
@@ -82,7 +82,7 @@ public class CircularList<ItemType> {
 
 ## <a name="example-consume-assembly-authored-in-c"></a>Exemplo: consumir assembly criado em C #
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descrição
 
 Este exemplo consome o assembly criado em C#.
 
@@ -118,6 +118,6 @@ int main() {
 10
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Genéricos](generics-cpp-component-extensions.md)

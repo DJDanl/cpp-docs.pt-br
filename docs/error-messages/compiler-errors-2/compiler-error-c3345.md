@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8682069fdf719f4e85d1d6f5107de1903e3ae071
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753439"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504837"
 ---
 # <a name="compiler-error-c3345"></a>Erro do compilador C3345
 
@@ -19,13 +19,13 @@ ms.locfileid: "74753439"
 
 O *identificador* de um módulo contém um ou mais caracteres inaceitáveis. Um identificador será válido se o primeiro caractere for um caractere alfabético, sublinhado ou ANSI alto (0x80-FF) e qualquer caractere subsequente for um caractere ANSI alfanumérico, sublinhado ou alto.
 
-### <a name="to-correct-this-error"></a>Para corrigir esse erro
+### <a name="to-correct-this-error"></a>Para corrigir este erro
 
 1. Verifique se o *identificador* não contém espaços em branco ou outros caracteres inaceitáveis.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo de código a seguir causa a mensagem de erro C3345 porque o parâmetro `name` do atributo `module` contém um espaço em branco.
+O exemplo de código a seguir causa a mensagem de erro C3345 porque o `name` parâmetro do `module` atributo contém um espaço em branco.
 
 ```cpp
 // cpp_attr_name_module.cpp
@@ -56,4 +56,4 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [Classificação de caracteres](../../c-runtime-library/character-classification.md)<br/>
-[module](../../windows/module-cpp.md)
+[modulo](../../windows/attributes/module-cpp.md)

@@ -35,18 +35,18 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623073"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505719"
 ---
 # <a name="how-to-manage-symbols"></a>Como: Gerenciar símbolos
 
 Quando você cria um novo recurso ou objeto de recurso, o ambiente de desenvolvimento atribui a ele um nome de símbolo padrão, por exemplo, `IDD_DIALOG1` . Você pode usar a [janela Propriedades](/visualstudio/ide/reference/properties-window) para alterar o nome do símbolo padrão ou para alterar o nome de qualquer símbolo já associado a um recurso.
 
-Para os símbolos associados a um único recurso, você também pode usar a janela **Propriedades** para alterar o valor do símbolo. Você pode usar a [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md) para alterar o valor de símbolos não atribuídos no momento a um recurso.
+Para os símbolos associados a um único recurso, você também pode usar a janela **Propriedades** para alterar o valor do símbolo. Você pode usar a [caixa de diálogo símbolos de recurso](./creating-new-symbols.md) para alterar o valor de símbolos não atribuídos no momento a um recurso.
 
 Normalmente, todas as definições de símbolo são salvas em `Resource.h` . No entanto, talvez seja necessário alterar esse nome de arquivo para que você possa, por exemplo, trabalhar com mais de um arquivo de recurso no mesmo diretório.
 
@@ -92,7 +92,7 @@ Os nomes de símbolo têm prefixos descritivos que indicam o tipo de recurso ou 
    Se você digitar um novo nome de símbolo, ele será atribuído automaticamente a um valor.
 
 > [!NOTE]
-> Você pode usar a [caixa de diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md) para alterar os nomes de símbolos não atribuídos no momento a um recurso.
+> Você pode usar a [caixa de diálogo símbolos de recurso](./creating-new-symbols.md) para alterar os nomes de símbolos não atribuídos no momento a um recurso.
 
 ## <a name="symbol-value-restrictions"></a>Restrições de valor do símbolo
 
@@ -141,7 +141,7 @@ Algumas limitações dos valores de símbolo são:
 
 ## <a name="change-or-delete-symbols"></a>Alterar ou excluir símbolos
 
-Na caixa de [diálogo símbolos de recurso](../windows/resource-symbols-dialog-box.md), você pode editar ou excluir os símbolos existentes que ainda não estão atribuídos a um recurso ou objeto.
+Na caixa de [diálogo símbolos de recurso](./creating-new-symbols.md), você pode editar ou excluir os símbolos existentes que ainda não estão atribuídos a um recurso ou objeto.
 
 ### <a name="to-change-an-unassigned-symbol"></a>Para alterar um símbolo não atribuído
 
@@ -161,7 +161,7 @@ Na caixa de diálogo **símbolos de recurso** , selecione o símbolo que você d
 
 ## <a name="include-symbols"></a>Incluir símbolos
 
-Na primeira vez que o ambiente de desenvolvimento lê um arquivo de recurso criado por outro aplicativo, ele marca todos os arquivos de cabeçalho incluídos como somente leitura. Embora você possa usar a [caixa de diálogo recursos incluem](../windows/resource-includes-dialog-box.md) para adicionar outros arquivos de cabeçalho de símbolo somente leitura.
+Na primeira vez que o ambiente de desenvolvimento lê um arquivo de recurso criado por outro aplicativo, ele marca todos os arquivos de cabeçalho incluídos como somente leitura. Embora você possa usar a [caixa de diálogo recursos incluem](./how-to-include-resources-at-compile-time.md) para adicionar outros arquivos de cabeçalho de símbolo somente leitura.
 
 Um motivo para que você queira usar definições de símbolo somente leitura é para arquivos de símbolo que você planeja compartilhar entre vários projetos.
 
@@ -185,7 +185,7 @@ O ambiente interpretará corretamente esses símbolos calculados, desde que:
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Para incluir símbolos compartilhados (somente leitura) no arquivo de recursos
 
-1. Em [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources), clique com o botão direito do mouse no arquivo *. rc* e selecione o [recurso inclui](../windows/resource-includes-dialog-box.md).
+1. Em [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources), clique com o botão direito do mouse no arquivo *. rc* e selecione o [recurso inclui](./how-to-include-resources-at-compile-time.md).
 
 1. Na caixa **diretivas de símbolo somente leitura** , use a `#include` diretiva do compilador para especificar o arquivo no qual você deseja que os símbolos somente leitura sejam mantidos.
 
@@ -204,7 +204,7 @@ O ambiente interpretará corretamente esses símbolos calculados, desde que:
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Para alterar o nome do arquivo de cabeçalho de símbolo de recurso
 
-1. Em [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources), clique com o botão direito do mouse no arquivo *. rc* e escolha [recursos incluir](../windows/resource-includes-dialog-box.md).
+1. Em [modo de exibição de recursos](how-to-create-a-resource-script-file.md#create-resources), clique com o botão direito do mouse no arquivo *. rc* e escolha [recursos incluir](./how-to-include-resources-at-compile-time.md).
 
 1. Na caixa **arquivo de cabeçalho de símbolo** , digite o novo nome para o arquivo de inclusão.
 

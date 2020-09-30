@@ -1,19 +1,19 @@
 ---
-title: Atualizar C++ projetos de versões anteriores do Visual Studio
+title: Atualizar projetos do C++ de versões anteriores do Visual Studio
 description: Como atualizar os projetos do Microsoft C++ de versões anteriores do Visual Studio.
 ms.date: 01/21/2020
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 7a4ab98c196d601bc458fe33bb1e2cb45ac30088
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416119"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505887"
 ---
-# <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Atualizar C++ projetos de versões anteriores do Visual Studio
+# <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Atualizar projetos do C++ de versões anteriores do Visual Studio
 
 Para atualizar um projeto criado em uma versão anterior do Visual Studio, basta abrir o projeto na versão mais recente do Visual Studio. O Visual Studio oferece para atualizar o projeto para o esquema atual.
 
@@ -23,7 +23,7 @@ Se você escolher **Sim**, o projeto será atualizado no local. Ele não pode se
 
 ## <a name="upgrade-reports"></a>Atualizar relatórios
 
-Ao atualizar um projeto, você obtém um relatório de atualização. O relatório também é salvo na pasta do projeto como UpgradeLog. htm. O relatório de atualização mostra um resumo dos problemas encontrados durante a conversão. Ele lista algumas informações sobre as alterações feitas, incluindo:
+Ao atualizar um projeto, você obtém um relatório de atualização. O relatório também é salvo na pasta do projeto como UpgradeLog.htm. O relatório de atualização mostra um resumo dos problemas encontrados durante a conversão. Ele lista algumas informações sobre as alterações feitas, incluindo:
 
 - Propriedades do projeto.
 
@@ -41,15 +41,15 @@ Ao atualizar um projeto, você obtém um relatório de atualização. O relatór
 
 - Erros de tempo de execução ou resultados inesperados devido a alterações de comportamento.
 
-- Erros que foram introduzidos nas ferramentas. Se você encontrar um problema, relate-o à C++ equipe Visual por meio de seus canais de suporte normal ou usando a página da [comunidade de desenvolvedores do Visual Studio C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html) .
+- Erros que foram introduzidos nas ferramentas. Se você encontrar um problema, relate-o à equipe de Visual C++ por meio de seus canais de suporte normal ou usando a página da [comunidade de desenvolvedores do Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html) .
 
 Alguns projetos e soluções atualizados podem ser compilados com êxito sem modificação. No entanto, a maioria dos projetos provavelmente exigirá alterações nas configurações do projeto e no código-fonte. Não há uma maneira correta de corrigir esses problemas, mas é recomendável usar uma abordagem em fases. Antes de começar, examine a [visão geral de possíveis problemas de atualização](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) para obter mais informações sobre muitos tipos de erros comuns.
 
-1. Defina o conjunto de ferramentas C++ de plataforma, o padrão de idioma e a versão SDK do Windows (se aplicável) para as versões preferenciais. (**Projeto** > **Propriedades** > **Propriedades de configuração** > **geral**)
+1. Defina o conjunto de ferramentas de plataforma, o padrão de linguagem C++ e a versão SDK do Windows (se aplicável) para as versões preferenciais. (**Projeto**  >  **Propriedades**  >  do **Propriedades**  >  de configuração **Geral**)
 
-1. Se você tiver muitos erros, poderá desativar temporariamente algumas opções enquanto corrigi-las. Para desativar a opção [/permissive-](../build/reference/permissive-standards-conformance.md) , use as **Propriedades** de > do **projeto** > **Propriedades de configuração** > **linguagem** **C/C++**  > . Para desativar a opção [de análise de código](/cpp/code-quality/code-analysis-for-c-cpp-overview) , use **Project** > **properties** > **Propriedades de configuração** > análise de **código**.
+1. Se você tiver muitos erros, poderá desativar temporariamente algumas opções enquanto corrigi-las. Para desativar a opção [/permissive-](../build/reference/permissive-standards-conformance.md) , use as propriedades de configuração do **projeto**  >  **Properties**  >  **Configuration Properties**  >  **linguagem C/C++**  >  **Language**. Para desativar a opção de [análise de código](../code-quality/code-analysis-for-c-cpp-overview.md) , use Propriedades do **projeto**  >  **Properties**  >  análise de código de propriedades de**configuração**  >  **Code Analysis**.
 
-1. Verifique se todas as dependências estão presentes e se os caminhos de inclusão ou os locais de biblioteca estão corretos. (**Projeto** > **Propriedades** > **Propriedades de configuração** > **diretórios vc + +** )
+1. Verifique se todas as dependências estão presentes e se os caminhos de inclusão ou os locais de biblioteca estão corretos. (**Projeto**  >  **Propriedades**  >  do **Propriedades**  >  de configuração **Diretórios do vc + +**)
 
 1. Identificar e corrigir erros causados por referências a APIs que não existem mais.
 
@@ -59,24 +59,24 @@ Alguns projetos e soluções atualizados podem ser compilados com êxito sem mod
 
 1. Ative a análise de código para identificar possíveis problemas ou padrões de codificação desatualizados que não são mais considerados aceitáveis. Se a análise de código sinalizar muitos erros, você poderá desativar alguns dos avisos para se concentrar primeiro nos mais importantes. O IDE pode ajudar com correções rápidas para alguns tipos de problemas.
 
-1. Considere outras oportunidades para modernizar o código. Por exemplo, substitua estruturas de dados e algoritmos personalizados por da C++ biblioteca padrão ou a biblioteca de software livre de aumento. Usando os recursos padrão, você torna mais fácil para outras pessoas manter o código. Você pode ter certeza de que esse código foi bem testado e revisado por muitos especialistas no Comitê de padrões e na C++ comunidade mais ampla.
+1. Considere outras oportunidades para modernizar o código. Por exemplo, substitua as estruturas de dados personalizadas e os algoritmos por da biblioteca padrão C++, ou aumente a biblioteca de código-fonte aberto. Usando os recursos padrão, você torna mais fácil para outras pessoas manter o código. Você pode ter certeza de que esse código foi bem testado e revisado por muitos especialistas no Comitê de padrões e na Comunidade de C++ mais ampla.
 
-Para erros difíceis de corrigir, tente pesquisar ou postar uma pergunta em Stack Overflow ou [ C++ na Comunidade de desenvolvedores](https://developercommunity.visualstudio.com/spaces/62/index.html).
+Para erros difíceis de corrigir, tente pesquisar ou postar uma pergunta na [comunidade de desenvolvedores](https://developercommunity.visualstudio.com/spaces/62/index.html)de Stack Overflow ou C++.
 
 ## <a name="in-this-section"></a>Nesta seção
 
 [Visão geral de possíveis problemas de atualização](overview-of-potential-upgrade-issues-visual-cpp.md)\
-[Atualizar seu código para o\ CRT universal](upgrade-your-code-to-the-universal-crt.md)
+[Atualizar seu código para o CRT universal](upgrade-your-code-to-the-universal-crt.md)\
 [Atualizar WINVER e _WIN32_WINNT](modifying-winver-and-win32-winnt.md)\
 [Corrija suas dependências em elementos internos da biblioteca](fix-your-dependencies-on-library-internals.md)\
 [Problemas de migração de ponto flutuante](floating-point-migration-issues.md)\
-[recursos preteridos no Visual Studio 2019\ C++ ](features-deprecated-in-visual-studio.md)
-\ de [VCBuild versus MSBuild](build-system-changes.md)
-[Bibliotecas de terceiros da porta](porting-third-party-libraries.md)
+[Recursos do C++ preteridos no Visual Studio 2019](features-deprecated-in-visual-studio.md)\
+[VCBuild versus MSBuild](build-system-changes.md)\
+[Portabilidade de bibliotecas de terceiros](porting-third-party-libraries.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[O que há de novo C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
-[Histórico C++ de alterações visuais 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\
+[O que há de novo para Visual C++ no Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
+[Visual C++ histórico de alterações 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\
 [Comportamento não padrão](../cpp/nonstandard-behavior.md)\
-[Aplicativos de dados de porta](../data/data-access-programming-mfc-atl.md)
+[Portabilidade de aplicativos de dados](../data/data-access-programming-mfc-atl.md)

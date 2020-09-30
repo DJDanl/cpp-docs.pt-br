@@ -1,6 +1,6 @@
 ---
 title: Classe initializer_list
-description: Uma referência para a classe initializer_list na biblioteca C++ Standard, implementada pela Microsoft no Visual Studio.
+description: Uma referência para a classe initializer_list na biblioteca padrão C++, conforme implementada pela Microsoft no Visual Studio.
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 232855fbcac1e4df9af7cf956fda80201326a401
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373354"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504636"
 ---
 # <a name="initializer_list-class"></a>Classe initializer_list
 
@@ -33,7 +33,7 @@ class initializer_list
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*\
+*Escreva*\
 O tipo de dados do elemento a ser armazenado no `initializer_list`.
 
 ## <a name="remarks"></a>Comentários
@@ -44,7 +44,7 @@ Um `initializer_list` pode ser criado usando uma lista de inicializadores entre 
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-O compilador transforma listas de inicializadores entre chaves com elementos homogêneos em um `initializer_list` sempre que a assinatura de função requer um `initializer_list`. Para obter mais `initializer_list`informações sobre como usar, consulte [Inicialização uniforme e delegando construtores](../cpp/uniform-initialization-and-delegating-constructors.md)
+O compilador transforma listas de inicializadores entre chaves com elementos homogêneos em um `initializer_list` sempre que a assinatura de função requer um `initializer_list`. Para obter mais informações sobre como usar o `initializer_list` , consulte [inicialização uniforme e construtores de delegação](../cpp/initializing-classes-and-structs-without-constructors-cpp.md)
 
 ### <a name="constructors"></a>Construtores
 
@@ -67,17 +67,17 @@ O compilador transforma listas de inicializadores entre chaves com elementos hom
 
 |Função de membro|Descrição|
 |-|-|
-|[Começar](#begin)|Retorna um ponteiro para o primeiro elemento em um `initializer_list`.|
+|[Comece](#begin)|Retorna um ponteiro para o primeiro elemento em um `initializer_list`.|
 |[end](#end)|Retorna um ponteiro para depois do último elemento em um `initializer_list`.|
-|[Tamanho](#size)|Retorna o número de elementos no `initializer_list`.|
+|[size](#size)|Retorna o número de elementos no `initializer_list`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** \<initializer_list>
+**Cabeçalho:**\<initializer_list>
 
 **Namespace:** std
 
-## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list::começar
+## <a name="initializer_listbegin"></a><a name="begin"></a> initializer_list:: Begin
 
 Retorna um ponteiro para o primeiro elemento em um `initializer_list`.
 
@@ -89,7 +89,7 @@ constexpr const InputIterator* begin() const noexcept;
 
 Um ponteiro para o primeiro elemento do `initializer_list`. Se a lista estiver vazia, o ponteiro será o mesmo para o início e fim da lista.
 
-## <a name="initializer_listend"></a><a name="end"></a>initializer_list::fim
+## <a name="initializer_listend"></a><a name="end"></a> initializer_list:: End
 
 Retorna um ponteiro para depois do último elemento em um `initializer list`.
 
@@ -99,9 +99,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Valor retornado
 
-Um ponteiro para depois do último elemento na lista. Se a lista estiver vazia, é o mesmo que o ponteiro para o primeiro elemento da lista.
+Um ponteiro para depois do último elemento na lista. Se a lista estiver vazia, será o mesmo que o ponteiro para o primeiro elemento na lista.
 
-## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list::initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a> initializer_list:: initializer_list
 
 Constrói um objeto do tipo `initializer_list`.
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="initializer_listsize"></a><a name="size"></a>initializer_list::tamanho
+## <a name="initializer_listsize"></a><a name="size"></a> initializer_list:: tamanho
 
 Retorna o número de elementos na lista.
 
@@ -195,6 +195,6 @@ constexpr size_t size() const noexcept;
 
 O número de elementos na lista.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[>forward_list<](../standard-library/forward-list.md)
+[<forward_list>](../standard-library/forward-list.md)

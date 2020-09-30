@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 4993571d479924edc71a277887a8bd95fc4fd463
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686451"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506435"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Como converter de um coleção .NET em um contêiner STL/CLR
 
@@ -24,7 +24,7 @@ Este tópico mostra como converter coleções .NET em seus contêineres STL/CLR 
 
 -OU-
 
-1. Crie um contêiner STL/CLR genérico criando um objeto [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Essa classe de modelo usa uma interface de coleção .NET como um argumento. Para verificar quais interfaces têm suporte, consulte [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Crie um contêiner STL/CLR genérico criando um objeto [collection_adapter](./adapter-stl-clr.md#collection_adapter) . Essa classe de modelo usa uma interface de coleção .NET como um argumento. Para verificar quais interfaces têm suporte, consulte [collection_adapter (STL/CLR)](./adapter-stl-clr.md#collection_adapter).
 
 1. Copie o conteúdo da coleção .NET para o contêiner. Isso pode ser feito usando um [algoritmo](../dotnet/algorithm-stl-clr.md)STL/CLR ou Iterando na coleção .net e inserindo uma cópia de cada elemento no contêiner STL/CLR.
 
@@ -126,7 +126,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>
