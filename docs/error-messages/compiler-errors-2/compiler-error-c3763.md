@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7ccb3d846982bbf9a52a7267549f6481b5a1bd9b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757248"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503956"
 ---
 # <a name="compiler-error-c3763"></a>Erro do compilador C3763
 
 ' type ': ' retval ' e ' out ' só podem aparecer em um tipo de ponteiro de dados
 
-Os atributos [out](../../windows/out-cpp.md) ou [retval](../../windows/retval.md) só podem aparecer em parâmetros do tipo ponteiro. Remova o atributo ou torne o parâmetro do tipo ponteiro.
+Os atributos [out](../../windows/attributes/out-cpp.md) ou [retval](../../windows/attributes/retval.md) só podem aparecer em parâmetros do tipo ponteiro. Remova o atributo ou torne o parâmetro do tipo ponteiro.
 
 O exemplo a seguir gera C3763:
 

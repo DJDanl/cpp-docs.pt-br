@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840720"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504013"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros para modelos de provedor de banco de dados OLE
 
@@ -118,7 +118,7 @@ no O GUID da propriedade.
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -140,7 +140,7 @@ no UPROPSET_HIDDEN para qualquer conjunto de propriedades que você não deseja 
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -208,7 +208,7 @@ no O GUID da propriedade.
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -222,7 +222,7 @@ END_PROPSET_MAP()
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -241,11 +241,11 @@ no Um valor [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) que
 
 #### <a name="remarks"></a>Comentários
 
-Essa macro define o valor da Propriedade do tipo `DWORD` como um valor padrão definido em ATLDB. T. Para definir a propriedade com um valor de sua escolha, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Para definir o `VARTYPE` e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) para a propriedade ao mesmo tempo, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Essa macro define o valor da Propriedade do tipo `DWORD` como um valor padrão definido em ATLDB. H. Para definir a propriedade com um valor de sua escolha, use [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). Para definir o `VARTYPE` e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) para a propriedade ao mesmo tempo, use [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -276,11 +276,11 @@ DBPROPOPTIONS_REQUIRED ou DBPROPOPTIONS_SETIFCHEAP. Normalmente, um provedor nã
 
 #### <a name="remarks"></a>Comentários
 
-Com essa macro, você pode especificar diretamente o valor da Propriedade do tipo, `DWORD` bem como opções e sinalizadores. Para simplesmente definir uma propriedade para um valor padrão definido em ATLDB. H, use [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Para definir uma propriedade com um valor de sua escolha, sem definir opções ou sinalizadores, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
+Com essa macro, você pode especificar diretamente o valor da Propriedade do tipo, `DWORD` bem como opções e sinalizadores. Para simplesmente definir uma propriedade para um valor padrão definido em ATLDB. H, use [PROPERTY_INFO_ENTRY](#property_info_entry). Para definir uma propriedade com um valor de sua escolha, sem definir opções ou sinalizadores, use [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -302,11 +302,11 @@ no O valor da Propriedade do tipo `DWORD` .
 
 #### <a name="remarks"></a>Comentários
 
-Com essa macro, você pode especificar diretamente o valor da Propriedade do tipo `DWORD` . Para definir a propriedade para o valor padrão definido em ATLDB. H, use [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Para definir o valor, os sinalizadores e as opções da propriedade, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Com essa macro, você pode especificar diretamente o valor da Propriedade do tipo `DWORD` . Para definir a propriedade para o valor padrão definido em ATLDB. H, use [PROPERTY_INFO_ENTRY](#property_info_entry). Para definir o valor, os sinalizadores e as opções da propriedade, use [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Consulte [BEGIN_PROPSET_MAP](#begin_propset_map).
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -341,7 +341,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consulte [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -358,7 +358,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *associado*<br/>
@@ -379,7 +379,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *DbType*<br/>
@@ -394,7 +394,7 @@ Permite que você especifique o tipo de dados da coluna.
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consulte [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -411,7 +411,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *sinalizadores*<br/>
@@ -451,7 +451,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *size*<br/>
@@ -466,7 +466,7 @@ Permite que você especifique o tamanho da coluna.
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consulte [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -483,7 +483,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *associado*<br/>
@@ -495,7 +495,7 @@ Use essa macro quando os dados da coluna forem considerados [DBTYPE_STR](/previo
 
 #### <a name="example"></a>Exemplo
 
-Consulte [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consulte [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map).
 
 ### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -512,7 +512,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *DbType*<br/>
@@ -526,7 +526,7 @@ no A variável de membro na classe de dados que armazena os dados.
 
 #### <a name="remarks"></a>Comentários
 
-Semelhante a [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , mas também permite que você especifique o tipo de dados da coluna, bem como o tamanho.
+Semelhante a [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) , mas também permite que você especifique o tipo de dados da coluna, bem como o tamanho.
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -543,7 +543,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 no O nome da coluna.
 
-*ordinal*<br/>
+*numera*<br/>
 no O número da coluna. A menos que a coluna seja uma coluna de indicador, o número da coluna não deve ser 0.
 
 *associado*<br/>
@@ -625,7 +625,7 @@ Essa `Execute` função popula os dados do conjunto de linhas. O assistente de p
 
 O assistente também adiciona três entradas correspondentes no mapa de esquema. Consulte [criando um provedor de modelo de OLE DB](../../data/oledb/creating-an-ole-db-provider.md) para obter mais informações sobre como usar o assistente para criar um provedor.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

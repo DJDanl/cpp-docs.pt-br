@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389942"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503381"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Referência do verificador de Diretrizes Principais do C++
 
-Esta seção lista os avisos do verificador de Diretrizes Principais do C++. Para obter informações sobre a análise de código, consulte [ `/analyze` (análise de código)](/cpp/build/reference/analyze-code-analysis) e [início rápido: análise de código para C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Esta seção lista os avisos do verificador de Diretrizes Principais do C++. Para obter informações sobre a análise de código, consulte [ `/analyze` (análise de código)](../build/reference/analyze-code-analysis.md) e [início rápido: análise de código para C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Alguns avisos pertencem a mais de um grupo, e nem todos os avisos têm um tópico de referência completo.
@@ -196,7 +196,7 @@ Essa *função* de chamada de função pode usar `constexpr` se a avaliação de
 Não fatiar. Consulte [diretrizes principais do C++ es. 63](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es63-dont-slice).
 
 [NO_CONST_CAST_UNNECESSARY C26465](c26465.md)\
-Não use `const_cast` para a conversão `const` . `const_cast`Não é necessário; a constante ou a volatilidade não está sendo removida por essa conversão. Consulte [diretrizes principais do C++ Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
+Não use `const_cast` para a conversão `const` . `const_cast` Não é necessário; a constante ou a volatilidade não está sendo removida por essa conversão. Consulte [diretrizes principais do C++ Type. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
 
 [NO_STATIC_DOWNCAST_POLYMORPHIC C26466](c26466.md)\
 Não use `static_cast` downcasts. Uma conversão de um tipo polimórfico deve usar dynamic_cast. Confira [diretrizes principais do C++ tipo. 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast).
@@ -264,7 +264,7 @@ Prefira usar `gsl::at()` em vez do operador subscrito desmarcado. Consulte [dire
 Considere o uso de `gsl::finally` se a ação final é destinada. Consulte [diretrizes principais do C++: GSL. util: Utilities](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities).
 
 [NO_SPAN_FROM_TEMPORARY C26449](c26449.md)\
-`gsl::span`ou `std::string_view` criado de um temporário será inválido quando o temporário for invalidado. Consulte [diretrizes principais do C++: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
+`gsl::span` ou `std::string_view` criado de um temporário será inválido quando o temporário for invalidado. Consulte [diretrizes principais do C++: GSL. View: views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
 
 ## <a name="deprecated-warnings"></a>Avisos preteridos
 
@@ -280,6 +280,6 @@ Os seguintes avisos estão presentes em um conjunto de regras experimentais ante
 - 26425 ASSIGNING_TO_STATIC
 - 26499 NO_LIFETIME_TRACKING
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Usando os verificadores de Diretrizes Principais do C++](using-the-cpp-core-guidelines-checkers.md)

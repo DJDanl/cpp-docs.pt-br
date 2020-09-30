@@ -1,5 +1,5 @@
 ---
-title: 'Como: Trabalhar com cores'
+title: Como trabalhar com cores
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.color
@@ -62,164 +62,164 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c9134fde9053f57f8848a37b1442728f6111c98
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387746"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502939"
 ---
-# <a name="how-to-work-with-color"></a>Como: Trabalhar com cores
+# <a name="how-to-work-with-color"></a>Como trabalhar com cores
 
-O **Editor de imagens** contém muitos recursos que especificamente a lidar com e personalizar as cores. Você pode definir uma cor de primeiro plano ou segundo plano, preencher as áreas limitadas com cor ou selecione uma cor em uma imagem para usar como a cor de primeiro plano ou segundo plano atual. Você pode usar ferramentas o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md) junto com a paleta de cores na **cores** janela para criar imagens.
+O **Editor de imagem** contém muitos recursos que manipulam e personalizam cores especificamente. Você pode definir uma cor de primeiro plano ou de plano de fundo, preencher áreas ligadas com cor ou selecionar uma cor em uma imagem para usar como a cor atual do primeiro plano ou do plano de fundo. Você pode usar ferramentas na [barra de ferramentas do editor de imagem](./image-editor-for-icons.md) junto com a paleta cores na janela **cores** para criar imagens.
 
-Todas as cores para imagens de 16 cores e monocromático são mostradas na **cores** paleta na **cores** janela. Juntamente com 16 cores padrão, você pode criar suas próprias cores personalizadas. Alteração de qualquer uma das cores na paleta de alterar imediatamente a cor correspondente na imagem.
+Todas as cores para imagens monocromáticas e 16 cores são mostradas na paleta **cores** na janela **cores** . Juntamente com as 16 cores padrão, você pode criar suas próprias cores personalizadas. A alteração de qualquer uma das cores na paleta alterará imediatamente a cor correspondente na imagem.
 
-Ao trabalhar com o ícone de 256 cores e imagens de cursor, o **cores** propriedade no [janela propriedades](/visualstudio/ide/reference/properties-window) é usado. Para obter mais informações, consulte [criando um ícone de 256 cores ou cursor](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).
+Ao trabalhar com imagens de cursor e ícone de cor 256, a propriedade **Colors** no [janela Propriedades](/visualstudio/ide/reference/properties-window) é usada. Para obter mais informações, consulte [criando um ícone ou cursor de cor de 256](./creating-an-icon-or-other-image-image-editor-for-icons.md).
 
-True color imagens também podem ser criadas. No entanto, amostras de cores true não são exibidos na paleta completa na **cores** janela; eles aparecem somente na área de indicador de cor do primeiro plano ou segundo plano. Cores True são criadas usando o **seletor de cores personalizada** caixa de diálogo.
+Imagens true-color também podem ser criadas. No entanto, as amostras de cor verdadeiras não aparecem na paleta inteira na janela **cores** ; Eles aparecem apenas na área do indicador de cor do primeiro plano ou do plano de fundo. As cores verdadeiras são criadas usando a caixa de diálogo **seletor de cores personalizado** .
 
-Você pode salvar paletas de cores personalizada no disco e recarregá-los conforme necessário. A paleta de cores usado mais recentemente é salva no registro e carregada automaticamente na próxima vez que iniciar o Visual Studio.
+Você pode salvar paletas de cores personalizadas no disco e recarregá-las conforme necessário. A paleta de cores usada mais recentemente é salva no registro e carregada automaticamente na próxima vez que você iniciar o Visual Studio.
 
-O **cores** janela tem duas partes:
+A janela **cores** tem duas partes:
 
-- O **paleta de cores**, que é uma matriz de amostras de cores que representam as cores que você pode usar. Você pode selecionar os exemplos para escolher as cores de primeiro e segundo plano quando você estiver usando as ferramentas de gráficos.
+- A **paleta cores**, que é uma matriz de amostras de cor que representa as cores que você pode usar. Você pode selecionar os exemplos para escolher as cores do primeiro plano e do plano de fundo quando estiver usando as ferramentas de gráficos.
 
-- O **indicador de cor**, que mostra as cores de primeiro e segundo plano e os seletores de cor da tela e o inverso.
+- O **indicador de cor**, que mostra as cores e os seletores do primeiro plano e do plano de fundo para a tela e a cor inversa.
 
-   ![Janela de cores](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
-   **Cores** janela
+   ![Janela cores](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
+   Janela **cores**
 
 > [!NOTE]
-> O **cor da tela** e **cor inverso** ferramentas só estão disponíveis para os ícones e cursores.
+> As ferramentas **cor da tela** e **cor inversa** estão disponíveis somente para ícones e cursores.
 
-Você pode usar o **cores** janela com o [barra de ferramentas do Editor de imagens](../windows/toolbar-image-editor-for-icons.md).
+Você pode usar a janela **cores** com a [barra de ferramentas do editor de imagem](./image-editor-for-icons.md).
 
-- Para exibir o **cores** janela, o botão direito do mouse em um **Editor de imagens** painel e escolha **Mostrar janela de cores**, ou vá ao menu [imagem](../windows/image-menu-image-editor-for-icons.md)  >  **Mostrar janela de cores**.
+- Para exibir a janela **cores** , clique com o botão direito do mouse em um painel do **Editor de imagem** e escolha a **janela mostrar cores**ou vá até [imagem](./image-editor-for-icons.md)do menu  >  **Mostrar cores janela**.
 
-- Para ocultar a **cores** janela, Desafixar a janela (esta ação permitirá a janela para ocultar automaticamente quando não está em uso) ou selecione o **fechar** botão.
+- Para ocultar a janela **cores** , Desafixar a janela (essa ação permitirá que a janela seja ocultada automaticamente quando não estiver em uso) ou selecione o botão **fechar** .
 
-O **cores** paleta exibe inicialmente 16 cores padrão. Com as cores exibidas, você também pode criar suas próprias cores personalizadas. Em seguida, você pode salvar e carregar uma paleta de cores personalizada.
+A paleta **cores** exibe inicialmente 16 cores padrão. Com as cores exibidas, você também pode criar suas próprias cores personalizadas. Em seguida, você pode salvar e carregar uma paleta de cores personalizada.
 
-O **seletor de cores personalizada** caixa de diálogo permite que você personalize as cores que você pode usar para sua imagem com as seguintes propriedades:
+A caixa de diálogo **seletor de cores personalizado** permite que você personalize as cores usadas para a imagem com as seguintes propriedades:
 
 |Propriedade|Descrição|
 |--------------------------|--------------------------|
-|**Exibição em cores de gradiente**|Altera os valores de uma cor selecionada.<br/><br/>Posicione a cruz na cor que você deseja alterar e mova o controle deslizante para cima ou para baixo para alterar a luminosidade ou valores RGB da cor.|
-|**Barra de luminosidade**|Define a luminosidade para a cor selecionada na **exibição em cores gradiente** caixa.<br/><br/>Selecione e arraste a seta branca a barra de brilho maior ou para baixo para o menor. O **cor** caixa exibe a cor que você selecionou e o efeito de luminosidade você definir.|
-|**Cor**|Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.|
-|**Matiz**|Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.|
-|**Sat**|Especifica o valor de saturação da cor que você está definindo. A saturação é a quantidade de cor em um matiz especificado. Os valores variam de 0 a 240.|
+|**Exibição de cor de gradiente**|Altera os valores de uma cor selecionada.<br/><br/>Posicione o cruzado na cor que você deseja alterar e mova o controle deslizante para cima ou para baixo para alterar os valores de luminosidade ou RGB da cor.|
+|**Barra de luminosidade**|Define a luminosidade da cor selecionada na caixa de exibição de **cor do gradiente** .<br/><br/>Selecione e arraste a seta branca para cima na barra para obter mais brilho ou para menos. A caixa de **cores** exibe a cor que você selecionou e o efeito da luminosidade que você definiu.|
+|**Cor**|Lista o matiz (valor da roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, em que 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.|
+|**Matiz**|Lista o matiz (valor da roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, em que 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.|
+|**Sat**|Especifica o valor de saturação da cor que você está definindo. Saturação é a quantidade de cores em um matiz especificado. Os valores variam de 0 a 240.|
 |**Luminosidade**|Lista a luminosidade (brilho) da cor que você está definindo. Os valores variam de 0 a 240.|
-|**Vermelho**|Especifica o valor de vermelho da cor que você está definindo. Os valores variam de 0 a 255.|
-|**Verde**|Especifica o valor de verde da cor que você está definindo. Os valores variam de 0 a 255.|
-|**Azul**|Especifica o valor de azul da cor que você está definindo. Os valores variam de 0 a 255.|
+|**Vermelho**|Especifica o valor vermelho da cor que você está definindo. Os valores variam de 0 a 255.|
+|**Verde**|Especifica o valor verde da cor que você está definindo. Os valores variam de 0 a 255.|
+|**Azul**|Especifica o valor azul da cor que você está definindo. Os valores variam de 0 a 255.|
 
-Você pode salvar e carregar um **cores** paleta que contém cores personalizadas. Por padrão, o **cores** paleta usada mais recentemente é carregada automaticamente quando você inicia o Visual Studio.
+Você pode salvar e carregar uma paleta de **cores** que contém cores personalizadas. Por padrão, a paleta **cores** usada mais recentemente é carregada automaticamente quando você inicia o Visual Studio.
 
 > [!TIP]
-> Uma vez que o **Editor de imagens** não tem meios para restaurar o padrão **cores** paleta, você deve salvar o padrão **cores** paleta sob um nome como  *Standard.PAL* ou *default.pal* para que você possa facilmente restaurar as configurações padrão.
+> Como o **Editor de imagem** não tem meios para restaurar a paleta de **cores** padrão, você deve salvar a paleta de **cores** padrão em um nome como *standard. PAL* ou *Default. PAL* para que você possa restaurar facilmente as configurações padrão.
 
-Use o **carregar cores de paleta** caixa de diálogo Carregar paletas de cores especiais para usar em seu projeto de C++ com as seguintes propriedades:
+Use a caixa de diálogo **carregar cores da paleta** para carregar paletas de cores especiais para usar em seu projeto C++ com as seguintes propriedades:
 
 |Propriedade|Descrição|
 |-----------------|-----------------|
-|**Examinar**|Especifica o local onde você deseja localizar um arquivo ou pasta.<br/><br/>Selecione a seta para escolher outro local, ou selecione o ícone de pasta na barra de ferramentas para mover para cima níveis.|
-|**Nome do arquivo**|Fornece um espaço para você digitar o nome do arquivo que você deseja abrir.<br/><br/>Para localizar rapidamente um arquivo aberto anteriormente, selecione o nome do arquivo na lista suspensa, se disponível.<br/><br/>Se você estiver procurando por um arquivo, você pode usar asteriscos (*) como caracteres curinga. Por exemplo, você pode digitar \*.\* para ver uma lista de todos os arquivos. Você também pode digitar o caminho completo de um arquivo, por exemplo, *C:\My Documents\MyColorPalette.pal* ou  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
-|**Arquivos de tipo**|Lista os tipos de arquivos a serem exibidos.<br/><br/>Paleta (*. PAL) é o tipo de arquivo padrão para paletas de cores.|
+|**Look in**|Especifica o local onde você deseja localizar um arquivo ou uma pasta.<br/><br/>Selecione a seta para escolher outro local ou selecione o ícone de pasta na barra de ferramentas para mover os níveis para cima.|
+|**Nome do arquivo**|Fornece um espaço para digitar o nome do arquivo que você deseja abrir.<br/><br/>Para localizar rapidamente um arquivo que você abriu anteriormente, selecione o nome do arquivo na lista suspensa, se disponível.<br/><br/>Se você estiver procurando um arquivo, poderá usar asteriscos (*) como curingas. Por exemplo, você pode digitar \* . \* para ver uma lista de todos os arquivos. Você também pode digitar o caminho completo de um arquivo, por exemplo, *C:\Meus Documents\MyColorPalette.PAL* ou * \\ \NetworkServer\MyFolder\MyColorPalette.PAL*.|
+|**Arquivos do tipo**|Lista os tipos de arquivos a serem exibidos.<br/><br/>A paleta (*. PAL) é o tipo de arquivo padrão para paletas de cores.|
 
-## <a name="how-to"></a>Como
+## <a name="how-to"></a>Instruções
 
-### <a name="to-select-foreground-or-background-colors"></a>Para selecionar cores de primeiro plano ou segundo plano
+### <a name="to-select-foreground-or-background-colors"></a>Para selecionar cores de primeiro plano ou plano de fundo
 
-Exceto para o **borracha**, ferramentas na **Editor de imagens** desenho de barra de ferramentas com a atual cor de primeiro plano ou segundo plano quando você pressiona o botão esquerdo ou direito do mouse, respectivamente.
+Exceto para o **apagador**, as ferramentas na barra de ferramentas do **Editor de imagens** são desenhadas com a cor atual do primeiro plano ou do plano de fundo quando você pressiona o botão esquerdo ou direito do mouse, respectivamente.
 
-- Para selecionar uma cor de primeiro plano, com o botão esquerdo do mouse, selecione a cor desejada na **cores** paleta.
+- Para selecionar uma cor de primeiro plano, com o botão esquerdo do mouse, selecione a cor desejada na paleta **cores** .
 
-- Para selecionar uma cor de plano de fundo, com o botão direito do mouse, selecione a cor desejada na **cores** paleta.
+- Para selecionar uma cor de plano de fundo, com o botão direito do mouse, selecione a cor desejada na paleta **cores** .
 
 ### <a name="to-fill-a-bounded-area-of-an-image-with-a-color"></a>Para preencher uma área limitada de uma imagem com uma cor
 
-O **Editor de imagens** fornece o **preencher** colocados de ferramenta para o preenchimento de qualquer área de imagem com a cor de desenho atual ou a cor de plano de fundo atual.
+O **Editor de imagem** fornece a ferramenta **preencher** para preencher qualquer área de imagem fechada com a cor de desenho atual ou a cor de plano de fundo atual.
 
-### <a name="to-use-the-fill-tool"></a>Para usar a ferramenta de preenchimento
+### <a name="to-use-the-fill-tool"></a>Para usar a ferramenta preencher
 
-1. Use o **Editor de imagens** barra de ferramentas ou vá até o menu **imagem** > **ferramentas** e selecione o **preencher** ferramenta.
+1. Use a barra de ferramentas do **Editor de imagem** ou vá para menu ferramentas de **imagem**  >  **Tools** e selecione a ferramenta **preencher** .
 
-1. Se necessário, escolha as cores de desenho. No [paleta de cores](../windows/colors-window-image-editor-for-icons.md), selecione o botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.
+1. Se necessário, escolha desenhar cores. Na [paleta cores](./image-editor-for-icons.md), selecione o botão esquerdo do mouse para selecionar uma cor de primeiro plano ou o botão direito do mouse para selecionar uma cor de plano de fundo.
 
-1. Mover o **preenchimento** ferramenta para a área que você deseja preencher.
+1. Mova a ferramenta **preenchimento** para a área que você deseja preencher.
 
-1. Selecione o botão esquerdo ou direito do mouse para preencher com a cor de primeiro plano ou a cor do plano de fundo, respectivamente.
+1. Selecione o botão esquerdo ou direito do mouse para preencher com a cor do primeiro plano ou a cor do plano de fundo, respectivamente.
 
-### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Para selecionar uma cor de uma imagem para usar em outro lugar
+### <a name="to-pick-up-a-color-from-an-image-to-use-elsewhere"></a>Para selecionar uma cor de uma imagem a ser usada em outro lugar
 
-O **selecionar cor**, ou seleção de cor, ferramenta faz com qualquer cor na imagem a cor de primeiro plano atual ou a cor do plano de fundo, dependendo se você pressionar a esquerda ou para o botão direito do mouse. Para cancelar a **selecionar cor** de ferramentas, escolha outra ferramenta.
+A ferramenta **selecionar cor**, ou retirada de cor, faz qualquer cor na imagem da cor do primeiro plano ou da cor do plano de fundo atual, dependendo se você pressiona o botão esquerdo ou direito do mouse. Para cancelar a ferramenta **selecionar cor** , escolha outra ferramenta.
 
-1. Use o **Editor de imagens** barra de ferramentas ou vá até o menu **imagem** > **ferramentas** e selecione o **selecionar cor** ferramenta.
+1. Use a barra de ferramentas do **Editor de imagem** ou vá para menu ferramentas de **imagem**  >  **Tools** e selecione a ferramenta **selecionar cor** .
 
-1. Selecione a cor que você deseja acompanhar a partir da imagem.
+1. Selecione a cor que você deseja escolher na imagem.
 
    > [!NOTE]
-   > Depois que você selecionar uma cor, o **Editor de imagens** ferramenta reativa usadas mais recentemente.
+   > Depois de selecionar uma cor, o **Editor de imagem** reativa a ferramenta usada mais recentemente.
 
 1. Desenhe usando o botão esquerdo do mouse para a cor de primeiro plano ou o botão direito do mouse para a cor do plano de fundo.
 
 ### <a name="to-choose-the-background"></a>Para escolher o plano de fundo
 
-Quando você mover ou copia uma seleção de uma imagem, os pixels da seleção que correspondem à cor do plano de fundo atual são, por padrão, de modo transparente e eles não ocultam pixels no local de destino.
+Quando você move ou copia uma seleção de uma imagem, todos os pixels na seleção que correspondem à cor do plano de fundo atual são, por padrão, transparentes e não obscurecem os pixels no local de destino.
 
-Você pode alternar de um plano de fundo transparente (o padrão) para um plano de fundo opaco e vice-versa. Quando você usa uma ferramenta de seleção, o **plano de fundo transparente** e **tela de fundo opaca** opções aparecem no **opção** seletor do **doEditordeimagens** barra de ferramentas.
+Você pode alternar de um plano de fundo transparente (o padrão) para um plano de fundo opaco e voltar novamente. Quando você usa uma ferramenta de seleção, as opções de **plano de fundo transparente** e de **plano de fundo opaco** aparecem no seletor de **opção** na barra de ferramentas do **Editor de imagem** .
 
-![Opções de plano de fundo &#45; opaca ou transparente](../windows/media/vcimageeditoropaqtranspback.gif "opções de plano de fundo &#45; opaca ou transparente")<br/>
-**Opções de transparentes e opacas** sobre o **barra de ferramentas do Editor de imagens**
+![Opções em segundo plano &#45; opaca ou transparente](../windows/media/vcimageeditoropaqtranspback.gif "Opções em segundo plano &#45; opaca ou transparente")<br/>
+**Opções transparentes e opacas** na **barra de ferramentas do editor de imagem**
 
 #### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Para alternar entre um plano de fundo transparente e opaco
 
-No **Editor de imagens** barra de ferramentas, selecione a **opção** seletor e, em seguida, escolha o plano de fundo apropriado:
+Na barra de ferramentas do **Editor de imagem** , selecione o seletor de **opção** e, em seguida, escolha o plano de fundo apropriado:
 
-- **Tela de fundo opaca (O)**: Imagem existente é obscurecida por todas as partes da seleção.
+- **Plano de fundo opaco (O)**: a imagem existente é obscurecida por todas as partes da seleção.
 
-- **Plano de fundo transparente (T)**: Mostra a imagem existente por meio de partes da seleção que correspondem à cor do plano de fundo atual.
+- **Plano de fundo transparente (T)**: imagem existente mostra as partes da seleção que correspondem à cor de plano de fundo atual.
 
 > [!TIP]
-> Para um atalho, sobre o **imagem** menu, marque ou desmarque **desenho opaco**.
+> Para um atalho, no menu **imagem** , selecione ou desmarque **desenhar opaco**.
 
 Você pode alterar a cor do plano de fundo enquanto uma seleção já estiver em vigor para alterar quais partes da imagem são transparentes.
 
 ### <a name="to-invert-the-colors-in-a-selection"></a>Para inverter as cores em uma seleção
 
-O **Editor de imagens** fornece uma maneira conveniente de Inverter cores na parte da imagem selecionada para que você possa fazer como uma imagem apareceria com cores invertidas.
+O **Editor de imagem** fornece uma maneira conveniente de inverter as cores na parte selecionada da imagem para que você possa saber como uma imagem seria exibida com cores invertidas.
 
-Para inverter cores na seleção atual, acesse o menu **imagem** > **Inverter cores**.
+Para inverter as cores na seleção atual, vá para menu **imagem**  >  **inverter cores**.
 
-### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Para personalizar ou alterar as cores na paleta de cores
+### <a name="to-customize-or-change-colors-on-the-colors-palette"></a>Para personalizar ou alterar cores na paleta cores
 
-1. Vá ao menu **imagem** > **ajustar cores**.
+1. Ir para **imagem**de menu  >  **ajustar cores**.
 
-1. No **seletor de cores personalizada** diálogo caixa, defina a cor, digitando valores RGB ou HSL nas caixas de texto apropriado ou escolha uma cor na **exibição em cores gradiente** caixa.
+1. Na caixa de diálogo **seletor de cores personalizado** , defina a cor digitando os valores RGB ou HSL nas caixas de texto apropriadas ou escolha uma cor na caixa de **exibição cor do gradiente** .
 
-1. Defina a luminosidade movendo o controle deslizante **luminosidade** barra.
+1. Defina a luminosidade movendo o controle deslizante na barra de **luminosidade** .
 
-1. Número de cores personalizada é pontilhada. Se você quiser a cor sólida mais próxima a cor pontilhada, clique duas vezes o **cor** caixa.
+1. Muitas cores personalizadas são dificadas. Se você quiser que a cor sólida fique mais próxima da cor diquerda, clique duas vezes na caixa de **cores** .
 
-   Se você decidir que quer a cor pontilhada, mova o controle deslizante **luminosidade** barra ou mover a mira na **exibição de cor gradiente** novamente para restaurar o pontilhado.
+   Se, posteriormente, você decidir que deseja a cor pontilhada, mova o controle deslizante na barra de **luminosidade** ou mova os cabelos na caixa de **exibição cor do gradiente** novamente para restaurar o pontilhado.
 
-1. Selecione **Okey** para adicionar a nova cor.
+1. Selecione **OK** para adicionar a nova cor.
 
 ### <a name="to-save-a-custom-colors-palette"></a>Para salvar uma paleta de cores personalizadas
 
-1. Vá ao menu **imagem** > **Salvar paleta**.
+1. Vá até **imagem**de menu  >  **salvar paleta**.
 
-1. Navegue até o diretório onde você deseja salvar a paleta e digite um nome para a paleta.
+1. Navegue até o diretório em que você deseja salvar a paleta e digite um nome para a paleta.
 
-1. Selecione **Salvar**.
+1. Clique em **Salvar**.
 
 ### <a name="to-load-a-custom-colors-palette"></a>Para carregar uma paleta de cores personalizadas
 
-1. Vá ao menu **imagem** > **carregar paleta**.
+1. Ir para menu **imagem**  >  **carregar paleta**.
 
-1. No **carregar paleta de cores** caixa de diálogo caixa, navegue até o diretório correto e selecione a paleta que você deseja carregar. **Cor** paletas são salvos com uma extensão de arquivo. PAL.
+1. Na caixa de diálogo **paleta de cores de carregamento** , navegue até o diretório correto e selecione a paleta que deseja carregar. As paletas de **cores** são salvas com uma extensão de arquivo. PAL.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -227,8 +227,8 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Editor de imagens para ícones](../windows/image-editor-for-icons.md)<br/>
-[Como: Criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Como: Editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Como: Usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Editor de imagem para ícones](../windows/image-editor-for-icons.md)<br/>
+[Como: criar um ícone ou outra imagem](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Como: editar uma imagem](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Como: usar uma ferramenta de desenho](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230487"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503885"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controles ActiveX MFC: adicionando propriedades personalizadas
 
@@ -40,7 +40,7 @@ As propriedades personalizadas são fornecidas em quatro variedades de implement
 
    A implementação com parâmetros tem suporte pelo Assistente para adicionar propriedade. Uma propriedade parametrizada (às vezes chamada de matriz de propriedade) pode ser usada para acessar um conjunto de valores por meio de uma única propriedade do seu controle. A macro de entrada do mapa de expedição para esta implementação é DISP_PROPERTY_PARAM. Para obter mais informações sobre como implementar esse tipo, consulte [implementando uma propriedade parametrizada](mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: Tópicos avançados.
 
-## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a>Usando o assistente para adicionar propriedade para adicionar uma propriedade personalizada
+## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a> Usando o assistente para adicionar propriedade para adicionar uma propriedade personalizada
 
 O procedimento a seguir demonstra como adicionar uma propriedade personalizada, CircleOffset, que usa a implementação de métodos get/set. A propriedade personalizada CircleOffset permite que o usuário do controle desloque o círculo do centro do retângulo delimitador do controle. O procedimento para adicionar propriedades personalizadas com uma implementação diferente de métodos get/set é muito semelhante.
 
@@ -56,7 +56,7 @@ Esse mesmo procedimento também pode ser usado para adicionar outras propriedade
 
 1. No menu de atalho, clique em **Adicionar** e, em seguida, clique em **Adicionar Propriedade**.
 
-   Isso abre o [Assistente para adicionar Propriedade](../ide/names-add-property-wizard.md).
+   Isso abre o [Assistente para adicionar Propriedade](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard).
 
 1. Na caixa **nome da propriedade** , digite *CircleOffset*.
 
@@ -68,7 +68,7 @@ Esse mesmo procedimento também pode ser usado para adicionar outras propriedade
 
 1. Clique em **Concluir**.
 
-## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>Adicionar alterações do assistente de propriedade para propriedades personalizadas
+## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> Adicionar alterações do assistente de propriedade para propriedades personalizadas
 
 Quando você adiciona a propriedade personalizada CircleOffset, o assistente para adicionar propriedade faz alterações no cabeçalho (. H) e a implementação (. CPP) dos arquivos da classe Control.
 
@@ -92,7 +92,7 @@ Por fim, as implementações `GetCircleOffset` das `SetCircleOffset` funções e
 
 Observe que o assistente para adicionar propriedade adiciona automaticamente uma chamada, para [SetModifiedFlag](reference/colecontrol-class.md#setmodifiedflag), ao corpo da função Set. Chamar essa função marca o controle como modificado. Se um controle tiver sido modificado, seu novo estado será salvo quando o contêiner for salvo. Essa função deve ser chamada sempre que uma propriedade, salva como parte do estado persistente do controle, altera o valor.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)<br/>
 [Controles ActiveX do MFC: Propriedades](mfc-activex-controls-properties.md)<br/>

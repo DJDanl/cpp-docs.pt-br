@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3370
 ms.assetid: ee6d4c85-78fc-42b2-836e-5cc491a3b2ba
-ms.openlocfilehash: 7c1a9e4e099fc33dd585e5cdbffa2bbb8ea36987
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4200cb7840899ad7b3719e949138010bd478ea3f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755584"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503184"
 ---
 # <a name="compiler-error-c3370"></a>Erro do compilador C3370
 
 ' idl_module Name ': idl_module ainda não definido
 
-Antes de poder usar [idl_module](../../windows/idl-module.md) para especificar um ponto de entrada em uma dll, primeiro você deve usar `idl_module` para especificar o nome da dll.
+Antes de poder usar [idl_module](../../windows/attributes/idl-module.md) para especificar um ponto de entrada em uma dll, você deve primeiro usar `idl_module` para especificar o nome da dll.
 
 O exemplo a seguir gera C3370:
 

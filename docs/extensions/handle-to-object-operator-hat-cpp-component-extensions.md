@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225144"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503136"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operador Handle to Object (^) (C++/CLI e C++/CX)
 
-O *Declarador de identificador* ( `^` , pronunciado "Hat"), modifica o [especificador](../cpp/overview-of-declarators.md) de tipo para significar que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto não está mais acessível.
+O *Declarador de identificador* ( `^` , pronunciado "Hat"), modifica o [especificador](../cpp/declarations-and-definitions-cpp.md) de tipo para significar que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto não está mais acessível.
 
 ## <a name="accessing-the-declared-object"></a>Acessar o objeto declarado
 
@@ -221,7 +221,7 @@ int main() {
 
 Opção do compilador: `/clr`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Operador de referência de rastreamento](tracking-reference-operator-cpp-component-extensions.md)

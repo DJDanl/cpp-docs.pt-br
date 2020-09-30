@@ -3,12 +3,12 @@ title: Aplicativos de área de trabalho (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: f8e3dd386aee835ff383ba7567a5c320f206476e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404955"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504439"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos de área de trabalho (Visual C++)
 
@@ -38,13 +38,13 @@ Qualquer aplicativo de área de trabalho em C++ pode usar classes de biblioteca 
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Aplicativos do Console do Windows em C++](console-applications-in-visual-cpp.md)|Contém informações sobre aplicativos de console. Um aplicativo de console Win32 (ou Win64) não tem nenhuma janela própria e nenhum loop de mensagem. Ele é executado na janela do console e a entrada e a saída são manipuladas por meio da linha de comando.|
+|[Aplicativos do Console do Windows em C++](./overview-of-windows-programming-in-cpp.md)|Contém informações sobre aplicativos de console. Um aplicativo de console Win32 (ou Win64) não tem nenhuma janela própria e nenhum loop de mensagem. Ele é executado na janela do console e a entrada e a saída são manipuladas por meio da linha de comando.|
 |[Passo a passo: criando aplicativos da área de trabalho do Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crie um aplicativo de área de trabalho do Windows simples.|
-|[Criando um aplicativo da área de trabalho do Windows vazio](creating-an-empty-windows-desktop-application.md)|Como criar um projeto de área de trabalho do Windows que não tem arquivos padrão.|
-|[Adicionando arquivos a aplicativos Win32 vazios](adding-files-to-an-empty-win32-applications.md)|Como adicionar arquivos a um projeto vazio.|
+|[Criando um aplicativo da área de trabalho do Windows vazio](./overview-of-windows-programming-in-cpp.md)|Como criar um projeto de área de trabalho do Windows que não tem arquivos padrão.|
+|[Adicionando arquivos a aplicativos Win32 vazios](./overview-of-windows-programming-in-cpp.md)|Como adicionar arquivos a um projeto vazio.|
 |[Trabalhando com arquivos de recurso](working-with-resource-files.md)|Como adicionar imagens, ícones, tabelas de cadeia de caracteres e outros recursos a um aplicativo de área de trabalho.|
 |[Recursos para criar um jogo usando DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Links para conteúdo para criar jogos em C++.|
-|[Instruções passo a passo: criando e usando uma biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md)|Como criar um arquivo binário. lib.|
+|[Instruções passo a passo: criando e usando uma biblioteca estática](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|Como criar um arquivo binário. lib.|
 |[Como: usar o SDK do Windows 10 em um aplicativo de área de trabalho do Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contém etapas para configurar seu projeto para criar usando o SDK do Windows 10.|
 
 ## <a name="related-articles"></a>Artigos relacionados
@@ -55,6 +55,6 @@ Qualquer aplicativo de área de trabalho em C++ pode usar classes de biblioteca 
 |[Hilo: desenvolvendo aplicativos C++ para o Windows 7](/previous-versions/msdn10/ff708696(v=msdn.10))|Descreve como criar um aplicativo de área de trabalho do Windows Rich Client que usa animação do Windows e Direct2D para criar uma interface do usuário baseada em carrossel.  Este tutorial não foi atualizado desde o Windows 7, mas ainda fornece uma introdução completa à programação do Win32.|
 |[Visão geral da programação do Windows em C++](overview-of-windows-programming-in-cpp.md)|Descreve os principais recursos da programação de área de trabalho do Windows em C++.|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [C++ no Visual Studio](../overview/visual-cpp-in-visual-studio.md)

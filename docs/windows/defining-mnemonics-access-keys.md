@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222063"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504456"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Como definir acesso e valores de controle (C++)
 
@@ -103,14 +103,14 @@ Você pode adicionar valores a um controle de caixa de combinação, contanto qu
 
 1. Pressione **Enter** quando terminar de adicionar valores.
 
-Para obter informações sobre como ampliar a parte suspensa de uma caixa de combinação, consulte [definindo o tamanho da caixa de combinação e sua lista suspensa](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).
+Para obter informações sobre como ampliar a parte suspensa de uma caixa de combinação, consulte [definindo o tamanho da caixa de combinação e sua lista suspensa](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Você não pode adicionar valores a projetos Win32 usando este procedimento (a propriedade **Data** está esmaecida para projetos Win32). Como os projetos Win32 não têm bibliotecas que adicionam esse recurso, você deve adicionar valores a uma caixa de combinação com um projeto Win32 programaticamente.
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Para testar a aparência dos valores em uma caixa de combinação
 
-1. Depois de inserir valores na propriedade **Data** , selecione o botão **testar** na barra de ferramentas do editor de [caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+1. Depois de inserir valores na propriedade **Data** , selecione o botão **testar** na barra de ferramentas do editor de [caixa de diálogo](./dialog-editor.md).
 
 1. Tente rolar para baixo a lista de valores inteiros. Os valores aparecem exatamente como são digitados na propriedade **Data** na janela **Propriedades** . Não há nenhuma verificação ortográfica ou de capitalização.
 
@@ -118,7 +118,7 @@ Para obter informações sobre como ampliar a parte suspensa de uma caixa de com
 
 ## <a name="radio-button-values"></a>Valores do botão de opção
 
-Quando você adiciona botões de opção a uma caixa de diálogo, trate-os como um grupo definindo uma propriedade de **grupo** na janela **Propriedades** para o primeiro botão no grupo. Uma ID de controle para esse botão de opção aparece no [Assistente para Adicionar variável de membro](../ide/add-member-variable-wizard.md), permitindo que você adicione uma variável de membro para o grupo de botões de opção.
+Quando você adiciona botões de opção a uma caixa de diálogo, trate-os como um grupo definindo uma propriedade de **grupo** na janela **Propriedades** para o primeiro botão no grupo. Uma ID de controle para esse botão de opção aparece no [Assistente para Adicionar variável de membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard), permitindo que você adicione uma variável de membro para o grupo de botões de opção.
 
 Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. Adicione cada grupo usando o procedimento a seguir.
 
@@ -139,7 +139,7 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. 
 
 1. Clique com o botão direito do mouse no primeiro controle de botão de opção na ordem de tabulação (o controle dominante e aquele com a propriedade de **grupo** definida como **true**) e escolha **Adicionar variável**.
 
-1. No [Assistente Adicionar variável de membro](../ide/add-member-variable-wizard.md), marque a caixa de seleção **variável de controle** e, em seguida, selecione o botão de opção **valor** .
+1. No [Assistente Adicionar variável de membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard), marque a caixa de seleção **variável de controle** e, em seguida, selecione o botão de opção **valor** .
 
    - Na caixa **nome da variável** , digite um nome para a nova variável de membro.
 
@@ -151,7 +151,7 @@ Você pode ter mais de um grupo de botões de opção em uma caixa de diálogo. 
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: Adicionar, editar ou excluir controles](adding-editing-or-deleting-controls.md)<br/>

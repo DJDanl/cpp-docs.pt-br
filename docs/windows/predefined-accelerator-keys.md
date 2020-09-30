@@ -8,12 +8,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: beb4e878138da3dc2905c86e18fedc658d7ceecf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215144"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504293"
 ---
 # <a name="accelerator-keys-c"></a>Teclas de aceleração (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "80215144"
 
 Há várias chaves de aceleração predefinidas que podem fazer parte de um projeto de aplicativo do Windows. Algumas dessas chaves virtuais são para o ambiente do Windows. Outros oferecem suporte a aplicativos de navegador ou Unicode. Você pode usar qualquer uma dessas chaves em qualquer acelerador.
 
-|Chave|DESCRIÇÃO|
+|Chave|Descrição|
 |---------|-----------------|
 |VK_ACCEPT|(IME) aceitar|
 |VK_BROWSER_BACK|Windows Navegador, chave de **fundo**|
@@ -55,15 +55,15 @@ Há várias chaves de aceleração predefinidas que podem fazer parte de um proj
 |VK_OEM_1|Windows Para o teclado padrão dos EUA, a chave **;:**|
 |VK_OEM_102|Windows A tecla de colchete angular ou a tecla de barra invertida no teclado RT 102-Key|
 |VK_OEM_2|Windows Para o teclado padrão dos EUA, a **/?** chave|
-|VK_OEM_3|Windows Para o teclado padrão dos EUA, a chave de **`~**|
+|VK_OEM_3|Windows Para o teclado padrão dos EUA, a **`~** chave|
 |VK_OEM_4|Windows Para o teclado padrão dos EUA, a **[{** Key|
-|VK_OEM_5|Windows Para o teclado padrão dos EUA, a chave de **\\&#124;**|
+|VK_OEM_5|Windows Para o teclado padrão dos EUA, a chave de ** \\&#124;**|
 |VK_OEM_6|Windows Para o teclado padrão dos EUA, a chave **]}**|
 |VK_OEM_7|Windows Para o teclado padrão dos EUA, a chave ' aspa simples/aspas duplas '|
 |VK_OEM_COMMA|Windows Para qualquer país/região **, a chave**|
-|VK_OEM_MINUS|Windows Para qualquer país/região, a chave de **-**|
+|VK_OEM_MINUS|Windows Para qualquer país/região, a **-** chave|
 |VK_OEM_PERIOD|Windows Para qualquer país/região, o **.** chave|
-|VK_OEM_PLUS|Windows Para qualquer país/região, a chave de **+**|
+|VK_OEM_PLUS|Windows Para qualquer país/região, a **+** chave|
 |VK_PACKET|Windows Usado para passar caracteres Unicode como se eles estivessem pressionamentos de teclas.|
 |VK_RCONTROL|Tecla **Ctrl direita**|
 |VK_RMENU|Tecla de **menu à direita**|
@@ -77,12 +77,12 @@ Há várias chaves de aceleração predefinidas que podem fazer parte de um proj
 
 ## <a name="accelerator-key-association"></a>Associação de chave de aceleração
 
-Muitas vezes, você deseja que um item de menu e uma combinação de teclado emitam o mesmo comando de programa. Você faz essa ação atribuindo o mesmo identificador de recurso (ID) ao item de menu e a uma entrada na tabela de acelerador do aplicativo. Em seguida, edite a legenda do item de menu para mostrar o nome do acelerador. Para obter mais informações sobre itens de menu e teclas de aceleração, consulte [comandos de menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Muitas vezes, você deseja que um item de menu e uma combinação de teclado emitam o mesmo comando de programa. Você faz essa ação atribuindo o mesmo identificador de recurso (ID) ao item de menu e a uma entrada na tabela de acelerador do aplicativo. Em seguida, edite a legenda do item de menu para mostrar o nome do acelerador. Para obter mais informações sobre itens de menu e teclas de aceleração, consulte [comandos de menu](./menu-command-properties.md).
 
 ## <a name="requirements"></a>Requisitos
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Editor de aceleradores](../windows/accelerator-editor.md)<br/>
+[Editor de acelerador](../windows/accelerator-editor.md)<br/>

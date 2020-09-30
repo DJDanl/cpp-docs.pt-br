@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0feff4e595be7929fd0bc80eb53a0a65a9a61f43
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040035"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502957"
 ---
 # <a name="unordered_set-class"></a>Classe unordered_set
 
@@ -205,13 +205,13 @@ A classe do alocador.
 |[bucket_size](#bucket_size)|Obtém o tamanho de um bucket.|
 |[cbegin](#cbegin)|Designa o início da sequência controlada.|
 |[cend](#cend)|Designa o fim da sequência controlada.|
-|[formatação](#clear)|Remove todos os elementos.|
+|[clear](#clear)|Remove todos os elementos.|
 |[contém](#contains)<sup>c++ 20</sup>|Verifique se há um elemento com a chave especificada no `unordered_set` .|
 |[contagem](#count)|Localiza o número de elementos que correspondem a uma chave especificada.|
 |[emplace](#emplace)|Adiciona um elemento construído no lugar.|
 |[emplace_hint](#emplace_hint)|Adiciona um elemento construído no lugar, com dica.|
 |[empty](#empty)|Testa se nenhum elemento está presente.|
-|[completo](#end)|Designa o fim da sequência controlada.|
+|[end](#end)|Designa o fim da sequência controlada.|
 |[equal_range](#equal_range)|Localiza o intervalo que corresponde a uma chave especificada.|
 |[erase](#erase)|Remove os elementos em posições especificadas.|
 |[find](#find)|Localiza um elemento que corresponde a uma chave especificada.|
@@ -564,7 +564,7 @@ Retorna um **`const`** iterador que aborda o primeiro elemento no intervalo.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** iterador de acesso de encaminhamento que aponta para o primeiro elemento do intervalo ou o local logo após o final de um intervalo vazio (para um intervalo vazio `cbegin() == cend()` ).
 
@@ -590,7 +590,7 @@ Retorna um **`const`** iterador que aborda o local logo após o último elemento
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 Um **`const`** iterador de acesso de encaminhamento que aponta muito além do fim do intervalo.
 
@@ -870,7 +870,7 @@ Tipo da chave.
 *chaves*\
 O valor de chave do elemento a ser pesquisado.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 `true` Se o elemento for encontrado no contêiner; `false` caso contrário.
 
@@ -894,7 +894,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedSet.contains(2) << '\n';
     std::cout << theUnorderedSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```
@@ -1030,7 +1030,7 @@ Args&&... args);
 *argumento*\
 Os argumentos encaminhados para criar um elemento a ser inserido no unordered_set, a menos que ele já contenha um elemento cujo valor seja ordenado de maneira equivalente.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 Um `pair` cujo **`bool`** componente retorna true se uma inserção foi feita e false se o `unordered_set` já continha um elemento cuja chave tinha um valor equivalente na ordenação e cujo componente de iterador retorna o endereço em que um novo elemento foi inserido ou onde o elemento já estava localizado.
 
@@ -1063,7 +1063,7 @@ Os argumentos encaminhados para criar um elemento a ser inserido no unordered_se
 *posição*\
 Uma dica sobre o local para começar a pesquisar o ponto de inserção correto.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 Um iterador para o elemento recém-inserido.
 
@@ -1303,7 +1303,7 @@ A posição logo após o último elemento a ser removido.
 *Chaves*\
 O valor de chave dos elementos a serem removidos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 Para as duas primeiras funções membro, um iterador bidirecional que designa o primeiro elemento restante além de quaisquer elementos removidos ou um elemento que será o final do unordered_set, se esse elemento não existir.
 
@@ -1536,7 +1536,7 @@ Argumento da função de modelo que atende aos requisitos de um [iterador de ent
 *IList*\
 O [initializer_list](../standard-library/initializer-list.md) do qual copiar os elementos.
 
-### <a name="return-value"></a>Valor de retorno
+### <a name="return-value"></a>Valor Retornado
 
 As funções de membro de elemento único, (1) e (2), retornam um [par](../standard-library/pair-structure.md) cujo **`bool`** componente é true se uma inserção foi feita e false se o unordered_set já continha um elemento cuja chave tinha um valor equivalente na ordenação. O componente do iterador do par de valor de retorno aponta para o elemento inserido recentemente se o **`bool`** componente for verdadeiro ou para o elemento existente se o **`bool`** componente for false.
 

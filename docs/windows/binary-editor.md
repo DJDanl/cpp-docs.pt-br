@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615345"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503525"
 ---
 # <a name="binary-editor-c"></a>Editor de binários (C++)
 
@@ -116,7 +116,7 @@ Você pode criar um novo recurso personalizado ou de dados colocando o recurso e
 
 1. Selecione **OK** para registrar suas alterações.
 
-Outra maneira de criar um recurso personalizado é importar um arquivo externo como o recurso personalizado, consulte [como: gerenciar recursos](../windows/how-to-import-and-export-resources.md).
+Outra maneira de criar um recurso personalizado é importar um arquivo externo como o recurso personalizado, consulte [como: gerenciar recursos](./how-to-copy-resources.md).
 
 > [!NOTE]
 > A criação de novos recursos de dados ou personalizados requer Win32.

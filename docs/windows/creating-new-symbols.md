@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 1c69e8878885acd80c285691fb0861a476af03ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160509"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504511"
 ---
 # <a name="how-to-create-symbols-c"></a>Como: criar símbolos (C++)
 
@@ -37,15 +37,15 @@ A caixa de diálogo **símbolos de recurso** permite que você adicione novos s�
 
 A caixa de diálogo contém as seguintes propriedades:
 
-|Propriedade|DESCRIÇÃO|
+|Propriedade|Descrição|
 |--------------------------|------------------------------------------|
-|**Nome**|Exibe o nome do símbolo.<br/><br/>Para obter mais informações, consulte [Symbol Name Restrictions](../windows/symbol-name-restrictions.md).|
-|**Valor**|Exibe o valor numérico do símbolo.<br/><br/>Para obter mais informações, consulte [restrições de valor de símbolo](../windows/symbol-value-restrictions.md).|
+|**Nome**|Exibe o nome do símbolo.<br/><br/>Para obter mais informações, consulte [Symbol Name Restrictions](./changing-a-symbol-or-symbol-name-id.md).|
+|**Valor**|Exibe o valor numérico do símbolo.<br/><br/>Para obter mais informações, consulte [restrições de valor de símbolo](./changing-a-symbol-or-symbol-name-id.md).|
 |**Em uso**|Quando selecionado, especifica que o símbolo está sendo usado por um ou mais recursos.<br/><br/>O recurso ou os recursos são listados na caixa **usado por** .|
 |**Mostrar símbolos somente leitura**|Quando selecionado, exibe recursos somente leitura.<br/><br/>Por padrão, a caixa de diálogo **símbolo de recurso** exibe somente os recursos modificáveis no arquivo de script de recurso, mas com essa opção selecionada, os recursos modificáveis aparecem em negrito e os recursos somente leitura são exibidos em texto sem formatação.|
 |**Usado por**|Exibe o recurso ou os recursos usando o símbolo selecionado na lista de símbolos.<br/><br/>Para mover para o editor de um determinado recurso, selecione o recurso na caixa **usado por** e escolha **Exibir usar**.|
 |**Novo**|Abre a caixa de diálogo **novo símbolo** que permite que você defina o nome e, se necessário, um valor para um novo identificador de recurso simbólico.|
-|**Alteração**|Abre a caixa de diálogo **alterar símbolo** que permite alterar o nome ou o valor de um símbolo.<br/><br/>Se o símbolo for para um controle ou recurso em uso, o símbolo só poderá ser alterado do editor de recursos correspondente. Para obter mais informações, consulte [Gerenciar símbolos](../windows/changing-unassigned-symbols.md).|
+|**Alteração**|Abre a caixa de diálogo **alterar símbolo** que permite alterar o nome ou o valor de um símbolo.<br/><br/>Se o símbolo for para um controle ou recurso em uso, o símbolo só poderá ser alterado do editor de recursos correspondente. Para obter mais informações, consulte [Gerenciar símbolos](./changing-a-symbol-or-symbol-name-id.md).|
 |**Exibir uso**|Abre o recurso que contém o símbolo no editor de recursos correspondente.|
 
 ## <a name="create-symbols"></a>Criar símbolos
@@ -86,8 +86,8 @@ Quando você estiver procurando símbolos nos **símbolos de recurso**, talvez q
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificadores de recurso (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
 [Como: Gerenciar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
-[IDs de símbolos predefinidos](../windows/predefined-symbol-ids.md)<br/>
+[IDs de símbolo predefinidas](../windows/predefined-symbol-ids.md)<br/>
