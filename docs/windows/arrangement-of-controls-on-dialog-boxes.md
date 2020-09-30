@@ -80,16 +80,16 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: ee732cfb414f011e95edbbb57b218d81179d44f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ac21096f18b1331759f9bf7dfe613100298b7296
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168571"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509667"
 ---
 # <a name="how-to-layout-controls-c"></a>Como: controles de layout (C++)
 
-O **Editor de caixa de diálogo** fornece ferramentas de layout que alinham e dimensionam os controles automaticamente. Para a maioria das tarefas, você pode usar a [barra de ferramentas do editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos os comandos da barra de ferramentas do **Editor de caixa de diálogo** também estão disponíveis no menu **Formatar** e têm a maioria das [teclas de atalho](../windows/accelerator-keys-for-the-dialog-editor.md).
+O **Editor de caixa de diálogo** fornece ferramentas de layout que alinham e dimensionam os controles automaticamente. Para a maioria das tarefas, você pode usar a [barra de ferramentas do editor de caixa de diálogo](./dialog-editor.md). Todos os comandos da barra de ferramentas do **Editor de caixa de diálogo** também estão disponíveis no menu **Formatar** e têm a maioria das [teclas de atalho](./dialog-editor.md).
 
 Muitos comandos de layout para caixas de diálogo estão disponíveis somente quando mais de um controle é selecionado. Você pode selecionar um único controle ou vários controles, e quando mais de um controle for selecionado, o primeiro que você selecionar será por padrão o controle dominante.
 
@@ -105,18 +105,18 @@ Você pode organizar os controles nas caixas de diálogo com o **Editor de caixa
 
 - Sem nenhum recurso de ajuste ou alinhamento.
 
-A [barra de ferramentas do editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contém botões que controlam o estado.
+A [barra de ferramentas do editor de caixa de diálogo](./dialog-editor.md) contém botões que controlam o estado.
 
-- Para alterar o estado, selecione o ícone apropriado ou vá para o **formato** do menu > **configurações do guia**.
+- Para alterar o estado, selecione o ícone apropriado ou vá para menu **formato**  >  **configurações de guia**.
 
 A caixa de diálogo **configurações do guia** tem as seguintes propriedades:
 
-|Propriedade|DESCRIÇÃO|
+|Propriedade|Descrição|
 |---|---|
 |**Guias de layout**|Exibe as configurações para os guias de layout.|
 |**Nenhuma**|Oculta as ferramentas de layout.|
 |**Réguas e guias**|Quando habilitada, o adiciona réguas às ferramentas de layout e permite que os guias sejam colocados nas réguas. Os guias padrão são as margens.|
-|**Grade**|Cria uma grade de layout. Os novos controles serão alinhados automaticamente à grade.|
+|**Grid**|Cria uma grade de layout. Os novos controles serão alinhados automaticamente à grade.|
 |**Espaçamento da grade**|Exibe as configurações para o espaçamento de grade nas unidades da caixa de diálogo (DLUs).|
 |**Largura: DLUs**|Define a largura da grade de layout em DLUs. Um DLU horizontal é a largura média da fonte da caixa de diálogo dividida por 4.|
 |**Altura: DLUs**|Define a altura da grade de layout em DLUs. Um DLU vertical é a altura média da fonte da caixa de diálogo dividida por 8.|
@@ -145,17 +145,17 @@ Os guias aparecem como linhas pontilhadas azuis na caixa de diálogo exibida no 
 
 As marcas de escala nas réguas que determinam o espaçamento de guias e controles são definidas por unidades de caixa de diálogo (DLUs). Um DLU é baseado no tamanho da fonte da caixa de diálogo, normalmente MS Shell de 8 pontos Dlg. Um DLU horizontal é a largura média da fonte da caixa de diálogo dividida por quatro. Um DLU vertical é a altura média da fonte dividida por 8.
 
-- Para alterar os intervalos das marcas de escala, vá para **formato** de menu > **configurações do guia**e, em seguida, no campo **espaçamento da grade** , especifique uma nova largura e altura em DLUs.
+- Para alterar os intervalos das marcas de escala, vá para menu **formato**  >  **configurações de guia**e, em seguida, no campo **espaçamento da grade** , especifique uma nova largura e altura em DLUs.
 
 ### <a name="layout-grid"></a>Grade de layout
 
 Quando você estiver colocando ou Organizando controles em uma caixa de diálogo, use a grade de layout para um posicionamento mais preciso. Quando a grade for ativada, os controles se ajustarão às linhas pontilhadas da grade como se estiverem magnetizados.
 
-- Para ativar ou desativar a grade de layout, vá para **formato** de menu > **configurações de guia** e marque ou desmarque o botão de **grade** .
+- Para ativar ou desativar a grade de layout, vá para menu **Formatar**  >  **configurações de guia** e marque ou desmarque o botão de **grade** .
 
-   Você ainda pode controlar a grade em janelas de **Editor de caixa de diálogo** individuais usando o botão **Alternar grade** na barra de ferramentas do editor de caixa de [diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+   Você ainda pode controlar a grade em janelas de **Editor de caixa de diálogo** individuais usando o botão **Alternar grade** na barra de ferramentas do editor de caixa de [diálogo](./dialog-editor.md).
 
-- Para alterar o tamanho da grade de layout, vá para **formato** de menu > **configurações de guia** e digite a altura e a largura em DLUs para as células na grade. A altura ou largura mínima é 4.
+- Para alterar o tamanho da grade de layout, vá para menu **Formatar**  >  **configurações de guia** e digite a altura e a largura em DLUs para as células na grade. A altura ou largura mínima é 4.
 
 ### <a name="disable-guides"></a>Desabilitar guias
 
@@ -165,14 +165,14 @@ Você pode usar chaves especiais em conjunto com o mouse para desabilitar o efei
 
 - Para mover os guias sem mover os controles encaixados, arraste o guia enquanto mantém a tecla **Shift** pressionada.
 
-- Para desativar os guias, vá para **formato** de menu > **configurações do guia**. Em seguida, em **guias de layout**, selecione **nenhum**.
+- Para desativar os guias, vá para menu **Formatar**  >  **guia Configurações**. Em seguida, em **guias de layout**, selecione **nenhum**.
 
    > [!TIP]
-   > Você também pode usar o atalho no **formato** de menu > **guias de alternância**.
+   > Você também pode usar o atalho no menu **Formatar**  >  **guias de alternância**.
 
 ## <a name="select-controls"></a>Selecionar controles
 
-Selecione controles para dimensionar, alinhar, mover, copiar ou excluí-los e, em seguida, conclua a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e alinhamento na [barra de ferramentas do editor de caixa de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+Selecione controles para dimensionar, alinhar, mover, copiar ou excluí-los e, em seguida, conclua a operação desejada. Na maioria dos casos, você precisa selecionar mais de um controle para usar as ferramentas de dimensionamento e alinhamento na [barra de ferramentas do editor de caixa de diálogo](./dialog-editor.md).
 
 Quando um controle é selecionado, ele tem uma borda sombreada em torno dele com identificadores de dimensionamento sólidos (ativos) ou vazios (inativos), pequenos quadrados que aparecem na borda de seleção. Quando vários controles são selecionados, o controle dominante tem identificadores de dimensionamento sólidos e todos os outros controles selecionados têm identificadores de dimensionamento vazios.
 
@@ -212,7 +212,7 @@ Use as alças de dimensionamento para redimensionar um controle. Quando o pontei
 
 - Para dimensionar automaticamente um controle para se ajustar ao texto dentro dele, vá para o **formato** de menu ou clique com o botão direito do mouse no controle e escolha **tamanho para conteúdo**.
 
-- Para tornar os controles do mesmo tamanho, selecione os controles que você deseja redimensionar e vá para o **formato** do menu > **igualar o mesmo tamanho**, escolha **ambos**, **altura**ou **largura**.
+- Para tornar os controles do mesmo tamanho, selecione os controles que você deseja redimensionar e vá para **formato**de menu  >  **igualar tamanho**, escolha **ambos**, **altura**ou **largura**.
 
    Você redimensiona um grupo de controles com base no tamanho do controle dominante, que é o controle selecionado primeiro na série. O tamanho final dos controles no grupo depende do tamanho do controle dominante.
 
@@ -222,7 +222,7 @@ Use as alças de dimensionamento para redimensionar um controle. Quando o pontei
 
 ### <a name="other-controls"></a>Outros controles
 
-Você pode dimensionar uma caixa de combinação ao adicioná-la à caixa de diálogo. Você também pode especificar o tamanho da caixa de listagem suspensa. Para obter mais informações, consulte [Adicionando valores a um controle caixa de combinação](../windows/adding-values-to-a-combo-box-control.md).
+Você pode dimensionar uma caixa de combinação ao adicioná-la à caixa de diálogo. Você também pode especificar o tamanho da caixa de listagem suspensa. Para obter mais informações, consulte [Adicionando valores a um controle caixa de combinação](./defining-mnemonics-access-keys.md).
 
 1. Selecione o botão de seta suspensa à direita da caixa de combinação.
 
@@ -232,7 +232,7 @@ Você pode dimensionar uma caixa de combinação ao adicioná-la à caixa de di�
 
 1. Use a alça de dimensionamento inferior para alterar o tamanho inicial da área da lista suspensa.
 
-   ![Dimensionamento da caixa de combinação&#45;em um projeto do MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+   ![Tamanho da caixa de&#45;de combinação em um projeto do MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
 
 1. Selecione a seta suspensa novamente para fechar a parte da lista suspensa da caixa de combinação.
 
@@ -243,9 +243,9 @@ Você pode dimensionar uma caixa de combinação ao adicioná-la à caixa de di�
 
 ## <a name="align-controls"></a>Alinhar controles
 
-- Para alinhar controles, selecione os controles que você deseja alinhar. Vá para o **formato** de menu > **alinhar** e escolha um dos seguintes alinhamentos:
+- Para alinhar controles, selecione os controles que você deseja alinhar. Vá para o **formato**de menu  >  **alinhar** e escolha um dos seguintes alinhamentos:
 
-   |Alinhamento|DESCRIÇÃO|
+   |Alinhamento|Descrição|
    |-----|-----------|
    |**Esquerdas**|Alinha os controles selecionados ao longo de seus lados à esquerda.|
    |**Centrais**|Alinha os controles selecionados horizontalmente ao longo de seus pontos centrais.|
@@ -256,26 +256,26 @@ Você pode dimensionar uma caixa de combinação ao adicioná-la à caixa de di�
 
    Certifique-se de selecionar o controle que você deseja que seja dominante primeiro ou defini-lo como o controle dominante antes de executar o alinhamento ou o comando de dimensionamento, uma vez que a posição final do grupo de controles depende da posição do controle dominante.
 
-- Para os controles de espaço uniforme, selecione os controles que você deseja reorganizar. Vá para o **formato** de menu > **espaço uniformemente** e escolha um dos seguintes alinhamentos de espaçamento:
+- Para os controles de espaço uniforme, selecione os controles que você deseja reorganizar. Vá para o menu **Formatar**  >  **espaço uniformemente** e escolha um dos seguintes alinhamentos de espaçamento:
 
-   |Spacing|DESCRIÇÃO|
+   |Espaçamento|Descrição|
    |---|---|
    |**Via**|Os controles de espaço uniformemente entre a mais à esquerda e o controle mais à direita selecionados.|
    |**Para baixo**|Os controles de espaço uniformemente entre o primeiro e o controle na extremidade inferior selecionados.|
 
-- Para centralizar controles, selecione o controle ou os controles que você deseja reorganizar. Vá para o **formato** de menu > **central na caixa de diálogo** e escolha uma das seguintes disposições:
+- Para centralizar controles, selecione o controle ou os controles que você deseja reorganizar. Vá para menu **Formatar**  >  **Centralizar na caixa de diálogo** e escolha uma das seguintes disposições:
 
-   |Disposição|DESCRIÇÃO|
+   |Disposição|Descrição|
    |---|---|
    |**Vertical**|Centralizar controles verticalmente na caixa de diálogo.|
    |**Horizontal**|Centralizar controles horizontalmente na caixa de diálogo.|
 
-- Para alinhar botões de push, selecione um ou mais botões de ação. Vá para o **formato** de menu > **organizar botões**e, em seguida, escolha uma das seguintes disposições:
+- Para alinhar botões de push, selecione um ou mais botões de ação. Vá para o menu **Formatar**  >  **botões organizar**e, em seguida, escolha uma das seguintes disposições:
 
-   |Disposição|DESCRIÇÃO|
+   |Disposição|Descrição|
    |---|---|
-   |**Right**|Alinha os botões de ação ao longo da borda direita da caixa de diálogo.|
-   |**Inferior**|Alinha os botões de ação ao longo da borda inferior da caixa de diálogo.|
+   |**Certo**|Alinha os botões de ação ao longo da borda direita da caixa de diálogo.|
+   |**Resultado**|Alinha os botões de ação ao longo da borda inferior da caixa de diálogo.|
 
    Se você selecionar um controle que não seja um botão de ação, sua posição não será afetada.
 
@@ -283,7 +283,7 @@ Você pode dimensionar uma caixa de combinação ao adicioná-la à caixa de di�
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: Adicionar, editar ou excluir controles](adding-editing-or-deleting-controls.md)<br/>

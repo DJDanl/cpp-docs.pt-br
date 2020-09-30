@@ -4,12 +4,12 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311875"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508971"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementando um consumidor simples
 
@@ -33,7 +33,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo **Assistente p
 > [!NOTE]
 > Para criar um aplicativo de consumidor para teste `MyProv` (o mesmo provedor descrito em [Melhoria do provedor simples somente leitura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), você deve incluir suporte a indicadores, conforme descrito em [Adição de suporte a indicadores ao consumidor](#bookmark).
 
-## <a name="retrieve" ></a> Recuperação de dados com o consumidor
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> Recuperação de dados com o consumidor
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar o aplicativo de console para usar o consumidor do OLE DB
 
@@ -64,7 +64,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo **Assistente p
     }
     ```
 
-## <a name="bookmark" ></a> Adição de suporte a indicadores ao consumidor
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> Adição de suporte a indicadores ao consumidor
 
 Um indicador é uma coluna que identifica exclusivamente linhas na tabela. Geralmente, é a coluna de chave, mas nem sempre; ela é específica do provedor. Esta seção mostra como adicionar suporte a indicadores. Para fazer isso, siga as etapas abaixo na classe de registro do usuário:
 
@@ -72,7 +72,7 @@ Um indicador é uma coluna que identifica exclusivamente linhas na tabela. Geral
 
 - Solicite uma coluna de indicadores do provedor configurando a propriedade `DBPROP_IRowsetLocate`.
 
-- Adicione uma entrada de indicador ao mapa de coluna usando a macro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+- Adicione uma entrada de indicador ao mapa de coluna usando a macro [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry).
 
 As etapas anteriores dão suporte a indicadores e a um objeto de indicador com o qual trabalhar. Este exemplo de código demonstra um indicador da seguinte maneira:
 
@@ -80,7 +80,7 @@ As etapas anteriores dão suporte a indicadores e a um objeto de indicador com o
 
 - Gere dados do conjunto de linhas para o arquivo linha por linha.
 
-- Mova o cursor do conjunto de linhas para o indicador chamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Mova o cursor do conjunto de linhas para o indicador chamando [MoveToBookmark](./crowset-class.md#movetobookmark).
 
 - Gere a linha marcada com indicador, acrescendo-a ao fim do arquivo.
 
@@ -207,4 +207,4 @@ Saiba mais sobre os indicadores em [Uso de indicadores](../../data/oledb/using-b
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Criando um consumidor OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

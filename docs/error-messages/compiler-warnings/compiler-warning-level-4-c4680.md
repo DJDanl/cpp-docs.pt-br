@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ea9eb681d1696c77184a9999a94367a0bce8c454
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990463"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510048"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>Aviso do compilador (nível 4) C4680
 
 "Class": coclass não especifica uma interface padrão
 
-Uma interface [padrão](../../windows/default-cpp.md) não foi especificada para uma classe que foi marcada com o atributo [coclass](../../windows/coclass.md) . Para que um objeto seja útil, ele deve implementar uma interface.
+Uma interface [padrão](../../windows/attributes/default-cpp.md) não foi especificada para uma classe que foi marcada com o atributo [coclass](../../windows/attributes/coclass.md) . Para que um objeto seja útil, ele deve implementar uma interface.
 
 O exemplo a seguir gera C4680:
 

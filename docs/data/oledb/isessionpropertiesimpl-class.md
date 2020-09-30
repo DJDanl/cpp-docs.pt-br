@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844828"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509766"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
 
@@ -32,7 +32,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
    public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe, derivada de `ISessionPropertiesImpl` .
@@ -55,7 +55,7 @@ Uma classe de propriedade definida pelo usuário que assume como padrão *T*.
 
 ## <a name="remarks"></a>Comentários
 
-Uma interface obrigatória em sessões. Essa classe implementa as propriedades da sessão chamando uma função estática definida pelo [mapa do conjunto de propriedades](../../data/oledb/begin-propset-map.md). O mapa do conjunto de propriedades deve ser especificado na sua classe de sessão.
+Uma interface obrigatória em sessões. Essa classe implementa as propriedades da sessão chamando uma função estática definida pelo [mapa do conjunto de propriedades](./macros-for-ole-db-provider-templates.md#begin_propset_map). O mapa do conjunto de propriedades deve ser especificado na sua classe de sessão.
 
 ## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl:: GetProperties
 
@@ -70,7 +70,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
    DBPROPSET ** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ISessionProperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -85,11 +85,11 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ISessionProperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

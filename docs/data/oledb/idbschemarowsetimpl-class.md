@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: eea0ebeaf83b9203cf57f7b35fe3dd1ec2d63d81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843996"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509038"
 ---
 # <a name="idbschemarowsetimpl-class"></a>Classe IDBSchemaRowsetImpl
 
@@ -54,7 +54,7 @@ template <class SessionClass>
 class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *SessionClass*<br/>
 A classe pela qual `IDBSchemaRowsetImpl` é herdada. Normalmente, essa classe será a classe de sessão do usuário.
@@ -78,13 +78,13 @@ A classe pela qual `IDBSchemaRowsetImpl` é herdada. Normalmente, essa classe se
 | Nome | Descrição |
 |-|-|
 |[GetRowset](#getrowset)|Retorna um conjunto de linhas de esquema.|
-|[GetSchemas](#getschemas)|Retorna uma lista de conjuntos de linhas de esquema acessíveis por [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).|
+|[GetSchemas](#getschemas)|Retorna uma lista de conjuntos de linhas de esquema acessíveis por [IDBSchemaRowsetImpl:: GetRowset](#getrowset).|
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe implementa a interface [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) e a função modelos Creator [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
+Essa classe implementa a interface [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) e a função modelos Creator [CreateSchemaRowset](#createschemarowset).
 
-OLE DB usa conjuntos de linhas de esquema para retornar dados sobre os dados em um provedor. Esses dados são geralmente chamados de "metadados". Por padrão, um provedor deve sempre dar `DBSCHEMA_TABLES` suporte `DBSCHEMA_COLUMNS` a, e `DBSCHEMA_PROVIDER_TYPES` , conforme descrito em [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) na *referência do programador de OLE DB*. Conjuntos de linhas de esquema são designados em um mapa de esquema. Para obter informações sobre as entradas de mapa de esquema, consulte [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB usa conjuntos de linhas de esquema para retornar dados sobre os dados em um provedor. Esses dados são geralmente chamados de "metadados". Por padrão, um provedor deve sempre dar `DBSCHEMA_TABLES` suporte `DBSCHEMA_COLUMNS` a, e `DBSCHEMA_PROVIDER_TYPES` , conforme descrito em [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) na *referência do programador de OLE DB*. Conjuntos de linhas de esquema são designados em um mapa de esquema. Para obter informações sobre as entradas de mapa de esquema, consulte [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry).
 
 O assistente de provedor de OLE DB, no assistente de objeto ATL, gera automaticamente o código para os conjuntos de linhas de esquema em seu projeto. (Por padrão, o assistente dá suporte aos conjuntos de linhas de esquema obrigatórios mencionados anteriormente.) Quando você cria um consumidor usando o assistente de objeto ATL, o assistente usa conjuntos de linhas de esquema para associar os dados corretos a um provedor. Se você não implementar seus conjuntos de linhas de esquema para fornecer os metadados corretos, o assistente não associará os dados corretos.
 
@@ -103,7 +103,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
    ULONG cRestrictions,  const VARIANT rgRestrictions[]);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *rguidSchema*<br/>
 no Uma referência ao GUID do conjunto de linhas de esquema solicitado (por exemplo, `DBSCHEMA_TABLES` ).
@@ -112,13 +112,13 @@ no Uma referência ao GUID do conjunto de linhas de esquema solicitado (por exem
 no O número de restrições que o consumidor passou para o conjunto de linhas de esquema.
 
 *rgRestrictions*<br/>
-no Uma matriz de comprimento *cRestrictions* de valores de restrição a ser definida. Para obter mais informações, consulte a descrição do parâmetro *rgRestrictions* em [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+no Uma matriz de comprimento *cRestrictions* de valores de restrição a ser definida. Para obter mais informações, consulte a descrição do parâmetro *rgRestrictions* em [SetRestrictions](#setrestrictions).
 
 ### <a name="remarks"></a>Comentários
 
 Use `CheckRestrictions` para verificar a validade das restrições em relação a um conjunto de linhas de esquema. Ele verifica as restrições para os conjuntos de linhas de `DBSCHEMA_TABLES` `DBSCHEMA_COLUMNS` esquema, e `DBSCHEMA_PROVIDER_TYPES` . Chame-o para determinar se a chamada de um consumidor para `IDBSchemaRowset::GetRowset` está correta. Se você quiser dar suporte a conjuntos de linhas de esquema diferentes daqueles listados acima, você deve criar sua própria função para realizar essa tarefa.
 
-`CheckRestrictions` Determina se o consumidor está chamando [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) com a restrição correta e o tipo de restrição correto (por exemplo, um VT_BSTR para uma cadeia de caracteres) ao qual o provedor dá suporte. Ele também determina se há suporte para o número correto de restrições. Por padrão, `CheckRestrictions` o solicitará ao provedor, por meio da chamada [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , quais restrições ele suporta em um determinado conjunto de linhas. Em seguida, ele compara as restrições do consumidor com as suportadas pelo provedor e é bem-sucedida ou falha.
+`CheckRestrictions` Determina se o consumidor está chamando [GetRowset](#getrowset) com a restrição correta e o tipo de restrição correto (por exemplo, um VT_BSTR para uma cadeia de caracteres) ao qual o provedor dá suporte. Ele também determina se há suporte para o número correto de restrições. Por padrão, `CheckRestrictions` o solicitará ao provedor, por meio da chamada [SetRestrictions](#setrestrictions) , quais restrições ele suporta em um determinado conjunto de linhas. Em seguida, ele compara as restrições do consumidor com as suportadas pelo provedor e é bem-sucedida ou falha.
 
 Para obter mais informações sobre conjuntos de linhas de esquema, consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) na *referência do programador de OLE DB* no SDK do Windows.
 
@@ -140,7 +140,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
    SchemaRowsetClass*& pSchemaRowset);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pUnkOuter*<br/>
 no Um [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) externo ao agregar, caso contrário, NULL.
@@ -186,7 +186,7 @@ void SetRestrictions(ULONG cRestrictions,
    ULONG* rgRestrictions);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *cRestrictions*<br/>
 no O número de restrições na matriz *rgRestrictions* e o número de GUIDs na matriz *rguidSchema* .
@@ -199,7 +199,7 @@ no Uma matriz de comprimento *cRestrictions* de valores de restrição a ser def
 
 ### <a name="remarks"></a>Comentários
 
-O `IDBSchemaRowset` objeto chama `SetRestrictions` para determinar quais restrições você dá suporte em um conjunto de linhas de esquema específico (ele é chamado por [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) por meio de um ponteiro convertido). As restrições permitem que os consumidores busquem somente as linhas correspondentes (por exemplo, encontrar todas as colunas na tabela "MyTable"). As restrições são opcionais e, no caso em que nenhuma seja suportada (o padrão), todos os dados sempre serão retornados.
+O `IDBSchemaRowset` objeto chama `SetRestrictions` para determinar quais restrições você dá suporte em um conjunto de linhas de esquema específico (ele é chamado por [GetSchemas](#getschemas) por meio de um ponteiro convertido). As restrições permitem que os consumidores busquem somente as linhas correspondentes (por exemplo, encontrar todas as colunas na tabela "MyTable"). As restrições são opcionais e, no caso em que nenhuma seja suportada (o padrão), todos os dados sempre serão retornados.
 
 A implementação padrão desse método define os elementos da matriz *rgRestrictions* como 0. Substitua o padrão em sua classe de sessão para definir restrições diferentes do padrão.
 
@@ -226,7 +226,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
    IUnknown **ppRowset);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pUnkOuter*<br/>
 no Uma externa `IUnknown` ao agregar; caso contrário, NULL.
@@ -254,13 +254,13 @@ fora Um ponteiro para a interface solicitada no conjunto de linhas de esquema re
 
 ### <a name="remarks"></a>Comentários
 
-Esse método exige que o usuário tenha um mapa de esquema na classe de sessão. Usando as informações de mapa do esquema, `GetRowset` o criará um determinado objeto de conjunto de linhas se o parâmetro *rguidSchema* for igual a um dos GUIDs de entradas do mapa. Consulte [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) para obter uma descrição da entrada do mapa.
+Esse método exige que o usuário tenha um mapa de esquema na classe de sessão. Usando as informações de mapa do esquema, `GetRowset` o criará um determinado objeto de conjunto de linhas se o parâmetro *rguidSchema* for igual a um dos GUIDs de entradas do mapa. Consulte [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) para obter uma descrição da entrada do mapa.
 
 Consulte [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) no SDK do Windows.
 
 ## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a> IDBSchemaRowsetImpl:: GetSchemas
 
-Retorna uma lista de conjuntos de linhas de esquema acessíveis por [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
+Retorna uma lista de conjuntos de linhas de esquema acessíveis por [IDBSchemaRowsetImpl:: GetRowset](#getrowset).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -270,7 +270,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
    ULONG** prgRest);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pcSchemas*<br/>
 fora Um ponteiro para um **ULONG** que é preenchido com o número de esquemas.
@@ -287,9 +287,9 @@ Esse método retorna uma matriz de todos os conjuntos de linhas de esquema supor
 
 A implementação dessa função exige que o usuário tenha um mapa de esquema na classe de sessão. Usando as informações de mapa do esquema, ele responde com a matriz de GUIDs para os esquemas no mapa. Isso representa os esquemas compatíveis com o provedor.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classes de conjunto de linhas de esquema e classes de typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [Suporte a conjuntos de linhas de esquema](../../data/oledb/supporting-schema-rowsets.md)<br/>
-[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
+[SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider)

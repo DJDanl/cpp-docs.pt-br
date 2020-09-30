@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845660"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509095"
 ---
 # <a name="cutlprops-class"></a>Classe CUtlProps
 
@@ -47,7 +47,7 @@ template < class T >
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 A classe que contém o `BEGIN_PROPSET_MAP` .
@@ -72,9 +72,9 @@ A classe que contém o `BEGIN_PROPSET_MAP` .
 
 A maior parte dessa classe é um detalhe de implementação.
 
-`CUtlProps` contém dois membros para definir propriedades internamente: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) e [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` contém dois membros para definir propriedades internamente: [GetPropValue](#getpropvalue) e [SetPropValue](#setpropvalue).
 
-Para obter mais informações sobre as macros usadas em um mapa de conjunto de propriedades, consulte [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) e [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Para obter mais informações sobre as macros usadas em um mapa de conjunto de propriedades, consulte [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) e [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map).
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: GetPropValue
 
@@ -88,7 +88,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
    VARIANT* pvValue);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pguidPropSet*<br/>
 no O GUID para o propset.
@@ -114,7 +114,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
    DBPROP* pDBProp);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *iCurSet*<br/>
 O índice na matriz de conjunto de propriedades; zero se houver apenas um conjunto de propriedades.
@@ -140,7 +140,7 @@ Lida com solicitações para uma interface opcional quando um consumidor chama u
 virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *riid*<br/>
 no O IID para a interface solicitada. Para obter mais detalhes, consulte a descrição do parâmetro *riid* de `ICommand::Execute` na *referência do programador de OLE DB* (no SDK do *MDAC*).
@@ -163,7 +163,7 @@ Se um consumidor abrir um objeto e solicitar uma interface opcional, o provedor 
 
 - `IRowsetScroll`
 
-Se você quiser lidar com outras interfaces, substitua essa função em sua fonte de dados, sessão, comando ou classe de conjunto de linhas para processar funções. Sua substituição deve passar pelas interfaces de propriedades set/get normais para garantir que a configuração de propriedades também defina todas as propriedades encadeadas (consulte [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
+Se você quiser lidar com outras interfaces, substitua essa função em sua fonte de dados, sessão, comando ou classe de conjunto de linhas para processar funções. Sua substituição deve passar pelas interfaces de propriedades set/get normais para garantir que a configuração de propriedades também defina todas as propriedades encadeadas (consulte [OnPropertyChanged](#onpropertychanged)).
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 
@@ -176,7 +176,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
    DBPROP* pDBProp);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *iCurSet*<br/>
 O índice na matriz de conjunto de propriedades; zero se houver apenas um conjunto de propriedades.
@@ -210,7 +210,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
    VARIANT* pvValue);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pguidPropSet*<br/>
 no O GUID para o propset.
@@ -225,7 +225,7 @@ no Um ponteiro para uma variante que contém o novo valor da propriedade.
 
 `Failure` em caso de falha e S_OK se tiver êxito.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

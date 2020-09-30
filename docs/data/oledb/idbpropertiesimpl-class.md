@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834330"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509060"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
    : public IDBProperties, public CUtlProps<T>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe, derivada de `IDBPropertiesImpl` .
@@ -60,7 +60,7 @@ Sua classe, derivada de `IDBPropertiesImpl` .
 
 ## <a name="remarks"></a>Comentários
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se um enumerador expõe [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), ele deve expor `IDBProperties` . `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se um enumerador expõe [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), ele deve expor `IDBProperties` . `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl:: GetProperties
 
@@ -75,7 +75,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
    DBPROPSET ** prgProperties);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -106,7 +106,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
    OLECHAR ** ppDescBuffer);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -119,7 +119,7 @@ Alguns parâmetros correspondem a parâmetros de *referência do programador OLE
 
 ### <a name="remarks"></a>Comentários
 
-Usa [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) para implementar essa funcionalidade.
+Usa [IDBInitializeImpl:: m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) para implementar essa funcionalidade.
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl:: SetProperties
 
@@ -132,7 +132,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -140,7 +140,7 @@ Consulte [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms72
 
 Se o provedor for inicializado, esse método definirá os valores das propriedades nos grupos de propriedades DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT para o objeto de fonte de dados. Se o provedor não for inicializado, ele só definirá DBPROPSET_DBINIT Propriedades do grupo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

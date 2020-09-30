@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: aa6e5d1ea7d1bc2d7ebfaf07c7c9f808b37e9804
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219762"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509720"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensões de componentes para .NET e UWP
 
@@ -73,7 +73,7 @@ As seguintes palavras-chave foram adicionadas às extensões C++.
 
 |Palavra-chave|Contextual|Finalidade|Referência|
 |-------------|-----------------------|-------------|---------------|
-|**disso**|Sim|Indica o comportamento de tratamento de exceção padrão.|[Tratamento de exceção](exception-handling-cpp-component-extensions.md)|
+|**disso**|Sim|Indica o comportamento de tratamento de exceção padrão.|[Tratamento de Exceção](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Não|Enumera elementos de uma coleção.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|Não|Aloca os tipos no heap coletado do lixo. Use em vez de **`new`** e **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|Sim|Aloca um tipo do Windows Runtime. Use em vez de **`new`** e **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
@@ -110,13 +110,13 @@ Esta seção lista construções de programação adicionais e tópicos que pert
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime e CLR) Permite o uso de palavras-chave como identificadores.|
 |[Listas de argumentos variáveis (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime e CLR) Permite que uma função obtenha um número variável de argumentos.|
-|[.NET Framework equivalentes a tipos nativos C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Lista os tipos de CLR que são usados ​​no lugar dos tipos integrais de C++.|
+|[.NET Framework equivalentes a tipos nativos C++ (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet)|Lista os tipos de CLR que são usados ​​no lugar dos tipos integrais de C++.|
 |[AppDomain](../cpp/appdomain.md) **`__declspec`** privacidade|**`__declspec`** modificador que exige que variáveis estáticas e globais existam por AppDomain.|
 |[Conversões de Estilo C-Style com /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Descreve como as conversões C-Style são interpretadas.|
 |Convenção de chamada [__clrcall](../cpp/clrcall.md)|Indica a convenção de chamada compatível com CLR.|
 |`__cplusplus_cli`|[Macros predefinidas](../preprocessor/predefined-macros.md)|
 |[Atributos personalizados](user-defined-attributes-cpp-component-extensions.md)|Descreve como definir seus próprios atributos CLR.|
-|[Tratamento de exceção](exception-handling-cpp-component-extensions.md)|Fornece uma visão geral do tratamento de exceção.|
+|[Tratamento de Exceção](exception-handling-cpp-component-extensions.md)|Fornece uma visão geral do tratamento de exceção.|
 |[Substituições explícitas](explicit-overrides-cpp-component-extensions.md)|Demonstra como as funções de membro podem substituir membros arbitrários.|
 |[Assemblies Friend (C++)](../dotnet/friend-assemblies-cpp.md)|Discute como um assembly de cliente pode acessar todos os tipos em um componente de assembly.|
 |[Conversão boxing](boxing-cpp-component-extensions.md)|Demonstra as condições nas quais os tipos de valores são convertidos.|
@@ -130,7 +130,7 @@ Esta seção lista construções de programação adicionais e tópicos que pert
 |[#using diretiva](../preprocessor/hash-using-directive-cpp.md)|Importa assemblies externos.|
 |[Documentação XML](../build/reference/xml-documentation-visual-cpp.md)|Explica a documentação de código baseada em XML usando [/doc (Processar comentários da documentação) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Programação .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Interoperabilidade entre nativo e .NET](../dotnet/native-and-dotnet-interoperability.md)

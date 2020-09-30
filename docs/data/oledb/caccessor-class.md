@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212284"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509561"
 ---
 # <a name="caccessor-class"></a>Classe CAccessor
 
@@ -28,7 +28,7 @@ template <class T>
 class CAccessor : public CAccessorBase, public T
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 A classe de registro de usuário.
@@ -39,13 +39,13 @@ Ele é usado quando um registro é ligado estaticamente a uma fonte de dados. O 
 
 Use esse tipo de acessador quando você souber a estrutura e o tipo do banco de dados.
 
-Se o acessador contiver campos que apontam para memória (como uma `BSTR` ou interface) que devem ser liberados, chame a função de membro [CAccessorRowset:: FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) antes que o próximo registro seja lido.
+Se o acessador contiver campos que apontam para memória (como uma `BSTR` interface ou) que devem ser liberados, chame a função de membro [CAccessorRowset:: FreeRecordMemory](./caccessorrowset-class.md#freerecordmemory) antes que o próximo registro seja lido.
 
 ## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldbcli. h
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

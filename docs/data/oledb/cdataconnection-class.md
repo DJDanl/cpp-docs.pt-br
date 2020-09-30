@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 118b8d09b90899eca0f257e319aabbefd92f359f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838394"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509108"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
 
@@ -108,12 +108,12 @@ class CDataConnection
 
 `CDataConnection` é uma classe útil para criar clientes porque ele encapsula os objetos necessários (fonte de dados e sessão) e parte do trabalho que você precisa fazer ao se conectar a uma fonte de dados
 
-Sem `CDataConnection` , você precisa criar um `CDataSource` objeto, chamar seu método [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) e, em seguida, criar uma instância de um objeto [CSession](../../data/oledb/csession-class.md) , chamar o método [Open](../../data/oledb/csession-open.md) e, em seguida, criar um objeto [CCommand](../../data/oledb/ccommand-class.md) e chamar seus `Open` métodos *.
+Sem `CDataConnection` , você precisa criar um `CDataSource` objeto, chamar seu método [OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring) e, em seguida, criar uma instância de um objeto [CSession](../../data/oledb/csession-class.md) , chamar o método [Open](./csession-class.md#open) e, em seguida, criar um objeto [CCommand](../../data/oledb/ccommand-class.md) e chamar seus `Open` métodos *.
 
 Com `CDataConnection` o, você só precisa criar um objeto de conexão, passá-lo como uma cadeia de inicialização e, em seguida, usar essa conexão para abrir comandos. Se você planeja usar a conexão com o banco de dados repetidamente, é uma boa ideia manter a conexão aberta e `CDataConnection` fornece uma maneira conveniente de fazer isso.
 
 > [!NOTE]
-> Se você estiver criando um aplicativo de banco de dados que precisa lidar com várias sessões, será necessário usar o [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
+> Se você estiver criando um aplicativo de banco de dados que precisa lidar com várias sessões, será necessário usar o [OpenNewSession](#opennewsession).
 
 ## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a> CDataConnection::CDataConnection
 
@@ -258,7 +258,7 @@ operator const CDataSource*() throw();
 
 Esse operador retorna um ponteiro para o `CDataSource` objeto contido, permitindo que você passe um `CDataConnection` objeto onde um `CDataSource` ponteiro é esperado.
 
-Consulte [Operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) para obter um exemplo de uso.
+Consulte [Operator CDataSource&](#op_cdata_amp) para obter um exemplo de uso.
 
 ## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a> Operador CDataConnection:: Operator CSession&amp;
 
@@ -298,9 +298,9 @@ Esse operador retorna um ponteiro para o `CSession` objeto contido, permitindo q
 
 ### <a name="example"></a>Exemplo
 
-Consulte [Operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md) para obter um exemplo de uso.
+Consulte [Operator CSession&](#op_csession_amp) para obter um exemplo de uso.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

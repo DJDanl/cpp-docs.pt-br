@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389773"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509752"
 ---
 # <a name="fatal-error-c1083"></a>Erro fatal C1083
 
@@ -21,7 +21,7 @@ O compilador gera um erro C1083 quando não consegue encontrar um arquivo necess
 
 ## <a name="the-specified-file-name-is-wrong"></a>O nome de arquivo especificado está errado
 
-O nome de um arquivo pode ter sido digitado incorretamente. Por exemplo:
+O nome de um arquivo pode ter sido digitado incorretamente. Por exemplo,
 
 `#include <algorithm.h>`
 
@@ -63,7 +63,7 @@ em seguida, o arquivo não foi encontrado. Use o caminho correto relativo ao dir
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemas de biblioteca de terceiros e vcpkg
 
-Se você vir esse erro quando estiver tentando configurar uma biblioteca de terceiros como parte de sua compilação, considere usar o [`vcpkg`](../../vcpkg.md) , um Gerenciador de pacotes C++, para instalar e criar a biblioteca. o vcpkg dá suporte a uma lista grande e crescente [de bibliotecas de](https://github.com/Microsoft/vcpkg/tree/master/ports)terceiros e define todas as propriedades de configuração e dependências necessárias para compilações bem-sucedidas como parte do seu projeto.
+Se você vir esse erro quando estiver tentando configurar uma biblioteca de terceiros como parte de sua compilação, considere usar o [`vcpkg`](../../build/vcpkg.md) , um Gerenciador de pacotes C++, para instalar e criar a biblioteca. o vcpkg dá suporte a uma lista grande e crescente [de bibliotecas de](https://github.com/Microsoft/vcpkg/tree/master/ports)terceiros e define todas as propriedades de configuração e dependências necessárias para compilações bem-sucedidas como parte do seu projeto.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>O arquivo está em seu projeto, mas não no caminho de pesquisa de inclusão
 
@@ -118,6 +118,6 @@ O exemplo a seguir gera um erro C1083 quando o arquivo de cabeçalho `"test.h"` 
 
 Para obter informações sobre como criar projetos C/C++ no IDE ou na linha de comando e informações sobre como definir variáveis de ambiente, consulte [projetos e sistemas de compilação](../../build/projects-and-build-systems-cpp.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties)

@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209697"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509495"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classes Rowset do esquema e Typedef
 
@@ -561,7 +561,7 @@ Um esquema é uma coleção de objetos de banco de dados que são de propriedade
 
 Conjuntos de linhas de esquema são conjuntos de linhas predefinidos que representam metadados. Conjuntos de linhas de esquema geralmente são usados em programação dinâmica, em que a estrutura do banco de dados não é conhecida no momento da compilação. Você pode usar esses conjuntos de linhas de esquema para obter informações sobre um banco de dados em tempo de execução.
 
-Use as classes typedef para instanciar os conjuntos de linhas de esquema. As classes de conjunto de linhas de esquema e typedef correspondentes estão listadas abaixo. Você deve chamar [CRestrictions:: Open](../../data/oledb/crestrictions-open.md) depois de criar uma instância do conjunto de linhas de esquema. Esse método retorna um conjunto de resultados com base nas restrições que você especificar. Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) para obter informações sobre colunas de restrição associadas a cada conjunto de linhas de esquema.
+Use as classes typedef para instanciar os conjuntos de linhas de esquema. As classes de conjunto de linhas de esquema e typedef correspondentes estão listadas abaixo. Você deve chamar [CRestrictions:: Open](./crestrictions-class.md#open) depois de criar uma instância do conjunto de linhas de esquema. Esse método retorna um conjunto de resultados com base nas restrições que você especificar. Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) para obter informações sobre colunas de restrição associadas a cada conjunto de linhas de esquema.
 
 A tabela a seguir exibe cada conjunto de linhas OLE DB esquema e sua classe de informações e classe typedef de modelos OLE DB correspondentes.
 
@@ -588,7 +588,7 @@ A tabela a seguir exibe cada conjunto de linhas OLE DB esquema e sua classe de i
 |[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
 |[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
 |[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[ESTATÍSTICA](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
 |[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
 |[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
 |[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
@@ -598,9 +598,9 @@ A tabela a seguir exibe cada conjunto de linhas OLE DB esquema e sua classe de i
 |[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>CAssertions, CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a> CAssertions, CAssertionInfo
 
-Chame a classe typedef `CAssertions` para implementar sua classe de parâmetro `CAssertionInfo`.
+Chame a classe typedef `CAssertions` para implementar sua classe de parâmetro `CAssertionInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -608,7 +608,7 @@ Consulte [classes de conjunto de linhas de esquema e classes de typedef](../../d
 
 Essa classe identifica as asserções definidas no catálogo que pertencem a um determinado usuário.
 
-A tabela a seguir lista os membros de dados de classe para `CAssertionInfo` e suas colunas OLE DB correspondentes. Consulte o [conjunto de linhas de asserções](/previous-versions/windows/desktop/ms719776(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações sobre o esquema e as colunas.
+A tabela a seguir lista os membros de dados de classe para `CAssertionInfo` e suas colunas de OLE DB correspondentes. Consulte o [conjunto de linhas de asserções](/previous-versions/windows/desktop/ms719776(v=vs.85)) na *referência do programador de OLE DB* para obter mais informações sobre o esquema e as colunas.
 
 |Membros de dados|Colunas OLE DB|
 |------------------|--------------------|
@@ -619,9 +619,9 @@ A tabela a seguir lista os membros de dados de classe para `CAssertionInfo` e su
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs, CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a> CCatalogs, CCatalogInfo
 
-Chame a classe typedef `CCatalogs` para implementar sua classe de parâmetro `CCatalogInfo`.
+Chame a classe typedef `CCatalogs` para implementar sua classe de parâmetro `CCatalogInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -636,9 +636,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>CCharacterSets, CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a> CCharacterSets, CCharacterSetInfo
 
-Chame a classe typedef `CCharacterSets` para implementar sua classe de parâmetro `CCharacterSetInfo`.
+Chame a classe typedef `CCharacterSets` para implementar sua classe de parâmetro `CCharacterSetInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -659,9 +659,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>CCheckConstraints, CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
 
-Chame a classe typedef `CCheckConstraints` para implementar sua classe de parâmetro `CCheckConstraintInfo`.
+Chame a classe typedef `CCheckConstraints` para implementar sua classe de parâmetro `CCheckConstraintInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -679,9 +679,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations, CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a> CCollations, CCollationInfo
 
-Chame a classe typedef `CCollations` para implementar sua classe de parâmetro `CCollationInfo`.
+Chame a classe typedef `CCollations` para implementar sua classe de parâmetro `CCollationInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -701,9 +701,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
 
-Chame a classe typedef `CColumnDomainUsage` para implementar sua classe de parâmetro `CColumnDomainUsageInfo`.
+Chame a classe typedef `CColumnDomainUsage` para implementar sua classe de parâmetro `CColumnDomainUsageInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -725,9 +725,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
 
-Chame a classe typedef `CColumnPrivileges` para implementar sua classe de parâmetro `CColumnPrivilegeInfo`.
+Chame a classe typedef `CColumnPrivileges` para implementar sua classe de parâmetro `CColumnPrivilegeInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -750,9 +750,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>CColumns, CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a> CColumns, CColumnsInfo
 
-Chame a classe typedef `CColumns` para implementar sua classe de parâmetro `CColumnsInfo`.
+Chame a classe typedef `CColumns` para implementar sua classe de parâmetro `CColumnsInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -793,9 +793,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
 
-Chame a classe typedef `CConstraintColumnUsage` para implementar sua classe de parâmetro `CConstraintColumnUsageInfo`.
+Chame a classe typedef `CConstraintColumnUsage` para implementar sua classe de parâmetro `CConstraintColumnUsageInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -817,9 +817,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
 
-Chame a classe typedef `CConstraintTableUsage` para implementar sua classe de parâmetro `CConstraintTableUsageInfo`.
+Chame a classe typedef `CConstraintTableUsage` para implementar sua classe de parâmetro `CConstraintTableUsageInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -838,9 +838,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>CForeignKeys, CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
 
-Chame a classe typedef `CForeignKeys` para implementar sua classe de parâmetro `CForeignKeysInfo`.
+Chame a classe typedef `CForeignKeys` para implementar sua classe de parâmetro `CForeignKeysInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -868,9 +868,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="cindexes-cindexinfo"></a><a name="index"></a>CIndexes, CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a> CIndexes, CIndexInfo
 
-Chame a classe typedef `CIndexes` para implementar sua classe de parâmetro `CIndexInfo`.
+Chame a classe typedef `CIndexes` para implementar sua classe de parâmetro `CIndexInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -907,9 +907,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>CKeyColumns, CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
 
-Chame a classe typedef `CKeyColumns` para implementar sua classe de parâmetro `CKeyColumnInfo`.
+Chame a classe typedef `CKeyColumns` para implementar sua classe de parâmetro `CKeyColumnInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -932,9 +932,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>CPrimaryKeys, CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
 
-Chame a classe typedef `CPrimaryKeys` para implementar sua classe de parâmetro `CPrimaryKeyInfo`.
+Chame a classe typedef `CPrimaryKeys` para implementar sua classe de parâmetro `CPrimaryKeyInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -954,9 +954,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|NUMERA|
 
-## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>CProcedureColumns, CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
 
-Chame a classe typedef `CProcedureColumns` para implementar sua classe de parâmetro `CProcedureColumnInfo`.
+Chame a classe typedef `CProcedureColumns` para implementar sua classe de parâmetro `CProcedureColumnInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -985,9 +985,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
 
-Chame a classe typedef `CProcedureParameters` para implementar sua classe de parâmetro `CProcedureParamInfo`.
+Chame a classe typedef `CProcedureParameters` para implementar sua classe de parâmetro `CProcedureParamInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1015,9 +1015,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures, CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a> CProcedures, CProcedureInfo
 
-Chame a classe typedef `CProcedures` para implementar sua classe de parâmetro `CProcedureInfo`.
+Chame a classe typedef `CProcedures` para implementar sua classe de parâmetro `CProcedureInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1036,9 +1036,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes, CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a> CProviderTypes, CProviderInfo
 
-Chame a classe typedef `CProviderTypes` para implementar sua classe de parâmetro `CProviderInfo`.
+Chame a classe typedef `CProviderTypes` para implementar sua classe de parâmetro `CProviderInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1071,9 +1071,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints, CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
 
-Chame a classe typedef `CReferentialConstraints` para implementar sua classe de parâmetro `CReferentialConstraintInfo`.
+Chame a classe typedef `CReferentialConstraints` para implementar sua classe de parâmetro `CReferentialConstraintInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1096,9 +1096,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata, CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a> CSchemata, CSchemataInfo
 
-Chame a classe typedef `CSchemata` para implementar sua classe de parâmetro `CSchemataInfo`.
+Chame a classe typedef `CSchemata` para implementar sua classe de parâmetro `CSchemataInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1117,9 +1117,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>CSQLLanguages, CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
 
-Chame a classe typedef `CSQLLanguages` para implementar sua classe de parâmetro `CSQLLanguageInfo`.
+Chame a classe typedef `CSQLLanguages` para implementar sua classe de parâmetro `CSQLLanguageInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1139,9 +1139,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>CStatistics, CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a> CStatistics, CStatisticInfo
 
-Chame a classe typedef `CStatistics` para implementar sua classe de parâmetro `CStatisticInfo`.
+Chame a classe typedef `CStatistics` para implementar sua classe de parâmetro `CStatisticInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1158,9 +1158,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>CTableConstraints, CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
 
-Chame a classe typedef `CTableConstraints` para implementar sua classe de parâmetro `CTableConstraintInfo`.
+Chame a classe typedef `CTableConstraints` para implementar sua classe de parâmetro `CTableConstraintInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1183,9 +1183,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges, CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
 
-Chame a classe typedef `CTablePrivileges` para implementar sua classe de parâmetro `CTablePrivilegeInfo`.
+Chame a classe typedef `CTablePrivileges` para implementar sua classe de parâmetro `CTablePrivilegeInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1205,9 +1205,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ctables-ctableinfo"></a><a name="table"></a>CTables, CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a> CTables, CTableInfo
 
-Chame a classe typedef `CTables` para implementar sua classe de parâmetro `CTableInfo`.
+Chame a classe typedef `CTables` para implementar sua classe de parâmetro `CTableInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1226,9 +1226,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations, CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a> CTranslations, CTranslationInfo
 
-Chame a classe typedef `CTranslations` para implementar sua classe de parâmetro `CTranslationInfo`.
+Chame a classe typedef `CTranslations` para implementar sua classe de parâmetro `CTranslationInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1250,9 +1250,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
 
-Chame a classe typedef `CUsagePrivileges` para implementar sua classe de parâmetro `CUsagePrivilegeInfo`.
+Chame a classe typedef `CUsagePrivileges` para implementar sua classe de parâmetro `CUsagePrivilegeInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1273,9 +1273,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>CViewColumnUsage, CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
 
-Chame a classe typedef `CViewColumnUsage` para implementar sua classe de parâmetro `CViewColumnInfo`.
+Chame a classe typedef `CViewColumnUsage` para implementar sua classe de parâmetro `CViewColumnInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1297,9 +1297,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="cviews-cviewinfo"></a><a name="view"></a>CViews, CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a> CViews, CViewInfo
 
-Chame a classe typedef `CViews` para implementar sua classe de parâmetro `CViewInfo`.
+Chame a classe typedef `CViews` para implementar sua classe de parâmetro `CViewInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1319,9 +1319,9 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage, CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a> CViewTableUsage, CViewTableInfo
 
-Chame a classe typedef `CViewTableUsage` para implementar sua classe de parâmetro `CViewTableInfo`.
+Chame a classe typedef `CViewTableUsage` para implementar sua classe de parâmetro `CViewTableInfo` .
 
 ### <a name="remarks"></a>Comentários
 
@@ -1344,6 +1344,6 @@ A tabela a seguir lista os membros de dados de classe e suas colunas de OLE DB c
 
 **Cabeçalho:** Atldbsch. h
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

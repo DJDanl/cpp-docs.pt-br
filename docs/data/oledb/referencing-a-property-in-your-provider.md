@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d70a1901c457d9fbdbe8712d84999e256a54d0c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecb11c54d4c5926fbead0196c441ec23e8b0891f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209751"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509524"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Fazendo referência a uma propriedade no provedor
 
@@ -25,7 +25,7 @@ Crie um objeto [CDBPropSet](../../data/oledb/cdbpropset-class.md) usando o grupo
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-Chame [AddProperty](../../data/oledb/cdbpropset-addproperty.md), passando a ID da propriedade e um valor a ser atribuído à propriedade. O tipo do valor depende da propriedade que você está usando.
+Chame [AddProperty](./cdbpropset-class.md#addproperty), passando a ID da propriedade e um valor a ser atribuído à propriedade. O tipo do valor depende da propriedade que você está usando.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -35,7 +35,7 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
 ```
 
-Use a interface `IRowset` para chamar `GetProperties`. Passe o conjunto de propriedades como um parâmetro. Este é o código final:
+Use a `IRowset` interface para chamar `GetProperties` . Passe o conjunto de propriedades como um parâmetro. Este é o código final:
 
 ```cpp
 CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;
@@ -66,6 +66,6 @@ if (pPropSet)
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Trabalhando com modelos de provedor de OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

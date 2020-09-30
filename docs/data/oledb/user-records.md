@@ -15,12 +15,12 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209437"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509433"
 ---
 # <a name="user-records"></a>Registros de usuário
 
@@ -64,7 +64,7 @@ Usando o **Assistente de Consumidor OLE DB da ATL** para gerar um consumidor, vo
 
 Confira uma discussão detalhada dos cenários nos quais você precisa usar vários acessadores em [Uso de vários acessadores em um conjunto de linhas](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
 
-O exemplo a seguir mostra o registro de usuário modificado para ser compatível com vários acessadores no conjunto de linhas. Em vez de BEGIN_COLUMN_MAP e END_COLUMN_MAP, ele usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) para cada acessador. A macro BEGIN_ACCESSOR especifica o número do acessador (deslocamento a partir de zero) e se o acessador é automático. Os acessadores automáticos chamam `GetData` para recuperar dados automaticamente em um chamada a [MoveNext](../../data/oledb/crowset-movenext.md). Os acessadores não automáticos exigem que você recupere os dados explicitamente. Use um acessador não automático se estiver fazendo a associação a um campo de dados grande (como uma imagem de bitmap) que você pode não querer recuperar para cada registro.
+O exemplo a seguir mostra o registro de usuário modificado para ser compatível com vários acessadores no conjunto de linhas. Em vez de BEGIN_COLUMN_MAP e END_COLUMN_MAP, ele usa [BEGIN_ACCESSOR_MAP](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor_map) e [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) para cada acessador. A macro BEGIN_ACCESSOR especifica o número do acessador (deslocamento a partir de zero) e se o acessador é automático. Os acessadores automáticos chamam `GetData` para recuperar dados automaticamente em um chamada a [MoveNext](./crowset-class.md#movenext). Os acessadores não automáticos exigem que você recupere os dados explicitamente. Use um acessador não automático se estiver fazendo a associação a um campo de dados grande (como uma imagem de bitmap) que você pode não querer recuperar para cada registro.
 
 ```cpp
 class CMultiArtists
@@ -88,6 +88,6 @@ END_ACCESSOR_MAP()
 };
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
