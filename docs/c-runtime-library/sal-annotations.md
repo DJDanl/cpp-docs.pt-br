@@ -1,6 +1,8 @@
 ---
 title: Anotações de SAL
+description: Uma breve descrição do SAL (código-fonte da nota) da Microsoft.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - __z annotation
 - ref annotation
@@ -47,12 +49,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: 64f1ef513f34f11f2569f0afb854a0e2762082b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 727c81ae1b141346bb47ff92b6af76d5c45aa106
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503477"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590258"
 ---
 # <a name="sal-annotations"></a>Anotações de SAL
 
@@ -60,6 +62,6 @@ Se você examinar os arquivos de cabeçalho de biblioteca, notará algumas anota
 
 Para obter mais informações sobre como usar anotações de SAL no Visual Studio, consulte [Usando Anotações de SAL para reduzir defeitos de código C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

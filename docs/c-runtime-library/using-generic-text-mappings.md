@@ -1,5 +1,7 @@
 ---
 title: Usando mapeamentos de texto genérico
+description: Uma introdução aos mapeamentos específicos da Microsoft para tipos de dados, rotinas e outros objetos no tempo de execução C.
+ms.topic: conceptual
 ms.date: 11/04/2016
 f1_keywords:
 - _UNICODE
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea3b1eef413a0d9f52e81795c04424d533b83504
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221868"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590102"
 ---
 # <a name="using-generic-text-mappings"></a>Usando mapeamentos de texto genérico
 

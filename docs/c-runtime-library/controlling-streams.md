@@ -1,6 +1,8 @@
 ---
 title: Controlando fluxos
+description: Uma visão geral de como trabalhar com fluxos na biblioteca de tempo de execução do Microsoft C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Controlling Streams
 helpviewer_keywords:
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0caa9eca7c960acbb581358c1a92afcc6a8af066
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743318"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589712"
 ---
 # <a name="controlling-streams"></a>Controlando fluxos
 
@@ -37,6 +39,6 @@ Um objeto `FILE` armazena o estado de um fluxo, incluindo:
 
 Não altere os valores armazenados em um objeto `FILE` ou buffer de arquivo que você especificar para uso com esse objeto. Não é possível copiar um objeto `FILE` e usar o endereço da cópia de forma portátil como `stream` argumento para uma função de biblioteca.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Arquivos e fluxos](../c-runtime-library/files-and-streams.md)
