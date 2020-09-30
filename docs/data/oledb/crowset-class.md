@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831561"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507277"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 
@@ -246,7 +246,7 @@ template <class TAccessor = CAccessorBase>
 class CRowset
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TAccessor*<br/>
 Uma classe de acessador. O padrão é `CAccessorBase`.
@@ -282,7 +282,7 @@ Uma classe de acessador. O padrão é `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Busca linhas começando com base em uma posição fracionária no conjunto de linhas.|
 |[ReleaseRows](#releaserows)|Chama [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para liberar o identificador de linha atual.|
 |[SetData](#setdata)|Define valores de dados em uma ou mais colunas de uma linha usando [IRowsetChange: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Desfazer](#undo)|Desfaz as alterações feitas em uma linha desde a última busca ou [atualização](../../data/oledb/crowset-update.md).|
+|[Desfazer](#undo)|Desfaz as alterações feitas em uma linha desde a última busca ou [atualização](#update).|
 |[Atualização](#update)|Transmite todas as alterações pendentes feitas na linha atual desde a última busca ou atualização.|
 |[UpdateAll](#updateall)|Transmite todas as alterações pendentes feitas a todas as linhas desde a última busca ou atualização.|
 
@@ -308,7 +308,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método incrementa a contagem de referência para o identificador de linha atual. Chame [ReleaseRows](../../data/oledb/crowset-releaserows.md) para decrementar a contagem. As linhas retornadas pelos métodos de movimentação têm uma contagem de referência de um.
+Esse método incrementa a contagem de referência para o identificador de linha atual. Chame [ReleaseRows](#releaserows) para decrementar a contagem. As linhas retornadas pelos métodos de movimentação têm uma contagem de referência de um.
 
 ## <a name="crowsetclose"></a><a name="close"></a> CRowset:: fechar
 
@@ -336,7 +336,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
    DBCOMPARE* pComparison) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Bookmark1*<br/>
 no O primeiro indicador a ser comparado.
@@ -369,7 +369,7 @@ CRowset();
 CRowset(IRowset* pRowset);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pRowset*<br/>
 no Um ponteiro para uma `IRowset` interface a ser associado a essa classe.
@@ -405,7 +405,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
    CBookmarkBase* pBookmark = NULL) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *parar*<br/>
 no A operação a ser usada na comparação de valores de linha. Para obter valores, consulte [IRowsetFind:: FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85)).
@@ -453,7 +453,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
    DBCOUNTITEM* pcRows) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pBookmark*<br/>
 no Um ponteiro para um indicador que identifica a linha cuja posição deve ser encontrada. NULL se apenas a contagem de linhas for necessária.
@@ -486,7 +486,7 @@ HRESULT GetData() throw();
 HRESULT GetData(int nAccessor) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nAccessor*<br/>
 no O número de índice (deslocamento zero) do acessador a ser usado para acessar os dados.
@@ -497,7 +497,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se você especificar um acessador que não seja um autoacesso no [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), use esse método para obter explicitamente os dados, passando o número do acessador.
+Se você especificar um acessador que não seja um autoacesso no [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor), use esse método para obter explicitamente os dados, passando o número do acessador.
 
 ## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset::GetDataHere
 
@@ -510,7 +510,7 @@ HRESULT GetDataHere(int nAccessor,
    void* pBuffer) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nAccessor*<br/>
 no O número de índice do acessador a ser usado para acessar os dados.
@@ -556,7 +556,7 @@ Retorna o status de todas as linhas.
 HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pStatus*<br/>
 fora Um ponteiro para um local em que `GetRowStatus` retorna o valor de status. Consulte DBPENDINGSTATUS na referência do programador de OLE DB.
@@ -580,7 +580,7 @@ HRESULT Insert(int nAccessor = 0,
    bool bGetHRow = false) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nAccessor*<br/>
 no O número do acessador a ser usado para inserir os dados.
@@ -616,7 +616,7 @@ Compara a linha especificada com a linha atual.
 HRESULT IsSameRow(HROW hRow) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hRow*<br/>
 no Um identificador para a linha a ser comparado com a linha atual.
@@ -676,7 +676,7 @@ HRESULT MoveNext(LONG lSkip,
    bool bForward= true) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *lSkip*<br/>
 no O número de linhas a serem ignoradas antes da busca.
@@ -729,7 +729,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    LONG lSkip = 0) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *bookmark*<br/>
 no Um indicador que marca o local do qual você deseja buscar dados.
@@ -758,7 +758,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator,bool bForward = true) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nNumerator*<br/>
 no O numerador usado para determinar a posição fracionária da qual buscar dados.
@@ -809,7 +809,7 @@ HRESULT SetData() const throw();
 HRESULT SetData(int nAccessor) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nAccessor*<br/>
 no O número do acessador a ser usado para acessar os dados.
@@ -820,7 +820,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Para o `SetData` formulário que não aceita nenhum argumento, todos os acessadores são usados para atualização. Normalmente, você chama `SetData` para definir valores de dados em colunas em uma linha e, em seguida, chamar [Update](../../data/oledb/crowset-update.md) para transmitir essas alterações.
+Para o `SetData` formulário que não aceita nenhum argumento, todos os acessadores são usados para atualização. Normalmente, você chama `SetData` para definir valores de dados em colunas em uma linha e, em seguida, chamar [Update](#update) para transmitir essas alterações.
 
 Esse método requer a interface opcional `IRowsetChange` , que pode não ter suporte em todos os provedores; se esse for o caso, o método retornará E_NOINTERFACE. Você também deve definir `DBPROP_IRowsetChange` como VARIANT_TRUE antes de chamar `Open` na tabela ou comando que contém o conjunto de linhas.
 
@@ -828,7 +828,7 @@ A operação de configuração poderá falhar se uma ou mais colunas não forem 
 
 ## <a name="crowsetundo"></a><a name="undo"></a> CRowset:: desfazer
 
-Desfaz as alterações feitas em uma linha desde a última busca ou [atualização](../../data/oledb/crowset-update.md).
+Desfaz as alterações feitas em uma linha desde a última busca ou [atualização](#update).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -838,7 +838,7 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pcRows*<br/>
 fora Um ponteiro para o local em que `Undo` retorna o número de linhas que tentou desfazer, se necessário.
@@ -869,7 +869,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pcRows*<br/>
 fora Um ponteiro para o local em que `Update` retorna o número de linhas que tentou atualizar, se necessário.
@@ -886,7 +886,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Transmite todas as alterações pendentes feitas na linha atual desde que essa linha foi obtida pela última vez ou atualizada (usando `Update` ou [UpdateAll](../../data/oledb/crowset-updateall.md)). Normalmente, você chama [SetData](../../data/oledb/crowset-setdata.md) para definir valores de dados em colunas em uma linha e, em seguida, chamar `Update` para transmitir essas alterações.
+Transmite todas as alterações pendentes feitas na linha atual desde que essa linha foi obtida pela última vez ou atualizada (usando `Update` ou [UpdateAll](#updateall)). Normalmente, você chama [SetData](#setdata) para definir valores de dados em colunas em uma linha e, em seguida, chamar `Update` para transmitir essas alterações.
 
 Esse método requer a interface opcional `IRowsetUpdate` , que pode não ter suporte em todos os provedores; se esse for o caso, o método retornará E_NOINTERFACE. Você também deve definir `DBPROP_IRowsetUpdate` como VARIANT_TRUE antes de chamar `Open` na tabela ou comando que contém o conjunto de linhas.
 
@@ -902,7 +902,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
    DBROWSTATUS** ppStatus = NULL) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pcRows*<br/>
 fora Um ponteiro para o local em que `UpdateAll` retorna o número de linhas que tentou atualizar, se necessário.
@@ -915,7 +915,7 @@ fora Um ponteiro para o local em que `Update` retorna o valor de status da linha
 
 ### <a name="remarks"></a>Comentários
 
-Transmite todas as alterações pendentes feitas a todas as linhas desde que essas linhas foram buscadas pela última vez ou atualizadas usando [Update](../../data/oledb/crowset-update.md) ou `UpdateAll` . `UpdateAll` o atualizará todas as linhas que foram modificadas, independentemente de você ainda ter o identificador para elas (consulte *pphRow*) ou não.
+Transmite todas as alterações pendentes feitas a todas as linhas desde que essas linhas foram buscadas pela última vez ou atualizadas usando [Update](#update) ou `UpdateAll` . `UpdateAll` o atualizará todas as linhas que foram modificadas, independentemente de você ainda ter o identificador para elas (consulte *pphRow*) ou não.
 
 Por exemplo, se você tiver usado `Insert` para inserir cinco linhas em um conjunto de linhas, poderá chamar `Update` cinco vezes ou chamar `UpdateAll` uma vez para atualizar todas elas.
 
@@ -925,7 +925,7 @@ Esse método requer a interface opcional `IRowsetUpdate` , que pode não ter sup
 
 Um HRESULT padrão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Exemplo de DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Exemplo de MultiRead](../../overview/visual-cpp-samples.md)<br/>

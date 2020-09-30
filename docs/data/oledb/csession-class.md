@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841097"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507245"
 ---
 # <a name="csession-class"></a>Classe CSession
 
@@ -76,7 +76,7 @@ class CSession
 
 ## <a name="remarks"></a>Comentários
 
-Uma ou mais sessões podem ser associadas a cada conexão de provedor (fonte de dados), que é representada por um objeto [CDataSource](../../data/oledb/cdatasource-class.md) . Para criar um novo `CSession` para um `CDataSource` , chame [CSession:: Open](../../data/oledb/csession-open.md). Para iniciar uma transação de banco de dados, `CSession` o fornece o `StartTransaction` método. Depois que uma transação é iniciada, você pode confirmá-la usando o `Commit` método ou cancelá-la usando o `Abort` método.
+Uma ou mais sessões podem ser associadas a cada conexão de provedor (fonte de dados), que é representada por um objeto [CDataSource](../../data/oledb/cdatasource-class.md) . Para criar um novo `CSession` para um `CDataSource` , chame [CSession:: Open](#open). Para iniciar uma transação de banco de dados, `CSession` o fornece o `StartTransaction` método. Depois que uma transação é iniciada, você pode confirmá-la usando o `Commit` método ou cancelá-la usando o `Abort` método.
 
 ## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
@@ -90,7 +90,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
    BOOL bAsync = FALSE) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -100,7 +100,7 @@ Um HRESULT padrão.
 
 ## <a name="csessionclose"></a><a name="close"></a> CSession:: fechar
 
-Fecha a sessão, que foi aberta por [CSession:: Open](../../data/oledb/csession-open.md).
+Fecha a sessão, que foi aberta por [CSession:: Open](#open).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -124,7 +124,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
    DWORD grfRM = 0) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -146,7 +146,7 @@ Retorna informações sobre uma transação.
 HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -170,7 +170,7 @@ HRESULT Open(const CDataSource& ds,
    ULONG ulPropSets = 0) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *AD*<br/>
 no A fonte de dados para a qual a sessão deve ser aberta.
@@ -187,7 +187,7 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Você deve abrir o objeto de fonte de dados usando [CDataSource:: Open](../../data/oledb/cdatasource-open.md) antes de passá-lo para `CSession::Open` .
+Você deve abrir o objeto de fonte de dados usando [CDataSource:: Open](./cdatasource-class.md#open) antes de passá-lo para `CSession::Open` .
 
 ## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 
@@ -202,7 +202,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
    ULONG* pulTransactionLevel = NULL) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -214,7 +214,7 @@ Um HRESULT padrão.
 
 Para obter mais informações, consulte [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) na *referência do programador de OLE DB*.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

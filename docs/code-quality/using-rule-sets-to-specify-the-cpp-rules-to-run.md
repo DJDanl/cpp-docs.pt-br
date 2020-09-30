@@ -4,18 +4,18 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845153"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507475"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usar conjuntos de regras para especificar as regras do C++ para execução
 
 No Visual Studio, você pode criar e modificar um *conjunto de regras* personalizadas para atender às necessidades específicas do projeto associadas à análise de código. Os conjuntos de regras padrão são armazenados em *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Visual Studio 2017 versão 15,7 e posterior:** Você pode criar conjuntos de regras personalizados usando qualquer editor de texto e aplicá-los em compilações de linha de comando, independentemente do sistema de compilação que você está usando. Para obter mais informações, consulte [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis).
+**Visual Studio 2017 versão 15,7 e posterior:** Você pode criar conjuntos de regras personalizados usando qualquer editor de texto e aplicá-los em compilações de linha de comando, independentemente do sistema de compilação que você está usando. Para obter mais informações, confira [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md).
 
 Para criar um conjunto personalizado de regras do C++ no Visual Studio, um projeto C/C++ deve estar aberto no IDE do Visual Studio. Em seguida, abra um conjunto de regras padrão no editor de conjunto de regras e adicione ou remova regras específicas e, opcionalmente, altere a ação que ocorre quando a análise de código determina que uma regra foi violada.
 
@@ -98,7 +98,7 @@ Para criar um novo conjunto de regras personalizadas, salve-o usando um novo nom
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Para criar um conjunto de regras em um editor de texto
 
-Você pode criar um conjunto de regras personalizado em um editor de texto, armazená-lo em qualquer local com uma *`.ruleset`* extensão e aplicá-lo com a [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) opção do compilador.
+Você pode criar um conjunto de regras personalizado em um editor de texto, armazená-lo em qualquer local com uma *`.ruleset`* extensão e aplicá-lo com a [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) opção do compilador.
 
 O exemplo a seguir mostra um arquivo de conjunto de regras básico que você pode usar como um ponto de partida:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231111"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507464"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -27,7 +27,7 @@ A **`struct`** palavra-chave define um tipo de estrutura e/ou uma variável de u
 [struct] tag declarators;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *modelo-especificação*<br/>
 Especificações de modelo opcionais. Para obter mais informações, consulte [especificações de modelo](templates-cpp.md).
@@ -48,7 +48,7 @@ A lista opcional de classes ou estruturas de que esta estrutura derivará seus m
 Lista de membros da estrutura. Consulte [visão geral de membro de classe](../cpp/class-member-overview.md) para obter mais informações. A única diferença aqui é que **`struct`** é usada no lugar de **`class`** .
 
 *declarators*<br/>
-Lista de declaradores especificando os nomes da estrutura. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializador se todos os membros de dados da estrutura forem **`public`** . As listas de inicializadores são comuns em estruturas porque os membros de dados são **`public`** por padrão.  Consulte [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
+Lista de declaradores especificando os nomes da estrutura. As listas de declaradores declaram uma ou mais instâncias do tipo de estrutura. Os declaradores podem incluir listas de inicializador se todos os membros de dados da estrutura forem **`public`** . As listas de inicializadores são comuns em estruturas porque os membros de dados são **`public`** por padrão.  Consulte [visão geral dos declaradores](./declarations-and-definitions-cpp.md) para obter mais informações.
 
 ## <a name="remarks"></a>Comentários
 

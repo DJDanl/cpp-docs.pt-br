@@ -42,18 +42,18 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352746"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508835"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Como: Adicionar, editar ou excluir controles (C++)
 
 Usando o **Editor de caixa de diálogo**, você pode adicionar, redimensionar, editar e excluir controles em caixas de diálogo. Você também pode editar as propriedades de um controle, como sua ID, ou se ela está visível inicialmente em tempo de execução.
 
-A guia **Editor de caixa de diálogo** é exibida na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você está trabalhando no editor de caixa de **diálogo**. Você também pode personalizar a janela **caixa de ferramentas** para facilitar o uso. Para obter mais informações, consulte [usando a caixa de ferramentas](/visualstudio/ide/using-the-toolbox) e [Mostrar ou ocultar a janela caixa de ferramentas](showing-or-hiding-the-dialog-editor-toolbar.md).
+A guia **Editor de caixa de diálogo** é exibida na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você está trabalhando no editor de caixa de **diálogo**. Você também pode personalizar a janela **caixa de ferramentas** para facilitar o uso. Para obter mais informações, consulte [usando a caixa de ferramentas](/visualstudio/ide/using-the-toolbox) e [Mostrar ou ocultar a janela caixa de ferramentas](./dialog-editor.md).
 
 > [!TIP]
 > Ao usar o **Editor de caixa de diálogo**, em muitas instâncias, você pode selecionar o botão direito do mouse para exibir um menu de atalho de comandos usados com frequência.
@@ -94,7 +94,7 @@ A guia **Editor de caixa de diálogo** é exibida na [janela caixa de ferramenta
 1. Solte o botão do mouse. O controle é liquidado na caixa de diálogo no tamanho especificado.
 
 > [!TIP]
-> Você pode redimensionar o controle depois de soltá-lo na caixa de diálogo movendo as alças de dimensionamento na borda do controle. Para obter mais informações, consulte [dimensionando controles individuais](../windows/sizing-individual-controls.md).
+> Você pode redimensionar o controle depois de soltá-lo na caixa de diálogo movendo as alças de dimensionamento na borda do controle. Para obter mais informações, consulte [dimensionando controles individuais](./arrangement-of-controls-on-dialog-boxes.md).
 
 ### <a name="to-add-a-custom-control"></a>Para adicionar um controle personalizado
 
@@ -129,7 +129,7 @@ Você pode adicionar controles personalizados à caixa de diálogo. Selecione o 
 
 1. Ao pressionar a tecla **Ctrl** , clique duas vezes no controle da caixa de diálogo.
 
-   O [Assistente para Adicionar variável de membro](../ide/add-member-variable-wizard.md) é exibido.
+   O [Assistente para Adicionar variável de membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) é exibido.
 
 1. Digite as informações apropriadas no Assistente para **Adicionar variável de membro** . Para obter mais informações, consulte [caixa de diálogo troca de dados](../mfc/dialog-data-exchange.md).
 
@@ -245,7 +245,7 @@ Os controles ActiveX fornecidos por fornecedores independentes podem vir equipad
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Gerenciar controles da caixa de diálogo](controls-in-dialog-boxes.md)<br/>
 [Como: controles de layout](arrangement-of-controls-on-dialog-boxes.md)<br/>

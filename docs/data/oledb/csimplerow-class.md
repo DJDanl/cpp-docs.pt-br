@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841071"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507226"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
 
@@ -75,7 +75,7 @@ class CSimpleRow
 
 ## <a name="remarks"></a>Comentários
 
-Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` Cria um novo `CSimpleRow` para cada linha solicitada em [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` também pode ser substituído por sua própria implementação do identificador de linha, pois é um argumento de modelo padrão para `IRowsetImpl` . O único requisito para substituir essa classe é fazer com que a classe de substituição forneça um construtor que aceite um único parâmetro do tipo **Long**.
+Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` Cria um novo `CSimpleRow` para cada linha solicitada em [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows). `CSimpleRow` também pode ser substituído por sua própria implementação do identificador de linha, pois é um argumento de modelo padrão para `IRowsetImpl` . O único requisito para substituir essa classe é fazer com que a classe de substituição forneça um construtor que aceite um único parâmetro do tipo **Long**.
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow::AddRefRow
 
@@ -123,7 +123,7 @@ no Índice para o conjunto de linhas atual.
 
 ### <a name="remarks"></a>Comentários
 
-Define [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) como *iRowsetCur*.
+Define [m_iRowset](#irowset) como *iRowsetCur*.
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow::ReleaseRow
 

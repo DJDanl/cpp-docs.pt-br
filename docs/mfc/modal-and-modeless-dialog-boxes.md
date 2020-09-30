@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d3497a19ab14dcc9f14dc0419eb65ea033135b6e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622217"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508861"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Caixas de diálogo modais e sem janela restrita
 
@@ -30,7 +30,7 @@ A criação de uma caixa de diálogo para o programa requer as seguintes etapas:
 
 1. Crie uma classe de caixa de diálogo.
 
-1. Conecte os [controles do recurso de caixa de diálogo aos manipuladores de mensagens](../windows/adding-event-handlers-for-dialog-box-controls.md) na classe da caixa de diálogo.
+1. Conecte os [controles do recurso de caixa de diálogo aos manipuladores de mensagens](../windows/adding-editing-or-deleting-controls.md) na classe da caixa de diálogo.
 
 1. Adicione os membros de dados associados aos controles da caixa de diálogo e [especifique as](dialog-data-exchange.md) [validações](dialog-data-validation.md) de dados de caixas de diálogo e de dados para os controles.
 

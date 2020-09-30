@@ -2,12 +2,12 @@
 title: Caracteres significativos com vinculação externa
 ms.date: 11/04/2016
 ms.assetid: 6f3b7e26-3fb0-4975-a95d-23a2072c1186
-ms.openlocfilehash: 682820d75dd9ded4deeddb21fd2186ab7f5995f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00c917faed731b212773667961bcd7de9ce279cd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226262"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507687"
 ---
 # <a name="significant-characters-with-external-linkage"></a>Caracteres significativos com vinculação externa
 
@@ -15,6 +15,6 @@ ms.locfileid: "87226262"
 
 Identificadores declarados **`extern`** em programas compilados com o Microsoft C são significativos a 247 caracteres. Você pode modificar esse padrão para um número menor usando a opção /H (que restringe o comprimento dos nomes externos).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Usando extern para especificar a ligação](../cpp/using-extern-to-specify-linkage.md)
+[Usando extern para especificar a ligação](../cpp/extern-cpp.md)

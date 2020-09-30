@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: b0ca43f59cf70dea1348f22a08cfb4e89b45c3dd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 052da13619fae5004ee573bd4957266a545d8335
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617364"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507915"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Contêineres de controle ActiveX: exibindo e modificando propriedades de controle
 
@@ -31,7 +31,7 @@ A primeira etapa na exibição das propriedades do controle é adicionar uma ins
 
 1. Abra o modelo de caixa de diálogo principal.
 
-1. Insira um controle ActiveX usando a caixa de diálogo **Inserir controle ActiveX** . Para obter mais informações, consulte [exibindo e adicionando controles ActiveX a uma caixa de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+1. Insira um controle ActiveX usando a caixa de diálogo **Inserir controle ActiveX** . Para obter mais informações, consulte [exibindo e adicionando controles ActiveX a uma caixa de diálogo](../windows/adding-editing-or-deleting-controls.md).
 
 1. Selecione o controle ActiveX na caixa de diálogo.
 
