@@ -10,37 +10,37 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: b72e2468b9e9984237c81f5cdb3c5691fe95cbd0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e9e5b7a02ee55c05aa44278fbceb9c42f372c443
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216270"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506669"
 ---
-# <a name="define-directive-cc"></a>Diretiva de #define (CC++/)
+# <a name="define-directive-cc"></a>Diretiva de #define (C/C++)
 
 O **#define** cria uma *macro*, que é a associação de um identificador ou identificador com parâmetros com uma cadeia de caracteres de token. Após a definição da macro, o compilador pode substituir a cadeia de caracteres de token para cada ocorrência do identificador no arquivo de origem.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#define** *identificador* do *cadeia de caracteres de token* <sub>aceitar</sub>\
-> **#define** *identificador* do **(** <sub>aceitar</sub>identificador **,** ... **,** *identificador* do <sub>aceitar</sub> **)** <sub>aceitar</sub> *cadeia de caracteres de token*
+> **#define** *token de identificador de #define-opção de cadeia de caracteres*<sub>opt</sub> *identifier*\
+> **#define** *identificador* **de #define (** *identifier*<sub>aceitar</sub>identificador **,** ... **,** *identificador*<sub>opcional</sub> **)** *token-opção de cadeia de caracteres*<sub>opt</sub>
 
 ## <a name="remarks"></a>Comentários
 
-A diretiva **#define** faz com que o compilador substitua a *cadeia de caracteres de token* para cada ocorrência de *identificador* no arquivo de origem. O *identificador* é substituído somente quando ele forma um token. Ou seja, o *identificador* não será substituído se aparecer em um comentário, em uma cadeia de caracteres ou como parte de um identificador mais longo. Para obter mais informações, consulte [tokens](../cpp/tokens-cpp.md).
+A diretiva **#define** faz com que o compilador substitua a *cadeia de caracteres de token* para cada ocorrência de *identificador* no arquivo de origem. O *identificador* é substituído somente quando ele forma um token. Ou seja, o *identificador* não será substituído se aparecer em um comentário, em uma cadeia de caracteres ou como parte de um identificador mais longo. Para obter mais informações, consulte [tokens](../cpp/character-sets.md).
 
 O argumento *token-String* consiste em uma série de tokens, como palavras-chave, constantes ou instruções completas. Um ou mais caracteres de espaço em branco devem separar *cadeia de caracteres de token* do *identificador*. Esse espaço em branco não é considerado parte do texto substituído, nem de qualquer espaço em branco que siga o último token do texto.
 
-Um `#define` sem uma *cadeia de caracteres de token* remove ocorrências de *identificador* do arquivo de origem. O *identificador* permanece definido e pode ser testado usando as `#if defined` diretivas e. `#ifdef`
+Um `#define` sem uma *cadeia de caracteres de token* remove ocorrências de *identificador* do arquivo de origem. O *identificador* permanece definido e pode ser testado usando as `#if defined` diretivas e `#ifdef` .
 
-A segunda forma de sintaxe define uma macro do tipo função com parâmetros. Essa forma aceita uma lista opcional de parâmetros que devem aparecer entre parênteses. Depois que a macro é definida, cada ocorrência subsequente *do identificador*(<sub>opt</sub>,.. *.,* <sub>opcional</sub> do identificador) é substituída por uma versão do argumento de cadeia de caracteres de *token* que tem argumentos reais substituído por parâmetros formais.
+A segunda forma de sintaxe define uma macro do tipo função com parâmetros. Essa forma aceita uma lista opcional de parâmetros que devem aparecer entre parênteses. Depois que a macro é definida, cada ocorrência subsequente *do identificador*(<sub>opt</sub>,.. *.,*<sub>opcional</sub> do identificador) é substituída por uma versão do argumento de cadeia de caracteres de *token* que tem argumentos reais substituídos por parâmetros formais. *identifier*
 
 Os nomes de parâmetro formais aparecem na *cadeia de caracteres de token* para marcar os locais onde os valores reais são substituídos. Cada nome de parâmetro pode aparecer várias vezes na *cadeia de caracteres de token*e os nomes podem aparecer em qualquer ordem. O número de argumentos na chamada deve coincidir com o número de parâmetros na definição da macro. O uso liberal dos parênteses garante que os argumentos complexos reais sejam interpretados corretamente.
 
-Os parâmetros formais na lista são separados por vírgulas. Cada nome da lista deve ser exclusivo, e a lista deve ser colocada entre parênteses. Nenhum espaço pode separar o *identificador* e o parêntese de abertura. Usar concatenação de linha — Coloque uma barra invertida (`\`) imediatamente antes do caractere de nova linha — para diretivas longas em várias linhas de origem. O escopo de um nome de parâmetro formal se estende para a nova linha que termina a *cadeia de caracteres de token*.
+Os parâmetros formais na lista são separados por vírgulas. Cada nome da lista deve ser exclusivo, e a lista deve ser colocada entre parênteses. Nenhum espaço pode separar o *identificador* e o parêntese de abertura. Usar concatenação de linha — Coloque uma barra invertida ( `\` ) imediatamente antes do caractere de nova linha — para diretivas longas em várias linhas de origem. O escopo de um nome de parâmetro formal se estende para a nova linha que termina a *cadeia de caracteres de token*.
 
-Quando uma macro é definida na segunda forma de sintaxe, as instâncias textuais subsequentes seguidas por uma lista de argumentos indicam uma chamada de macro. Os argumentos reais que seguem uma instância do *identificador* no arquivo de origem são correspondidos aos parâmetros formais correspondentes na definição de macro. Cada parâmetro formal na *cadeia de caracteres de token* que não é precedido por um operador`#`de cadeia de caracteres (`#@`), Charting () ou de`##`símbolo de colagem (), ou não `##` seguido por um operador, é substituído pelo correspondente argumento real. As macros no argumento real são expandidas antes da política substituir o parâmetro formal. (Os operadores são descritos em [operadores de pré-processador](../preprocessor/preprocessor-operators.md).)
+Quando uma macro é definida na segunda forma de sintaxe, as instâncias textuais subsequentes seguidas por uma lista de argumentos indicam uma chamada de macro. Os argumentos reais que seguem uma instância do *identificador* no arquivo de origem são correspondidos aos parâmetros formais correspondentes na definição de macro. Cada parâmetro formal na *cadeia de caracteres de token* que não é precedido por um operador de cadeia de caracteres ( `#` ), Charting ( `#@` ) ou de símbolo de colagem ( `##` ), ou não seguido por um `##` operador, é substituído pelo argumento real correspondente. As macros no argumento real são expandidas antes da política substituir o parâmetro formal. (Os operadores são descritos em [operadores de pré-processador](../preprocessor/preprocessor-operators.md).)
 
 Os seguintes exemplos de macros com argumentos ilustram a segunda forma da sintaxe de **#define** :
 
@@ -61,11 +61,11 @@ Se o nome da macro que está sendo definida ocorrer na *cadeia de caracteres de 
 
 Um segundo **#define** para uma macro com o mesmo nome gera um aviso, a menos que a segunda sequência de token seja idêntica à primeira.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 O Microsoft C/C++ permite que você redefina uma macro se a nova definição for sintaticamente idêntica à definição original. Ou seja, as duas definições podem ter nomes de parâmetro diferentes. Esse comportamento difere do ANSI C, o que exige que as duas definições sejam lexicalmente idênticas.
 
-Por exemplo, as duas macros a seguir são idênticas, exceto os nomes de parâmetro. O ANSI C não permite essa redefinição, mas o Microsoft C/C++ compila sem erros.
+Por exemplo, as duas macros a seguir são idênticas, exceto os nomes de parâmetro. O ANSI C não permite essa redefinição, mas o Microsoft C/C++ a compila sem erros.
 
 ```C
 #define multiply( f1, f2 ) ( f1 * f2 )
@@ -79,7 +79,7 @@ Por outro lado, as duas macros a seguir não são idênticas e irão gerar um av
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 Este exemplo ilustra a diretiva **#define** :
 
@@ -108,12 +108,12 @@ var = 80 + 10 * 20;
 
 que é avaliada como 280.
 
-**Seção específica da Microsoft**
+**Específico da Microsoft**
 
 A definição de macros e constantes com a opção [/d](../build/reference/d-preprocessor-definitions.md) do compilador tem o mesmo efeito que usar uma diretiva de pré-processamento **#define** no início do arquivo. Até 30 macros podem ser definidas usando a opção /D.
 
-**Fim da seção específica da Microsoft**
+**FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)

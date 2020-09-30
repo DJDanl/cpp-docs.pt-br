@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832445"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499309"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Como adicionar objetos e controles a um projeto ATL
 
@@ -42,7 +42,7 @@ ms.locfileid: "88832445"
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó do projeto e em **Adicionar** no menu de atalho. Clique em **Adicionar Classe**.
 
-   A caixa de diálogo [Adicionar Classe](../../ide/add-class-dialog-box.md) é exibida.
+   A caixa de diálogo [Adicionar Classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) é exibida.
 
 1. Com a pasta **ATL** selecionada no painel **Categorias**, selecione um objeto a ser inserido do painel **Modelos**. Clique em **Abrir**. O assistente de código do objeto selecionado é exibido.
 
@@ -51,7 +51,7 @@ ms.locfileid: "88832445"
 
    Ou se você tentar adicionar um objeto da ATL ao seu projeto do MFC sem adicionar o suporte à ATL anteriormente, o Visual Studio solicitará que você especifique se deseja que o suporte para ATL seja adicionado ao seu projeto. Clique em **Sim** para adicionar o suporte para ATL ao projeto e abra o assistente da ATL selecionado.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Assistente de Projeto da ATL](../../atl/reference/atl-project-wizard.md)<br/>
 [Tipos de projeto do C++ no Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0f54b244526bbda878dd75b0e1ca97a89d680ea6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02ac25b693e4d8f7bb6739708d23eb1df0ebf190
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622000"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500876"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Teclas de aceleração (editor de imagem C++ para ícones)
 
@@ -22,9 +22,9 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 |Comando|simétricas|Descrição|
 |-------------|----------|-----------------|
 |Image. AirBrushTool|**Ctrl**  +  **Um**|Desenha usando um spray com o tamanho e a cor selecionados.|
-|Image.BrushTool|**Ctrl**  +  **B**|Desenha usando um pincel com a forma, o tamanho e a cor selecionados.|
-|Image. CopyAndOutlineSelection|**Ctrl**  +  **Shift**  +  **U**|Cria uma cópia da seleção atual e a descreve. Se a cor do plano de fundo estiver contida na seleção atual, ela será excluída se você tiver selecionado [transparentemente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md) .|
-|Image.DrawOpaque|**Ctrl**  +  **J**|Torna a seleção atual [opaca ou transparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).|
+|Image.BrushTool|**Ctrl** + **B**|Desenha usando um pincel com a forma, o tamanho e a cor selecionados.|
+|Image. CopyAndOutlineSelection|**Ctrl**  +  **Shift**  +  **U**|Cria uma cópia da seleção atual e a descreve. Se a cor do plano de fundo estiver contida na seleção atual, ela será excluída se você tiver selecionado [transparentemente](./image-editor-for-icons.md) .|
+|Image.DrawOpaque|**Ctrl** + **J**|Torna a seleção atual [opaca ou transparente](./image-editor-for-icons.md).|
 |Image.EllipseTool|**Ctrl**  +  **P**|Desenha uma elipse com a largura e a cor da linha selecionada.|
 |Image. EraserTool|**Ctrl**  +  **Shift**  +  **I**|Apaga uma parte da imagem (com a cor do plano de fundo atual).|
 |Image.FilledEllipseTool|**Ctrl**  +  **Shift**  +  **ALT**  +  **P**|Desenha uma elipse preenchida.|
@@ -37,7 +37,7 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 |Image.LineTool|**Ctrl**  +  **L**|Desenha uma linha reta com a forma, o tamanho e a cor selecionados.|
 |Image.MagnificationTool|**Ctrl**  +  **M**|Ativa a ferramenta de **ampliação** , que permite que você amplie seções específicas da imagem.|
 |Image.Magnify|**Ctrl**  +  **Shift**  +  **M**|Alterna entre a ampliação atual e a ampliação de 1:1.|
-|Image.NewImageType|**Inserir**|Inicia a [ \<Device> caixa de diálogo novo tipo de imagem](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) com a qual você pode criar uma imagem para um tipo de imagem diferente.|
+|Image.NewImageType|**Inserção**|Inicia a [ \<Device> caixa de diálogo novo tipo de imagem](./creating-an-icon-or-other-image-image-editor-for-icons.md) com a qual você pode criar uma imagem para um tipo de imagem diferente.|
 |Image.NextColor|**Ctrl**  +  **]**<br /><br /> - ou -<br /><br /> **Ctrl**  +  **Seta para a direita**|Altera a cor do primeiro plano do desenho para a próxima cor da paleta.|
 |Image.NextRightColor|**Ctrl**  +  **Shift**  +  **]**<br /><br /> - ou -<br /><br /> **Shift**  +  **Ctrl**  +  **Seta para a direita**|Altera a cor do plano de fundo do desenho para a próxima cor da paleta.|
 |Image.OutlinedEllipseTool|**Shift**  +  **ALT**  +  **P**|Desenha uma elipse preenchida com um contorno.|
@@ -50,11 +50,11 @@ Abaixo estão as teclas de aceleração para os comandos do editor de imagem que
 |Image.RectangleTool|ATL + R|Desenha um retângulo com a largura e a cor da linha selecionada.|
 |Image.Rotate90Degrees|**Ctrl**  +  **Shift**  +  **H**|Gira a imagem ou a seleção de 90 graus.|
 |Image.RoundedRectangleTool|**ALT**  +  **W**|Desenha um retângulo arredondado com a largura e a cor da linha selecionada.|
-|Image.ShowGrid|**Ctrl**  +  **ALT**  +  **S**|Alterna a grade de pixels (marca ou limpa a opção de **grade de pixels** na [caixa de diálogo Configurações de grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
-|Image.ShowTileGrid|**Ctrl**  +  **Shift**  +  **ALT**  +  **S**|Alterna a grade de blocos (marca ou limpa a opção de **grade de blocos** na [caixa de diálogo Configurações de grade](../windows/grid-settings-dialog-box-image-editor-for-icons.md)).|
+|Image.ShowGrid|**Ctrl**  +  **ALT**  +  **S**|Alterna a grade de pixels (marca ou limpa a opção de **grade de pixels** na [caixa de diálogo Configurações de grade](./image-editor-for-icons.md)).|
+|Image.ShowTileGrid|**Ctrl**  +  **Shift**  +  **ALT**  +  **S**|Alterna a grade de blocos (marca ou limpa a opção de **grade de blocos** na [caixa de diálogo Configurações de grade](./image-editor-for-icons.md)).|
 |Image.SmallBrush|**Ctrl**  +  **.** (ponto final)|Reduz o tamanho do **pincel** a um pixel. (Veja também Image. LargerBrush e image. SmallerBrush nesta tabela.)|
 |Image.SmallerBrush|**Ctrl**  +  Ctrl **-** menos|Reduz o tamanho do pincel em um pixel em cada direção. Para expandir o tamanho do pincel novamente, consulte Image. LargerBrush nesta tabela.|
-|Image.TextTool|**Ctrl**  +  **T**|Abre a [caixa de diálogo ferramenta de texto](../windows/text-tool-dialog-box-image-editor-for-icons.md).|
+|Image.TextTool|**Ctrl**  +  **T**|Abre a [caixa de diálogo ferramenta de texto](./image-editor-for-icons.md).|
 |Image. UseSelectionAsBrush|**Ctrl**  +  **U**|Desenha usando a seleção atual como um pincel.|
 |Image.ZoomIn|**Ctrl**  +  **Shift**  +  **.** (ponto final)<br /><br /> - ou -<br /><br /> **Ctrl**  +  **Seta para cima**|Aumenta a ampliação da exibição atual.|
 |Image.ZoomOut|**Ctrl**  +  **,** (vírgula)<br /><br /> - ou -<br /><br /> **Ctrl**  +  **Seta para baixo**|Reduz a ampliação da exibição atual.|

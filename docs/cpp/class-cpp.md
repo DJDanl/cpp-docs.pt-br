@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226002"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499823"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -29,7 +29,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 [ class ] tag declarators;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *modelo-especificação*<br/>
 Especificações de modelo opcionais. Para obter mais informações, consulte [modelos](templates-cpp.md).
@@ -50,7 +50,7 @@ A lista opcional de classes ou estruturas da qual esta classe derivará seus mem
 Lista de membros da classe. Consulte [visão geral de membro de classe](../cpp/class-member-overview.md) para obter mais informações.
 
 *declarators*<br/>
-Lista de declaradores que especifica os nomes de uma ou mais instâncias do tipo da classe. Os declaradores podem incluir listas de inicializador se todos os membros de dados da classe forem **`public`** . Isso é mais comum em estruturas, cujos membros de dados são **`public`** por padrão, do que em classes. Consulte [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
+Lista de declaradores que especifica os nomes de uma ou mais instâncias do tipo da classe. Os declaradores podem incluir listas de inicializador se todos os membros de dados da classe forem **`public`** . Isso é mais comum em estruturas, cujos membros de dados são **`public`** por padrão, do que em classes. Consulte [visão geral dos declaradores](./declarations-and-definitions-cpp.md) para obter mais informações.
 
 ## <a name="remarks"></a>Comentários
 

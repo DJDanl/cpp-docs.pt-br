@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3044
 ms.assetid: 9f3e25b2-4676-49ab-97bf-6c88cd0fa377
-ms.openlocfilehash: 74e931d8110c1104125b977e45ad0c6fd3ffd5f0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0ac2a6a86ffd719dbb5f39fc085d3f5cbca0567d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761358"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506358"
 ---
 # <a name="compiler-error-c3044"></a>Erro do compilador C3044
 
 ' section ': permitida apenas aninhada diretamente sob uma diretiva de OpenMP ' Sections '
 
-O compilador encontrou uma diretiva de `section` foi usada incorretamente. Para obter mais informações, consulte [seções](../../parallel/openmp/reference/sections-openmp.md).
+O compilador encontrou uma `section` diretiva foi usada incorretamente. Para obter mais informações, consulte [seções](../../parallel/openmp/reference/openmp-directives.md#sections-openmp).
 
 O exemplo a seguir gera C3044:
 

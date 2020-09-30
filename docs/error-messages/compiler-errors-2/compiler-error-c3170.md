@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-ms.openlocfilehash: e2d74a637e2902fcf636b49068882f32aa706f94
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c4eb4a2551312791d05c8badb66af0070e74b630
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761758"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508331"
 ---
 # <a name="compiler-error-c3170"></a>Erro do compilador C3170
 
 Não é possível ter identificadores de módulo diferentes em um projeto
 
-atributos de [módulo](../../windows/module-cpp.md) com nomes diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um atributo de `module` exclusivo pode ser especificado por compilação.
+atributos de [módulo](../../windows/attributes/module-cpp.md) com nomes diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um `module` atributo exclusivo pode ser especificado por compilação.
 
-Atributos de `module` idênticos podem ser especificados em mais de um arquivo de código-fonte.
+Atributos idênticos `module` podem ser especificados em mais de um arquivo de código-fonte.
 
 Por exemplo, se os seguintes atributos de módulo foram encontrados:
 
@@ -29,7 +29,7 @@ Por exemplo, se os seguintes atributos de módulo foram encontrados:
 int main() {}
 ```
 
-E, em seguida,
+Assim,
 
 ```cpp
 // C3170b.cpp

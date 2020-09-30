@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - _Analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: 00577e6cc5ebd30e38e4fb7204b93c3ecf3fe112
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f427afdcab07b41430a5d4b5fc7f300aa671e30b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418735"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503292"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Como especificar informações de código adicionais usando _Analysis_assume
 
-Você pode fornecer dicas para a ferramenta de análise de código paraC++ C/Code que ajudará o processo de análise e a reduzir os avisos. Para fornecer informações adicionais, use a seguinte função:
+Você pode fornecer dicas para a ferramenta de análise de código para código C/C++ que ajudará o processo de análise e a reduzir os avisos. Para fornecer informações adicionais, use a seguinte função:
 
 `_Analysis_assume(`  `expr`  `)`
 
-`expr`-qualquer expressão presumida para ser avaliada como true.
+`expr` -qualquer expressão presumida para avaliar como true.
 
 A ferramenta de análise de código pressupõe que a condição representada pela expressão seja verdadeira no ponto em que a função aparece e permaneça true até que a expressão seja alterada, por exemplo, por atribuição para uma variável.
 
@@ -52,6 +52,6 @@ void test()
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [__assume](/cpp/intrinsics/assume)
+- [__assume](../intrinsics/assume.md)

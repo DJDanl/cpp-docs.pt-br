@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833134"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503555"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -23,7 +23,7 @@ Agrupa `db_column` atributos que participam de `IAccessor` associação baseada 
 [ db_accessor(num, auto) ]
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *num*<br/>
 Especifica o número do acessador (um índice de inteiro com base em zero). Você deve especificar números de acessadores em ordem crescente, usando números inteiros ou valores definidos.
@@ -33,7 +33,7 @@ Um valor booliano que especifica se o acessador é recuperado automaticamente (T
 
 ## <a name="remarks"></a>Comentários
 
-**db_accessor** define o acessador de OLE DB subjacente para `db_column` os atributos subsequentes e `db_param` dentro da mesma classe ou função. **db_accessor** é utilizável no nível de membro e é usado para agrupar `db_column` atributos que participam de `IAccessor` associação baseada em OLE DB. Ele é usado em conjunto com os `db_table` atributos ou `db_command` . Chamar esse atributo é semelhante a chamar as macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+**db_accessor** define o acessador de OLE DB subjacente para `db_column` os atributos subsequentes e `db_param` dentro da mesma classe ou função. **db_accessor** é utilizável no nível de membro e é usado para agrupar `db_column` atributos que participam de `IAccessor` associação baseada em OLE DB. Ele é usado em conjunto com os `db_table` atributos ou `db_command` . Chamar esse atributo é semelhante a chamar as macros [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) e [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) .
 
 **db_accessor** gera um conjunto de linhas e o associa aos mapas de acessadores correspondentes. Se você não chamar **db_accessor**, o acessador 0 será gerado automaticamente e todas as associações de coluna serão mapeadas para esse bloco de acessador.
 
@@ -76,6 +76,6 @@ public:
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [OLE DB atributos de consumidor](ole-db-consumer-attributes.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: bfbc27dbcdeeb38c40f5d989bacd65a23198d4f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213964"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507895"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Acesso fortemente tipado a controles com assistentes de código
 
-Se você estiver familiarizado com os recursos do campo DDX, poderá usar a propriedade Control no [Assistente para Adicionar variável de membro](../ide/add-member-variable-wizard.md) para criar acesso seguro de tipo. Essa abordagem é mais fácil do que criar controles sem assistentes de código.
+Se você estiver familiarizado com os recursos do campo DDX, poderá usar a propriedade Control no [Assistente para Adicionar variável de membro](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) para criar acesso seguro de tipo. Essa abordagem é mais fácil do que criar controles sem assistentes de código.
 
 Se você simplesmente quiser acesso ao valor de um controle, campo DDX o fornecerá. Se você quiser fazer mais do que acessar o valor de um controle, use o assistente para Adicionar variável de membro para adicionar uma variável de membro da classe apropriada à sua classe de caixa de diálogo. Anexe essa variável de membro à propriedade de controle.
 
@@ -33,7 +33,7 @@ Aqui, a variável de membro *m_Checkbox* tem a mesma finalidade que a função d
 
 Para obter mais informações sobre controles, consulte [controles](../mfc/controls-mfc.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Acesso de tipo seguro a controles em uma caixa de diálogo](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Trabalhar com caixas de diálogo no MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>

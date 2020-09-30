@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: b21f9ec2ace54281f30f8f32134c7fb3466a1faa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214848"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500593"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -83,7 +83,7 @@ Inclua o cabeçalho STL/CLR `<cliext/utility>` para definir a classe de modelo `
 
 ## <a name="members"></a>Membros
 
-## <a name="pair-stlclr"></a><a name="pair"></a>par (STL/CLR)
+## <a name="pair-stlclr"></a><a name="pair"></a> par (STL/CLR)
 
 A classe de modelo descreve um objeto que encapsula um par de valores.
 
@@ -95,7 +95,7 @@ template<typename Value1,
     ref class pair;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Value1*<br/>
 O tipo do primeiro valor encapsulado.
@@ -128,7 +128,7 @@ O tipo do segundo valor encapsulado.
 
 O objeto armazena um par de valores. Você usa essa classe de modelo para combinar dois valores em um único objeto. Além disso, o objeto `cliext::pair` (descrito aqui) armazena apenas os tipos gerenciados; para armazenar um par de tipos não gerenciados `std::pair` , declarados em `<utility>` .
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>par:: primeiro (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a> par:: primeiro (STL/CLR)
 
 O primeiro valor encapsulado.
 
@@ -165,7 +165,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>par:: first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a> par:: first_type (STL/CLR)
 
 O tipo do primeiro valor encapsulado.
 
@@ -202,7 +202,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>par:: Operator = (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a> par:: Operator = (STL/CLR)
 
 Substitui o par de valores armazenado.
 
@@ -212,9 +212,9 @@ Substitui o par de valores armazenado.
 pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Emparelhar para copiar.
 
 ### <a name="remarks"></a>Comentários
@@ -246,7 +246,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>par::p ar (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a> par::p ar (STL/CLR)
 
 Constrói um objeto de par.
 
@@ -259,9 +259,9 @@ pair(pair<Coll>^ right);
 pair(Value1 val1, Value2 val2);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Emparelhar para armazenar.
 
 *val1*<br/>
@@ -282,11 +282,11 @@ O construtor:
 
 `pair(pair<Value1, Value2>% right);`
 
-Inicializa o par armazenado com o `right.` [par:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) e `right.` [par:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inicializa o par armazenado com o `right.` [par:: First (STL/CLR)](#first) e `right.` [par:: Second (STL/CLR)](#second).
 
 `pair(pair<Value1, Value2>^ right);`
 
-Inicializa o par armazenado com o `right->` [par:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) e `right>` [par:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inicializa o par armazenado com o `right->` [par:: First (STL/CLR)](#first) e `right>` [par:: Second (STL/CLR)](#second).
 
 O construtor:
 
@@ -331,7 +331,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>par:: segundo (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a> par:: segundo (STL/CLR)
 
 O segundo valor encapsulado.
 
@@ -368,7 +368,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>par:: second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a> par:: second_type (STL/CLR)
 
 O tipo do segundo valor encapsulado.
 
@@ -405,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>Pair:: swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a> Pair:: swap (STL/CLR)
 
 Permuta o conteúdo de dois pares.
 
@@ -415,9 +415,9 @@ Permuta o conteúdo de dois pares.
 void swap(pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Par com o qual trocar conteúdo.
 
 ### <a name="remarks"></a>Comentários
@@ -474,7 +474,7 @@ x x x x x
 a b c
 ```
 
-## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
+## <a name="make_pair-stlclr"></a><a name="make_pair"></a> make_pair (STL/CLR)
 
 Crie um `pair` de um par de valores.
 
@@ -486,7 +486,7 @@ template<typename Value1,
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Value1*<br/>
 O tipo do primeiro valor encapsulado.
@@ -527,7 +527,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operador! = (par) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a> operador! = (par) (STL/CLR)
 
 Comparação de pares não igual.
 
@@ -540,12 +540,12 @@ template<typename Value1,
         pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*mantida*<br/>
+*esquerda*<br/>
 Par esquerdo para comparar.
 
-*Certo*<br/>
+*direita*<br/>
 Par correto para comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -581,7 +581,7 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operador &lt; (par) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a> operador &lt; (par) (STL/CLR)
 
 Par menor que comparação.
 
@@ -594,12 +594,12 @@ template<typename Value1,
         pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*mantida*<br/>
+*esquerda*<br/>
 Par esquerdo para comparar.
 
-*Certo*<br/>
+*direita*<br/>
 Par correto para comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -635,7 +635,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>Operator &lt; = (par) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a> Operator &lt; = (par) (STL/CLR)
 
 Par comparação menor ou igual a.
 
@@ -648,12 +648,12 @@ template<typename Value1,
         pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*mantida*<br/>
+*esquerda*<br/>
 Par esquerdo para comparar.
 
-*Certo*<br/>
+*direita*<br/>
 Par correto para comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -689,7 +689,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>Operator = = (par) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a> Operator = = (par) (STL/CLR)
 
 Comparar comparação igual.
 
@@ -702,12 +702,12 @@ template<typename Value1,
         pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*mantida*<br/>
+*esquerda*<br/>
 Par esquerdo para comparar.
 
-*Certo*<br/>
+*direita*<br/>
 Par correto para comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -743,7 +743,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operador &gt; (par) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a> operador &gt; (par) (STL/CLR)
 
 Par maior que comparação.
 
@@ -756,12 +756,12 @@ template<typename Value1,
         pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*mantida*<br/>
+*esquerda*<br/>
 Par esquerdo para comparar.
 
-*Certo*<br/>
+*direita*<br/>
 Par correto para comparar.
 
 ### <a name="remarks"></a>Comentários
@@ -797,7 +797,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>Operator &gt; = (par) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a> Operator &gt; = (par) (STL/CLR)
 
 Par maior ou igual a comparação.
 
@@ -810,12 +810,12 @@ template<typename Value1,
         pair<Value1, Value2>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*mantida*<br/>
+*esquerda*<br/>
 Par esquerdo para comparar.
 
-*Certo*<br/>
+*direita*<br/>
 Par correto para comparar.
 
 ### <a name="remarks"></a>Comentários

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 7730b5a8dbb8c92d85b4c8c5732657d28bf5b229
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216434"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502426"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -84,7 +84,7 @@ O cabeçalho STL/CLR `<cliext/adapter>` especifica duas classes de modelo ( `col
 
 ## <a name="members"></a>Membros
 
-## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
+## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a> collection_adapter (STL/CLR)
 
 Encapsula uma coleção .NET para uso como um contêiner STL/CLR. Um `collection_adapter` é uma classe de modelo que descreve um objeto de contêiner STL/CLR simples. Ele encapsula uma interface BCL (base Class Library) e retorna um par iterador que você usa para manipular a sequência controlada.
 
@@ -121,7 +121,7 @@ template<typename Key,
         System::Collections::Generic::IDictionary<Key, Value>>;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Coll*<br/>
 O tipo da coleção encapsulada.
@@ -168,7 +168,7 @@ O tipo da coleção encapsulada.
 
 Você usa essa classe de modelo para manipular um contêiner de BCL como um contêiner STL/CLR. O `collection_adapter` armazena um identificador para uma interface BCL que, por sua vez, controla uma sequência de elementos. Um `collection_adapter` objeto `X` retorna um par de iteradores de entrada `X.begin()` e `X.end()` que você usa para visitar os elementos, em ordem. Algumas das especializações também permitem que você escreva `X.size()` para determinar o comprimento da sequência controlada.
 
-## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: base (STL/CLR)
+## <a name="collection_adapterbase-stlclr"></a><a name="base"></a> collection_adapter:: base (STL/CLR)
 
 Designa a interface da BCL encapsulada.
 
@@ -212,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a>collection_adapter:: Begin (STL/CLR)
+## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a> collection_adapter:: Begin (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -263,7 +263,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a>collection_adapter:: collection_adapter (STL/CLR)
+## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a> collection_adapter:: collection_adapter (STL/CLR)
 
 Constrói um objeto de adaptador.
 
@@ -276,12 +276,12 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Cole*<br/>
 Identificador de BCL a ser encapsulado.
 
-*Certo*<br/>
+*direita*<br/>
 Objeto a ser copiado.
 
 ### <a name="remarks"></a>Comentários
@@ -296,13 +296,13 @@ O construtor:
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-Inicializa o identificador armazenado com `right.` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md) `()` .
+Inicializa o identificador armazenado com `right.` [collection_adapter:: base (STL/CLR)](#base) `()` .
 
 O construtor:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-Inicializa o identificador armazenado com `right->` [collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md) `()` .
+Inicializa o identificador armazenado com `right->` [collection_adapter:: base (STL/CLR)](#base) `()` .
 
 O construtor:
 
@@ -357,7 +357,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a>collection_adapter::d ifference_type (STL/CLR)
+## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a> collection_adapter::d ifference_type (STL/CLR)
 
 Os tipos de uma distância assinada entre dois elementos.
 
@@ -409,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="collection_adapterend-stlclr"></a><a name="end"></a>collection_adapter:: End (STL/CLR)
+## <a name="collection_adapterend-stlclr"></a><a name="end"></a> collection_adapter:: End (STL/CLR)
 
 Designa o fim da sequência controlada.
 
@@ -454,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a>collection_adapter:: iterador (STL/CLR)
+## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a> collection_adapter:: iterador (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -499,7 +499,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a>collection_adapter:: key_type (STL/CLR)
+## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a> collection_adapter:: key_type (STL/CLR)
 
 O tipo de uma chave de dicionário.
 
@@ -549,7 +549,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a>collection_adapter:: mapped_type (STL/CLR)
+## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a> collection_adapter:: mapped_type (STL/CLR)
 
 O tipo de um valor de dicionário.
 
@@ -599,7 +599,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a>collection_adapter:: Operator = (STL/CLR)
+## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a> collection_adapter:: Operator = (STL/CLR)
 
 Substitui o identificador de BCL armazenado.
 
@@ -609,9 +609,9 @@ Substitui o identificador de BCL armazenado.
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Adaptador a ser copiado.
 
 ### <a name="remarks"></a>Comentários
@@ -656,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a>collection_adapter:: Reference (STL/CLR)
+## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a> collection_adapter:: Reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -704,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="collection_adaptersize-stlclr"></a><a name="size"></a>collection_adapter:: Size (STL/CLR)
+## <a name="collection_adaptersize-stlclr"></a><a name="size"></a> collection_adapter:: Size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -747,7 +747,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a>collection_adapter:: size_type (STL/CLR)
+## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a> collection_adapter:: size_type (STL/CLR)
 
 O tipo de uma distância assinada entre dois elementos.
 
@@ -792,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a>collection_adapter:: swap (STL/CLR)
+## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a> collection_adapter:: swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -802,9 +802,9 @@ Alterna o conteúdo de dois contêineres.
 void swap(collection_adapter<Coll>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Contêiner com o qual trocar conteúdos.
 
 ### <a name="remarks"></a>Comentários
@@ -861,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a>collection_adapter:: value_type (STL/CLR)
+## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a> collection_adapter:: value_type (STL/CLR)
 
 O tipo de um elemento.
 
@@ -910,7 +910,7 @@ int main()
 a b c
 ```
 
-## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
+## <a name="make_collection-stlclr"></a><a name="make_collection"></a> make_collection (STL/CLR)
 
 Faça um `range_adapter` de um par de iteradores.
 
@@ -921,7 +921,7 @@ template<typename Iter>
     range_adapter<Iter> make_collection(Iter first, Iter last);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Iter*<br/>
 O tipo dos iteradores encapsulados.
@@ -988,7 +988,7 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a>range_adapter (STL/CLR)
+## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a> range_adapter (STL/CLR)
 
 Uma classe de modelo que encapsula um par de iteradores que são usados para implementar várias interfaces de BCL (base Class Library). Você usa o range_adapter para manipular um intervalo STL/CLR como se fosse uma coleção de BCL.
 
@@ -1005,7 +1005,7 @@ template<typename Iter>
     { ..... };
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *Iter*<br/>
 O tipo associado aos iteradores encapsulados.
@@ -1033,7 +1033,7 @@ O tipo associado aos iteradores encapsulados.
 
 O range_adapter armazena um par de iteradores que, por sua vez, delimitam uma sequência de elementos. O objeto implementa quatro interfaces BCL que permitem iterar nos elementos, em ordem. Você usa essa classe de modelo para manipular intervalos STL/CLR de forma semelhante a contêineres de BCL.
 
-## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a>range_adapter:: Operator = (STL/CLR)
+## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a> range_adapter:: Operator = (STL/CLR)
 
 Substitui o par do iterador armazenado.
 
@@ -1043,9 +1043,9 @@ Substitui o par do iterador armazenado.
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Adaptador a ser copiado.
 
 ### <a name="remarks"></a>Comentários
@@ -1090,7 +1090,7 @@ a b c
 a b c
 ```
 
-## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a>range_adapter:: range_adapter (STL/CLR)
+## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a> range_adapter:: range_adapter (STL/CLR)
 
 Constrói um objeto de adaptador.
 
@@ -1103,7 +1103,7 @@ range_adapter(range_adapter<Iter>^ right);
 range_adapter(Iter first, Iter last);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
 Primeiro iterador a ser encapsulado.
@@ -1111,7 +1111,7 @@ Primeiro iterador a ser encapsulado.
 *last*<br/>
 Segundo iterador a ser encapsulado.
 
-*Certo*<br/>
+*direita*<br/>
 Objeto a ser copiado.
 
 ### <a name="remarks"></a>Comentários

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 716fdf244f19fa8f0960a0279da3c39af1546178
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a0f74179e187baea80993c5dda3f35f602f876c1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218254"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508537"
 ---
 # <a name="compiler-error-c2348"></a>Erro do compilador C2348
 
 ' Type Name ': não é uma agregação em estilo C, não pode ser exportada em IDL inserida
 
-Para inserir um **`struct`** em um arquivo. idl com o atributo de [exportação](../../windows/export.md) , o **`struct`** deve conter apenas dados.
+Para inserir um **`struct`** em um arquivo. idl com o atributo de [exportação](../../windows/attributes/export.md) , o **`struct`** deve conter apenas dados.
 
 O exemplo a seguir gera C2348:
 

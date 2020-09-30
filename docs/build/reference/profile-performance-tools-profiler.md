@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: cf07154c6b681e2ad30a85a62a0db996c3f3d911
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 07952c979fd66291b1744521d83e4556f010d297
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078314"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500791"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (criador de perfil das ferramentas de desempenho)
 
@@ -38,7 +38,7 @@ Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferram
 
 /PROFILE faz com que o vinculador gere uma seção de realocação na imagem do programa.  Uma seção de realocação permite que o profiler transforme a imagem do programa para obter dados de perfil.
 
-**/Profile** só está disponível em versões empresariais (desenvolvimento de equipe).  Para obter mais informações sobre o PREfast, consulte [análise de códigoC++ para C/visão geral](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** só está disponível em versões empresariais (desenvolvimento de equipe).  Para obter mais informações sobre o PREfast, consulte [análise de código para visão geral do C/C++](../../code-quality/code-analysis-for-c-cpp-overview.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
@@ -58,9 +58,9 @@ Produz um arquivo de saída que pode ser usado com o criador de perfil de Ferram
 
 ### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Para definir essa opção de vinculador no projeto CMake do Visual Studio
 
-O projeto **CMake** não tem **páginas de propriedades**, as opções do vinculador podem ser definidas modificando o CMakeLists. txt.
+O projeto **CMake** não tem **páginas de propriedades**, as opções do vinculador podem ser definidas modificando o CMakeLists.txt.
 
-1. Abra o CMakeLists. txt no diretório raiz do projeto.
+1. Abra o CMakeLists.txt no diretório raiz do projeto.
 
 1. Adicione o código abaixo. Para obter detalhes, consulte [referências de CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
 
@@ -73,4 +73,4 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
 ## <a name="see-also"></a>Consulte Também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções de vinculador MSVC](linker-options.md)
+[Opções do vinculador MSVC](linker-options.md)

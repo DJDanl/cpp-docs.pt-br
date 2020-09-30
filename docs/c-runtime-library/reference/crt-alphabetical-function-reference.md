@@ -1,29 +1,29 @@
 ---
-title: Referência da função alfabética UCRT
+title: Referência de função alfabética UCRT
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340333"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499393"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>Referência da função alfabética UCRT
+# <a name="ucrt-alphabetical-function-reference"></a>Referência de função alfabética UCRT
 
-A documentação de referência da biblioteca C Runtime Universal (UCRT, com frequência simplesmente CRT) é organizada em ordem alfabética por rotina. Para localizar uma rotina CRT com base na funcionalidade, consulte [rotinas de tempo de execução C universais por categoria](../../c-runtime-library/run-time-routines-by-category.md).
+A documentação de referência de biblioteca do universal C Runtime (UCRT, com frequência apenas CRT) é organizada em ordem alfabética por rotina. Para encontrar uma rotina de CRT com base na funcionalidade, consulte [rotinas de tempo de execução universal C por categoria](../../c-runtime-library/run-time-routines-by-category.md).
 
 ## <a name="a"></a>Um
 
-[abort](abort.md)
+[anular](abort.md)
 
-[abs](abs-labs-llabs-abs64.md)
+[ABS](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
-[access](access-crt.md)
+[às](access-crt.md)
 
 [_access](access-waccess.md)
 
@@ -85,7 +85,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [asctime_s](asctime-s-wasctime-s.md)
 
-[asin](asin-asinf-asinl.md)
+[ASIN](asin-asinf-asinl.md)
 
 [asinf](asin-asinf-asinl.md)
 
@@ -97,7 +97,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[declarar](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -107,7 +107,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_ASSERTE](assert-asserte-assert-expr-macros.md)
 
-[atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+[ATAN](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
 [atan2](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -191,7 +191,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_cabs](cabs.md)
 
-[cabs](cabs-cabsf-cabsl.md)
+[táxi](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
@@ -321,7 +321,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [clock](clock.md)
 
-[clog](clog-clogf-clogl.md)
+[obstruir](clog-clogf-clogl.md)
 
 [clog10](clog10-clog10f-clog10l.md)
 
@@ -369,7 +369,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[cos](cos-cosf-cosl.md)
+[exibi](cos-cosf-cosl.md)
 
 [cosf](cos-cosf-cosl.md)
 
@@ -571,7 +571,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_dup](dup-dup2.md)
 
-[dup](posix-dup-dup2.md)
+[duplica](posix-dup-dup2.md)
 
 [_dup2](dup-dup2.md)
 
@@ -593,7 +593,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_endthreadex](endthread-endthreadex.md)
 
-[eof](posix-eof.md)
+[EOF](posix-eof.md)
 
 [_eof](eof.md)
 
@@ -787,7 +787,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_finitef](finite-finitef.md)
 
-[floor](floor-floorf-floorl.md)
+[Floor](floor-floorf-floorl.md)
 
 [floorf](floor-floorf-floorl.md)
 
@@ -871,7 +871,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [fread_s](fread-s.md)
 
-[free](free.md)
+[gratuito](free.md)
 
 [_free_dbg](free-dbg.md)
 
@@ -1027,7 +1027,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_getch_nolock](getch-nolock-getwch-nolock.md)
 
-[getchar](getchar-getwchar.md)
+[GetChar](getchar-getwchar.md)
 
 [_getchar_nolock](getchar-nolock-getwchar-nolock.md)
 
@@ -1171,7 +1171,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [isatty](posix-isatty.md)
 
-[isblank](isblank-iswblank-isblank-l-iswblank-l.md)
+[IsBlank](isblank-iswblank-isblank-l-iswblank-l.md)
 
 [_isblank_l](isblank-iswblank-isblank-l-iswblank-l.md)
 
@@ -1199,13 +1199,13 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_isdigit_l](isdigit-iswdigit-isdigit-l-iswdigit-l.md)
 
-[isfinite](finite-finitef.md)
+[isfinito](finite-finitef.md)
 
 [isgraph](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
 [_isgraph_l](isgraph-iswgraph-isgraph-l-iswgraph-l.md)
 
-[isgreater](floating-point-ordering.md)
+[isótimoer](floating-point-ordering.md)
 
 [isgreaterequal](floating-point-ordering.md)
 
@@ -1349,7 +1349,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_ismbstrail_l](ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)
 
-[isnan](isnan-isnan-isnanf.md)
+[IsNaN](isnan-isnan-isnanf.md)
 
 [_isnan](isnan-isnan-isnanf.md)
 
@@ -1371,7 +1371,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [isunordered](floating-point-ordering.md)
 
-[isupper](isupper-isupper-l-iswupper-iswupper-l.md)
+[IsUpper](isupper-isupper-l-iswupper-iswupper-l.md)
 
 [_isupper_l](isupper-isupper-l-iswupper-iswupper-l.md)
 
@@ -1465,7 +1465,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [jn](j0-j1-jn.md)
 
-## <a name="k"></a>M
+## <a name="k"></a>K
 
 [_kbhit](kbhit.md)
 
@@ -1477,7 +1477,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
@@ -1493,7 +1493,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1523,11 +1523,11 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[bloqueio](posix-locking.md)
 
 [_locking](locking.md)
 
-[log](log-logf-log10-log10f.md)
+[Façam](log-logf-log10-log10f.md)
 
 [log10](log-logf-log10-log10f.md)
 
@@ -1577,7 +1577,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_lsearch](lsearch.md)
 
-[lsearch](posix-lsearch.md)
+[a](posix-lsearch.md)
 
 [_lsearch_s](lsearch-s.md)
 
@@ -1967,7 +1967,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 ## <a name="n"></a>N
 
-[nan](nan-nanf-nanl.md)
+[Nan](nan-nanf-nanl.md)
 
 [nanf](nan-nanf-nanl.md)
 
@@ -2113,7 +2113,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[leitura](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,7 +2125,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[remainder](remainder-remainderf-remainderl.md)
+[final](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2143,7 +2143,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_resetstkoflw](resetstkoflw.md)
 
-[rewind](rewind.md)
+[retrocesso](rewind.md)
 
 [rint](rint-rintf-rintl.md)
 
@@ -2167,7 +2167,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[round](round-roundf-roundl.md)
+[idas](round-roundf-roundl.md)
 
 [roundf](round-roundf-roundl.md)
 
@@ -2295,7 +2295,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [signbit](signbit.md)
 
-[sin](sin-sinf-sinl.md)
+[Sin](sin-sinf-sinl.md)
 
 [sinf](sin-sinf-sinl.md)
 
@@ -2671,15 +2671,15 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[system](system-wsystem.md)
+[sistema](system-wsystem.md)
 
 ## <a name="t"></a>T
 
-[tan](tan-tanf-tanl.md)
+[queimado](tan-tanf-tanl.md)
 
 [tanf](tan-tanf-tanl.md)
 
-[tanh](tanh-tanhf-tanhl.md)
+[Tanh](tanh-tanhf-tanhl.md)
 
 [tanhf](tanh-tanhf-tanhl.md)
 
@@ -2699,7 +2699,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[terminate](terminate-crt.md)
+[encerrar](terminate-crt.md)
 
 [tgamma](tgamma-tgammaf-tgammal.md)
 
@@ -2731,13 +2731,13 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [toascii](toascii-toascii.md)
 
-[tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
+[ToLower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
 [_tolower_l](tolower-tolower-towlower-tolower-l-towlower-l.md)
 
-[toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
+[ToUpper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 [_toupper](toupper-toupper-towupper-toupper-l-towupper-l.md)
 
@@ -2791,7 +2791,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [__uncaught_exception](uncaught-exception.md)
 
-[unexpected](unexpected-crt.md)
+[previsto](unexpected-crt.md)
 
 [ungetc](ungetc-ungetwc.md)
 
@@ -3385,7 +3385,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_write](write.md)
 
-[write](posix-write.md)
+[gravá](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3499,7 +3499,7 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 [_y1](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[y1](y0-y1-yn.md)
+[Y1](y0-y1-yn.md)
 
 [_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
@@ -3507,4 +3507,4 @@ A documentação de referência da biblioteca C Runtime Universal (UCRT, com fre
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca em tempo de execução C](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Referência da biblioteca de tempo de execução C](../../c-runtime-library/c-run-time-library-reference.md)<br/>

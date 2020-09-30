@@ -5,12 +5,12 @@ helpviewer_keywords:
 - no linkage
 - linkage [C++], none
 ms.assetid: 5a413082-1034-4e04-b76b-8d14668bf434
-ms.openlocfilehash: a7c9a5b8f0ba92830500e55818093981a044d2df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69ead5d12d6689370e9ae04a54d5f5a8db06eca5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218800"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500748"
 ---
 # <a name="no-linkage"></a>Sem ligação
 
@@ -26,6 +26,6 @@ Os seguintes identificadores não têm nenhuma vinculação:
 
 Se um identificador não tem nenhuma vinculação, declarar o mesmo nome novamente (em um declarador ou especificador de tipo) no mesmo nível de escopo gera um erro de redefinição de símbolo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Usando extern para especificar a ligação](../cpp/using-extern-to-specify-linkage.md)
+[Usando extern para especificar a ligação](../cpp/extern-cpp.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228668"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504684"
 ---
 # <a name="add-a-property"></a>Adicionar uma propriedade
 
@@ -93,7 +93,7 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   |Tipo de implementação|Descrição|
   |-------------------------|-----------------|
-  |**Estoque**|Especifica uma implementação de estoque para a propriedade selecionada em **Nome da propriedade**. O padrão. Para obter mais informações, confira [Propriedades de estoque](#stock-properties).<br /><br /> Se você especificar **Estoque**, as opções **Tipo de propriedade**, **Tipo de parâmetro** e **Nome do parâmetro** ficarão esmaecidas.|
+  |**Stock**|Especifica uma implementação de estoque para a propriedade selecionada em **Nome da propriedade**. O padrão. Para obter mais informações, confira [Propriedades de estoque](#stock-properties).<br /><br /> Se você especificar **Estoque**, as opções **Tipo de propriedade**, **Tipo de parâmetro** e **Nome do parâmetro** ficarão esmaecidas.|
   |**Variável de membro**|Especifica que a propriedade é adicionada como uma variável de membro. Adicione propriedades personalizadas ou a maioria das propriedades de estoque como variáveis de membro. Você não pode especificar a **variável de membro** para as `Caption` `hWnd` Propriedades, e `Text` .<br /><br /> Fornece nomes padrão em **Nome da variável** e **Função de notificação**. É possível editar esse nome.|
   |**Métodos Get/Set**|Especifica que a propriedade é adicionada como as funções `Get`*PropertyName* e `Set`*PropertyName*, por padrão. Esses nomes são exibidos em **Função Get** e **Função Set**.<br /><br /> Altere o **Tipo de propriedade** padrão, que passa um valor para a função Get. Especifique parâmetros para as funções `Get` e `Set`.|
 
@@ -105,16 +105,16 @@ Use este assistente para adicionar uma propriedade a uma interface.
 
   Somente interfaces ATL. Define a propriedade gravável; ou seja, ela cria o método `Put` para definição, ou "colocação", dessa propriedade do objeto. Selecione **Get**, **Put** ou ambos. Se você selecionar essa opção, poderá escolher uma das duas seguintes maneiras de implementar o método:
 
-  |Opção|DESCRIÇÃO|
+  |Opção|Descrição|
   |------------|-----------------|
-  |**PropPut**|A função [PropPut](../windows/propput.md) retorna uma cópia do objeto. Esse é o padrão e a maneira mais comum para tornar a propriedade gravável.|
-  |**PropPutRef**|A função [PropPutRef](../windows/propputref.md) retorna uma referência ao objeto, em vez de retornar a cópia do objeto em si. Considere o uso dessa opção para objetos, como structs ou matrizes grandes, que podem ter a sobrecarga de inicialização.|
+  |**PropPut**|A função [PropPut](../windows/attributes/propput.md) retorna uma cópia do objeto. Esse é o padrão e a maneira mais comum para tornar a propriedade gravável.|
+  |**PropPutRef**|A função [PropPutRef](../windows/attributes/propputref.md) retorna uma referência ao objeto, em vez de retornar a cópia do objeto em si. Considere o uso dessa opção para objetos, como structs ou matrizes grandes, que podem ter a sobrecarga de inicialização.|
 
 - **Atributos de parâmetro**
 
   Somente interfaces ATL. Define se o parâmetro especificado pelo **nome do parâmetro** é `in` , `out` , ambos, ou nenhum.
 
-  |Opção|DESCRIÇÃO|
+  |Opção|Descrição|
   |------------|-----------------|
   |`in`|Indica que o parâmetro é passado do procedimento de chamada para o procedimento chamado.|
   |`out`|Indica que o parâmetro de ponteiro é retornado do procedimento chamado para o procedimento de chamada (do servidor para o cliente).|
@@ -163,7 +163,7 @@ Use esta página do Assistente de Adição de Propriedade para especificar as co
 
 Nem todas as opções estão disponíveis para todos os tipos de propriedade.
 
-|Opção|DESCRIÇÃO|
+|Opção|Descrição|
 |------------|-----------------|
 |`bindable`|Indica que a propriedade dá suporte à associação de dados. Confira [bindable](/windows/win32/Midl/bindable) na *Referência de MIDL*. Para a implementação de estoque da propriedade, essa opção está definida por padrão e não pode ser alterada.|
 |`defaultbind`|Indica que essa única propriedade associável melhor representa o objeto. Confira [defaultbind](/windows/win32/Midl/defaultbind) na *Referência de MIDL*.|
@@ -179,7 +179,7 @@ Nem todas as opções estão disponíveis para todos os tipos de propriedade.
 
 ## <a name="stock-properties"></a>Propriedades de estoque
 
-Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [assistente de adição de propriedade](#idl-attributes-add-property-wizard), escolha uma propriedade de estoque na lista **Nome da propriedade** da página [Nomes](../ide/names-add-property-wizard.md) do assistente. Estas são as seguintes propriedades:
+Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [assistente de adição de propriedade](#idl-attributes-add-property-wizard), escolha uma propriedade de estoque na lista **Nome da propriedade** da página [Nomes](#names-add-property-wizard) do assistente. Estas são as seguintes propriedades:
 
 |Nome da propriedade|Descrição|
 |-------------------|-----------------|

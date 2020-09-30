@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684359"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500281"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visão geral do desenvolvimento em C++ no Visual Studio
 
@@ -75,7 +75,7 @@ Se o programa tiver uma interface do usuário, você poderá usar um designer pa
 
 Para obter mais informações sobre como criar uma interface do usuário para um aplicativo Plataforma Universal do Windows, consulte [design e IU](https://developer.microsoft.com/windows/design).
 
-Para obter mais informações sobre como criar uma interface do usuário para um aplicativo MFC, confira [Aplicativos da área de trabalho do MFC](../mfc/mfc-desktop-applications.md). Para obter informações sobre programas Windows Win32, confira [Aplicativos da área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md).
+Para obter mais informações sobre como criar uma interface do usuário para um aplicativo MFC, confira [Aplicativos da área de trabalho do MFC](../mfc/mfc-desktop-applications.md). Para obter informações sobre programas Windows Win32, confira [Aplicativos da área de trabalho do Windows](../windows/desktop-applications-visual-cpp.md).
 
 ## <a name="write-code"></a>Escrever código
 
@@ -111,13 +111,13 @@ Para obter mais informações, consulte [Depuração no Visual Studio](/visualst
 
 O Visual Studio inclui o Microsoft Unit Test Framework para C++, além de suporte para Boost.Test, Google Test e CTest. Execute os testes na janela do **Gerenciador de Testes**:
 
-![Gerenciador de testes](media/cpp-test-explorer-passed.png "Gerenciador de testes do Visual Studio 2017")
+![Gerenciador de Testes](media/cpp-test-explorer-passed.png "Gerenciador de testes do Visual Studio 2017")
 
 Para saber mais, confira [Verificar código usando testes de unidade](/visualstudio/test/unit-test-your-code) e [Gravar testes de unidade para C/C++ no Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
 ## <a name="analyze"></a>Analisar
 
-O Visual Studio inclui ferramentas de análise de código estático que podem detectar possíveis problemas no código-fonte. Essas ferramentas incluem uma implementação dos verificadores de regras das [Diretrizes Principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obter mais informações, confira [Visão geral da análise de código do C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+O Visual Studio inclui ferramentas de análise de código estático que podem detectar possíveis problemas no código-fonte. Essas ferramentas incluem uma implementação dos verificadores de regras das [Diretrizes Principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obter mais informações, confira [Visão geral da análise de código do C/C++](../code-quality/code-analysis-for-c-cpp-overview.md).
 
 ## <a name="deploy-completed-applications"></a>Implantar aplicativos concluídos
 

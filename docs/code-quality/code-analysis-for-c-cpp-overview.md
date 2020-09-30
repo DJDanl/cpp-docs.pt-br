@@ -16,12 +16,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: e5f5b75057985dc769c8f1ab84765d628dc42fcc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f128c9722138f453c72ca97b09cc1a69a737dbf6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040295"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504195"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Análise de código para visão geral do C/C++
 
@@ -45,7 +45,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>suporte a #pragma
 
-Você pode usar a `#pragma` diretiva para tratar avisos como erros; habilitar ou desabilitar avisos e suprimir avisos para linhas individuais de código. Para obter mais informações, consulte [Diretivas Pragma e a palavra-chave __Pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Você pode usar a `#pragma` diretiva para tratar avisos como erros; habilitar ou desabilitar avisos e suprimir avisos para linhas individuais de código. Para obter mais informações, consulte [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="annotation-support"></a>Suporte a anotações
 
@@ -59,7 +59,7 @@ Talvez você queira exigir que todos os check-ins do código-fonte satisfaçam d
 
 Você pode usar os recursos integrados do sistema de compilação para executar a ferramenta de análise de código como uma etapa do processo de compilação do Azure DevOps. Para obter mais informações, confira [Azure Pipelines](/azure/devops/pipelines/index).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Início Rápido: análise de código para C/C++](quick-start-code-analysis-for-c-cpp.md)
 - [Walkthrough: analisar o código C/C++ para defeitos](walkthrough-analyzing-c-cpp-code-for-defects.md)

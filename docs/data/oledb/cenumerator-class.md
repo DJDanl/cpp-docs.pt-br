@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838146"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498536"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -68,7 +68,7 @@ Procura um nome especificado entre os provedores disponíveis.
 bool Find(TCHAR* szSearchName) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *szSearchName*<br/>
 no O nome a ser pesquisado.
@@ -94,10 +94,10 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *ppMoniker*<br/>
-fora O moniker analisado a partir do nome de exibição ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) da linha atual.
+fora O moniker analisado a partir do nome de exibição ([CEnumeratorAccessor:: m_szParseName](./cenumeratoraccessor-class.md#szparsename)) da linha atual.
 
 *lpszDisplayName*<br/>
 no O nome de exibição a ser analisado.
@@ -120,7 +120,7 @@ HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();
 HRESULT Open(const CEnumerator& enumerator) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pMoniker*<br/>
 no Um ponteiro para um moniker de um enumerador.
@@ -135,7 +135,7 @@ no Uma referência a um enumerador.
 
 Um HRESULT padrão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

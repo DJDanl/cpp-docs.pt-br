@@ -9,16 +9,16 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b1928de1aacb9c66c9f784f4eee41ce2c444b820
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447513"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499637"
 ---
 # <a name="add-an-event-handler"></a>Adicionar um manipulador de eventos
 
-No editor de recursos, você poderá adicionar um novo manipulador de eventos a um controle de caixa de diálogo ou editar um manipulador de eventos existente usando o [assistente de manipulador de eventos](#event-handler-wizard).
+No editor de recursos, você pode adicionar um novo manipulador de eventos ou editar um manipulador de eventos existente, para um controle de caixa de diálogo usando o [Assistente de manipulador de eventos](#event-handler-wizard).
 
 Adicione um evento à classe que implementa a caixa de diálogo usando a [janela Propriedades](/visualstudio/ide/reference/properties-window). Para adicionar o evento a uma classe que não seja a classe de caixa de diálogo, use o assistente de manipulador de eventos.
 
@@ -38,7 +38,7 @@ Adicione um evento à classe que implementa a caixa de diálogo usando a [janela
 
    Se o tipo de mensagem selecionado já tem um manipulador de eventos para a classe selecionada, a opção **Adicionar e editar** não fica disponível e a opção **Editar código** fica disponível. Selecione **Editar código** para abrir o editor de texto na função existente.
 
-Como alternativa, você pode adicionar manipuladores de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window). Para obter mais informações, confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Como alternativa, você pode adicionar manipuladores de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window). Para obter mais informações, confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-editing-or-deleting-controls.md).
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -46,7 +46,7 @@ Como alternativa, você pode adicionar manipuladores de eventos por meio da [jan
 
 ## <a name="event-handler-wizard"></a>Assistente de manipulador de eventos
 
-Este assistente adiciona um manipulador de eventos a um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione-o somente para a classe que implementa a caixa de diálogo. Para obter mais informações, confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Este assistente adiciona um manipulador de eventos a um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione-o somente para a classe que implementa a caixa de diálogo. Para obter mais informações, confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-editing-or-deleting-controls.md).
 
 - **Nome do comando**
 

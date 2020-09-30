@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845114"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501725"
 ---
 # <a name="icommandtextimpl-class"></a>Classe ICommandTextImpl
 
@@ -41,7 +41,7 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 A classe de comando derivada de `ICommandTextImpl` .
@@ -56,7 +56,7 @@ A classe de comando derivada de `ICommandTextImpl` .
 
 | Nome | Descrição |
 |-|-|
-|[GetCommandText](#getcommandtext)|Retorna o comando Text definido pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[GetCommandText](#getcommandtext)|Retorna o comando Text definido pela última chamada para [SetCommandText](#setcommandtext).|
 |[SetCommandText](#setcommandtext)|Define o texto do comando, substituindo o texto do comando existente.|
 
 ### <a name="data-members"></a>Membros de dados
@@ -71,7 +71,7 @@ Uma interface obrigatória em comandos.
 
 ## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
-Retorna o comando Text definido pela última chamada para [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
+Retorna o comando Text definido pela última chamada para [SetCommandText](#setcommandtext).
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -80,7 +80,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
    LPOLESTR * ppwszCommand);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) na *referência do programador de OLE DB*. O parâmetro *pguidDialect* é ignorado por padrão.
 
@@ -95,7 +95,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
    LPCOLESTR pwszCommand);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) na *referência do programador de OLE DB*.
 

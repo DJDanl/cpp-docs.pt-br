@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838094"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504107"
 ---
 # <a name="cmanualaccessor-class"></a>Classe CManualAccessor
 
@@ -104,7 +104,7 @@ no Um ponteiro para a variável a ser associada ao status da coluna, se necessá
 
 ### <a name="remarks"></a>Comentários
 
-Para usar essa função, você deve primeiro chamar [Createaccesser](../../data/oledb/cmanualaccessor-createaccessor.md). Não é possível adicionar mais entradas do que o número de colunas especificado em `CreateAccessor` .
+Para usar essa função, você deve primeiro chamar [Createaccesser](#createaccessor). Não é possível adicionar mais entradas do que o número de colunas especificado em `CreateAccessor` .
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
 
@@ -148,7 +148,7 @@ no Especifica se o parâmetro com o qual a associação está associada é um pa
 
 ### <a name="remarks"></a>Comentários
 
-Para usar essa função, primeiro você deve chamar [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+Para usar essa função, primeiro você deve chamar [CreateParameterAccessor](#createparameteraccessor).
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: createaccesser
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>Parâmetros
 
 *nBindEntries*<br/>
-no Número de colunas. Esse número deve corresponder ao número de chamadas para a função [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
+no Número de colunas. Esse número deve corresponder ao número de chamadas para a função [CManualAccessor:: AddBindEntry](#addbindentry) .
 
 *pBuffer*<br/>
 no Um ponteiro para o buffer onde as colunas de saída são armazenadas.
@@ -210,9 +210,9 @@ Um dos valores de HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Você deve chamar essa função antes de chamar [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+Você deve chamar essa função antes de chamar [AddParameterEntry](#addparameterentry).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

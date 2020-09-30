@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fceb57e062b9179245ba235fb497ff526a6660e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214822"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501686"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Walkthrough: compilar um programa C++/CLI que tem como alvo o CLR no Visual Studio
 
@@ -84,7 +84,7 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
 
 1. Clique na guia recém-criada no Visual Studio e digite um programa válido do Visual C++ ou copie e cole um dos programas de exemplo.
 
-   Por exemplo, use o programa de exemplo [Como escrever um arquivo de texto (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) (no nó **Manipulação de Arquivos e E/S** do Guia de Programação).
+   Por exemplo, use o programa de exemplo [Como escrever um arquivo de texto (C++/CLI)](./file-handling-and-i-o-cpp-cli.md#write_text) (no nó **Manipulação de Arquivos e E/S** do Guia de Programação).
 
    Se você usar o programa de exemplo, observe que você usa a **`gcnew`** palavra-chave em vez de **`new`** ao criar um objeto .net e que **`gcnew`** retorna um Handle ( `^` ) em vez de um ponteiro ( `*` ):
 
@@ -107,7 +107,7 @@ As etapas a seguir variam dependendo da versão do Visual Studio que você está
    > [!NOTE]
    > A escolha do modelo de projeto CLR vazio define automaticamente a opção do compilador `/clr`. Para verificar isso, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções**, clique em **Propriedades** e, em seguida, marque a opção **Suporte a Common Language Runtime** no nó **Geral** de **Propriedades de Configuração**.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
 [Sistemas de build e projetos](../build/projects-and-build-systems-cpp.md)<br/>

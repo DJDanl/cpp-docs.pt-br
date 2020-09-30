@@ -5,12 +5,12 @@ f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: 59807749105512e0eb61acfdf60ef463febbc3a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246091"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507713"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -39,7 +39,7 @@ Alguns dos benefícios de usar a `<charconv>` biblioteca são:
 
 ### <a name="types"></a>Tipos
 
-| Type | DESCRIÇÃO |
+| Tipo | Descrição |
 |-|:-|
 | [chars_format](chars-format-class.md) | Especifica o tipo de formatação, como científico, Hex e assim por diante. |
 | [from_chars_result](from-chars-result-structure.md) | Mantém o resultado de uma `from_chars` conversão. |
@@ -52,7 +52,6 @@ Alguns dos benefícios de usar a `<charconv>` biblioteca são:
 | [from_chars](charconv-functions.md#from_chars) | Converter caracteres em um número inteiro, flutuante ou duplo. |
 | [to_chars](charconv-functions.md#to_chars)| Converta um inteiro, float ou Double em chars. |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência de Arquivos de Cabeçalho](cpp-standard-library-header-files.md)
-

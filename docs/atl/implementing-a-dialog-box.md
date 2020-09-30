@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: 7866afd26c901181f2b4193a87daf5dca2b0c67f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa7b4122b513d48194dedeb39daecd1dfd7223eb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226679"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499576"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementando uma caixa de diálogo
 
@@ -20,7 +20,7 @@ Há duas maneiras de adicionar uma caixa de diálogo ao seu projeto ATL: Use o a
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Adicionando uma caixa de diálogo com o assistente de caixa de diálogo ATL
 
-Na [caixa de diálogo Adicionar classe](../ide/add-class-dialog-box.md), selecione o objeto de diálogo ATL para adicionar uma caixa de diálogo ao seu projeto ATL. Preencha o assistente de caixa de diálogo do ATL conforme apropriado e clique em **concluir**. O assistente adiciona uma classe derivada de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) ao seu projeto. Abra **modo de exibição de recursos** no menu **Exibir** , localize a caixa de diálogo e clique duas vezes nela para abri-la no editor de recursos.
+Na [caixa de diálogo Adicionar classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), selecione o objeto de diálogo ATL para adicionar uma caixa de diálogo ao seu projeto ATL. Preencha o assistente de caixa de diálogo do ATL conforme apropriado e clique em **concluir**. O assistente adiciona uma classe derivada de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) ao seu projeto. Abra **modo de exibição de recursos** no menu **Exibir** , localize a caixa de diálogo e clique duas vezes nela para abri-la no editor de recursos.
 
 > [!NOTE]
 > Se a caixa de diálogo for derivada de `CAxDialogImpl` , ela poderá hospedar controles ActiveX e do Windows. Se você não quiser a sobrecarga do suporte de controle ActiveX na sua classe de caixa de diálogo, use [CSimpleDialog](../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../atl/reference/cdialogimpl-class.md) em vez disso.
@@ -34,7 +34,7 @@ A implementação de uma caixa de diálogo é semelhante à implementação de u
 > [!NOTE]
 > Quando você cria uma caixa de diálogo usando o assistente de caixa de diálogo ATL, o assistente adiciona automaticamente o `IDD` membro como um **`enum`** tipo.
 
-`CDialogImpl`permite que você implemente uma caixa de diálogo modal ou sem janela restrita que hospeda controles do Windows. `CAxDialogImpl`permite que você implemente uma caixa de diálogo modal ou sem janela restrita que hospede controles ActiveX e do Windows.
+`CDialogImpl` permite que você implemente uma caixa de diálogo modal ou sem janela restrita que hospeda controles do Windows. `CAxDialogImpl` permite que você implemente uma caixa de diálogo modal ou sem janela restrita que hospede controles ActiveX e do Windows.
 
 Para criar uma caixa de diálogo modal, crie uma instância da `CDialogImpl` classe-derivada (ou `CAxDialogImpl` derivada) e, em seguida, chame o método [DoModal](../atl/reference/cdialogimpl-class.md#domodal) . Para fechar uma caixa de diálogo modal, chame o método [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) de um manipulador de mensagens. Para criar uma caixa de diálogo sem janela restrita, chame o método [Create](../atl/reference/cdialogimpl-class.md#create) em vez de `DoModal` . Para destruir uma caixa de diálogo sem janela restrita, chame [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).
 
@@ -46,6 +46,6 @@ A seguinte classe implementa uma caixa de diálogo:
 
 [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Classes de janela](../atl/atl-window-classes.md)

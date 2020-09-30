@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684580"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504596"
 ---
 # <a name="db_command"></a>db_command
 
@@ -46,7 +46,7 @@ Um *bloco de parâmetro de associação* é definido da seguinte maneira:
 
 > **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
-em que:
+onde:
 
 - **(** marca o início do bloco de vinculação de dados.
 
@@ -125,7 +125,7 @@ Quando o provedor de atributo do consumidor aplica esse atributo a uma classe, o
 
 ## <a name="examples"></a>Exemplos
 
-Este exemplo define um comando que seleciona o nome e o sobrenome de uma tabela em que a coluna de estado corresponde a ' AC '. **db_command** cria e lê um conjunto de linhas no qual você pode chamar funções geradas pelo assistente, como [método OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), bem como `CRowset` funções de membro como [MoveNext](../../data/oledb/crowset-movenext.md).
+Este exemplo define um comando que seleciona o nome e o sobrenome de uma tabela em que a coluna de estado corresponde a ' AC '. **db_command** cria e lê um conjunto de linhas no qual você pode chamar funções geradas pelo assistente, como [método OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), bem como `CRowset` funções de membro como [MoveNext](../../data/oledb/crowset-class.md#movenext).
 
 Observe que esse código exige que você forneça sua própria cadeia de conexão que se conecta ao banco de dados pubs. Para obter informações sobre como fazer isso no ambiente de desenvolvimento, consulte [como conectar-se a um banco de dados e navegar por objetos existentes](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [adicionar novas conexões](/visualstudio/data-tools/add-new-connections).
 
@@ -237,13 +237,13 @@ int main() {
 | Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`** , membro, método, local|
-|**Repetível**|No|
+|**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [OLE DB atributos de consumidor](ole-db-consumer-attributes.md)<br/>
 [Atributos autônomos](stand-alone-attributes.md)

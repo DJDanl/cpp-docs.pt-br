@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5b13ee08becd472b3bc52319212b84a9c8ffc25
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224091"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508806"
 ---
 # <a name="reference-windows-performance-analyzer-views"></a>Referência: exibições do analisador de desempenho do Windows
 
@@ -28,7 +28,7 @@ Este artigo fornece detalhes sobre cada uma das exibições de compilação do C
 - descrições de coluna de dados; e
 - predefinições disponíveis para cada exibição, incluindo o uso pretendido e o modo de exibição preferencial.
 
-Se você for novo no WPA, recomendamos que você se familiarize com os [conceitos básicos do WPA para os insights de compilação do C++](/cpp/build-insights/tutorials/wpa-basics).
+Se você for novo no WPA, recomendamos que você se familiarize com os [conceitos básicos do WPA para os insights de compilação do C++](../tutorials/wpa-basics.md).
 
 ## <a name="build-explorer"></a>Gerenciador de Compilação
 
@@ -55,7 +55,7 @@ A exibição do Gerenciador de compilação é usada para:
 | Nome                     | O nome da atividade ou da propriedade representada por este evento. |
 | Hora                     | Um carimbo de data/hora que identifica quando o evento ocorreu. |
 | Ferramenta                     | A ferramenta que está sendo executada quando esse evento ocorreu. O valor desta coluna é CL ou link. |
-| Type                     | O tipo do evento atual. Esse valor é atividade ou propriedade. |
+| Tipo                     | O tipo do evento atual. Esse valor é atividade ou propriedade. |
 | Valor                    | Se o evento atual for uma propriedade, essa coluna conterá seu valor. Essa coluna é deixada em branco quando o evento atual é uma atividade. |
 
 ### <a name="build-explorer-view-presets"></a>Predefinições de exibição do Gerenciador de compilação
@@ -92,7 +92,7 @@ A exibição arquivos é usada para:
 | StartTime                | Um timestamp que representa a hora em que o evento do arquivo atual foi emitido. |
 | Ferramenta                     | * |
 
-\*O valor dessa coluna é o mesmo da exibição do [Gerenciador de compilação](#build-explorer-view-data-columns) .
+\* O valor dessa coluna é o mesmo da exibição do [Gerenciador de compilação](#build-explorer-view-data-columns) .
 
 ### <a name="files-view-presets"></a>Predefinições de exibição de arquivos
 
@@ -113,13 +113,13 @@ O modo de exibição de funções é usado para identificar funções com um tem
 | BuildTimelineId          | * |
 | Componente                | * |
 | Contagem                    | * |
-| Duration                 | A duração da atividade de geração de código para esta função. |
+| Duração                 | A duração da atividade de geração de código para esta função. |
 | FunctionName             | O nome da função que está passando pela geração de código. |
 | InvocationId             | * |
 | StartTime                | Um carimbo de data/hora que representa quando o evento de função atual foi emitido. |
 | Ferramenta                     | * |
 
-\*O valor dessa coluna é o mesmo da exibição do [Gerenciador de compilação](#build-explorer-view-data-columns) .
+\* O valor dessa coluna é o mesmo da exibição do [Gerenciador de compilação](#build-explorer-view-data-columns) .
 
 ### <a name="functions-view-presets"></a>Predefinições de exibição de funções
 
@@ -128,11 +128,11 @@ O modo de exibição de funções é usado para identificar funções com um tem
 | Estatísticas  | Tabela               | Veja quais funções tiveram o tempo de geração de código agregado mais alto examinando a lista em ordem decrescente. Eles podem indicar onde seu código usa a **`__forceinline`** palavra-chave ou que algumas funções podem ser muito grandes. |
 | Linhas do tempo   | Grafo               | Examine este grafo de barras para saber o local e a duração das funções que levam mais tempo para gerar. Veja se eles se alinham com afunilamentos na exibição do Gerenciador de compilação. Se isso ocorrer, execute a ação apropriada para reduzir seu tempo de geração de código e beneficiar seus tempos de compilação. |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Introdução às informações de Build do C++](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Introdução às informações de Build do C++](../get-started-with-cpp-build-insights.md)\
 [Referência: comandos vcperf](vcperf-commands.md)\
-[Tutorial: Noções básicas do analisador de desempenho do Windows](/cpp/build-insights/tutorials/wpa-basics)\
+[Tutorial: Noções básicas do analisador de desempenho do Windows](../tutorials/wpa-basics.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

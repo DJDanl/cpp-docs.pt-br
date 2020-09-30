@@ -1,5 +1,5 @@
 ---
-title: Controles da caixa deC++diálogo () | Microsoft Docs
+title: Controles da caixa de diálogo (C++) | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160405"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505705"
 ---
-# <a name="dialog-box-controls-c"></a>Controles da caixa deC++diálogo ()
+# <a name="dialog-box-controls-c"></a>Controles da caixa de diálogo (C++)
 
 Você pode adicionar controles a uma caixa de diálogo usando a guia **Editor de caixa** de [ferramentas](/visualstudio/ide/reference/toolbox) , que permite escolher o controle desejado e arrastá-lo para a caixa de diálogo. Por padrão, a janela **caixa de ferramentas** é definida como ocultar automaticamente. Ele aparece como uma guia na margem esquerda da solução quando o editor de **caixa de diálogo** está aberto. No entanto, você pode fixar a janela **caixa de ferramentas** em posição selecionando o botão **ocultar automaticamente** no canto superior direito da janela. Para obter mais informações sobre como controlar o comportamento dessa janela, consulte [Gerenciamento de janelas](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -51,14 +51,14 @@ Os controles padrão disponíveis na **caixa de ferramentas** com eventos padrã
 |[Controle da barra de rolagem](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> Para obter mais informações sobre como usar o controle **richedit 1,0** com MFC, consulte [usando o controle RichEdit 1,0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) e [exemplos de controle de edição avançada](../mfc/rich-edit-control-examples.md).
+> Para obter mais informações sobre como usar o controle **richedit 1,0** com MFC, consulte [usando o controle RichEdit 1,0 com MFC](./adding-editing-or-deleting-controls.md) e [exemplos de controle de edição avançada](../mfc/rich-edit-control-examples.md).
 
 Os [controles comuns do Windows](../mfc/controls-mfc.md) disponíveis na **caixa de ferramentas** para fornecer uma funcionalidade maior são:
 
 |Nome do controle|Evento padrão|
 |---|---|
 |[Controle deslizante](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Controle de rotação](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Controle de giro](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Controle de progresso](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Controle de teclas de acesso](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[Controle de lista](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
@@ -78,7 +78,7 @@ O **Editor** de caixa de diálogo permite que você use controles personalizados
 > [!NOTE]
 > Os controles personalizados nesse sentido não devem ser confundidos com controles ActiveX. Os controles ActiveX às vezes eram chamados de controles OLE personalizados. Além disso, não confunda esses controles com os controles desenhados pelo proprietário no Windows.
 
-Essa funcionalidade destina-se a permitir que você use controles diferentes daqueles fornecidos pelo Windows. Em tempo de execução, o controle é associado a uma classe de janela (não o mesmo C++ que uma classe). Uma maneira mais comum de realizar a mesma tarefa é instalar qualquer controle, como um controle estático, na caixa de diálogo. Em seguida, em tempo de execução, na função [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) , remova esse controle e substitua-o pelo seu próprio controle personalizado.
+Essa funcionalidade destina-se a permitir que você use controles diferentes daqueles fornecidos pelo Windows. Em tempo de execução, o controle é associado a uma classe de janela (não o mesmo que uma classe C++). Uma maneira mais comum de realizar a mesma tarefa é instalar qualquer controle, como um controle estático, na caixa de diálogo. Em seguida, em tempo de execução, na função [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) , remova esse controle e substitua-o pelo seu próprio controle personalizado.
 
 > [!NOTE]
 > Essa é uma técnica antiga. Hoje, você é avisado na maioria dos casos para escrever um controle ActiveX ou uma subclasse de um controle comum do Windows.
@@ -99,11 +99,11 @@ Para esses controles personalizados, você está limitado a:
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Editor de caixa de diálogo](../windows/dialog-editor.md)
+[Editor de diálogo](../windows/dialog-editor.md)
 
 <!--
-[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Adding Event Handlers for Dialog Box Controls](./adding-editing-or-deleting-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/adding-a-member-variable-visual-cpp.md#dialog-box-controls-and-variable-types)<br/>
 [Controls](../mfc/controls-mfc.md)<br/>-->

@@ -1,5 +1,5 @@
 ---
-title: Comandos de menuC++()
+title: Comandos de menu (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 33b1260d088008a94d935f7e4fd7c18b0dd249e3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a950e7d0156d1b952782fddcdff26718fcf0e291
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167934"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504317"
 ---
-# <a name="menu-commands-c"></a>Comandos de menuC++()
+# <a name="menu-commands-c"></a>Comandos de menu (C++)
 
 As informações abaixo são organizadas de acordo com as propriedades do **menu** que aparecem na [janela Propriedades](/visualstudio/ide/reference/properties-window) quando você seleciona um comando de menu. Eles são listados em ordem alfabética, embora a janela **Propriedades** também permita que você exiba essas propriedades por categoria.
 
-|Propriedade|DESCRIÇÃO|
+|Propriedade|Descrição|
 |--------------|-----------------|
-|**Interromper**|Pode ser um destes valores:<br/>  - **nenhum**: sem interrupção. Esse é o padrão.<br/>  - **coluna**: para menus estáticos, esse valor coloca o comando de menu em uma nova linha.<br/>      Para menus pop-up, esse valor coloca o comando de menu em uma nova coluna sem linha de divisão entre as colunas.<br/>      Definir essa propriedade afeta a aparência do menu somente em tempo de execução, não no editor de menu.<br />   **barra**de - : igual à **coluna** , exceto para menus pop-up, esse valor separa a nova coluna da coluna antiga com uma linha vertical.<br/>      Definir essa propriedade afeta a aparência do menu somente em tempo de execução, não no **Editor de menu**.|
-|**Caption**|O texto que rotula o comando de menu (o nome do menu). Para tornar uma das letras da legenda de um comando de menu a chave mnemônico, preceda-a com um e comercial (&).|
-|**Check**|Se **for true**, o comando de menu será inicialmente marcado. Tipo: **bool**. Padrão: **false**.|
+|**Interrupção**|Pode ser um destes valores:<br/>  - **Nenhum**: sem interrupção. Este é o padrão.<br/>  - **Coluna**: para menus estáticos, esse valor coloca o comando de menu em uma nova linha.<br/>      Para menus pop-up, esse valor coloca o comando de menu em uma nova coluna sem linha de divisão entre as colunas.<br/>      Definir essa propriedade afeta a aparência do menu somente em tempo de execução, não no editor de menu.<br />   - **Barra**: igual à **coluna** , exceto para menus pop-up, esse valor separa a nova coluna da coluna antiga com uma linha vertical.<br/>      Definir essa propriedade afeta a aparência do menu somente em tempo de execução, não no **Editor de menu**.|
+|**Legenda**|O texto que rotula o comando de menu (o nome do menu). Para tornar uma das letras da legenda de um comando de menu a chave mnemônico, preceda-a com um e comercial (&).|
+|**Verificado**|Se **for true**, o comando de menu será inicialmente marcado. Tipo: **bool**. Padrão: **false**.|
 |**Enabled**|Se for **false**, o item de menu será desabilitado.|
 |**Esmaecido**|Se for **true**, o comando de menu estará inicialmente esmaecido e inativo. Tipo: **bool**. Padrão: **false**.|
 |**Ajuda**|Alinha o item de menu à direita. Padrão: **false**.<br/><br/>Por exemplo, o comando de menu **ajuda** está sempre à direita em todos os aplicativos do Windows. Se você definir essa propriedade em um item de menu, esse item será exibido na extrema direita e no final do menu. Aplica-se a itens de nível superior.|
@@ -57,7 +57,7 @@ Geralmente, há ocasiões em que você deseja que um comando de menu e uma combi
 
    - Digite o nome da tecla modificadora (**Ctrl**, **ALT**ou **Shift**) seguido por um sinal de adição ( **+** ) e o nome, a letra ou o símbolo da chave adicional.
 
-   Por exemplo, para atribuir **Ctrl**+**o** ao comando **abrir** no menu **arquivo** , modifique a **legenda** do comando de menu para que fique semelhante ao seguinte texto:
+   Por exemplo, para atribuir **Ctrl** + **o** ao comando **abrir** no menu **arquivo** , você modifica a **legenda** do comando de menu para que fique semelhante ao seguinte texto:
 
    ```
    &Open...\tCtrl+O
@@ -65,17 +65,17 @@ Geralmente, há ocasiões em que você deseja que um comando de menu e uma combi
 
    O comando de menu no **Editor de menu** é atualizado para refletir a nova legenda à medida que você digita.
 
-1. [Crie a entrada Accelerator-Table](../windows/adding-an-entry-to-an-accelerator-table.md) no editor de **acelerador** e atribua-o ao mesmo identificador que o comando de menu. Use uma combinação de teclas que você ache que será fácil de lembrar.
+1. [Crie a entrada Accelerator-Table](./accelerator-editor.md) no editor de **acelerador** e atribua-o ao mesmo identificador que o comando de menu. Use uma combinação de teclas que você ache que será fácil de lembrar.
 
 Seu aplicativo MFC pode exibir texto descritivo para cada um dos comandos de menu que um usuário pode selecionar. Exiba o texto descritivo atribuindo uma cadeia de texto a cada comando de menu usando a propriedade **prompt** na janela **Propriedades** . Se você tiver uma cadeia de caracteres na [tabela de cadeia de caracteres](../windows/string-editor.md) cuja ID é igual ao comando, um aplicativo MFC exibirá automaticamente esse recurso de cadeia de caracteres na barra de status do aplicativo em execução quando um usuário passar o mouse sobre um item de menu.
 
 - Para associar um comando de menu a uma cadeia de caracteres de texto da barra de status em aplicativos MFC, no **Editor de menu**, selecione o comando de menu. Na [janela Propriedades](/visualstudio/ide/reference/properties-window), digite o texto da barra de status associada na caixa **prompt** .
 
-Em um C++ projeto do, você pode atribuir uma tecla de acesso (um mnemônico que permite ao usuário selecionar o menu com o teclado) para seus menus e comandos de menu.
+Em um projeto C++, você pode atribuir uma tecla de acesso (um mnemônico que permite ao usuário selecionar o menu com o teclado) para seus menus e comandos de menu.
 
-- Para atribuir uma chave de acesso (atalho) a um comando de menu, digite um e comercial (`&`) na frente de uma letra no nome do menu ou no nome do comando para especificar essa letra como a chave de acesso correspondente.
+- Para atribuir uma chave de acesso (atalho) a um comando de menu, digite um e comercial ( `&` ) na frente de uma letra no nome do menu ou no nome do comando para especificar essa letra como a chave de acesso correspondente.
 
-   Por exemplo, "& arquivo" define **Alt**+**F** como a tecla de atalho para o menu **arquivo** em aplicativos escritos para o Microsoft Windows.
+   Por exemplo, "&arquivo" define **ALT** + **F** como a tecla de atalho para o menu **arquivo** em aplicativos escritos para o Microsoft Windows.
 
    O item de menu fornecerá uma indicação visível de que uma das letras tem uma tecla de atalho atribuída a ela. A letra após o e comercial aparecerá sublinhada (contingente no sistema operacional).
 
@@ -86,9 +86,9 @@ Em um C++ projeto do, você pode atribuir uma tecla de acesso (um mnemônico que
 
 Win32
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-[Editor de Menu](../windows/menu-editor.md)
+[Editor de menu](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

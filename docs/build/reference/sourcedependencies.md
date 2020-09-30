@@ -1,5 +1,5 @@
 ---
-title: /sourceDependencies (dependências de nível de origem do relatório)
+title: /sourceDependencies (relatar dependências no nível da origem)
 description: Guia de referência para a opção de compilador/sourceDependencies no Microsoft C++.
 ms.date: 07/29/2020
 f1_keywords:
@@ -7,18 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies compiler option
 - /sourceDependencies
-ms.openlocfilehash: 3198353ea7569c426a556522d6b931fe23c7f12c
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 0c1866812435c777f6f1fd7ed7f9db788a8cf031
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528065"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502836"
 ---
-# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies`(Relatar dependências de nível de origem)
+# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies` (Relatar dependências de nível de origem)
 
 Instrui o compilador a gerar um arquivo JSON que detalha as dependências de nível de origem consumidas durante a compilação.
 
 O arquivo JSON contém uma lista das dependências de origem, que incluem:
+
 - Arquivos de cabeçalho (cabeçalhos transitivos e incluídos diretamente).
 - O PCH usado (se **`/Yu`** for especificado).
 - Módulos importados e unidades de cabeçalho importadas (unidades de cabeçalho/módulos transitivos e importados diretamente).

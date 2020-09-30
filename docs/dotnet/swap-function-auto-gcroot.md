@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-ms.openlocfilehash: 271ecd26136671737a47b7adbaee273a0997102d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 10058eaa049c010c1288d03ed04cb9112fcfb7d6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988455"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498566"
 ---
 # <a name="swap-function-auto_gcroot"></a>Função swap (auto_gcroot)
 
@@ -64,13 +64,13 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Arquivo de cabeçalho** \<msclr \ auto_gcroot. h >
+**Arquivo de cabeçalho** \<msclr\auto_gcroot.h>
 
 Msclr de **namespace**
 
 ## <a name="see-also"></a>Consulte também
 
 [auto_gcroot](../dotnet/auto-gcroot.md)<br/>
-[auto_gcroot::swap](../dotnet/auto-gcroot-swap.md)
+[auto_gcroot::swap](./auto-gcroot-class.md#swap)

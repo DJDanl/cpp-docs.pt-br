@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-ms.openlocfilehash: a3af19fa6b4f4def9bb42325f648109cfafcdaef
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 14f0cedc5448005a29d74f05ae3e68e74eb5cf1c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761745"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508299"
 ---
 # <a name="compiler-error-c3171"></a>Erro do compilador C3171
 
 ' module ': não é possível especificar atributos de módulo diferentes em um projeto
 
-atributos de [módulo](../../windows/module-cpp.md) com listas de parâmetros diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um atributo de `module` exclusivo pode ser especificado por compilação.
+atributos de [módulo](../../windows/attributes/module-cpp.md) com listas de parâmetros diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um `module` atributo exclusivo pode ser especificado por compilação.
 
-Atributos de `module` idênticos podem ser especificados em mais de um arquivo de código-fonte.
+Atributos idênticos `module` podem ser especificados em mais de um arquivo de código-fonte.
 
-Por exemplo, se os seguintes atributos de `module` foram encontrados:
+Por exemplo, se os seguintes `module` atributos foram encontrados:
 
 ```cpp
 // C3171.cpp
@@ -29,7 +29,7 @@ Por exemplo, se os seguintes atributos de `module` foram encontrados:
 int main() {}
 ```
 
-E, em seguida,
+Assim,
 
 ```cpp
 // C3171b.cpp

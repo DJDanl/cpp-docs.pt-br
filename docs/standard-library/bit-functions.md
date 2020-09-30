@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039801"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509976"
 ---
 # <a name="ltbitgt-functions"></a>&lt;funções de bit &gt;
 
@@ -106,14 +106,17 @@ std::bit_cat<int>(f) = 7f800000
 Geralmente, o código de nível baixo precisa interpretar um objeto de um tipo como outro tipo. O objeto reinterpretad tem a mesma representação de bit que o original, mas é um tipo diferente.
 
 Em vez de usar `reinterpret_cast` o, ou `memcpy()` , `bit_cast()` é uma maneira melhor de fazer essas conversões. É melhor porque:
+
 - `bit_cast()` é `constexpr`
 - `bit_cast()` exige que os tipos sejam de fácil cópia e do mesmo tamanho. Isso evita possíveis problemas que você pode encontrar usando `reinterpret_cast` e `memcpy` porque eles podem ser usados para inadvertidamente e incorretamente converter tipos não triviais. Além disso, `memcpy()` pode ser usado para copiar inadvertidamente entre tipos que não têm o mesmo tamanho. Por exemplo, um Double (8 bytes) em um int não assinado (4 bytes) ou o contrário.
 
 Essa sobrecarga só participará da resolução de sobrecarga se:
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` e `From` são [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Esse modelo de função é `constexpr` se e somente se `To` , e `From` os tipos de seus subobjetos forem:
+
 - Não é um tipo de União ou ponteiro
 - Não é um ponteiro para tipo de membro
 - Não é qualificado por volátil
@@ -490,7 +493,7 @@ Esta função de modelo só participará da resolução de sobrecarga se `T` for
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 Verifique se um valor tem apenas um conjunto de bits. Isso é o mesmo que testar se um valor é uma potência de dois.
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -544,7 +547,7 @@ Esta função de modelo só participará da resolução de sobrecarga se `T` for
 ## <a name="popcount"></a>`popcount`
 
 Conte o número de bits definidos como um em um valor inteiro sem sinal.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -603,7 +606,7 @@ Esta função de modelo só participará da resolução de sobrecarga se `T` for
 ## <a name="rotl"></a>`rotl`
 
 Gira os bits de um valor inteiro sem sinal deixado o número especificado de vezes. Bits que "caem" do bit mais à esquerda são girados para o bit mais à direita.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -665,7 +668,7 @@ Esta função de modelo só participará da resolução de sobrecarga se `T` for
 ## <a name="rotr"></a>`rotr`
 
 Gira os bits da `value` direita do número de vezes especificado. Bits que "caem" do bit mais à direita são girados de volta para o bit mais à esquerda.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;

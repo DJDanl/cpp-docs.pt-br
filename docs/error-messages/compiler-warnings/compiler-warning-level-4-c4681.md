@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4681
 ms.assetid: a4e6d85f-3e21-4b45-a551-c23d3c554d3f
-ms.openlocfilehash: 543034c9b5369b5ceac082ebc4133faf29397c8b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 97fbaf03b8c505f8d0a9e01ed7b85a6b42c25667
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990383"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510019"
 ---
 # <a name="compiler-warning-level-4-c4681"></a>Aviso do compilador (nível 4) C4681
 
 "Class": coclass não especifica uma interface padrão que seja uma origem de evento
 
-Uma interface de [origem](../../windows/source-cpp.md) não foi especificada para uma classe.
+Uma interface de [origem](../../windows/attributes/source-cpp.md) não foi especificada para uma classe.
 
 O exemplo a seguir gera C4681:
 

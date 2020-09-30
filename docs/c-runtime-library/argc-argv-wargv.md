@@ -1,6 +1,6 @@
 ---
 title: __argc, __argv, __wargv
-description: Descreve as constantes globais __argc, __argve __wargvda biblioteca de tempo de execução da Microsoft C.
+description: Descreve as constantes globais da biblioteca de tempo de execução da Microsoft C __argc , __argv e __wargv .
 ms.date: 11/04/2016
 api_name:
 - __wargv
@@ -27,14 +27,14 @@ no-loc:
 - __wargv
 - main
 - wmain
-ms.openlocfilehash: 86a22a7391c7bde34d7734631a2970a45851dda3
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: 02c130be0d2dcb8e48d2bb5c75438c94003fc9dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123975"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507595"
 ---
-# <a name="opno-loc__argc-opno-loc__argv-opno-loc__wargv"></a>__argc, __argv, __wargv
+# <a name="no-loc__argc-no-loc__argv-no-loc__wargv"></a>__argc, __argv, __wargv
 
 A variável global `__argc` é uma contagem do número de argumentos de linha de comando passados para o programa. `__argv` é um ponteiro para uma matriz de cadeias de caracteres de caractere de byte único ou de caractere multibyte que contêm os argumentos do programa; `__wargv` é um ponteiro para uma matriz de cadeias de caracteres de caractere largo que contêm os argumentos do programa. Essas variáveis globais fornecem os argumentos para `main` ou `wmain`.
 
@@ -58,7 +58,7 @@ No caso do código portátil, recomendamos usar os argumentos passados para `mai
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
 |Variável global|Cabeçalho necessário|
 |---------------------|---------------------|
@@ -66,8 +66,8 @@ No caso do código portátil, recomendamos usar os argumentos passados para `mai
 
 `__argc`, `__argv` e `__wargv` são extensões da Microsoft. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 [Variáveis globais](../c-runtime-library/global-variables.md)\
-[main de função e argumentos de linha deC++comando ()](../cpp/main-function-command-line-args.md)\
-[Usando wmain em vez de main](../cpp/using-wmain-instead-of-main.md)
+[main argumentos de linha de comando e de função (C++)](../cpp/main-function-command-line-args.md)\
+[Usando wmain em vez de main](../cpp/main-function-command-line-args.md)

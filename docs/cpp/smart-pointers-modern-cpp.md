@@ -3,12 +3,12 @@ title: Ponteiros inteligentes (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 698843ced3235d9622af3610a5209669407e9e05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e511cc513cdb35b06b976ce022c5e4edea35040b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186133"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500681"
 ---
 # <a name="smart-pointers-modern-c"></a>Ponteiros inteligentes (C++ moderno)
 
@@ -16,7 +16,7 @@ Na programação C++ moderna, a biblioteca padrão inclui *ponteiros inteligente
 
 ## <a name="uses-for-smart-pointers"></a>Uso de ponteiros inteligentes
 
-Os ponteiros inteligentes são definidos no `std` namespace no [\<memory>](../standard-library/memory.md) arquivo de cabeçalho. Eles são cruciais para a [RAII](objects-own-resources-raii.md) ou a *aquisição de recursos é* a linguagem de programação de inicialização. O objetivo principal dessa linguagem é garantir que a aquisição de recursos ocorra ao mesmo tempo em que o objeto é inicializado, de forma que todos os recursos do objeto sejam criados e preparados em uma linha de código. Em termos práticos, o princípio fundamental da linguagem RAII é fornecer a propriedade de qualquer recurso alocado a heap, por exemplo, memória alocada dinamicamente ou identificadores de objetos do sistema, a um objeto alocado em pilha cujo destruidor contenha o código para excluir ou liberar o recurso e também qualquer código de limpeza associado.
+Os ponteiros inteligentes são definidos no `std` namespace no [\<memory>](../standard-library/memory.md) arquivo de cabeçalho. Eles são cruciais para a [RAII](./object-lifetime-and-resource-management-modern-cpp.md) ou a *aquisição de recursos é* a linguagem de programação de inicialização. O objetivo principal dessa linguagem é garantir que a aquisição de recursos ocorra ao mesmo tempo em que o objeto é inicializado, de forma que todos os recursos do objeto sejam criados e preparados em uma linha de código. Em termos práticos, o princípio fundamental da linguagem RAII é fornecer a propriedade de qualquer recurso alocado a heap, por exemplo, memória alocada dinamicamente ou identificadores de objetos do sistema, a um objeto alocado em pilha cujo destruidor contenha o código para excluir ou liberar o recurso e também qualquer código de limpeza associado.
 
 Na maioria dos casos, quando você inicializa um ponteiro bruto ou identificador de recursos para apontar para um recurso real, transforma o ponteiro em ponteiro inteligente imediatamente. Em C++ moderno, os ponteiros brutos são usados somente em pequenos blocos de código de escopo limitado, loops ou funções auxiliares onde o desempenho é essencial e não há possibilidade de confusão sobre a propriedade.
 
@@ -68,7 +68,7 @@ A seção a seguir resume os diferentes tipos de ponteiros inteligentes que est�
 Use esses ponteiros inteligentes como primeira opção para o encapsulamento de ponteiros para objetos C++ antigos simples (POCO).
 
 - `unique_ptr`<br/>
-   Permite exatamente um proprietário do ponteiro subjacente. Use como a opção padrão para POCO, a menos que você tenha certeza de que precisa de um `shared_ptr`. Pode ser movido para um novo proprietário, mas não copiado ou compartilhado. Substitui `auto_ptr`, que será preterido. Compare com `boost::scoped_ptr`. `unique_ptr`é pequeno e eficiente; o tamanho é um ponteiro e dá suporte a referências rvalue para inserção e recuperação rápidas de coleções de bibliotecas padrão do C++. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, consulte [como: criar e usar instâncias de unique_ptr](how-to-create-and-use-unique-ptr-instances.md) e [unique_ptr classe](../standard-library/unique-ptr-class.md).
+   Permite exatamente um proprietário do ponteiro subjacente. Use como a opção padrão para POCO, a menos que você tenha certeza de que precisa de um `shared_ptr`. Pode ser movido para um novo proprietário, mas não copiado ou compartilhado. Substitui `auto_ptr`, que será preterido. Compare com `boost::scoped_ptr`. `unique_ptr` é pequeno e eficiente; o tamanho é um ponteiro e dá suporte a referências rvalue para inserção e recuperação rápidas de coleções de bibliotecas padrão do C++. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, consulte [como: criar e usar instâncias de unique_ptr](how-to-create-and-use-unique-ptr-instances.md) e [unique_ptr classe](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
    Ponteiro inteligente contado por referência. Use quando quiser atribuir um ponteiro bruto a vários proprietários, por exemplo, ao retornar uma cópia de um ponteiro de um contêiner, porém mantendo o original. O ponteiro bruto não será excluído até que todos os proprietários de `shared_ptr` tenham saído do escopo ou tenham desistido da propriedade. O tamanho é de dois ponteiros; um para o objeto e um para o bloco de controle compartilhado que contém a contagem de referência. Arquivo de cabeçalho: `<memory>`. Para obter mais informações, consulte [como: criar e usar instâncias de shared_ptr](how-to-create-and-use-shared-ptr-instances.md) e [shared_ptr classe](../standard-library/shared-ptr-class.md).
@@ -114,7 +114,7 @@ Classe que encapsula uma matriz de elementos `CAutoPtr`.
 [Classe CAutoPtrList](../atl/reference/cautoptrlist-class.md)<br/>
 Classe que encapsula métodos para manipular uma lista de nós `CAutoPtr`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Ponteiros](pointers-cpp.md)<br/>
 [Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>

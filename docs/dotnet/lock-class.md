@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225612"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508649"
 ---
 # <a name="lock-class"></a>Classe lock
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>Comentários
 
-`lock`está disponível somente para objetos CLR e só pode ser usada em código CLR.
+`lock` está disponível somente para objetos CLR e só pode ser usada em código CLR.
 
 Internamente, a classe de bloqueio usa <xref:System.Threading.Monitor> para sincronizar o acesso. Para obter mais informações, consulte o artigo referenciado.
 
@@ -69,7 +69,7 @@ Internamente, a classe de bloqueio usa <xref:System.Threading.Monitor> para sinc
 
 Msclr de **namespace**
 
-## <a name="locklock"></a><a name="lock"></a>Bloquear:: bloquear
+## <a name="locklock"></a><a name="lock"></a> Bloquear:: bloquear
 
 Constrói um `lock` objeto, opcionalmente esperando para adquirir o bloqueio para sempre, por um período de tempo especificado ou não.
 
@@ -91,7 +91,7 @@ template<class T> lock(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_object*<br/>
 O objeto a ser bloqueado.
@@ -107,11 +107,11 @@ Gera <xref:System.ApplicationException> se a aquisição de bloqueio não ocorre
 
 As três primeiras formas do Construtor tentam adquirir um bloqueio no `_object` período de tempo limite especificado (ou <xref:System.Threading.Timeout.Infinite> se nenhum for especificado).
 
-A quarta forma do construtor não adquire um bloqueio `_object` . `lock_later`é um membro da [enumeração lock_when](../dotnet/lock-when-enum.md). Use [Lock:: Acquire](../dotnet/lock-acquire.md) ou [lock:: try_acquire](../dotnet/lock-try-acquire.md) para adquirir o bloqueio nesse caso.
+A quarta forma do construtor não adquire um bloqueio `_object` . `lock_later` é um membro da [enumeração lock_when](../dotnet/lock-when-enum.md). Use [Lock:: Acquire](#acquire) ou [lock:: try_acquire](#try-acquire) para adquirir o bloqueio nesse caso.
 
 O bloqueio será liberado automaticamente quando o destruidor for chamado.
 
-`_object`Não pode ser <xref:System.Threading.ReaderWriterLock> .  Se for, será resultado um erro do compilador.
+`_object` Não pode ser <xref:System.Threading.ReaderWriterLock> .  Se for, será resultado um erro do compilador.
 
 ### <a name="example"></a>Exemplo
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>bloqueio:: ~ bloquear
+## <a name="locklock"></a><a name="tilde-lock"></a> bloqueio:: ~ bloquear
 
 Destrui um `lock` objeto.
 
@@ -213,7 +213,7 @@ Destrui um `lock` objeto.
 
 ### <a name="remarks"></a>Comentários
 
-O destruidor chama [Lock:: Release](../dotnet/lock-release.md).
+O destruidor chama [Lock:: Release](#release).
 
 ### <a name="example"></a>Exemplo
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Bloquear:: adquirir
+## <a name="lockacquire"></a><a name="acquire"></a> Bloquear:: adquirir
 
 Adquire um bloqueio em um objeto, opcionalmente esperando para adquirir o bloqueio para sempre, por um período de tempo especificado ou não.
 
@@ -319,7 +319,7 @@ void acquire(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_timeout*<br/>
 Valor de tempo limite em milissegundos ou como um <xref:System.TimeSpan> .
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>Bloquear:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> Bloquear:: is_locked
 
 Indica se um bloqueio está sendo mantido.
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>booliano de Lock:: Operator
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> booliano de Lock:: Operator
 
 Operador para usar `lock` em uma expressão condicional.
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>bloqueio:: versão
+## <a name="lockrelease"></a><a name="release"></a> bloqueio:: versão
 
 Libera um bloqueio.
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>Bloquear:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> Bloquear:: try_acquire
 
 Adquire um bloqueio em um objeto, aguardando um período de tempo especificado e retornando um **`bool`** para relatar o sucesso da aquisição em vez de lançar uma exceção.
 
@@ -751,7 +751,7 @@ bool try_acquire(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_timeout*<br/>
 Valor de tempo limite em milissegundos ou como um <xref:System.TimeSpan> .
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: Operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> Lock:: Operator = =
 
 Operador de igualdade.
 
@@ -864,7 +864,7 @@ template<class T> bool operator==(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *t*<br/>
 A igualdade de um objeto a ser comparado.
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: Operator! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> Lock:: Operator! =
 
 Operador de desigualdade.
 
@@ -907,7 +907,7 @@ template<class T> bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *t*<br/>
 O objeto a ser comparado para desigualdade.

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5baf4967f4f4f945540d2a7baef399974d2d42
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215199"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506574"
 ---
-# <a name="og-global-optimizations"></a>`/Og`(Otimizações globais)
+# <a name="og-global-optimizations"></a>`/Og` (Otimizações globais)
 
 Preterido. Fornece otimizações locais e globais, alocação de registro automático e otimização de loop. É recomendável usar [ `/O1` (Minimizar tamanho)](o1-o2-minimize-size-maximize-speed.md) ou [ `/O2` (maximizar velocidade)](o1-o2-minimize-size-maximize-speed.md) em vez disso.
 
@@ -77,7 +77,7 @@ As seguintes otimizações estão disponíveis em **`/Og`** :
    > [!NOTE]
    > Você pode habilitar ou desabilitar a otimização global em uma base de função por função usando o `optimize` pragma junto com a `g` opção.
 
-Para obter informações relacionadas, consulte [ `/Oi` (gerar funções intrínsecas)](oi-generate-intrinsic-functions.md) e [ `/Ox ` (habilitar a maioria das otimizações de velocidade)](ox-full-optimization.md).
+Para obter informações relacionadas, consulte [ `/Oi` (gerar funções intrínsecas)](oi-generate-intrinsic-functions.md) e [ `/Ox` (habilitar a maioria das otimizações de velocidade)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
@@ -91,6 +91,6 @@ Para obter informações relacionadas, consulte [ `/Oi` (gerar funções intrín
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2504
 ms.assetid: c9e002a6-a4ee-4ba7-970e-edf4adb83692
-ms.openlocfilehash: d47d99962d089d873cb9bbdf9baac7eab706fc16
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0860f4b860b370f96c2c29046b090d5b205c63ba
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746884"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509387"
 ---
 # <a name="compiler-error-c2504"></a>Erro do compilador C2504
 
@@ -21,7 +21,7 @@ A classe base é declarada, mas nunca definida.  Possíveis causas:
 
 1. Arquivo de inclusão ausente.
 
-1. Classe base externa não declarada com [extern](../../cpp/using-extern-to-specify-linkage.md).
+1. Classe base externa não declarada com [extern](../../cpp/extern-cpp.md).
 
 O exemplo a seguir gera C2504:
 

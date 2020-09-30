@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb32ceaf71d0a1c121b6e01e4b49f1db79a84d79
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232021"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506505"
 ---
 # <a name="compiler-error-c3020"></a>Erro do compilador C3020
 
@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-Uma variável declarada com [lastprivate](../../parallel/openmp/reference/lastprivate.md) não pode ser usada como o índice dentro de um loop paralelizado.
+Uma variável declarada com [lastprivate](../../parallel/openmp/reference/openmp-clauses.md#lastprivate) não pode ser usada como o índice dentro de um loop paralelizado.
 
 O exemplo a seguir fornecerá C3020 para o segundo lastprivate porque esse lastprivate disparará uma gravação para idx_a dentro do loop for mais externo. O primeiro lastprivate não dá um erro porque o lastprivate dispara uma gravação para idx_a fora do loop for mais externo (tecnicamente, no final da última iteração). O exemplo a seguir gera C3020.
 

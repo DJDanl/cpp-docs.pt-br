@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: 33fd297ee509b341d39d9db21af54a3988f6256e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a749c5d8d676ac85c3c2085eb041328aff599ab8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618283"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508881"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX MFC: adicionando outra página de propriedade personalizada
 
@@ -24,9 +24,9 @@ Os procedimentos a seguir usam uma estrutura de controle ActiveX de exemplo cria
 
 Para obter mais informações sobre como usar páginas de propriedades em um controle ActiveX, consulte os seguintes artigos:
 
-- [Controles ActiveX do MFC: páginas de propriedade](mfc-activex-controls-property-pages.md)
+- [Controles ActiveX do MFC: páginas de propriedades](mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX do MFC: usando páginas de propriedade de estoque](mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX do MFC: usando páginas de propriedades de estoque](mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  É altamente recomendável que as novas páginas de propriedades aderem ao padrão de tamanho das páginas de propriedades do controle ActiveX. As páginas de propriedade de imagem e cor de estoque medem 250x62 DLU (unidades de diálogo). A página de propriedades de fonte padrão é 250x110 DLUs. A página de propriedades padrão criada pelo assistente de controle ActiveX usa o padrão 250x62 DLU.
@@ -55,7 +55,7 @@ Para obter mais informações sobre como usar páginas de propriedades em um con
 
 1. No menu de atalho, clique em **Adicionar** e em **Adicionar Classe**.
 
-   Isso abre a caixa de diálogo [Adicionar classe](../ide/add-class-dialog-box.md) .
+   Isso abre a caixa de diálogo [Adicionar classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) .
 
 1. Clique duas vezes no modelo de **classe do MFC** .
 

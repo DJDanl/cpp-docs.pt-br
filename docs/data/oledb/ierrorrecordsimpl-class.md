@@ -63,16 +63,16 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: 189f97e72f1cb87de7e4c4a388128c2a76c42961
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb0e236a31846e3465d76b6904a7b4c57a2b8cf4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832432"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508998"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
 
-Implementa a interface OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , adicionando registros e recuperando registros de um membro de dados ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) do tipo **CAtlArray<** `RecordClass` **>** .
+Implementa a interface OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) , adicionando registros e recuperando registros de um membro de dados ([m_rgErrors](#rgerrors)) do tipo **CAtlArray<** `RecordClass` **>** .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -81,7 +81,7 @@ template <class T, class RecordClass = ATLERRORINFO>
 class IErrorRecordsImpl : public IErrorRecords
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Uma classe derivada de `IErrorRecordsImpl` .
@@ -132,7 +132,7 @@ Obtém a cadeia de caracteres de descrição do erro de um registro de erro.
 LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *rCurError*<br/>
 Um `ERRORINFO` registro em uma `IErrorInfo` interface.
@@ -151,7 +151,7 @@ Obtém o GUID de erro de um registro de erro.
 REFGUID GetErrorGUID(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *rCurError*<br/>
 Um `ERRORINFO` registro em uma `IErrorInfo` interface.
@@ -170,7 +170,7 @@ Obtém a ID de contexto da ajuda de um registro de erro.
 DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *rCurError*<br/>
 Um `ERRORINFO` registro em uma `IErrorInfo` interface.
@@ -189,7 +189,7 @@ Obtém o nome do caminho do arquivo de ajuda de um registro de erro.
 LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *rCurError*<br/>
 Um `ERRORINFO` registro em uma `IErrorInfo` interface.
@@ -208,7 +208,7 @@ Obtém o código-fonte que causou o erro de um registro de erro.
 LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *rCurError*<br/>
 Um `ERRORINFO` registro em uma `IErrorInfo` interface.
@@ -231,7 +231,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
    DWORD dwDynamicErrorID);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -246,7 +246,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
    ERRORINFO *pErrorInfo);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -262,7 +262,7 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
    IUnknown **ppObject);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -278,7 +278,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
    IErrorInfo **ppErrorInfo);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -293,7 +293,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
    DISPPARAMS *pdispparams);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: Geterroparameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -307,7 +307,7 @@ Retorna o número de registros no objeto de registro OLE DB.
 STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IErrorRecords:: GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) na *referência do programador de OLE DB*.
 

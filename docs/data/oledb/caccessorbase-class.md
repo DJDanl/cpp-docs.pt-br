@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843294"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509115"
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
 
@@ -70,7 +70,7 @@ void Close();
 
 ### <a name="remarks"></a>Comentários
 
-Você deve chamar [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) primeiro.
+Você deve chamar [ReleaseAccessors](#release) primeiro.
 
 ## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase::GetHAccessor
 
@@ -82,7 +82,7 @@ Recupera o identificador de acessador de um acessador especificado.
 HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nAccessor*<br/>
 no O número de deslocamento zero para o acessador.
@@ -115,7 +115,7 @@ Retornará true se os dados forem recuperados automaticamente para o acessador d
 bool IsAutoAccessor(ULONG nAccessor) const;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *nAccessor*<br/>
 no O número de deslocamento zero para o acessador.
@@ -134,7 +134,7 @@ Libera os acessadores criados pela classe.
 HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *pUnk*<br/>
 no Um ponteiro para uma `IUnknown` interface do objeto com para o qual os acessadores foram criados.
@@ -145,9 +145,9 @@ Um HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Chamado de [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
+Chamado de [CAccessorRowset:: Close](./caccessorrowset-class.md#close).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

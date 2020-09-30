@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706899"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499444"
 ---
 # <a name="implementing-property-pages"></a>Como implementar páginas de propriedades
 
@@ -23,13 +23,13 @@ O assistente de Página de Propriedades da ATL não está disponível no Visual 
 
 ::: moniker range="<=vs-2017"
 
-As páginas de propriedades são objetos COM que implementam a interface `IPropertyPage` ou `IPropertyPage2`. A ATL é compatível com a implementação de páginas de propriedades por meio do [Assistente de Página de Propriedades da ATL](../atl/reference/atl-property-page-wizard.md) na [caixa de diálogo Adicionar Classe](../ide/add-class-dialog-box.md).
+As páginas de propriedades são objetos COM que implementam a interface `IPropertyPage` ou `IPropertyPage2`. A ATL é compatível com a implementação de páginas de propriedades por meio do [Assistente de Página de Propriedades da ATL](../atl/reference/atl-property-page-wizard.md) na [caixa de diálogo Adicionar Classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box).
 
 Criação de uma página de propriedades usando a ATL:
 
 - Crie ou abra um projeto de servidor DLL (Biblioteca de Vínculo Dinâmico) da ATL.
 
-- Abra a [caixa de diálogo Adicionar Classe](../ide/add-class-dialog-box.md) e selecione **Página de Propriedades da ATL**.
+- Abra a [caixa de diálogo Adicionar Classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) e selecione **Página de Propriedades da ATL**.
 
 - Verifique se sua página de propriedades é do modelo Apartment Threading (desde que tenha uma interface do usuário).
 
@@ -44,14 +44,14 @@ Criação de uma página de propriedades usando a ATL:
    |Método IPropertyPageImpl|Substitua quando desejar...|Observações|
    |------------------------------|----------------------------------|-----------|
    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Execute as verificações de integridade básicas no número de objetos que estão sendo passados para sua página e as interfaces com as quais eles são compatíveis.|Execute o seu próprio código antes de chamar a implementação da classe base. Se os objetos que estão sendo definidos não estiverem em conformidade com as suas expectativas, você deverá interromper a chamada assim que possível.|
-   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|Inicialize a interface do usuário da sua página (por exemplo, defina os controles da caixa de diálogo com valores da propriedade atuais de objetos, crie controles dinamicamente ou execute outras inicializações).|Chame a implementação da classe base antes do código para que a classe base tenha a oportunidade de criar a janela de diálogo e todos os controles antes de você tentar atualizá-los.|
-   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|Valide as configurações de propriedade e atualize os objetos.|Não é necessário chamar a implementação da classe base, uma vez que ela não tem função nenhuma além de rastrear a chamada.|
-   |[Deactivate](../atl/reference/ipropertypageimpl-class.md#deactivate)|Limpe os itens relacionados à janela.|A implementação da classe base destrói a caixa de diálogo que representa a página de propriedades. Se você precisar limpar antes que a caixa de diálogo seja destruída, será preciso adicionar seu código antes de chamar a classe base.|
+   |[Ativar](../atl/reference/ipropertypageimpl-class.md#activate)|Inicialize a interface do usuário da sua página (por exemplo, defina os controles da caixa de diálogo com valores da propriedade atuais de objetos, crie controles dinamicamente ou execute outras inicializações).|Chame a implementação da classe base antes do código para que a classe base tenha a oportunidade de criar a janela de diálogo e todos os controles antes de você tentar atualizá-los.|
+   |[Aplicar](../atl/reference/ipropertypageimpl-class.md#apply)|Valide as configurações de propriedade e atualize os objetos.|Não é necessário chamar a implementação da classe base, uma vez que ela não tem função nenhuma além de rastrear a chamada.|
+   |[Ativar](../atl/reference/ipropertypageimpl-class.md#deactivate)|Limpe os itens relacionados à janela.|A implementação da classe base destrói a caixa de diálogo que representa a página de propriedades. Se você precisar limpar antes que a caixa de diálogo seja destruída, será preciso adicionar seu código antes de chamar a classe base.|
 
-Confira um exemplo de implementação de página de propriedades em [Exemplo: implementação de uma página de propriedades](../atl/example-implementing-a-property-page.md).
+Para obter uma implementação de página de propriedades de exemplo, consulte [exemplo: implementando uma página de propriedades](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Se quiser hospedar controles ActiveX em sua página de propriedades, você precisará alterar a derivação da sua classe gerada pelo assistente. Substitua **CDialogImpl\<CYourClass >** por **CAxDialogImpl\<CYourClass >** na lista de classes base.
+> Se quiser hospedar controles ActiveX em sua página de propriedades, você precisará alterar a derivação da sua classe gerada pelo assistente. Substitua **CDialogImpl \<CYourClass> ** por **CAxDialogImpl \<CYourClass> ** na lista de classes base.
 
 ::: moniker-end
 

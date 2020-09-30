@@ -3,12 +3,12 @@ title: Aprimoramentos de conformidade do C++
 ms.date: 08/04/2020
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042115"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500248"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
@@ -1432,7 +1432,7 @@ Agora, a função `reserve` de contêiner não ordenada na verdade reserva N ele
 
 - Foram adicionadas sobrecargas para mesclagem de contêiner e extração de funções de membro que aceitam contêineres rvalue. Para obter mais informações, consulte o [P0083 "mapas e conjuntos do da União"](https://wg21.link/p0083r3)
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` processamento de `\r\n`` => ` \n '
+### <a name="stdbasic_istreamread-processing-of-rn-n"></a>`std::basic_istream::read` processamento de `\r\n`` =>` \n '
 
 `std::basic_istream::read`foi corrigido para não gravar em partes do buffer fornecido temporariamente como parte do `\r\n`  =>  `\n` processamento. Essa alteração perde um pouco da vantagem de desempenho que foi obtida no Visual Studio 2017 15.8 para leituras com mais de 4 K. No entanto, as melhorias na eficiência evitando três chamadas virtuais por caractere ainda estão presentes.
 
@@ -1621,7 +1621,7 @@ void f(E e) {
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Melhorias de conformidade no Visual Studio 2017 RTW (versão 15,0)
 
-Com suporte para **`constexpr`** NSDMI (inicialização de membro de dados) generalizada e não estática para agregações, o compilador do Microsoft C++ no Visual Studio 2017 agora está completo para os recursos adicionados no padrão C++ 14. No entanto, o compilador ainda não tem alguns recursos dos padrões C++11 e C++98. Consulte a [tabela de conformidade da linguagem Microsoft C++](../visual-cpp-language-conformance.md) para obter uma tabela que mostra o estado atual do compilador.
+Com suporte para **`constexpr`** NSDMI (inicialização de membro de dados) generalizada e não estática para agregações, o compilador do Microsoft C++ no Visual Studio 2017 agora está completo para os recursos adicionados no padrão C++ 14. No entanto, o compilador ainda não tem alguns recursos dos padrões C++11 e C++98. Consulte a [tabela de conformidade da linguagem Microsoft C++](./visual-cpp-language-conformance.md) para obter uma tabela que mostra o estado atual do compilador.
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++ 11: suporte ao Expression SFINAE em mais bibliotecas
 
@@ -3647,10 +3647,10 @@ Para evitar o erro, remova o **`constexpr`** qualificador da instanciação expl
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Aprimoramentos de conformidade do C++ no Visual Studio 2015
 
-Temos uma lista completa de melhorias de conformidade no Visual Studio 2015 atualização 3. Para obter mais informações, consulte [Novidades no Visual C++ de 2003 até 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Temos uma lista completa de melhorias de conformidade no Visual Studio 2015 atualização 3. Para obter mais informações, consulte [Novidades no Visual C++ de 2003 até 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Tabela de conformidade da linguagem Microsoft C++](visual-cpp-language-conformance.md)

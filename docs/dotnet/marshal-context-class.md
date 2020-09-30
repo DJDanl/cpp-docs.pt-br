@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 110fe4abf7eb90b05e7feef563efa4882bed0fc6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aa5935332cfa12c02e8084136a311a7593a4f3b9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332007"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508578"
 ---
 # <a name="marshal_context-class"></a>Classe marshal_context
 
@@ -27,9 +27,9 @@ class marshal_context
 
 ## <a name="remarks"></a>Comentários
 
-Use `marshal_context` a classe para conversões de dados que requerem um contexto. Para obter mais informações sobre quais conversões requerem um contexto e quais arquivos de marshaling devem ser incluídos, consulte [Visão geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md). O resultado do marshaling quando você usa `marshal_context` um contexto é válido apenas até que o objeto seja destruído. Para preservar seu resultado, você deve copiar os dados.
+Use a `marshal_context` classe para conversões de dados que exigem um contexto. Para obter mais informações sobre quais conversões exigem um contexto e qual arquivo de marshaling deve ser incluído, consulte [visão geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md). O resultado do marshaling quando você usa um contexto é válido somente até que o `marshal_context` objeto seja destruído. Para preservar o resultado, você deve copiar os dados.
 
-O `marshal_context` mesmo pode ser usado para inúmeras conversões de dados. Reutilizar o contexto desta maneira não afetará os resultados de chamadas de marshaling anteriores.
+O mesmo `marshal_context` pode ser usado para várias conversões de dados. A reutilização do contexto dessa maneira não afetará os resultados das chamadas de marshaling anteriores.
 
 ## <a name="members"></a>Membros
 
@@ -37,24 +37,24 @@ O `marshal_context` mesmo pode ser usado para inúmeras conversões de dados. Re
 
 |Nome|Descrição|
 |---------|-----------|
-|[marshal_context::marshal_context](#marshal-context)|Constrói um `marshal_context` objeto para usar para conversão de dados entre tipos de dados gerenciados e nativos.|
-|[marshal_context::~marshal_context](#tilde-marshal-context)|Destrói um objeto `marshal_context`.|
+|[marshal_context::marshal_context](#marshal-context)|Constrói um `marshal_context` objeto a ser usado para conversão de dados entre tipos de dados gerenciados e nativos.|
+|[marshal_context:: ~ marshal_context](#tilde-marshal-context)|Destrói um objeto `marshal_context`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |---------|-----------|
-|[marshal_context::marshal_as](#marshal-as)|Executa o marshaling em um objeto de dados específico para convertê-lo entre um tipo de dados gerenciado e um tipo de dados nativo.|
+|[marshal_context::marshal_as](#marshal-as)|Executa o marshaling em um objeto de dados específico para convertê-lo entre um tipo de dados gerenciado e um nativo.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Arquivo de cabeçalho:** \<msclr\marshal.h>, \<msclr\marshal_windows.h>, \<msclr\marshal_cppstd.h> ou \<msclr\marshal_atl.h>
+**Arquivo de cabeçalho:** \<msclr\marshal.h> ,, \<msclr\marshal_windows.h> \<msclr\marshal_cppstd.h> ou \<msclr\marshal_atl.h>
 
-**Namespace:** msclr::interop
+**Namespace:** msclr:: Interop
 
-## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context:marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a> marshal_context:: marshal_context
 
-Constrói um `marshal_context` objeto para usar para conversão de dados entre tipos de dados gerenciados e nativos.
+Constrói um `marshal_context` objeto a ser usado para conversão de dados entre tipos de dados gerenciados e nativos.
 
 ```cpp
 marshal_context();
@@ -62,13 +62,13 @@ marshal_context();
 
 ### <a name="remarks"></a>Comentários
 
-Algumas conversões de dados requerem um contexto federal. Para obter mais informações sobre quais traduções requerem um contexto e qual arquivo de marshaling você deve incluir em seu aplicativo, consulte [Visão geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md).
+Algumas conversões de dados exigem um contexto de marshaling. Para obter mais informações sobre quais traduções exigem um contexto e qual arquivo de marshaling você deve incluir em seu aplicativo, consulte [visão geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
 ### <a name="example"></a>Exemplo
 
-Veja o exemplo [de marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md).
+Consulte o exemplo para [marshal_context:: marshal_as](#marshal-as).
 
-## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context::~marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a> marshal_context:: ~ marshal_context
 
 Destrói um objeto `marshal_context`.
 
@@ -78,13 +78,13 @@ Destrói um objeto `marshal_context`.
 
 ### <a name="remarks"></a>Comentários
 
-Algumas conversões de dados requerem um contexto federal. Consulte [visão geral do marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre quais traduções requerem um contexto e qual arquivo de marshaling deve ser incluído em seu aplicativo.
+Algumas conversões de dados exigem um contexto de marshaling. Consulte [visão geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md) para obter mais informações sobre quais traduções exigem um contexto e qual arquivo de marshaling deve ser incluído em seu aplicativo.
 
-A exclusão de um `marshal_context` objeto invalidará os dados convertidos por esse contexto. Se você quiser preservar seus `marshal_context` dados depois que um objeto for destruído, você deve copiar manualmente os dados para uma variável que persistirá.
+A exclusão de um `marshal_context` objeto invalidará os dados convertidos por esse contexto. Se você quiser preservar seus dados depois que um `marshal_context` objeto for destruído, você deverá copiar manualmente os dados para uma variável que persistirá.
 
-## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context:marshal_as
+## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a> marshal_context:: marshal_as
 
-Executa o marshaling em um objeto de dados específico para convertê-lo entre um tipo de dados gerenciado e um tipo de dados nativo.
+Executa o marshaling em um objeto de dados específico para convertê-lo entre um tipo de dados gerenciado e um nativo.
 
 ```cpp
 To_Type marshal_as<To_Type>(
@@ -94,24 +94,24 @@ To_Type marshal_as<To_Type>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Entrada*<br/>
-[em] O valor que você quer `To_Type` marechal para uma variável.
+*input*<br/>
+no O valor que você deseja realizar marshaling em uma `To_Type` variável.
 
 ### <a name="return-value"></a>Valor retornado
 
-Uma variável `To_Type` do tipo que é `input`o valor convertido de .
+Uma variável do tipo `To_Type` que é o valor convertido de `input` .
 
 ### <a name="remarks"></a>Comentários
 
-Esta função executa o empacotamento em um objeto de dados específico. Use esta função apenas com as conversões indicadas pela tabela em [Visão Geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md).
+Essa função executa o marshaling em um objeto de dados específico. Use essa função somente com as conversões indicadas pela tabela em [visão geral do marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
-Se você tentar empacotar um par de `marshal_as` tipos de dados que não são suportados, gerará um erro [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) na hora da compilação. Leia a mensagem fornecida com este erro para obter mais informações. O `C4996` erro pode ser gerado para mais do que apenas funções depreciadas. Duas condições que geram esse erro são tentar empacotar um par `marshal_as` de tipos de dados que não são suportados e tentar usar para uma conversão que requer um contexto.
+Se você tentar realizar marshaling de um par de tipos de dados que não têm suporte, `marshal_as` o gerará um erro [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) no momento da compilação. Leia a mensagem fornecida com esse erro para obter mais informações. O `C4996` erro pode ser gerado para mais do que apenas funções preteridas. Duas condições que geram esse erro estão tentando realizar marshaling de um par de tipos de dados que não têm suporte e tentando usar `marshal_as` para uma conversão que requer um contexto.
 
-A biblioteca de marshaling consiste em vários arquivos de cabeçalho. Qualquer conversão requer apenas um arquivo, mas você pode incluir arquivos adicionais se precisar para outras conversões. A tabela `Marshaling Overview in C++` em indica qual arquivo de marshaling deve ser incluído para cada conversão.
+A biblioteca de marshaling consiste em vários arquivos de cabeçalho. Qualquer conversão requer apenas um arquivo, mas você pode incluir arquivos adicionais se precisar de outras conversões. A tabela no `Marshaling Overview in C++` indica qual arquivo de marshaling deve ser incluído para cada conversão.
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo cria um contexto `System::String` para `const char *` empacotar de um para um tipo variável. Os dados convertidos não serão válidos após a linha que exclui o contexto.
+Este exemplo cria um contexto para realizar marshaling de um `System::String` para um `const char *` tipo de variável. Os dados convertidos não serão válidos após a linha que exclui o contexto.
 
 ```cpp
 // marshal_context_test.cpp

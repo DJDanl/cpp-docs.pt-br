@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209866"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500906"
 ---
 # <a name="ole-db-templates"></a>Modelos de banco de dados OLE
 
@@ -27,7 +27,7 @@ Fornece links para as classes Modelo de Provedor OLE DB listadas por uso.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
+[Visão geral da programação de OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 Descreve o que é OLE DB e aborda o Acesso Universal a Dados no OLE DB.
 
 [Referência do programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
@@ -42,16 +42,16 @@ Discute o material conceitual sobre os Modelos de consumidor OLE DB.
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 Discute o material conceitual sobre os Modelos de Provedor OLE DB.
 
-[Criando um consumidor do OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
+[Criando um consumidor de OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
 Descreve a criação de um consumidor dos Modelos do OLE DB.
 
-[Criando um provedor somente leitura simples](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Criando um provedor simples de somente leitura](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
 Descreve como criar um provedor somente leitura simples que lê um par de cadeias de caracteres.
 
 [Criando um provedor atualizável](../../data/oledb/creating-an-updatable-provider.md)<br/>
 Descreve como criar provedores que podem gravar no armazenamento de dados.
 
-[Atributos de consumidor do OLE DB](../../windows/ole-db-consumer-attributes.md)<br/>
+[OLE DB atributos de consumidor](../../windows/attributes/ole-db-consumer-attributes.md)<br/>
 Discute uma interface simplificada para injetar código com base em Modelos de consumidor OLE DB para criar consumidores funcionais OLE DB.
 
 [Referência à ATL (Active Template Library)](../../atl/atl-com-desktop-components.md)<br/>

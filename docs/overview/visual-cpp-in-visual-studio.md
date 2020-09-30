@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108426"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500167"
 ---
 # <a name="c-in-visual-studio"></a>C++ no Visual Studio
 
@@ -79,10 +79,10 @@ Como criar e configurar projetos do Visual Studio C++, projetos CMake e outros t
 [Escrevendo e refatorando código C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
 Como usar os recursos de produtividade no editor do C++ para refatorar, navegar, entender e escrever código.
 
-[Depuração de código nativo](/visualstudio/debugger/debugging-native-code)<br/>
+[Depurando código nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Use o depurador do Visual Studio com projetos C++.
 
-[Visão geral da análise de código para C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Análise de código para visão geral do C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 Use anotações de SAL ou os verificadores das Diretrizes Principais do C++ para executar análise estática.
 
 [Gravar testes de unidade para C/C++ no Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -114,7 +114,7 @@ Saiba como proteger aplicativos contra código mal-intencionado e de uso não au
 [Programação na nuvem e na Web](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 No C++ há várias opções para conectar-se com a Web e com a nuvem.
 
-[Acesso a Dados](../data/data-access-in-cpp.md)<br/>
+[Acesso a dados](../data/data-access-in-cpp.md)<br/>
 Conecte-se a bancos de dados usando ODBC e OLE DB.
 
 [Texto e cadeias de caracteres](../text/text-and-strings-in-visual-cpp.md)<br/>
@@ -134,7 +134,7 @@ Saiba mais sobre como trabalhar com formatos e codificações diferentes de text
 
 As seções a seguir fornecem informações sobre as diferentes bibliotecas do C e C++ que estão incluídas no Visual Studio.
 
-[Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Referência da biblioteca de tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclui alternativas aprimoradas de segurança a funções que são conhecidas por impor problemas de segurança.
 
 [Biblioteca padrão do C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -152,7 +152,7 @@ Algoritmos assíncronos e paralelos que são executados na CPU.
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Algoritmos totalmente paralelos que são executados na GPU.
 
-[WRL (Biblioteca de Modelos do Windows Runtime)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[WRL (Biblioteca de Modelos do Windows Runtime)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 Aplicativos UWP (Plataforma Universal do Windows) e componentes.
 
 [Programação .NET com C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
@@ -176,5 +176,5 @@ Saiba como obter ajuda, arquivar bugs e fazer sugestões para o Visual Studio.
 ## <a name="see-also"></a>Consulte também
 
 - [Referência da linguagem C](../c-language/c-language-reference.md)
-- [Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)
+- [Referência da biblioteca de tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrínsecos do compilador e linguagem do assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)

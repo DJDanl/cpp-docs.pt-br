@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221686"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509138"
 ---
 # <a name="delete-operator-c"></a>Operador delete (C++)
 
@@ -50,7 +50,7 @@ Quando **`delete`** é usado para desalocar memória para um objeto de classe C+
 
 Se o operando para o **`delete`** operador for um valor l modificável, seu valor será indefinido depois que o objeto for excluído.
 
-Se a opção de compilador [/SDL (habilitar verificações de segurança adicionais)](/cpp/build/reference/sdl-enable-additional-security-checks) for especificada, o operando para o **`delete`** operador será definido como um valor inválido depois que o objeto for excluído.
+Se a opção de compilador [/SDL (habilitar verificações de segurança adicionais)](../build/reference/sdl-enable-additional-security-checks.md) for especificada, o operando para o **`delete`** operador será definido como um valor inválido depois que o objeto for excluído.
 
 ## <a name="using-delete"></a>Usando delete
 
@@ -92,7 +92,7 @@ O operador Delete invoca a função de **exclusão do operador**.
 
 Para objetos que não são do tipo de classe ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)ou [Union](../cpp/unions.md)), o operador global Delete é invocado. Para objetos do tipo de classe, o nome da função de desalocação será resolvido no escopo global se a expressão de exclusão começar com o operador unário de resolução de escopo ( `::` ). Caso contrário, o operador Delete invoca o destruidor para um objeto antes de desalocar a memória (se o ponteiro não for nulo). O operador delete pode ser definido em uma base por classe; se não houver nenhuma definição para uma classe específica, a exclusão global do operador é chamada. Se a expressão de exclusão for usada para desalocar um objeto da classe cujo tipo estático tem um destruidor virtual, a função de desalocação é resolvida pelo destruidor virtual do tipo dinâmico do objeto.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)\
 [Palavras-chave](../cpp/keywords-cpp.md)\

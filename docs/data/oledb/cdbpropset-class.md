@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838251"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502462"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -94,7 +94,7 @@ bool AddProperty(DWORD dwPropertyID,
    CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *dwPropertyID*<br/>
 no A ID da propriedade a ser adicionada. Usado para inicializar a `dwPropertyID` da `DBPROP` estrutura adicionada ao conjunto de propriedades.
@@ -138,7 +138,7 @@ CDBPropSet(const CDBPropSet& propset);
 CDBPropSet();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no Um GUID usado para inicializar o `guidPropertySet` campo.
@@ -156,14 +156,14 @@ Define o `guidPropertySet` campo na `DBPROPSET` estrutura.
 void SetGUID(const GUID& guid) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no Um GUID usado para definir o `guidPropertySet` campo da estrutura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="remarks"></a>Comentários
 
-Esse campo também pode ser definido pelo [Construtor](../../data/oledb/cdbpropset-cdbpropset.md) .
+Esse campo também pode ser definido pelo [Construtor](#cdbpropset) .
 
 ## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet:: Operator =
 

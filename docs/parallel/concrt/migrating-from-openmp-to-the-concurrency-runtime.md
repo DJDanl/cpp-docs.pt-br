@@ -1,69 +1,69 @@
 ---
-title: Migrando de OpenMP no Tempo de Execução de Simultaneidade
+title: Migrando de OpenMP no Runtime de Simultaneidade
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 081d0ae8b312d827a0af98dd45c62f7563e81677
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448428"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507761"
 ---
-# <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrando de OpenMP no Tempo de Execução de Simultaneidade
+# <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrando de OpenMP no Runtime de Simultaneidade
 
-O tempo de execução de simultaneidade permite que uma variedade de modelos de programação. Esses modelos podem se sobrepor ou complementar os modelos de outras bibliotecas. Os documentos desta seção compare [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) no tempo de execução de simultaneidade e fornecem exemplos sobre como migrar o código de OpenMP existente para usar o tempo de execução de simultaneidade.
+O Tempo de Execução de Simultaneidade permite uma variedade de modelos de programação. Esses modelos podem sobrepor ou complementar os modelos de outras bibliotecas. Os documentos nesta seção comparam [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) com o tempo de execução de simultaneidade e fornecem exemplos de como migrar o código de OpenMP existente para usar o tempo de execução de simultaneidade.
 
-O modelo de programação OpenMP é definido por um padrão aberto e tem associações bem definidas para as linguagens de programação Fortran e C/C++. Versões de OpenMP 2.0 e 2.5, que são compatíveis com o Microsoft C++ compilador, estão bem adequado para algoritmos paralelos são iterativos; ou seja, eles executam a iteração paralela em uma matriz de dados. OpenMP 3.0 oferece suporte a tarefas não iterativo, além das tarefas iterativas.
+O modelo de programação de OpenMP é definido por um padrão aberto e tem associações bem definidas para as linguagens de programação Fortran e C/C++. As versões de OpenMP 2,0 e 2,5, que têm suporte do compilador do Microsoft C++, são adequadas para algoritmos paralelos que são iterativos; ou seja, eles executam iteração paralela em uma matriz de dados. O OpenMP 3,0 dá suporte a tarefas não iterativas além das tarefas iterativas.
 
-OpenMP é mais eficiente quando o grau de paralelismo é predeterminado e corresponde os recursos disponíveis no sistema. O modelo de OpenMP é uma correspondência especialmente bons para computação de alto desempenho, em que grandes problemas computacionais são distribuídos entre os recursos de processamento de um computador. Nesse cenário, o ambiente de hardware geralmente é fixo e o desenvolvedor razoável pode esperar ter acesso exclusivo para todos os recursos de computação quando o algoritmo é executado.
+O OpenMP é mais eficiente quando o grau de paralelismo é predeterminado e corresponde aos recursos disponíveis no sistema. O modelo de OpenMP é uma correspondência especialmente boa para computação de alto desempenho, em que problemas computacionais muito grandes são distribuídos entre os recursos de processamento de um computador. Nesse cenário, o ambiente de hardware geralmente é corrigido e o desenvolvedor pode esperar ter acesso exclusivo a todos os recursos de computação quando o algoritmo é executado.
 
-No entanto, menos restrito ambientes de computação pode não ser uma boa correspondência para OpenMP. Por exemplo, problemas de recursiva (como o algoritmo quicksort ou pesquisar uma árvore de dados) são mais difíceis de implementar usando OpenMP 2.0 e 2.5. O tempo de execução de simultaneidade complementa os recursos do OpenMP, fornecendo o [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) e o [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). A biblioteca de agentes assíncrona suporta paralelismo de tarefas de alta granularidade; o PPL dá suporte a mais tarefas paralelas refinadas. O tempo de execução de simultaneidade fornece a infraestrutura necessária para executar operações em paralelo para que você possa se concentrar na lógica do seu aplicativo. No entanto, como o tempo de execução de simultaneidade permite que uma variedade de modelos de programação, sobrecarga de seu agendamento pode ser maior do que outras bibliotecas de simultaneidade, como OpenMP. Portanto, é recomendável que você teste incrementalmente desempenho quando você converte seu código existente do OpenMP para usar o tempo de execução de simultaneidade.
+No entanto, ambientes de computação menos restritos podem não ser uma boa correspondência para OpenMP. Por exemplo, problemas recursivos (como o algoritmo quicksort ou a pesquisa de uma árvore de dados) são mais difíceis de implementar usando OpenMP 2,0 e 2,5. O Tempo de Execução de Simultaneidade complementa os recursos de OpenMP fornecendo a biblioteca de [agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) e a PPL ( [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) ). A biblioteca de agentes assíncronos dá suporte ao paralelismo de tarefas de alta granularidade; a PPL dá suporte a tarefas paralelas mais refinadas. O Tempo de Execução de Simultaneidade fornece a infraestrutura necessária para executar operações em paralelo para que você possa se concentrar na lógica do seu aplicativo. No entanto, como o Tempo de Execução de Simultaneidade permite uma variedade de modelos de programação, sua sobrecarga de agendamento pode ser maior do que outras bibliotecas de simultaneidade, como OpenMP. Portanto, recomendamos que você teste o desempenho incrementalmente ao converter seu código de OpenMP existente para usar o Tempo de Execução de Simultaneidade.
 
-## <a name="when-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quando migrar de OpenMP no tempo de execução de simultaneidade
+## <a name="when-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quando migrar de OpenMP para o Tempo de Execução de Simultaneidade
 
-Ele pode ser vantajoso para migrar o código de OpenMP existente para usar o tempo de execução de simultaneidade nos seguintes casos.
+Pode ser vantajoso migrar o código de OpenMP existente para usar o Tempo de Execução de Simultaneidade nos casos a seguir.
 
-|Casos|Vantagens do tempo de execução de simultaneidade|
+|Casos|Vantagens do Tempo de Execução de Simultaneidade|
 |-----------|-------------------------------------------|
-|Você precisa de uma estrutura extensível da programação simultânea.|Muitos dos recursos no tempo de execução de simultaneidade podem ser estendidos. Você também pode combinar os recursos existentes para redigir novas marcas. Como OpenMP depende de diretivas de compilador, ele não pode ser estendido facilmente.|
-|Seu aplicativo pode se beneficiar do bloqueio cooperativo.|Quando uma tarefa for bloqueado porque ele requer um recurso que ainda não está disponível, o tempo de execução de simultaneidade podem executar outras tarefas enquanto a primeira tarefa aguarda o recurso.|
-|Seu aplicativo pode se beneficiar do balanceamento de carga dinâmica.|O tempo de execução de simultaneidade usa um algoritmo de agendamento que ajusta a alocação de recursos de computação conforme as cargas de trabalho mudam. OpenMP, quando o Agendador aloca recursos de computação para uma região parallel, essas alocações de recursos são fixas durante o cálculo.|
-|Você precisar de suporte de manipulação de exceção.|O PPL permite capturar exceções dentro e fora de um loop ou uma região paralela. O OpenMP, você deve lidar com a exceção dentro do loop ou região paralela.|
-|Você precisa de um mecanismo de cancelamento.|O PPL permite que os aplicativos cancelar as tarefas individuais e paralelas árvores de trabalho. OpenMP requer que o aplicativo implementar seu próprio mecanismo de cancelamento.|
-|Exigir o código paralelo para terminar em um contexto diferente do qual ele é iniciado.|O tempo de execução de simultaneidade permite que você iniciar uma tarefa em um contexto e, em seguida, aguardar ou cancelar a tarefa em outro contexto. O OpenMP, todo o trabalho paralelo deve terminar no contexto do qual ele é iniciado.|
-|Exigir o suporte avançado a depuração.|O Visual Studio fornece o **pilhas paralelas** e **tarefas paralelas** windows para que você pode depurar mais facilmente aplicativos multithread.<br /><br /> Para obter mais informações sobre a depuração de suporte para o tempo de execução de simultaneidade, consulte [usando a janela tarefas](/visualstudio/debugger/using-the-tasks-window), [usando a janela Parallel Stacks](/visualstudio/debugger/using-the-parallel-stacks-window), e [passo a passo: Depurando um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
+|Você precisa de uma estrutura de programação simultânea extensível.|Muitos dos recursos do Tempo de Execução de Simultaneidade podem ser estendidos. Você também pode combinar recursos existentes para compor novos. Como o OpenMP se baseia em diretivas de compilador, ele não pode ser facilmente estendido.|
+|Seu aplicativo se beneficiaria do bloqueio cooperativo.|Quando uma tarefa é bloqueada porque requer um recurso que ainda não está disponível, o Tempo de Execução de Simultaneidade pode executar outras tarefas enquanto a primeira tarefa aguarda o recurso.|
+|Seu aplicativo se beneficiaria do balanceamento de carga dinâmico.|O Tempo de Execução de Simultaneidade usa um algoritmo de agendamento que ajusta a alocação de recursos de computação à medida que as cargas de trabalho mudam. No OpenMP, quando o Agendador aloca recursos de computação para uma região paralela, essas alocações de recursos são corrigidas em todo o cálculo.|
+|Você precisa de suporte para tratamento de exceções.|A PPL permite que você capture exceções dentro e fora de uma região paralela ou loop. No OpenMP, você deve tratar a exceção dentro da região paralela ou loop.|
+|Você precisa de um mecanismo de cancelamento.|A PPL permite que os aplicativos cancelem as tarefas individuais e as árvores paralelas de trabalho. O OpenMP requer que o aplicativo implemente seu próprio mecanismo de cancelamento.|
+|Você precisa que o código paralelo seja concluído em um contexto diferente do qual ele é iniciado.|O Tempo de Execução de Simultaneidade permite que você inicie uma tarefa em um contexto e aguarde ou cancele essa tarefa em outro contexto. No OpenMP, todo trabalho paralelo deve ser concluído no contexto do qual ele é iniciado.|
+|Você precisa de suporte à depuração avançada.|O Visual Studio fornece as janelas de **pilhas paralelas** e de **tarefas paralelas** para que você possa depurar aplicativos multithread mais facilmente.<br /><br /> Para obter mais informações sobre o suporte à depuração para o Tempo de Execução de Simultaneidade, consulte [usando a janela tarefas](/visualstudio/debugger/using-the-tasks-window), [usando a janela pilhas paralelas](/visualstudio/debugger/using-the-parallel-stacks-window)e [passo a passos: Depurando um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).|
 
-## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quando não migrar do OpenMP no tempo de execução de simultaneidade
+## <a name="when-not-to-migrate-from-openmp-to-the-concurrency-runtime"></a>Quando não migrar de OpenMP para o Tempo de Execução de Simultaneidade
 
-Os casos a seguir descrevem quando pode não ser apropriado migrar o código de OpenMP existente para usar o tempo de execução de simultaneidade.
+Os casos a seguir descrevem quando talvez não seja apropriado migrar o código de OpenMP existente para usar o Tempo de Execução de Simultaneidade.
 
 |Casos|Explicação|
 |-----------|-----------------|
-|Seu aplicativo já atende às suas necessidades.|Se você estiver satisfeito com o desempenho do aplicativo e o suporte de depuração atual, migração pode não ser apropriada.|
-|Seus corpos de loop paralelo executam pouco trabalho.|A sobrecarga do Agendador de tarefas de tempo de execução de simultaneidade não pode superar os benefícios de executar o corpo do loop em paralelo, especialmente quando o corpo do loop é relativamente pequeno.|
-|Seu aplicativo é escrito em C.|Como o tempo de execução de simultaneidade usa muitos recursos do C++, ele pode não ser adequado quando você não pode gravar código que permite que o aplicativo C totalmente usá-lo.|
+|Seu aplicativo já atende aos seus requisitos.|Se você estiver satisfeito com o desempenho do aplicativo e com o suporte à depuração atual, a migração poderá não ser apropriada.|
+|Seus corpos de loop paralelos executam pouco trabalho.|A sobrecarga do Agendador de tarefas Tempo de Execução de Simultaneidade pode não superar os benefícios de executar o corpo do loop em paralelo, especialmente quando o corpo do loop é relativamente pequeno.|
+|Seu aplicativo é escrito em C.|Como o Tempo de Execução de Simultaneidade usa muitos recursos do C++, ele pode não ser adequado quando você não pode escrever código que permita que o aplicativo C o use totalmente.|
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Como: Converter um loop OpenMP paralelo para loop para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Como converter um loop de OpenMP paralelo para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
-Dado um loop básico que usa o OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [para](../../parallel/openmp/reference/for-openmp.md) diretivas, demonstra como convertê-lo para usar o tempo de execução de simultaneidade [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
+Dado um loop básico que usa [as diretivas de](../openmp/reference/openmp-directives.md#for-openmp) OpenMP e [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) , demonstra como convertê-lo para usar o algoritmo de arallel_for de simultaneidade de tempo de execução de simultaneidade [::p](reference/concurrency-namespace-functions.md#parallel_for) .
 
-[Como: Converter um loop OpenMP que usa cancelamento para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
-Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que não exige que todas as iterações para executar, demonstra como convertê-lo para usar o mecanismo de cancelamento de tempo de execução de simultaneidade.
+[Como converter um loop de OpenMP que usa o cancelamento para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+Dado um loop de OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) que não requer a execução de todas as iterações, demonstra como convertê-lo para usar o tempo de execução de simultaneidade mecanismo de cancelamento.
 
-[Como: Converter um loop OpenMP que usa tratamento de exceções para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
-Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que executa o tratamento de exceções, demonstra como convertê-lo para usar o mecanismo de tratamento de exceções de tempo de execução de simultaneidade.
+[Como converter um loop de OpenMP que usa o tratamento de exceções para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+Dado um loop [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[de OpenMP de](../openmp/reference/openmp-directives.md#for-openmp) uso paralelo que executa a manipulação de exceção, demonstra como convertê-lo para usar o tempo de execução de simultaneidade mecanismo de manipulação de exceção.
 
-[Como: Converter um loop OpenMP que usa uma variável de redução para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
-Dado um OpenMP [paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) loop que usa o [redução](../../parallel/openmp/reference/reduction.md) cláusula, demonstra como convertê-lo para usar o tempo de execução de simultaneidade.
+[Como converter um loop de OpenMP que usa uma variável de redução para usar o Tempo de Execução de Simultaneidade](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+Dado um loop de OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../openmp/reference/openmp-directives.md#for-openmp) que usa a cláusula de [redução](../openmp/reference/openmp-clauses.md#reduction) , demonstra como convertê-lo para usar o tempo de execução de simultaneidade.
 
 ## <a name="see-also"></a>Consulte também
 
-[Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
+[Runtime de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
-[PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
-[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)
+[Biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3f1b6526f51e5aaa48008792361d3e63249d9f16
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492718"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502853"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (especificar opções de linha de comando MIDL)
 
@@ -24,9 +24,9 @@ Especifica um arquivo de resposta para opções de linha de comando MIDL
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/MIDL:\@** <em>arquivo</em>
+> **/MIDL: \@ ** do <em>arquivo</em>
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 *file*<br/>
 O nome do arquivo que contém [Opções de linha de comando de MIDL](/windows/win32/Midl/general-midl-command-line-syntax).
@@ -41,7 +41,7 @@ O arquivo deve conter uma opção de linha de comando MIDL por linha.
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a > página de propriedades**IDL incorporada** do**vinculador** > Properties.
+1. Selecione a **Configuration Properties**página de propriedades  >  **Linker**  >  **IDL incorporada** do vinculador Properties.
 
 1. Modifique a propriedade de **comandos MIDL** .
 
@@ -52,8 +52,8 @@ O arquivo deve conter uma opção de linha de comando MIDL por linha.
 ## <a name="see-also"></a>Consulte também
 
 [Referência de vinculador MSVC](linking.md)<br/>
-[Opções de vinculador MSVC](linker-options.md)<br/>
-[/IDLOUT (nomear arquivos de saída MIDL)](idlout-name-midl-output-files.md)<br/>
-[/IGNOREIDL (não processar atributos em MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/TLBOUT (nomear arquivo .TLB)](tlbout-name-dot-tlb-file.md)<br/>
-[Compilando um programa atribuído](../../windows/building-an-attributed-program.md)
+[Opções do vinculador MSVC](linker-options.md)<br/>
+[/IDLOUT (arquivos de saída de MIDL de nome)](idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (não processar atributos no MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (nome. Arquivo TLB)](tlbout-name-dot-tlb-file.md)<br/>
+[Compilando um programa atribuído](../../windows/attributes/cpp-attributes-com-net.md)

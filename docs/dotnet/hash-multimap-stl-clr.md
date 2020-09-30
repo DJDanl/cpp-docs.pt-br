@@ -98,12 +98,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: 7faba79dfcd585e9f397c6ecd0bf594a5fb6c501
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4fa42b53f496f1689523d8881c6f0411e6072aa
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221400"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507187"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -115,9 +115,9 @@ Na descrição abaixo, `GValue` é o mesmo que:
 
 onde:
 
-`GKey`é o mesmo que a *chave* , a menos que o último seja um tipo de referência; nesse caso, é`Key^`
+`GKey` é o mesmo que a *chave* , a menos que o último seja um tipo de referência; nesse caso, é `Key^`
 
-`GMapped`é o mesmo que *mapeado* , a menos que o último seja um tipo de referência; nesse caso, é`Mapped^`
+`GMapped` é o mesmo que *mapeado* , a menos que o último seja um tipo de referência; nesse caso, é `Mapped^`
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -136,12 +136,12 @@ template<typename Key,
     { ..... };
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
 O tipo do componente de chave de um elemento na sequência controlada.
 
-*Mapped*<br/>
+*Adequados*<br/>
 O tipo do componente adicional de um elemento na sequência controlada.
 
 ## <a name="requirements"></a>Requisitos
@@ -220,11 +220,11 @@ O tipo do componente adicional de um elemento na sequência controlada.
 
 O objeto aloca e libera o armazenamento para a sequência que ele controla como nós individuais em uma lista vinculada bidirecional. Para agilizar o acesso, o objeto também mantém uma matriz de comprimento variável de ponteiros na lista (a tabela de hash), gerenciando efetivamente a lista inteira como uma sequência de sublistas ou buckets. Ele insere elementos em um Bucket que ele mantém ordenado alterando os links entre os nós, nunca copiando o conteúdo de um nó para outro. Isso significa que você pode inserir e remover elementos livremente sem perturbar os elementos restantes.
 
-O objeto ordena cada bucket que ele controla chamando um objeto delegado armazenado do tipo [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Você pode especificar o objeto delegado armazenado ao construir o hash_set; Se você não especificar nenhum objeto delegado, o padrão será a comparação `operator<=(key_type, key_type)` .
+O objeto ordena cada bucket que ele controla chamando um objeto delegado armazenado do tipo [hash_set:: key_compare (STL/CLR)](./hash-set-stl-clr.md#key_compare). Você pode especificar o objeto delegado armazenado ao construir o hash_set; Se você não especificar nenhum objeto delegado, o padrão será a comparação `operator<=(key_type, key_type)` .
 
-Você acessa o objeto delegado armazenado chamando a função de membro [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Esse objeto delegado deve definir a ordenação equivalente entre as chaves do tipo [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Isso significa que, para quaisquer duas chaves `X` e `Y` :
+Você acessa o objeto delegado armazenado chamando a função de membro [hash_set:: key_comp (STL/CLR)](./hash-set-stl-clr.md#key_comp) `()` . Esse objeto delegado deve definir a ordenação equivalente entre as chaves do tipo [hash_set:: KEY_TYPE (STL/CLR)](./hash-set-stl-clr.md#key_type). Isso significa que, para quaisquer duas chaves `X` e `Y` :
 
-`key_comp()(X, Y)`Retorna o mesmo resultado booliano em cada chamada.
+`key_comp()(X, Y)` Retorna o mesmo resultado booliano em cada chamada.
 
 Se `key_comp()(X, Y) && key_comp()(Y, X)` for true, será `X` `Y` dito que deve haver uma ordenação equivalente.
 
@@ -232,17 +232,17 @@ Qualquer regra de ordenação que se comporta `operator<=(key_type, key_type)` c
 
 Observe que o contêiner garante que apenas os elementos cujas chaves tenham uma ordenação equivalente (e qual hash para o mesmo valor inteiro) sejam adjacentes em um Bucket. Ao contrário da classe de modelo [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md), um objeto de classe de modelo `hash_multimap` não exige que as chaves para todos os elementos sejam exclusivas. (Duas ou mais chaves podem ter uma ordenação equivalente.)
 
-O objeto determina qual Bucket deve conter uma determinada chave de ordenação chamando um objeto delegado armazenado do tipo [hash_set:: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Você acessa esse objeto armazenado chamando a função de membro [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` para obter um valor inteiro que depende do valor da chave. Você pode especificar o objeto delegado armazenado ao construir o hash_set; Se você não especificar nenhum objeto delegado, o padrão será a função `System::Object::hash_value(key_type)` . Isso significa, para quaisquer chaves `X` e `Y` :
+O objeto determina qual Bucket deve conter uma determinada chave de ordenação chamando um objeto delegado armazenado do tipo [hash_set:: Hasher (STL/CLR)](./hash-set-stl-clr.md#hasher). Você acessa esse objeto armazenado chamando a função de membro [hash_set:: hash_delegate (STL/CLR)](./hash-set-stl-clr.md#hash_delegate) `()` para obter um valor inteiro que depende do valor da chave. Você pode especificar o objeto delegado armazenado ao construir o hash_set; Se você não especificar nenhum objeto delegado, o padrão será a função `System::Object::hash_value(key_type)` . Isso significa, para quaisquer chaves `X` e `Y` :
 
-`hash_delegate()(X)`Retorna o mesmo resultado inteiro em cada chamada.
+`hash_delegate()(X)` Retorna o mesmo resultado inteiro em cada chamada.
 
 Se `X` e `Y` tiver uma ordenação equivalente, `hash_delegate()(X)` deverá retornar o mesmo resultado inteiro que `hash_delegate()(Y)` .
 
 Cada elemento contém uma chave separada e um valor mapeado. A sequência é representada de uma maneira que permite pesquisa, inserção e remoção de um elemento arbitrário com várias operações que são independentes do número de elementos na sequência (tempo constante), pelo menos no melhor dos casos. Além disso, inserir um elemento não invalida iteradores, e remover um elemento invalida apenas os iteradores que apontam o elemento removido.
 
-No entanto, se os valores com hash não forem distribuídos uniformemente, uma tabela de hash poderá ser regenerada. No extremo, para uma função de hash que sempre retorna o mesmo valor--Lookup, a inserção e a remoção são proporcionais ao número de elementos na sequência (tempo linear). O contêiner tenta escolher uma função de hash razoável, o tamanho médio do Bucket e o tamanho da tabela de hash (número total de buckets), mas você pode substituir qualquer ou todas essas opções. Consulte, por exemplo, as funções [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) e [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+No entanto, se os valores com hash não forem distribuídos uniformemente, uma tabela de hash poderá ser regenerada. No extremo, para uma função de hash que sempre retorna o mesmo valor--Lookup, a inserção e a remoção são proporcionais ao número de elementos na sequência (tempo linear). O contêiner tenta escolher uma função de hash razoável, o tamanho médio do Bucket e o tamanho da tabela de hash (número total de buckets), mas você pode substituir qualquer ou todas essas opções. Consulte, por exemplo, as funções [hash_set:: max_load_factor (STL/CLR)](./hash-set-stl-clr.md#max_load_factor) e [hash_set:: rehash (STL/CLR)](./hash-set-stl-clr.md#rehash).
 
-Um hash_multimap dá suporte a iteradores bidirecionais, o que significa que você pode passar para elementos adjacentes, dado um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde ao iterador retornado por [hash_multimap:: End (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` . Você pode decrementar esse iterador para alcançar o último elemento na sequência controlada, se presente. Você pode incrementar um hash_multimap iterador para alcançar o nó principal e ele será comparado igual a `end()` . Mas não é possível desreferenciar o iterador retornado pelo `end()` .
+Um hash_multimap dá suporte a iteradores bidirecionais, o que significa que você pode passar para elementos adjacentes, dado um iterador que designa um elemento na sequência controlada. Um nó de cabeçalho especial corresponde ao iterador retornado por [hash_multimap:: End (STL/CLR)](#end) `()` . Você pode decrementar esse iterador para alcançar o último elemento na sequência controlada, se presente. Você pode incrementar um hash_multimap iterador para alcançar o nó principal e ele será comparado igual a `end()` . Mas não é possível desreferenciar o iterador retornado pelo `end()` .
 
 Observe que você não pode fazer referência a um elemento hash_multimap diretamente dado sua posição numérica, que requer um iterador de acesso aleatório.
 
@@ -252,7 +252,7 @@ Apagar ou remover um elemento chama o destruidor para seu valor armazenado. A de
 
 ## <a name="members"></a>Membros
 
-## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a>hash_multimap:: Begin (STL/CLR)
+## <a name="hash_multimapbegin-stlclr"></a><a name="begin"></a> hash_multimap:: Begin (STL/CLR)
 
 Designa o início da sequência controlada.
 
@@ -303,7 +303,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="hash_multimapbucket_count-stlclr"></a><a name="bucket_count"></a>hash_multimap:: bucket_count (STL/CLR)
+## <a name="hash_multimapbucket_count-stlclr"></a><a name="bucket_count"></a> hash_multimap:: bucket_count (STL/CLR)
 
 Conta o número de buckets.
 
@@ -377,7 +377,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimapclear-stlclr"></a><a name="clear"></a>hash_multimap:: Clear (STL/CLR)
+## <a name="hash_multimapclear-stlclr"></a><a name="clear"></a> hash_multimap:: Clear (STL/CLR)
 
 Remove todos os elementos.
 
@@ -389,7 +389,7 @@ void clear();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro efetivamente chama [hash_multimap:: Erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap:: Begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap:: End (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `())` . Você o usa para garantir que a sequência controlada esteja vazia.
+A função de membro efetivamente chama [hash_multimap:: Erase (STL/CLR)](#erase) `(` [hash_multimap:: Begin (STL/CLR)](#begin) `(),` [hash_multimap:: End (STL/CLR)](#end) `())` . Você o usa para garantir que a sequência controlada esteja vazia.
 
 ### <a name="example"></a>Exemplo
 
@@ -435,7 +435,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="hash_multimapconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_multimap:: const_iterator (STL/CLR)
+## <a name="hash_multimapconst_iterator-stlclr"></a><a name="const_iterator"></a> hash_multimap:: const_iterator (STL/CLR)
 
 O tipo de um iterador de constante para a sequência controlada.
 
@@ -477,7 +477,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapconst_reference-stlclr"></a><a name="const_reference"></a>hash_multimap:: const_reference (STL/CLR)
+## <a name="hash_multimapconst_reference-stlclr"></a><a name="const_reference"></a> hash_multimap:: const_reference (STL/CLR)
 
 O tipo de uma referência de constante para um elemento.
 
@@ -522,7 +522,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_multimap:: const_reverse_iterator (STL/CLR)
+## <a name="hash_multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> hash_multimap:: const_reverse_iterator (STL/CLR)
 
 O tipo de um iterador reverso constante para a sequência controlada.
 
@@ -564,7 +564,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="hash_multimapcount-stlclr"></a><a name="count"></a>hash_multimap:: Count (STL/CLR)
+## <a name="hash_multimapcount-stlclr"></a><a name="count"></a> hash_multimap:: Count (STL/CLR)
 
 Localiza o número de elementos que correspondem a uma chave especificada.
 
@@ -574,7 +574,7 @@ Localiza o número de elementos que correspondem a uma chave especificada.
 size_type count(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *chave*<br/>
 O valor chave a ser pesquisado.
@@ -617,7 +617,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="hash_multimapdifference_type-stlclr"></a><a name="difference_type"></a>hash_multimap::d ifference_type (STL/CLR)
+## <a name="hash_multimapdifference_type-stlclr"></a><a name="difference_type"></a> hash_multimap::d ifference_type (STL/CLR)
 
 Os tipos de uma distância assinada entre dois elementos.
 
@@ -672,7 +672,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="hash_multimapempty-stlclr"></a><a name="empty"></a>hash_multimap:: Empty (STL/CLR)
+## <a name="hash_multimapempty-stlclr"></a><a name="empty"></a> hash_multimap:: Empty (STL/CLR)
 
 Testa se nenhum elemento está presente.
 
@@ -684,7 +684,7 @@ bool empty();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [hash_multimap:: Size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() == 0` . Você o usa para testar se o hash_multimap está vazio.
+A função membro retorna verdadeiro para uma sequência controlada vazia. É equivalente a [hash_multimap:: Size (STL/CLR)](#size) `() == 0` . Você o usa para testar se o hash_multimap está vazio.
 
 ### <a name="example"></a>Exemplo
 
@@ -724,7 +724,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="hash_multimapend-stlclr"></a><a name="end"></a>hash_multimap:: End (STL/CLR)
+## <a name="hash_multimapend-stlclr"></a><a name="end"></a> hash_multimap:: End (STL/CLR)
 
 Designa o fim da sequência controlada.
 
@@ -777,7 +777,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="hash_multimapequal_range-stlclr"></a><a name="equal_range"></a>hash_multimap:: equal_range (STL/CLR)
+## <a name="hash_multimapequal_range-stlclr"></a><a name="equal_range"></a> hash_multimap:: equal_range (STL/CLR)
 
 Localiza o intervalo que corresponde a uma chave especificada.
 
@@ -787,14 +787,14 @@ Localiza o intervalo que corresponde a uma chave especificada.
 cliext::pair<iterator, iterator> equal_range(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna um par de iteradores `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap:: upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md) `(key))` . Você o usa para determinar o intervalo de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
+A função membro retorna um par de iteradores `cliext::pair<iterator, iterator>(` [hash_multimap:: lower_bound (STL/CLR)](#lower_bound) `(key),` [hash_multimap:: upper_bound (STL/CLR)](#upper_bound) `(key))` . Você o usa para determinar o intervalo de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -838,7 +838,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="hash_multimaperase-stlclr"></a><a name="erase"></a>hash_multimap:: Erase (STL/CLR)
+## <a name="hash_multimaperase-stlclr"></a><a name="erase"></a> hash_multimap:: Erase (STL/CLR)
 
 Remove os elementos em posições especificadas.
 
@@ -850,7 +850,7 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
 Início do intervalo a ser apagado.
@@ -866,7 +866,7 @@ Elemento a ser apagado.
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função de membro remove o elemento da sequência controlada apontada por *Where*e retorna um iterador que designa o primeiro elemento restante além do elemento removido, ou [hash_multimap:: End (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` se nenhum elemento desse tipo existir. Você o usa para remover um único elemento.
+A primeira função de membro remove o elemento da sequência controlada apontada por *Where*e retorna um iterador que designa o primeiro elemento restante além do elemento removido, ou [hash_multimap:: End (STL/CLR)](#end) `()` se nenhum elemento desse tipo existir. Você o usa para remover um único elemento.
 
 A segunda função de membro remove os elementos da sequência controlada no intervalo [ `first` , `last` ), e retorna um iterador que designa o primeiro elemento restante além de todos os elementos removidos, ou `end()` se nenhum elemento desse tipo existir. Você o usa para remover zero ou mais elementos contíguos.
 
@@ -931,7 +931,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="hash_multimapfind-stlclr"></a><a name="find"></a>hash_multimap:: find (STL/CLR)
+## <a name="hash_multimapfind-stlclr"></a><a name="find"></a> hash_multimap:: find (STL/CLR)
 
 Localiza um elemento que corresponde a uma chave especificada.
 
@@ -941,14 +941,14 @@ Localiza um elemento que corresponde a uma chave especificada.
 iterator find(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-Se pelo menos um elemento na sequência controlada tiver uma ordenação equivalente com *chave*, a função de membro retornará um iterador que designa um desses elementos; caso contrário, ele retornará [hash_multimap:: End (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` . Você o usa para localizar um elemento atualmente na sequência controlada que corresponde a uma chave especificada.
+Se pelo menos um elemento na sequência controlada tiver uma ordenação equivalente com *chave*, a função de membro retornará um iterador que designa um desses elementos; caso contrário, ele retornará [hash_multimap:: End (STL/CLR)](#end) `()` . Você o usa para localizar um elemento atualmente na sequência controlada que corresponde a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -990,7 +990,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="hash_multimapgeneric_container-stlclr"></a><a name="generic_container"></a>hash_multimap:: generic_container (STL/CLR)
+## <a name="hash_multimapgeneric_container-stlclr"></a><a name="generic_container"></a> hash_multimap:: generic_container (STL/CLR)
 
 O tipo da interface genérica para o contêiner.
 
@@ -1054,7 +1054,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="hash_multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_multimap:: generic_iterator (STL/CLR)
+## <a name="hash_multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> hash_multimap:: generic_iterator (STL/CLR)
 
 O tipo de um iterador para uso com a interface genérica para o contêiner.
 
@@ -1111,7 +1111,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_multimap:: generic_reverse_iterator (STL/CLR)
+## <a name="hash_multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> hash_multimap:: generic_reverse_iterator (STL/CLR)
 
 O tipo de um iterador reverso para uso com a interface genérica para o contêiner.
 
@@ -1167,7 +1167,7 @@ int main()
 [c 3]
 ```
 
-## <a name="hash_multimapgeneric_value-stlclr"></a><a name="generic_value"></a>hash_multimap:: generic_value (STL/CLR)
+## <a name="hash_multimapgeneric_value-stlclr"></a><a name="generic_value"></a> hash_multimap:: generic_value (STL/CLR)
 
 O tipo de um elemento a ser usado com a interface genérica para o contêiner.
 
@@ -1221,7 +1221,7 @@ int main()
 [a 1]
 ```
 
-## <a name="hash_multimaphash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_multimap:: hash_delegate (STL/CLR)
+## <a name="hash_multimaphash_delegate-stlclr"></a><a name="hash_delegate"></a> hash_multimap:: hash_delegate (STL/CLR)
 
 Localiza um elemento que corresponde a uma chave especificada.
 
@@ -1259,7 +1259,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimaphash_multimap-stlclr"></a><a name="hash_multimap"></a>hash_multimap:: hash_multimap (STL/CLR)
+## <a name="hash_multimaphash_multimap-stlclr"></a><a name="hash_multimap"></a> hash_multimap:: hash_multimap (STL/CLR)
 
 Constrói um objeto contêiner.
 
@@ -1286,7 +1286,7 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
 Início do intervalo a ser inserido.
@@ -1300,7 +1300,7 @@ Fim do intervalo a ser inserido.
 *Pred*<br/>
 Predicado de ordenação para a sequência controlada.
 
-*Certo*<br/>
+*direita*<br/>
 Objeto ou intervalo a inserir.
 
 ### <a name="remarks"></a>Comentários
@@ -1502,7 +1502,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaphasher-stlclr"></a><a name="hasher"></a>hash_multimap:: Hasher (STL/CLR)
+## <a name="hash_multimaphasher-stlclr"></a><a name="hasher"></a> hash_multimap:: Hasher (STL/CLR)
 
 O delegado de hash para uma chave.
 
@@ -1541,7 +1541,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimapinsert-stlclr"></a><a name="insert"></a>hash_multimap:: Insert (STL/CLR)
+## <a name="hash_multimapinsert-stlclr"></a><a name="insert"></a> hash_multimap:: Insert (STL/CLR)
 
 Adiciona elementos.
 
@@ -1555,7 +1555,7 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
 Início do intervalo a ser inserido.
@@ -1563,7 +1563,7 @@ Início do intervalo a ser inserido.
 *last*<br/>
 Fim do intervalo a ser inserido.
 
-*Certo*<br/>
+*direita*<br/>
 Enumeração a ser inserida.
 
 *Val*<br/>
@@ -1659,7 +1659,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="hash_multimapiterator-stlclr"></a><a name="iterator"></a>hash_multimap:: iterador (STL/CLR)
+## <a name="hash_multimapiterator-stlclr"></a><a name="iterator"></a> hash_multimap:: iterador (STL/CLR)
 
 O tipo de um iterador para a sequência controlada.
 
@@ -1701,7 +1701,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapkey_comp-stlclr"></a><a name="key_comp"></a>hash_multimap:: key_comp (STL/CLR)
+## <a name="hash_multimapkey_comp-stlclr"></a><a name="key_comp"></a> hash_multimap:: key_comp (STL/CLR)
 
 Copia o delegado de ordenação de duas chaves.
 
@@ -1760,7 +1760,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multimapkey_compare-stlclr"></a><a name="key_compare"></a>hash_multimap:: key_compare (STL/CLR)
+## <a name="hash_multimapkey_compare-stlclr"></a><a name="key_compare"></a> hash_multimap:: key_compare (STL/CLR)
 
 O delegado de ordenação para duas chaves.
 
@@ -1820,7 +1820,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_multimapkey_type-stlclr"></a><a name="key_type"></a>hash_multimap:: key_type (STL/CLR)
+## <a name="hash_multimapkey_type-stlclr"></a><a name="key_type"></a> hash_multimap:: key_type (STL/CLR)
 
 O tipo de uma chave de classificação.
 
@@ -1865,7 +1865,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_multimapload_factor-stlclr"></a><a name="load_factor"></a>hash_multimap:: load_factor (STL/CLR)
+## <a name="hash_multimapload_factor-stlclr"></a><a name="load_factor"></a> hash_multimap:: load_factor (STL/CLR)
 
 Conta a média de elementos por bucket.
 
@@ -1877,7 +1877,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna `(float)` [hash_multimap:: Size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap:: bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md) `()` . Você o usa para determinar o tamanho médio do Bucket.
+A função membro retorna `(float)` [hash_multimap:: Size (STL/CLR)](#size) `() /` [hash_multimap:: bucket_count (STL/CLR)](#bucket_count) `()` . Você o usa para determinar o tamanho médio do Bucket.
 
 ### <a name="example"></a>Exemplo
 
@@ -1939,7 +1939,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimaplower_bound-stlclr"></a><a name="lower_bound"></a>hash_multimap:: lower_bound (STL/CLR)
+## <a name="hash_multimaplower_bound-stlclr"></a><a name="lower_bound"></a> hash_multimap:: lower_bound (STL/CLR)
 
 Localiza o início do intervalo que corresponde a uma chave especificada.
 
@@ -1949,14 +1949,14 @@ Localiza o início do intervalo que corresponde a uma chave especificada.
 iterator lower_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro determina o primeiro elemento `X` na sequência controlada que faz hash para o mesmo Bucket como *chave* e tem ordenação equivalente para *chave*. Se nenhum elemento desse tipo existir, ele retornará [hash_multimap:: End (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` ; caso contrário, ele retornará um iterador que designa `X` . Você o usa para localizar o início de uma sequência de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
+A função de membro determina o primeiro elemento `X` na sequência controlada que faz hash para o mesmo Bucket como *chave* e tem ordenação equivalente para *chave*. Se nenhum elemento desse tipo existir, ele retornará [hash_multimap:: End (STL/CLR)](#end) `()` ; caso contrário, ele retornará um iterador que designa `X` . Você o usa para localizar o início de uma sequência de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -1998,7 +1998,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="hash_multimapmake_value-stlclr"></a><a name="make_value"></a>hash_multimap:: make_value (STL/CLR)
+## <a name="hash_multimapmake_value-stlclr"></a><a name="make_value"></a> hash_multimap:: make_value (STL/CLR)
 
 Constrói um objeto de valor.
 
@@ -2008,12 +2008,12 @@ Constrói um objeto de valor.
 static value_type make_value(key_type key, mapped_type mapped);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *chave*<br/>
 Valor de chave a ser usado.
 
-*adequados*<br/>
+*mapeado*<br/>
 Valor mapeado a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
@@ -2047,7 +2047,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapmapped_type-stlclr"></a><a name="mapped_type"></a>hash_multimap:: mapped_type (STL/CLR)
+## <a name="hash_multimapmapped_type-stlclr"></a><a name="mapped_type"></a> hash_multimap:: mapped_type (STL/CLR)
 
 O tipo de um valor mapeado associado a cada chave.
 
@@ -2092,7 +2092,7 @@ int main()
 1 2 3
 ```
 
-## <a name="hash_multimapmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_multimap:: max_load_factor (STL/CLR)
+## <a name="hash_multimapmax_load_factor-stlclr"></a><a name="max_load_factor"></a> hash_multimap:: max_load_factor (STL/CLR)
 
 Obtém ou define o máximo de elementos por bucket.
 
@@ -2103,7 +2103,7 @@ float max_load_factor();
 void max_load_factor(float new_factor);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *new_factor*<br/>
 Novo fator de carga máximo a ser armazenado.
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimapoperator-stlclr"></a><a name="op"></a>hash_multimap:: Operator = (STL/CLR)
+## <a name="hash_multimapoperator-stlclr"></a><a name="op"></a> hash_multimap:: Operator = (STL/CLR)
 
 Substitui a sequência controlada.
 
@@ -2184,9 +2184,9 @@ Substitui a sequência controlada.
 hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 O contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
@@ -2229,7 +2229,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaprbegin-stlclr"></a><a name="rbegin"></a>hash_multimap:: rbegin (STL/CLR)
+## <a name="hash_multimaprbegin-stlclr"></a><a name="rbegin"></a> hash_multimap:: rbegin (STL/CLR)
 
 Designa o início da sequência controlada invertida.
 
@@ -2280,7 +2280,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="hash_multimapreference-stlclr"></a><a name="reference"></a>hash_multimap:: Reference (STL/CLR)
+## <a name="hash_multimapreference-stlclr"></a><a name="reference"></a> hash_multimap:: Reference (STL/CLR)
 
 O tipo de uma referência para um elemento.
 
@@ -2325,7 +2325,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimaprehash-stlclr"></a><a name="rehash"></a>hash_multimap:: rehash (STL/CLR)
+## <a name="hash_multimaprehash-stlclr"></a><a name="rehash"></a> hash_multimap:: rehash (STL/CLR)
 
 Recria a tabela de hash.
 
@@ -2337,7 +2337,7 @@ void rehash();
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro recria a tabela de hash, garantindo que [hash_multimap:: load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md) `() <=` [hash_multimap:: max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md). Caso contrário, a tabela de hash aumentará em tamanho apenas conforme necessário após uma inserção. (Ela nunca diminui automaticamente em tamanho.) Você o usa para ajustar o tamanho da tabela de hash.
+A função de membro recria a tabela de hash, garantindo que [hash_multimap:: load_factor (STL/CLR)](#load_factor) `() <=` [hash_multimap:: max_load_factor (STL/CLR)](#max_load_factor). Caso contrário, a tabela de hash aumentará em tamanho apenas conforme necessário após uma inserção. (Ela nunca diminui automaticamente em tamanho.) Você o usa para ajustar o tamanho da tabela de hash.
 
 ### <a name="example"></a>Exemplo
 
@@ -2399,7 +2399,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_multimaprend-stlclr"></a><a name="rend"></a>hash_multimap:: rend (STL/CLR)
+## <a name="hash_multimaprend-stlclr"></a><a name="rend"></a> hash_multimap:: rend (STL/CLR)
 
 Designa o fim da sequência controlada invertida.
 
@@ -2452,7 +2452,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="hash_multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_multimap:: reverse_iterator (STL/CLR)
+## <a name="hash_multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> hash_multimap:: reverse_iterator (STL/CLR)
 
 O tipo de um iterador inverso para a sequência controlada.
 
@@ -2494,7 +2494,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="hash_multimapsize-stlclr"></a><a name="size"></a>hash_multimap:: Size (STL/CLR)
+## <a name="hash_multimapsize-stlclr"></a><a name="size"></a> hash_multimap:: Size (STL/CLR)
 
 Conta o número de elementos.
 
@@ -2506,7 +2506,7 @@ size_type size();
 
 ### <a name="remarks"></a>Comentários
 
-A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, consulte [hash_multimap:: Empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md) `()` .
+A função membro retorna o comprimento da sequência controlada. Você o usa para determinar o número de elementos atualmente na sequência controlada. Se tudo o que você se importa é se a sequência tem tamanho diferente de zero, consulte [hash_multimap:: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Exemplo
 
@@ -2546,7 +2546,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="hash_multimapsize_type-stlclr"></a><a name="size_type"></a>hash_multimap:: size_type (STL/CLR)
+## <a name="hash_multimapsize_type-stlclr"></a><a name="size_type"></a> hash_multimap:: size_type (STL/CLR)
 
 O tipo de uma distância assinada entre dois elementos.
 
@@ -2594,7 +2594,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="hash_multimapswap-stlclr"></a><a name="swap"></a>hash_multimap:: swap (STL/CLR)
+## <a name="hash_multimapswap-stlclr"></a><a name="swap"></a> hash_multimap:: swap (STL/CLR)
 
 Alterna o conteúdo de dois contêineres.
 
@@ -2604,9 +2604,9 @@ Alterna o conteúdo de dois contêineres.
 void swap(hash_multimap<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
-*Certo*<br/>
+*direita*<br/>
 Contêiner com o qual trocar conteúdos.
 
 ### <a name="remarks"></a>Comentários
@@ -2662,7 +2662,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapto_array-stlclr"></a><a name="to_array"></a>hash_multimap:: to_array (STL/CLR)
+## <a name="hash_multimapto_array-stlclr"></a><a name="to_array"></a> hash_multimap:: to_array (STL/CLR)
 
 Copia a sequência controlada em uma nova matriz.
 
@@ -2712,7 +2712,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hash_multimapupper_bound-stlclr"></a><a name="upper_bound"></a>hash_multimap:: upper_bound (STL/CLR)
+## <a name="hash_multimapupper_bound-stlclr"></a><a name="upper_bound"></a> hash_multimap:: upper_bound (STL/CLR)
 
 Localiza o fim do intervalo que corresponde a uma chave especificada.
 
@@ -2722,14 +2722,14 @@ Localiza o fim do intervalo que corresponde a uma chave especificada.
 iterator upper_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *chave*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
-A função membro determina o último elemento `X` na sequência controlada que faz hash para o mesmo Bucket como *chave* e tem ordenação equivalente para *chave*. Se esse elemento não existir, ou se `X` for o último elemento na sequência controlada, ele retornará [hash_multimap:: End (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()` ; caso contrário, ele retornará um iterador que designa o primeiro elemento além `X` . Você o usa para localizar o final de uma sequência de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
+A função membro determina o último elemento `X` na sequência controlada que faz hash para o mesmo Bucket como *chave* e tem ordenação equivalente para *chave*. Se esse elemento não existir, ou se `X` for o último elemento na sequência controlada, ele retornará [hash_multimap:: End (STL/CLR)](#end) `()` ; caso contrário, ele retornará um iterador que designa o primeiro elemento além `X` . Você o usa para localizar o final de uma sequência de elementos atualmente na sequência controlada que corresponde a uma chave especificada.
 
 ### <a name="example"></a>Exemplo
 
@@ -2771,7 +2771,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="hash_multimapvalue_comp-stlclr"></a><a name="value_comp"></a>hash_multimap:: value_comp (STL/CLR)
+## <a name="hash_multimapvalue_comp-stlclr"></a><a name="value_comp"></a> hash_multimap:: value_comp (STL/CLR)
 
 Copia o delegado de ordenação para dois valores de elemento.
 
@@ -2818,7 +2818,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="hash_multimapvalue_compare-stlclr"></a><a name="value_compare"></a>hash_multimap:: value_compare (STL/CLR)
+## <a name="hash_multimapvalue_compare-stlclr"></a><a name="value_compare"></a> hash_multimap:: value_compare (STL/CLR)
 
 O delegado de ordenação para dois valores de elemento.
 
@@ -2866,7 +2866,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="hash_multimapvalue_type-stlclr"></a><a name="value_type"></a>hash_multimap:: value_type (STL/CLR)
+## <a name="hash_multimapvalue_type-stlclr"></a><a name="value_type"></a> hash_multimap:: value_type (STL/CLR)
 
 O tipo de um elemento.
 

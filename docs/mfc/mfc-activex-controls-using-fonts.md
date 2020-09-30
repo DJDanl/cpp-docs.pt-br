@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 58f387ba6f4d7cdffb3ffc1f7be6f9acde8314f4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618174"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499698"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: usando fontes
 
@@ -36,13 +36,13 @@ Este artigo aborda os seguintes tópicos:
 
 - [Usando propriedades de fonte personalizadas em seu controle](#_core_implementing_a_custom_font_property)
 
-## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a>Usando a propriedade Font de ações
+## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a> Usando a propriedade Font de ações
 
 As propriedades da fonte de ações são preimplementadas pela classe [COleControl](reference/colecontrol-class.md). Além disso, uma página de propriedades de fonte padrão também está disponível, permitindo que o usuário altere vários atributos do objeto Font, como seu nome, tamanho e estilo.
 
 Acesse o objeto Font por meio das funções [GetFont](reference/colecontrol-class.md#getfont), [SetFont](reference/colecontrol-class.md#setfont)e [InternalGetFont](reference/colecontrol-class.md#internalgetfont) do `COleControl` . O usuário de controle acessará o objeto Font por meio das `GetFont` funções e da `SetFont` mesma maneira que qualquer outra propriedade get/set. Quando o acesso ao objeto de fonte é necessário em um controle, use a `InternalGetFont` função.
 
-Conforme discutido em [controles ActiveX do MFC: Propriedades](mfc-activex-controls-properties.md), a adição de propriedades de ações é fácil com o [Assistente para adicionar Propriedade](../ide/names-add-property-wizard.md). Você escolhe a propriedade Font e o assistente para adicionar propriedade insere automaticamente a entrada de fonte Stock no mapa de expedição do controle.
+Conforme discutido em [controles ActiveX do MFC: Propriedades](mfc-activex-controls-properties.md), a adição de propriedades de ações é fácil com o [Assistente para adicionar Propriedade](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard). Você escolhe a propriedade Font e o assistente para adicionar propriedade insere automaticamente a entrada de fonte Stock no mapa de expedição do controle.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Para adicionar a propriedade Font de ações usando o assistente para adicionar propriedade
 
@@ -90,7 +90,7 @@ O assistente para adicionar propriedade adiciona a seguinte linha ao mapa de exp
 
 [!code-cpp[NVC_MFC_AxFont#3](codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]
 
-## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a>Modificando a função OnDraw
+## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a> Modificando a função OnDraw
 
 A implementação padrão do `OnDraw` usa a fonte do sistema Windows para todo o texto exibido no controle. Isso significa que você deve modificar o `OnDraw` código selecionando o objeto de fonte no contexto do dispositivo. Para fazer isso, chame [COleControl:: SelectStockFont](reference/colecontrol-class.md#selectstockfont) e passe o contexto do dispositivo do controle, conforme mostrado no exemplo a seguir:
 
@@ -98,7 +98,7 @@ A implementação padrão do `OnDraw` usa a fonte do sistema Windows para todo o
 
 Depois que a `OnDraw` função tiver sido modificada para usar o objeto Font, qualquer texto dentro do controle será exibido com características da propriedade Font de Stock do controle.
 
-## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a>Usando propriedades de fonte personalizadas em seu controle
+## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a> Usando propriedades de fonte personalizadas em seu controle
 
 Além da propriedade fonte de estoque, o controle ActiveX pode ter propriedades de fonte personalizadas. Para adicionar uma propriedade de fonte personalizada, você deve:
 
@@ -108,7 +108,7 @@ Além da propriedade fonte de estoque, o controle ActiveX pode ter propriedades 
 
 - [Implementando uma nova interface de notificação de fonte](#_core_implementing_a_new_font_notification_interface).
 
-### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a>Implementando uma propriedade de fonte personalizada
+### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a> Implementando uma propriedade de fonte personalizada
 
 Para implementar uma propriedade de fonte personalizada, use o assistente para adicionar propriedade para adicionar a propriedade e, em seguida, fazer algumas modificações no código. As seções a seguir descrevem como adicionar a `HeadingFont` propriedade personalizada ao controle de exemplo.
 
@@ -198,7 +198,7 @@ Você também deve incrementar o parâmetro Count de sua BEGIN_PROPPAGEIDS macro
 
 Depois que essas alterações tiverem sido feitas, recompile o projeto inteiro para incorporar a funcionalidade adicional.
 
-### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a>Processando notificações de fonte
+### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a> Processando notificações de fonte
 
 Na maioria dos casos, o controle precisa saber quando as características do objeto de fonte foram modificadas. Cada objeto Font é capaz de fornecer notificações quando ele é alterado chamando uma função membro da `IFontNotification` interface implementada pelo `COleControl` .
 
@@ -211,7 +211,7 @@ As linhas sólidas na figura acima mostram que ambos os objetos Font estão usan
 
 Uma maneira de distinguir entre as notificações de objeto de fonte do controle é criar uma implementação separada da `IFontNotification` interface para cada objeto de fonte no controle. Essa técnica permite que você Otimize seu código de desenho atualizando apenas a cadeia de caracteres, ou cadeias, que usam a fonte modificada recentemente. As seções a seguir demonstram as etapas necessárias para implementar interfaces de notificação separadas para uma segunda propriedade de fonte. A segunda Propriedade Font é considerada a `HeadingFont` propriedade que foi adicionada na seção anterior.
 
-### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a>Implementando uma nova interface de notificação de fonte
+### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a> Implementando uma nova interface de notificação de fonte
 
 Para distinguir entre as notificações de duas ou mais fontes, uma nova interface de notificação deve ser implementada para cada fonte usada no controle. As seções a seguir descrevem como implementar uma nova interface de notificação de fonte modificando o cabeçalho de controle e os arquivos de implementação.
 
@@ -237,4 +237,4 @@ Depois que essas alterações tiverem sido feitas em seu projeto, recompile o pr
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)<br/>
 [Controles ActiveX do MFC: usando imagens em um controle ActiveX](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Controles ActiveX do MFC: usando páginas de propriedade de estoque](mfc-activex-controls-using-stock-property-pages.md)
+[Controles ActiveX do MFC: usando páginas de propriedades de estoque](mfc-activex-controls-using-stock-property-pages.md)

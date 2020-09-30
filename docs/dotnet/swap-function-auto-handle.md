@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446868"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498572"
 ---
 # <a name="swap-function-auto_handle"></a>Função swap (auto_handle)
 
@@ -34,7 +34,7 @@ Um `auto_handle`.
 *_right*<br/>
 Outro `auto_handle`.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 ```cpp
 // msl_swap_auto_handle.cpp
@@ -61,13 +61,13 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-**Arquivo de cabeçalho** \<msclr \ auto_handle. h >
+**Arquivo de cabeçalho** \<msclr\auto_handle.h>
 
 Msclr de **namespace**
 
 ## <a name="see-also"></a>Consulte também
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)

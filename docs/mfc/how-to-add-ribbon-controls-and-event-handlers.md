@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 560524c36dbf57faec3b4b6372cade047f9fe7de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d6382c8ebf73fe7a26b3950cc1965b229c22dbb7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618477"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501230"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como adicionar controles de faixa de opções e manipuladores de evento
 
@@ -30,7 +30,7 @@ Neste tópico, você abrirá o designer de faixa de faixas, adicionará um botã
 
 1. Clique com o botão direito do mouse no botão e clique em **Adicionar manipulador de eventos**.
 
-1. No **Assistente de manipulador de eventos**, confirme as configurações padrão e clique em **Adicionar e editar**. Para obter mais informações, consulte [Assistente de manipulador de eventos](../ide/event-handler-wizard.md).
+1. No **Assistente de manipulador de eventos**, confirme as configurações padrão e clique em **Adicionar e editar**. Para obter mais informações, consulte [Assistente de manipulador de eventos](../ide/adding-an-event-handler-visual-cpp.md#event-handler-wizard).
 
 1. No editor de código, adicione o seguinte código à função de manipulador:
 

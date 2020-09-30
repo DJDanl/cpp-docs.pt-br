@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686477"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503542"
 ---
 # <a name="db_column"></a>db_column
 
@@ -50,7 +50,7 @@ Adicional Uma variável de membro usada para manter o tamanho da coluna em bytes
 
 ## <a name="remarks"></a>Comentários
 
-**db_column** associa a coluna da tabela especificada a uma variável no conjunto de linhas. Ele delimita os dados do membro que podem participar da `IAccessor` associação baseada em OLE DB. Esse atributo configura o mapa de colunas normalmente definido usando as macros OLE DB consumidor [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)e [COLUMN_ENTRY](../../data/oledb/column-entry.md). Eles manipulam a [estrutura](/previous-versions/windows/desktop/ms716845(v=vs.85)) de OLE DB DBBINDING para associar a coluna especificada. Cada membro que você marca com o atributo **db_column** ocupará uma entrada no mapa de coluna na forma de uma entrada de coluna. Portanto, você chama esse atributo onde colocaria o mapa de coluna, ou seja, na classe Command ou Table.
+**db_column** associa a coluna da tabela especificada a uma variável no conjunto de linhas. Ele delimita os dados do membro que podem participar da `IAccessor` associação baseada em OLE DB. Esse atributo configura o mapa de colunas normalmente definido usando as macros OLE DB consumidor [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)e [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Eles manipulam a [estrutura](/previous-versions/windows/desktop/ms716845(v=vs.85)) de OLE DB DBBINDING para associar a coluna especificada. Cada membro que você marca com o atributo **db_column** ocupará uma entrada no mapa de coluna na forma de uma entrada de coluna. Portanto, você chama esse atributo onde colocaria o mapa de coluna, ou seja, na classe Command ou Table.
 
 Use **db_column** em conjunto com os atributos [db_table](db-table.md) ou [db_command](db-command.md) .
 
@@ -101,13 +101,13 @@ class CProducts {
 | Contexto de atributo | Valor |
 |-|-|
 |**Aplica-se a**|**`class`**, **`struct`** , membro, método|
-|**Repetível**|No|
+|**Repetível**|Não|
 |**Atributos obrigatórios**|Nenhum|
 |**Atributos inválidos**|Nenhum|
 
 Para obter mais informações sobre os contextos de atributo, consulte [contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [OLE DB atributos de consumidor](ole-db-consumer-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)

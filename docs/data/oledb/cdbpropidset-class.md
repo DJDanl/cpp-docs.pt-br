@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838289"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502498"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 
-Herda da `DBPROPIDSET` estrutura e adiciona um construtor que inicializa campos de chave, bem como o método de acesso [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
+Herda da `DBPROPIDSET` estrutura e adiciona um construtor que inicializa campos de chave, bem como o método de acesso [AddPropertyID](#addpropertyid) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -82,7 +82,7 @@ Adiciona uma ID de propriedade ao conjunto de IDs de propriedade.
 bool AddPropertyID(DBPROPID propid) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *propid*<br/>
 no A ID da propriedade a ser adicionada ao conjunto de IDs de propriedade.
@@ -101,7 +101,7 @@ CDBPropIDSet(const CDBPropIDSet& propidset);
 CDBPropIDSet();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no Um GUID usado para inicializar o `guidPropertySet` campo.
@@ -119,14 +119,14 @@ Define o campo GUID na `DBPROPIDSET` estrutura.
 void SetGUID(const GUID& guid) throw();
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *guid*<br/>
 no Um GUID usado para definir o `guidPropertySet` campo da estrutura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
 ### <a name="remarks"></a>Comentários
 
-Esse campo também pode ser definido pelo [Construtor](../../data/oledb/cdbpropidset-cdbpropidset.md) . Chame essa função se você usar o construtor padrão para essa classe.
+Esse campo também pode ser definido pelo [Construtor](#cdbpropidset) . Chame essa função se você usar o construtor padrão para essa classe.
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet:: Operator =
 

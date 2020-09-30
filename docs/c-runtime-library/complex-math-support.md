@@ -8,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
-ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.openlocfilehash: 60f5254a2378ed38d931f304bd5e1ebe833a3332
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90569549"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502130"
 ---
 # <a name="c-complex-math-support"></a>Suporte a expressões matemáticas complexas de C
 
@@ -98,7 +98,7 @@ Uma vez que os números complexos não são um tipo nativo no compilador da Micr
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Multiplicar dois números complexos|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Multiplicar um número complexo e um número de ponto flutuante|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Tipo-matemática genérica](tgmath.md)\
 [Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)

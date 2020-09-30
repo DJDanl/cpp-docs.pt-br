@@ -2,16 +2,16 @@
 title: Referência de linguagem do C++/CX
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 4f3816280630a6a061eb037a33367ef4e9d90375
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f28270ace3965a3cf89e250a873af14e48390708
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403849"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507420"
 ---
 # <a name="ccx-language-reference"></a>Referência de linguagem do C++/CX
 
-O c++/CX é um conjunto de extensões para a linguagem C++ que permite a criação de aplicativos do Windows e Windows Runtime componentes em um idioma o mais próximo possível do C++ moderno. Use C++/CX para escrever aplicativos e componentes do Windows em código nativo que interaja facilmente com o Visual C#, Visual Basic e JavaScript e outras linguagens que dão suporte ao Windows Runtime. Nesses casos raros que exigem acesso direto às interfaces COM brutos ou ao código não-excepcional, você pode usar a [Windows Runtime WRL (biblioteca de modelos C++)](../windows/windows-runtime-cpp-template-library-wrl.md).
+O c++/CX é um conjunto de extensões para a linguagem C++ que permite a criação de aplicativos do Windows e Windows Runtime componentes em um idioma o mais próximo possível do C++ moderno. Use C++/CX para escrever aplicativos e componentes do Windows em código nativo que interaja facilmente com o Visual C#, Visual Basic e JavaScript e outras linguagens que dão suporte ao Windows Runtime. Nesses casos raros que exigem acesso direto às interfaces COM brutos ou ao código não-excepcional, você pode usar a [Windows Runtime WRL (biblioteca de modelos C++)](./wrl/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
 > **/WinRT é a alternativa recomendada para C++o/CX. [ C++](/windows/uwp/cpp-and-winrt-apis/index)** É uma nova projeção de linguagem C++ 17 padrão para APIs Windows Runtime, disponível no SDK do Windows 10 mais recente da versão 1803 em diante. O C++/WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer a você acesso de primeira classe à API moderna do Windows.

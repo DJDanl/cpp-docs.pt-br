@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3717282d284990b1b8038f6954ee971938cf7921
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212950"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509485"
 ---
 # <a name="setting-properties-in-your-provider"></a>Definindo propriedades no provedor
 
@@ -18,7 +18,7 @@ Localize o grupo de propriedades e a ID da propriedade que você deseja. Para ob
 
 No código do provedor gerado pelo assistente, localize o mapa de propriedade correspondente ao grupo de propriedades. O nome do grupo de propriedades geralmente corresponde ao nome do objeto. As propriedades Command e Rowset podem ser encontradas no comando ou conjunto de linhas; as propriedades de fonte de dados e inicialização podem ser encontradas no objeto de fonte de dados.
 
-No mapa de propriedades, adicione uma macro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX usa quatro parâmetros:
+No mapa de propriedades, adicione uma macro [PROPERTY_INFO_ENTRY_EX](./macros-for-ole-db-provider-templates.md#property_info_entry_ex) . PROPERTY_INFO_ENTRY_EX usa quatro parâmetros:
 
 - A ID de propriedade correspondente à sua propriedade. Remova os primeiros sete caracteres ("DBPROP_") da parte frontal do nome da propriedade. Por exemplo, se você quiser adicionar `DBPROP_MAXROWS` , passe `MAXROWS` como o primeiro elemento. Se esta for uma propriedade personalizada, passe o nome completo do GUID (por exemplo, `DBMYPROP_MYPROPERTY` ).
 
@@ -33,20 +33,20 @@ No mapa de propriedades, adicione uma macro [PROPERTY_INFO_ENTRY_EX](../../data/
 - O valor base da propriedade. Isso pode ser `VARIANT_FALSE` para um tipo booliano ou zero para um tipo inteiro, por exemplo. A propriedade tem esse valor, a menos que seja alterada.
 
     > [!NOTE]
-    > Algumas propriedades são conectadas ou encadeadas a outras propriedades, como indicadores ou atualizações. Quando um consumidor define uma propriedade como true, outra propriedade também pode ser definida. Os modelos de provedor de OLE DB dão suporte a isso por meio do método [CUtlProps:: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
+    > Algumas propriedades são conectadas ou encadeadas a outras propriedades, como indicadores ou atualizações. Quando um consumidor define uma propriedade como true, outra propriedade também pode ser definida. Os modelos de provedor de OLE DB dão suporte a isso por meio do método [CUtlProps:: OnPropertyChanged](./cutlprops-class.md#onpropertychanged).
 
 ## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>Propriedades ignoradas pelos provedores de OLE DB da Microsoft
 
 Os provedores do Microsoft OLE DB ignoram as seguintes propriedades de OLE DB:
 
-- `DBPROP_MAXROWS`funciona somente para provedores somente leitura (ou seja, onde `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` são **`false`** ); caso contrário, essa propriedade não terá suporte.
+- `DBPROP_MAXROWS` funciona somente para provedores somente leitura (ou seja, onde `DBPROP_IRowsetChange` e `DBPROP_IRowsetUpdate` são **`false`** ); caso contrário, essa propriedade não terá suporte.
 
-- `DBPROP_MAXPENDINGROWS`é ignorado; o provedor especifica seu próprio limite.
+- `DBPROP_MAXPENDINGROWS` é ignorado; o provedor especifica seu próprio limite.
 
-- `DBPROP_MAXOPENROWS`é ignorado; o provedor especifica seu próprio limite.
+- `DBPROP_MAXOPENROWS` é ignorado; o provedor especifica seu próprio limite.
 
-- `DBPROP_CANHOLDROWS`é ignorado; o provedor especifica seu próprio limite.
+- `DBPROP_CANHOLDROWS` é ignorado; o provedor especifica seu próprio limite.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Trabalhando com modelos de provedor de OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

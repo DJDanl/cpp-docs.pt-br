@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 2adbadecacb41a8e92cd36f55da9b376b4e1b006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1c9fa5a6df4cbb1c18e5d5406bdde0197d155b2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227511"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498826"
 ---
 # <a name="__event"></a>__event
 
@@ -77,7 +77,7 @@ Consulte [manipulação de eventos em com](../cpp/event-handling-in-com.md) para
 
 Para obter informações sobre eventos de codificação na nova sintaxe, consulte [evento](../extensions/event-cpp-component-extensions.md).
 
-Os eventos gerenciados são membros de dados ou métodos. Quando usado com um evento, o tipo de retorno de um delegado deve ser compatível com o [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). O tipo de retorno do manipulador de eventos deve corresponder ao tipo de retorno do delegado. Para obter mais informações sobre delegados, consulte [delegados e eventos](../dotnet/delegates-and-events.md). Se um evento gerenciado for um membro de dados, seu tipo deve ser um ponteiro para um delegado.
+Os eventos gerenciados são membros de dados ou métodos. Quando usado com um evento, o tipo de retorno de um delegado deve ser compatível com o [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). O tipo de retorno do manipulador de eventos deve corresponder ao tipo de retorno do delegado. Para obter mais informações sobre delegados, consulte [delegados e eventos](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md). Se um evento gerenciado for um membro de dados, seu tipo deve ser um ponteiro para um delegado.
 
 No .NET Framework, você pode tratar um membro de dados como um método (ou seja, o método `Invoke` do delegado correspondente). Você deve predefinir o tipo de delegado para declarar um membro de dados do evento gerenciado. Por outro lado, um método de evento gerenciado define implicitamente o delegado gerenciado correspondente, se ele ainda não tiver sido definido. Por exemplo, você pode declarar um valor do evento como `OnClick` como um evento a seguir:
 
@@ -127,7 +127,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>
 [Manipulação de eventos](../cpp/event-handling.md)<br/>

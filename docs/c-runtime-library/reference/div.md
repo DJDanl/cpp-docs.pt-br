@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234218"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509895"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -67,7 +67,7 @@ lldiv_t div(
 ); /* C++ only */
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *número*<br/>
 O numerador.
@@ -75,7 +75,7 @@ O numerador.
 *denom*<br/>
 O denominador.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 a **div** chamada usando argumentos do tipo **`int`** retorna uma estrutura do tipo **div_t**, que compreende o quociente e o resto. O valor de retorno com argumentos do tipo **`long`** é **ldiv_t**e o valor de retorno com argumentos do tipo **`long long`** é **lldiv_t**. **div_t**, **ldiv_t**e **lldiv_t** são definidos em \<stdlib.h> .
 
@@ -134,5 +134,5 @@ The quotient is 67, and the remainder is 5
 ## <a name="see-also"></a>Confira também
 
 [Suporte de ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv]()<br/>
 [imaxdiv](imaxdiv.md)<br/>

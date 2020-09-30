@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 461850b2c1686343f23c77274b8fb2ca6fd9071e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757976"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508004"
 ---
 # <a name="compiler-error-c3706"></a>Erro do compilador C3706
 
@@ -19,7 +19,7 @@ ms.locfileid: "74757976"
 
 A interface de evento que você usa para disparar eventos COM deve ser uma interface COM. Nessa situação, a interface deve ser definida usando um atributo Visual C++ ou importada usando [#import](../../preprocessor/hash-import-directive-cpp.md) de uma biblioteca de tipos com o atributo embedded_idl do #import.
 
-Observe que as linhas de `#include` dos arquivos de cabeçalho ATL mostrados no exemplo abaixo são necessárias para o uso de eventos COM. Para corrigir esse erro, torne `IEvents` (a interface de eventos) uma interface COM aplicando um dos seguintes atributos à definição de interface: [Object](../../windows/object-cpp.md), [Dual](../../windows/dual.md)ou [dispinterface](../../windows/dispinterface.md).
+Observe que as `#include` linhas dos arquivos de cabeçalho do ATL mostrados no exemplo abaixo são necessárias para usar eventos com. Para corrigir esse erro, faça `IEvents` (a interface de eventos) uma interface com aplicando um dos seguintes atributos à definição de interface: [Object](../../windows/attributes/object-cpp.md), [Dual](../../windows/attributes/dual.md)ou [dispinterface](../../windows/attributes/dispinterface.md).
 
 Se uma interface for de um arquivo de cabeçalho gerado pelo MIDL, o compilador não o reconhecerá como uma interface COM.
 

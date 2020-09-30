@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845582"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501821"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
 
@@ -69,7 +69,7 @@ template <class T, class CommandBase = ICommand>
 class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Sua classe, derivada de `ICommandImpl` .
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: CreateRowset
 
-Chamado por [Execute](../../data/oledb/icommandimpl-execute.md) para criar um único conjunto de linhas.
+Chamado por [Execute](#execute) para criar um único conjunto de linhas.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -146,7 +146,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
    RowsetClass*& pRowsetObj);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *RowsetClass*<br/>
 Um membro de classe de modelo que representa a classe do conjunto de linhas do usuário. Geralmente gerado pelo assistente.
@@ -193,7 +193,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
    IUnknown** ppRowset);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -201,7 +201,7 @@ Consulte [ICommand:: execute](/previous-versions/windows/desktop/ms718095(v=vs.8
 
 A interface de saída solicitada será uma interface adquirida do objeto de conjunto de linhas que essa função cria.
 
-`Execute` chama [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Substitua a implementação padrão para criar mais de um conjunto de linhas ou para fornecer suas próprias condições para a criação de diferentes conjuntos de linhas.
+`Execute` chama [CreateRowset](#createrowset). Substitua a implementação padrão para criar mais de um conjunto de linhas ou para fornecer suas próprias condições para a criação de diferentes conjuntos de linhas.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl::GetDBSession
 
@@ -214,7 +214,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
    IUnknown** ppSession);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [ICommand:: GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -274,7 +274,7 @@ unsigned m_bIsExecuting:1;
 
 O `Execute` método da sua classe de comando pode definir essa variável como **`true`** .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

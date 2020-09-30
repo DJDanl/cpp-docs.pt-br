@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d9ab62d82c231a36a866597c1fad000eb616d835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990118"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510010"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Aviso do compilador (nível 4) C4682
 
 ' Parameter ': nenhum atributo de parâmetro direcional especificado, padronizando para [in]
 
-Um método em um parâmetro em uma interface atribuída não tem um dos atributos direcionais: [in](../../windows/in-cpp.md) ou [out](../../windows/out-cpp.md). O parâmetro usa como padrão.
+Um método em um parâmetro em uma interface atribuída não tem um dos atributos direcionais: [in](../../windows/attributes/in-cpp.md) ou [out](../../windows/attributes/out-cpp.md). O parâmetro usa como padrão.
 
 Esse aviso está desativado por padrão. Consulte [os avisos do compilador que estão desativados por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
 

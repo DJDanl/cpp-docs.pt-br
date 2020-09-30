@@ -43,12 +43,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 8c41a09ce35819403b2361dcf5ad53eb93b7a615
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945285"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502786"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -112,13 +112,13 @@ int _vsnwprintf_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento de saída.
 
 *sizeOfBuffer*<br/>
 O tamanho do *buffer* para saída, como a contagem de caracteres.
 
-*count*<br/>
+*contagem*<br/>
 Número máximo de caracteres a gravar (não incluindo o nulo de terminação) ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *format*<br/>
@@ -132,30 +132,40 @@ A localidade a ser usada.
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
-**vsnprintf_s**, **_vsnprintf_s** e **_vsnwprintf_s** retornam o número de caracteres gravados, sem incluir o nulo de terminação ou um valor negativo se ocorrer um erro de saída. **vsnprintf_s** é idêntico a **_vsnprintf_s**. o **vsnprintf_s** é incluído para conformidade com o padrão ANSI. **_vnsprintf** é retido para compatibilidade com versões anteriores.
+**vsnprintf_s**, **_vsnprintf_s** e **_vsnwprintf_s** retornam o número de caracteres gravados, sem incluir o nulo de terminação ou um valor negativo se ocorrer um truncamento dos dados ou um erro de saída.
 
-Se o armazenamento necessário para armazenar os dados e um nulo de terminação exceder *sizeOfBuffer*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), a menos que *Count* seja [_TRUNCATE](../../c-runtime-library/truncate.md), caso em que grande parte do a cadeia de caracteres como se ajustará ao *buffer* é gravada e-1 retornado. Se a execução continuar após o manipulador de parâmetros inválido, essas funções definirão o *buffer* como uma cadeia de caracteres vazia, definirá **errno** como **ERANGE**e retornará-1.
+* Se *Count* for menor que *sizeOfBuffer* e o número de caracteres de dados for menor ou igual a *count*, ou *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md) e o número de caracteres de dados for menor que *sizeOfBuffer*, todos os dados serão gravados e o número de caracteres será retornado.
 
-Se o *buffer* ou o *formato* for um ponteiro **nulo** , ou se *Count* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado. Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1.
+* Se *Count* for menor que *sizeOfBuffer* , mas os dados excederem os caracteres de *contagem* , os primeiros caracteres de *contagem* serão gravados. O truncamento dos dados restantes ocorre e-1 é retornado sem invocar o manipulador de parâmetro inválido.
 
-### <a name="error-conditions"></a>Condições de Erro
+* Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md) e o número de caracteres de dados for igual a ou exceder *sizeOfBuffer*, tanto a cadeia de caracteres como caberá no *buffer* (com terminação de NULL) será gravada. O truncamento dos dados restantes ocorre e-1 é retornado sem invocar o manipulador de parâmetro inválido.
 
-|**Problema**|Valor de|**errno**|
+* Se *Count* for igual a ou exceder *sizeOfBuffer* , mas o número de caracteres de dados for menor que *sizeOfBuffer*, todos os dados serão gravados (com terminação nula) e o número de caracteres será retornado.
+
+* Se *Count* e o número de caracteres de dados forem iguais ou excederem *sizeOfBuffer*, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução continuar após o manipulador de parâmetros inválido, essas funções definirão o *buffer* como uma cadeia de caracteres vazia, definirá **errno** como **ERANGE**e retornará-1.
+
+* Se o *buffer* ou o *formato* for um ponteiro **nulo** , ou se *Count* for menor ou igual a zero, o manipulador de parâmetro inválido será invocado. Se a execução tiver permissão para continuar, essas funções definem **errno** como **EINVAL** e retornam-1.
+
+### <a name="error-conditions"></a>Condições de erro
+
+|**Condição**|Retorno|**errno**|
 |-----------------|------------|-------------|
 |o *buffer* é **nulo**|-1|**EINVAL**|
 |o *formato* é **nulo**|-1|**EINVAL**|
-|*contagem* < = 0|-1|**EINVAL**|
+|*contagem* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* muito pequeno (e *contagem* ! = **_TRUNCATE**)|-1 (e *buffer* definido como uma cadeia de caracteres vazia)|**ERANGE**|
 
 ## <a name="remarks"></a>Comentários
 
+**vsnprintf_s** é idêntico a **_vsnprintf_s**. **vsnprintf_s** está incluído para conformidade com o padrão ANSI. **_vnsprintf** é retido para compatibilidade com versões anteriores.
+
 Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava até a *contagem* de caracteres dos dados especificados para a memória apontada pelo *buffer* e acrescenta um nulo de terminação.
 
-Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md), essas funções gravarão a maior parte da cadeia de caracteres que caberá no *buffer* , deixando espaço para um nulo de encerramento. Se a cadeia de caracteres inteira (com terminação de NULL) couber no *buffer*, essas funções retornarão o número de caracteres gravados (sem incluir o nulo de terminação); caso contrário, essas funções retornam-1 para indicar que o truncamento ocorreu.
+Se *Count* for [_TRUNCATE](../../c-runtime-library/truncate.md), essas funções gravarão a maior parte da cadeia de caracteres como se ajustarão ao *buffer* , deixando espaço para um nulo de terminação. Se a cadeia de caracteres inteira (com terminação de NULL) couber no *buffer*, essas funções retornarão o número de caracteres gravados (sem incluir o nulo de terminação); caso contrário, essas funções retornam-1 para indicar que o truncamento ocorreu.
 
-As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
@@ -178,11 +188,11 @@ Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as s
 |-------------|---------------------|----------------------|
 |**vsnprintf_s**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
 |**_vsnprintf_s**, **_vsnprintf_s_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h> ou \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vsnwprintf_s**, **_vsnwprintf_s_l**|\<stdio.h> ou \<wchar.h> , e \<stdarg.h>|\<varargs.h>*|
 
 \* Necessário para compatibilidade com UNIX V.
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -216,11 +226,11 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [Funções vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>

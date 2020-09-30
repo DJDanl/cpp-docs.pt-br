@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 7a63062a02ebcc6c8a89fadceb36dc81bc9af88c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844919"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509774"
 ---
 # <a name="irowsetupdateimpl-class"></a>Classe IRowsetUpdateImpl
 
@@ -79,12 +79,12 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
    MapClass>
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
 Uma classe derivada de `IRowsetUpdateImpl` .
 
-*Storage*<br/>
+*Armazenamento*<br/>
 O registro do usuário.
 
 *UpdateArray*<br/>
@@ -157,13 +157,13 @@ STDMETHOD (SetData )(HROW hRow,
    void* pSrcData);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) na *referência do programador de OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 
-Esse método substitui o método [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) , mas inclui o cache de dados originais para permitir o processamento imediato ou adiado da operação.
+Esse método substitui o método [IRowsetChangeImpl:: SetData](./irowsetchangeimpl-class.md#setdata) , mas inclui o cache de dados originais para permitir o processamento imediato ou adiado da operação.
 
 ## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a> IRowsetUpdateImpl::GetOriginalData
 
@@ -177,7 +177,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
    void* pData);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 Consulte [IRowsetUpdate:: GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) na *referência do programador de OLE DB*.
 
@@ -195,7 +195,7 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
    DBPENDINGSTATUS** prgPendingStatus);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hReserved*<br/>
 no Corresponde ao parâmetro *hChapter* em [IRowsetUpdate:: GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)).
@@ -219,7 +219,7 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
    DBPENDINGSTATUS rgPendingStatus[]);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hReserved*<br/>
 no Corresponde ao parâmetro *hChapter* em [IRowsetUpdate:: GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)).
@@ -241,7 +241,7 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
    DBROWSTATUS** prgRowStatus);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hReserved*<br/>
 no Corresponde ao parâmetro *hChapter* em [IRowsetUpdate:: Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
@@ -269,7 +269,7 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
    DBROWSTATUS** prgRowStatus);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hReserved*<br/>
 no Corresponde ao parâmetro *hChapter* em [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)).
@@ -278,7 +278,7 @@ Para outros parâmetros, consulte [IRowsetUpdate:: Update](/previous-versions/wi
 
 ### <a name="remarks"></a>Comentários
 
-As alterações são transmitidas chamando [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). O consumidor deve chamar [CRowset:: Update](../../data/oledb/crowset-update.md) para que as alterações entrem em vigor. Defina *prgRowstatus* como um valor apropriado, conforme descrito em [Estados de linha](/previous-versions/windows/desktop/ms722752(v=vs.85)) na *referência do programador de OLE DB*.
+As alterações são transmitidas chamando [IRowsetChangeImpl:: FlushData](./irowsetchangeimpl-class.md#flushdata). O consumidor deve chamar [CRowset:: Update](./crowset-class.md#update) para que as alterações entrem em vigor. Defina *prgRowstatus* como um valor apropriado, conforme descrito em [Estados de linha](/previous-versions/windows/desktop/ms722752(v=vs.85)) na *referência do programador de OLE DB*.
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -292,7 +292,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
    DBROWSTATUS* /* [out] */ /* pRowStatus */);
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *status*<br/>
 no O status das operações pendentes nas linhas.
@@ -305,7 +305,7 @@ fora O status retornado ao usuário.
 
 ### <a name="remarks"></a>Comentários
 
-Se você determinar que uma atualização deve ser permitida, o retornará S_OK; caso contrário, retorna E_FAIL. Se você permitir uma atualização, também precisará definir o `DBROWSTATUS` em [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) para um estado de [linha](/previous-versions/windows/desktop/ms722752(v=vs.85))apropriado.
+Se você determinar que uma atualização deve ser permitida, o retornará S_OK; caso contrário, retorna E_FAIL. Se você permitir uma atualização, também precisará definir o `DBROWSTATUS` em [IRowsetUpdateImpl:: Update](#update) para um estado de [linha](/previous-versions/windows/desktop/ms722752(v=vs.85))apropriado.
 
 ## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a> IRowsetUpdateImpl:: m_mapCachedData
 
@@ -321,7 +321,7 @@ CAtlMap<
 m_mapCachedData;
 ```
 
-#### <a name="parameters"></a>parâmetros
+#### <a name="parameters"></a>Parâmetros
 
 *hRow*<br/>
 Identificador para as linhas dos dados.
@@ -329,7 +329,7 @@ Identificador para as linhas dos dados.
 *pData*<br/>
 Um ponteiro para os dados a serem armazenados em cache. Os dados são do tipo *armazenamento* (a classe de registro de usuário). Consulte o argumento de modelo de *armazenamento* na [classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Modelos de Provedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo de provedor de OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

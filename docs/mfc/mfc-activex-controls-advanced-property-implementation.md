@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: f5abef4db2f9c6d375428c0b0fd313198ce6283f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621224"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502198"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: implementação da propriedade avançada
 
@@ -24,7 +24,7 @@ Este artigo descreve os tópicos relacionados à implementação de propriedades
 
 - [Retornando códigos de erro de uma propriedade](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>Propriedades somente leitura e somente gravação
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Propriedades somente leitura e somente gravação
 
 O assistente para adicionar propriedade fornece um método rápido e fácil para implementar propriedades somente leitura ou somente gravação para o controle.
 
@@ -38,7 +38,7 @@ O assistente para adicionar propriedade fornece um método rápido e fácil para
 
 1. No menu de atalho, clique em **Adicionar** e, em seguida, clique em **Adicionar Propriedade**.
 
-   Isso abre o [Assistente para adicionar Propriedade](../ide/names-add-property-wizard.md).
+   Isso abre o [Assistente para adicionar Propriedade](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard).
 
 1. Na caixa **nome da propriedade** , digite o nome da propriedade.
 
@@ -60,20 +60,20 @@ Se você quiser que uma propriedade seja condicionalmente somente leitura ou som
 
 Este exemplo de código chama `SetNotSupported` se o `m_bReadOnlyMode` membro de dados é **verdadeiro**. Se for **false**, a propriedade será definida como o novo valor.
 
-## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>Retornando códigos de erro de uma propriedade
+## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a> Retornando códigos de erro de uma propriedade
 
 Para indicar que ocorreu um erro ao tentar obter ou definir uma propriedade, use a `COleControl::ThrowError` função, que usa um SCODE (código de status) como um parâmetro. Você pode usar um SCODE predefinido ou definir um de seus próprios. Para obter uma lista de SCODEs predefinidas e instruções para definir SCODEs personalizados, consulte [tratamento de erros em seu controle ActiveX](mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: Tópicos avançados.
 
 Existem funções auxiliares para os SCODEs predefinidos mais comuns, como [COleControl:: SetNotSupported](reference/colecontrol-class.md#setnotsupported), [COleControl:: GetNotSupported](reference/colecontrol-class.md#getnotsupported)e [COleControl:: SetNotPermitted](reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
-> `ThrowError`destina-se a ser usado apenas como um meio de retornar um erro de dentro de uma função Get ou set de uma propriedade ou um método de automação. Essas são as únicas vezes que o manipulador de exceção apropriado estará presente na pilha.
+> `ThrowError` destina-se a ser usado apenas como um meio de retornar um erro de dentro de uma função Get ou set de uma propriedade ou um método de automação. Essas são as únicas vezes que o manipulador de exceção apropriado estará presente na pilha.
 
 Para obter mais informações sobre como relatar exceções em outras áreas do código, consulte [COleControl:: FireError](reference/colecontrol-class.md#fireerror) e a seção [Manipulando erros em seu controle ActiveX](mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: Tópicos avançados.
 
 ## <a name="see-also"></a>Consulte também
 
 [Controles ActiveX do MFC](mfc-activex-controls.md)<br/>
-[Controles ActiveX do MFC: propriedades](mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX do MFC: Propriedades](mfc-activex-controls-properties.md)<br/>
 [Controles ActiveX do MFC: métodos](mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](reference/colecontrol-class.md)

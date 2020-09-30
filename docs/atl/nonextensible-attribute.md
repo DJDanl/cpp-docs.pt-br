@@ -1,23 +1,23 @@
 ---
-title: Atributo nonextensible
+title: Atributo não extensível
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonextensible attribute
 - dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-ms.openlocfilehash: cc57acb8bd7bc3e32c764606da651f57316ceabf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda2a0d43144b6e9832e061e7198b3f3e65f8b86
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250096"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500112"
 ---
-# <a name="nonextensible-attribute"></a>Atributo nonextensible
+# <a name="nonextensible-attribute"></a>Atributo não extensível
 
-Se uma interface dupla não será estendida em tempo de execução (ou seja, você não fornecer métodos ou propriedades por meio `IDispatch::Invoke` que não estão disponíveis por meio de vtable), você deve aplicar a **nonextensible** à sua interface de atributo definição. Esse atributo fornece informações para idiomas do cliente (por exemplo, o Visual Basic) que pode ser usado para habilitar a verificação de código completo no tempo de compilação. Se esse atributo não for fornecido, bugs permanecerão ocultos no código do cliente até o tempo de execução.
+Se uma interface dupla não for estendida em tempo de execução (ou seja, você não fornecerá métodos ou propriedades por meio `IDispatch::Invoke` do que não estão disponíveis por meio de vtable), deverá aplicar o atributo **extensível** à sua definição de interface. Esse atributo fornece informações para os idiomas do cliente (como Visual Basic) que podem ser usados para habilitar a verificação completa de código no momento da compilação. Se esse atributo não for fornecido, os bugs poderão permanecer ocultos no código do cliente até o tempo de execução.
 
-Para obter mais informações sobre o **nonextensible** atributo e um exemplo, consulte [nonextensible](../windows/nonextensible.md).
+Para obter mais informações sobre o atributo não **extensível** e um exemplo, consulte [extensível](../windows/attributes/nonextensible.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)
+[Interfaces duplas e ATL](../atl/dual-interfaces-and-atl.md)
