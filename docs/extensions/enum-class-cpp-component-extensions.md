@@ -3,12 +3,12 @@ title: enum class  (C++/CLI e C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219710"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590310"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class  (C++/CLI e C++/CX)
 
@@ -32,7 +32,7 @@ C++/CX e C++/CLI são compatíveis com a **public enum class** e à **private en
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *às*<br/>
 A acessibilidade da enumeração, que pode ser **`public`** ou **`private`** .
@@ -59,7 +59,7 @@ Saiba mais e obtenha exemplos em [Enumerações](../cppcx/enums-c-cx.md).
 
 Observe que o compilador emite mensagens de erro se a expressão constante que define o valor de um enumerador não puder ser representada por *underlying-type*.  No entanto, o compilador não relata um erro para um valor que é inadequado para o tipo subjacente. Por exemplo:
 
-- Se *underlying-type* for numérico e um enumerador especificar o valor máximo para esse tipo, o valor da próxima enumeração implicitamente definida não poderá ser representado.
+- Se o *tipo subjacente* for numérico e um enumerador especificar o valor máximo para esse tipo, o valor da próxima Enumeração definida implicitamente não poderá ser representado.
 
 - Se o *tipo subjacente* for **`bool`** e mais de dois enumeradores forem definidos implicitamente, os enumeradores após os dois primeiros não poderão ser representados.
 
@@ -80,7 +80,7 @@ Opção do compilador: `/ZW`
 accessenum structname [:type] { enumerator-list } var;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *às*<br/>
 A acessibilidade do enum. Pode ser **`public`** ou **`private`** .

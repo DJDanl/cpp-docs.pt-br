@@ -1,17 +1,19 @@
 ---
 title: Usando tipos de dados TCHAR.H com _MBCS
+description: Uma visão geral de como as rotinas de texto do Microsoft C Runtime são mapeadas quando você usa o TCHAR. Tipos de dados H com a constante de vários bytes _MBCS.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - TCHAR.H data types
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 001f745c03e4e0c0090e40c00c5394397028659f
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188629"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589946"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs"></a>Usando tipos de dados TCHAR.H com _MBCS
 
@@ -31,7 +33,7 @@ A seguir estão três soluções para evitar esse conflito de tipo (e os avisos 
    char *_tcsrev(char *);
    ```
 
-   No caso padrão, o protótipo para **_tcsrev** mapeia para **_mbsrev** por meio de uma conversão em LIBC.LIB. Isso altera os tipos dos parâmetros de entrada **_mbsrev** e valor retornado de saída de **_TCHAR &#42;** (como **char &#42;**) para **unsigned char &#42;**. Esse método garante o tipo correspondente ao usar **_TCHAR**, mas é relativamente lento devido à sobrecarga de chamada de função.
+   No caso padrão, o protótipo para **_tcsrev** mapeia para **_mbsrev** por meio de uma conversão em LIBC.LIB. Isso altera os tipos dos parâmetros de entrada **_mbsrev** e valor retornado de saída de **_TCHAR &#42;** (como **char &#42;**) para **unsigned char &#42;**. Esse método garante a correspondência de tipos quando você estiver usando **_TCHAR**, mas é relativamente lento devido à sobrecarga de chamada de função.
 
 - Use inlining de função incorporando a seguinte instrução de pré-processador em seu código.
 
@@ -54,17 +56,17 @@ A seguir estão três soluções para evitar esse conflito de tipo (e os avisos 
    #define _MB_MAP_DIRECT
    ```
 
-   Essa abordagem fornece uma alternativa rápida se você não quiser usar o comportamento padrão ou não é possível usar inlining. Faz com que a rotina de texto genérico para ser mapeadas por uma macro diretamente para a versão MBCS de rotina, como no exemplo a seguir do TCHAR. H.
+   Essa abordagem fornece uma alternativa rápida se você não quiser usar o comportamento padrão ou não puder usar o inlining. Uma macro mapeia a rotina de texto genérico para a versão MBCS da rotina, como no exemplo a seguir de TCHAR. H.
 
    ```C
    #define _tcschr _mbschr
    ```
 
-Quando você usar essa abordagem, você deve ter cuidado para garantir que os tipos de dados apropriados são usados para argumentos de cadeia de caracteres e valores de retorno de cadeia de caracteres. Você pode usar a conversão de tipo para garantir a correspondência do tipo correto ou pode usar o tipo de dados de texto genérico **_TXCHAR**. **_TXCHAR** mapeia para tipo **`char`** no código SBCS, mas mapeia para tipo **`unsigned char`** no código MBCS. Para saber mais sobre as macros de texto genéricas, veja [Mapeamentos de texto genéricos](../c-runtime-library/generic-text-mappings.md).
+Ao tomar essa abordagem, tenha cuidado para garantir que os tipos de dados apropriados sejam usados para argumentos de cadeia de caracteres e valores de retorno de cadeia de caracteres. Você pode usar a conversão de tipo para garantir a correspondência do tipo correto ou pode usar o tipo de dados de texto genérico **_TXCHAR**. **_TXCHAR** mapeia para tipo **`char`** no código SBCS, mas mapeia para tipo **`unsigned char`** no código MBCS. Para saber mais sobre as macros de texto genéricas, veja [Mapeamentos de texto genéricos](../c-runtime-library/generic-text-mappings.md).
 
 **FINAL específico da Microsoft**
 
 ## <a name="see-also"></a>Confira também
 
-[Internacionalização](../c-runtime-library/internationalization.md)<br/>
-[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Internacionalização](../c-runtime-library/internationalization.md)\
+[Rotinas de runtime C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)

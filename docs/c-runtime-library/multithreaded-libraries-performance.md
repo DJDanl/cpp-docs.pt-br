@@ -1,18 +1,20 @@
 ---
 title: Desempenho de bibliotecas multithread
+description: Uma visão geral de como obter o máximo de desempenho das bibliotecas multi-threaded do Microsoft C Runtime.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748353"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590193"
 ---
 # <a name="multithreaded-libraries-performance"></a>Desempenho de bibliotecas multithread
 
@@ -34,6 +36,6 @@ O desempenho das bibliotecas multithread foi aprimorado e está próximo do dese
 
 - Com a exposição do identificador de heap CRT, é possível habilitar o Heap de Baixa Fragmentação do (LFH) do Windows para o heap de CRT, o que pode melhorar substancialmente o desempenho em cenários altamente dimensionados.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

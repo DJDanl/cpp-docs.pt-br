@@ -1,25 +1,27 @@
 ---
 title: Inicialização CRT
+description: Descreve como o CRT Inicializa o estado global no código nativo.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 25f1e2a7e5b7d91c729bb45bd79ba9a8720cead1
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446676"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589764"
 ---
 # <a name="crt-initialization"></a>Inicialização CRT
 
-Este tópico descreve como o CRT inicializa estados globais em código nativo.
+Este tópico descreve como o CRT Inicializa o estado global no código nativo.
 
 Por padrão, o vinculador inclui a biblioteca CRT, que fornece seu próprio código de inicialização. Esse código de inicialização inicializa a biblioteca CRT, chama inicializadores globais e, em seguida, chama a função `main` fornecida pelo usuário para aplicativos de console.
 
 ## <a name="initializing-a-global-object"></a>Inicializando um objeto global
 
-Considere o código a seguir:
+Considere o seguinte código:
 
 ```
 int func(void)
@@ -37,11 +39,11 @@ int main()
 
 Segundo o padrão C/C++, `func()` deve ser chamado antes que `main()` seja executado. Mas, quem chama?
 
-Uma maneira de determinar isso é definir um ponto de interrupção em `func()`, depurar o aplicativo e examinar a pilha. Isso é possível porque o código-fonte CRT está incluído no Visual Studio.
+Uma maneira de determinar o chamador é definir um ponto de interrupção no `func()` , depurar o aplicativo e examinar a pilha. Isso é possível porque o código-fonte CRT está incluído no Visual Studio.
 
-Quando procura as funções na pilha, você encontra o que o CRT está em loop através de uma lista de ponteiros de função e chamar cada um ao encontrá-los. Essas funções são semelhantes a `func()` ou construtores de instâncias de classe.
+Ao procurar as funções na pilha, você verá que o CRT está chamando uma lista de ponteiros de função. Essas funções são semelhantes a `func()` , ou construtores para instâncias de classe.
 
-A CRT obtém a lista de ponteiros de função do compilador do Microsoft C++. Quando o compilador vê um inicializador global, ele gera um inicializador dinâmico na seção `.CRT$XCU` (em que `CRT` é o nome da seção e `XCU` é o nome do grupo). Para obter uma lista dos inicializadores dinâmicos, execute o comando **dumpbin/all main.obj** e, em seguida, procure a seção `.CRT$XCU` (quando main.cpp é compilado como arquivo C++, e não como arquivo C). Ele será semelhante ao seguinte:
+O CRT Obtém a lista de ponteiros de função do compilador do Microsoft C++. Quando o compilador vê um inicializador global, ele gera um inicializador dinâmico na `.CRT$XCU` seção, em que `CRT` é o nome da seção e `XCU` é o nome do grupo. Para obter uma lista de inicializadores dinâmicos, execute o comando **DUMPBIN/ALL Main. obj**e, em seguida, pesquise a `.CRT$XCU` seção. Isso se aplica quando Main. cpp é compilado como um arquivo C++, não um arquivo C. Ele será semelhante ao exemplo a seguir:
 
 ```
 SECTION HEADER #6
@@ -63,23 +65,23 @@ RAW DATA #6
   00000000: 00 00 00 00                                      ....
 
 RELOCATIONS #6
-                                                Symbol    Symbol
+                                               Symbol    Symbol
 Offset    Type              Applied To         Index     Name
---------  ----------------  -----------------  --------  ------
-00000000  DIR32                      00000000         C  ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
+--------  ----------------  -----------------  --------  -------
+00000000  DIR32             00000000           C         ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
 ```
 
 A CRT define dois ponteiros:
 
-- `__xc_a` in `.CRT$XCA`
+- `__xc_a` em `.CRT$XCA`
 
 - `__xc_z` em `.CRT$XCZ`
 
-Ambos os grupos não têm outros símbolos definidos, apenas `__xc_a` e `__xc_z`.
+Nenhum outro grupo tem outros símbolos definidos, exceto `__xc_a` e `__xc_z` .
 
 Agora, quando lê vários grupos `.CRT`, o vinculador os combina em uma seção e os classifica em ordem alfabética. Isso significa que os inicializadores globais definidos pelo usuário (que o compilador Microsoft C++ coloca em `.CRT$XCU`) sempre virão depois de `.CRT$XCA` e antes de `.CRT$XCZ`.
 
-A seção será semelhante ao que segue:
+A seção será semelhante ao exemplo a seguir:
 
 ```
 .CRT$XCA
@@ -91,8 +93,8 @@ A seção será semelhante ao que segue:
             __xc_z
 ```
 
-Portanto, a biblioteca CRT usa `__xc_a` e `__xc_z` para determinar o início e fim da lista de inicializadores global devido à forma como são dispostos na memória depois que a imagem é carregada.
+Portanto, a biblioteca CRT usa `__xc_a` e `__xc_z` para determinar o início e o término da lista de inicializadores globais devido à forma como eles são dispostos na memória depois que a imagem é carregada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

@@ -1,17 +1,18 @@
 ---
-title: Tipo-matemática genérica
+title: Matemática do tipo genérico
 description: Descreve as macros no <tgmath. h> que facilitam a gravação de código C que chama a função matemática correta, com base no tipo de argumento.
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557595"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590219"
 ---
-# <a name="type-generic-math"></a>Tipo-matemática genérica
+# <a name="type-generic-math"></a>Matemática do tipo genérico
 
 Para ISO C Standard 11 (C11) e posterior, o \<tgmath.h> cabeçalho, além de incluir \<math.h> e \<complex.h> , fornece macros que invocam uma função matemática correspondente com base nos tipos dos parâmetros.
 
