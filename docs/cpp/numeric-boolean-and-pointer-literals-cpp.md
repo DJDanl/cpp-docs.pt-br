@@ -7,12 +7,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: def223682b58f3d0c8bd3dd88f6d54fc5aa8b8a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84fdac7010805fc4d0a429231a080ab11d5c595a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186445"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662250"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Literais de ponteiro, numéricos e boolianos
 
@@ -31,7 +31,7 @@ MyClass* mc = nullptr;      // pointer literal
 
 ## <a name="integer-literals"></a>Literais inteiros
 
-Os literais inteiros começam com um dígito e não têm partes fracionais ou expoentes. Você pode especificar literais inteiros em formato decimal, octal ou hexadecimal. Você pode especificar tipos assinados ou sem sinal e tipos longos ou curtos.
+Os literais inteiros começam com um dígito e não têm partes fracionais ou expoentes. Você pode especificar literais inteiros em formato decimal, binário, octal ou hexadecimal. Opcionalmente, você pode especificar um literal inteiro como não assinado e como um tipo longo ou longo, usando um sufixo.
 
 Quando nenhum prefixo ou sufixo estiver presente, o compilador fornecerá um tipo de valor literal inteiro **`int`** (32 bits), se o valor couber, caso contrário ele fornecerá o tipo **`long long`** (64 bits).
 
@@ -137,7 +137,7 @@ if (num < 100)
 
 No exemplo anterior, uma prática melhor é usar uma constante nomeada que transmita um significado claro, por exemplo "MAXIMUM_ERROR_THRESHOLD". E se o valor de retorno "success" for visto pelos usuários finais, poderá ser melhor usar uma constante de cadeia de caracteres nomeada. Você pode manter constantes de cadeia de caracteres em um único local em um arquivo que pode ser localizado em outros idiomas. O uso de constantes nomeadas ajuda você mesmo e outras pessoas a entender a intenção do código.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Convenções lexicais](../cpp/lexical-conventions.md)<br/>
 [Literais de cadeia de caracteres C++](../cpp/string-and-character-literals-cpp.md)<br/>
