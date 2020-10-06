@@ -2,21 +2,21 @@
 title: Estado global no CRT
 description: Descreve como o estado global compartilhado é tratado no tempo de execução do Microsoft Universal C.
 ms.topic: conceptual
-ms.date: 04/02/2020
+ms.date: 10/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 6c8b97e2bd6fa71891aedacb1fbfec2bbe382d84
+ms.sourcegitcommit: faedcc3be78b29c78e5d51e3c7c7c2f448c745bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589725"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91717509"
 ---
 # <a name="global-state-in-the-crt"></a>Estado global no CRT
 
 Algumas funções no tempo de execução universal C (UCRT) usam o estado global. Por exemplo, `setlocale()` define a localidade para todo o programa, que afeta os separadores de dígitos, a página de código de texto e assim por diante.
 
-O estado global do UCRT não é compartilhado entre aplicativos e o sistema operacional. Por exemplo, se seu aplicativo chamar `setlocale()` , ele não afetará a localidade de qualquer componente do sistema operacional que use o tempo de execução C ou vice-versa.
+O estado global do UCRT não é compartilhado entre aplicativos e o sistema operacional. Por exemplo, se seu aplicativo chama `setlocale()` , ele não afetará a localidade de qualquer componente do sistema operacional que usa o tempo de execução C ou o contrário.
 
 ## <a name="os-specific-versions-of-crt-functions"></a>Versões específicas do sistema operacional das funções do CRT
 
@@ -31,8 +31,8 @@ As versões específicas do sistema operacional dessas funções estão no `ucrt
 
 Há duas maneiras de isolar o estado CRT do componente do estado CRT de um aplicativo:
 
-- Vincule estaticamente seu componente usando as opções de compilador/MT (versão) ou MTd (depuração). Para obter detalhes, consulte [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). Observe que a vinculação estática pode aumentar significativamente o tamanho binário.
-- Começando com o Windows 10 20H2, obtenha o isolamento do estado do CRT vinculando dinamicamente ao CRT, mas chame as exportações do modo do sistema operacional (as funções que começam com _o_). Para chamar as exportações do modo de sistema operacional, vincule estaticamente como antes, mas ignore o UCRT estático usando a opção de vinculador `/NODEFAULTLIB:libucrt.lib` (versão) ou `/NODEFAULTLIB:libucrtd.lib` (depuração) consulte [/NODEFAULTLIB (ignorar bibliotecas)](../build/reference/nodefaultlib-ignore-libraries.md) para obter detalhes. E adicione `ucrt.osmode.lib` à entrada do vinculador.
+- Vincule estaticamente seu componente usando as opções do compilador `/MT` (versão) ou `/MTd` (depuração). Para obter detalhes, consulte [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). A vinculação estática pode aumentar significativamente o tamanho binário.
+- A partir do Windows 10 versão 2004, vincule dinamicamente ao CRT, mas chame as exportações do modo de sistema operacional (as funções que começam com _o_). Para chamar as exportações do modo de sistema operacional, vincule estaticamente como antes, mas ignore o UCRT estático usando a opção de vinculador `/NODEFAULTLIB:libucrt.lib` (versão) ou `/NODEFAULTLIB:libucrtd.lib` (depuração). E adicione `ucrt.osmode.lib` à entrada do vinculador. Consulte [/NODEFAULTLIB (ignorar bibliotecas)](../build/reference/nodefaultlib-ignore-libraries.md) para obter detalhes.
 
 > [!Note]
 > No código-fonte, escreva `setlocale()` , não `_o_setlocale()` . Ao vincular `ucrt.osmode.lib` , o vinculador substituirá automaticamente a versão específica do sistema operacional da função. Ou seja, `setlocale()` será substituído por `_o_setlocale()` .
@@ -52,7 +52,7 @@ O estado global afetado pela separação do aplicativo e do estado do sistema op
 - O buffer usado pelo [_putch, _putwch](reference/putch-putwch.md)
 - [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)
 - [_set_new_handler](reference/set-new-handler.md) e [_set_new_mode](reference/set-new-mode.md)
-- [fmode] (text-and-binary-mode-file-i-o.md)
+- [fmode](text-and-binary-mode-file-i-o.md)
 - [Informações de fuso horário](time-management.md)
 
 ## <a name="see-also"></a>Confira também
