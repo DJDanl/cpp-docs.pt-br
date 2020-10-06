@@ -1,5 +1,6 @@
 ---
 title: /RTC (verificações de erro em tempo de execução)
+description: As opções de/RTC do compilador do Microsoft C/C++ para verificações de erro em tempo de execução.
 ms.date: 07/31/2020
 f1_keywords:
 - /rtc
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: eefec0956bebe9f72324f3cbc61fccbc5e2e24d7
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 888a81d0d5c21b0b85420a43d534c5b2742aa082
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520532"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765236"
 ---
-# <a name="rtc-run-time-error-checks"></a>`/RTC`(Verificações de erro em tempo de execução)
+# <a name="rtc-run-time-error-checks"></a>`/RTC` (Verificações de erro em tempo de execução)
 
 Usado para habilitar e desabilitar o recurso de verificações de erro em tempo de execução, em conjunto com o [runtime_checks](../../preprocessor/runtime-checks.md) pragma.
 
@@ -109,7 +110,7 @@ A `__MSVC_RUNTIME_CHECKS` diretiva de pré-processador será definida quando voc
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedades **configuração**de  >  geração de**código** **C/C++**.  
+1. Selecione a página de propriedades **configuração**de  >  geração de código**C/C++**  >  **Code Generation** .
 
 1. Modifique uma ou ambas as propriedades a seguir: **verificações básicas de tempo de execução** ou **verificação de tipo menor**.
 
@@ -117,7 +118,7 @@ A `__MSVC_RUNTIME_CHECKS` diretiva de pré-processador será definida quando voc
 
 - Consulte as propriedades <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)<br/>
 [Sintaxe da linha de comando do compilador MSVC](compiler-command-line-syntax.md)<br/>
