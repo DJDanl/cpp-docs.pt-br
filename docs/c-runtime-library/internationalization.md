@@ -9,16 +9,17 @@ helpviewer_keywords:
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 61b06f3820631f0d3bcec2633d736c606daee301
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 1ee7b1b74f1a800ae53b930eb976c8c6263d4f92
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590206"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765270"
 ---
 # <a name="internationalization"></a>Internacionalização
 
 A biblioteca de tempo de execução da Microsoft fornece várias rotinas que você pode usar para personalizar seu aplicativo para mercados internacionais, como:
+
 - [rotinas relacionadas à localidade](../c-runtime-library/locale.md)
 - rotinas de caractere largo
 - rotinas de caractere de multibyte

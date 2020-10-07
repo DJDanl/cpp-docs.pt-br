@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: 60ded7fc5a4388b2c4bf87ab5a388caab5fc47c2
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 8378e4bf9bdfc950002c3ed8c3ef50c27a3c162d
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589816"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765253"
 ---
 # <a name="parameter-validation"></a>Validação de parâmetro
 
@@ -25,7 +25,7 @@ Em compilações de depuração, a macro de parâmetro inválida geralmente gera
 
 A função de expedição de manipulador de parâmetro inválida chama o manipulador de parâmetro inválido atribuído no momento. Por padrão, as chamadas de parâmetro inválidas `_invoke_watson` , que fazem com que o aplicativo feche e gere um minidespejo. Se habilitado pelo sistema operacional, uma caixa de diálogo perguntará ao usuário se deseja enviar o despejo de memória para a Microsoft para análise.
 
-Você pode alterar esse comportamento usando as funções [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) ou [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) para definir o manipulador de parâmetro inválido para sua própria função. Se a função que você especificar não terminar o aplicativo, o controle será retornado para a função que recebeu os parâmetros inválidos. No CRT, essas funções normalmente interrompem a execução da função, são definidas `errno` como um código de erro e retornam um código de erro. Em muitos casos, o `errno` valor e o valor de retorno são ambos `EINVAL` , para indicar um parâmetro inválido. Em alguns casos, um código de erro mais específico é retornado, tal como `EBADF` para um ponteiro de arquivo inválido passado como um parâmetro. 
+Você pode alterar esse comportamento usando as funções [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) ou [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) para definir o manipulador de parâmetro inválido para sua própria função. Se a função que você especificar não terminar o aplicativo, o controle será retornado para a função que recebeu os parâmetros inválidos. No CRT, essas funções normalmente interrompem a execução da função, são definidas `errno` como um código de erro e retornam um código de erro. Em muitos casos, o `errno` valor e o valor de retorno são ambos `EINVAL` , para indicar um parâmetro inválido. Em alguns casos, um código de erro mais específico é retornado, tal como `EBADF` para um ponteiro de arquivo inválido passado como um parâmetro.
 
 Para obter mais informações sobre `errno`, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 2552f9eea79aa0a3545d9746d85cacfbd9a3f25d
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353162"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765244"
 ---
 # <a name="resource-editors-c"></a>Editores de recursos (C++)
 
@@ -58,7 +58,7 @@ Cada tipo de recurso tem um editor de recursos específico para esse tipo de rec
 
 Alguns tipos de recursos são arquivos individuais que podem ser importados e usados de várias maneiras; Eles incluem bitmaps, ícones, cursores, barras de ferramentas e arquivos HTML. Esses recursos têm nomes de arquivo e [identificadores de recurso](../windows/symbols-resource-identifiers.md). Outros, como caixas de diálogo, menus e tabelas de cadeia de caracteres em projetos Win32, existem somente como parte de um arquivo de script de recurso (. rc) ou de um arquivo de modelo de recurso (. rct).
 
-Os recursos também podem ser editados fora do projeto sem que o projeto seja aberto. Para obter mais informações, consulte [como: criar recursos](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Os recursos também podem ser editados fora do projeto sem que o projeto seja aberto. Para obter mais informações, consulte [como: criar recursos](./how-to-create-a-resource-script-file.md).
 
 > [!NOTE]
 > As propriedades de um recurso podem ser modificadas usando a janela **Propriedades** .

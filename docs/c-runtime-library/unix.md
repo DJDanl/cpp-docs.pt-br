@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: 07f5ffeec8696ded5880c45ed2ea1a5107bee48c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 3975db2407943b329fa7eded0d72d63524428210
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590141"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765224"
 ---
 # <a name="unix"></a>UNIX
 
@@ -29,7 +29,7 @@ Se você planeja transferir seus programas para UNIX, siga estas diretrizes:
 - Use caminhos e nomes de dados que funcionam corretamente no UNIX, que diferencia maiúsculas de minúsculas. O sistema de arquivos FAT (tabela de alocação de arquivos) em sistemas operacionais Win32 não diferencia maiúsculas de minúsculas. O sistema de arquivos NTFS preserva o caso de listagens de diretório, mas ignora maiúsculas e minúsculas em pesquisas de arquivos e outras operações do sistema.
 
 > [!NOTE]
->  Nesta versão do Visual C++, informações de compatibilidade do UNIX foram removidas das descrições de função.
+> Nesta versão do Visual C++, informações de compatibilidade do UNIX foram removidas das descrições de função.
 
 ## <a name="see-also"></a>Confira também
 
