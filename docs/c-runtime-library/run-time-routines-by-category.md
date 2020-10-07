@@ -1,5 +1,6 @@
 ---
 title: Rotinas de runtime C universais por categoria
+description: Lista de rotinas de biblioteca do Microsoft Universal C Runtime (UCRT) por categoria.
 ms.date: 04/06/2018
 helpviewer_keywords:
 - routines, run-time
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3106c97bfcaf6ed273ba9f826edf7b268fdca782
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846336"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806533"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>Rotinas de runtime C universais por categoria
 
-Esta seção lista e descreve rotinas da biblioteca em UCRT (runtime C universal) por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. As rotinas de caracteres multibyte e as rotinas de caracteres largos são agrupadas com as contrapartes de caracteres de byte único, onde elas existem.
+Esta seção lista as rotinas de biblioteca do universal C Runtime (UCRT) por categoria. Para comodidade de referência, algumas rotinas são listadas em mais de uma categoria. As rotinas de caracteres multibyte e as rotinas de caracteres largos são agrupadas com as contrapartes de caracteres de byte único, onde elas existem.
 
 ## <a name="ucrt-library-routine-categories"></a>Categorias de rotina de biblioteca em UCRT
 
@@ -52,6 +53,6 @@ As principais categorias de rotinas de biblioteca em UCRT são:
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 [Referência da biblioteca de tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
