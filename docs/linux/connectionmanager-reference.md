@@ -1,109 +1,127 @@
 ---
 title: Referência do ConnectionManager
-ms.date: 01/17/2020
+description: Como gerenciar suas conexões SSH remotas de uma ferramenta de linha de comando.
+ms.date: 10/7/2020
 f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f38fec21e7526fa214db811b00fc545504f0610
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "77258027"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847132"
 ---
 # <a name="connectionmanager-reference"></a>Referência do ConnectionManager
 
 ::: moniker range="<=vs-2017"
 
-O ConnectionManager.exe está disponível no Visual Studio 2019 versão 16.5 e posterior.
+ConnectionManager.exe está disponível no Visual Studio 2019 versão 16,5 e posterior.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-ConnectionManager.exe é um utilitário de linha de comando para gerenciar conexões de desenvolvimento remoto fora do Visual Studio. É útil para tarefas como o provisionamento de uma nova máquina de desenvolvimento. Ou, use-o para configurar o Visual Studio para integração contínua.Você pode usá-lo em uma janela Prompt de comando do desenvolvedor. Para obter mais informações sobre o Prompt de comando do desenvolvedor, consulte [Use o conjunto de ferramentas Microsoft C++ da linha de comando](../build/building-on-the-command-line.md).
+ConnectionManager.exe é um utilitário de linha de comando para gerenciar conexões de desenvolvimento remoto fora do Visual Studio. Ele é útil para tarefas como o provisionamento de uma nova máquina de desenvolvimento. Ou use-o para configurar o Visual Studio para integração contínua.Você pode usá-lo em uma janela de Prompt de Comando do Desenvolvedor. Para obter mais informações sobre o Prompt de Comando do Desenvolvedor, consulte [usar o conjunto de ferramentas do Microsoft C++ na linha de comando](../build/building-on-the-command-line.md).
 
-O ConnectionManager.exe está disponível no Visual Studio 2019 versão 16.5 e posterior. Faz parte do desenvolvimento do Linux com carga de trabalho **C++** no Visual Studio Installer. Ele também é instalado automaticamente quando você escolhe o componente **Gerenciador de conexões** no instalador. Ele está instalado em *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe*.
+ConnectionManager.exe está disponível no Visual Studio 2019 versão 16,5 e posterior. Faz parte do desenvolvimento do **Linux com** carga de trabalho do C++ no instalador do Visual Studio. Ele também é instalado automaticamente quando você escolhe o componente do **Gerenciador de conexões** no instalador. Ele está instalado em *% VCIDEInstallDir% \\ Linux \\ bin \\ ConnectionManagerExe \\ConnectionManager.exe*.
 
-A funcionalidade do ConnectionManager.exe também está disponível no Visual Studio. Para gerenciar conexões de desenvolvimento remoto no IDE, na barra de menus, escolha **Opções de** > **ferramentas** para abrir a caixa de diálogo Opções. Na caixa de diálogo Opções, selecione **Cross Platform** > **Connection Manager**.
+A funcionalidade do ConnectionManager.exe também está disponível no Visual Studio. Para gerenciar conexões de desenvolvimento remoto no IDE, na barra de menus, escolha **ferramentas**  >  **Opções** para abrir a caixa de diálogo opções. Na caixa de diálogo opções, selecione Gerenciador de conexões **entre plataformas**  >  **Connection Manager**.
 
 ## <a name="syntax"></a>Sintaxe
 
-> Opções de *comando* \[ *arguments* **ConnectionManager.exe** ] \[ *options*]
+> **`ConnectionManager.exe`***comando* \[ *arguments*] \[ *Opções*]
 
 ### <a name="commands-and-arguments"></a>Comandos e argumentos
 
-- **adicionar** *\@host de* \[usuário \[ **--porta de porta** *port*de porta **] --senha de** *senha*] \[ **--privatekey** *privatekey_file*]
+- **`add`*** \@ host* \[ do usuário **`--port`** *porta*] \[ **`--password`** *password*senha \[ ] **`--privatekey`** *privatekey_file*]
 
-  Autentica e adiciona uma nova conexão. Por padrão, ele usa a porta 22 e autenticação de senha. (Você será solicitado a digitar uma senha.) Use a **senha** e a **chave privada para** especificar uma senha para uma chave privada.
+  Autentica e adiciona uma nova conexão. Por padrão, ele usa a porta 22 e a autenticação de senha. (Você será solicitado a inserir uma senha.) Use **-`-password`** e **`--privatekey`** para especificar uma senha para uma chave privada.
 
-- **remover** \[ *connection_id* \| host \[do *usuário\@* **--porta de porta]]** *port*
+- **`remove`**\[ *CONNECTION_ID* \| porta de * \@ host do usuário* \[ **`--port`** *port*]]
 
-  Remove uma conexão. Se nenhum argumento for especificado, você será solicitado a especificar qual conexão remover.
+  Remove uma conexão. Se nenhum argumento for especificado, você será solicitado a especificar qual conexão será removida.
+  
+- **`modify`**\[ *padrão* \| *CONNECTION_ID* \| porta do * \@ host do usuário* \[ **`--port`** *port*]] \[ **`--property`** *chave = valor*]
 
-- **remover-tudo**
+  Define ou modifica uma propriedade em uma conexão. \
+  Se o *valor* estiver vazio, a *chave* de propriedade será excluída. \
+  Se a autenticação falhar, nenhuma alteração será feita. \
+  Se nenhuma conexão for especificada (o que significa por *padrão*, acima), a conexão remota padrão do usuário será usada.
+
+- **`remove-all`**
 
   Remove todas as conexões armazenadas.
+  
+- **`clean`**
 
-- **list**
+  Exclui o cache de cabeçalho para conexões que não existem mais. 
 
-  Exibe informações e IDs de todas as conexões armazenadas.
+- **`list`** \[**`--properties`**]
 
-- **Ajuda**
+  Exibe informações, IDs e propriedades de todas as conexões armazenadas. 
+
+- **`help`**
 
   Exibe uma tela de ajuda.
 
-- **versão**
+- **`version`**
 
-  Exibe informações da versão.
+  Exibe informações de versão.
 
 ### <a name="options"></a>Opções
 
-- **-q**, **--tranquilo**
+- **`-q`**, **`--quiet`**
 
-  Impede a `stdout` saída `stderr`para ou .
+  Impede a saída para `stdout` ou `stderr` .
 
-- **--sem-prompt**
+- **`--no-prompt`**
 
-  Falhe em vez de prompt, quando apropriado.
+  Falha em vez de prompt, quando apropriado.
 
-- **--sem verificação**
+- **`--no-verify`**
 
-  Adicione ou modifique uma conexão sem autenticação.
+  Adicionar ou modificar uma conexão sem autenticação.
 
-- **--arquivo** *nome de arquivo*
+- **`--file`***nome do arquivo*
 
-  Leia as informações de conexão do nome do *arquivo*fornecido .
+  Ler informações de conexão do *nome de arquivo*fornecido.
 
-- **--sem telemetria**
+- **`--no-telemetry`**
 
-  Desabilite o envio de dados de uso de volta para a Microsoft. Os dados de uso são coletados e enviados de volta para a Microsoft, a menos que o sinalizador **--sem telemetria** seja passado.  
+  Desabilitar o envio de dados de uso de volta à Microsoft. Os dados de uso são coletados e enviados de volta à Microsoft, a menos que o **`--no-telemetry`** sinalizador seja passado.  
 
-- **-n**, **--dry-run**
+- **`-n`**, **`--dry-run`**
 
-  Faz uma corrida seca do comando.
+  Executa uma simulação do comando.
+ 
+- **`--p`**
 
-- **-p**
+  O mesmo que **`--password`** .
 
-  O mesmo **que --senha.**
+- **`-i`**
 
-- **-I**
-
-  O mesmo **que --privatekey**.
+  O mesmo que **`--privatekey`** .
 
 ## <a name="examples"></a>Exemplos
 
-Este comando adiciona uma conexão para um usuário chamado "usuário" no host local. A conexão usa um arquivo-chave para autenticação, encontrado em *%USERPROFILE%\.ssh\id_rsa*.
+Esse comando adiciona uma conexão para um usuário chamado "user" no localhost. A conexão usa um arquivo de chave para autenticação, encontrado em *% USERPROFILE% \. ssh \ id_rsa*.
 
 ```cmd
 ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa"
 ```
 
-Este comando remove a conexão que tem ID 1975957870 da lista de conexões.
+Esse comando Remove a conexão com a ID 1975957870 da lista de conexões.
 
 ```cmd
 ConnectionManager.exe remove 1975957870
+```
+
+Esse comando substitui a escolha do Shell para a conexão com a ID de conexão 21212121. Os shells com suporte são: **`sh, csh, bash, tcsh, ksh, zsh, dash`** . Se o Shell encontrado no sistema Linux não tiver suporte, voltaremos a usar explicitamente **`sh`** para todos os comandos.
+
+```cmd
+ConnectionManager.exe modify 21212121 --property shell=csh
 ```
 
 ## <a name="see-also"></a>Confira também
