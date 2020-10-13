@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: f6d831ac8b86be8a6669e8ee6c66da64507d129f
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2d42803b5eca7a43f122d209b7d9e2d4e45c38de
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590180"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008938"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erros em potencial passando por objetos CRT em limites de DLL
 
@@ -33,9 +33,9 @@ Como cada cópia da biblioteca CRT tem seu próprio Gerenciador de heap, Alocand
 
 A DLL e seus clientes normalmente usam a mesma cópia da biblioteca de CRT somente se estiverem vinculados no momento do carregamento à mesma versão da DLL do CRT. Como a versão de DLL da biblioteca CRT universal usada pelo Visual Studio 2015 e posterior no Windows 10, agora é um componente do Windows implantado centralmente (ucrtbase.dll), é o mesmo para aplicativos criados com o Visual Studio 2015 e versões posteriores. No entanto, mesmo quando o código CRT é idêntico, você não pode fornecer memória alocada em um heap para um componente que usa um heap diferente.
 
-## <a name="example"></a>Exemplo
+## <a name="example-pass-file-handle-across-dll-boundary"></a>Exemplo: passar o identificador de arquivo entre os limites de DLL
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 Este exemplo passa um identificador de arquivo por um limite de DLL.
 
@@ -75,9 +75,9 @@ int main(void)
 this is a string
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-pass-environment-variables-across-dll-boundary"></a>Exemplo: transmitir variáveis de ambiente entre limites de DLL
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>Description
 
 Este exemplo passa as variáveis de ambiente por um limite de DLL.
 
@@ -128,6 +128,6 @@ Se o arquivo DLL e. exe forem criados com o `/MD` para que apenas uma cópia do 
 New MYLIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

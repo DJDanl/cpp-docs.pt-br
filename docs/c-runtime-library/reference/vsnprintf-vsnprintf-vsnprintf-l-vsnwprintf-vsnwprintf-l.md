@@ -56,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: e6ed3d146458f514691fe0b20a4c88ffebb5f877
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075758"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008696"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -160,7 +160,7 @@ A localidade a ser usada.
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 A função **vsnprintf** retorna o número de caracteres que são gravados, não contando o caractere nulo de terminação. Se o tamanho do buffer especificado pela *contagem* não for suficientemente grande para conter a saída especificada por *Format* e *argptr*, o valor de retorno de **vsnprintf** será o número de caracteres que seriam gravados, não contando o caractere nulo, se *Count* fosse suficientemente grande. Se o valor de retorno for maior que *Count* -1, a saída será truncada. Um valor retornado -1 indica que ocorreu um erro de codificação.
 
@@ -206,7 +206,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 As funções **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** são específicas da Microsoft. Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-wide-characters-with-_vsnwprintf"></a>Exemplo: usar caracteres largos com `_vsnwprintf()`
 
 ```C
 // crt_vsnwprintf.c
@@ -248,7 +248,7 @@ nSize: -1, buff: Hi there!
 
 O comportamento será alterado se você usar vsnprintf em vez disso, juntamente com parâmetros de cadeia estreita. O parâmetro *Count* pode ser o tamanho inteiro do buffer, e o valor de retorno é o número de caracteres que teriam sido gravados se *Count* fosse grande o suficiente:
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-vsnprintf-with-narrow-strings"></a>Exemplo: use `vsnprintf()` com cadeias de caracteres estreitas
 
 ```C
 // crt_vsnprintf.c
@@ -284,7 +284,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [Funções vprintf](../../c-runtime-library/vprintf-functions.md)<br/>

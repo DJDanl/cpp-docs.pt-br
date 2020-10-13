@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 81dd7483c49a699ac53ea53d33481fa6539d484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223649"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008573"
 ---
 # <a name="new-operator-c"></a>Operador new (C++)
 
@@ -70,7 +70,7 @@ Especifica o tipo a ser alocado; pode ser um tipo definido pelo usuário ou inte
 *initializer*<br/>
 Fornece um valor para o objeto inicializado. Não é possível especificar inicializadores para matrizes. O **`new`** operador criará matrizes de objetos somente se a classe tiver um construtor padrão.
 
-## <a name="example"></a>Exemplo
+## <a name="example-allocate-and-free-a-character-array"></a>Exemplo: alocar e liberar uma matriz de caracteres
 
 O exemplo de código a seguir aloca uma matriz de caracteres e um objeto da classe `CName` e depois os libera.
 
@@ -115,7 +115,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-new-operator"></a>Exemplo: `new` operador
 
 Se você usar a nova forma de posicionamento do **`new`** operador, o formulário com argumentos além do tamanho da alocação, o compilador não oferecerá suporte a uma forma de posicionamento do **`delete`** operador se o Construtor lançar uma exceção. Por exemplo:
 
@@ -252,7 +252,7 @@ T *TObject =::new TObject;
 
 O operador de resolução de escopo ( `::` ) força o uso do **`new`** operador global.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Expressões com operadores unários](../cpp/expressions-with-unary-operators.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)<br/>

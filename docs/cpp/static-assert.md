@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: bf796b853d21d33d97e25c05101b7486e1eb112f
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742964"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008857"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ O compilador examina a **`static_assert`** declaração de erros de sintaxe quan
 
 Você pode usar a **`static_assert`** palavra-chave em namespace, classe ou escopo de bloco. (A **`static_assert`** palavra-chave é tecnicamente uma declaração, mesmo que não introduza um novo nome em seu programa, pois ela pode ser usada no escopo do namespace.)
 
-## <a name="description-of-static_assert-with-namespace-scope"></a>Descrição de static_assert com escopo de namespace
+## <a name="description-of-static_assert-with-namespace-scope"></a>Descrição de `static_assert` com escopo de namespace
 
 No exemplo a seguir, a **`static_assert`** declaração tem escopo de namespace. Como o compilador conhece o tamanho do tipo `void *`, a expressão é avaliada imediatamente.
 
-## <a name="example-of-static_assert-with-namespace-scope"></a>Exemplo de static_assert com escopo de namespace
+## <a name="example-static_assert-with-namespace-scope"></a>Exemplo: `static_assert` com escopo de namespace
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description-of-static_assert-with-class-scope"></a>Descrição de static_assert com escopo de classe
+## <a name="description-of-static_assert-with-class-scope"></a>Descrição de `static_assert` com escopo de classe
 
 No exemplo a seguir, a **`static_assert`** declaração tem escopo de classe. O **`static_assert`** verifica se um parâmetro de modelo é um tipo Pod ( *dados antigos simples* ). O compilador examina a **`static_assert`** declaração quando ela é declarada, mas não avalia o parâmetro de *expressão constante* até que o `basic_string` modelo de classe seja instanciado no `main()` .
 
-## <a name="example-of-static_assert-with-class-scope"></a>Exemplo de static_assert com escopo de classe
+## <a name="example-static_assert-with-class-scope"></a>Exemplo: `static_assert` com escopo de classe
 
 ```cpp
 #include <type_traits>
@@ -83,11 +83,11 @@ int main()
 }
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description-of-static_assert-with-block-scope"></a>Descrição de `static_assert` com escopo de bloco
 
 No exemplo a seguir, a **`static_assert`** declaração tem escopo de bloco. O **`static_assert`** verifica se o tamanho da estrutura VMPage é igual ao pageSize de memória virtual do sistema.
 
-## <a name="example"></a>Exemplo
+## <a name="example-static_assert-at-block-scope"></a>Exemplo: `static_assert` no escopo do bloco
 
 ```cpp
 #include <sys/param.h> // defines PAGESIZE
@@ -104,7 +104,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Asserção e mensagens fornecidas pelo usuário (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
 [Diretiva de #error (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)<br/>

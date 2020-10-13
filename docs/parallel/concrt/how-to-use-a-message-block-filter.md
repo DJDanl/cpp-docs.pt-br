@@ -5,12 +5,12 @@ helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: a5814536e88add5b15f577588d571a06eda6151c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac58ef2240d2ea6ba34b334106c08595e70b02e8
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226705"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008638"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Como usar um filtro de bloco de mensagens
 
@@ -20,9 +20,9 @@ Quando você cria um objeto de bloco de mensagem, como um [Concurrency:: unbound
 
 As funções de filtro são importantes porque permitem que você conecte os blocos de mensagem para formar *redes de fluxo*de mensagens. Em uma rede de Dataflow, os blocos de mensagens controlam o fluxo de dados processando somente as mensagens que atendem a critérios específicos. Compare isso com o modelo de fluxo de controle, no qual o fluxo de dados é regulamentado usando estruturas de controle, como instruções condicionais, loops e assim por diante.
 
-Este documento fornece um exemplo básico de como usar um filtro de mensagem. Para obter exemplos adicionais que usam filtros de mensagem e o modelo de fluxo de imagens para conectar blocos de mensagens, consulte [passo a passos: Criando um agente de fluxo](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) de [imagens e passo a passo: criando uma rede de processamento de imagem](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Este documento fornece um exemplo básico de como usar um filtro de mensagem. Para obter exemplos adicionais que usam filtros de mensagem e o modelo de fluxo de mensagens para conectar blocos de mensagem, consulte [passo a passos: Criando um agente de fluxo](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) de mensagens e [passo a passo: criando uma rede Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-count_primes-function"></a>Exemplo: função count_primes
 
 Considere a seguinte função, `count_primes` , que ilustra o uso básico de um bloco de mensagens que não filtra mensagens de entrada. O bloco de mensagens acrescenta números primos a um objeto [std:: vector](../../standard-library/vector-class.md) . A `count_primes` função envia vários números ao bloco de mensagens, recebe os valores de saída do bloco de mensagens e imprime esses números que são primos para o console.
 
@@ -30,7 +30,7 @@ Considere a seguinte função, `count_primes` , que ilustra o uso básico de um 
 
 O `transformer` objeto processa todos os valores de entrada; no entanto, ele requer apenas os valores primos. Embora o aplicativo possa ser escrito para que o remetente da mensagem envie apenas números primos, os requisitos do receptor de mensagens nem sempre são conhecidos.
 
-## <a name="example"></a>Exemplo
+## <a name="example-count_primes_filter-function"></a>Exemplo: função count_primes_filter
 
 A função a seguir, `count_primes_filter` , executa a mesma tarefa que a `count_primes` função. No entanto, o `transformer` objeto nesta versão usa uma função de filtro para aceitar somente os valores que são primos. A função que executa a ação só recebe números primos; Portanto, ele não precisa chamar a `is_prime` função.
 
@@ -40,7 +40,7 @@ Como o `transformer` objeto recebe apenas números primos, o `transformer` próp
 
 O `transformer` objeto agora processa apenas os valores que são primos. No exemplo anterior, o `transformer` objeto processa todas as mensagens. Portanto, o exemplo anterior deve receber o mesmo número de mensagens enviadas. Este exemplo usa o resultado da função [Concurrency:: send](reference/concurrency-namespace-functions.md#send) para determinar quantas mensagens receber do `transformer` objeto. A `send` função retorna **`true`** quando o buffer de mensagens aceita a mensagem e **`false`** quando o buffer de mensagens rejeita a mensagem. Portanto, o número de vezes que o buffer de mensagens aceita a mensagem corresponde à contagem de números primos.
 
-## <a name="example"></a>Exemplo
+## <a name="example-finished-message-block-filter-code-sample"></a>Exemplo: exemplo de código de filtro de bloco de mensagem concluído
 
 O código a seguir mostra um exemplo completo. O exemplo chama a `count_primes` função e a `count_primes_filter` função.
 
@@ -63,9 +63,9 @@ bool (T const &)
 
 Para eliminar a cópia desnecessária de dados, use o segundo formulário quando você tiver um tipo de agregação transmitido por valor.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Walkthrough: Criando um agente de Dataflow](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Walkthrough: criando uma rede de processamento de imagens](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Walkthrough: criando uma rede Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Classe de transformador](../../parallel/concrt/reference/transformer-class.md)

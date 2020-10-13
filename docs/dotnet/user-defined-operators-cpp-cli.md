@@ -4,36 +4,36 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee5aa122983a315e55884c643a9b7894f075e260
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384498"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008956"
 ---
 # <a name="user-defined-operators-ccli"></a>Operadores definidos pelo usuário (C++/CLI)
 
-Operadores definidos pelo usuário para tipos gerenciados são permitidos como membros estáticos ou membros de instância ou no escopo global. No entanto, somente os operadores estáticos são acessíveis por meio de metadados para os clientes que são escritos em um idioma diferente do Visual C++.
+Os operadores definidos pelo usuário para tipos gerenciados são permitidos como membros estáticos ou membros de instância, ou em escopo global. No entanto, somente os operadores estáticos podem ser acessados por meio de metadados para clientes que são gravados em uma linguagem diferente de Visual C++.
 
-Em um tipo de referência, um dos parâmetros de um operador estático definido pelo usuário deve ser um destes procedimentos:
+Em um tipo de referência, um dos parâmetros de um operador estático definido pelo usuário deve ser um destes:
 
-- Um identificador (`type` ^) a uma instância do tipo delimitador.
+- Um identificador ( `type` ^) para uma instância do tipo delimitador.
 
-- Uma indireção de tipo de referência (`type`^ & ou tipo ^ %) para um identificador para uma instância do tipo delimitador.
+- Um indireção de tipo de referência ( `type` ^& ou tipo ^%) para um identificador para uma instância do tipo delimitador.
 
-Em um tipo de valor, um dos parâmetros de um operador estático definido pelo usuário deve ser um destes procedimentos:
+Em um tipo de valor, um dos parâmetros de um operador estático definido pelo usuário deve ser um destes:
 
-- Do mesmo tipo como o tipo de valor de delimitador.
+- Do mesmo tipo que o tipo de valor de circunscrição.
 
-- Uma indireção de tipo de ponteiro (`type`^) para o tipo delimitador.
+- Um indireção de tipo de ponteiro ( `type` ^) para o tipo delimitador.
 
-- Uma indireção de tipo de referência (`type`% ou `type`&) para o tipo delimitador.
+- Um indireção de tipo de referência ( `type` % ou `type`&) para o tipo delimitador.
 
-- Uma indireção de tipo de referência (`type`^ % ou `type`^ &) para o identificador.
+- Um indireção de tipo de referência ( `type` ^% ou `type` ^&) para o identificador.
 
 Você pode definir os seguintes operadores:
 
-|Operador|Formulários de global unário/binário?|
+|Operador|Formulários unários/binários?|
 |--------------|--------------------------|
 |!|Unário|
 |!=|Binário|
@@ -63,7 +63,7 @@ Você pode definir os seguintes operadores:
 |&#124;&#124;|Binário|
 |~|Unário|
 
-## <a name="example"></a>Exemplo
+## <a name="example-user-defined-operators"></a>Exemplo: operadores definidos pelo usuário
 
 ```cpp
 // mcppv2_user-defined_operators.cpp
@@ -135,9 +135,9 @@ int main() {
 -3
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-operator-synthesis"></a>Exemplo: síntese de operador
 
-O exemplo a seguir demonstra a síntese de operador, que está disponível apenas quando você usa **/clr** para compilar. Síntese de operador cria o formulário de atribuição de um operador binário, se um não estiver definido, em que o lado esquerdo do operador de atribuição tem um tipo CLR.
+O exemplo a seguir demonstra a síntese do operador, que está disponível somente quando você usa **/CLR** para compilar. A síntese do operador cria o formulário de atribuição de um operador binário, se um não estiver definido, onde o lado esquerdo do operador de atribuição tiver um tipo CLR.
 
 ```cpp
 // mcppv2_user-defined_operators_2.cpp
@@ -163,6 +163,6 @@ int main() {
 30
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Classes e Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
+[Classes e structs](../extensions/classes-and-structs-cpp-component-extensions.md)

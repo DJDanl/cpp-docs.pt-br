@@ -26,12 +26,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64bed4dac2bbaeb60c7b04a600af38f455caf08d
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232489"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008267"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -45,12 +45,12 @@ void *_malloca(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *size*<br/>
 Bytes a serem alocados da pilha.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 A rotina **_malloca** retorna um **`void`** ponteiro para o espaço alocado, que tem a garantia de estar alinhada adequadamente para o armazenamento de qualquer tipo de objeto. Se o *tamanho* for 0, **_malloca** aloca um item de comprimento zero e retorna um ponteiro válido para esse item.
 
@@ -81,7 +81,7 @@ Além das restrições acima, ao usar a opção [/CLR (compilação em tempo de 
 |-------------|---------------------|
 |**_malloca**|\<malloc.h>|
 
-## <a name="example"></a>Exemplo
+## <a name="example-malloca"></a>Exemplo: malloca
 
 ```C
 // crt_malloca_simple.c
@@ -101,7 +101,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-malloca-exception"></a>Exemplo: exceção de malloca
 
 ```C
 // crt_malloca_exception.c
@@ -173,7 +173,7 @@ int main()
 Enter the number of bytes to allocate using _malloca: 1000
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Alocação de memória](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

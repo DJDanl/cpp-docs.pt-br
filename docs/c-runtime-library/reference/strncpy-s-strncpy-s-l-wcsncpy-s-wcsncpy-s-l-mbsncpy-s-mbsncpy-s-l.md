@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919292"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008271"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -168,7 +168,7 @@ Número de caracteres a ser copiado ou [_TRUNCATE](../../c-runtime-library/trunc
 *locale*<br/>
 A localidade a ser usada.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Zero se for bem-sucedido, **STRUNCATE** se ocorrer truncamento, caso contrário, um código de erro.
 
@@ -176,8 +176,8 @@ Zero se for bem-sucedido, **STRUNCATE** se ocorrer truncamento, caso contrário,
 
 |*strDest*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULO**|any|any|**EINVAL**|não modificado|
-|any|any|**NULO**|**EINVAL**|*strDest*[0] definido como 0|
+|**NULL**|any|any|**EINVAL**|não modificado|
+|any|any|**NULL**|**EINVAL**|*strDest*[0] definido como 0|
 |any|0|any|**EINVAL**|não modificado|
 |Não **nulo**|muito pequeno|any|**ERANGE**|*strDest*[0] definido como 0|
 
@@ -239,7 +239,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-copy-chars-to-a-buffer"></a>Exemplo: copiar caracteres para um buffer
 
 ```cpp
 // crt_strncpy_s_1.cpp
@@ -366,7 +366,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-strncpy-and-strncpy_s"></a>Exemplo: strncpy e strncpy_s
 
 ```C
 // crt_strncpy_s_2.c
@@ -410,11 +410,11 @@ After strncpy_s (with null-termination):
    'mice'
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Manipulação de cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[Interpretação de sequências de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulação da cadeia de caracteres](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Localidade](../../c-runtime-library/locale.md)<br/>
+[Interpretação de sequências de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

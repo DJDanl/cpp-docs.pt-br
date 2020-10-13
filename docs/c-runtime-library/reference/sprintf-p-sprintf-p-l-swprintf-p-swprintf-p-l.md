@@ -45,12 +45,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c694567aa7554319d5821678a18c3b5392f89965
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958021"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008851"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -89,7 +89,7 @@ int _swprintf_p_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*buffer*<br/>
+*completo*<br/>
 Local de armazenamento para a saída
 
 *sizeOfBuffer*<br/>
@@ -106,17 +106,17 @@ A localidade a ser usada.
 
 Para obter mais informações, consulte [Especificações de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valor de retorno
+## <a name="return-value"></a>Valor Retornado
 
 O número de caracteres gravados ou-1 se ocorreu um erro.
 
 ## <a name="remarks"></a>Comentários
 
-A função **_sprintf_p** formata e armazena uma série de caracteres e valores no *buffer*. Cada argumento no *argument_list* (se houver) é convertido e apresentado de acordo com a especificação de formato correspondente no *formato*. O argumento *Format* usa a [sintaxe de especificação de formato para funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre **_sprintf_p** e **sprintf_s** é que o **_sprintf_p** dá suporte a parâmetros posicionais, o que permite especificar a ordem na qual os argumentos são usados na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+A função **_sprintf_p** formata e armazena uma série de caracteres e valores no *buffer*. Cada argumento na *argument_list* (se houver) é convertido e apresentado de acordo com a especificação de formato correspondente no *formato*. O argumento *Format* usa a [sintaxe de especificação de formato para funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido. A diferença entre **_sprintf_p** e **sprintf_s** é que **_sprintf_p** dá suporte a parâmetros posicionais, que permite especificar a ordem na qual os argumentos são usados na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_swprintf_p** é uma versão de caractere largo do **_sprintf_p**; os argumentos de ponteiro para **_swprintf_p** são cadeias de caracteres largos. A detecção de erros de codificação em **_swprintf_p** pode ser diferente daquela em **_sprintf_p**. **_swprintf_p** e **fwprintf_p** se comportam de forma idêntica, exceto que **_swprintf_p** grava a saída em uma cadeia de caracteres em vez de um destino do tipo **File**, e **_swprintf_p** requer que o parâmetro *Count* especifique o número máximo de caracteres a serem gravados. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro de localidade passado em vez da localidade do thread atual.
+**_swprintf_p** é uma versão de caractere largo do **_sprintf_p**; os argumentos de ponteiro para **_swprintf_p** são cadeias de caracteres largos. A detecção de erros de codificação no **_swprintf_p** pode ser diferente daquela em **_sprintf_p**. **_swprintf_p** e **fwprintf_p** se comportam de forma idêntica, exceto que **_swprintf_p** grava a saída em uma cadeia de caracteres em vez de um destino do tipo **arquivo**e **_swprintf_p** requer que o parâmetro de *contagem* especifique o número máximo de caracteres a serem gravados. As versões dessas funções com o sufixo **_L** são idênticas, exceto pelo fato de que usam o parâmetro Locale passado em vez da localidade do thread atual.
 
-**_sprintf_p** retorna o número de bytes armazenados no *buffer*, não contando o caractere nulo de terminação. **_swprintf_p** retorna o número de caracteres largos armazenados no *buffer*, sem contar a terminação de caractere nulo de finalização. Se o *buffer* ou o *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
+**_sprintf_p** retorna o número de bytes armazenados no *buffer*, não contando o caractere nulo de terminação. **_swprintf_p** retorna o número de caracteres largos armazenados no *buffer*, não contando a terminação de caractere nulo de finalização. Se o *buffer* ou o *formato* for um ponteiro nulo ou se a cadeia de caracteres de formato contiver caracteres de formatação inválidos, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, essas funções retornam-1 e definem **errno** como **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -132,9 +132,9 @@ A função **_sprintf_p** formata e armazena uma série de caracteres e valores 
 |**_sprintf_p**, **_sprintf_p_l**|\<stdio.h>|
 |**_swprintf_p**, **_swprintf_p_l**|\<stdio.h> ou \<wchar.h>|
 
-Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-_sprintf_p-to-format-data"></a>Exemplo: usar _sprintf_p para formatar dados
 
 ```C
 // crt_sprintf_p.c
@@ -177,7 +177,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-error-code-handling"></a>Exemplo: tratamento de código de erro
 
 ```C
 // crt_swprintf_p.c
@@ -209,7 +209,7 @@ Wrote 24 characters
 Wrote -1 characters
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [E/S de fluxo](../../c-runtime-library/stream-i-o.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
@@ -221,4 +221,4 @@ Wrote -1 characters
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
 [Funções vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
-[Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[printf_p parâmetros posicionais](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509411"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008673"
 ---
 # <a name="using-dynamic-accessors"></a>Usando acessadores dinâmicos
 
@@ -22,7 +22,7 @@ O exemplo [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/V
 
 O [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) permite que você acesse uma fonte de dados quando não tem nenhum conhecimento do esquema de banco de dado (a estrutura subjacente do banco de dados). `CDynamicAccessor` os métodos obtêm informações de coluna, como nomes de coluna, contagem e tipo de dados. Use essas informações de coluna para criar um acessador dinamicamente em tempo de execução. As informações de coluna são armazenadas em um buffer que é criado e gerenciado por essa classe. Obter dados do buffer usando o método [GetValue](./cdynamicaccessor-class.md#getvalue) .
 
-## <a name="example"></a>Exemplo
+## <a name="example-cdynamic-accessors"></a>Exemplo: acessadores CDynamic
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -94,7 +94,7 @@ int main(int argc, char* argv[] )
 
 Use `CDynamicStringAccessor` métodos para obter informações de coluna. Use essas informações de coluna para criar um acessador dinamicamente em tempo de execução. As informações de coluna são armazenadas em um buffer criado e gerenciado por essa classe. Obter dados do buffer usando [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring) ou armazená-los no buffer usando [CDynamicStringAccessor:: SetString](./cdynamicstringaccessor-class.md#setstring).
 
-## <a name="example"></a>Exemplo
+## <a name="example-cdynamicstringaccessor"></a>Exemplo: CDynamicStringAccessor
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp
@@ -156,7 +156,7 @@ As informações de parâmetro são armazenadas em um buffer criado e gerenciado
 
 Para obter um exemplo que demonstra como usar essa classe para executar um procedimento armazenado SQL Server e obter os valores de parâmetro de saída, consulte o código de exemplo [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) no repositório do [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) no github.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)<br/>
 [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>

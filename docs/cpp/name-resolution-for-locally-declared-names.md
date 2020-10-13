@@ -2,18 +2,18 @@
 title: Resolução de nome para nomes declarados localmente
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-ms.openlocfilehash: 2c75c09308f6ba07039de4d2811b9bedaba71e44
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0216154b55e9742c2c4f3f5df7e6d612e16ec9b1
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177892"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008927"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>Resolução de nome para nomes declarados localmente
 
 O nome de modelo propriamente dito pode ser referenciado com ou sem os argumentos de modelo. No escopo de um modelo de classe, o nome propriamente dito se refere ao modelo. No escopo de uma especialização ou de uma especialização parcial de modelo, o nome sozinho se refere à especialização ou à especialização parcial. Outras especializações ou especializações parciais do modelo também podem ser referenciadas, com os argumentos de modelo apropriados.
 
-## <a name="example"></a>Exemplo
+## <a name="example-specialization-versus-partial-specialization"></a>Exemplo: especialização versus especialização parcial
 
 O código a seguir mostra que o nome do modelo de classe A é interpretado de maneira diferente no escopo de uma especialização ou especialização parcial.
 
@@ -35,7 +35,7 @@ template<> class A<int> {
 };
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-name-conflict-between-template-parameter-and-object"></a>Exemplo: nomear conflito entre o parâmetro de modelo e o objeto
 
 Em caso de conflito de nome entre um parâmetro de modelo e outro objeto, o parâmetro de modelo pode ou não ser oculto. As regras a seguir ajudam a determinar a precedência.
 
@@ -55,7 +55,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-define-member-function-outside-class-template"></a>Exemplo: definir a função de membro fora do modelo de classe
 
 Ao definir as funções de membro de um modelo fora do modelo de classe, é possível usar um nome de parâmetro de modelo diferente. Se a definição de função de membro de modelo usar, para o parâmetro de modelo, um nome diferente do usado pela declaração e o nome usado na definição entrar em conflito com outro membro da declaração, o membro na declaração de modelo terá precedência.
 
@@ -90,7 +90,7 @@ int main() {
 Z::Z()
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-define-template-or-member-function-outside-namespace"></a>Exemplo: definir o modelo ou a função de membro fora do namespace
 
 Ao definir uma função de modelo ou uma função de membro fora do namespace no qual o modelo foi declarado, o argumento de modelo tem precedência sobre os nomes de outros membros do namespace.
 
@@ -124,7 +124,7 @@ int main() {
 C<T>::g
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-base-class-or-member-name-hides-template-argument"></a>Exemplo: a classe base ou o nome do membro oculta o argumento do modelo
 
 Nas definições que estão fora da declaração de classe de modelo, se uma classe de modelo tiver uma classe base que não dependa de um argumento de modelo e se a classe base ou um de seus membros tiver o mesmo nome que um argumento de modelo, a classe base ou o nome de membro ocultarão o argumento de modelo.
 
@@ -162,6 +162,6 @@ Base
 1
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Resolução de nomes](../cpp/templates-and-name-resolution.md)

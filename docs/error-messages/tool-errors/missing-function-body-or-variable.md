@@ -5,18 +5,18 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 835bd968035b355ded9636d446d44d4ce069c248
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173615"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008892"
 ---
 # <a name="missing-function-body-or-variable"></a>Corpo de função ou variável ausente
 
 Com apenas um protótipo de função, o compilador pode continuar sem erros, mas o vinculador não pode resolver uma chamada para um endereço porque não há nenhum código de função ou espaço variável reservado. Você não verá esse erro até que você crie uma chamada para a função que o vinculador deve resolver.
 
-## <a name="example"></a>Exemplo
+## <a name="example-call-to-an-undefined-function"></a>Exemplo: chamar para uma função indefinida
 
 A chamada de função no Main causará LNK2019 porque o protótipo permite que o compilador ache que a função existe.  O vinculador descobre que ele não faz isso.
 
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-call-to-an-implemented-function"></a>Exemplo: chamar para uma função implementada
 
-No C++, certifique-se de incluir a implementação de uma função específica para uma classe e não apenas um protótipo na definição de classe. Se você estiver definindo a classe fora do arquivo de cabeçalho, certifique-se de incluir o nome da classe antes da função (`Classname::memberfunction`).
+Em C++, certifique-se de incluir a implementação de uma função específica para uma classe e não apenas um protótipo na definição de classe. Se você estiver definindo a classe fora do arquivo de cabeçalho, certifique-se de incluir o nome da classe antes da função ( `Classname::memberfunction` ).
 
 ```cpp
 // LNK2019_MFBV_2.cpp
@@ -49,6 +49,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Erro das ferramentas de vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+[Erro de ferramentas do vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
