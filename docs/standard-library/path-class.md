@@ -4,16 +4,16 @@ ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: d7c8c739c3d235383ede0509cfa87b41200efeca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fb56afbc1d29f1d321b394342382f89b06768720
+ms.sourcegitcommit: b5854134553db1d99a5761bec131841c374a3098
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232996"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91958653"
 ---
 # <a name="path-class"></a>Classe path
 
-A classe **path** armazena um objeto do tipo `string_type` , chamado `myname` aqui para fins de exposição, adequado para uso como um nome de caminho. `string_type`é um sinônimo para `basic_string<value_type>` , onde `value_type` é um sinônimo para **`wchar_t`** no Windows ou **`char`** em POSIX.
+A classe **path** armazena um objeto do tipo `string_type` , chamado `myname` aqui para fins de exposição, adequado para uso como um nome de caminho. `string_type` é um sinônimo para `basic_string<value_type>` , onde `value_type` é um sinônimo para **`wchar_t`** no Windows ou **`char`** em POSIX.
 
 Para obter mais informações e exemplos de código, consulte [navegação do sistema de arquivos (C++)](../standard-library/file-system-navigation.md).
 
@@ -45,13 +45,13 @@ class path;
 |[assign](#assign)|Substitui `mypath` pela sequência especificada, convertida conforme necessário.|
 |[Comece](#begin)|Retorna um `path::iterator` design do primeiro elemento Path no PathName, se presente.|
 |[c_str](#c_str)|Retorna um ponteiro para o primeiro caractere em `mypath` .|
-|[formatação](#clear)|É executado `mypath.clear()` .|
+|[clear](#clear)|É executado `mypath.clear()` .|
 |[comparar](#compare)|Retorna valores de comparação.|
 |[concat](#compare)|Acrescenta a sequência especificada a `mypath` , convertido (mas não a inserção de um separador), conforme necessário.|
 |[empty](#empty)|Retorna `mypath.empty()`.|
-|[completo](#end)|Retorna um iterador de fim de sequência do tipo `iterator` .|
-|[extensão](#extension)|Retorna o sufixo de `filename()` .|
-|[nome do arquivo](#filename)|Retorna o componente do diretório raiz do myname, especificamente `empty() path() : *--end()`. O componente pode estar vazio.|
+|[end](#end)|Retorna um iterador de fim de sequência do tipo `iterator` .|
+|[extension](#extension)|Retorna o sufixo de `filename()` .|
+|[nome do arquivo](#filename)|Retorna o componente do diretório raiz do myname, especificamente `empty() ? path() : *--end()`. O componente pode estar vazio.|
 |[generic_string](#generic_string)|Retorna `this->string<Elem, Traits, Alloc>(al)` com (em Windows) qualquer barra invertida convertida em barra "/".|
 |[generic_u16string](#generic_u16string)|Retorna `u16string()` com (em Windows) qualquer barra invertida convertida em barra "/".|
 |[generic_u32string](#generic_u32string)|Retorna `u32string()` com (em Windows) qualquer barra invertida convertida em barra "/".|
@@ -102,7 +102,7 @@ class path;
 
 **Namespace:** std::experimental::filesystem
 
-## <a name="pathappend"></a><a name="append"></a>caminho:: acrescentar
+## <a name="pathappend"></a><a name="append"></a> caminho:: acrescentar
 
 Acrescenta a sequência especificada a `mypath` , convertida e inserida `preferred_separator` como necessário.
 
@@ -114,7 +114,7 @@ template <class InIt>
 path& append(InIt first, InIt last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *original*\
 Sequência especificada.
@@ -125,7 +125,7 @@ Início da sequência especificada.
 *última*\
 Fim da sequência especificada.
 
-## <a name="pathassign"></a><a name="assign"></a>caminho:: atribuir
+## <a name="pathassign"></a><a name="assign"></a> caminho:: atribuir
 
 Substitui `mypath` pela sequência especificada, convertida conforme necessário.
 
@@ -137,7 +137,7 @@ template <class InIt>
 path& assign(InIt first, InIt last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *original*\
 Sequência especificada.
@@ -148,7 +148,7 @@ Início da sequência especificada.
 *última*\
 Fim da sequência especificada.
 
-## <a name="pathbegin"></a><a name="begin"></a>caminho:: início
+## <a name="pathbegin"></a><a name="begin"></a> caminho:: início
 
 Retorna um `path::iterator` design do primeiro elemento Path no PathName, se presente.
 
@@ -156,7 +156,7 @@ Retorna um `path::iterator` design do primeiro elemento Path no PathName, se pre
 iterator begin() const;
 ```
 
-## <a name="pathc_str"></a><a name="c_str"></a>caminho:: c_str
+## <a name="pathc_str"></a><a name="c_str"></a> caminho:: c_str
 
 Retorna um ponteiro para o primeiro caractere em `mypath` .
 
@@ -164,7 +164,7 @@ Retorna um ponteiro para o primeiro caractere em `mypath` .
 const value_type& *c_str() const noexcept;
 ```
 
-## <a name="pathclear"></a><a name="clear"></a>caminho:: limpar
+## <a name="pathclear"></a><a name="clear"></a> caminho:: limpar
 
 É executado `mypath.clear()` .
 
@@ -172,7 +172,7 @@ const value_type& *c_str() const noexcept;
 void clear() noexcept;
 ```
 
-## <a name="pathcompare"></a><a name="compare"></a>caminho:: comparar
+## <a name="pathcompare"></a><a name="compare"></a> caminho:: comparar
 
 A primeira função retorna `mypath.compare(pval.native())`. A segunda função retorna `mypath.compare(str)`. A terceira função retorna `mypath.compare(ptr)` .
 
@@ -182,7 +182,7 @@ int compare(const string_type& str) const;
 int compare(const value_type *ptr) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pval*\
 Caminho para comparar.
@@ -193,7 +193,7 @@ Cadeia de caracteres para comparar.
 *PTR*\
 Ponteiro para comparação.
 
-## <a name="pathconcat"></a><a name="concat"></a>caminho:: Concat
+## <a name="pathconcat"></a><a name="concat"></a> caminho:: Concat
 
 Acrescenta a sequência especificada a `mypath` , convertido (mas não a inserção de um separador), conforme necessário.
 
@@ -205,7 +205,7 @@ template <class InIt>
 path& concat(InIt first, InIt last);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *original*\
 Sequência especificada.
@@ -216,7 +216,7 @@ Início da sequência especificada.
 *última*\
 Fim da sequência especificada.
 
-## <a name="pathconst_iterator"></a><a name="const_iterator"></a>caminho:: const_iterator
+## <a name="pathconst_iterator"></a><a name="const_iterator"></a> caminho:: const_iterator
 
 Um sinônimo de `iterator`.
 
@@ -224,7 +224,7 @@ Um sinônimo de `iterator`.
 typedef iterator const_iterator;
 ```
 
-## <a name="pathempty"></a><a name="empty"></a>caminho:: vazio
+## <a name="pathempty"></a><a name="empty"></a> caminho:: vazio
 
 Retorna `mypath.empty()`.
 
@@ -232,7 +232,7 @@ Retorna `mypath.empty()`.
 bool empty() const noexcept;
 ```
 
-## <a name="pathend"></a><a name="end"></a>caminho:: fim
+## <a name="pathend"></a><a name="end"></a> caminho:: fim
 
 Retorna um iterador de fim de sequência do tipo `iterator` .
 
@@ -240,7 +240,7 @@ Retorna um iterador de fim de sequência do tipo `iterator` .
 iterator end() const;
 ```
 
-## <a name="pathextension"></a><a name="extension"></a>caminho:: extensão
+## <a name="pathextension"></a><a name="extension"></a> caminho:: extensão
 
 Retorna o sufixo de `filename()` .
 
@@ -256,7 +256,7 @@ Se `X == path(".") || X == path("..")` ou se `X` não contiver nenhum ponto, o s
 
 Caso contrário, o sufixo começa com (e inclui) o ponto mais à direita.
 
-## <a name="pathfilename"></a><a name="filename"></a>caminho:: nome de arquivo
+## <a name="pathfilename"></a><a name="filename"></a> caminho:: nome de arquivo
 
 Retorna o componente do diretório raiz do myname, especificamente `empty() path() : *--end()`. O componente pode estar vazio.
 
@@ -264,7 +264,7 @@ Retorna o componente do diretório raiz do myname, especificamente `empty() path
 path filename() const;
 ```
 
-## <a name="pathgeneric_string"></a><a name="generic_string"></a>caminho:: generic_string
+## <a name="pathgeneric_string"></a><a name="generic_string"></a> caminho:: generic_string
 
 Retorna `this->string<Elem, Traits, Alloc>(al)` com (em Windows) qualquer barra invertida convertida em barra "/".
 
@@ -278,7 +278,7 @@ template <class Elem,
 string generic_string() const;
 ```
 
-## <a name="pathgeneric_u16string"></a><a name="generic_u16string"></a>caminho:: generic_u16string
+## <a name="pathgeneric_u16string"></a><a name="generic_u16string"></a> caminho:: generic_u16string
 
 Retorna `u16string()` com (em Windows) qualquer barra invertida convertida em barra "/".
 
@@ -286,7 +286,7 @@ Retorna `u16string()` com (em Windows) qualquer barra invertida convertida em ba
 u16string generic_u16string() const;
 ```
 
-## <a name="pathgeneric_u32string"></a><a name="generic_u32string"></a>caminho:: generic_u32string
+## <a name="pathgeneric_u32string"></a><a name="generic_u32string"></a> caminho:: generic_u32string
 
 Retorna `u32string()` com (em Windows) qualquer barra invertida convertida em barra "/".
 
@@ -294,7 +294,7 @@ Retorna `u32string()` com (em Windows) qualquer barra invertida convertida em ba
 u32string generic_u32string() const;
 ```
 
-## <a name="pathgeneric_u8string"></a><a name="generic_u8string"></a>caminho:: generic_u8string
+## <a name="pathgeneric_u8string"></a><a name="generic_u8string"></a> caminho:: generic_u8string
 
 Retorna `u8string()` com (em Windows) qualquer barra invertida convertida em barra "/".
 
@@ -302,7 +302,7 @@ Retorna `u8string()` com (em Windows) qualquer barra invertida convertida em bar
 string generic_u8string() const;
 ```
 
-## <a name="pathgeneric_wstring"></a><a name="generic_wstring"></a>caminho:: generic_wstring
+## <a name="pathgeneric_wstring"></a><a name="generic_wstring"></a> caminho:: generic_wstring
 
 Retorna `wstring()` com (em Windows) qualquer barra invertida convertida em barra "/".
 
@@ -310,7 +310,7 @@ Retorna `wstring()` com (em Windows) qualquer barra invertida convertida em barr
 wstring generic_wstring() const;
 ```
 
-## <a name="pathhas_extension"></a><a name="has_extension"></a>caminho:: has_extension
+## <a name="pathhas_extension"></a><a name="has_extension"></a> caminho:: has_extension
 
 Retorna `!extension().empty()`.
 
@@ -318,7 +318,7 @@ Retorna `!extension().empty()`.
 bool has_extension() const;
 ```
 
-## <a name="pathhas_filename"></a><a name="has_filename"></a>caminho:: has_filename
+## <a name="pathhas_filename"></a><a name="has_filename"></a> caminho:: has_filename
 
 Retorna `!filename().empty()`.
 
@@ -326,7 +326,7 @@ Retorna `!filename().empty()`.
 bool has_filename() const;
 ```
 
-## <a name="pathhas_parent_path"></a><a name="has_parent_path"></a>caminho:: has_parent_path
+## <a name="pathhas_parent_path"></a><a name="has_parent_path"></a> caminho:: has_parent_path
 
 Retorna `!parent_path().empty()`.
 
@@ -334,7 +334,7 @@ Retorna `!parent_path().empty()`.
 bool has_parent_path() const;
 ```
 
-## <a name="pathhas_relative_path"></a><a name="has_relative_path"></a>caminho:: has_relative_path
+## <a name="pathhas_relative_path"></a><a name="has_relative_path"></a> caminho:: has_relative_path
 
 Retorna `!relative_path().empty()`.
 
@@ -342,7 +342,7 @@ Retorna `!relative_path().empty()`.
 bool has_relative_path() const;
 ```
 
-## <a name="pathhas_root_directory"></a><a name="has_root_directory"></a>caminho:: has_root_directory
+## <a name="pathhas_root_directory"></a><a name="has_root_directory"></a> caminho:: has_root_directory
 
 Retorna `!root_directory().empty()`.
 
@@ -350,7 +350,7 @@ Retorna `!root_directory().empty()`.
 bool has_root_directory() const;
 ```
 
-## <a name="pathhas_root_name"></a><a name="has_root_name"></a>caminho:: has_root_name
+## <a name="pathhas_root_name"></a><a name="has_root_name"></a> caminho:: has_root_name
 
 Retorna `!root_name().empty()`.
 
@@ -358,7 +358,7 @@ Retorna `!root_name().empty()`.
 bool has_root_name() const;
 ```
 
-## <a name="pathhas_root_path"></a><a name="has_root_path"></a>caminho:: has_root_path
+## <a name="pathhas_root_path"></a><a name="has_root_path"></a> caminho:: has_root_path
 
 Retorna `!root_path().empty()`.
 
@@ -366,7 +366,7 @@ Retorna `!root_path().empty()`.
 bool has_root_path() const;
 ```
 
-## <a name="pathhas_stem"></a><a name="has_stem"></a>caminho:: has_stem
+## <a name="pathhas_stem"></a><a name="has_stem"></a> caminho:: has_stem
 
 Retorna `!stem().empty()`.
 
@@ -374,7 +374,7 @@ Retorna `!stem().empty()`.
 bool has_stem() const;
 ```
 
-## <a name="pathis_absolute"></a><a name="is_absolute"></a>caminho:: is_absolute
+## <a name="pathis_absolute"></a><a name="is_absolute"></a> caminho:: is_absolute
 
 Para o Windows, a função retorna `has_root_name() && has_root_directory()` . Para POSIX, a função retorna `has_root_directory()` .
 
@@ -382,7 +382,7 @@ Para o Windows, a função retorna `has_root_name() && has_root_directory()` . P
 bool is_absolute() const;
 ```
 
-## <a name="pathis_relative"></a><a name="is_relative"></a>caminho:: is_relative
+## <a name="pathis_relative"></a><a name="is_relative"></a> caminho:: is_relative
 
 Retorna `!is_absolute()`.
 
@@ -390,7 +390,7 @@ Retorna `!is_absolute()`.
 bool is_relative() const;
 ```
 
-## <a name="pathiterator"></a><a name="iterator"></a>caminho:: iterador
+## <a name="pathiterator"></a><a name="iterator"></a> caminho:: iterador
 
 Um iterador constante bidirecional que designa os componentes de caminho do `myname` .
 
@@ -419,19 +419,19 @@ A classe descreve um iterador de constante bidirecional que designa os `path` co
 
 Para `pval` um objeto do tipo `path` :
 
-1. `path::iterator X = pval.begin()`designa o primeiro `path` elemento no nome do caminho, se presente.
+1. `path::iterator X = pval.begin()` designa o primeiro `path` elemento no nome do caminho, se presente.
 
-1. `X == pval.end()`é verdadeiro quando `X` os pontos ultrapassam o final da sequência de componentes.
+1. `X == pval.end()` é verdadeiro quando `X` os pontos ultrapassam o final da sequência de componentes.
 
-1. `*X`Retorna uma cadeia de caracteres que corresponde ao componente atual
+1. `*X` Retorna uma cadeia de caracteres que corresponde ao componente atual
 
-1. `++X`designa o próximo componente na sequência, se presente.
+1. `++X` designa o próximo componente na sequência, se presente.
 
-1. `--X`designa o componente anterior na sequência, se presente.
+1. `--X` designa o componente anterior na sequência, se presente.
 
 1. A alteração `myname` invalida todos os iteradores que definem elementos no `myname` .
 
-## <a name="pathmake_preferred"></a><a name="make_preferred"></a>caminho:: make_preferred
+## <a name="pathmake_preferred"></a><a name="make_preferred"></a> caminho:: make_preferred
 
 Converte cada separador em um `preferred_separator` conforme necessário.
 
@@ -439,7 +439,7 @@ Converte cada separador em um `preferred_separator` conforme necessário.
 path& make_preferred();
 ```
 
-## <a name="pathnative"></a><a name="native"></a>caminho:: nativo
+## <a name="pathnative"></a><a name="native"></a> caminho:: nativo
 
 Retorna `myname`.
 
@@ -447,7 +447,7 @@ Retorna `myname`.
 const string_type& native() const noexcept;
 ```
 
-## <a name="pathoperator"></a><a name="op_as"></a>caminho:: operador =
+## <a name="pathoperator"></a><a name="op_as"></a> caminho:: operador =
 
 Substitui os elementos do caminho por uma cópia de outro caminho.
 
@@ -459,7 +459,7 @@ template <class Source>
 path& operator=(const Source& source);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O [caminho](../standard-library/path-class.md) que está sendo copiado para o `path` .
@@ -471,7 +471,7 @@ O caminho de origem.
 
 O primeiro operador de membro copia `right.myname` para `myname` . O segundo operador de membro é movido `right.myname` para `myname` . O terceiro operador de membro se comporta da mesma forma que `*this = path(source)` .
 
-## <a name="pathoperator"></a><a name="op_add"></a>caminho:: operador + =
+## <a name="pathoperator"></a><a name="op_add"></a> caminho:: operador + =
 
 Várias `concat` expressões.
 
@@ -488,7 +488,7 @@ template <class Elem>
 path& operator+=(Elem elem);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O caminho adicionado.
@@ -521,7 +521,7 @@ As funções de membro se comportam da mesma maneira que as seguintes expressõe
 
 1. `concat(path(basic_string<Elem>(1, elem)));`
 
-## <a name="pathoperator"></a><a name="op_divide"></a>caminho:: operador/=
+## <a name="pathoperator"></a><a name="op_divide"></a> caminho:: operador/=
 
 Várias `append` expressões.
 
@@ -532,7 +532,7 @@ template <class Source>
 path& operator/=(const Source& source);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O caminho adicionado.
@@ -548,7 +548,7 @@ As funções de membro se comportam da mesma maneira que as seguintes expressõe
 
 1. `append(source);`
 
-## <a name="pathoperator-string_type"></a><a name="op_string"></a>operador caminho:: string_type
+## <a name="pathoperator-string_type"></a><a name="op_string"></a> operador caminho:: string_type
 
 Retorna `myname`.
 
@@ -556,7 +556,7 @@ Retorna `myname`.
 operator string_type() const;
 ```
 
-## <a name="pathparent_path"></a><a name="parent_path"></a>caminho::p arent_path
+## <a name="pathparent_path"></a><a name="parent_path"></a> caminho::p arent_path
 
 Retorna o componente de caminho pai de `myname` .
 
@@ -568,7 +568,7 @@ path parent_path() const;
 
 Retorna o componente de caminho pai de `myname` , especificamente o prefixo de `myname` após a remoção `filename().native()` e quaisquer separadores de diretório imediatamente precedentes. (Igualmente, se `begin() != end()` for, a combinação de todos os elementos no intervalo é `[begin(), --end())` aplicada sucessivamente `operator/=` .) O componente pode estar vazio.
 
-## <a name="pathpath"></a><a name="path"></a>caminho::p Ho
+## <a name="pathpath"></a><a name="path"></a> caminho::p Ho
 
 Constrói um `path` de várias maneiras.
 
@@ -591,7 +591,7 @@ template <class InIt>
 path(InIt first, InIt last, const locale& loc);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Certo*\
 O caminho do qual o caminho construído deve ser uma cópia.
@@ -626,7 +626,7 @@ Para `template<class InIt> path(InIt first, InIt last)` ele é `myname(first, la
 
 Para `template<class InIt> path(InIt first, InIt last, const locale& loc)` isso `myname(first, last)` , obter todas as facetas codecvt necessárias do `loc` .
 
-## <a name="pathpreferred_separator"></a><a name="preferred_separator"></a>caminho::p referred_separator
+## <a name="pathpreferred_separator"></a><a name="preferred_separator"></a> caminho::p referred_separator
 
 O objeto constante fornece o caractere preferencial para separar os componentes do caminho, dependendo do sistema operacional do host.
 
@@ -642,7 +642,7 @@ static constexpr value_type preferred_separator == '/';
 
 Observe que é igualmente permitido na maioria dos contextos no Windows usar L'/' em seu lugar.
 
-## <a name="pathrelative_path"></a><a name="relative_path"></a>caminho:: relative_path
+## <a name="pathrelative_path"></a><a name="relative_path"></a> caminho:: relative_path
 
 Retorna o componente de caminho relativo de `myname` .
 
@@ -654,7 +654,7 @@ path relative_path() const;
 
 Retorna o componente de caminho relativo de `myname` , especificamente o sufixo de `myname` após a remoção `root_path().native()` e quaisquer separadores de diretórios redundantes subsequentes imediatamente. O componente pode estar vazio.
 
-## <a name="pathremove_filename"></a><a name="remove_filename"></a>caminho:: remove_filename
+## <a name="pathremove_filename"></a><a name="remove_filename"></a> caminho:: remove_filename
 
 Remove o nome do arquivo.
 
@@ -662,7 +662,7 @@ Remove o nome do arquivo.
 path& remove_filename();
 ```
 
-## <a name="pathreplace_extension"></a><a name="replace_extension"></a>caminho:: replace_extension
+## <a name="pathreplace_extension"></a><a name="replace_extension"></a> caminho:: replace_extension
 
 Substitui a extensão de `myname` .
 
@@ -670,7 +670,7 @@ Substitui a extensão de `myname` .
 path& replace_extension(const path& newext = path());
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *newext*\
 A nova extensão.
@@ -679,7 +679,7 @@ A nova extensão.
 
 Primeiro, remove o sufixo `extension().native()` de `myname` . Em seguida `!newext.empty() && newext[0] != dot` , se (Where `dot` é `*path(".").c_str()` ), `dot` será anexado a `myname` . Em seguida, *newext* é acrescentado a `myname` .
 
-## <a name="pathreplace_filename"></a><a name="replace_filename"></a>caminho:: replace_filename
+## <a name="pathreplace_filename"></a><a name="replace_filename"></a> caminho:: replace_filename
 
 Substitui o nome do arquivo.
 
@@ -687,7 +687,7 @@ Substitui o nome do arquivo.
 path& replace_filename(const path& pval);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pval*\
 O caminho do nome de arquivo.
@@ -703,7 +703,7 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="pathroot_directory"></a><a name="root_directory"></a>caminho:: root_directory
+## <a name="pathroot_directory"></a><a name="root_directory"></a> caminho:: root_directory
 
 Retorna o componente de diretório raiz de `myname` .
 
@@ -715,7 +715,7 @@ path root_directory() const;
 
 O componente pode estar vazio.
 
-## <a name="pathroot_name"></a><a name="root_name"></a>caminho:: root_name
+## <a name="pathroot_name"></a><a name="root_name"></a> caminho:: root_name
 
 Retorna o componente de nome raiz do `myname` .
 
@@ -727,7 +727,7 @@ path root_name() const;
 
 O componente pode estar vazio.
 
-## <a name="pathroot_path"></a><a name="root_path"></a>caminho:: root_path
+## <a name="pathroot_path"></a><a name="root_path"></a> caminho:: root_path
 
 Retorna o componente de caminho raiz de `myname` .
 
@@ -739,7 +739,7 @@ path root_path() const;
 
 Retorna o componente de caminho raiz de `myname` , especificamente `root_name()`  /  `root_directory` . O componente pode estar vazio.
 
-## <a name="pathstem"></a><a name="stem"></a>caminho:: tronco
+## <a name="pathstem"></a><a name="stem"></a> caminho:: tronco
 
 Retorna o `stem` componente do `myname` .
 
@@ -751,7 +751,7 @@ path stem() const;
 
 Retorna o `stem` componente do `myname` , especificamente `filename().native()` com qualquer `extension().native()` removida à direita. O componente pode estar vazio.
 
-## <a name="pathstring"></a><a name="string"></a>caminho:: cadeia de caracteres
+## <a name="pathstring"></a><a name="string"></a> caminho:: cadeia de caracteres
 
 Converte a sequência armazenada em `mypath` .
 
@@ -775,7 +775,7 @@ A primeira função de membro (modelo) converte a sequência armazenada da `mypa
 
 A segunda função de membro converte a sequência armazenada em na `mypath` codificação preferida pelo sistema host para uma **`char`** sequência e a retorna armazenada em um objeto do tipo `string` .
 
-## <a name="pathstring_type"></a><a name="string_type"></a>caminho:: string_type
+## <a name="pathstring_type"></a><a name="string_type"></a> caminho:: string_type
 
 O tipo é um sinônimo de `basic_string<value_type>`.
 
@@ -783,7 +783,7 @@ O tipo é um sinônimo de `basic_string<value_type>`.
 typedef basic_string<value_type> string_type;
 ```
 
-## <a name="pathswap"></a><a name="swap"></a>caminho:: permuta
+## <a name="pathswap"></a><a name="swap"></a> caminho:: permuta
 
 É executado `swap(mypath, right.mypath)` .
 
@@ -791,7 +791,7 @@ typedef basic_string<value_type> string_type;
 void swap(path& right) noexcept;
 ```
 
-## <a name="pathu16string"></a><a name="u16string"></a>caminho:: u16string
+## <a name="pathu16string"></a><a name="u16string"></a> caminho:: u16string
 
 Converte a sequência armazenada em `mypath` UTF-16 e a retorna armazenada em um objeto do tipo `u16string` .
 
@@ -799,7 +799,7 @@ Converte a sequência armazenada em `mypath` UTF-16 e a retorna armazenada em um
 u16string u16string() const;
 ```
 
-## <a name="pathu32string"></a><a name="u32string"></a>caminho:: u32string
+## <a name="pathu32string"></a><a name="u32string"></a> caminho:: u32string
 
 Converte a sequência armazenada em `mypath` UTF-32 e a retorna armazenada em um objeto do tipo `u32string` .
 
@@ -807,7 +807,7 @@ Converte a sequência armazenada em `mypath` UTF-32 e a retorna armazenada em um
 u32string u32string() const;
 ```
 
-## <a name="pathu8string"></a><a name="u8string"></a>caminho:: u8string
+## <a name="pathu8string"></a><a name="u8string"></a> caminho:: u8string
 
 Converte a sequência armazenada em `mypath` UTF-8 e a retorna armazenada em um objeto do tipo `u8string` .
 
@@ -815,7 +815,7 @@ Converte a sequência armazenada em `mypath` UTF-8 e a retorna armazenada em um 
 string u8string() const;
 ```
 
-## <a name="pathvalue_type"></a><a name="value_type"></a>caminho:: value_type
+## <a name="pathvalue_type"></a><a name="value_type"></a> caminho:: value_type
 
 O tipo descreve os `path` elementos favorecedos pelo sistema operacional do host.
 
@@ -827,7 +827,7 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-## <a name="pathwstring"></a><a name="wstring"></a>caminho:: wstring
+## <a name="pathwstring"></a><a name="wstring"></a> caminho:: wstring
 
 Converte a sequência armazenada em na `mypath` codificação preferida pelo sistema host para uma **`wchar_t`** sequência e a retorna armazenada em um objeto do tipo `wstring` .
 
@@ -835,6 +835,6 @@ Converte a sequência armazenada em na `mypath` codificação preferida pelo sis
 wstring wstring() const;
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)
