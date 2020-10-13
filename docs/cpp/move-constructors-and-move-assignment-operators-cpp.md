@@ -4,12 +4,12 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: e57f67eeca93572b26ee03033cbe4dcf90431f78
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550765"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008873"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
 
@@ -168,7 +168,7 @@ Os procedimentos a seguir descrevem como escrever um construtor de movimentaçã
     return *this;
     ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-complete-move-constructor-and-assignment-operator"></a>Exemplo: concluir o construtor de movimentação e o operador de atribuição
 
 O exemplo a seguir mostra o construtor de movimentação completo e o operador de atribuição de movimentação para a classe `MemoryBlock`:
 
@@ -217,7 +217,7 @@ MemoryBlock& operator=(MemoryBlock&& other) noexcept
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-move-semantics-to-improve-performance"></a>Exemplo use a semântica de movimentação para melhorar o desempenho
 
 O exemplo a seguir mostra como a semântica de movimentação pode melhorar o desempenho de seus aplicativos. O exemplo adiciona dois elementos a um objeto de vetor e insere um novo elemento entre os dois elementos existentes. A `vector` classe usa a semântica de movimentação para executar a operação de inserção com eficiência movendo os elementos do vetor em vez de copiá-los.
 
@@ -309,7 +309,7 @@ MemoryBlock(MemoryBlock&& other) noexcept
 
 A função [std:: move](../standard-library/utility-functions.md#move) converte o lvalue `other` em um Rvalue.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Declarador de referência Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
 [std:: move](../standard-library/utility-functions.md#move)

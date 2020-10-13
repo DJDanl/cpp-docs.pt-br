@@ -26,12 +26,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232411"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008623"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -45,12 +45,12 @@ _se_translator_function _set_se_translator(
 );
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *seTransFunction*<br/>
 Ponteiro para uma função conversora de exceção estruturada de C que você escreve.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Retorna um ponteiro para a função de Tradutor anterior registrada por **_set_se_translator**, para que a função anterior possa ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno poderá ser usado para restaurar o comportamento padrão; Esse valor pode ser **`nullptr`** .
 
@@ -84,7 +84,7 @@ Ao usar **_set_se_translator** de código gerenciado (código compilado com/CLR)
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-catch-__try-exception-error"></a>Exemplo: capturar erro de exceção de __try
 
 Este exemplo encapsula as chamadas para definir um tradutor de exceção estruturado e restaurar o antigo em uma classe RAII, `Scoped_SE_Translator` . Essa classe permite introduzir um tradutor específico de escopo como uma única declaração. O destruidor de classe restaura o tradutor original quando o controle sai do escopo.
 
@@ -157,7 +157,7 @@ In __finally
 Caught a __try exception, error c0000094.
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-catch-se_exception-error"></a>Exemplo: detectar SE_Exception erro
 
 Embora a funcionalidade fornecida pelo **_set_se_translator** não esteja disponível em código gerenciado, é possível usar esse mapeamento em código nativo, mesmo que o código nativo esteja em uma compilação sob a opção **/CLR** , desde que o código nativo seja indicado usando `#pragma unmanaged` . Se uma exceção estruturada estiver sendo lançada em código gerenciado que será mapeado, o código que gera e manipula a exceção deve ser marcado `#pragma unmanaged` . O código a seguir mostra um uso possível. Para obter mais informações, consulte [Diretivas Pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
@@ -230,7 +230,7 @@ int main() {
 Caught SE_Exception, error c0000094
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Rotinas de manipulação de exceção](../../c-runtime-library/exception-handling-routines.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>

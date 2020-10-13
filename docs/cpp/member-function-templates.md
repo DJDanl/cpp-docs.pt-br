@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8514c8ffe630f5bc44d8d287d6ccf08c7755e3a0
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177975"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008561"
 ---
 # <a name="member-function-templates"></a>Modelos de função de membro
 
@@ -17,7 +17,7 @@ O modelo de membro do termo se refere aos modelos da função de membro e modelo
 
 As funções de membro podem ser modelos de função em vários contextos. Todas as funções de modelos da classe são genéricas, mas não são referidas como modelos de membros ou modelos da função de membro. Se essas funções de membro usam seus próprios argumentos de modelo, são consideradas modelos da função de membro.
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-member-function-templates"></a>Exemplo: declarar modelos de função de membro
 
 Os modelos da função de membro de classes nontemplate ou de modelo são declarados como modelos de função com seus parâmetros de modelo.
 
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-member-function-template-of-template-class"></a>Exemplo: membro de modelo de função de classe de modelo
 
 O exemplo a seguir mostra um modelo da função de membro de uma classe de modelo.
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-define-member-templates-outside-class"></a>Exemplo: definir modelos de membro fora da classe
 
 ```cpp
 // defining_member_templates_outside_class.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-templated-user-defined-conversion"></a>Exemplo: conversão definida pelo usuário com modelo
 
 As classes locais não podem ter modelos de membro.
 
@@ -105,6 +105,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Modelos de função](../cpp/function-templates.md)

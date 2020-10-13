@@ -39,18 +39,18 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: faf7f607f9433fa3e4813957b24220a5e66e1e49
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500593"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008614"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
 Inclua o cabeçalho STL/CLR `<cliext/utility>` para definir a classe de modelo `pair` e várias funções de modelo de suporte.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 #include <utility>
@@ -81,8 +81,6 @@ Inclua o cabeçalho STL/CLR `<cliext/utility>` para definir a classe de modelo `
 |--------------|-----------------|
 |[make_pair (STL/CLR)](#make_pair)|Crie um par de um par de valores.|
 
-## <a name="members"></a>Membros
-
 ## <a name="pair-stlclr"></a><a name="pair"></a> par (STL/CLR)
 
 A classe de modelo descreve um objeto que encapsula um par de valores.
@@ -110,12 +108,12 @@ O tipo do segundo valor encapsulado.
 |[pair::first_type (STL/CLR)](#first_type)|O tipo do primeiro valor encapsulado.|
 |[pair::second_type (STL/CLR)](#second_type)|O tipo do segundo valor encapsulado.|
 
-|Objeto de membro|Descrição|
+|Objeto de membro|Description|
 |-------------------|-----------------|
 |[pair::first (STL/CLR)](#first)|O primeiro valor armazenado.|
 |[pair::second (STL/CLR)](#second)|O segundo valor armazenado.|
 
-|Função membro|Descrição|
+|Função membro|Description|
 |---------------------|-----------------|
 |[pair::pair (STL/CLR)](#pair_pair)|Constrói um objeto de par.|
 |[pair::swap (STL/CLR)](#swap)|Permuta o conteúdo de dois pares.|

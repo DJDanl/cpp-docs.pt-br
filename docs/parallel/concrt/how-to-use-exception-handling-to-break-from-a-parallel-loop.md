@@ -5,12 +5,12 @@ helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 9cf42df0926022f93633a6b5b1365ae9fc646a1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f6842e3093a577289c0c4432d96298e3c7b2bb92
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213912"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008501"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Como usar tratamento de exceções para parar um loop paralelo
 
@@ -18,19 +18,19 @@ Este tópico mostra como escrever um algoritmo de pesquisa para uma estrutura de
 
 O tópico [cancelamento](cancellation-in-the-ppl.md) explica a função de cancelamento na biblioteca de padrões paralelos. O uso da manipulação de exceção é uma maneira menos eficiente de cancelar o trabalho paralelo do que o uso dos métodos [Concurrency:: task_group:: Cancel](reference/task-group-class.md#cancel) e [concurrency:: structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) . No entanto, um cenário em que o uso do tratamento de exceção para cancelar o trabalho é apropriado é quando você chama uma biblioteca de terceiros que usa tarefas ou algoritmos paralelos, mas não fornece um `task_group` `structured_task_group` objeto ou para cancelar.
 
-## <a name="example"></a>Exemplo
+## <a name="example-basic-tree-type"></a>Exemplo: tipo de árvore básica
 
 O exemplo a seguir mostra um `tree` tipo básico que contém um elemento de dados e uma lista de nós filho. A seção a seguir mostra o corpo do `for_all` método, que executa recursivamente uma função de trabalho em cada nó filho.
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
-## <a name="example"></a>Exemplo
+## <a name="example-perform-work-in-parallel"></a>Exemplo: executar trabalho em paralelo
 
 O exemplo a seguir mostra o `for_all` método. Ele usa o algoritmo [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) para executar uma função de trabalho em cada nó da árvore em paralelo.
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
-## <a name="example"></a>Exemplo
+## <a name="example--search-the-tree-for-a-value"></a>Exemplo: Pesquisar um valor na árvore
 
 O exemplo a seguir mostra a `search_for_value` função, que procura um valor no objeto fornecido `tree` . Essa função passa para o `for_all` método uma função de trabalho que é lançada quando encontra um nó de árvore que contém o valor fornecido.
 
@@ -40,7 +40,7 @@ Quando a função de trabalho que você fornece a um grupo de tarefas gera uma e
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
-## <a name="example"></a>Exemplo
+## <a name="example-create-and-search-a-tree-in-parallel"></a>Exemplo: criar e pesquisar uma árvore em paralelo
 
 O exemplo a seguir cria um `tree` objeto e o pesquisa em busca de vários valores em paralelo. A `build_tree` função é mostrada mais adiante neste tópico.
 
@@ -48,7 +48,7 @@ O exemplo a seguir cria um `tree` objeto e o pesquisa em busca de vários valore
 
 Este exemplo usa o algoritmo [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) para pesquisar valores em paralelo. Para obter mais informações sobre esse algoritmo, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-finished-exception-handling-code-sample"></a>Exemplo: exemplo de código de manipulação de exceção concluída
 
 O exemplo completo a seguir usa a manipulação de exceção para pesquisar valores em uma estrutura de árvore básica.
 
@@ -68,10 +68,10 @@ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em 
 
 > **cl.exe/EHsc Task-Tree-Search. cpp**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Cancelamento no PPL](cancellation-in-the-ppl.md)<br/>
-[Tratamento de exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
+[Tratamento de Exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Paralelismo de Tarefas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Classe task_group](reference/task-group-class.md)<br/>

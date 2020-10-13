@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214224"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008354"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr  (C++/CLI e C++/CX)
 
@@ -51,7 +51,7 @@ Chamadas de função entre linguagens que usam valores de ponteiro nulo para ver
 
 Não é possível inicializar um identificador para zero; **`nullptr`** pode ser usado somente. A atribuição da constante 0 a um identificador de objeto produz um `Int32` com conversão boxing e uma conversão em `Object^`.
 
-## <a name="example"></a>Exemplo
+## <a name="example-nullptr-keyword"></a>Exemplo: `nullptr` palavra-chave
 
 O exemplo de código a seguir demonstra que a **`nullptr`** palavra-chave pode ser usada sempre que um identificador, ponteiro nativo ou argumento de função pode ser usado. E o exemplo demonstra que a **`nullptr`** palavra-chave pode ser usada para verificar uma referência antes de ser usada.
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-nullptr-and-zero-interchangeably"></a>Exemplo: use `nullptr` e zero de forma intercambiável
 
 O exemplo de código a seguir mostra que **`nullptr`** e zero podem ser usados de maneira intercambiável em ponteiros nativos.
 
@@ -119,7 +119,7 @@ pMyClass == nullptr
 pMyClass == 0
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-interpret-nullptr-as-a-handle"></a>Exemplo: interpretar `nullptr` como um identificador
 
 O exemplo de código a seguir mostra que **`nullptr`** é interpretado como um identificador para qualquer tipo ou um ponteiro nativo para qualquer tipo. Em caso de sobrecarga de função com identificadores para tipos diferentes, um erro de ambiguidade será gerado. O **`nullptr`** teria que ser convertido explicitamente em um tipo.
 
@@ -137,7 +137,7 @@ void f_null() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-cast-nullptr"></a>Exemplo: Cast `nullptr`
 
 O exemplo de código a seguir mostra que a conversão **`nullptr`** é permitida e retorna um ponteiro ou um identificador para o tipo de conversão que contém o **`nullptr`** valor.
 
@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-pass-nullptr-as-a-function-parameter"></a>Exemplo: passar `nullptr` como um parâmetro de função
 
 O exemplo de código a seguir mostra que **`nullptr`** pode ser usado como um parâmetro de função.
 
@@ -179,7 +179,7 @@ int main() {
 test
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-default-initialization"></a>Exemplo: inicialização padrão
 
 O exemplo de código a seguir mostra que quando os identificadores são declarados e não são inicializados explicitamente, eles são inicializados como padrão para **`nullptr`** .
 
@@ -206,7 +206,7 @@ int main() {
 NULL
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-assign-nullptr-to-a-native-pointer"></a>Exemplo: atribuir `nullptr` a um ponteiro nativo
 
 O exemplo de código a seguir mostra que **`nullptr`** pode ser atribuído a um ponteiro nativo quando você compila com `/clr` .
 
@@ -223,7 +223,7 @@ int main() {
 
 Opção do compilador: (não é necessário; com suporte de todas as opções de geração de código, incluindo `/ZW` e `/clr` )
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Extensões de componente para .NET e UWP](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

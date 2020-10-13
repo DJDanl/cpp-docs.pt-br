@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f71c2c3862bd015ba3edcd17aeac85472eb2562
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223571"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008916"
 ---
 # <a name="template-specialization-c"></a>Especialização de modelo (C++)
 
@@ -19,7 +19,7 @@ Os modelos da classe podem estar parcialmente especializados e a classe resultan
 
 - Um modelo tem apenas um tipo, mas uma especialização é necessária para os tipos ponteiro, referência, ponteiro para o membro ou o ponteiro de função. A própria especialização ainda é um modelo no tipo apontado ou referenciado.
 
-## <a name="example"></a>Exemplo
+## <a name="example-partial-specialization-of-class-templates"></a>Exemplo: especialização parcial de modelos de classe
 
 ```cpp
 // partial_specialization_of_class_templates.cpp
@@ -66,7 +66,7 @@ PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0
 PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-partial-specialization-for-pointer-types"></a>Exemplo: especialização parcial para tipos de ponteiro
 
 Se você tiver uma classe de coleção de modelos que usa qualquer tipo `T` , poderá criar uma especialização parcial que usa qualquer tipo de ponteiro `T*` . O código a seguir demonstra um modelo de classe de coleção `Bag` e uma especialização parcial para os tipos de ponteiro nos quais a coleção diferencia os tipos de ponteiro antes de copiá-los na matriz. Então, a coleção armazena os valores que forem apontados. Com o modelo original, somente os próprios ponteiros seriam armazenados na coleção, deixando os dados vulneráveis a exclusão ou a alteração. Nesta versão especial do ponteiro da coleção, o código para verificar se há um ponteiro nulo no método `add` é adicionado.
 
@@ -178,7 +178,7 @@ Null pointer!
 3 87 8 100
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-define-partial-specialization-so-one-type-is-int"></a>Exemplo: definir especialização parcial para que um tipo seja `int`
 
 O exemplo a seguir define uma classe de modelo que usa pares de dois tipos e, em seguida, define uma especialização parcial dessa classe de modelo especializada para que um dos tipos seja **`int`** . A especialização define um método de classificação adicionais que implementa um tipo simples da bolha com base em inteiro.
 

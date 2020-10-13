@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cd2ec4e22d94c42432a1fc3e39afd5540302d22
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213223"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008205"
 ---
 # `selectany`
 
@@ -20,7 +20,7 @@ ms.locfileid: "87213223"
 
 Informa ao compilador que o item de dados global declarado (variável ou objeto) é uma COMDAT aleatória (uma função compactada).
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 > **`__declspec( selectany )`***Declarador*
 
@@ -37,7 +37,7 @@ Um item de dados global normalmente pode ser inicializado apenas uma vez em um p
 > [!NOTE]
 > **`selectany`** Só pode ser aplicado à inicialização real de itens de dados globais que são visíveis externamente.
 
-## <a name="example"></a>Exemplo
+## <a name="example-selectany-attribute"></a>Exemplo: `selectany` atributo
 
 Este código mostra como usar o **`selectany`** atributo:
 
@@ -71,7 +71,7 @@ int i;
 __declspec(selectany) X x(1);
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-selectany-attribute-to-ensure-data-comdat-folding"></a>Exemplo: Use o `selectany` atributo para garantir a dobra de dados COMDAT
 
 Este código mostra como usar o **`selectany`** atributo para garantir que os dados sejam dobrados por COMDAT quando você também usa a [`/OPT:ICF`](../build/reference/opt-optimizations.md) opção de vinculador. Observe que os dados devem ser marcados com **`selectany`** e colocados em uma **`const`** seção (ReadOnly). Você deve especificar explicitamente a seção somente leitura.
 
@@ -88,7 +88,7 @@ int main() {
 
 **FINAL específico da Microsoft**
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [`__declspec`](../cpp/declspec.md)<br/>
 [Palavras-chave](../cpp/keywords-cpp.md)

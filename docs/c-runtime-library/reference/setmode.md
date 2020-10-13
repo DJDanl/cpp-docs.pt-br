@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915805"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008417"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -59,7 +59,7 @@ Descritor de arquivo.
 *mode*<br/>
 Novo modo de conversão.
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor Retornado
 
 Se bem-sucedido, retorna para o modo de conversão anterior.
 
@@ -74,7 +74,7 @@ A função **_setmode** define como *modo* o modo de tradução do arquivo forne
 Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** para habilitar o modo Unicode, conforme demonstrado no segundo exemplo posteriormente neste documento.
 
 > [!CAUTION]
-> O modo Unicode é para funções de impressão amplas ( `wprintf`por exemplo,) e não tem suporte para funções de impressão restritas. O uso de uma função de impressão restrita em um fluxo de modo Unicode dispara uma declaração.
+> O modo Unicode é para funções de impressão amplas (por exemplo, `wprintf` ) e não tem suporte para funções de impressão restritas. O uso de uma função de impressão restrita em um fluxo de modo Unicode dispara uma declaração.
 
 **_setmode** normalmente é usado para modificar o modo de tradução padrão de **stdin** e **stdout**, mas você pode usá-lo em qualquer arquivo. Se você aplicar **_setmode** ao descritor de arquivo para um fluxo, chame **_setmode** antes de executar qualquer operação de entrada ou saída no fluxo.
 
@@ -91,7 +91,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-_setmode-to-change-stdin"></a>Exemplo: usar _setmode para alterar stdin
 
 ```C
 // crt_setmode.c
@@ -119,7 +119,7 @@ int main( void )
 'stdin' successfully changed to binary mode
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-use-_setmode-to-change-stdout"></a>Exemplo: Use _setmode para alterar stdout
 
 ```C
 // crt_setmodeunicode.c
@@ -139,9 +139,9 @@ int main(void) {
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Manipulação de Arquivos](../../c-runtime-library/file-handling.md)<br/>
+[Manipulação de arquivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
