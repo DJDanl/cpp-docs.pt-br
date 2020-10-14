@@ -1,18 +1,18 @@
 ---
 title: Palavras-chave C
 description: Palavras-chave nas extensões de compilador C e Microsoft C padrão.
-ms.date: 09/12/2020
+ms.date: 10/12/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: f459b81c2b3f314218108f3f367eec0c1bf17f26
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: cb255e1d7ce6bc15bf13bc1e3152bc3464ea5ec2
+ms.sourcegitcommit: 651348f8cd92ab0d52f09e9225a7eb41562559db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075732"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059789"
 ---
 # <a name="c-keywords"></a>Palavras-chave C
 
@@ -119,7 +119,8 @@ As palavras-chave e os identificadores especiais a seguir são reconhecidos pelo
         **`__try`**<sup>05</sup>\
         **`dllexport`**<sup>quatro</sup>\
         **`__inline`**<sup>05</sup>\
-        **`__leave`**<sup>05</sup>
+        **`__leave`**<sup>05</sup>\
+        **`static_assert`**<sup>152</sup>
     :::column-end:::
 :::row-end:::
 
@@ -129,10 +130,12 @@ As palavras-chave e os identificadores especiais a seguir são reconhecidos pelo
 
 <sup>5</sup> para compatibilidade com versões anteriores, essas palavras-chave estão disponíveis com dois sublinhados à esquerda e um único sublinhado à esquerda quando as extensões da Microsoft estão habilitadas.
 
+<sup>6</sup> quando <Assert. h> não estiver incluído, o compilador do Microsoft Visual C será mapeado **`static_assert`** para a **`_Static_assert`** palavra-chave C11.
+
 As extensões da Microsoft são ativadas por padrão. Para auxiliar na criação de código portátil, você pode desabilitar extensões da Microsoft especificando a opção [/za \( Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) durante a compilação. Quando você usa essa opção, algumas palavras-chave específicas da Microsoft são desabilitadas.
 
 Quando as extensões do Microsoft são habilitadas, você pode usar as palavras-chave listadas acima em seus programas. Para conformidade com os padrões, a maioria dessas palavras-chave é precedida por um duplo sublinhado. As quatro exceções,,, **`dllexport`** **`dllimport`** **`naked`** e **`thread`** , são usadas apenas com **`__declspec`** e não exigem um sublinhado duplo à esquerda. Para compatibilidade com versões anteriores, há suporte para as versões de sublinhado único do restante das palavras-chave.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Elementos de C](../c-language/elements-of-c.md)
