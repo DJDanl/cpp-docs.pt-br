@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218020"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135522"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfaces genéricas (C++/CLI)
 
@@ -36,7 +36,7 @@ Saiba mais sobre interfaces em [classe interface](interface-class-cpp-component-
 (Opcional) Informações declarativas adicionais. Saiba mais sobre atributos e classes de atributos em **Atributos**.
 
 *class-key*<br/>
-**`class`** or**`typename`**
+**`class`** or **`typename`**
 
 *type-parameter-identifier(s)*<br/>
 Lista de identificadores separados por vírgulas.
@@ -59,7 +59,7 @@ Declarações de membros da interface.
 *declarators*<br/>
 (Opcional) Declarações de variáveis ​​baseadas neste tipo.
 
-## <a name="example"></a>Exemplo
+## <a name="example-how-to-declare-and-instantiate-a-generic-interface"></a>Exemplo: como declarar e criar uma instância de uma interface genérica
 
 O exemplo a seguir demonstra como declarar e criar a instância de uma interface genérica. No exemplo, declaramos a interface genérica `IList<ItemType>`. Em seguida, implementamos por duas classes genéricas, `List1<ItemType>` e `List2<ItemType>`, com diferentes implementações.
 
@@ -236,7 +236,7 @@ Array List
 List2
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example-declare-a-generic-interface"></a>Exemplo: declarar uma interface genérica
 
 Este exemplo declara uma interface genérica, `IMyGenIface`, e duas interfaces não genéricas, `IMySpecializedInt` e `ImySpecializedString`, que especializam `IMyGenIface`. As duas interfaces especializadas são então implementadas por duas classes, `MyIntClass` e `MyStringClass`. O exemplo mostra como especializar interfaces genéricas, instanciar interfaces genéricas e não genéricas e chamar os membros explicitamente implementados nas interfaces.
 

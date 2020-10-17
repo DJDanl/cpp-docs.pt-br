@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833472"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135535"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuração e relatório de erros
 
@@ -85,7 +85,7 @@ A macro ATLASSERT executa a mesma funcionalidade que a macro [_ASSERTE](../../c-
 ATLASSERT(booleanExpression);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *valor booliano*<br/>
 Expressão (incluindo ponteiros) que é avaliada como zero ou 0.
@@ -94,7 +94,7 @@ Expressão (incluindo ponteiros) que é avaliada como zero ou 0.
 
 Em builds de depuração, ATLASSERT avalia a *booliana* e gera um relatório de depuração quando o resultado é false.
 
-## <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atldef. h
 
@@ -107,7 +107,7 @@ ATLENSURE(booleanExpression);
 ATLENSURE_THROW(booleanExpression, hr);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *valor booliano*<br/>
 Especifica uma expressão booliana a ser testada.
@@ -131,7 +131,7 @@ A diferença entre ATLENSURE e ATLASSERT é que o ATLENSURE gera uma exceção e
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 
@@ -143,7 +143,7 @@ Nas compilações de depuração da ATL, o envia a cadeia de caracteres " *FuncN
 ATLTRACENOTIMPL(funcname);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *funcname*<br/>
 no Uma cadeia de caracteres que contém o nome da função que não está implementada.
@@ -156,7 +156,7 @@ Em builds de versão, simplesmente retorna E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** ATLTRACE. h
 
@@ -173,7 +173,7 @@ ATLTRACE(
     LPCSTR lpszFormat, ...);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *exp*<br/>
 no A cadeia de caracteres e as variáveis a serem enviadas à janela de saída ou a qualquer aplicativo que intercepta essas mensagens.
@@ -181,7 +181,7 @@ no A cadeia de caracteres e as variáveis a serem enviadas à janela de saída o
 *category*<br/>
 no Tipo de evento ou método no qual relatar. Consulte os comentários para obter uma lista de categorias.
 
-*nível*<br/>
+*level*<br/>
 no O nível de rastreamento a ser relatado. Consulte os comentários para obter detalhes.
 
 *lpszFormat*<br/>
@@ -204,7 +204,7 @@ ATLTRACE2(
     LPCSTR lpszFormat,  ...);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *exp*<br/>
 no A cadeia de caracteres a ser enviada à janela de saída ou a qualquer aplicativo que intercepta essas mensagens.
@@ -212,7 +212,7 @@ no A cadeia de caracteres a ser enviada à janela de saída ou a qualquer aplica
 *category*<br/>
 no Tipo de evento ou método no qual relatar. Consulte os comentários para obter uma lista de categorias.
 
-*nível*<br/>
+*level*<br/>
 no O nível de rastreamento a ser relatado. Consulte os comentários para obter detalhes.
 
 *lpszFormat*<br/>
