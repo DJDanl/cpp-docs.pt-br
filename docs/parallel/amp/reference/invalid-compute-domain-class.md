@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 09418991e805e494c1d79ef31980bbec66a2e172
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126455"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135561"
 ---
 # <a name="invalid_compute_domain-class"></a>Classe invalid_compute_domain
 
@@ -29,7 +29,7 @@ class invalid_compute_domain : public runtime_exception;
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|{1&gt;Nome&lt;1}|Descrição|
+|Nome|Descrição|
 |----------|-----------------|
 |[Construtor de invalid_compute_domain](#ctor)|Inicializa uma nova instância da classe `invalid_compute_domain`.|
 
@@ -41,17 +41,17 @@ class invalid_compute_domain : public runtime_exception;
 
 `invalid_compute_domain`
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** amprt. h
 
 **Namespace:** Simultaneidade
 
-## <a name="ctor"></a>invalid_compute_domain
+## <a name="invalid_compute_domain"></a><a name="ctor"></a> invalid_compute_domain
 
 Inicializa uma nova instância da classe.
 
-## <a name="syntax"></a>Sintaxe
+### <a name="syntax"></a>Sintaxe
 
 ```cpp
 explicit invalid_compute_domain(
@@ -65,10 +65,10 @@ invalid_compute_domain() throw();
 *_Message*<br/>
 Uma descrição do erro.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Uma instância da classe `invalid_compute_domain`
+Uma instância da `invalid_compute_domain` classe
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
