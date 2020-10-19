@@ -3,12 +3,12 @@ title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040971"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176278"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -59,7 +59,7 @@ Os projetos do Linux no Visual Studio exigem que as seguintes dependências seja
 - **Um compilador-o** Visual Studio 2019 tem suporte completo para gcc e [Clang](../build/clang-support-cmake.md).
 - **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
 - **rsync** e **zip** -a inclusão de rsync e zip permite que o Visual Studio Extraia Arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos do Windows para uso pelo IntelliSense.
-- **Make**
+- **make**
 - **OpenSSH-Server** (somente sistemas Linux remotos)-o Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
 - **CMake** (somente projetos CMake) – você pode instalar [binários CMake vinculados estaticamente da Microsoft para Linux](https://github.com/microsoft/CMake/releases).
 - **ninja-Build** (somente projetos CMake)- [ninja](https://ninja-build.org/) é o gerador padrão para as configurações do Linux e do WSL no Visual Studio 2019 versão 16,6 ou posterior.
@@ -75,7 +75,7 @@ Os projetos do Linux no Visual Studio exigem que as seguintes dependências seja
 - **gcc** -o Visual Studio 2017 tem suporte completo para gcc.
 - **gdb** – o Visual Studio inicia automaticamente o gdb no sistema Linux e usa o front-end do depurador do Visual Studio para fornecer uma experiência de depuração de fidelidade total no Linux.
 - **rsync** e **zip** -a inclusão de rsync e zip permite que o Visual Studio Extraia Arquivos de cabeçalho do seu sistema Linux para o sistema de arquivos do Windows a ser usado para o IntelliSense.
-- **Make**
+- **make**
 - **OpenSSH-Server** -o Visual Studio se conecta a sistemas Linux remotos por meio de uma conexão SSH segura.
 - **CMake** (somente projetos CMake) – você pode instalar [binários CMake vinculados estaticamente da Microsoft para Linux](https://github.com/microsoft/CMake/releases).
 
@@ -157,7 +157,7 @@ O computador de destino que executa o Fedora usa o instalador do pacote **dnf**.
 
 Agora você está pronto para criar ou abrir um projeto do Linux e configurá-lo para ser executado no sistema de destino. Para obter mais informações, consulte:
 
-- [Criar um novo projeto do Linux](create-a-new-linux-project.md)
+- [Criar um novo projeto do C++ do MSBuild do Linux](create-a-new-linux-project.md)
 - [Configurar um projeto do Linux CMake](cmake-linux-project.md)
 
 ::: moniker-end

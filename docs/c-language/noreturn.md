@@ -1,0 +1,73 @@
+---
+title: Palavra-chave _Noreturn e macro noreturn (C11)
+description: Descreve a `_Noreturn` palavra-chave e a `noreturn` macro.
+ms.date: 10/16/2020
+f1_keywords:
+- _Noreturn_c
+- noreturn
+helpviewer_keywords:
+- keywords [C]
+ms.openlocfilehash: f876485b5be497688c5cf1dd8fca206d08560de0
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92182802"
+---
+# <a name="_noreturn-keyword-and-noreturn-macro-c11"></a>`_Noreturn` palavra-chave e `noreturn` macro (C11)
+
+A `_Noreturn` palavra-chave foi introduzida em C11. Ele informa ao compilador que a função à qual ela é aplicada não retorna. O compilador sabe que o código após uma chamada para uma `_Noreturn` função está inacessível.
+
+Uma macro de conveniência, `noreturn` , fornecida em <stdnoreturn. h>, é mapeada para a `_Noreturn` palavra-chave.
+
+Os principais benefícios de usar `_Noreturn` (ou o equivalente `noreturn` ) estão tornando a intenção da função clara no código para futuros leitores e detectando código inacessível involuntariamente.
+
+## <a name="example-using-noreturn-macro-and-_noreturn-keyword"></a>Exemplo usando `noreturn` macro e `_Noreturn ` palavra-chave
+
+O exemplo a seguir demonstra a `_Noreturn` palavra-chave e a `noreturn` macro equivalente.
+
+O IntelliSense pode gerar um erro falso, `E0065` se você usar a macro `noreturn` que você pode ignorar. Ele não impede que você execute o exemplo.
+
+```C
+// Compile with Warning Level4 (/W4) and /std:c11
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdnoreturn.h>
+
+noreturn void fatal_error(void)
+{
+    exit(3);
+}
+
+_Noreturn void not_coming_back(void)
+{
+    puts("There's no coming back");
+    fatal_error();
+    return; // warning C4645 - function declared with noreturn has a return statement
+}
+
+void done(void)
+{
+    puts("We'll never get here");
+}
+
+int main(void)
+{
+    not_coming_back();
+    done(); // warning c4702 - unreachable code
+
+    return 0;
+}
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Macro|Cabeçalho necessário|
+|-------------|---------------------|
+|**`noreturn`**|\<stdnoreturn.h>|
+
+## <a name="see-also"></a>Confira também
+
+[/STD (especifique a versão padrão do idioma)](../build/reference/std-specify-language-standard-version.md)\
+[/W4 (especificar nível de aviso)](../build/reference/compiler-option-warning-level.md) 
+ [Aviso de C4702](../error-messages\compiler-warnings\compiler-warning-level-4-c4702.md)

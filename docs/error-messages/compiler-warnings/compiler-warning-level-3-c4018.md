@@ -1,39 +1,52 @@
 ---
 title: Aviso do compilador (nível 3) C4018
-ms.date: 11/04/2016
+description: Aviso do compilador C/C++ da Microsoft C4018, suas causas e resolução.
+ms.date: 10/16/2020
 f1_keywords:
 - C4018
 helpviewer_keywords:
 - C4018
-ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: f5708a9f52b6fc8206094454c352710199437f27
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9d01f6b733c2ca18880aa6f4b6fca9771f8123f
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161692"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176168"
 ---
 # <a name="compiler-warning-level-3-c4018"></a>Aviso do compilador (nível 3) C4018
 
-' Expression ': incompatibilidade de assinado/não assinado
+> '*token*': incompatibilidade de assinado/não assinado
 
-A comparação de um número assinado e não assinado exigia que o compilador converta o valor assinado para não assinado.
+Usar o operador de *token* para comparar **`signed`** e **`unsigned`** números exigiam que o compilador converta o **`signed`** valor para **`unsigned`** .
 
-Esse aviso pode ser corrigido se você converter um dos dois tipos durante o teste de tipos assinados e não assinados.
+## <a name="remarks"></a>Comentários
 
-O exemplo a seguir gera C4018:
+Uma maneira de corrigir esse aviso é se você converter um dos dois tipos ao comparar **`signed`** e **`unsigned`** tipos.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo gera C4018 e mostra como corrigi-lo:
 
 ```cpp
 // C4018.cpp
-// compile with: /W3
+// compile with: cl /EHsc /W4 C4018.cpp
 int main() {
-   unsigned int uc = 0;
-   int c = 0;
-   unsigned int c2 = 0;
+    unsigned int uc = 0;
+    int c = 0;
+    unsigned int c2 = c; // implicit conversion
 
-   if (uc < c) uc = 0;   // C4018
+    if (uc < c)           // C4018
+        uc = 0;
 
-   // OK
-   if (uc == c2) uc = 0;
+    if (uc < unsigned(c)) // OK
+        uc = 0;
+
+    if (uc < c2)          // Also OK
+       uc = 0;
 }
 ```
+
+## <a name="see-also"></a>Confira também
+
+[Aviso do compilador (nível 4) C4388](c4388.md)\
+[Aviso do compilador (nível 4) C4389](compiler-warning-level-4-c4389.md)

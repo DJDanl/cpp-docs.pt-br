@@ -1,14 +1,15 @@
 ---
 title: Propriedades do C/C++ (Linux C++)
-ms.date: 06/07/2019
+ms.date: 10/14/2020
+description: Descreve as opções de compilação do Linux na página de propriedades do Visual Studio C/C++
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0840327b30d94b4845adef7788fd73f4e797775f
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441478"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176234"
 ---
 # <a name="cc-properties-linux-c"></a>Propriedades do C/C++ (Linux C++)
 
@@ -36,6 +37,9 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Compilador C++ | Especifica o programa a ser invocado durante a compilação de arquivos de origem C++ ou o caminho para o compilador C++ no sistema remoto. |
 | Tempo limite de compilação | Tempo limite de compilação remota, em milissegundos. |
 | Copiar arquivos-objetos | Especifica se é necessário copiar os arquivos-objetos compilados do sistema remoto para o computador local. |
+| Máximo de trabalhos de compilação paralela | O número de processos a serem criados em paralelo durante a compilação. O padrão é 1. Se você estiver usando o subsistema do Windows para Linux (WSL) versão 1, o limite será 64. |
+| Validar arquitetura | Especifique se deseja verificar se a plataforma para a qual o projeto se destina corresponde ao sistema remoto.|
+| Habilitar limpeza de endereço | Compile o programa com o resolvedor de endereço, que é um detector de erro de memória rápida que pode encontrar problemas de memória de tempo de execução, como o uso gratuito, e a execução de verificações fora dos limites.|
 
 ## <a name="optimization"></a>Optimization
 
@@ -50,8 +54,8 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ## <a name="preprocessor"></a>Pré-processador
 
-| Propriedade | Descrição | Opções |
-|--|--|--|
+| Propriedade | Descrição |
+|--|--|
 | Definições do Pré-processador | Define os símbolos de pré-processamento para o arquivo de origem. (-D) |
 | Excluir definições do pré-processador | Especifica uma ou mais exclusões de definição do pré-processador.  (-U \[macro]) |
 | Excluir todas as definições do pré-processador | Exclui as definições de todos os valores do pré-processador definidos anteriormente.  (-undef) |
@@ -73,14 +77,14 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Propriedade | Descrição | Opções |
 |--|--|--|
 | Habilitar informações de tipo de tempo de execução | Adiciona um código para verificar os tipos de objeto C++ no runtime (informações de tipo de runtime).     (frtti, fno-rtti) |
-| Padrão de linguagem C | Determina o padrão de linguagem C. | **Padrão**<br/>**C89** – padrão de linguagem C89.<br/>**C99** – padrão de linguagem C99.<br/>**C11** – padrão de linguagem C11.<br/>**C99 (dialeto GNU)** – padrão de linguagem C99 (dialeto GNU).<br/>**C11 (GNU Dialeto)** - C11 (GNU Dialeto) Padrão de língua. |
-| Padrão de linguagem C++ | Determina o padrão de linguagem C++. | **Padrão**<br/>**C++03** – padrão de linguagem C++03.<br/>**C++11** - C++11 Padrão de Linguagem.<br/>**C++14** – padrão de linguagem C++14.<br/>**C++03 (dialeto GNU)** – padrão de linguagem C++03 (dialeto GNU).<br/>**C++11 (dialeto GNU)** – padrão de linguagem C++11 (dialeto GNU).<br/>**C++14 (dialeto GNU)** – padrão de linguagem C++14 (dialeto GNU). |
+| Padrão de linguagem C | Determina o padrão de linguagem C. | **Default**<br/>**C89** – padrão de linguagem C89.<br/>**C99** – padrão de linguagem C99.<br/>**C11** – padrão de linguagem C11.<br/>**C99 (dialeto GNU)** – padrão de linguagem C99 (dialeto GNU).<br/>Padrão de linguagem **C11 (DIALETO GNU)** -C11 (dialeto GNU). |
+| Padrão de linguagem C++ | Determina o padrão de linguagem C++. | **Default**<br/>**C++03** – padrão de linguagem C++03.<br/>**C++ 11** -padrão de linguagem c++ 11.<br/>**C++14** – padrão de linguagem C++14.<br/>**C++03 (dialeto GNU)** – padrão de linguagem C++03 (dialeto GNU).<br/>**C++11 (dialeto GNU)** – padrão de linguagem C++11 (dialeto GNU).<br/>**C++14 (dialeto GNU)** – padrão de linguagem C++14 (dialeto GNU). |
 
 ## <a name="advanced"></a>Avançado
 
 | Propriedade | Descrição | Opções |
 |--|--|--|
-| Compilar como | Seleciona a opção de linguagem de compilação para arquivos .c e .cpp. (-x c, -x c++) | **Padrão** – detecção com base na extensão .c ou .cpp.<br/>**Compilar como Código C** - Compilar como código C.<br/>**Compilar como Código C++** - Compilar como código C++. |
+| Compilar como | Seleciona a opção de linguagem de compilação para arquivos .c e .cpp. (-x c, -x c++) | **Padrão** – detecção com base na extensão .c ou .cpp.<br/>**Compile como c Code** -compile como código c.<br/>**Compile como C++ Code** -compile como código c++. |
 | Arquivos de inclusão forçados | Especifica um ou mais arquivos de inclusão forçada (-include \[name]) |
 
 ::: moniker-end
