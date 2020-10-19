@@ -1,14 +1,14 @@
 ---
 title: Configurar um projeto C++ do MSBuild do Linux no Visual Studio
-ms.date: 08/06/2020
+ms.date: 10/16/2020
 description: Configure um projeto do Linux baseado em MSBuild no Visual Studio para que você possa compilá-lo.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 51837dc86d041b9120f984cc01f8db06d696b292
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685950"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176336"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurar um projeto C++ do MSBuild do Linux no Visual Studio
 
@@ -26,7 +26,7 @@ Configure um projeto do Linux para ter como destino um computador Linux físico,
 
 **Visual Studio 2019 versão 16,1**:
 
-- Ao ter o WSL como destino, você pode evitar as operações de cópia necessárias para build e o IntelliSense ao ter como destino sistemas Linux remotos.
+- Ao direcionar WSL, você pode evitar as operações de cópia necessárias para compilar e obter o IntelliSense necessário ao direcionar um sistema Linux remoto.
 
 - Especifique destinos do Linux separados para build e depuração.
 
@@ -40,6 +40,10 @@ Para exibir as opções de configuração, selecione o menu **Propriedades do pr
 
 Por padrão, um executável (.out) é criado. Para criar uma biblioteca estática ou dinâmica ou usar um Makefile existente, use a configuração **Tipo de Configuração**.
 
+Se você estiver criando um subsistema do Windows para Linux (WSL), a versão 1 do WSL será limitada a 64 processos de compilação paralela. Isso é regido pela configuração **máximo de trabalhos de compilação paralela** nas **propriedades de configuração > C/C++ > geral**.
+
+Independentemente da versão do WSL que você está usando, se você pretende usar mais de 64 processos de compilação paralela, recomendamos que você crie com o ninja, que geralmente será mais rápido e confiável. Para criar com o ninja, use a configuração **habilitar compilação incremental** nas **propriedades de configuração > geral**.
+
 Para obter mais informações sobre as configurações nas páginas de propriedades, confira [Referência da página de propriedades do projeto do Linux](prop-pages-linux.md).
 
 ## <a name="remote-settings"></a>Configurações remotas
@@ -52,7 +56,7 @@ Para alterar as configurações relacionadas ao computador Linux remoto, defina 
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 versão 16,1**: para direcionar o subsistema do Windows para Linux, clique na seta para baixo para o **conjunto de ferramentas de plataforma** e escolha **WSL_1_0**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
+   **Visual Studio 2019 versão 16,7**: para direcionar o subsistema do Windows para Linux (WSL), defina a lista suspensa do **conjunto de ferramentas de plataforma** para **gcc para o subsistema do Windows para Linux**. As outras opções remotas desaparecerão e o caminho para o shell padrão do WSL será exibido em seu lugar:
 
    ![Computador de build do WSL](media/wsl-remote-vs2019.png)
 
@@ -67,7 +71,7 @@ Para alterar as configurações relacionadas ao computador Linux remoto, defina 
 - O **Diretório de Projeto de Build Remoto** é onde esse projeto específico será criado no computador Linux remoto. Isso definirá **$(RemoteRootDir)/$(ProjectName)** como padrão, que será expandido para um diretório nomeado depois do projeto atual, no diretório raiz definido acima.
 
 > [!NOTE]
-> Para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para compilar o projeto, use as entradas apropriadas nas seções **C/C++ > Geral** e **Vinculador > Geral**. Você pode especificar uma versão específica do GCC ou do Clang, por exemplo. Para obter mais informações, consulte [Propriedades do C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Propriedades de vinculador (Linux C++)](prop-pages/linker-linux.md).
+> Para alterar os compiladores padrão C e C++ ou o Vinculador e o Arquivador usados para compilar o projeto, use as entradas apropriadas nas seções **C/C++ > Geral** e **Vinculador > Geral**. Você pode especificar uma versão específica do GCC ou do Clang, por exemplo. Para obter mais informações, consulte [Propriedades do C/C++ (Linux c++)](prop-pages/c-cpp-linux.md) e [Propriedades do vinculador (Linux c++)](prop-pages/linker-linux.md).
 
 ## <a name="copy-sources-remote-systems-only"></a>Copiar fontes (apenas sistemas remotos)
 
@@ -106,7 +110,7 @@ Essa funcionalidade depende de o computador Linux ter zip instalado. Você pode 
 sudo apt install zip
 ```
 
-Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Plataforma Cruzada > Gerenciador de Conexões > Gerenciador dos Cabeçalhos Remotos IntelliSense**. Para atualizar o cache do cabeçalho depois de fazer alterações no computador Linux, selecione a conexão remota e, em seguida, selecione **Atualizar**. Selecione **Excluir** para remover os cabeçalhos sem excluir a conexão em si. Selecione **Explorar** para abrir o diretório local no **Explorador de Arquivos**. Trate essa pasta como somente leitura. Para baixar os cabeçalhos para uma conexão existente criada antes do Visual Studio 2017 versão 15.3, selecione a conexão e, em seguida, selecione **Baixar**.
+Para gerenciar o cache do cabeçalho, navegue até **Ferramentas > Opções, Plataforma Cruzada > Gerenciador de Conexões > Gerenciador dos Cabeçalhos Remotos IntelliSense**. Para atualizar o cache do cabeçalho depois de fazer alterações no computador Linux, selecione a conexão remota e, em seguida, selecione **Atualizar**. Selecione **Excluir** para remover os cabeçalhos sem excluir a conexão em si. Selecione **Explorar** para abrir o diretório local no **Explorador de Arquivos**. Trate essa pasta como somente leitura. Para baixar cabeçalhos para uma conexão existente que foi criada antes do Visual Studio 2017 versão 15,3, selecione a conexão e, em seguida, selecione **baixar**.
 
 ::: moniker range="vs-2017"
 
