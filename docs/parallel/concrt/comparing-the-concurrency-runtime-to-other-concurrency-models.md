@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422251"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274701"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Runtime de Simultaneidade com outros modelos de simultaneidade
 
@@ -19,7 +19,7 @@ Se você estiver usando outro modelo de programação, como o pool de threads do
 
 Você pode usar os recursos e os benefícios de produtividade do Tempo de Execução de Simultaneidade para complementar seu aplicativo existente que usa outro modelo de simultaneidade. O Tempo de Execução de Simultaneidade não pode garantir o balanceamento de carga quando vários agendadores de tarefas conpetem para os mesmos recursos de computação. No entanto, quando as cargas de trabalho não se sobrepõem, esse efeito é mínimo.
 
-## <a name="top"></a>As
+## <a name="sections"></a><a name="top"></a> As
 
 - [Comparando agendamento preventivo com agendamento cooperativo](#models)
 
@@ -27,7 +27,7 @@ Você pode usar os recursos e os benefícios de produtividade do Tempo de Execu�
 
 - [Comparando o Tempo de Execução de Simultaneidade ao OpenMP](#openmp)
 
-## <a name="models"></a>Comparando agendamento preventivo com agendamento cooperativo
+## <a name="comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> Comparando agendamento preventivo com agendamento cooperativo
 
 O modelo preventivo e os modelos de agendamento cooperativos são duas maneiras comuns de habilitar várias tarefas para compartilhar recursos de computação, por exemplo, processadores ou threads de hardware.
 
@@ -51,15 +51,15 @@ O agendamento cooperativo não resolve todos os problemas de agendamento. Por ex
 
 [[Superior](#top)]
 
-## <a name="winapi"></a>Comparando o Tempo de Execução de Simultaneidade à API do Windows
+## <a name="comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> Comparando o Tempo de Execução de Simultaneidade à API do Windows
 
 A interface de programação de aplicativos do Microsoft Windows, que normalmente é chamada de API do Windows (e anteriormente conhecida como Win32), fornece um modelo de programação que permite a simultaneidade em seus aplicativos. O Tempo de Execução de Simultaneidade se baseia na API do Windows para fornecer modelos de programação adicionais que não estão disponíveis no sistema operacional subjacente.
 
 O Tempo de Execução de Simultaneidade se baseia no modelo de thread da API do Windows para executar o trabalho paralelo. Ele também usa os mecanismos de gerenciamento de memória da API do Windows e armazenamento local de thread. No Windows 7 e no Windows Server 2008 R2, ele usa o suporte de API do Windows para threads agendáveis e computadores com mais de 64 threads de hardware. O Tempo de Execução de Simultaneidade estende o modelo da API do Windows fornecendo um Agendador de tarefas cooperativo e um algoritmo de roubo de trabalho para maximizar o uso de recursos de computação e habilitando várias instâncias simultâneas do Agendador.
 
-### <a name="programming-languages"></a>Linguagens de Programação
+### <a name="programming-languages"></a>Linguagens de programação
 
-A API do Windows usa a linguagem de programação C para expor o modelo de programação. O Tempo de Execução de Simultaneidade fornece uma C++ interface de programação que aproveita os recursos mais recentes do C++ idioma. Por exemplo, as funções lambda fornecem um mecanismo sucinto de tipo seguro para definir funções de trabalho paralelas. Para obter mais informações sobre os C++ recursos mais recentes que o tempo de execução de simultaneidade usa, consulte [visão geral](../../parallel/concrt/asynchronous-message-blocks.md).
+A API do Windows usa a linguagem de programação C para expor o modelo de programação. O Tempo de Execução de Simultaneidade fornece uma interface de programação C++ que aproveita os recursos mais recentes da linguagem C++. Por exemplo, as funções lambda fornecem um mecanismo sucinto de tipo seguro para definir funções de trabalho paralelas. Para obter mais informações sobre os recursos mais recentes do C++ que o Tempo de Execução de Simultaneidade usa, consulte [visão geral](../../parallel/concrt/asynchronous-message-blocks.md).
 
 ### <a name="threads-and-thread-pools"></a>Threads e pools de threads
 
@@ -81,11 +81,11 @@ No Windows 7 e no Windows Server 2008 R2, o sistema operacional dá suporte adic
 
 [[Superior](#top)]
 
-## <a name="openmp"></a>Comparando o Tempo de Execução de Simultaneidade ao OpenMP
+## <a name="comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> Comparando o Tempo de Execução de Simultaneidade ao OpenMP
 
 O Tempo de Execução de Simultaneidade permite uma variedade de modelos de programação. Esses modelos podem sobrepor ou complementar os modelos de outras bibliotecas. Esta seção compara o Tempo de Execução de Simultaneidade com o [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
-O modelo de programação de OpenMP é definido por um padrão aberto e tem associações bem definidas para as linguagens Fortran eC++ C/de programação. As versões de OpenMP 2,0 e 2,5 são bem adequadas para algoritmos paralelos que são iterativos; ou seja, eles executam iteração paralela em uma matriz de dados. O OpenMP é mais eficiente quando o grau de paralelismo é predeterminado e corresponde aos recursos disponíveis no sistema. O modelo de OpenMP é uma correspondência especialmente boa para computação de alto desempenho, em que problemas computacionais muito grandes são distribuídos entre os recursos de processamento de um único computador. Nesse cenário, o ambiente de hardware é conhecido e o desenvolvedor pode esperar ter acesso exclusivo aos recursos de computação quando o algoritmo é executado.
+O modelo de programação de OpenMP é definido por um padrão aberto e tem associações bem definidas para as linguagens de programação Fortran e C/C++. As versões de OpenMP 2,0 e 2,5 são bem adequadas para algoritmos paralelos que são iterativos; ou seja, eles executam iteração paralela em uma matriz de dados. O OpenMP é mais eficiente quando o grau de paralelismo é predeterminado e corresponde aos recursos disponíveis no sistema. O modelo de OpenMP é uma correspondência especialmente boa para computação de alto desempenho, em que problemas computacionais muito grandes são distribuídos entre os recursos de processamento de um único computador. Nesse cenário, o ambiente de hardware é conhecido e o desenvolvedor pode esperar ter acesso exclusivo aos recursos de computação quando o algoritmo é executado.
 
 No entanto, outros ambientes de computação menos restritos podem não ser uma boa correspondência para OpenMP. Por exemplo, problemas recursivos (como o algoritmo quicksort ou a pesquisa de uma árvore de dados) são mais difíceis de implementar usando OpenMP. O Tempo de Execução de Simultaneidade complementa os recursos de OpenMP fornecendo a PPL ( [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) ) e a [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md). Ao contrário do OpenMP, o Tempo de Execução de Simultaneidade fornece um Agendador dinâmico que se adapta aos recursos disponíveis e ajusta o grau de paralelismo à medida que as cargas de trabalho mudam.
 
@@ -99,6 +99,6 @@ Para obter mais informações sobre como o Tempo de Execução de Simultaneidade
 
 [Runtime de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Visão geral](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
-[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

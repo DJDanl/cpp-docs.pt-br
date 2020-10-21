@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422643"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274621"
 ---
 # <a name="lttuplegt-operators"></a>Operadores &lt;tuple&gt;
 
-## <a name="op_neq"></a>operador! =
+## <a name="operator"></a><a name="op_neq"></a> operador! =
 
 Compare objetos `tuple` quanto a desigualdade.
 
@@ -29,9 +29,9 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt">Operador </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operador&lt;
 
 Compare objetos `tuple` quanto a menor que.
 
@@ -94,9 +94,9 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>= de&lt;do operador
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operador&lt;=
 
 Compare objetos `tuple` quanto a menor que ou igual a.
 
@@ -159,9 +159,9 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>operador = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operador = =
 
 Compare objetos `tuple` quanto a igualdade.
 
@@ -224,9 +224,9 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt">Operador </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operador&gt;
 
 Compare objetos `tuple` quanto a maior que.
 
@@ -289,9 +289,9 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>= de&gt;do operador
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operador&gt;=
 
 Compare objetos `tuple` quanto a maior que ou igual a.
 
@@ -354,9 +354,9 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
-\ *TN*
+*TN*\
 O tipo do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
