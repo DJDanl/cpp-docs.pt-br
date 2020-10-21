@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422111"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274709"
 ---
 # <a name="scheduler-class"></a>Classe Scheduler
 
@@ -40,30 +40,30 @@ class Scheduler;
 
 ## <a name="members"></a>Membros
 
-### <a name="protected-constructors"></a>Construtores protegidos
+### <a name="protected-constructors"></a>Construtores Protegidos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[Agendador](#ctor)|Um objeto da classe `Scheduler` só pode ser criado usando métodos de fábrica ou implicitamente.|
-|[~ Destruidor do Agendador](#dtor)|Um objeto da classe `Scheduler` é destruído implicitamente quando todas as referências externas a ele deixa de existir.|
+|[Agendador](#ctor)|Um objeto da `Scheduler` classe só pode ser criado usando métodos de fábrica ou implicitamente.|
+|[~ Destruidor do Agendador](#dtor)|Um objeto da `Scheduler` classe é destruído implicitamente quando todas as referências externas a ele deixa de existir.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|DESCRIÇÃO|
+|Nome|Descrição|
 |----------|-----------------|
-|[Anexar](#attach)|Anexa o Agendador ao contexto de chamada. Depois que esse método retornar, o contexto de chamada será gerenciado pelo Agendador e o Agendador se tornará o Agendador atual.|
-|[Criar](#create)|Cria um novo agendador cujo comportamento é descrito pelo parâmetro `_Policy`, coloca uma referência inicial no Agendador e retorna um ponteiro para ele.|
+|[Attach](#attach)|Anexa o Agendador ao contexto de chamada. Depois que esse método retornar, o contexto de chamada será gerenciado pelo Agendador e o Agendador se tornará o Agendador atual.|
+|[Criar](#create)|Cria um novo agendador cujo comportamento é descrito pelo `_Policy` parâmetro, coloca uma referência inicial no Agendador e retorna um ponteiro para ele.|
 |[CreateSchedule](#createschedulegroup)|Sobrecarregado. Cria um novo grupo de agendamento dentro do Agendador. A versão que usa o parâmetro `_Placement` faz com que as tarefas dentro do grupo de agendamento recém-criado sejam ajustadas em direção à execução no local especificado por esse parâmetro.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retorna o número atual de processadores virtuais para o Agendador.|
 |[GetPolicy](#getpolicy)|Retorna uma cópia da política com a qual o Agendador foi criado.|
 |[Id](#id)|Retorna um identificador exclusivo para o Agendador.|
 |[IsAvailableLocation](#isavailablelocation)|Determina se um determinado local está disponível no Agendador.|
 |[Referência](#reference)|Incrementa a contagem de referência do Agendador.|
-|[RegisterShutdownEvent](#registershutdownevent)|Faz com que o identificador de evento do Windows passado no parâmetro `_Event` seja sinalizado quando o Agendador é desligado e se destrói. No momento em que o evento é sinalizado, todo o trabalho que foi agendado para o Agendador é concluído. Vários eventos de desligamento podem ser registrados por meio desse método.|
+|[RegisterShutdownEvent](#registershutdownevent)|Faz com que o identificador de evento do Windows passado no `_Event` parâmetro seja sinalizado quando o Agendador é desligado e se destrói. No momento em que o evento é sinalizado, todo o trabalho que foi agendado para o Agendador é concluído. Vários eventos de desligamento podem ser registrados por meio desse método.|
 |[Versão](#release)|Decrementa a contagem de referência do Agendador.|
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Redefine a política padrão do Agendador para o padrão de tempo de execução. Na próxima vez que um agendador padrão for criado, ele usará as configurações de política padrão de tempo de execução.|
 |[ScheduleTask](#scheduletask)|Sobrecarregado. Agenda uma tarefa leve no Agendador. A tarefa de peso leve será colocada em um grupo de agendamento determinado pelo tempo de execução. A versão que usa o parâmetro `_Placement` faz com que a tarefa seja ajustada em direção à execução no local especificado.|
-|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Permite que uma política definida pelo usuário seja usada para criar o agendador padrão. Esse método pode ser chamado somente quando não houver um agendador padrão dentro do processo. Depois que uma política padrão tiver sido definida, ela permanecerá em vigor até a próxima chamada válida para o método `SetDefaultSchedulerPolicy` ou [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .|
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Permite que uma política definida pelo usuário seja usada para criar o agendador padrão. Esse método pode ser chamado somente quando não houver um agendador padrão dentro do processo. Depois que uma política padrão tiver sido definida, ela permanecerá em vigor até a próxima chamada válida para o `SetDefaultSchedulerPolicy` método [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) ou.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -81,7 +81,7 @@ O Tempo de Execução de Simultaneidade criará um agendador padrão por process
 
 **Namespace:** simultaneidade
 
-## <a name="attach"></a>Anexa
+## <a name="attach"></a><a name="attach"></a> Anexa
 
 Anexa o Agendador ao contexto de chamada. Depois que esse método retornar, o contexto de chamada será gerenciado pelo Agendador e o Agendador se tornará o Agendador atual.
 
@@ -95,36 +95,36 @@ A anexação de um Agendador coloca implicitamente uma referência no Agendador.
 
 Em algum momento no futuro, você deve chamar o método [CurrentScheduler::D Etach](currentscheduler-class.md#detach) para permitir que o Agendador seja desligado.
 
-Se esse método for chamado de um contexto que já está anexado a um Agendador diferente, o Agendador existente será lembrado como o Agendador anterior e o Agendador recém-criado se tornará o Agendador atual. Quando você chama o método `CurrentScheduler::Detach` em um ponto posterior, o Agendador anterior é restaurado como o Agendador atual.
+Se esse método for chamado de um contexto que já está anexado a um Agendador diferente, o Agendador existente será lembrado como o Agendador anterior e o Agendador recém-criado se tornará o Agendador atual. Quando você chama o `CurrentScheduler::Detach` método em um ponto posterior, o Agendador anterior é restaurado como o Agendador atual.
 
 Esse método gerará uma exceção de [improper_scheduler_attach](improper-scheduler-attach-class.md) se este Agendador for o Agendador atual do contexto de chamada.
 
-## <a name="create"></a> Criar
+## <a name="create"></a><a name="create"></a> Criar
 
-Cria um novo agendador cujo comportamento é descrito pelo parâmetro `_Policy`, coloca uma referência inicial no Agendador e retorna um ponteiro para ele.
+Cria um novo agendador cujo comportamento é descrito pelo `_Policy` parâmetro, coloca uma referência inicial no Agendador e retorna um ponteiro para ele.
 
 ```cpp
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Policy*<br/>
 A política do Agendador que descreve o comportamento do Agendador recém-criado.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para um Agendador recém-criado. Este objeto de `Scheduler` tem uma contagem de referência inicial colocada nele.
+Um ponteiro para um Agendador recém-criado. Este `Scheduler` objeto tem uma contagem de referência inicial colocada nele.
 
 ### <a name="remarks"></a>Comentários
 
-Depois que um Agendador é criado com o método `Create`, você deve chamar o método `Release` em algum momento no futuro para remover a contagem de referência inicial e permitir que o Agendador seja desligado.
+Depois que um Agendador é criado com o `Create` método, você deve chamar o `Release` método em algum momento no futuro para remover a contagem de referência inicial e permitir que o Agendador seja desligado.
 
 Um Agendador criado com este método não está anexado ao contexto de chamada. Ele pode ser anexado a um contexto usando o método [Attach](#attach) .
 
 Esse método pode lançar uma variedade de exceções, incluindo [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) e [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-## <a name="createschedulegroup"></a>CreateSchedule
+## <a name="createschedulegroup"></a><a name="createschedulegroup"></a> CreateSchedule
 
 Cria um novo grupo de agendamento dentro do Agendador. A versão que usa o parâmetro `_Placement` faz com que as tarefas dentro do grupo de agendamento recém-criado sejam ajustadas em direção à execução no local especificado por esse parâmetro.
 
@@ -134,14 +134,14 @@ virtual ScheduleGroup* CreateScheduleGroup() = 0;
 virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Placement*<br/>
 Uma referência a um local em que as tarefas dentro do grupo de agendamento serão inclinadas em direção à execução em.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um ponteiro para o grupo de agendamento recém-criado. Este objeto de `ScheduleGroup` tem uma contagem de referência inicial colocada nele.
+Um ponteiro para o grupo de agendamento recém-criado. Este `ScheduleGroup` objeto tem uma contagem de referência inicial colocada nele.
 
 ### <a name="remarks"></a>Comentários
 
@@ -149,7 +149,7 @@ Você deve invocar o método de [liberação](schedulegroup-class.md#release) em
 
 Observe que, se você tiver criado explicitamente esse Agendador, deverá liberar todas as referências para agendar grupos dentro dela, antes de liberar suas referências no Agendador.
 
-## <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors
+## <a name="getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors
 
 Retorna o número atual de processadores virtuais para o Agendador.
 
@@ -157,11 +157,11 @@ Retorna o número atual de processadores virtuais para o Agendador.
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O número atual de processadores virtuais para o Agendador.
 
-## <a name="getpolicy"></a>GetPolicy
+## <a name="getpolicy"></a><a name="getpolicy"></a> GetPolicy
 
 Retorna uma cópia da política com a qual o Agendador foi criado.
 
@@ -169,11 +169,11 @@ Retorna uma cópia da política com a qual o Agendador foi criado.
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Uma cópia da política com a qual o Agendador foi criado.
 
-## <a name="id"></a>Sessão
+## <a name="id"></a><a name="id"></a> Sessão
 
 Retorna um identificador exclusivo para o Agendador.
 
@@ -181,11 +181,11 @@ Retorna um identificador exclusivo para o Agendador.
 virtual unsigned int Id() const = 0;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um identificador exclusivo para o Agendador.
 
-## <a name="isavailablelocation"></a>IsAvailableLocation
+## <a name="isavailablelocation"></a><a name="isavailablelocation"></a> IsAvailableLocation
 
 Determina se um determinado local está disponível no Agendador.
 
@@ -193,20 +193,20 @@ Determina se um determinado local está disponível no Agendador.
 virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Placement*<br/>
 Uma referência ao local para o qual consultar o Agendador.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Uma indicação de se o local especificado pelo argumento `_Placement` está disponível no Agendador.
+Uma indicação de se o local especificado pelo `_Placement` argumento está disponível no Agendador.
 
 ### <a name="remarks"></a>Comentários
 
 Observe que o valor de retorno é uma amostragem instantânea de se o local fornecido está disponível. Na presença de vários agendadores, o gerenciamento dinâmico de recursos pode adicionar ou retirar recursos de agendadores a qualquer momento. Se isso acontecer, o local especificado poderá alterar a disponibilidade.
 
-## <a name="reference"></a>Referência
+## <a name="reference"></a><a name="reference"></a> Referência
 
 Incrementa a contagem de referência do Agendador.
 
@@ -214,7 +214,7 @@ Incrementa a contagem de referência do Agendador.
 virtual unsigned int Reference() = 0 ;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A contagem de referência incrementada recentemente.
 
@@ -222,22 +222,22 @@ A contagem de referência incrementada recentemente.
 
 Normalmente, isso é usado para gerenciar o tempo de vida do Agendador para composição. Quando a contagem de referência de um Agendador cai para zero, o Agendador será desligado e se destrui depois que todo o trabalho no Agendador for concluído.
 
-O método gerará uma exceção de [improper_scheduler_reference](improper-scheduler-reference-class.md) se a contagem de referência antes de chamar o método `Reference` fosse zero e a chamada for feita de um contexto que não pertence ao agendador.
+O método gerará uma exceção de [improper_scheduler_reference](improper-scheduler-reference-class.md) se a contagem de referência antes de chamar o `Reference` método fosse zero e a chamada for feita de um contexto que não pertence ao agendador.
 
-## <a name="registershutdownevent"></a>RegisterShutdownEvent
+## <a name="registershutdownevent"></a><a name="registershutdownevent"></a> RegisterShutdownEvent
 
-Faz com que o identificador de evento do Windows passado no parâmetro `_Event` seja sinalizado quando o Agendador é desligado e se destrói. No momento em que o evento é sinalizado, todo o trabalho que foi agendado para o Agendador é concluído. Vários eventos de desligamento podem ser registrados por meio desse método.
+Faz com que o identificador de evento do Windows passado no `_Event` parâmetro seja sinalizado quando o Agendador é desligado e se destrói. No momento em que o evento é sinalizado, todo o trabalho que foi agendado para o Agendador é concluído. Vários eventos de desligamento podem ser registrados por meio desse método.
 
 ```cpp
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Event*<br/>
 Um identificador para um objeto de evento do Windows que será sinalizado pelo tempo de execução quando o Agendador for desligado e se destruir.
 
-## <a name="release"></a>Liberar
+## <a name="release"></a><a name="release"></a> Liberar
 
 Decrementa a contagem de referência do Agendador.
 
@@ -245,7 +245,7 @@ Decrementa a contagem de referência do Agendador.
 virtual unsigned int Release() = 0;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A contagem de referência recentemente decrementada.
 
@@ -253,7 +253,7 @@ A contagem de referência recentemente decrementada.
 
 Normalmente, isso é usado para gerenciar o tempo de vida do Agendador para composição. Quando a contagem de referência de um Agendador cai para zero, o Agendador será desligado e se destrui depois que todo o trabalho no Agendador for concluído.
 
-## <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy
+## <a name="resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy
 
 Redefine a política padrão do Agendador para o padrão de tempo de execução. Na próxima vez que um agendador padrão for criado, ele usará as configurações de política padrão de tempo de execução.
 
@@ -265,9 +265,9 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 
 Esse método pode ser chamado enquanto existir um agendador padrão dentro do processo. Ele não afetará a política do agendador padrão existente. No entanto, se o agendador padrão tiver sido desligado e um novo padrão fosse criado posteriormente, o novo agendador usará as configurações de política padrão de tempo de execução.
 
-## <a name="ctor"></a>Agendador
+## <a name="scheduler"></a><a name="ctor"></a> Agendador
 
-Um objeto da classe `Scheduler` só pode ser criado usando métodos de fábrica ou implicitamente.
+Um objeto da `Scheduler` classe só pode ser criado usando métodos de fábrica ou implicitamente.
 
 ```cpp
 Scheduler();
@@ -275,19 +275,19 @@ Scheduler();
 
 ### <a name="remarks"></a>Comentários
 
-O agendador padrão do processo é criado implicitamente quando você utiliza muitas das funções de tempo de execução que exigem que um Agendador seja anexado ao contexto de chamada. Os métodos dentro da classe `CurrentScheduler` e os recursos das camadas PPL e Agents normalmente executam o anexo implícito.
+O agendador padrão do processo é criado implicitamente quando você utiliza muitas das funções de tempo de execução que exigem que um Agendador seja anexado ao contexto de chamada. Os métodos dentro da `CurrentScheduler` classe e dos recursos das camadas ppl e Agents normalmente executam um anexo implícito.
 
-Você também pode criar um Agendador explicitamente por meio do método `CurrentScheduler::Create` ou do método `Scheduler::Create`.
+Você também pode criar um Agendador explicitamente por meio do `CurrentScheduler::Create` método ou do `Scheduler::Create` método.
 
-## <a name="dtor"></a>~ Agendador
+## <a name="scheduler"></a><a name="dtor"></a> ~ Agendador
 
-Um objeto da classe `Scheduler` é destruído implicitamente quando todas as referências externas a ele deixa de existir.
+Um objeto da `Scheduler` classe é destruído implicitamente quando todas as referências externas a ele deixa de existir.
 
 ```cpp
 virtual ~Scheduler();
 ```
 
-## <a name="scheduletask"></a>ScheduleTask
+## <a name="scheduletask"></a><a name="scheduletask"></a> ScheduleTask
 
 Agenda uma tarefa leve no Agendador. A tarefa de peso leve será colocada em um grupo de agendamento determinado pelo tempo de execução. A versão que usa o parâmetro `_Placement` faz com que a tarefa seja ajustada em direção à execução no local especificado.
 
@@ -302,7 +302,7 @@ virtual void ScheduleTask(
     location& _Placement) = 0;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Proc*<br/>
 Um ponteiro para a função a ser executada para executar o corpo da tarefa de peso leve.
@@ -313,26 +313,26 @@ Um ponteiro void para os dados que serão passados como um parâmetro para o cor
 *_Placement*<br/>
 Uma referência a um local onde a tarefa de peso leve será ajustada em direção à execução em.
 
-## <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy
+## <a name="setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
 
-Permite que uma política definida pelo usuário seja usada para criar o agendador padrão. Esse método pode ser chamado somente quando não houver um agendador padrão dentro do processo. Depois que uma política padrão tiver sido definida, ela permanecerá em vigor até a próxima chamada válida para o método `SetDefaultSchedulerPolicy` ou [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .
+Permite que uma política definida pelo usuário seja usada para criar o agendador padrão. Esse método pode ser chamado somente quando não houver um agendador padrão dentro do processo. Depois que uma política padrão tiver sido definida, ela permanecerá em vigor até a próxima chamada válida para o `SetDefaultSchedulerPolicy` método [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) ou.
 
 ```cpp
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *_Policy*<br/>
 A política a ser definida como a política padrão do Agendador.
 
 ### <a name="remarks"></a>Comentários
 
-Se o método `SetDefaultSchedulerPolicy` for chamado quando um agendador padrão já existir dentro do processo, o tempo de execução gerará uma exceção de [default_scheduler_exists](default-scheduler-exists-class.md) .
+Se o `SetDefaultSchedulerPolicy` método for chamado quando um agendador padrão já existir no processo, o tempo de execução gerará uma exceção de [default_scheduler_exists](default-scheduler-exists-class.md) .
 
 ## <a name="see-also"></a>Confira também
 
 [Namespace de simultaneidade](concurrency-namespace.md)<br/>
-[Classe Scheduler](scheduler-class.md)<br/>
+[Classe do Agendador](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Agendador de Tarefas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

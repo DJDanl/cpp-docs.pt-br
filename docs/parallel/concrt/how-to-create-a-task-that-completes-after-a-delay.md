@@ -1,20 +1,21 @@
 ---
-title: Como criar uma tarefa que seja concluída após um atraso
-ms.date: 11/04/2016
+title: 'Como: criar uma tarefa que seja concluída após um atraso'
+description: Crie uma tarefa que seja concluída após um atraso usando a biblioteca ConcRT da PPL.
+ms.date: 10/19/2020
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 80bfdeb7586f9c32592bc408a9de0c9188b77a29
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 694b6190a7ec60043a5674e920dc54e6e7bf0eb6
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413782"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274564"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Como criar uma tarefa que seja concluída após um atraso
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Como: criar uma tarefa que seja concluída após um atraso
 
-Este exemplo mostra como usar as classes [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [simultane:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [Concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [simultane:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: timer](../../parallel/concrt/reference/timer-class.md)e [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) para criar uma tarefa concluída após um atraso. Você pode usar esse método para criar loops que ocasionalmente pesquisam dados, introduzir tempos limite, atrasar a manipulação de entrada do usuário para um tempo predeterminado e assim por diante.
+Este exemplo mostra como usar as classes,,,, [`concurrency::task`](../../parallel/concrt/reference/task-class.md) [`concurrency::cancellation_token_source`](../../parallel/concrt/reference/cancellation-token-source-class.md) [`concurrency::cancellation_token`](../../parallel/concrt/reference/cancellation-token-class.md) [`concurrency::task_completion_event`](../../parallel/concrt/reference/task-completion-event-class.md) [`concurrency::timer`](../../parallel/concrt/reference/timer-class.md) e [`concurrency::call`](../../parallel/concrt/reference/call-class.md) para criar uma tarefa que é concluída após um atraso. Você pode usar esse método para criar loops que ocasionalmente sondam dados. Você também pode introduzir tempos limite, atrasar a manipulação de entrada do usuário para um tempo predeterminado e assim por diante.
 
 ## <a name="example-complete_after-and-cancel_after_timeout-functions"></a>Exemplo: funções complete_after e cancel_after_timeout
 
@@ -23,7 +24,7 @@ O exemplo a seguir mostra as funções `complete_after` e `cancel_after_timeout`
 > [!TIP]
 > Para obter mais informações sobre `timer` as `call` classes e, que fazem parte da biblioteca de agentes assíncronos, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md).
 
-A `cancel_after_timeout` função se baseia na `complete_after` função para cancelar uma tarefa se essa tarefa não for concluída antes de um determinado tempo limite. A `cancel_after_timeout` função cria duas tarefas. A primeira tarefa indica êxito e é concluída após a conclusão da tarefa fornecida; a segunda tarefa indica falha e é concluída após o tempo limite especificado. A `cancel_after_timeout` função cria uma tarefa de continuação que é executada quando a tarefa de êxito ou falha é concluída. Se a tarefa de falha for concluída primeiro, a continuação cancelará a origem do token para cancelar a tarefa geral.
+A `cancel_after_timeout` função se baseia na `complete_after` função para cancelar uma tarefa se essa tarefa não for concluída antes de um tempo limite determinado. A `cancel_after_timeout` função cria duas tarefas. A primeira tarefa indica êxito e é concluída após a conclusão da tarefa fornecida. A segunda tarefa indica falha e é concluída após o tempo limite especificado. A `cancel_after_timeout` função cria uma tarefa de continuação que é executada quando a tarefa de êxito ou falha é concluída. Se a tarefa de falha for concluída primeiro, a continuação cancelará a origem do token para cancelar a tarefa geral.
 
 [!code-cpp[concrt-task-delay#1](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_1.cpp)]
 
@@ -33,7 +34,7 @@ O exemplo a seguir computa a contagem de números primos no intervalo [0, 100000
 
 [!code-cpp[concrt-task-delay#2](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_2.cpp)]
 
-Quando você usar essa técnica para cancelar tarefas após um atraso, as tarefas não iniciadas não serão iniciadas depois que a tarefa geral for cancelada. No entanto, é importante que todas as tarefas demoradas respondam ao cancelamento em tempo hábil. Para obter mais informações sobre o cancelamento de tarefa, consulte [cancelamento na ppl](cancellation-in-the-ppl.md).
+Quando você usar essa técnica para cancelar tarefas após um atraso, as tarefas não iniciadas não serão iniciadas depois que a tarefa geral for cancelada. No entanto, é importante que todas as tarefas de execução demorada respondam rapidamente ao cancelamento. Para obter mais informações sobre o cancelamento de tarefa, consulte [cancelamento na ppl](cancellation-in-the-ppl.md).
 
 ## <a name="complete-code-example"></a>Exemplo de código completo
 
