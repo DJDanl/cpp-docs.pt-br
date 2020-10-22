@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "90683618"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Walkthrough: criar e usar sua própria biblioteca de vínculo dinâmico (C++)
@@ -583,6 +583,6 @@ Agora que você criou uma DLL e um aplicativo cliente, comece a fazer experiment
 
 Quando implantar seu aplicativo, implante também as DLLs que ele usa. A maneira mais simples de fazer as DLLs que você cria ou que você inclui de terceiros, disponível é colocá-las no mesmo diretório que seu aplicativo. Ele é conhecido como *implantação de aplicativo local*. Para saber mais sobre implantação, confira [Implantação no Visual C++](../windows/deployment-in-visual-cpp.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Chamando funções de DLL de aplicativos Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
