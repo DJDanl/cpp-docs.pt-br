@@ -3,10 +3,10 @@ title: Navegar pelo código C++ no Visual Studio
 description: Use várias ferramentas no Visual Studio para navegar pela base de código C++.
 ms.date: 05/28/2019
 ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "90683488"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Navegar pelo código C++ no Visual Studio
@@ -128,7 +128,7 @@ Navegue até a definição de um tipo em um arquivo ou até membros de tipo, usa
 
 ![Barra de navegação do C&#43;&#43; ](../ide/media/navbar-cpp.png "Barra de navegação")
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Ler e entender o código C++](read-and-understand-code-cpp.md)</br>
 - [Editar e refatorar o código C++](read-and-understand-code-cpp.md)</br>
