@@ -1,6 +1,7 @@
 ---
 title: qsort
-ms.date: 4/2/2020
+description: Descreve a API de classificação rápida do Microsoft C Runtime `qsort`
+ms.date: 10/23/2020
 api_name:
 - qsort
 - _o_qsort
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c658ffae69cd662809eb4dac09c06b6a13f4e051
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913264"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639114"
 ---
 # <a name="qsort"></a>qsort
 
@@ -53,25 +54,25 @@ void qsort(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*base*<br/>
+*`base`*\
 Início da matriz de destino.
 
-*number*<br/>
+*`number`*\
 Tamanho da matriz nos elementos.
 
-*width*<br/>
+*`width`*\
 Tamanho do elemento em bytes.
 
-*comparar*<br/>
+*`compare`*\
 Ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento.
 
 ## <a name="remarks"></a>Comentários
 
-A função **qsort** implementa um algoritmo de classificação rápida para classificar uma matriz de elementos *Number* , cada um dos bytes de *largura* . O argumento *base* é um ponteiro para a base da matriz a ser classificada. **qsort** substitui essa matriz usando os elementos classificados.
+A **`qsort`** função implementa um algoritmo de classificação rápida para classificar uma matriz de *`number`* elementos, cada um dos *`width`* bytes. O argumento *`base`* é um ponteiro para a base da matriz a ser classificada. **`qsort`** substitui essa matriz usando os elementos classificados.
 
-**qsort** chama a rotina de *comparação* uma ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada.
+**`qsort`** chama a *`compare`* rotina uma ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada. Se *`compare`* o indicar que dois elementos são os mesmos, sua ordem na matriz classificada resultante não será especificada.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,13 +82,13 @@ A rotina deve comparar os elementos e retornar um dos valores a seguir.
 
 |Comparar o valor retornado da função|Descrição|
 |-----------------------------------|-----------------|
-|< 0|**elem1** menor que **elem2**|
-|0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** maior que **elem2**|
+|< 0|**`elem1`** menor que **`elem2`**|
+|0|**`elem1`** equivalente a **`elem2`**|
+|> 0|**`elem1`** maior que **`elem2`**|
 
 A matriz é classificada em ordem crescente, conforme definido pela função de comparação. Para classificar uma matriz em ordem decrescente, inverta o sentido de “maior que” e “menor que” na função de comparação.
 
-Essa função valida seus parâmetros. Se *Compare* ou *Number* for **NULL**ou se *base* for **NULL** e *Number* for zero ou se *Width* for menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e **errno** será definida como **EINVAL**.
+Essa função valida seus parâmetros. Se *`compare`* ou *`number`* for ou for **`NULL`** , ou se for *`base`* **`NULL`** e *`number`* for diferente de zero, ou se *`width`* for menor que zerado, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução tiver permissão para continuar, a função retornará e **`errno`** será definida como **`EINVAL`** .
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -95,7 +96,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**qsort**|\<stdlib.h> e \<search.h>|
+|**`qsort`**|\<stdlib.h> e \<search.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -145,6 +146,6 @@ boy deserves every favor good
 
 ## <a name="see-also"></a>Confira também
 
-[Pesquisando e classificando](../../c-runtime-library/searching-and-sorting.md)<br/>
-[bsearch](bsearch.md)<br/>
-[_lsearch](lsearch.md)<br/>
+[Pesquisa e classificação](../../c-runtime-library/searching-and-sorting.md)\
+[`bsearch`](bsearch.md)\
+[`_lsearch`](lsearch.md)

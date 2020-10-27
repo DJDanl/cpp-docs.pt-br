@@ -1,6 +1,7 @@
 ---
 title: _cwait
-ms.date: 4/2/2020
+description: Referência de API para a função de tempo de execução do Microsoft Visual C `_cwait()` .
+ms.date: 10/23/2020
 api_name:
 - _cwait
 - _o__cwait
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: 9e2e23acb041004b9e96d1c6558ae195ed522155
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5b4c4db3c40645b947583b722d345c2e80dcaa8e
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914791"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639101"
 ---
 # <a name="_cwait"></a>_cwait
 
@@ -51,37 +52,37 @@ intptr_t _cwait(
 );
 ```
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
-*termstat*<br/>
-Ponteiro para um buffer em que o código de resultado do processo especificado será armazenado ou **nulo**.
+*`termstat`*\
+Ponteiro para um buffer em que o código de resultado do processo especificado será armazenado ou **`NULL`** .
 
-*procHandle*<br/>
+*`procHandle`*\
 O identificador para o processo aguardar (ou seja, o processo que deve ser encerrado antes que **_cwait** possa retornar).
 
-*action*<br/>
-NULL: ignorado por aplicativos do sistema operacional Windows; para outros aplicativos: código de ação a ser executado em *procHandle*.
+*`action`*\
+**`NULL`** : Ignorado por aplicativos do sistema operacional Windows; para outros aplicativos: o código de ação a ser executado em *`procHandle`* .
 
-## <a name="return-value"></a>Valor retornado
+## <a name="return-value"></a>Valor de retorno
 
-Quando o processo especificado tiver sido concluído com êxito, retornará o identificador do processo especificado e definirá *termstat* para o código de resultado retornado pelo processo especificado. Caso contrário, retorna-1 e define **errno** da seguinte maneira.
+Quando o processo especificado foi concluído com êxito, retorna o identificador do processo especificado e define *`termstat`* para o código de resultado retornado pelo processo especificado. Caso contrário, retorna-1 e define **`errno`** da seguinte maneira.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|**ECHILD**|Não existe um processo especificado, *procHandle* é inválido ou a chamada para a API [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) ou [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) falhou.|
-|**EINVAL**|*ação* inválida.|
+|**`ECHILD`**|Nenhum processo especificado existe, *`procHandle`* é inválido ou houve falha na chamada para [`GetExitCodeProcess`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) a [`WaitForSingleObject`](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API ou.|
+|**`EINVAL`**|*`action`* é inválido.|
 
-Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obter mais informações sobre esses e outros códigos de retorno, consulte [`errno, _doserrno, _sys_errlist, and _sys_nerr`](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Comentários
 
-A função **_cwait** aguarda o encerramento da ID de processo do processo especificado que é fornecido pelo *procHandle*. O valor de *procHandle* que é passado para **_cwait** deve ser o valor retornado pela chamada para a função [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) que criou o processo especificado. Se a ID do processo for encerrada antes de **_cwait** ser chamada, **_cwait** retornará imediatamente. **_cwait** pode ser usado por qualquer processo para aguardar qualquer outro processo conhecido para o qual exista um identificador válido (*procHandle*).
+A **`_cwait`** função aguarda o encerramento da ID de processo do processo especificado que é fornecido pelo *`procHandle`* . O valor de *`procHandle`* que é passado para **`_cwait`** deve ser o valor retornado pela chamada para a [`_spawn`](../../c-runtime-library/spawn-wspawn-functions.md) função que criou o processo especificado. Se a ID do processo for encerrada antes de **`_cwait`** ser chamada, **`_cwait`** retorna imediatamente. **`_cwait`** pode ser usado por qualquer processo para aguardar qualquer outro processo conhecido para o qual exista um identificador válido ( *`procHandle`* ).
 
-*termstat* aponta para um buffer em que o código de retorno do processo especificado será armazenado. O valor de *termstat* indica se o processo especificado terminou normalmente chamando a API [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) do Windows. **ExitProcess** é chamado internamente se o processo especificado chama **Exit** ou **_exit**, retorna de **Main**ou atinge o final de **Main**. Para obter mais informações sobre o valor que é passado de volta por meio de *termstat*, consulte [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Se **_cwait** for chamado usando um valor **nulo** para *termstat*, o código de retorno do processo especificado não será armazenado.
+*`termstat`* aponta para um buffer em que o código de retorno do processo especificado será armazenado. O valor de *`termstat`* indica se o processo especificado foi encerrado normalmente chamando a [`ExitProcess`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API do Windows. **`ExitProcess`** é chamado internamente se o processo especificado chama **`exit`** ou **`_exit`** , retorna de **`main`** ou atinge o final de **`main`** . Para obter mais informações sobre o valor que é passado de volta *`termstat`* , consulte [GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess). Se **`_cwait`** for chamado usando um **`NULL`** valor para *`termstat`* , o código de retorno do processo especificado não será armazenado.
 
-O parâmetro *Action* é ignorado pelo sistema operacional Windows porque as relações pai-filho não são implementadas nesses ambientes.
+O *`action`* parâmetro é ignorado pelo sistema operacional Windows porque as relações pai-filho não são implementadas nesses ambientes.
 
-A menos que *procHandle* seja-1 ou-2 (identificadores para o processo ou thread atual), o identificador será fechado. Portanto, nessa situação, não use o identificador retornado.
+A menos que *`procHandle`* seja-1 ou-2 (trate para o processo ou thread atual), o identificador será fechado. Nessa situação, não use o identificador retornado.
 
 Por padrão, o estado global dessa função tem como escopo o aplicativo. Para alterar isso, consulte [estado global no CRT](../global-state.md).
 
@@ -89,7 +90,7 @@ Por padrão, o estado global dessa função tem como escopo o aplicativo. Para a
 
 |Rotina|Cabeçalho necessário|Cabeçalho opcional|
 |-------------|---------------------|---------------------|
-|**_cwait**|\<process.h>|\<errno.h>|
+|**`_cwait`**|\<process.h>|\<errno.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
@@ -114,43 +115,45 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 struct PROCESS
 {
-   int     nPid;
-   char    name[40];
+    intptr_t hProcess;
+    char    name[40];
 } process[4] = { { 0, "Ann" }, { 0, "Beth" }, { 0, "Carl" }, { 0, "Dave" } };
 
-int main( int argc, char *argv[] )
+int main(int argc, char* argv[])
 {
-   int termstat, c;
-   unsigned int number;
+    int termstat, c;
+    unsigned int number;
 
-   srand( (unsigned)time( NULL ) );    // Seed randomizer
+    srand((unsigned)time(NULL));    // Seed randomizer
 
-   // If no arguments, this is the calling process
-   if ( argc == 1 )
-   {
-      // Spawn processes in numeric order
-      for ( c = 0; c < 4; c++ ) {
-         _flushall();
-         process[c].nPid = _spawnl( _P_NOWAIT, argv[0], argv[0],
-                                    process[c].name, NULL );
-      }
+    // If no arguments, this is the calling process
+    if (argc == 1)
+    {
+        // Spawn processes in numeric order
+        for (c = 0; c < 4; c++) {
+            _flushall();
+            process[c].hProcess = _spawnl(_P_NOWAIT, argv[0], argv[0],
+                process[c].name, NULL);
+        }
 
-      // Wait for randomly specified process, and respond when done
-      c = getrandom( 0, 3 );
-      printf( "Come here, %s.\n", process[c].name );
-      _cwait( &termstat, process[c].nPid, _WAIT_CHILD );
-      printf( "Thank you, %s.\n", process[c].name );
+        // Wait for randomly specified process, and respond when done
+        c = getrandom(0, 3);
+        printf("Come here, %s.\n", process[c].name);
+        _cwait(&termstat, process[c].hProcess, _WAIT_CHILD);
+        printf("Thank you, %s.\n", process[c].name);
 
-   }
-   // If there are arguments, this must be a spawned process
-   else
-   {
-      // Delay for a period that's determined by process number
-      Sleep( (argv[1][0] - 'A' + 1) * 1000L );
-      printf( "Hi, Dad. It's %s.\n", argv[1] );
-   }
+    }
+    // If there are arguments, this must be a spawned process
+    else
+    {
+        // Delay for a period that's determined by process number
+        Sleep((argv[1][0] - 'A' + 1) * 1000L);
+        printf("Hi, Dad. It's %s.\n", argv[1]);
+    }
 }
 ```
+
+A ordem da saída varia de Run para Run.
 
 ```Output
 Hi, Dad. It's Ann.
@@ -161,7 +164,7 @@ Hi, Dad. It's Carl.
 Hi, Dad. It's Dave.
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Controle de processo e ambiente](../../c-runtime-library/process-and-environment-control.md)\
+[_spawn, _wspawn funções](../../c-runtime-library/spawn-wspawn-functions.md)
