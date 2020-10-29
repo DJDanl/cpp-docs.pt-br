@@ -1,7 +1,7 @@
 ---
 title: /clr (compilação do Common Language Runtime)
 description: Use a opção de compilador do Microsoft C++/CLR para compilar o código C++/CLI e C++ como código gerenciado.
-ms.date: 10/25/2020
+ms.date: 10/27/2020
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: b4634b63e58344893d99e2217e57693a2c169f66
-ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
+ms.openlocfilehash: 9d27d9fb6226f84c4ea67a8f9387a595ba65468b
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639088"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907591"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>`/clr` (Compilação em tempo de execução de linguagem comum)
 
-Permite que aplicativos e componentes usem recursos do CLR (Common Language Runtime).
+Permite que aplicativos e componentes usem recursos do Common Language Runtime (CLR) e habilita a compilação C++/CLI.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
 > **`/clr`**\[**`:`**_Opções_ ]
 
@@ -36,7 +36,15 @@ Um ou mais dos argumentos separados por vírgulas a seguir.
 
 - nenhum
 
-   Sem opções, **`/clr`** o cria metadados para o aplicativo. Os metadados podem ser consumidos por outros aplicativos CLR e permitem que o aplicativo consuma tipos e dados nos metadados de outros componentes CLR. Para obter mais informações, confira [Assemblies mistos (nativos e gerenciados)](../../dotnet/mixed-native-and-managed-assemblies.md).
+   Sem opções, o **`/clr`** cria metadados para o componente. Os metadados podem ser consumidos por outros aplicativos CLR e permitem que o componente consuma tipos e dados nos metadados de outros componentes do CLR. Para obter mais informações, confira [Assemblies mistos (nativos e gerenciados)](../../dotnet/mixed-native-and-managed-assemblies.md).
+
+- **`NetCore`**
+
+   **`/clr:NetCore`** cria metadados e código para o componente usando o .NET Framework de plataforma cruzada mais recente, também conhecido como .NET Core. Os metadados podem ser consumidos por outros aplicativos .NET Core. E a opção permite que o componente consuma tipos e dados nos metadados de outros componentes do .NET Core.
+
+- **`nostdlib`**
+
+   Instrui o compilador a ignorar o diretório padrão *`\clr`* . O compilador produzirá erros se você incluir várias versões de uma DLL, como System.dll. Essa opção permite especificar a estrutura específica a ser usada durante a compilação.
 
 - **`pure`**
 
@@ -58,15 +66,11 @@ Um ou mais dos argumentos separados por vírgulas a seguir.
 
 - **`initialAppDomain`**
 
-   Permite que um aplicativo C++/CLI seja executado na versão 1 do CLR.  Um aplicativo que é compilado usando **`initialAppDomain`** o não deve ser usado por um aplicativo que usa ASP.net porque não tem suporte na versão 1 do CLR.
-
-- **`nostdlib`**
-
-   Instrui o compilador a ignorar o diretório padrão *`\clr`* . O compilador produzirá erros se você incluir várias versões de uma DLL, como System.dll. Essa opção permite especificar a estrutura específica a ser usada durante a compilação.
+   **`initialAppDomain` é obsoleto** . Permite que um aplicativo C++/CLI seja executado na versão 1 do CLR.  Um aplicativo que é compilado usando **`initialAppDomain`** o não deve ser usado por um aplicativo que usa ASP.net porque não tem suporte na versão 1 do CLR.
 
 ## <a name="remarks"></a>Comentários
 
-Um código gerenciado é o código que pode ser inspecionado e gerenciado pelo CLR. O código gerenciado pode acessar objetos gerenciados. Para obter mais informações, consulte [ `/clr ` restrições](clr-restrictions.md).
+*Código gerenciado* é o código que pode ser inspecionado e gerenciado pelo CLR. O código gerenciado pode acessar objetos gerenciados. Para obter mais informações, consulte [ `/clr` restrições](clr-restrictions.md).
 
 Para obter informações sobre como desenvolver aplicativos que definem e consomem tipos gerenciados em C++, consulte [extensões de componente para plataformas de tempo de execução](../../extensions/component-extensions-for-runtime-platforms.md).
 
@@ -110,15 +114,18 @@ Use ildasm.exe para exibir os metadados.
 
 1. Defina a lista suspensa **configuração** para **todas as configurações** e defina a lista suspensa **plataforma** como **todas as plataformas** .
 
-1. Selecione a página avançado **Propriedades de configuração**  >  **Advanced** .
+1. Selecione a **Configuration Properties**  >  página Geral do **C/C++** Propriedades de configuração  >  **General** .
 
 1. Modifique a propriedade de **suporte Common Language Runtime** . Escolha **OK** para salvar suas alterações.
+
+> [!NOTE]
+> No IDE do Visual Studio, a **`/clr`** opção do compilador pode ser definida individualmente na página **Propriedades de configuração**  >  **C/C++**  >  **geral** da caixa de diálogo páginas de propriedades. No entanto, recomendamos que você use um modelo CLR para criar seu projeto. Ele define todas as propriedades necessárias para a criação bem-sucedida de um componente CLR. Outra maneira de definir essas propriedades é usar a propriedade de **suporte Common Language Runtime** na página **Configuration Properties**  >  **avançado** Propriedades de configuração da caixa de diálogo páginas de propriedades. Essa propriedade define todas as outras opções de ferramenta relacionadas ao CLR de uma vez.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)\
 [Sintaxe de Command-Line do compilador MSVC](compiler-command-line-syntax.md)
