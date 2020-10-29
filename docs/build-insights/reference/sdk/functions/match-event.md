@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1486a76aab7b9a4f3b4da209f4f163b4c65b0ac4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224104"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920093"
 ---
 # <a name="matchevent"></a>MatchEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 A `MatchEvent` função é usada para corresponder a um evento em uma lista de tipos de eventos. Se o evento corresponder a um tipo na lista, ele será encaminhado para um manipulador para processamento adicional.
 
@@ -41,7 +41,7 @@ bool MatchEvent(
     TExtraArgs&&... extraArgs);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TEvent*\
 O primeiro tipo de evento que você deseja corresponder.
@@ -56,21 +56,21 @@ Um tipo que dá suporte a `operator()` . Para obter mais informações sobre qua
 Os tipos dos argumentos extras que foram passados para `MatchEvent` .
 
 *circunstância*\
-O evento a ser correspondido nos tipos de evento descritos por *TEvent* e *TEvents*.
+O evento a ser correspondido nos tipos de evento descritos por *TEvent* e *TEvents* .
 
 *acessível*\
-`MatchEvent`invoca o *callable* depois de corresponder com êxito o evento com qualquer um dos tipos de evento descritos por *TEvent* e *TEvents*. O primeiro argumento passado para *callable* é um valor r-value do tipo de evento MATCHED. O pacote de parâmetros *extraArgs* é encaminhado perfeitamente nos parâmetros restantes do *callable*.  
+`MatchEvent` invoca o *callable* depois de corresponder com êxito o evento com qualquer um dos tipos de evento descritos por *TEvent* e *TEvents* . O primeiro argumento passado para *callable* é um valor r-value do tipo de evento MATCHED. O pacote de parâmetros *extraArgs* é encaminhado perfeitamente nos parâmetros restantes do *callable* .  
 
 *extraArgs*\
 Os argumentos que são encaminhados perfeitamente para o que podem ser *chamados* junto com o tipo de evento correspondente.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`bool`** valor que **`true`** se corresponder com êxito ou de **`false`** outra forma.
 
 ## <a name="remarks"></a>Comentários
 
-Os tipos de evento a serem usados para os parâmetros *TEvent* e *TEvents* são selecionados em uma lista de *classes de captura*. Para obter uma lista de eventos e as classes de captura que você pode usar para fazer a correspondência, consulte a [tabela de eventos](../event-table.md).
+Os tipos de evento a serem usados para os parâmetros *TEvent* e *TEvents* são selecionados em uma lista de *classes de captura* . Para obter uma lista de eventos e as classes de captura que você pode usar para fazer a correspondência, consulte a [tabela de eventos](../event-table.md).
 
 ## <a name="example"></a>Exemplo
 

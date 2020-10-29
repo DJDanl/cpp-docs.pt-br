@@ -3,18 +3,18 @@ title: Aprimoramentos de conformidade do C++
 ms.date: 08/04/2020
 description: O Microsoft C++ no Visual Studio está progredindo em direção à plena conformidade com o padrão de linguagem C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500248"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921419"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Aprimoramentos de conformidade do C++ no Visual Studio
 
-O Microsoft C++ faz melhorias de conformidade e correções de bugs em cada versão. Este artigo lista as melhorias por versão principal e depois pela versão. Ele também lista correções de bugs importantes por versão. Para ir diretamente para as alterações de uma versão específica, use a lista **Neste artigo**.
+O Microsoft C++ faz melhorias de conformidade e correções de bugs em cada versão. Este artigo lista as melhorias por versão principal e depois pela versão. Ele também lista correções de bugs importantes por versão. Para ir diretamente para as alterações de uma versão específica, use a lista **Neste artigo** .
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="conformance-improvements-in-visual-studio-2019-rtw-version-160"></a><a name="improvements_160"></a> Melhorias de conformidade no Visual Studio 2019 RTW (versão 16,0)
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Efeito de definir o operador de espaçamento em `==` e `!=`
 
-Uma definição do operador Spaceship ( **`<=>`** ) sozinha não irá mais reescrever expressões que envolvam **`==`** ou a **`!=`** menos que o operador de espaço esteja marcado como **`= default`** ([P1185R2](https://wg21.link/p1185r2)). O exemplo a seguir é compilado no Visual Studio 2019 RTW e na versão 16,1, mas produz C2678 no Visual Studio 2019 versão 16,2:
+Uma definição do operador Spaceship ( **`<=>`** ) sozinha não irá mais reescrever expressões que envolvam **`==`** ou a **`!=`** menos que o operador de espaço esteja marcado como **`= default`** ( [P1185R2](https://wg21.link/p1185r2)). O exemplo a seguir é compilado no Visual Studio 2019 RTW e na versão 16,1, mas produz C2678 no Visual Studio 2019 versão 16,2:
 
 ```cpp
 #include <compare>
@@ -1066,7 +1066,7 @@ O compilador emite o erro C2668 porque as sobrecargas correspondem a essa lista 
 
 ### <a name="definition-of-is-trivially-copyable"></a>A definição de *é trivialmente copiável*
 
-O c++ 20 alterou a definição de *é trivialmente copiável*. Quando uma classe tem um membro de dados não estático com **`volatile`** tipo qualificado, ela não implica mais que qualquer Construtor de cópia ou movimentação gerado pelo compilador, ou operador de atribuição de cópia ou movimentação, não é trivial. O Comitê standard do C++ aplicou essa alteração retroativamente como um relatório de defeito. No MSVC, o comportamento do compilador não é alterado em modos de linguagem diferentes, como **`/std:c++14`** ou **`/std:c++latest`** .
+O c++ 20 alterou a definição de *é trivialmente copiável* . Quando uma classe tem um membro de dados não estático com **`volatile`** tipo qualificado, ela não implica mais que qualquer Construtor de cópia ou movimentação gerado pelo compilador, ou operador de atribuição de cópia ou movimentação, não é trivial. O Comitê standard do C++ aplicou essa alteração retroativamente como um relatório de defeito. No MSVC, o comportamento do compilador não é alterado em modos de linguagem diferentes, como **`/std:c++14`** ou **`/std:c++latest`** .
 
 Veja um exemplo do novo comportamento:
 
@@ -1119,7 +1119,7 @@ int main() {
 
 ### <a name="nullptr_t-is-only-convertible-to-bool-as-a-direct-initialization"></a>`nullptr_t` Só é conversível `bool` como uma inicialização direta
 
-No C++ 11, **`nullptr`** só é conversível **`bool`** como uma *conversão direta*; por exemplo, quando você inicializa um **`bool`** usando uma lista de inicializadores de chaves. Essa restrição nunca foi imposta por MSVC. MSVC agora implementa a regra em [`/permissive-`](../build/reference/permissive-standards-conformance.md) . Conversões implícitas agora são diagnosticadas como mal formadas. Uma conversão contextual para **`bool`** ainda é permitida, pois a inicialização direta `bool b(nullptr)` é válida.
+No C++ 11, **`nullptr`** só é conversível **`bool`** como uma *conversão direta* ; por exemplo, quando você inicializa um **`bool`** usando uma lista de inicializadores de chaves. Essa restrição nunca foi imposta por MSVC. MSVC agora implementa a regra em [`/permissive-`](../build/reference/permissive-standards-conformance.md) . Conversões implícitas agora são diagnosticadas como mal formadas. Uma conversão contextual para **`bool`** ainda é permitida, pois a inicialização direta `bool b(nullptr)` é válida.
 
 Na maioria dos casos, o erro pode ser corrigido com a substituição por **`nullptr`** **`false`** , conforme mostrado neste exemplo:
 
@@ -1566,7 +1566,7 @@ Essas variáveis devem ser definidas na mesma unidade de tradução em que são 
 
 Em padrões do C++ antes do C++ 20, uma conversão de uma classe derivada em uma classe base não exigia que a classe derivada fosse um tipo de classe completo. O Comitê standard do C++ aprovou uma alteração de relatório de defeito retroativa que se aplica a todas as versões da linguagem C++. Essa alteração alinha o processo de conversão com características de tipo, como `std::is_base_of` , que exigem que a classe derivada seja um tipo de classe completo.
 
-Aqui está um exemplo:
+Veja um exemplo:
 
 ```cpp
 template<typename A, typename B>
@@ -1617,7 +1617,7 @@ void f(E e) {
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Melhorias de conformidade no Visual Studio 2017 RTW (versão 15,0)
 
@@ -1645,7 +1645,7 @@ No **`/std:c++17`** modo, o `[[fallthrough]]` atributo pode ser usado no context
 
 ### <a name="generalized-range-based-for-loops"></a>Generalizados baseados em intervalo para loops
 
-Loops for baseados em intervalo não exigem mais que `begin()` e `end()` retornem objetos do mesmo tipo. Essa mudança permite que `end()` retorne uma sentinela conforme usado pelos intervalos em [range-v3](https://github.com/ericniebler/range-v3) e na Especificação Técnica de Intervalos concluída, mas não completamente publicada. Para obter mais informações, consulte [generalizando o `for` loop baseado em intervalo](https://wg21.link/p0184r0).
+Loops for baseados em intervalo não exigem mais que `begin()` e `end()` retornem objetos do mesmo tipo. Essa mudança permite que `end()` retorne uma sentinela conforme usado pelos intervalos em [range-v3](https://github.com/ericniebler/range-v3) e na Especificação Técnica de Intervalos concluída, mas não completamente publicada. Para obter mais informações, consulte [generalizando o `for` Loop de Range-Based](https://wg21.link/p0184r0).
 
 ## <a name="conformance-improvements-in-153"></a><a name="improvements_153"></a> Melhorias de conformidade no 15,3
 
@@ -3357,7 +3357,7 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>`offsetof` com expressões de constante
 
-[offsetof](../c-runtime-library/reference/offsetof-macro.md) normalmente tem sido implementado usando uma macro que requer um [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Esse uso não é válido em contextos que requerem uma expressão de constante, mas usualmente o compilador C++ da Microsoft tem permitido isso. A macro `offsetof` que é fornecida como parte da biblioteca padrão usa corretamente um compilador intrínseco (**__builtin_offsetof**), mas muitas pessoas têm usado o truque da macro para definir seu próprio `offsetof`.
+[offsetof](../c-runtime-library/reference/offsetof-macro.md) normalmente tem sido implementado usando uma macro que requer um [reinterpret_cast](../cpp/reinterpret-cast-operator.md). Esse uso não é válido em contextos que requerem uma expressão de constante, mas usualmente o compilador C++ da Microsoft tem permitido isso. A macro `offsetof` que é fornecida como parte da biblioteca padrão usa corretamente um compilador intrínseco ( **__builtin_offsetof** ), mas muitas pessoas têm usado o truque da macro para definir seu próprio `offsetof`.
 
 No Visual Studio 2017 versão 15,8, o compilador restringe as áreas que esses **`reinterpret_cast`** operadores podem aparecer no modo padrão, para ajudar o código a obedecer ao comportamento padrão do C++. Em [`/permissive-`](../build/reference/permissive-standards-conformance.md) , as restrições são ainda mais estritas. O uso do resultado de um `offsetof` em locais que exigem expressões constantes pode resultar em código que emite aviso C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` ou C2975 `invalid template argument, expected compile-time constant expression` .
 
@@ -3643,7 +3643,7 @@ Para evitar o erro, remova o **`constexpr`** qualificador da instanciação expl
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Aprimoramentos de conformidade do C++ no Visual Studio 2015
 
@@ -3651,6 +3651,6 @@ Temos uma lista completa de melhorias de conformidade no Visual Studio 2015 atua
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Tabela de conformidade da linguagem Microsoft C++](visual-cpp-language-conformance.md)

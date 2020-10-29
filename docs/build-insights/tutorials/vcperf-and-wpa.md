@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d5c613a7cd8ee2d7dc158050dae9529bba2a8f71
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507768"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919560"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Tutorial: vcperf e analisador de desempenho do Windows
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 As ferramentas de compilação do C++ estão disponíveis no Visual Studio 2019. Para ver a documentação desta versão, defina o controle do seletor de **versão** do Visual Studio para este artigo como Visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Neste tutorial, você aprenderá a usar *vcperf.exe* para coletar um rastreamento de sua compilação em C++. Você também aprenderá a exibir esse rastreamento no analisador de desempenho do Windows.
 
@@ -39,7 +39,7 @@ Observação: o Windows 8 ou superior é necessário para instalar o analisador 
 
 1. Baixe e instale a versão mais recente do Windows ADK.
 
-1. Quando solicitado a fornecer os recursos que você deseja instalar, selecione o **Kit de ferramentas de desempenho do Windows**. Você pode selecionar outros recursos, se desejar, mas não é necessário instalar o WPA.
+1. Quando solicitado a fornecer os recursos que você deseja instalar, selecione o **Kit de ferramentas de desempenho do Windows** . Você pode selecionar outros recursos, se desejar, mas não é necessário instalar o WPA.
 
    ![A tela de seleção de recursos do instalador do analisador de desempenho do Windows](media/wpa-installation.png)
 
@@ -66,14 +66,14 @@ A exibição de rastreamentos de informações de Build do C++ no WPA requer um 
 
 Para exibir dados de informações de compilação do C++, primeiro colete-os em um arquivo de rastreamento seguindo estas etapas:
 
-1. Abra um **x64** ou **Prompt de Comando de Ferramentas Nativas do x86 para vs 2019** no modo de administrador. (Clique com o botão direito do mouse no item de menu iniciar e escolha **mais**  >  **Executar como administrador**.)
-    1. Escolha **x64** se você tiver uma versão de 64 bits do Windows. Caso contrário, escolha **x86**.
+1. Abra um **x64** ou **Prompt de Comando de Ferramentas Nativas do x86 para vs 2019** no modo de administrador. (Clique com o botão direito do mouse no item de menu iniciar e escolha **mais**  >  **Executar como administrador** .)
+    1. Escolha **x64** se você tiver uma versão de 64 bits do Windows. Caso contrário, escolha **x86** .
 
 1. Na janela do prompt de comando, digite este comando:
 
    **vcperf.exe/Start _SessionName_**
 
-   Escolha um nome de sessão que você se lembrará de *SessionName*.
+   Escolha um nome de sessão que você se lembrará de *SessionName* .
 
 1. Compile seu projeto como faria normalmente. Você não precisa usar a mesma janela de prompt de comando para compilar.
 
@@ -89,19 +89,19 @@ Esta é a aparência de uma seqüência de comandos típica *vcperf.exe* em uma 
 
 ### <a name="important-notes-about-vcperfexe"></a>Observações importantes sobre vcperf.exe
 
-- São necessários privilégios de administrador para iniciar ou parar um rastreamento de *vcperf.exe* . Use uma janela de prompt de comando do desenvolvedor que você abrir usando **Executar como administrador**.
+- São necessários privilégios de administrador para iniciar ou parar um rastreamento de *vcperf.exe* . Use uma janela de prompt de comando do desenvolvedor que você abrir usando **Executar como administrador** .
 
 - Somente uma sessão de rastreamento por vez pode ser executada em um computador.
 
 - Lembre-se de lembrar o nome da sessão que você usou para iniciar o rastreamento. Pode ser difícil parar uma sessão em execução sem saber seu nome.
 
-- Assim como *cl.exe* e *link.exe*, o utilitário de linha de comando *vcperf.exe* está incluído em uma instalação do MSVC. Nenhuma etapa adicional é necessária para obter esse componente.
+- Assim como *cl.exe* e *link.exe* , o utilitário de linha de comando *vcperf.exe* está incluído em uma instalação do MSVC. Nenhuma etapa adicional é necessária para obter esse componente.
 
 - *vcperf.exe* coleta informações sobre todas as ferramentas do MSVC em execução no seu sistema. Como resultado, você não precisa iniciar sua compilação no mesmo prompt de comando usado para coletar o rastreamento. Você pode criar seu projeto por meio de um prompt de comando diferente ou até mesmo no Visual Studio.
 
 ### <a name="vcperfexe-is-open-source"></a>O vcperf.exe está em código-fonte aberto
 
-Se você quiser criar e executar sua própria versão do *vcperf.exe*, sinta-se à vontade para cloná-la do [repositório GitHub do vcperf](https://github.com/microsoft/vcperf).
+Se você quiser criar e executar sua própria versão do *vcperf.exe* , sinta-se à vontade para cloná-la do [repositório GitHub do vcperf](https://github.com/microsoft/vcperf).
 
 ## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>Etapa 3: exibir seu rastreamento no analisador de desempenho do Windows
 

@@ -1,6 +1,6 @@
 ---
 title: Classe Pass2
-description: A referência da classe C++ Build Insights SDK Pass2.
+description: A referência de classe do SDK do Pass2 de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 89b775c60b1d136c33dbaf2c4e39f247be7bb0bc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17f915371f70a6f4398d91251680c460aa231feb
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324409"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920496"
 ---
 # <a name="pass2-class"></a>Classe Pass2
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `Pass2` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para corresponder a um evento [PASS2.](../event-table.md#pass2)
+A `Pass2` classe é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento [PASS2](../event-table.md#pass2) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membros
 
-Juntamente com os membros herdados de sua `Pass2` classe base [LinkerPass,](linker-pass.md) a classe contém os seguintes membros:
+Junto com os membros herdados de sua classe base [LinkerPass](linker-pass.md) , a `Pass2` classe contém os seguintes membros:
 
 ### <a name="constructors"></a>Construtores
 
-[Passe2](#pass2)
+[Pass2](#pass2)
 
-## <a name="pass2"></a><a name="pass2"></a>Passe2
+## <a name="pass2"></a><a name="pass2"></a> Pass2
 
 ```cpp
 Pass2(const RawEvent& event);
@@ -53,7 +53,7 @@ Pass2(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*\
-Um evento [PASS2.](../event-table.md#pass2)
+*circunstância*\
+Um evento [PASS2](../event-table.md#pass2) .
 
 ::: moniker-end

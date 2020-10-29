@@ -10,21 +10,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a6ecff81a9f3d2b22107a8fa7fc26fad85d4f579
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041166"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919508"
 ---
 # <a name="c-build-insights-sdk"></a>SDK do C++ Build Insights
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 O SDK do insights de compilação do C++ é uma coleção de APIs que permitem que você crie ferramentas personalizadas sobre a plataforma de compilação do C++. Esta página fornece uma visão geral de alto nível para ajudá-lo a começar.
 
@@ -37,7 +37,7 @@ Você pode baixar o SDK de informações de compilação C++ como um pacote NuGe
 1. Selecione **gerenciar pacotes NuGet** no menu de contexto.
 1. No canto superior direito, selecione a origem do pacote **NuGet.org** .
 1. Pesquise a versão mais recente do pacote Microsoft. cpp. BuildInsights.
-1. Escolha **instalar**.
+1. Escolha **instalar** .
 1. Aceite a licença.
 
 Continue lendo para obter informações sobre os conceitos gerais em torno do SDK. Você também pode acessar o [repositório do GitHub de amostras de Build do c++](https://github.com/microsoft/cpp-build-insights-samples) oficial para ver exemplos de aplicativos reais do c++ que usam o SDK.
@@ -152,7 +152,7 @@ int main()
 
 ### <a name="activities-and-simple-events"></a>Atividades e eventos simples
 
-Os eventos são fornecidos em duas categorias: *atividades* e *eventos simples*. As atividades são processos contínuos no tempo que têm um início e um fim. Eventos simples são ocorrências de punctual e não têm duração. Ao analisar os rastreamentos de MSVC com o SDK do insights de compilação do C++, você receberá eventos separados quando uma atividade for iniciada e interrompida. Você receberá apenas um evento quando ocorrer um evento simples.
+Os eventos são fornecidos em duas categorias: *atividades* e *eventos simples* . As atividades são processos contínuos no tempo que têm um início e um fim. Eventos simples são ocorrências de punctual e não têm duração. Ao analisar os rastreamentos de MSVC com o SDK do insights de compilação do C++, você receberá eventos separados quando uma atividade for iniciada e interrompida. Você receberá apenas um evento quando ocorrer um evento simples.
 
 ### <a name="parent-child-relationships"></a>Relações pai-filho
 
@@ -197,7 +197,7 @@ Sempre que o SDK do insights de compilação do C++ fornece um evento, ele é fo
 
 #### <a name="matching-events-and-event-stacks"></a>Eventos correspondentes e pilhas de eventos
 
-O SDK da compilação do C++ insights oferece todos os eventos em um rastreamento, mas, na maioria das vezes, você só se preocupa com um subconjunto deles. Em alguns casos, você pode se preocupar apenas com um subconjunto de *pilhas de eventos*. O SDK fornece recursos para ajudá-lo a extrair rapidamente os eventos ou a pilha de eventos de que você precisa e rejeitar aqueles que não tem. Isso é feito por meio dessas funções correspondentes:
+O SDK da compilação do C++ insights oferece todos os eventos em um rastreamento, mas, na maioria das vezes, você só se preocupa com um subconjunto deles. Em alguns casos, você pode se preocupar apenas com um subconjunto de *pilhas de eventos* . O SDK fornece recursos para ajudá-lo a extrair rapidamente os eventos ou a pilha de eventos de que você precisa e rejeitar aqueles que não tem. Isso é feito por meio dessas funções correspondentes:
 
 | Função | Descrição |
 |--|--|
@@ -210,13 +210,13 @@ A pilha de eventos que corresponde às funções como `MatchEventStack` permitir
 
 #### <a name="capture-classes"></a>Capturar classes
 
-O uso das `Match*` funções requer que você especifique os tipos que deseja corresponder. Esses tipos são selecionados em uma lista de *classes de captura*. As classes de captura vêm em várias categorias, descritas abaixo.
+O uso das `Match*` funções requer que você especifique os tipos que deseja corresponder. Esses tipos são selecionados em uma lista de *classes de captura* . As classes de captura vêm em várias categorias, descritas abaixo.
 
 | Categoria | Descrição |
 |--|--|
 | Exato | Essas classes de captura são usadas para corresponder a um tipo de evento específico e nenhuma outra. Um exemplo é a classe do [compilador](cpp-event-data-types/compiler.md) , que corresponde ao evento do [compilador](event-table.md#compiler) . |
 | Curinga | Essas classes de captura podem ser usadas para corresponder a qualquer evento da lista de eventos aos quais dão suporte. Por exemplo, o curinga de [atividade](cpp-event-data-types/activity.md) corresponde a qualquer evento de atividade. Outro exemplo é o curinga [CompilerPass](cpp-event-data-types/compiler-pass.md) , que pode corresponder à [FRONT_END_PASS](event-table.md#front-end-pass) ou ao evento [BACK_END_PASS](event-table.md#back-end-pass) . |
-| Grupo | Os nomes das classes de captura de grupo terminam em *grupo*. Eles são usados para corresponder vários eventos do mesmo tipo em uma linha, ignorando lacunas. Eles fazem sentido apenas ao corresponder eventos recursivos, porque você não sabe quantas existem na pilha de eventos. Por exemplo, a atividade de [FRONT_END_FILE](event-table.md#front-end-file) ocorre toda vez que o compilador analisa um arquivo. Essa atividade é recursiva porque o compilador pode encontrar uma diretiva include enquanto analisa o arquivo. A classe [frontendfile](cpp-event-data-types/front-end-file.md) corresponde a apenas um evento FRONT_END_FILE na pilha. Use a classe [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) para corresponder à hierarquia de inclusão inteira. |
+| Grupo | Os nomes das classes de captura de grupo terminam em *grupo* . Eles são usados para corresponder vários eventos do mesmo tipo em uma linha, ignorando lacunas. Eles fazem sentido apenas ao corresponder eventos recursivos, porque você não sabe quantas existem na pilha de eventos. Por exemplo, a atividade de [FRONT_END_FILE](event-table.md#front-end-file) ocorre toda vez que o compilador analisa um arquivo. Essa atividade é recursiva porque o compilador pode encontrar uma diretiva include enquanto analisa o arquivo. A classe [frontendfile](cpp-event-data-types/front-end-file.md) corresponde a apenas um evento FRONT_END_FILE na pilha. Use a classe [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) para corresponder à hierarquia de inclusão inteira. |
 | Grupo de curingas | Um grupo de curingas combina as propriedades de curingas e grupos. A única classe dessa categoria é a [chamada](cpp-event-data-types/invocation-group.md)a, que corresponde e captura todos os eventos do [vinculador](event-table.md#linker) e do [compilador](event-table.md#compiler) em uma única pilha de eventos. |
 
 Consulte a [tabela de eventos](event-table.md) para saber quais classes de captura podem ser usadas para corresponder a cada evento.

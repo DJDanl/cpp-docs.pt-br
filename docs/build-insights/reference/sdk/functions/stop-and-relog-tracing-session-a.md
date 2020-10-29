@@ -1,6 +1,6 @@
 ---
 title: StopAndRelogTracingSessionA
-description: A referência de função C++ Build Insights SDK StopAndRelogTracingSessionA.
+description: A referência da função StopAndRelogTracingSessionA do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fa70d50ba79a7829adb985ab4d884b5773b5d40f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de69ca379c6f0ef46e23d2b4a78c72518e997572
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323678"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919963"
 ---
 # <a name="stopandrelogtracingsessiona"></a>StopAndRelogTracingSessionA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `StopAndRelogTracingSessionA` função interrompe uma sessão de rastreamento em andamento e salva o rastreamento resultante em um arquivo temporário. Uma sessão de relogamento é então imediatamente iniciada usando o arquivo temporário como uma entrada. O traço relocamento final produzido pela sessão de relogamento é salvo em um arquivo especificado pelo chamador. Os executáveis que chamam essa função devem ter privilégios de administrador.
+A `StopAndRelogTracingSessionA` função interrompe uma sessão de rastreamento em andamento e salva o rastreamento resultante em um arquivo temporário. Uma sessão de reregistro em log é iniciada imediatamente usando o arquivo temporário como uma entrada. O rastreamento de relogin final produzido pela sessão de reregistro em log é salvo em um arquivo especificado pelo chamador. Os executáveis que chamam essa função devem ter privilégios de administrador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,19 +40,19 @@ enum RESULT_CODE StopAndRelogTracingSessionA(
 ### <a name="parameters"></a>Parâmetros
 
 *sessionName*\
-O nome da sessão de rastreamento para parar. Use o mesmo nome de sessão que o aprovado para [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
+O nome da sessão de rastreamento a ser interrompida. Use o mesmo nome de sessão que foi passado para [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
 
-*saídaLogFile*\
-O arquivo no qual escrever o traço relocouproduzido pela sessão de relogamento.
+*outputLogFile*\
+O arquivo no qual gravar o rastreamento de relogin produzido pela sessão de reregistro em log.
 
-*Estatísticas*\
-Ponteiro para um objeto [TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopAndRelogTracingSessionA`escreve estatísticas de coleta de vestígios neste objeto antes de retornar.
+*estatística*\
+Ponteiro para um objeto [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopAndRelogTracingSessionA` grava estatísticas de coleção de rastreamento neste objeto antes de retornar.
 
-*análiseDescritor*\
-Ponteiro para um objeto [RELOG_DESCRIPTOR.](../other-types/analysis-descriptor-struct.md) Use este objeto para configurar a sessão de `StopAndRelogTracingSessionA`relogamento iniciada por .
+*analysisDescriptor*\
+Ponteiro para um objeto [RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Use esse objeto para configurar a sessão de reregistro em log iniciada pelo `StopAndRelogTracingSessionA` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

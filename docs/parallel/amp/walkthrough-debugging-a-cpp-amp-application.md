@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 21ce276af9317c06f3b717b41685f419d2362d70
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215875"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921679"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Instruções passo a passo: depurando um aplicativo C++ AMP
 
@@ -46,15 +46,15 @@ Antes de iniciar este passo a passos:
 
 As instruções para criar um projeto variam de acordo com a versão do Visual Studio que você está usando. Verifique se você tem a versão correta selecionada no canto superior esquerdo desta página.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Para criar o projeto de exemplo no Visual Studio 2019
 
-1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto** .
 
-1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++**, **Plataforma** como **Windows** e **Tipo de projeto** como **Console**.
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console** .
 
-1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**. Na próxima página, insira `AMPMapReduce` na caixa **Nome** para especificar um nome para o projeto e, se quiser, especifique o local do projeto.
+1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar** . Na próxima página, insira `AMPMapReduce` na caixa **Nome** para especificar um nome para o projeto e, se quiser, especifique o local do projeto.
 
    ![Nomear o projeto](../../build/media/mathclient-project-name-2019.png "Nomear o projeto")
 
@@ -62,23 +62,23 @@ As instruções para criar um projeto variam de acordo com a versão do Visual S
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Para criar o projeto de exemplo no Visual Studio 2017 ou no Visual Studio 2015
 
 1. Inicie o Visual Studio.
 
-1. Na barra de menus, escolha **arquivo** > **novo** > **projeto**.
+1. Na barra de menus, escolha **arquivo** > **novo** > **projeto** .
 
-1. Em **instalado** no painel modelos, escolha **Visual C++**.
+1. Em **instalado** no painel modelos, escolha **Visual C++** .
 
-1. Escolha **aplicativo de console do Win32**, digite `AMPMapReduce` na caixa **nome** e escolha o botão **OK** .
+1. Escolha **aplicativo de console do Win32** , digite `AMPMapReduce` na caixa **nome** e escolha o botão **OK** .
 
-1. Escolha o botão **Avançar**.
+1. Escolha o botão **Avançar** .
 
 1. Desmarque a caixa de seleção **cabeçalho pré-compilado** e, em seguida, escolha o botão **concluir** .
 
-1. Em **Gerenciador de soluções**, exclua *stdafx. h*, *targetver. h*e *stdafx. cpp* do projeto.
+1. Em **Gerenciador de soluções** , exclua *stdafx. h* , *targetver. h* e *stdafx. cpp* do projeto.
 
 ::: moniker-end
 
@@ -203,15 +203,15 @@ Em seguida:
     }
 ```
 
-1. Na barra de menus, escolha **arquivo**  >  **salvar tudo**.
+1. Na barra de menus, escolha **arquivo**  >  **salvar tudo** .
 
-1. No **Gerenciador de soluções**, abra o menu de atalho para **AMPMapReduce**e escolha **Propriedades**.
+1. No **Gerenciador de soluções** , abra o menu de atalho para **AMPMapReduce** e escolha **Propriedades** .
 
-1. Na caixa de diálogo **páginas de propriedades** , em **Propriedades de configuração**, escolha cabeçalhos pré-compilados **C/C++**  >  **Precompiled Headers**.
+1. Na caixa de diálogo **páginas de propriedades** , em **Propriedades de configuração** , escolha cabeçalhos pré-compilados **C/C++**  >  **Precompiled Headers** .
 
-1. Para a propriedade de **cabeçalho pré-compilado** , selecione **não usar cabeçalhos pré-compilados**e, em seguida, escolha o botão **OK** .
+1. Para a propriedade de **cabeçalho pré-compilado** , selecione **não usar cabeçalhos pré-compilados** e, em seguida, escolha o botão **OK** .
 
-1. Na barra de menus, escolha **Compilar**compilar  >  **solução**.
+1. Na barra de menus, escolha **Compilar** compilar  >  **solução** .
 
 ## <a name="debugging-the-cpu-code"></a>Depurando o código de CPU
 
@@ -219,22 +219,22 @@ Neste procedimento, você usará o depurador local do Windows para certificar-se
 
 ### <a name="to-debug-the-cpu-code"></a>Para depurar o código de CPU
 
-1. No **Gerenciador de soluções**, abra o menu de atalho para **AMPMapReduce**e escolha **Propriedades**.
+1. No **Gerenciador de soluções** , abra o menu de atalho para **AMPMapReduce** e escolha **Propriedades** .
 
-2. Na caixa de diálogo **páginas de propriedades** , em **Propriedades de configuração**, escolha **depuração**. Verifique se o **depurador local do Windows** está selecionado na lista **depurador a ser iniciado** .
+2. Na caixa de diálogo **páginas de propriedades** , em **Propriedades de configuração** , escolha **depuração** . Verifique se o **depurador local do Windows** está selecionado na lista **depurador a ser iniciado** .
 
-3. Retorne ao **Editor de código**.
+3. Retorne ao **Editor de código** .
 
 4. Defina pontos de interrupção nas linhas de código mostradas na ilustração a seguir (aproximadamente linhas 67 linha 70).
 
    ![Pontos de interrupção de CPU](../../parallel/amp/media/campcpubreakpoints.png "Pontos de interrupção de CPU") <br/>
    Pontos de interrupção de CPU
 
-5. Na barra de menus, escolha **depurar**  >  **Iniciar Depuração**.
+5. Na barra de menus, escolha **depurar**  >  **Iniciar Depuração** .
 
 6. Na janela **locais** , observe o valor de `stride_size` até que o ponto de interrupção na linha 70 seja atingido.
 
-7. Na barra de menus, escolha **depurar**  >  **parar depuração**.
+7. Na barra de menus, escolha **depurar**  >  **parar depuração** .
 
 ## <a name="debugging-the-gpu-code"></a>Depurando o código de GPU
 
@@ -242,28 +242,28 @@ Esta seção mostra como depurar o código da GPU, que é o código contido na `
 
 ### <a name="to-debug-the-gpu-code"></a>Para depurar o código de GPU
 
-1. No **Gerenciador de soluções**, abra o menu de atalho para **AMPMapReduce**e escolha **Propriedades**.
+1. No **Gerenciador de soluções** , abra o menu de atalho para **AMPMapReduce** e escolha **Propriedades** .
 
-2. Na caixa de diálogo **páginas de propriedades** , em **Propriedades de configuração**, escolha **depuração**.
+2. Na caixa de diálogo **páginas de propriedades** , em **Propriedades de configuração** , escolha **depuração** .
 
-3. Na lista **Depurador a iniciar**, selecione **Depurador Local do Windows**.
+3. Na lista **Depurador a iniciar** , selecione **Depurador Local do Windows** .
 
 4. Na lista **tipo de depurador** , verifique se a **seleção automática** está selecionada.
 
-    **Auto** é o valor padrão. Antes do Windows 10, a **GPU só** é o valor necessário em vez de **auto**.
+    **Auto** é o valor padrão. Antes do Windows 10, a **GPU só** é o valor necessário em vez de **auto** .
 
-5. Clique no botão **OK**.
+5. Clique no botão **OK** .
 
 6. Defina um ponto de interrupção na linha 30, conforme mostrado na ilustração a seguir.
 
    ![Pontos de interrupção de GPU](../../parallel/amp/media/campgpubreakpoints.png "Pontos de interrupção de GPU") <br/>
    Ponto de interrupção de GPU
 
-7. Na barra de menus, escolha **depurar**  >  **Iniciar Depuração**. Os pontos de interrupção no código de CPU nas linhas 67 e 70 não são executados durante a depuração de GPU porque essas linhas de código são executadas na CPU.
+7. Na barra de menus, escolha **depurar**  >  **Iniciar Depuração** . Os pontos de interrupção no código de CPU nas linhas 67 e 70 não são executados durante a depuração de GPU porque essas linhas de código são executadas na CPU.
 
 ### <a name="to-use-the-gpu-threads-window"></a>Para usar a janela threads de GPU
 
-1. Para abrir a janela **threads de GPU** , na barra de menus, escolha **depurar**  >  **Windows**  >  **threads de GPU**do Windows.
+1. Para abrir a janela **threads de GPU** , na barra de menus, escolha **depurar**  >  **Windows**  >  **threads de GPU** do Windows.
 
    Você pode inspecionar o estado dos threads de GPU na janela **threads de GPU** que aparece.
 
@@ -276,7 +276,7 @@ Esta seção mostra como depurar o código da GPU, que é o código contido na `
 
    Na janela **threads de GPU** , há quatro threads de GPU ativos e 28 threads de GPU bloqueados na instrução [tile_barrier:: Wait](reference/tile-barrier-class.md#wait) definida na linha 21 ( `t_idx.barrier.wait();` ). Todos os threads de GPU 32 pertencem ao primeiro bloco, `tile[0]` . Uma seta aponta para a linha que inclui o thread atual. Para alternar para um thread diferente, use um dos seguintes métodos:
 
-    - Na linha para o thread alternar para na janela **threads de GPU** , abra o menu de atalho e escolha **alternar para thread**. Se a linha representar mais de um thread, você mudará para o primeiro thread de acordo com as coordenadas de thread.
+    - Na linha para o thread alternar para na janela **threads de GPU** , abra o menu de atalho e escolha **alternar para thread** . Se a linha representar mais de um thread, você mudará para o primeiro thread de acordo com as coordenadas de thread.
 
     - Insira os valores de bloco e thread do thread nas caixas de texto correspondentes e, em seguida, escolha o botão **alternar thread** .
 
@@ -284,7 +284,7 @@ Esta seção mostra como depurar o código da GPU, que é o código contido na `
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Para usar a janela pilhas paralelas
 
-1. Para abrir a janela **pilhas paralelas** , na barra de menus, escolha **depurar**  >  **Windows**  >  **pilhas paralelas**do Windows.
+1. Para abrir a janela **pilhas paralelas** , na barra de menus, escolha **depurar**  >  **Windows**  >  **pilhas paralelas** do Windows.
 
    Você pode usar a janela de **pilhas paralelas** para inspecionar simultaneamente os quadros de pilha de vários threads de GPU.
 
@@ -297,7 +297,7 @@ Esta seção mostra como depurar o código da GPU, que é o código contido na `
 
    32 threads passaram de `_kernel_stub` para a instrução lambda na `parallel_for_each` chamada de função e, em seguida, para a `sum_kernel_tiled` função, em que ocorre a redução paralela. 28 dos 32 threads progrediram para a instrução [tile_barrier:: Wait](reference/tile-barrier-class.md#wait) e permanecem bloqueados na linha 22, enquanto os outros quatro threads permanecem ativos na `sum_kernel_tiled` função na linha 30.
 
-   Você pode inspecionar as propriedades de um thread de GPU que estão disponíveis na janela **threads de GPU** no DataTip avançado da janela **pilhas paralelas** . Para fazer isso, posicione o ponteiro do mouse no registro de ativação de **sum_kernel_tiled**. A ilustração a seguir mostra o DataTip.
+   Você pode inspecionar as propriedades de um thread de GPU que estão disponíveis na janela **threads de GPU** no DataTip avançado da janela **pilhas paralelas** . Para fazer isso, posicione o ponteiro do mouse no registro de ativação de **sum_kernel_tiled** . A ilustração a seguir mostra o DataTip.
 
    ![DataTip para janela de pilhas paralelas](../../parallel/amp/media/campe.png "DataTip para janela de pilhas paralelas") <br/>
    Thread de GPU DataTip
@@ -306,7 +306,7 @@ Esta seção mostra como depurar o código da GPU, que é o código contido na `
 
 ### <a name="to-use-the-parallel-watch-window"></a>Para usar o janela Inspeção paralelo
 
-1. Para abrir a janela de **inspeção paralela** , na barra de menus, escolha **depurar**  >  **Windows**  >  **Parallel Watch**  >  **paralela Watch 1**.
+1. Para abrir a janela de **inspeção paralela** , na barra de menus, escolha **depurar**  >  **Windows**  >  **Parallel Watch**  >  **paralela Watch 1** .
 
    Você pode usar a janela de **inspeção paralela** para inspecionar os valores de uma expressão em vários threads.
 
@@ -320,12 +320,12 @@ Esta seção mostra como depurar o código da GPU, que é o código contido na `
 
    Você pode classificar por uma expressão especificada selecionando seu cabeçalho de coluna correspondente.
 
-   Selecione o cabeçalho de coluna **locala [localIdx [0]]** para classificar a coluna. A ilustração a seguir mostra os resultados da classificação por **locala [localIdx [0]]**.
+   Selecione o cabeçalho de coluna **locala [localIdx [0]]** para classificar a coluna. A ilustração a seguir mostra os resultados da classificação por **locala [localIdx [0]]** .
 
    ![janela Inspeção paralelos com resultados classificados](../../parallel/amp/media/campf.png "janela Inspeção paralelos com resultados classificados") <br/>
    Resultados da classificação
 
-   Você pode exportar o conteúdo na janela de **inspeção paralela** para o Excel escolhendo o botão **Excel** e, em seguida, escolhendo **abrir no Excel**. Se você tiver o Excel instalado em seu computador de desenvolvimento, isso abrirá uma planilha do Excel que contém o conteúdo.
+   Você pode exportar o conteúdo na janela de **inspeção paralela** para o Excel escolhendo o botão **Excel** e, em seguida, escolhendo **abrir no Excel** . Se você tiver o Excel instalado em seu computador de desenvolvimento, isso abrirá uma planilha do Excel que contém o conteúdo.
 
 6. No canto superior direito da janela de **inspeção paralela** , há um controle de filtro que você pode usar para filtrar o conteúdo usando expressões booleanas. Digite `localA[localIdx[0]] > 20000` na caixa de texto controle de filtro e escolha a tecla **Enter** .
 
@@ -339,7 +339,7 @@ Você pode marcar threads de GPU específicos sinalizando-os na janela **threads
 
 1. Selecione o cabeçalho de coluna **[Thread]** na janela de **inspeção paralela 1** para classificar por índice de bloco e índice de thread.
 
-2. Na barra de menus, escolha **depurar**  >  **continuar**, que faz com que os quatro threads que estavam ativos sejam progredidos para a próxima barreira (definida na linha 32 de AMPMapReduce. cpp).
+2. Na barra de menus, escolha **depurar**  >  **continuar** , que faz com que os quatro threads que estavam ativos sejam progredidos para a próxima barreira (definida na linha 32 de AMPMapReduce. cpp).
 
 3. Escolha o símbolo de sinalizador no lado esquerdo da linha que contém os quatro threads que agora estão ativos.
 
@@ -350,14 +350,14 @@ Você pode marcar threads de GPU específicos sinalizando-os na janela **threads
 
    A janela de **inspeção paralela** e a DataTip da janela **pilhas paralelas** indicam os threads sinalizados.
 
-4. Se você quiser se concentrar nos quatro threads sinalizados, poderá optar por mostrar, nas janelas **threads de GPU**, **inspeção paralela**e **pilhas paralelas** , somente os threads sinalizados.
+4. Se você quiser se concentrar nos quatro threads sinalizados, poderá optar por mostrar, nas janelas **threads de GPU** , **inspeção paralela** e **pilhas paralelas** , somente os threads sinalizados.
 
    Escolha o botão **Mostrar somente sinalizado** em qualquer uma das janelas ou na barra de ferramentas **local de depuração** . A ilustração a seguir mostra o botão **Mostrar somente sinalizado** na barra de ferramentas do **local de depuração** .
 
    ![Barra de ferramentas do local de depuração com o ícone mostrar somente sinalizado](../../parallel/amp/media/camph.png "Barra de ferramentas do local de depuração com o ícone mostrar somente sinalizado") <br/>
    **Mostrar botão somente sinalizado**
 
-   Agora, as janelas **threads de GPU**, **inspeção paralela**e **pilhas paralelas** exibem apenas os threads sinalizados.
+   Agora, as janelas **threads de GPU** , **inspeção paralela** e **pilhas paralelas** exibem apenas os threads sinalizados.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Congelando e descongelando threads de GPU
 
@@ -367,9 +367,9 @@ Você pode congelar (suspender) e descongelar (retomar) threads de GPU da janela
 
 1. Escolha o botão **Mostrar somente sinalizado** para exibir todos os threads.
 
-2. Na barra de menus, escolha **depurar**  >  **continuar**.
+2. Na barra de menus, escolha **depurar**  >  **continuar** .
 
-3. Abra o menu de atalho da linha ativa e escolha **congelar**.
+3. Abra o menu de atalho da linha ativa e escolha **congelar** .
 
    A ilustração a seguir da janela **threads de GPU** mostra que todos os quatro threads estão congelados.
 
@@ -380,36 +380,36 @@ Você pode congelar (suspender) e descongelar (retomar) threads de GPU da janela
 
 4. Na barra de menus, escolha **depurar**  >  **continuar** para permitir que os próximos quatro threads de GPU progredissem além da barreira na linha 22 e atinjam o ponto de interrupção na linha 30. A janela **threads de GPU** mostra que os quatro threads congelados anteriormente permanecem congelados e no estado ativo.
 
-5. Na barra de menus, escolha **depurar**, **continuar**.
+5. Na barra de menus, escolha **depurar** , **continuar** .
 
 6. Na janela de **inspeção paralela** , você também pode descongelar Threads de GPU individuais ou múltiplos.
 
 ### <a name="to-group-gpu-threads"></a>Para agrupar threads de GPU
 
-1. No menu de atalho para um dos threads na janela **threads de GPU** , escolha **Agrupar por**, **endereço**.
+1. No menu de atalho para um dos threads na janela **threads de GPU** , escolha **Agrupar por** , **endereço** .
 
    Os threads na janela **threads de GPU** são agrupados por endereço. O endereço corresponde à instrução na desmontagem em que cada grupo de threads está localizado. 24 threads estão na linha 22, em que o [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) é executado. 12 threads estão na instrução para a barreira na linha 32. Quatro desses threads estão sinalizados. Oito threads estão no ponto de interrupção na linha 30. Quatro desses threads estão congelados. A ilustração a seguir mostra os threads agrupados na janela **threads de GPU** .
 
    ![Janela threads GPU com threads agrupados por endereço](../../parallel/amp/media/campl.png "Janela threads GPU com threads agrupados por endereço") <br/>
    Threads agrupados na janela **threads de GPU**
 
-2. Você também pode executar a operação **Agrupar por** abrindo o menu de atalho para a grade de dados da janela de **inspeção paralela** , escolhendo **Agrupar por**e, em seguida, escolhendo o item de menu que corresponde ao modo como você deseja agrupar os threads.
+2. Você também pode executar a operação **Agrupar por** abrindo o menu de atalho para a grade de dados da janela de **inspeção paralela** , escolhendo **Agrupar por** e, em seguida, escolhendo o item de menu que corresponde ao modo como você deseja agrupar os threads.
 
 ## <a name="running-all-threads-to-a-specific-location-in-code"></a>Executando todos os threads em um local específico no código
 
-Você executa todos os threads em um determinado bloco para a linha que contém o cursor usando **executar bloco atual para cursor**.
+Você executa todos os threads em um determinado bloco para a linha que contém o cursor usando **executar bloco atual para cursor** .
 
 ### <a name="to-run-all-threads-to-the-location-marked-by-the-cursor"></a>Para executar todos os threads para o local marcado pelo cursor
 
-1. No menu de atalho para os threads congelados, escolha **descongelar**.
+1. No menu de atalho para os threads congelados, escolha **descongelar** .
 
-2. No **Editor de código**, coloque o cursor na linha 30.
+2. No **Editor de código** , coloque o cursor na linha 30.
 
-3. No menu de atalho do **Editor de código**, escolha **executar bloco atual para cursor**.
+3. No menu de atalho do **Editor de código** , escolha **executar bloco atual para cursor** .
 
    Os 24 threads que foram bloqueados anteriormente na barreira na linha 21 progrediram para a linha 32. Isso é mostrado na janela **threads de GPU** .
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Visão geral de C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Depurando código de GPU](/visualstudio/debugger/debugging-gpu-code)<br/>

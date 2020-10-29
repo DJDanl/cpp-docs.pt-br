@@ -3,22 +3,22 @@ title: Instalar uma carga de trabalho do Linux para C++ no Visual Studio
 description: Como baixar, instalar e configurar a carga de trabalho do Linux para C++ no Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9d0c832ec383286b5f89b8ed1474e69d72b5cb98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176278"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921601"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Os projetos do Linux são permitidos no Visual Studio 2017 e posterior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Você pode usar o Visual Studio IDE no Windows para criar, editar e depurar projetos do C++ que são executados em um sistema Linux remoto, máquina virtual ou o [subsistema do Windows para Linux](/windows/wsl/about).
 
@@ -28,7 +28,7 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="visual-studio-setup"></a>Configuração do Visual Studio
 
@@ -36,11 +36,11 @@ Para qualquer um desses cenários, a carga de trabalho **Desenvolvimento para Li
 
    ![Caixa de pesquisa do Windows](media/visual-studio-installer-search.png)
 
-1. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador for aberto, escolha **Modificar**e, em seguida, clique na guia **cargas de trabalho** . Role para baixo até **outros conjuntos de ferramentas** e selecione o **desenvolvimento do Linux com** carga de trabalho do C++.
+1. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador for aberto, escolha **Modificar** e, em seguida, clique na guia **cargas de trabalho** . Role para baixo até **outros conjuntos de ferramentas** e selecione o **desenvolvimento do Linux com** carga de trabalho do C++.
 
    ![Carga de trabalho do Visual C++ para Desenvolvimento em Linux](media/linuxworkload.png)
 
-1. Se você estiver direcionando para IoT ou plataformas incorporadas, vá para o painel **detalhes da instalação** à direita. Em **desenvolvimento Linux com C++**, expanda **componentes opcionais**e escolha os componentes de que você precisa. O suporte do CMake para o Linux está selecionado por padrão.
+1. Se você estiver direcionando para IoT ou plataformas incorporadas, vá para o painel **detalhes da instalação** à direita. Em **desenvolvimento Linux com C++** , expanda **componentes opcionais** e escolha os componentes de que você precisa. O suporte do CMake para o Linux está selecionado por padrão.
 
 1. Clique em **Modificar** para continuar a instalação.
 
@@ -52,7 +52,7 @@ No Windows 10, você pode instalar e ter sua distribuição favorita do Linux co
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL:
 
@@ -68,7 +68,7 @@ Os comandos a seguir pressupõem que você esteja usando g + + em vez de Clang.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Os projetos do Linux no Visual Studio exigem que as seguintes dependências sejam instaladas em seu sistema Linux remoto ou WSL:
 
@@ -81,7 +81,7 @@ Os projetos do Linux no Visual Studio exigem que as seguintes dependências seja
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Instalação do Linux: Ubuntu no WSL
 
@@ -93,11 +93,11 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu em sistemas Linux remotos
 
-O sistema Linux de destino deve ter o **OpenSSH-Server**, o **g + +**, o **gdb**e o **Make** instalado. **ninja-Build** é necessário apenas para projetos CMake. O daemon **SSH** deve estar em execução. o **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos remotos com seu computador local para suporte ao IntelliSense. Se esses aplicativos ainda não estiverem presentes, você poderá instalá-los da seguinte maneira:
+O sistema Linux de destino deve ter o **OpenSSH-Server** , o **g + +** , o **gdb** e o **Make** instalado. **ninja-Build** é necessário apenas para projetos CMake. O daemon **SSH** deve estar em execução. o **zip** e o **rsync** são necessários para a sincronização automática de cabeçalhos remotos com seu computador local para suporte ao IntelliSense. Se esses aplicativos ainda não estiverem presentes, você poderá instalá-los da seguinte maneira:
 
 1. Em um prompt de shell no seu computador Linux, execute:
 
@@ -117,11 +117,11 @@ O sistema Linux de destino deve ter o **OpenSSH-Server**, o **g + +**, o **gdb**
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="fedora-on-wsl"></a>Fedora no WSL
 
-O Fedora usa o instalador de pacote **dnf**. Para baixar o **g + +**, o **gdb**, **Make**, **rsync**, **ninja-Build**e **zip**, execute:
+O Fedora usa o instalador de pacote **dnf** . Para baixar o **g + +** , o **gdb** , **Make** , **rsync** , **ninja-Build** e **zip** , execute:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync ninja-build make zip
@@ -131,11 +131,11 @@ O **zip** e o **rsync** são necessários para a sincronização automática de 
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora em sistemas Linux remotos
 
-O computador de destino que executa o Fedora usa o instalador do pacote **dnf**. Para baixar o **OpenSSH-Server**, **g + +**, **gdb**, **Make**, **ninja-Build**, **rsync**e **zip**, e reinicie o daemon SSH, siga estas instruções. **ninja-Build** só é necessário para projetos CMake.
+O computador de destino que executa o Fedora usa o instalador do pacote **dnf** . Para baixar o **OpenSSH-Server** , **g + +** , **gdb** , **Make** , **ninja-Build** , **rsync** e **zip** , e reinicie o daemon SSH, siga estas instruções. **ninja-Build** só é necessário para projetos CMake.
 
 1. Em um prompt de shell no seu computador Linux, execute:
 

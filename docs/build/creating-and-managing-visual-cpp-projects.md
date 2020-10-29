@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a8e23a3c384ce9b5ac7e73d18958246b52eb95b5
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078687"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919378"
 ---
 # <a name="visual-studio-projects---c"></a>Projetos do Visual Studio – C++
 
@@ -21,17 +21,17 @@ Um *projeto do Visual Studio* é um projeto baseado no sistema de build do MSBui
 
 ## <a name="create-a-project"></a>Criar um projeto
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Você pode criar projetos C++ escolhendo **arquivo** > **novo** > **projeto**e, em seguida, definindo o **idioma** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa.
+Você pode criar projetos C++ escolhendo **arquivo**  >  **novo**  >  **projeto** e, em seguida, definindo o **idioma** como C++. Na lista de resultados, você verá uma lista de modelos de projeto pela qual poderá filtrar, definindo a **Plataforma** ou o **Tipo de Projeto** e digitando palavras-chave na caixa de pesquisa.
 
    ![Modelos de projeto do Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Caixa de diálogo novo projeto do Visual Studio 2019")
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
-Você pode criar projetos C++ escolhendo **arquivo** > **novo** > **projeto**e, em seguida, escolhendo Visual C++ no painel esquerdo. No painel central, você verá uma lista de modelos de projeto:
+Você pode criar projetos C++ escolhendo **arquivo**  >  **novo**  >  **projeto** e, em seguida, escolhendo Visual C++ no painel esquerdo. No painel central, você verá uma lista de modelos de projeto:
 
    ![Modelos de projeto](../overview/media/vs2017-new-project.png "Caixa de diálogo novo projeto do Visual Studio 2017")
 
@@ -43,11 +43,11 @@ Depois que você criar um projeto, ele será exibido na janela [Gerenciador de S
 
    ![Gerenciador de Soluções](media/mathlibrary-solution-explorer-153.png)
 
-Quando você cria um projeto, um arquivo de solução (.sln) também é criado. Adicione mais projetos à solução clicando com o botão direito do mouse nele no **Gerenciador de Soluções**. O arquivo de solução é usado para coordenar as dependências de build quando você tem vários projetos relacionados, mas não faz muito mais do que isso. Todas as opções do compilador são definidas no nível do projeto.
+Quando você cria um projeto, um arquivo de solução (.sln) também é criado. Adicione mais projetos à solução clicando com o botão direito do mouse nele no **Gerenciador de Soluções** . O arquivo de solução é usado para coordenar as dependências de build quando você tem vários projetos relacionados, mas não faz muito mais do que isso. Todas as opções do compilador são definidas no nível do projeto.
 
-## <a name="add-items"></a>Adicionar Itens
+## <a name="add-items"></a>Adicionar itens
 
-Adicione arquivos de código-fonte, ícones ou outros itens ao projeto clicando com o botão direito do mouse no projeto no **Gerenciador de Soluções** e escolhendo **Adicionar > Novo** ou **Adicionar > Existente**.
+Adicione arquivos de código-fonte, ícones ou outros itens ao projeto clicando com o botão direito do mouse no projeto no **Gerenciador de Soluções** e escolhendo **Adicionar > Novo** ou **Adicionar > Existente** .
 
 ## <a name="add-third-party-libraries"></a>Adicionar bibliotecas de terceiros
 
@@ -55,7 +55,7 @@ Para adicionar bibliotecas de terceiros, use o gerenciador de pacotes do [vcpkg]
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Definir opções do compilador e outras propriedades de build
 
-Para definir configurações de build para um projeto, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e escolha **Propriedades**. Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](working-with-project-properties.md).
+Para definir configurações de build para um projeto, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e escolha **Propriedades** . Para obter mais informações, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](working-with-project-properties.md).
 
 ## <a name="compile-and-run"></a>Compilar e executar
 
@@ -75,16 +75,16 @@ Como usar as páginas de propriedades e as folhas de propriedades para especific
 [Bibliotecas e componentes de referência em tempo de compilação](adding-references-in-visual-cpp-projects.md)<br/>
 Como incluir bibliotecas, DLLs e componentes .NET e COM em um projeto.
 
-[Organização de arquivos de saída do projeto](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organizar arquivos de saída do projeto](how-to-organize-project-output-files-for-builds.md)<br/>
 Como personalizar a localização dos arquivos executáveis criados no processo de build.
 
-[Etapas e eventos de build personalizados](understanding-custom-build-steps-and-build-events.md)<br/>
+[Etapas de compilação personalizadas e eventos de compilação](understanding-custom-build-steps-and-build-events.md)<br/>
 Como adicionar qualquer comando arbitrário para o processo de build em pontos específicos.
 
 [Criar um projeto com base no código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Como criar um projeto do Visual Studio com base em uma coleção flexível de arquivos de origem.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Sistemas de Compilação e Projetos](projects-and-build-systems-cpp.md)<br>
+[Sistemas de build e projetos](projects-and-build-systems-cpp.md)<br>
 [Guia de atualização e portabilidade do Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

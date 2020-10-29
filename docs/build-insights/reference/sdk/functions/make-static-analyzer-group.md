@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 81c5654c78e086af1c33d0791768ceea52575c51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d7ddb8652400438c38882b1d27e635e8f1e8db51
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224169"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920236"
 ---
 # <a name="makestaticanalyzergroup"></a>MakeStaticAnalyzerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 A `MakeStaticAnalyzerGroup` função é usada para criar um grupo de analisador estático que pode ser passado para funções como [`Analyze`](analyze.md) ou [`Relog`](relog.md) . Os membros de um grupo do Analyzer recebem eventos um por um da esquerda para a direita, até que todos os eventos em um rastreamento sejam analisados.
 
@@ -34,7 +34,7 @@ template <typename... TAnalyzerPtrs>
 auto MakeStaticAnalyzerGroup(TAnalyzerPtrs... analyzers);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TAnalyzerPtrs*\
 Esse parâmetro é sempre deduzido.
@@ -42,7 +42,7 @@ Esse parâmetro é sempre deduzido.
 *Analisadores*\
 Um pacote de parâmetros de [`IAnalyzer`](../other-types/ianalyzer-class.md) ponteiros incluídos no grupo do analisador estático. Esses ponteiros podem ser brutos, `std::unique_ptr` ou `std::shared_ptr` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um grupo de analisador estático. Use a **`auto`** palavra-chave para capturar o valor de retorno.
 

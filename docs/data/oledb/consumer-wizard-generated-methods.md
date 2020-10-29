@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500693"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919118"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos gerados pelo Assistente do Consumidor
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 O **Assistente de Consumidor OLE DB da ATL** e o **Assistente para Aplicativo do MFC** geram determinadas funções sobre as quais você deve estar ciente. Alguns métodos são implementados de forma diferente em projetos atribuídos, portanto, há algumas advertências; cada caso é abordado abaixo. Saiba mais sobre como exibir o código injetado em [Depuração de código injetado](/visualstudio/debugger/how-to-debug-injected-code).
 
@@ -31,7 +31,7 @@ O **Assistente de Consumidor OLE DB da ATL** e o **Assistente para Aplicativo do
 
 - `GetRowsetProperties` recupera um ponteiro para a propriedade do conjunto de linhas definido com o qual as propriedades podem ser definidas.
 
-- `OpenDataSource` abre a fonte de dados usando a cadeia de caracteres de inicialização especificada na caixa de diálogo **Propriedades do Link de Dados**.
+- `OpenDataSource` abre a fonte de dados usando a cadeia de caracteres de inicialização especificada na caixa de diálogo **Propriedades do Link de Dados** .
 
 - `CloseDataSource` fecha a fonte de dados de forma apropriada.
 
@@ -159,6 +159,6 @@ O assistente define os métodos `OpenDataSource` e `CloseDataSource`; `OpenDataS
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Criando um consumidor OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -1,6 +1,6 @@
 ---
 title: Classe C1DLL
-description: A referência da classe C++ Build Insights SDK C1DLL.
+description: A referência de classe do SDK do C1DLL de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8c45942660a6e1b51dcd261bcf8977125c0d64a0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8f1f6fdaf9a2c16e07fa5096cfcb585f8c3d9f2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325192"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920835"
 ---
 # <a name="c1dll-class"></a>Classe C1DLL
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `C1DLL` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com um evento [C1_DLL.](../event-table.md#c1-dll)
+A `C1DLL` classe é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento [C1_DLL](../event-table.md#c1-dll) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membros
 
-Juntamente com os membros herdados de `C1DLL` sua classe base [de atividade,](activity.md) a classe contém os seguintes membros:
+Junto com os membros herdados de sua classe base de [atividade](activity.md) , a `C1DLL` classe contém os seguintes membros:
 
 ### <a name="constructors"></a>Construtores
 
 [C1DLL](#c1-dll)
 
-## <a name="c1dll"></a><a name="c1-dll"></a>C1DLL
+## <a name="c1dll"></a><a name="c1-dll"></a> C1DLL
 
 ```cpp
 C1DLL(const RawEvent& event);
@@ -53,7 +53,7 @@ C1DLL(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*\
-Um evento [C1_DLL.](../event-table.md#c1-dll)
+*circunstância*\
+Um evento [C1_DLL](../event-table.md#c1-dll) .
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: Classe DeGrupo de Invocação
-description: A referência da classe C++ Build Insights SDK InvocationGroup.
+title: Classe de um filerevocation
+description: A referência de classe do SDK do Application insights do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ff5a73d5304a21c314c0fc5ce442e0ffc23b28fd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a8d4786a228ab25551ee36ce22637d44dc07307
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324687"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920626"
 ---
-# <a name="invocationgroup-class"></a>Classe DeGrupo de Invocação
+# <a name="invocationgroup-class"></a>Classe de um filerevocation
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `InvocationGroup` classe é usada com as funções [MatchEventStackStack](../functions/match-event-stack.md) e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar grupos que contenham uma mistura de eventos [COMPILER](../event-table.md#compiler) e [LINKER.](../event-table.md#linker)
+A `InvocationGroup` classe é usada com as funções [MatchEventStack](../functions/match-event-stack.md) e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para fazer a correspondência de grupos que contêm uma mistura de eventos de [compilador](../event-table.md#compiler) e [vinculador](../event-table.md#linker) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membros
 
-Juntamente com os membros herdados de sua `InvocationGroup` classe base de [invocação\<\> eventGroup,](event-group.md) a classe contém os seguintes membros:
+Junto com os membros herdados da classe base do seu conjunto de [eventos \<Invocation\> ](event-group.md) , a `InvocationGroup` classe contém os seguintes membros:
 
 ### <a name="constructors"></a>Construtores
 
-[Grupo de Invocação](#invocation-group)
+[InvocationGroup](#invocation-group)
 
-## <a name="invocationgroup"></a><a name="invocation-group"></a>Grupo de Invocação
+## <a name="invocationgroup"></a><a name="invocation-group"></a> De invocação
 
 ```cpp
 InvocationGroup(std::deque<Invocation>&& group);
@@ -53,7 +53,7 @@ InvocationGroup(std::deque<Invocation>&& group);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Grupo*\
-Um grupo contendo uma mistura de eventos [COMPILER](../event-table.md#compiler) e [LINKER.](../event-table.md#linker)
+*Group*\
+Um grupo que contém uma mistura de eventos de [compilador](../event-table.md#compiler) e [vinculador](../event-table.md#linker) .
 
 ::: moniker-end

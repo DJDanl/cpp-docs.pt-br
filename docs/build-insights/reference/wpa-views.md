@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a5b13ee08becd472b3bc52319212b84a9c8ffc25
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2ad5d2153fdf434461e1af982e9d9f343e9957a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508806"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919495"
 ---
 # <a name="reference-windows-performance-analyzer-views"></a>Referência: exibições do analisador de desempenho do Windows
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 As ferramentas de compilação do C++ estão disponíveis no Visual Studio 2019. Para ver a documentação desta versão, defina o controle do seletor de **versão** do Visual Studio para este artigo como Visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Este artigo fornece detalhes sobre cada uma das exibições de compilação do C++ disponíveis no Windows Performance Analyzer (WPA). Use esta página para localizar:
 
@@ -50,12 +50,12 @@ A exibição do Gerenciador de compilação é usada para:
 | ExclusiveDuration        | A duração de milissegundos da atividade. A duração das atividades filhas não está incluída nesse valor. |
 | InclusiveCPUTime         | A quantidade de tempo de CPU em milissegundos usada por essa atividade e todas as atividades filho. |
 | InclusiveDuration        | A duração de milissegundos desta atividade, incluindo todas as atividades filho. |
-| InvocationDescription    | Uma descrição textual da invocação em que esse evento ocorreu. A descrição inclui se ela foi *cl.exe* ou *link.exe*e um identificador de invocação numérica exclusivo. Se aplicável, ele inclui o caminho completo para o componente compilado ou vinculado durante a invocação. Para invocações que não criam nenhum componente ou para aqueles que criam vários componentes, o caminho fica em branco. O identificador de invocação é o mesmo da coluna invocaid. |
+| InvocationDescription    | Uma descrição textual da invocação em que esse evento ocorreu. A descrição inclui se ela foi *cl.exe* ou *link.exe* e um identificador de invocação numérica exclusivo. Se aplicável, ele inclui o caminho completo para o componente compilado ou vinculado durante a invocação. Para invocações que não criam nenhum componente ou para aqueles que criam vários componentes, o caminho fica em branco. O identificador de invocação é o mesmo da coluna invocaid. |
 | InvocationId             | Um identificador numérico exclusivo para a invocação em que esse evento ocorreu. |
 | Nome                     | O nome da atividade ou da propriedade representada por este evento. |
 | Hora                     | Um carimbo de data/hora que identifica quando o evento ocorreu. |
 | Ferramenta                     | A ferramenta que está sendo executada quando esse evento ocorreu. O valor desta coluna é CL ou link. |
-| Tipo                     | O tipo do evento atual. Esse valor é atividade ou propriedade. |
+| Type                     | O tipo do evento atual. Esse valor é atividade ou propriedade. |
 | Valor                    | Se o evento atual for uma propriedade, essa coluna conterá seu valor. Essa coluna é deixada em branco quando o evento atual é uma atividade. |
 
 ### <a name="build-explorer-view-presets"></a>Predefinições de exibição do Gerenciador de compilação
@@ -78,7 +78,7 @@ A exibição arquivos é usada para:
 
 | Nome da coluna              | Descrição |
 |--------------------------|-------------|
-| ActivityName             | A atividade em andamento quando esse evento de arquivo foi emitido. Atualmente, esse valor é sempre *analisando*. |
+| ActivityName             | A atividade em andamento quando esse evento de arquivo foi emitido. Atualmente, esse valor é sempre *analisando* . |
 | BuildTimelineDescription | * |
 | BuildTimelineId          | * |
 | Componente                | * |
@@ -108,12 +108,12 @@ O modo de exibição de funções é usado para identificar funções com um tem
 
 | Nome da coluna              | Descrição |
 |--------------------------|-------------|
-| ActivityName             | A atividade em andamento quando esse evento de função foi emitido. Atualmente, esse valor é sempre *CodeGeneration*. |
+| ActivityName             | A atividade em andamento quando esse evento de função foi emitido. Atualmente, esse valor é sempre *CodeGeneration* . |
 | BuildTimelineDescription | * |
 | BuildTimelineId          | * |
 | Componente                | * |
 | Contagem                    | * |
-| Duração                 | A duração da atividade de geração de código para esta função. |
+| Duration                 | A duração da atividade de geração de código para esta função. |
 | FunctionName             | O nome da função que está passando pela geração de código. |
 | InvocationId             | * |
 | StartTime                | Um carimbo de data/hora que representa quando o evento de função atual foi emitido. |
@@ -128,7 +128,7 @@ O modo de exibição de funções é usado para identificar funções com um tem
 | Estatísticas  | Tabela               | Veja quais funções tiveram o tempo de geração de código agregado mais alto examinando a lista em ordem decrescente. Eles podem indicar onde seu código usa a **`__forceinline`** palavra-chave ou que algumas funções podem ser muito grandes. |
 | Linhas do tempo   | Grafo               | Examine este grafo de barras para saber o local e a duração das funções que levam mais tempo para gerar. Veja se eles se alinham com afunilamentos na exibição do Gerenciador de compilação. Se isso ocorrer, execute a ação apropriada para reduzir seu tempo de geração de código e beneficiar seus tempos de compilação. |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Introdução às informações de Build do C++](../get-started-with-cpp-build-insights.md)\
 [Referência: comandos vcperf](vcperf-commands.md)\
