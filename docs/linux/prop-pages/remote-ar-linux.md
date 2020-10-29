@@ -3,22 +3,22 @@ title: Propriedades de arquivo remoto (C++ Linux)
 ms.date: 06/07/2019
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
 f1_keywords: []
-ms.openlocfilehash: 3b6f71d9cceccf0b0221be46bacb1294d84533cd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e35c9cc0b8a99e87654f1052e8666c52e35a071
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364298"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924453"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Propriedades de arquivo remoto (C++ Linux)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Propriedade | Descrição |
 |--|--|

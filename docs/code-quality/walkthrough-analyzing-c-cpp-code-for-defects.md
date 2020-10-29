@@ -8,12 +8,12 @@ helpviewer_keywords:
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-ms.openlocfilehash: 65da18f5f6d1972276f1cb8e306e82314282e40a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb81ca376651c17c760ee776510303efaa13fd9a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227706"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924783"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>Walkthrough: analisando o código C/C++ para defeitos
 
@@ -35,25 +35,25 @@ Neste tutorial, você vai:
 
 ### <a name="to-run-code-defect-analysis-on-native-code"></a>Para executar a análise de defeitos de código em código nativo
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. Abra a solução CppDemo no Visual Studio.
 
-     A solução CppDemo agora preenche **Gerenciador de soluções**.
+     A solução CppDemo agora preenche **Gerenciador de soluções** .
 
-1. No menu **Compilar** , escolha **Recompilar solução**.
+1. No menu **Compilar** , escolha **Recompilar solução** .
 
      A solução é compilada sem erros ou avisos.
 
-1. Em **Gerenciador de soluções**, selecione o projeto CodeDefects.
+1. Em **Gerenciador de soluções** , selecione o projeto CodeDefects.
 
-1. No menu **projeto** , escolha **Propriedades**.
+1. No menu **projeto** , escolha **Propriedades** .
 
      A caixa de diálogo **páginas de propriedades do CodeDefects** é exibida.
 
 1. Selecione a página de propriedades de **análise de código** .
 
-1. Altere a propriedade **Habilitar análise de código na compilação** para **Sim**. Escolha **OK** para salvar suas alterações.
+1. Altere a propriedade **Habilitar análise de código na compilação** para **Sim** . Escolha **OK** para salvar suas alterações.
 
 1. Reconstrua o projeto CodeDefects.
 
@@ -61,22 +61,22 @@ Neste tutorial, você vai:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. Abra a solução CppDemo no Visual Studio.
 
-     A solução CppDemo agora preenche **Gerenciador de soluções**.
+     A solução CppDemo agora preenche **Gerenciador de soluções** .
 
-1. No menu **Compilar** , escolha **Recompilar solução**.
+1. No menu **Compilar** , escolha **Recompilar solução** .
 
      A solução é compilada sem erros ou avisos.
 
      > [!NOTE]
      > No Visual Studio 2017, você pode ver um aviso falso `E1097 unknown attribute "no_init_all"` no mecanismo do IntelliSense. Ignore esse erro.
 
-1. Em **Gerenciador de soluções**, selecione o projeto CodeDefects.
+1. Em **Gerenciador de soluções** , selecione o projeto CodeDefects.
 
-1. No menu **projeto** , escolha **Propriedades**.
+1. No menu **projeto** , escolha **Propriedades** .
 
      A caixa de diálogo **páginas de propriedades do CodeDefects** é exibida.
 
@@ -92,9 +92,9 @@ Neste tutorial, você vai:
 
 ### <a name="to-analyze-code-defect-warnings"></a>Para analisar avisos de defeito de código
 
-1. No menu **Exibir** , escolha **lista de erros**.
+1. No menu **Exibir** , escolha **lista de erros** .
 
-     Este item de menu pode não estar visível. Depende do perfil de desenvolvedor que você escolheu no Visual Studio. Talvez você precise apontar para **outras janelas** no menu **Exibir** e, em seguida, escolher **lista de erros**.
+     Este item de menu pode não estar visível. Depende do perfil de desenvolvedor que você escolheu no Visual Studio. Talvez você precise apontar para **outras janelas** no menu **Exibir** e, em seguida, escolher **lista de erros** .
 
 1. Na janela **lista de erros** , clique duas vezes no seguinte aviso:
 
@@ -108,7 +108,7 @@ Neste tutorial, você vai:
    if (SUCCEEDED(ReadUserAccount()))
    ```
 
-1. No **lista de erros**, clique duas vezes no seguinte aviso:
+1. No **lista de erros** , clique duas vezes no seguinte aviso:
 
      C6282: operador incorreto: atribuição de constante no contexto booliano. Considere usar ' = = ' em vez disso.
 
@@ -128,25 +128,25 @@ Neste tutorial, você vai:
 
 ### <a name="to-enable-the-source-code-annotation-warnings-in-annotationc"></a>Para habilitar os avisos de anotação de código-fonte em Annotation. c
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. Em Gerenciador de Soluções, selecione o projeto anotações.
 
-1. No menu **projeto** , escolha **Propriedades**.
+1. No menu **projeto** , escolha **Propriedades** .
 
      A caixa de diálogo **páginas de propriedades de anotações** é exibida.
 
 1. Selecione a página de propriedades de **análise de código** .
 
-1. Altere a propriedade **Habilitar análise de código na compilação** para **Sim**. Escolha **OK** para salvar suas alterações.
+1. Altere a propriedade **Habilitar análise de código na compilação** para **Sim** . Escolha **OK** para salvar suas alterações.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. Em Gerenciador de Soluções, selecione o projeto anotações.
 
-1. No menu **projeto** , escolha **Propriedades**.
+1. No menu **projeto** , escolha **Propriedades** .
 
      A caixa de diálogo **páginas de propriedades de anotações** é exibida.
 
@@ -160,9 +160,9 @@ Neste tutorial, você vai:
 
 1. Recrie o projeto de anotações.
 
-1. No menu **Compilar** , escolha **executar análise de código em anotações**.
+1. No menu **Compilar** , escolha **executar análise de código em anotações** .
 
-1. No **lista de erros**, clique duas vezes no seguinte aviso:
+1. No **lista de erros** , clique duas vezes no seguinte aviso:
 
      C6011: desreferenciando o ponteiro nulo ' newNode '.
 
@@ -196,9 +196,9 @@ Neste tutorial, você vai:
    _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
-1. No menu **Compilar**, escolha **Executar Análise de Código na Solução**.
+1. No menu **Compilar** , escolha **Executar Análise de Código na Solução** .
 
-1. No **lista de erros**, clique duas vezes no seguinte aviso:
+1. No **lista de erros** , clique duas vezes no seguinte aviso:
 
      C6011: desreferenciando o ponteiro nulo ' node '.
 
@@ -213,11 +213,11 @@ Neste tutorial, você vai:
    }
    ```
 
-1. No menu **Compilar**, escolha **Executar Análise de Código na Solução**.
+1. No menu **Compilar** , escolha **Executar Análise de Código na Solução** .
 
      Agora, o projeto é compilado sem avisos ou erros.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Walkthrough: analisando código gerenciado para defeitos de código](/visualstudio/code-quality/walkthrough-analyzing-managed-code-for-code-defects)\
 [Análise de código para C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)

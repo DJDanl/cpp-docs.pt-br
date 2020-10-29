@@ -2,12 +2,12 @@
 title: Ler e entender o código C++ no Visual Studio
 description: Use o editor de código C++ no Visual Studio para formatar e entender o código.
 ms.date: 05/28/2019
-ms.openlocfilehash: 3da4224592cabd11e449fa4be395eba046c0e554
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cd152ffbbd106c6a31a21da35d08b53555047209
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686123"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924643"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Ler e entender o código C++ no Visual Studio
 
@@ -23,7 +23,7 @@ O código não utilizado (como o código em um #if 0) tem uma cor mais esmaecida
 
 ![Código inativo](../ide/media/inactive-code-cpp.png "Código inativo C++")
 
-Personalize as cores digitando "Fontes" em **Início Rápido** e, em seguida, escolhendo **Fontes e Cores**. Na caixa de diálogo **Fontes e Cores**, role a página para baixo até as opções do C/C++ e, em seguida, escolha uma fonte e/ou uma cor personalizada.
+Personalize as cores digitando "Fontes" em **Início Rápido** e, em seguida, escolhendo **Fontes e Cores** . Na caixa de diálogo **Fontes e Cores** , role a página para baixo até as opções do C/C++ e, em seguida, escolha uma fonte e/ou uma cor personalizada.
 
 ## <a name="outlining"></a>Estrutura de tópicos
 
@@ -37,7 +37,7 @@ Outras opções de estrutura de tópicos estão localizadas em **Editar**  >  **
 
 ## <a name="line-numbers"></a>Números de linha
 
-Você pode adicionar números de linha ao seu projeto acessando **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **todos os idiomas**  >  **geral** ou procurando por "número de linha" com **início rápido (Ctrl + Q)**. Os números de linha podem ser definidos para todas as linguagens ou para linguagens específicas, incluindo C++.
+Você pode adicionar números de linha ao seu projeto acessando **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **todos os idiomas**  >  **geral** ou procurando por "número de linha" com **início rápido (Ctrl + Q)** . Os números de linha podem ser definidos para todas as linguagens ou para linguagens específicas, incluindo C++.
 
 ## <a name="scroll-and-zoom"></a>Rolar e aplicar zoom
 
@@ -49,7 +49,7 @@ O **Modo de Mapa** da barra de rolagem permite que você role a página e navegu
 
 ![Mapa de códigos em C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Mapa de Códigos")
 
-Para ativar o **modo de mapa**, digite "mapa" na caixa de pesquisa **início rápido** na barra de ferramentas principal e escolha **usar modo de mapa de rolagem**. Para obter mais informações, confira [Como acompanhar o código personalizando a barra de rolagem](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Para ativar o **modo de mapa** , digite "mapa" na caixa de pesquisa **início rápido** na barra de ferramentas principal e escolha **usar modo de mapa de rolagem** . Para obter mais informações, confira [Como acompanhar o código personalizando a barra de rolagem](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 Quando o **Modo de Mapa** estiver desativado, a barra de rolagem ainda realçará as alterações feitas no arquivo. A cor verde indica as alterações salvas e a cor amarela indica as alterações não salvas.
 
@@ -57,11 +57,11 @@ Quando o **Modo de Mapa** estiver desativado, a barra de rolagem ainda realçar�
 
 Passe o mouse sobre qualquer variável, função ou outro símbolo para obter informações sobre ele, incluindo a declaração e os comentários localizados logo antes dela.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Captura de tela mostrando o dica de ferramenta Informações Rápidas no Visual Studio 2019.](../ide/media/quick-info-vs2019.png "Informação Rápida")
 
-A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online**. Vá para **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **C++**  >  **Exibir** para especificar o provedor de pesquisa.
+A dica de ferramenta **Informações Rápidas** tem um link **Pesquisar Online** . Vá para **ferramentas**  >  **Opções**  >  **Editor de texto**  >  **C++**  >  **Exibir** para especificar o provedor de pesquisa.
 
 Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela Lista de Erros.
 
@@ -69,11 +69,11 @@ Se houver um erro no código, passe o mouse sobre ele, e as **Informações Ráp
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Captura de tela mostrando o dica de ferramenta Informações Rápidas no Visual Studio 2017.](../ide/media/quick-info.png "Informação Rápida")
 
-Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela **Lista de Erros**.
+Se houver um erro no código, passe o mouse sobre ele, e as **Informações Rápidas** exibirão a mensagem de erro. Encontre também a mensagem de erro na janela **Lista de Erros** .
 
 ![Informações rápidas sobre erro](../ide/media/quickinfo-on-error.png "Informações rápidas sobre erro")
 

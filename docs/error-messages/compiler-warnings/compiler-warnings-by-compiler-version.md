@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176321"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924695"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador por versão do compilador
 
@@ -51,7 +51,7 @@ Você pode especificar apenas o número principal, os números principais e secu
 
 As seções a seguir listam os avisos introduzidos por cada versão do Visual C++ que você pode suprimir usando a **`/Wv`** opção do compilador. A **`/Wv`** opção não pode suprimir avisos que não estão listados, que são a data de início das versões especificadas do compilador.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Avisos introduzidos no Visual Studio 2019 versão 16,7 (versão do compilador 19.27.29112.0)
 
@@ -151,7 +151,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avisos introduzidos no Visual Studio 2017 versão 15,8 (versão do compilador 19.15.26726.0)
 
@@ -768,7 +768,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Erros e avisos das ferramentas de compilação e do compilador C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
 [Avisos do compilador C4000-C5999](compiler-warnings-c4000-c5999.md) \

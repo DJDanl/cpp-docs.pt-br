@@ -4,22 +4,22 @@ ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3d6694e44d3da4023998a0335cd06c85b353b2b1
-ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
+ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144159"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924039"
 ---
 # <a name="advanced-property-page"></a>Página de propriedades avançada
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 A página de propriedades avançada está disponível no Visual Studio 2019 e posterior. Para ver a documentação dessa versão, defina o controle do seletor de **versão** do Visual Studio para este artigo como Visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 A página de propriedades avançada está disponível no Visual Studio 2019 e posterior.
 
@@ -31,7 +31,7 @@ A página de propriedades avançada está disponível no Visual Studio 2019 e po
 
 - **Extensões a serem excluídas na limpeza**
 
-   A opção **Limpar** (menu **Build**) exclui arquivos do diretório intermediário no qual uma configuração do projeto é compilada. Os arquivos com extensões especificadas nesta propriedade são excluídos quando a **limpeza** é executada ou quando você recria. O sistema de compilação exclui todos os arquivos que têm essas extensões no diretório intermediário. Ele também exclui qualquer saída conhecida da compilação, independentemente de onde está localizada. (Isso inclui as saídas intermediárias, como *`.obj`* arquivos.) Você pode especificar caracteres curinga nesta propriedade.
+   A opção **Limpar** (menu **Build** ) exclui arquivos do diretório intermediário no qual uma configuração do projeto é compilada. Os arquivos com extensões especificadas nesta propriedade são excluídos quando a **limpeza** é executada ou quando você recria. O sistema de compilação exclui todos os arquivos que têm essas extensões no diretório intermediário. Ele também exclui qualquer saída conhecida da compilação, independentemente de onde está localizada. (Isso inclui as saídas intermediárias, como *`.obj`* arquivos.) Você pode especificar caracteres curinga nesta propriedade.
 
    Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 

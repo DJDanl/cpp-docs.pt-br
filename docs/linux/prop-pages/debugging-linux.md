@@ -2,26 +2,26 @@
 title: Propriedades do depurador (Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: bebee7a2b3bcfd880a538acae35c9616b3b1bd46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446183"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924514"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Propriedades do depurador C++ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Propriedade | Descrição | Opções |
 |--|--|--|
-| Computador de depuração remoto | **Visual Studio 2019 versão 16.1**: Especifica a máquina para depurar o programa. Pode ser diferente do computador de build remoto especificado na página [Geral](general-linux.md). Você pode adicionar ou editar uma conexão de máquina de destino usando **o Tools** > **Options** > **Cross Platform** > **Connection Manager**. |
+| Computador de depuração remoto | **Visual Studio 2019 versão 16,1** : especifica a máquina na qual o programa será depurado. Pode ser diferente do computador de build remoto especificado na página [Geral](general-linux.md). Você pode adicionar ou editar uma conexão de computador de destino usando **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager** . |
 | Comando de pré-inicialização | Um comando que é executado no shell antes do depurador ser iniciado, que possa ser usado para afetar o ambiente de depuração. |
 | Programa | O caminho completo no sistema remoto para programa a ser depurado. Se ele for deixado em branco ou inalterado, usará como padrão a saída do projeto atual. |
 | Argumentos do Programa | Os argumentos de linha de comando a serem passados ao programa que está sendo depurado. |
@@ -29,11 +29,11 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Comandos adicionais do depurador | Comandos `gdb` adicionais para o depurador executar antes de iniciar a depuração. |
 | Número da porta do depurador | O número da porta para a comunicação do depurador com o depurador remoto. A porta não deve estar em uso localmente. Esse valor precisa ser positivo e estar entre 1 e 65535. Se ele não for fornecido, um número de porta disponível será usado. |
 | Número da porta do depurador remoto | O número da porta no qual o servidor do depurador remoto `gdbserver` está escutando no sistema remoto. A porta não deve estar em uso no sistema remoto. Esse valor precisa ser positivo e estar entre 1 e 65535. Se ele não for fornecido, um número de porta disponível começando com 4444 será usado. |
-| Modo de depuração | Especifica como o depurador faz interface com o `gdb`. No *modo do gdb*, o depurador direciona o `gdb` para o shell no sistema remoto. No *modo gdbserver,* `gdb` é executado `gdbserver` localmente e se conecta à execução remotamente. | **gdbserver**<br/>**Gdb** |
+| Modo de depuração | Especifica como o depurador faz interface com o `gdb`. No *modo do gdb* , o depurador direciona o `gdb` para o shell no sistema remoto. No *modo gdbserver* , `gdb` é executado localmente e se conecta à `gdbserver` execução remota. | **gdbserver**<br/>**gdb** |
 | Caminhos de pesquisa de símbolo adicionais | Caminho de pesquisa adicional para símbolos de depuração (solib-search-path). |
 | Depurar processos filhos | Especifica se é necessário habilitar a depuração dos processos filhos. |
 | Habilitar estilos de formação Python | Habilite os estilos de formação de valores de expressão. Apenas há suporte no modo de depuração gdb. |
 | Arquivo de visualização | Arquivo de visualização nativo padrão (.natvis) que contém as diretivas de visualização para os tipos SLT. Outros arquivos .natvis que pertencem à solução atual são carregados automaticamente. |
-| Mapa adicional de caminho de arquivo de origem | Equivalências de caminho adicionais para o depurador usar para mapear os nomes de arquivo de origem do Windows para os nomes de arquivo de origem do Linux. O formato é "\<windows-path>=\<linux-path>;...". Um nome de arquivo de origem encontrado no caminho do Windows é referenciado como se fosse encontrado na mesma posição relativa no caminho do Linux. Os arquivos encontrados no projeto local não exigem mapeamento adicional. |
+| Mapa adicional de caminho de arquivo de origem | Equivalências de caminho adicionais para o depurador usar para mapear os nomes de arquivo de origem do Windows para os nomes de arquivo de origem do Linux. O formato é " \<windows-path> = \<linux-path> ;...". Um nome de arquivo de origem encontrado no caminho do Windows é referenciado como se fosse encontrado na mesma posição relativa no caminho do Linux. Os arquivos encontrados no projeto local não exigem mapeamento adicional. |
 
 ::: moniker-end

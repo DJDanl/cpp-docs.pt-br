@@ -5,33 +5,33 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: eef28961ab8c4d3a34a74999c7e0c69a4fc3fced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078297"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924015"
 ---
 # <a name="project-files"></a>Arquivos de projeto
 
-Um C++ arquivo de projeto no Visual Studio é um arquivo baseado em XML que tem a extensão de nome de arquivo. vcxproj e contém informações necessárias para criar C++ um projeto. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão ". props" ou ". targets". Esses arquivos contêm informações adicionais de compilação e podem se referir a outros arquivos ". props" ou ". targets". As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e os arquivos ". props" e ". targets", consulte a [página de propriedades de diretórios do vc + +](vcpp-directories-property-page.md), [definir C++ Propriedades do compilador e de compilação no Visual Studio](../working-with-project-properties.md) e [macros comuns para comandos e propriedades de compilação](common-macros-for-build-commands-and-properties.md).
+Um arquivo de projeto C++ no Visual Studio é um arquivo baseado em XML que tem a extensão de nome de arquivo. vcxproj e contém informações necessárias para criar um projeto C++. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão ". props" ou ". targets". Esses arquivos contêm informações adicionais de compilação e podem se referir a outros arquivos ". props" ou ". targets". As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e os arquivos ". props" e ". targets", consulte a [página de propriedades de diretórios do vc + +](vcpp-directories-property-page.md), [definir o compilador C++ e as propriedades de compilação no Visual Studio](../working-with-project-properties.md) e [macros comuns para comandos e propriedades de compilação](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Exemplo
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 O arquivo. vcxproj de exemplo a seguir foi produzido com a escolha do **Assistente de área de trabalho do Windows** na caixa de diálogo **novo projeto** . Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no IDE. (Este exemplo não pode ser processado porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, consulte [referência de esquema de arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um **Aplicativo de Console Win32** na caixa de diálogo **Novo Projeto**. Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no IDE. (Este exemplo não pode ser processado porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, consulte [referência de esquema de arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um **Aplicativo de Console Win32** na caixa de diálogo **Novo Projeto** . Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no IDE. (Este exemplo não pode ser processado porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, consulte [referência de esquema de arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
 >[!NOTE]
-> Para projetos no Visual Studio 2017 e anteriores, altere `pch.h` para `stdafx.h` e `pch.cpp` para `stdafx.cpp`.
+> Para projetos no Visual Studio 2017 e anteriores, altere `pch.h` para `stdafx.h` e `pch.cpp` para `stdafx.cpp` .
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -131,7 +131,7 @@ O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um 
 </Project>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Projetos do Visual Studio – C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Definição das propriedades de compilação do C++ no Visual Studio](../working-with-project-properties.md)

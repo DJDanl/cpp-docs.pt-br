@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509459"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924314"
 ---
 # <a name="supporting-schema-rowsets"></a>Dando suporte a conjuntos de linhas do esquema
 
@@ -32,13 +32,13 @@ Os conjuntos de linhas do esquema permitem aos consumidores obter informações 
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Suporte ao Assistente de Provedor OLE DB da ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 O assistente de Provedor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 O **Assistente de Provedor OLE DB da ATL** cria três classes de esquema no arquivo de cabeçalho da sessão:
 
@@ -58,9 +58,9 @@ Essas classes respondem às solicitações do consumidor por informações do es
 
 Você pode personalizar essas classes para tratar de informações apropriadas do esquema para seu provedor:
 
-- Em **C**<em>ShortName</em>**SessionTRSchemaRowset**, você deve preencher os campos de catálogo, tabela e descrição (`trData.m_szType`, `trData.m_szTable` e `trData.m_szDesc`). O exemplo gerado pelo assistente usa apenas uma linha (tabela). Outros provedores podem retornar mais de uma tabela.
+- Em **C**<em>ShortName</em>**SessionTRSchemaRowset** , você deve preencher os campos de catálogo, tabela e descrição (`trData.m_szType`, `trData.m_szTable` e `trData.m_szDesc`). O exemplo gerado pelo assistente usa apenas uma linha (tabela). Outros provedores podem retornar mais de uma tabela.
 
-- Em **C**<em>ShortName</em>**SessionColSchemaRowset**, você passa o nome da tabela como um `DBID`.
+- Em **C**<em>ShortName</em>**SessionColSchemaRowset** , você passa o nome da tabela como um `DBID`.
 
 ::: moniker-end
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` é herdado de `IDBSchemaRowsetImpl`. Portanto, ele tem todos os métodos de tratamento de restrição. Usando `CSchemaRowsetImpl`, declare as três classes filho (listadas no mapa do esquema acima): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`. Cada uma dessas classes filho tem um método `Execute` que trata do seu respectivo conjunto de restrições (critérios de pesquisa). Cada método `Execute` compara os valores dos parâmetros *cRestrictions* e *rgRestrictions*. Consulte a descrição desses parâmetros em [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
+`CUpdateSession` é herdado de `IDBSchemaRowsetImpl`. Portanto, ele tem todos os métodos de tratamento de restrição. Usando `CSchemaRowsetImpl`, declare as três classes filho (listadas no mapa do esquema acima): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`. Cada uma dessas classes filho tem um método `Execute` que trata do seu respectivo conjunto de restrições (critérios de pesquisa). Cada método `Execute` compara os valores dos parâmetros *cRestrictions* e *rgRestrictions* . Consulte a descrição desses parâmetros em [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Saiba mais sobre quais restrições correspondem a um determinado conjunto de linhas do esquema n.a tabela de GUIDs do conjunto de linhas do esquema em [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) na **Referência do programador do OLE DB** no SDK do Windows.
 
@@ -146,7 +146,7 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-A seguinte função `Execute` é semelhante as do conjuntos de linhas regulares. Você tem três argumentos: *pcRowsAffected*, *cRestrictions* e *rgRestrictions*. A variável *pcRowsAffected* é um parâmetro de saída que o provedor pode retornar a contagem de linhas no conjunto de linhas do esquema. O parâmetro *cRestrictions* é um parâmetro de entrada que contém o número de restrições passadas pelo consumidor ao provedor. O parâmetro *rgRestrictions* é uma matriz de valores de VARIANTE que mantêm os valores de restrição.
+A seguinte função `Execute` é semelhante as do conjuntos de linhas regulares. Você tem três argumentos: *pcRowsAffected* , *cRestrictions* e *rgRestrictions* . A variável *pcRowsAffected* é um parâmetro de saída que o provedor pode retornar a contagem de linhas no conjunto de linhas do esquema. O parâmetro *cRestrictions* é um parâmetro de entrada que contém o número de restrições passadas pelo consumidor ao provedor. O parâmetro *rgRestrictions* é uma matriz de valores de VARIANTE que mantêm os valores de restrição.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
@@ -265,12 +265,12 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 Como sua função `Execute` retorna dados para os campos TABLE_NAME, TABLE_TYPE e DESCRIPTION no conjunto de linhas TABLES, você pode examinar o **Apêndice B** da especificação OLE DB e determinar (contando de cima para baixo) que são os ordinais 3, 4 e 6. Para cada uma dessas colunas, retorne DBSTATUS_S_OK. Para todas as outras colunas, retorne DBSTATUS_S_ISNULL. É importante retornar esse status, pois um consumidor talvez não reconheça que o valor que você retorna é NULL ou outra coisa. Novamente, observe que NULL não é equivalente a vazio.
 
-Saiba mais sobre a interface do conjunto de linhas do esquema OLE DB na interface [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) na **Referência do programador do OLE DB**.
+Saiba mais sobre a interface do conjunto de linhas do esquema OLE DB na interface [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) na **Referência do programador do OLE DB** .
 
 Saiba mais sobre como os consumidores podem usar métodos `IDBSchemaRowset` em [Obtenção de metadados com conjuntos de linhas do esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
 Para obter um exemplo de um provedor que é compatível com restrições de esquema, consulte a amostra [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Técnicas de provedor avançado](../../data/oledb/advanced-provider-techniques.md)

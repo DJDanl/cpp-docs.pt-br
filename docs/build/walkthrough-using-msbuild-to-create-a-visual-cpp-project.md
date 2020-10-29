@@ -4,12 +4,12 @@ description: Uma explicação que mostra como criar um projeto de linha de coman
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099726"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924340"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Instruções passo a passo: usando MSBuild para criar um projeto do Visual C++
 
@@ -36,21 +36,21 @@ Você precisa desses pré-requisitos para concluir este passo a passos:
 
 - Uma compreensão geral do sistema MSBuild.
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > A maioria das instruções de compilação de nível baixo está contida nos *`.targets`* *`.props`* arquivos e definidos na pasta destinos padrão, armazenados na propriedade `$(VCTargetsPath)` . É onde você encontrará arquivos como *`Microsoft.Cpp.Common.props`* . O caminho padrão para esses arquivos no Visual Studio 2015 e nas versões anteriores está em *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > A maioria das instruções de compilação de nível baixo está contida nos *`.targets`* *`.props`* arquivos e definidos na pasta destinos padrão, armazenados na propriedade `$(VCTargetsPath)` . É onde você encontrará arquivos como *`Microsoft.Cpp.Common.props`* . O caminho padrão para esses arquivos no Visual Studio 2017 está em *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . O Visual Studio 2015 e versões anteriores os armazenaram em *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > A maioria das instruções de compilação de nível baixo está contida nos *`.targets`* *`.props`* arquivos e definidos na pasta destinos padrão, armazenados na propriedade `$(VCTargetsPath)` . É onde você encontrará arquivos como *`Microsoft.Cpp.Common.props`* . O caminho padrão para esses arquivos está em *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`* . O `<version>` elemento Path é específico para a versão do Visual Studio. É *`v160`* para o Visual Studio 2019. O Visual Studio 2017 armazenou esses arquivos em *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . O Visual Studio 2015 e versões anteriores os armazenaram em *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: c729fa183a03860de012e64d110f3b3ac7e7e8d0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 36991cf98867e7da218f7414d1ea02aab55301a3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503661"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924232"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Walkthrough: criar um aplicativo de área de trabalho do Windows tradicional (C++)
 
@@ -29,7 +29,7 @@ A API do Windows (também conhecida como API do Win32, API de área de trabalho 
 
 - Uma cópia do Visual Studio. Para saber mais sobre como fazer o download e instalar o Visual Studio, consulte [Instalar o Visual Studio](/visualstudio/install/install-visual-studio). Quando executar o instalador, certifique-se de que a carga de trabalho de **Desenvolvimento para desktop com C++** esteja marcada. Não se preocupe se não tiver instalado essa carga de trabalho quando instalou o Visual Studio. Você pode executar o instalador novamente e instalá-la agora.
 
-   ![Desenvolvimento para desktop com C++](../build/media/desktop-development-with-cpp.png "Desenvolvimento de área de trabalho com o C++")
+   ![Desenvolvimento para desktop com C++](../build/media/desktop-development-with-cpp.png "Desenvolvimento para desktop com C++")
 
 - Um reconhecimento dos princípios básicos do uso do IDE do Visual Studio. Se já tiver usado aplicativos de desktop do Windows, você provavelmente não terá problemas. Para ver uma introdução, consulte [Tour pelos recursos do IDE do Visual Studio](/visualstudio/ide/visual-studio-ide).
 
@@ -39,25 +39,25 @@ A API do Windows (também conhecida como API do Win32, API de área de trabalho 
 
 Siga estas etapas para criar seu primeiro projeto de área de trabalho do Windows. Conforme o uso, você inserirá o código para um aplicativo de área de trabalho do Windows em funcionamento. Para ver a documentação da sua versão preferida do Visual Studio, use o controle seletor de **versão** . Ele é encontrado na parte superior do Sumário nesta página.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Para criar um projeto de área de trabalho do Windows no Visual Studio 2019
 
-1. No menu principal, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um projeto**.
+1. No menu principal, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um projeto** .
 
-1. Na parte superior da caixa de diálogo, defina **idioma** como **C++**, **defina plataforma** para **Windows**e defina **tipo de projeto** como área de **trabalho**.
+1. Na parte superior da caixa de diálogo, defina **idioma** como **C++** , **defina plataforma** para **Windows** e defina **tipo de projeto** como área de **trabalho** .
 
-1. Na lista filtrada de tipos de projeto, escolha **Assistente de área de trabalho do Windows** e escolha **Avançar**. Na próxima página, insira um nome para o projeto, por exemplo, *DesktopApp*.
+1. Na lista filtrada de tipos de projeto, escolha **Assistente de área de trabalho do Windows** e escolha **Avançar** . Na próxima página, insira um nome para o projeto, por exemplo, *DesktopApp* .
 
 1. Escolha o botão **Criar** para criar o projeto.
 
-1. A caixa de diálogo **projeto de área de trabalho do Windows** agora é exibida. Em **tipo de aplicativo**, selecione **aplicativo de área de trabalho (. exe)**. Em **Opções adicionais**, selecione **projeto vazio**. Escolha **OK** para criar o projeto.
+1. A caixa de diálogo **projeto de área de trabalho do Windows** agora é exibida. Em **tipo de aplicativo** , selecione **aplicativo de área de trabalho (. exe)** . Em **Opções adicionais** , selecione **projeto vazio** . Escolha **OK** para criar o projeto.
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DesktopApp** , escolha **Adicionar**e, em seguida, escolha **novo item**.
+1. Em **Gerenciador de soluções** , clique com o botão direito do mouse no projeto **DesktopApp** , escolha **Adicionar** e, em seguida, escolha **novo item** .
 
    ![Vídeo curto mostrando o usuário adicionando um novo item ao projeto DesktopApp no Visual Studio 2019.](../build/media/desktop-app-project-add-new-item-153.gif "Adicionar novo item ao projeto DesktopApp")
 
-1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**. Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp*. Escolha **Adicionar**.
+1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)** . Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp* . Escolha **Adicionar** .
 
    ![Captura de tela da caixa de diálogo Adicionar novo item no Visual Studio 2019 com instalado > Visual C Plus Plus selecionado e a opção de arquivo C Plus Plus realçada.](../build/media/desktop-app-add-cpp-file-153.png "Adicionar arquivo. cpp ao projeto DesktopApp")
 
@@ -65,25 +65,25 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Para criar um projeto de área de trabalho do Windows no Visual Studio 2017
 
-1. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
+1. No menu **Arquivo** , escolha **Novo** e, em seguida, clique em **Projeto** .
 
-1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda **instalado**  >  **Visual C++** e, em seguida, selecione **área de trabalho do Windows**. No painel central, selecione **Assistente de área de trabalho do Windows**.
+1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda **instalado**  >  **Visual C++** e, em seguida, selecione **área de trabalho do Windows** . No painel central, selecione **Assistente de área de trabalho do Windows** .
 
-   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Selecione **OK**.
+   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp* . Selecione **OK** .
 
    ![Captura de tela da caixa de diálogo novo projeto no Visual Studio 2017 com instalada > Visual C Plus Plus > área de trabalho do Windows selecionada, a opção assistente de área de trabalho do Windows realçada e DesktopApp digitados na caixa de texto nome.](../build/media/desktop-app-new-project-name-153.png "Nomeie o projeto DesktopApp")
 
-1. Na caixa de diálogo **projeto de área de trabalho do Windows** , em tipo de **aplicativo**, selecione **aplicativo do Windows (. exe)**. Em **Opções adicionais**, selecione **projeto vazio**. Verifique se o **cabeçalho pré-compilado** não está selecionado. Escolha **OK** para criar o projeto.
+1. Na caixa de diálogo **projeto de área de trabalho do Windows** , em tipo de **aplicativo** , selecione **aplicativo do Windows (. exe)** . Em **Opções adicionais** , selecione **projeto vazio** . Verifique se o **cabeçalho pré-compilado** não está selecionado. Escolha **OK** para criar o projeto.
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DesktopApp** , escolha **Adicionar**e, em seguida, escolha **novo item**.
+1. Em **Gerenciador de soluções** , clique com o botão direito do mouse no projeto **DesktopApp** , escolha **Adicionar** e, em seguida, escolha **novo item** .
 
    ![Vídeo curto mostrando o usuário adicionando um novo item ao projeto DesktopApp no Visual Studio 2017.](../build/media/desktop-app-project-add-new-item-153.gif "Adicionar novo item ao projeto DesktopApp")
 
-1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**. Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp*. Escolha **Adicionar**.
+1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)** . Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp* . Escolha **Adicionar** .
 
    ![Captura de tela da caixa de diálogo Adicionar novo item no Visual Studio 2017 com instalado > Visual C Plus Plus selecionado e a opção de arquivo C Plus Plus realçada.](../build/media/desktop-app-add-cpp-file-153.png "Adicionar arquivo. cpp ao projeto DesktopApp")
 
@@ -91,29 +91,29 @@ Seu projeto agora é criado e o arquivo de origem é aberto no editor. Para cont
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Para criar um projeto de área de trabalho do Windows no Visual Studio 2015
 
-1. No menu **Arquivo**, escolha **Novo** e, em seguida, clique em **Projeto**.
+1. No menu **Arquivo** , escolha **Novo** e, em seguida, clique em **Projeto** .
 
-1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda os modelos **instalados**  >  **Templates**  >  **Visual C++** e, em seguida, selecione **Win32**. No painel central, selecione **projeto Win32**.
+1. Na caixa de diálogo **novo projeto** , no painel esquerdo, expanda os modelos **instalados**  >  **Templates**  >  **Visual C++** e, em seguida, selecione **Win32** . No painel central, selecione **projeto Win32** .
 
-   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp*. Selecione **OK**.
+   Na caixa **nome** , digite um nome para o projeto, por exemplo, *DesktopApp* . Selecione **OK** .
 
    ![Captura de tela da caixa de diálogo novo projeto no Visual Studio 2015 com modelos de > instalados > Visual C Plus Plus > Win32 selecionado, a opção de projeto Win32 realçada e DesktopApp digitados na caixa de texto nome.](../build/media/desktop-app-new-project-name-150.png "Nomeie o projeto DesktopApp")
 
-1. Na página **visão geral** do **Assistente de aplicativo Win32**, escolha **Avançar**.
+1. Na página **visão geral** do **Assistente de aplicativo Win32** , escolha **Avançar** .
 
    ![Visão geral do assistente para criar DesktopApp no aplicativo Win32](../build/media/desktop-app-win32-wizard-overview-150.png "Visão geral do assistente para criar DesktopApp no aplicativo Win32")
 
-1. Na página **configurações do aplicativo** , em **tipo de aplicativo**, selecione **aplicativo do Windows**. Em **Opções adicionais**, desmarque **cabeçalho pré-compilado**e, em seguida, selecione **projeto vazio**. Escolha **concluir** para criar o projeto.
+1. Na página **configurações do aplicativo** , em **tipo de aplicativo** , selecione **aplicativo do Windows** . Em **Opções adicionais** , desmarque **cabeçalho pré-compilado** e, em seguida, selecione **projeto vazio** . Escolha **concluir** para criar o projeto.
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto DesktopApp, escolha **Adicionar**e, em seguida, escolha **novo item**.
+1. Em **Gerenciador de soluções** , clique com o botão direito do mouse no projeto DesktopApp, escolha **Adicionar** e, em seguida, escolha **novo item** .
 
    ![Vídeo curto mostrando o usuário adicionando um novo item ao projeto DesktopApp no Visual Studio 2015.](../build/media/desktop-app-project-add-new-item-150.gif "Adicionar novo item ao projeto DesktopApp")
 
-1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**. Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp*. Escolha **Adicionar**.
+1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)** . Na caixa **nome** , digite um nome para o arquivo, por exemplo, *HelloWindowsDesktop. cpp* . Escolha **Adicionar** .
 
    ![Captura de tela da caixa de diálogo Adicionar novo item no Visual Studio 2015 com instalado > Visual C Plus Plus selecionado e a opção de arquivo C Plus Plus realçada.](../build/media/desktop-app-add-cpp-file-150.png "Adicionar arquivo. cpp ao projeto DesktopApp")
 
@@ -141,7 +141,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de área de tr
    Para obter informações sobre os parâmetros e o valor de retorno dessa função, consulte [ponto de entrada WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quais são as palavras adicionais, como `CALLBACK` , ou ou `HINSTANCE` `_In_` ? A API tradicional do Windows usa TYPEDEFs e macros de pré-processador extensivamente para abstrair alguns dos detalhes dos tipos e do código específico da plataforma, como convenções de chamada, **`__declspec`** declarações e pragmas do compilador. No Visual Studio, você pode usar o recurso de [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) do IntelliSense para ver o que esses TYPEDEFs e macros definem. Passe o mouse sobre a palavra de interesse ou selecione-o e pressione **Ctrl** + **K**, **Ctrl** + **I** para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Os parâmetros e os tipos de retorno geralmente usam *anotações sal* para ajudá-lo a detectar erros de programação. Para obter mais informações, consulte [usando anotações de sal para reduzir os defeitos de código C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
+   > Quais são as palavras adicionais, como `CALLBACK` , ou ou `HINSTANCE` `_In_` ? A API tradicional do Windows usa TYPEDEFs e macros de pré-processador extensivamente para abstrair alguns dos detalhes dos tipos e do código específico da plataforma, como convenções de chamada, **`__declspec`** declarações e pragmas do compilador. No Visual Studio, você pode usar o recurso de [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) do IntelliSense para ver o que esses TYPEDEFs e macros definem. Passe o mouse sobre a palavra de interesse ou selecione-o e pressione **Ctrl** + **K** , **Ctrl** + **I** para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Os parâmetros e os tipos de retorno geralmente usam *anotações sal* para ajudá-lo a detectar erros de programação. Para obter mais informações, consulte [usando anotações de sal para reduzir os defeitos de código C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 1. Os programas da área de trabalho do Windows exigem o &lt; Windows. h>. &lt;TCHAR. h> define a `TCHAR` macro, que é resolvida por fim para **`wchar_t`** se o símbolo Unicode estiver definido em seu projeto, caso contrário, ele será resolvido para **`char`** .  Se você sempre criar com UNICODE habilitado, não precisará de TCHAR e poderá simplesmente usar **`wchar_t`** diretamente.
 
@@ -432,7 +432,7 @@ Como prometido, aqui está o código completo do aplicativo de trabalho.
 
 ### <a name="to-build-this-example"></a>Para criar este exemplo
 
-1. Exclua qualquer código que você tenha inserido em *HelloWindowsDesktop. cpp* no editor. Copie este código de exemplo e cole-o em *HelloWindowsDesktop. cpp*:
+1. Exclua qualquer código que você tenha inserido em *HelloWindowsDesktop. cpp* no editor. Copie este código de exemplo e cole-o em *HelloWindowsDesktop. cpp* :
 
    ```cpp
    // HelloWindowsDesktop.cpp
@@ -580,16 +580,16 @@ Como prometido, aqui está o código completo do aplicativo de trabalho.
    }
    ```
 
-1. No menu **Compilar**, escolha **Compilar Solução**. Os resultados da compilação devem aparecer na janela de **saída** no Visual Studio.
+1. No menu **Compilar** , escolha **Compilar Solução** . Os resultados da compilação devem aparecer na janela de **saída** no Visual Studio.
 
    ![Compilar o projeto DesktopApp](../build/media/desktop-app-project-build-150.gif "Compilar o projeto DesktopApp")
 
-1. Para executar o aplicativo, pressione **F5**. Uma janela que contém o texto "Olá, Windows Desktop!" deve aparecer no canto superior esquerdo da tela.
+1. Para executar o aplicativo, pressione **F5** . Uma janela que contém o texto "Olá, Windows Desktop!" deve aparecer no canto superior esquerdo da tela.
 
    ![Executar o projeto DesktopApp](../build/media/desktop-app-project-run-157.PNG "Executar o projeto DesktopApp")
 
 Parabéns! Você concluiu este passo a passo e criou um aplicativo de área de trabalho tradicional do Windows.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Aplicativos da área de trabalho do Windows](./desktop-applications-visual-cpp.md)
