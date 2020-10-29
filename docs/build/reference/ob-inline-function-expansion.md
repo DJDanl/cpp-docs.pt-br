@@ -24,28 +24,28 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 238e5533c062678c59b61ebeba71eee3231fb5fb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56a755de69b4f2ce6b659959eca5b25a6d75bfdc
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215212"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921185"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (expansão de função embutida)
 
-Controla a expansão embutida de funções. Por padrão, ao otimizar, a expansão ocorre no critério do compilador em todas as funções, muitas vezes chamadas de *autolinhado*.
+Controla a expansão embutida de funções. Por padrão, ao otimizar, a expansão ocorre no critério do compilador em todas as funções, muitas vezes chamadas de *autolinhado* .
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-> **/OB**{**0** | **1** | **2** | **3**}
+> **/OB** { **0** | **1** | **2** | **3** }
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-> **/OB**{**0** | **1** | **2**}
+> **/OB** { **0** | **1** | **2** }
 
 ::: moniker-end
 
@@ -60,10 +60,10 @@ Permite a expansão somente de funções marcadas como [inline](../../cpp/inline
 **2**\
 O valor padrão em [/O1](o1-o2-minimize-size-maximize-speed.md) e [/O2](o1-o2-minimize-size-maximize-speed.md). Permite que o compilador expanda qualquer função não explicitamente marcada para não-alinhamento.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 **Beta**\
-Esta opção especifica o inalinhamento mais agressivo do que **/Ob2**, mas tem as mesmas restrições. A opção **/Ob3** está disponível a partir do Visual Studio 2019.
+Esta opção especifica o inalinhamento mais agressivo do que **/Ob2** , mas tem as mesmas restrições. A opção **/Ob3** está disponível a partir do Visual Studio 2019.
 
 ::: moniker-end
 
@@ -74,25 +74,25 @@ O compilador trata as opções de expansão embutida e as palavras-chave como su
 Para excluir funções da consideração como candidatos à expansão embutida, você pode usar [__declspec (noinline)](../../cpp/noinline.md)ou uma região marcada pelas diretivas [#pragma auto_inline (desativado)](../../preprocessor/auto-inline.md) e [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) . Para obter informações sobre outra maneira de fornecer dicas de inalinhamento para o compilador, consulte a diretiva [intrínseca #pragma](../../preprocessor/intrinsic.md) .
 
 > [!NOTE]
-> As informações coletadas de execuções de testes de criação de perfil substituem as otimizações que, de outra forma, seriam efetivadas porque você especificou **/OB**, **/os**ou **/OT**. Para obter mais informações, confira [Otimizações guiadas por perfil](../profile-guided-optimizations.md).
+> As informações coletadas de execuções de testes de criação de perfil substituem as otimizações que, de outra forma, seriam efetivadas porque você especificou **/OB** , **/os** ou **/OT** . Para obter mais informações, confira [Otimizações guiadas por perfil](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedades de otimização de **configuração**de  >  **C/C++**  >  **Optimization** .
+1. Selecione a página de propriedades de otimização de **configuração** de  >  **C/C++**  >  **Optimization** .
 
 1. Modifique a propriedade de **expansão de função embutida** .
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-A opção **/Ob3** não está disponível na propriedade de **expansão de função embutida** . Para definir **/Ob3**:
+A opção **/Ob3** não está disponível na propriedade de **expansão de função embutida** . Para definir **/Ob3** :
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a página de propriedades **Propriedades de Configuração** > **C/C++** > **Linha de Comando**.
+1. Selecione a página de propriedades **Propriedades de Configuração** > **C/C++** > **Linha de Comando** .
 
-1. Insira **/Ob3** em **Opções adicionais**.
+1. Insira **/Ob3** em **Opções adicionais** .
 
 ::: moniker-end
 
@@ -100,8 +100,8 @@ A opção **/Ob3** não está disponível na propriedade de **expansão de funç
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Opções/o (otimizar código)](o-options-optimize-code.md)\
 [Opções do compilador MSVC](compiler-options.md)\
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de Command-Line do compilador MSVC](compiler-command-line-syntax.md)

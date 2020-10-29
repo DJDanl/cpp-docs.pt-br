@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62a7bf6bde62dee7fdf5b1d2ce9044491a123f94
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224143"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920184"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 A `MatchEventInMemberFunction` função é usada para corresponder a um evento em relação ao tipo descrito pelo primeiro parâmetro de uma função membro. O evento MATCHED é encaminhado para a função membro para processamento adicional.
 
@@ -43,7 +43,7 @@ bool MatchEventInMemberFunction(
     TExtraArgs&&...          extraArgs);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TInterface*\
 O tipo que contém a função de membro.
@@ -61,7 +61,7 @@ Os tipos dos parâmetros extras aceitos pela função de membro junto com o tipo
 Os tipos dos argumentos extras que foram passados para `MatchEventInMemberFunction` .
 
 *circunstância*\
-O evento a ser correspondido em relação ao tipo de evento descrito por *TEvent*.
+O evento a ser correspondido em relação ao tipo de evento descrito por *TEvent* .
 
 *objectPtr*\
 Um ponteiro para um objeto no qual *memberFunc* é chamado.
@@ -72,13 +72,13 @@ A função de membro que descreve o tipo de evento a ser correspondido.
 *extraArgs*\
 Os argumentos que são encaminhados perfeitamente para *memberFunc* junto com o parâmetro de tipo de evento.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um **`bool`** valor que **`true`** se corresponder com êxito ou de **`false`** outra forma.
 
 ## <a name="remarks"></a>Comentários
 
-O tipo de evento a ser usado para o parâmetro *TEvent* pode ser selecionado em uma lista de *classes de captura*. Para obter uma lista de eventos e as classes de captura que você pode usar para fazer a correspondência, consulte a [tabela de eventos](../event-table.md).
+O tipo de evento a ser usado para o parâmetro *TEvent* pode ser selecionado em uma lista de *classes de captura* . Para obter uma lista de eventos e as classes de captura que você pode usar para fazer a correspondência, consulte a [tabela de eventos](../event-table.md).
 
 ## <a name="example"></a>Exemplo
 

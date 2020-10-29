@@ -4,24 +4,24 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229864"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919391"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referência de esquema de CMakeSettings.json
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Os projetos CMake têm suporte no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-O **CMakeSettings.jsno** arquivo contém informações que o Visual Studio usa para o IntelliSense e para construir os argumentos de linha de comando que ele passa para cmake.exe para uma *configuração* especificada e um *ambiente*de compilador. Uma configuração especifica Propriedades que se aplicam a uma plataforma específica e tipo de compilação, por exemplo, `x86-Debug` ou `Linux-Release` . Cada configuração especifica um ambiente, que encapsula informações sobre o conjunto de ferramentas do compilador, por exemplo, MSVC, GCC ou clang. CMake usa os argumentos de linha de comando para regenerar o arquivo de *CMakeCache.txt* raiz e outros arquivos de projeto para o projeto. Os valores podem ser substituídos nos arquivos de *CMakeLists.txt* .
+O **CMakeSettings.jsno** arquivo contém informações que o Visual Studio usa para o IntelliSense e para construir os argumentos de linha de comando que ele passa para cmake.exe para uma *configuração* especificada e um *ambiente* de compilador. Uma configuração especifica Propriedades que se aplicam a uma plataforma específica e tipo de compilação, por exemplo, `x86-Debug` ou `Linux-Release` . Cada configuração especifica um ambiente, que encapsula informações sobre o conjunto de ferramentas do compilador, por exemplo, MSVC, GCC ou clang. CMake usa os argumentos de linha de comando para regenerar o arquivo de *CMakeCache.txt* raiz e outros arquivos de projeto para o projeto. Os valores podem ser substituídos nos arquivos de *CMakeLists.txt* .
 
 Você pode adicionar ou remover configurações no IDE e editá-las diretamente no arquivo JSON ou usar o **Editor de configurações CMake** (Visual Studio 2019 e posterior). Você pode alternar entre as configurações facilmente no IDE para gerar os vários arquivos de projeto. Consulte [Personalizar configurações de compilação do cmake no Visual Studio](customize-cmake-settings.md) para obter mais informações.
 
@@ -50,7 +50,7 @@ Um `configuration` tem estas propriedades:
   
 - `ctestCommandArgs`: especifica opções de linha de comando adicionais passadas para CTest ao executar os testes."
 - `description`: a descrição dessa configuração que será exibida nos menus.
-- `enableClangTidyCodeAnalysis`: Use Clang-organizar para análise de código.
+- `enableClangTidyCodeAnalysis`: Use Clang-Tidy para análise de código.
 - `enableMicrosoftCodeAnalysis`: Use as ferramentas de análise de código da Microsoft para análise de código.
 - `generator`: especifica o gerador do CMake a ser usado para essa configuração. Pode ser um destes:
   
@@ -71,11 +71,11 @@ Um `configuration` tem estas propriedades:
 
 Como o Ninja é criado para velocidades rápidas de builds em vez de flexibilidade e função, ele está definido como padrão. No entanto, alguns projetos do CMake podem não conseguir executar o build corretamente usando o Ninja. Se isso ocorrer, você poderá instruir o CMake para gerar projetos do Visual Studio em vez disso.
 
-Para especificar um gerador do Visual Studio no Visual Studio 2017, abra o editor de configurações no menu principal escolhendo **CMake | Altere as configurações de CMake**. Exclua "Ninja" e digite "V". Isso ativa o IntelliSense, que permite escolher o gerador desejado.
+Para especificar um gerador do Visual Studio no Visual Studio 2017, abra o editor de configurações no menu principal escolhendo **CMake | Altere as configurações de CMake** . Exclua "Ninja" e digite "V". Isso ativa o IntelliSense, que permite escolher o gerador desejado.
 
-Para especificar um gerador do Visual Studio no Visual Studio 2019, clique com o botão direito do mouse no arquivo de *CMakeLists.txt* em **Gerenciador de soluções** e escolha **configurações de CMake para projeto** > **Mostrar configurações avançadas** > **CMake gerador**.
+Para especificar um gerador do Visual Studio no Visual Studio 2019, clique com o botão direito do mouse no arquivo de *CMakeLists.txt* em **Gerenciador de soluções** e escolha **configurações de CMake para projeto** > **Mostrar configurações avançadas** > **CMake gerador** .
 
-Quando a configuração ativa especifica um gerador do Visual Studio, por padrão, MSBuild.exe é invocado com argumentos `-m -v:minimal`. Para personalizar a compilação, dentro do *CMakeSettings.jsno* arquivo, você pode especificar [argumentos de linha de comando](../build/reference/msbuild-visual-cpp-overview.md) adicionais do MSBuild a serem passados para o sistema de compilação por meio da `buildCommandArgs` Propriedade:
+Quando a configuração ativa especifica um gerador do Visual Studio, por padrão, MSBuild.exe é invocado com argumentos `-m -v:minimal`. Para personalizar a compilação, dentro do  *CMakeSettings.jsno* arquivo, você pode especificar [argumentos de linha de comando](../build/reference/msbuild-visual-cpp-overview.md) adicionais do MSBuild a serem passados para o sistema de compilação por meio da `buildCommandArgs` Propriedade:
 
    ```json
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -149,7 +149,7 @@ Observe que, se você não definir o `"type"` , o `"STRING"` tipo será assumido
 
 - `remoteCopyOptimizations`: As propriedades da **versão 16,5 ou posterior do Visual Studio 2019** para controlar a cópia de origem para o destino remoto. As otimizações são habilitadas por padrão. Inclui `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs` e `remoteCopySourcesMaxSmallChange`.
 
-## <a name="environments"></a><a name="environments"></a>Sistemas
+## <a name="environments"></a><a name="environments"></a> Sistemas
 
 Um *ambiente* encapsula as variáveis de ambiente que são definidas no processo que o Visual Studio usa para invocar cmake.exe. Para projetos MSVC, as variáveis são aquelas que são definidas em um [prompt de comando do desenvolvedor](building-on-the-command-line.md) para uma plataforma específica. Por exemplo, o `msvc_x64_x64` ambiente é o mesmo que executar o **prompt de comando do desenvolvedor para vs 2017** ou **prompt de comando do desenvolvedor para vs 2019** com os argumentos **-Arch = AMD64-host_arch = AMD64** . Você pode usar a `env.{<variable_name>}` sintaxe em *CMakeSettings.js* para fazer referência às variáveis de ambiente individuais, por exemplo, para construir caminhos para pastas.  Os seguintes ambientes predefinidos são fornecidos:
 
@@ -171,16 +171,16 @@ De um arquivo de CMakeLists.txt, todas as variáveis de ambiente são referencia
 
 ### <a name="custom-environment-variables"></a>Variáveis de ambiente personalizadas
 
-No `CMakeSettings.json` , você pode definir variáveis de ambiente personalizadas globalmente ou por configuração na `environments` matriz. Um ambiente personalizado é uma maneira conveniente de agrupar um conjunto de propriedades que você pode usar no lugar de um ambiente predefinido ou estender ou modificar um ambiente predefinido. Cada item na matriz `environments` consiste em:
+No  `CMakeSettings.json` , você pode definir variáveis de ambiente personalizadas globalmente ou por configuração na `environments` matriz. Um ambiente personalizado é uma maneira conveniente de agrupar um conjunto de propriedades que você pode usar no lugar de um ambiente predefinido ou estender ou modificar um ambiente predefinido. Cada item na matriz `environments` consiste em:
 
 - `namespace`: dá um nome ao ambiente de modo que suas variáveis possam ser referenciadas de uma configuração na forma `namespace.variable`. O objeto de ambiente padrão é chamado `env` e é preenchido com determinadas variáveis de ambiente do sistema, incluindo `%USERPROFILE%` .
 - `environment`: identifica exclusivamente este grupo de variáveis. Permite que o grupo seja herdado posteriormente em uma entrada `inheritEnvironments`.
 - `groupPriority`: Um inteiro que especifica a prioridade dessas variáveis ao avaliá-las. Itens de maior número são avaliados primeiro.
 - `inheritEnvironments`: Uma matriz de valores que especificam o conjunto de ambientes que são herdados por esse grupo. Essa funcionalidade permite que você herde ambientes padrão e crie variáveis de ambiente personalizadas que são passadas para o CMake.exe quando ele é executado.
 
-**Visual Studio 2019 versão 16,4 e posterior:** Os destinos de depuração são iniciados automaticamente com o ambiente que você especifica no *CMakeSettings.js*. Você pode substituir ou adicionar variáveis de ambiente em uma base por destino ou por tarefa em [launch.vs.js](launch-vs-schema-reference-cpp.md) e [tasks.vs.jsem](tasks-vs-json-schema-reference-cpp.md).
+**Visual Studio 2019 versão 16,4 e posterior:** Os destinos de depuração são iniciados automaticamente com o ambiente que você especifica no *CMakeSettings.js* . Você pode substituir ou adicionar variáveis de ambiente em uma base por destino ou por tarefa em [launch.vs.js](launch-vs-schema-reference-cpp.md) e [tasks.vs.jsem](tasks-vs-json-schema-reference-cpp.md).
 
-O exemplo a seguir define uma variável global, **BuildDir**, que é herdada nas configurações x86-Debug e x64-Debug. Cada configuração usa a variável para especificar o valor para a propriedade **buildRoot** dessa configuração. Também observe como cada configuração usa a propriedade **inheritEnvironments** para especificar uma variável que só se aplica a essa configuração.
+O exemplo a seguir define uma variável global, **BuildDir** , que é herdada nas configurações x86-Debug e x64-Debug. Cada configuração usa a variável para especificar o valor para a propriedade **buildRoot** dessa configuração. Também observe como cada configuração usa a propriedade **inheritEnvironments** para especificar uma variável que só se aplica a essa configuração.
 
 ```json
 {
@@ -212,7 +212,7 @@ O exemplo a seguir define uma variável global, **BuildDir**, que é herdada nas
 }
 ```
 
-No exemplo a seguir, a configuração de Depuração x86 define seu próprio valor para a propriedade **BuildDir**. Esse valor substitui o valor definido pela propriedade **BuildDir** global de modo que **BuildRoot** seja avaliada como `D:\custom-builddir\x86-Debug`.
+No exemplo a seguir, a configuração de Depuração x86 define seu próprio valor para a propriedade **BuildDir** . Esse valor substitui o valor definido pela propriedade **BuildDir** global de modo que **BuildRoot** seja avaliada como `D:\custom-builddir\x86-Debug`.
 
 ```json
 {
@@ -258,9 +258,9 @@ No exemplo a seguir, a configuração de Depuração x86 define seu próprio val
 
 ## <a name="macros"></a>Macros
 
-As macros a seguir podem ser usadas no *CMakeSettings.jsem*:
+As macros a seguir podem ser usadas no *CMakeSettings.jsem* :
 
-- `${workspaceRoot}`– o caminho completo da pasta do espaço de trabalho
+- `${workspaceRoot}` – o caminho completo da pasta do espaço de trabalho
 - `${workspaceHash}` – hash do local do workspace; útil para criação de um identificador exclusivo para o workspace atual (por exemplo, para uso em caminhos de pasta)
 - `${projectFile}` – o caminho completo do arquivo CMakeLists.txt raiz
 - `${projectDir}` – o caminho completo da pasta do arquivo CMakeLists.txt raiz

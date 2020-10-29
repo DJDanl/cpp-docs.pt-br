@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d49f15a14675f265e1f63ef8795f442f49ad5d4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224156"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920197"
 ---
 # <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 A `MakeStaticReloggerGroup` função é usada para criar um grupo de reagente estático que pode ser passado para funções como [relog](relog.md). Os membros de um grupo de relogger recebem eventos um por um da esquerda para a direita até que todos os eventos em um rastreamento tenham sido processados.
 
@@ -34,15 +34,15 @@ template <typename... TReloggerPtrs>
 auto MakeStaticReloggerGroup(TReloggerPtrs... reloggers);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *TReloggerPtrs*\
 Esse parâmetro é sempre deduzido.
 
 *reagentes*\
-Um pacote de parâmetros de [`IRelogger`](../other-types/irelogger-class.md) ponteiros que é incluído no grupo de reagente estático. Esses ponteiros podem ser brutos, `std::unique_ptr` ou `std::shared_ptr` . [`IAnalyzer`](../other-types/ianalyzer-class.md)os ponteiros também são considerados `IRelogger` ponteiros devido a uma relação de herança.
+Um pacote de parâmetros de [`IRelogger`](../other-types/irelogger-class.md) ponteiros que é incluído no grupo de reagente estático. Esses ponteiros podem ser brutos, `std::unique_ptr` ou `std::shared_ptr` . [`IAnalyzer`](../other-types/ianalyzer-class.md) os ponteiros também são considerados `IRelogger` ponteiros devido a uma relação de herança.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 Um grupo de reagente estático. Use a **`auto`** palavra-chave para capturar o valor de retorno.
 

@@ -1,6 +1,6 @@
 ---
-title: Classe SymbolName
-description: A referência da classe C++ Build Insights SDK SymbolName.
+title: Classe symbolname
+description: A referência da classe Symbolname do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1306fb43d6c2140a75b36c5f142532916cf26ae4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a749d95b3812df8b1cc0cd7d2da037e98467cefc
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324350"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920470"
 ---
-# <a name="symbolname-class"></a>Classe SymbolName
+# <a name="symbolname-class"></a>Classe symbolname
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `SymbolName` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com um evento [SYMBOL_NAME.](../event-table.md#symbol-name)
+A `SymbolName` classe é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento [SYMBOL_NAME](../event-table.md#symbol-name) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,38 +42,38 @@ public:
 
 ## <a name="members"></a>Membros
 
-Juntamente com os membros herdados de `SymbolName` sua classe base [SimpleEvent,](simple-event.md) a classe contém os seguintes membros:
+Junto com os membros herdados de sua classe base [SimpleEvent](simple-event.md) , a `SymbolName` classe contém os seguintes membros:
 
 ### <a name="constructors"></a>Construtores
 
-[Nome do Símbolo](#symbol-name)
+[SymbolName](#symbol-name)
 
 ### <a name="functions"></a>Funções
 
-[Key](#key)
-[Nome-chave](#name)
+[Chave](#key) 
+ [Nome](#name) do
 
-## <a name="key"></a><a name="key"></a>Chave
+## <a name="key"></a><a name="key"></a> Chaves
 
 ```cpp
 const unsigned long long& Key() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um identificador numérico para o tipo representado por este símbolo. Este identificador é único dentro de um passe front-end do compilador.
+Um identificador numérico para o tipo representado por este símbolo. Esse identificador é exclusivo em uma passagem de front-end do compilador.
 
-## <a name="name"></a><a name="name"></a>Nome
+## <a name="name"></a><a name="name"></a> Nomes
 
 ```cpp
 const char* Name() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 O nome do tipo representado pelo símbolo, codificado em UTF-8.
 
-## <a name="symbolname"></a><a name="symbol-name"></a>Nome do Símbolo
+## <a name="symbolname"></a><a name="symbol-name"></a> Symbolname
 
 ```cpp
 SymbolName(const RawEvent& event);
@@ -81,7 +81,7 @@ SymbolName(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*\
-Um evento [SYMBOL_NAME.](../event-table.md#symbol-name)
+*circunstância*\
+Um evento [SYMBOL_NAME](../event-table.md#symbol-name) .
 
 ::: moniker-end

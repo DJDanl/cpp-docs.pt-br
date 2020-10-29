@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 325910f747f75f1f8d2904c248f8de69566464c7
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: ec2d0a76618d6ff2cf0e7fdff7e360a4fd2e0174
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041998"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919846"
 ---
 # <a name="analysis_descriptor-structure"></a>Estrutura de ANALYSIS_DESCRIPTOR
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 A `ANALYSIS_DESCRIPTOR` estrutura é usada com as funções [Analyze](../functions/analyze-a.md) e [AnalyzeW](../functions/analyze-w.md) . Ele descreve como um rastreamento de ETW (rastreamento de eventos para Windows) deve ser analisado.
 

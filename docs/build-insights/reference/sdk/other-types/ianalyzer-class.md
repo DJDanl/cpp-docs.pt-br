@@ -1,6 +1,6 @@
 ---
 title: Classe IAnalyzer
-description: A referência da classe C++ Build Insights SDK IAnalyzer.
+description: A referência de classe do SDK do IAnalyzer de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: be9d80bb94450458c73fd6ce8d908985ba6f293d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2514dd305a186d1153e9f9d1711bb774ea70cdf9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329180"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919807"
 ---
 # <a name="ianalyzer-class"></a>Classe IAnalyzer
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `IAnalyzer` classe fornece uma interface para analisar um rastreamento de rastreamento de eventos para Windows (ETW). Ele é usado com as funções [MakeDynamicAnalyzerGroup,](../functions/make-dynamic-analyzer-group.md) [MakeDynamicReloggerGroup,](../functions/make-dynamic-relogger-group.md) [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)e [MakeStaticReloggerGroup.](../functions/make-static-analyzer-group.md) Use `IAnalyzer` como uma classe base para criar seu próprio analisador que pode fazer parte de um grupo de analisadores ou relogger.
+A `IAnalyzer` classe fornece uma interface para analisar um rastreamento de ETW (rastreamento de eventos para Windows). Ele é usado com as funções [MakeDynamicAnalyzerGroup](../functions/make-dynamic-analyzer-group.md), [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md), [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)e [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md) . Use `IAnalyzer` como uma classe base para criar seu próprio analisador que pode fazer parte de um grupo de analisador ou relogger.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -61,33 +61,33 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-As classes `IAnalyzer` que derivam podem ser usadas tanto como analisadores quanto como reloggers. Quando usados como reloggers, as funções específicas do relogger redirecionam para o equivalente do analisador. O inverso não é verdade: uma `IRelogger` classe que deriva não pode ser usada como analisador. Usar um analisador em um grupo de relogger é um padrão comum. Quando colocado em uma posição inicial de um grupo de relogger, um analisador pode pré-calcular informações e disponibilizá-los para reloggers em posições posteriores.
+Classes que derivam de `IAnalyzer` podem ser usadas como analisadores e reagentes. Quando usado como reloggers, as funções específicas de relogger são redirecionadas para o respectivo analisador equivalente. O inverso não é verdadeiro: uma classe derivada de `IRelogger` não pode ser usada como um analisador. Usar um analisador em um grupo de relogger é um padrão comum. Quando colocado em uma posição inicial de um grupo de relogger, um analisador pode pré-testar as informações e disponibilizá-las para reagentes em posições posteriores.
 
-O valor de retorno padrão para todas as `AnalysisControl::CONTINUE`funções que não estão substituídas é . Para obter mais informações, consulte [AnalysisControl](analysis-control-enum-class.md).
+O valor de retorno padrão para todas as funções que não são substituídas é `AnalysisControl::CONTINUE` . Para obter mais informações, consulte [AnalysisControl](analysis-control-enum-class.md).
 
 ## <a name="members"></a>Membros
 
-Além do membro [OnTraceInfo](irelogger-class.md#on-trace-info) `IRelogger` da interface, a `IAnalyzer` classe contém os seguintes membros:
+Além do membro [OnTraceInfo](irelogger-class.md#on-trace-info) da `IRelogger` interface, a `IAnalyzer` classe contém os seguintes membros:
 
 ### <a name="destructor"></a>Destruidor
 
-[~IAnalyzer](#ianalyzer-destructor)
+[~ IAnalyzer](#ianalyzer-destructor)
 
 ### <a name="functions"></a>Funções
 
-[Análise onbegin](#on-begin-analysis)\
+[OnBeginAnalysis](#on-begin-analysis)\
 [OnBeginAnalysisPass](#on-begin-analysis-pass)\
 [OnBeginRelogging](#on-begin-relogging)\
 [OnBeginReloggingPass](#on-begin-relogging-pass)\
-[Onendanalysis](#on-end-analysis)\
-[Passe de Análise de Endanalysis](#on-end-analysis-pass)\
+[OnEndAnalysis](#on-end-analysis)\
+[OnEndAnalysisPass](#on-end-analysis-pass)\
 [OnEndRelogging](#on-end-relogging)\
 [OnEndReloggingPass](#on-end-relogging-pass)\
 [OnSimpleEvent](#on-simple-event)\
-[Atividade onstart](#on-start-activity)\
+[OnStartActivity](#on-start-activity)\
 [OnStopActivity](#on-stop-activity)
 
-## <a name="ianalyzer"></a><a name="ianalyzer-destructor"></a>~IAnalyzer
+## <a name="ianalyzer"></a><a name="ianalyzer-destructor"></a> ~ IAnalyzer
 
 Destrói a classe IAnalyzer.
 
@@ -95,108 +95,108 @@ Destrói a classe IAnalyzer.
 virtual ~IAnalyzer();
 ```
 
-## <a name="onbeginanalysis"></a><a name="on-begin-analysis"></a>Análise onbegin
+## <a name="onbeginanalysis"></a><a name="on-begin-analysis"></a> OnBeginAnalysis
 
-Para analisadores que fazem parte de um grupo analisador, essa função é chamada antes do início da primeira análise. Para analisadores parte de um grupo de relogger, essa função é chamada antes do relogging ser relogado. Para analisadores parte do grupo analisador e relogger da mesma sessão de relogging, esta função é chamada duas vezes antes do início da primeira análise.
+Para os analisadores que fazem parte de um grupo do analisador, essa função é chamada antes do início da primeira passagem de análise. Para os analisadores que fazem parte de um grupo de relogger, essa função é chamada antes do início da passagem de reregistro. Para os analisadores que fazem parte do grupo analisador e de relogger da mesma sessão de reregistro em log, essa função é chamada duas vezes antes do início da primeira passagem de análise.
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysis();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
-## <a name="onbeginanalysispass"></a><a name="on-begin-analysis-pass"></a>OnBeginAnalysisPass
+## <a name="onbeginanalysispass"></a><a name="on-begin-analysis-pass"></a> OnBeginAnalysisPass
 
-Para analisadores que fazem parte de um grupo analisador, essa função é chamada no início de cada passe de análise. Para analisadores que fazem parte de um grupo de relogger, essa função é chamada no início do relogger pass. Para analisadores que fazem parte do grupo analisador e relogger da mesma sessão de relogamento, essa função é chamada no início de cada passe de análise e no início da passagem do relogger.
+Para os analisadores que fazem parte de um grupo do analisador, essa função é chamada no início de cada passagem de análise. Para os analisadores que fazem parte de um grupo de relogger, essa função é chamada no início da passagem de relogger. Para os analisadores que fazem parte do grupo analisador e de relogger da mesma sessão de log, essa função é chamada no início de cada passagem de análise e no início da passagem de relogger.
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysisPass();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
-## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>OnBeginRelogging
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a> OnBeginRelogging
 
 ```cpp
 AnalysisControl OnBeginRelogging() final;
 ```
 
-Esta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Esta função redireciona a chamada para [OnBeginAnalysis](#on-begin-analysis).
+Esta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Essa função redireciona a chamada para [OnBeginAnalysis](#on-begin-analysis).
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O resultado da chamada [OnBeginAnalysis.](#on-begin-analysis)
+O resultado da chamada [OnBeginAnalysis](#on-begin-analysis) .
 
-## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a> OnBeginReloggingPass
 
-Esta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Esta função redireciona a chamada para [OnBeginAnalysisPass](#on-begin-analysis-pass).
+Esta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Essa função redireciona a chamada para [OnBeginAnalysisPass](#on-begin-analysis-pass).
 
 ```cpp
 AnalysisControl OnBeginReloggingPass() final;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O resultado da chamada [OnBeginAnalysisPass.](#on-begin-analysis-pass)
+O resultado da chamada [OnBeginAnalysisPass](#on-begin-analysis-pass) .
 
-## <a name="onendanalysis"></a><a name="on-end-analysis"></a>Onendanalysis
+## <a name="onendanalysis"></a><a name="on-end-analysis"></a> OnEndAnalysis
 
-Para analisadores que fazem parte de um grupo de analisadores, essa função é chamada após o término da última análise. Para analisadores que fazem parte de um grupo de relogger, essa função é chamada após o término do passe de relogamento. Para analisadores que fazem parte do grupo analisador e relogger da mesma sessão de relogging, essa função é chamada duas vezes:
+Para analisadores que fazem parte de um grupo do Analyzer, essa função é chamada após o término da última fase de análise. Para analisadores que fazem parte de um grupo de relogger, essa função é chamada após o encerramento da passagem de reregistro. Para analisadores que fazem parte do grupo analisador e do reagente de relogger da mesma sessão de log, essa função é chamada duas vezes:
 
-1. depois de todas as análises passam terminou e antes do passe de relogging começa, e
-1. depois que o passe de relogging terminou.
+1. Depois que todas as passagens de análise forem encerradas e antes do início da aprovação do reregistro em log, e
+1. após o encerramento da passagem de reregistro.
 
 ```cpp
 virtual AnalysisControl OnEndAnalysis();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
-## <a name="onendanalysispass"></a><a name="on-end-analysis-pass"></a>Passe de Análise de Endanalysis
+## <a name="onendanalysispass"></a><a name="on-end-analysis-pass"></a> OnEndAnalysisPass
 
-Para analisadores que fazem parte de um grupo analisador, essa função é chamada no final de cada passe de análise. Para analisadores parte de um grupo de relogger, essa função é chamada no final do passe de relogger. Para analisadores parte do grupo analisador e relogger da mesma sessão de relogamento, essa função é chamada no final de cada passe de análise e no final do passe de relogger.
+Para os analisadores que fazem parte de um grupo do analisador, essa função é chamada no final de cada passagem de análise. Para os analisadores que fazem parte de um grupo de relogger, essa função é chamada no final da passagem de relogger. Para os analisadores que fazem parte do grupo analisador e de relogger da mesma sessão de log, essa função é chamada no final de cada passagem de análise e no final da passagem de relogger.
 
 ```cpp
 virtual AnalysisControl OnEndAnalysisPass();
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
-## <a name="onendrelogging"></a><a name="on-end-relogging"></a>OnEndRelogging
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a> OnEndRelogging
 
-Esta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Esta função redireciona a chamada para [OnEndAnalysis](#on-end-analysis).
+Esta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Essa função redireciona a chamada para [OnEndAnalysis](#on-end-analysis).
 
 ```cpp
 AnalysisControl OnEndRelogging() final;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O resultado da chamada [OnEndAnalysis.](#on-end-analysis)
+O resultado da chamada [OnEndAnalysis](#on-end-analysis) .
 
-## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a> OnEndReloggingPass
 
-Esta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Esta função redireciona a chamada para [OnEndAnalysisPass](#on-end-analysis-pass).
+Esta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Essa função redireciona a chamada para [OnEndAnalysisPass](#on-end-analysis-pass).
 
 ```cpp
 AnalysisControl OnEndReloggingPass() final;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O resultado da chamada [OnEndAnalysisPass.](#on-end-analysis-pass)
+O resultado da chamada [OnEndAnalysisPass](#on-end-analysis-pass) .
 
-## <a name="onsimpleevent"></a><a name="on-simple-event"></a>OnSimpleEvent
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a> OnSimpleEvent
 
-Esta função é chamada quando um evento simples está sendo processado. A segunda versão desta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Todas as chamadas para a versão 2 são redirecionadas para a versão 1.
+Essa função é chamada quando um evento simples está sendo processado. A segunda versão desta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Todas as chamadas para a versão 2 são redirecionadas para a versão 1.
 
 ### <a name="version-1"></a>Versão 1
 
@@ -214,18 +214,18 @@ AnalysisControl OnSimpleEvent(const EventStack& eventStack,
 ### <a name="parameters"></a>Parâmetros
 
 *eventStack*\
-A pilha de eventos para este evento simples. Para obter mais informações sobre pilhas de eventos, consulte [Eventos](../event-table.md).
+A pilha de eventos para este evento simples. Para obter mais informações sobre as pilhas de eventos, consulte [eventos](../event-table.md).
 
-*sessão de relog*\
+*relogSession*\
 Esse parâmetro não está em uso.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
-## <a name="onstartactivity"></a><a name="on-start-activity"></a>Atividade onstart
+## <a name="onstartactivity"></a><a name="on-start-activity"></a> OnStartActivity
 
-Esta função é chamada quando um evento de início de atividade está sendo processado. A segunda versão desta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Todas as chamadas para a versão 2 são redirecionadas para a versão 1.
+Essa função é chamada quando um evento de início de atividade está sendo processado. A segunda versão desta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Todas as chamadas para a versão 2 são redirecionadas para a versão 1.
 
 ### <a name="version-1"></a>Versão 1
 
@@ -243,18 +243,18 @@ AnalysisControl OnStartActivity(const EventStack& eventStack,
 ### <a name="parameters"></a>Parâmetros
 
 *eventStack*\
-A pilha de eventos para este evento de início de atividade. Para obter mais informações sobre pilhas de eventos, consulte [Eventos](../event-table.md).
+A pilha de eventos para este evento de início de atividade. Para obter mais informações sobre as pilhas de eventos, consulte [eventos](../event-table.md).
 
-*sessão de relog*\
+*relogSession*\
 Esse parâmetro não está em uso.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
-## <a name="onstopactivity"></a><a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a> OnStopActivity
 
-Esta função é chamada quando um evento de parada de atividade está sendo processado. A segunda versão desta função não pode ser substituída. É chamado pelo C++ Build Insights SDK quando um analisador faz parte de um grupo de relogger. Todas as chamadas para a versão 2 são redirecionadas para a versão 1.
+Essa função é chamada quando um evento de parada de atividade está sendo processado. A segunda versão desta função não pode ser substituída. Ele é chamado pelo SDK de informações de Build do C++ quando um analisador faz parte de um grupo de relogger. Todas as chamadas para a versão 2 são redirecionadas para a versão 1.
 
 ### <a name="version-1"></a>Versão 1
 
@@ -272,13 +272,13 @@ AnalysisControl OnStopActivity(const EventStack& eventStack,
 ### <a name="parameters"></a>Parâmetros
 
 *eventStack*\
-A pilha de eventos para este evento de parada de atividades. Para obter mais informações sobre pilhas de eventos, consulte [Eventos](../event-table.md).
+A pilha de eventos para este evento de parada de atividade. Para obter mais informações sobre as pilhas de eventos, consulte [eventos](../event-table.md).
 
-*sessão de relog*\
+*relogSession*\
 Esse parâmetro não está em uso.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer a seguir.
+Um código [AnalysisControl](analysis-control-enum-class.md) que descreve o que deve acontecer em seguida.
 
 ::: moniker-end

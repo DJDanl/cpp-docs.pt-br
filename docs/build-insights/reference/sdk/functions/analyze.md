@@ -1,6 +1,6 @@
 ---
 title: Analisar
-description: A referência de função C++ Build Insights SDK Analyze.
+description: A referência da função Analyze do SDK do insights do C++ Build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 08b3643270cc785b3fbea36720d192b4a1473104
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e593b690231adf6f04161f9c3ff6aef3217f9ef
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324101"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920314"
 ---
 # <a name="analyze"></a>Analisar
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `Analyze` função é usada para analisar um rastreamento de rastreamento de eventos para Windows (ETW) obtido do MSVC enquanto traça uma compilação C++. Os eventos no rastreamento eTW são encaminhados sequencialmente para um grupo analisador fornecido pelo chamador. Esta função suporta análises multi-pass que permitem o encaminhamento do fluxo de eventos para o grupo analisador várias vezes seguidas.
+A `Analyze` função é usada para analisar um rastreamento ETW (rastreamento de eventos para Windows) obtido do MSVC durante o rastreamento de uma compilação C++. Os eventos no rastreamento ETW são encaminhados sequencialmente para um grupo do Analyzer fornecido pelo chamador. Essa função dá suporte a análises de várias passagens que permitem o encaminhamento do fluxo de eventos para o grupo do analisador várias vezes em uma linha.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,20 +45,20 @@ RESULT_CODE Analyze(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Membros do TAnalyzerGroup*\
-Este parâmetro é sempre deduzido.
+*TAnalyzerGroupMembers*\
+Esse parâmetro é sempre deduzido.
 
 *inputLogFile*\
-O rastreamento etw de entrada do que você deseja ler eventos.
+O rastreamento ETW de entrada do qual você deseja ler eventos.
 
 *numberOfPasses*\
-O número de análises passa para ser executado no rastreamento de entrada. O rastreamento é passado através do grupo analisador fornecido uma vez por passe de análise.
+O número de etapas de análise a serem executadas no rastreamento de entrada. O rastreamento é passado pelo grupo analisador fornecido uma vez por passagem de análise.
 
-*analyzerGroup*\
-O grupo analisador utilizado para a análise. Chamada [MakeStaticAnalyzegroup](make-static-analyzer-group.md) para criar um grupo de analisadores. Para usar um grupo de analisador dinâmico obtido do [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)primeiro encapsule-o dentro de um grupo de analisadores estáticos, passando seu endereço para `MakeStaticAnalyzerGroup`.
+*fileanalyzer*\
+O grupo do analisador usado para a análise. Chame [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) para criar um grupo do Analyzer. Para usar um grupo do analisador dinâmico obtido do [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), primeiro encapsula-o dentro de um grupo do analisador estático passando seu endereço para `MakeStaticAnalyzerGroup` .
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

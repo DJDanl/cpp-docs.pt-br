@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 82c2bd3765802f87025eaf2dfbda8f7467bbe9a0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499617"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921237"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: implementando uma página de propriedades
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 O assistente de Página de Propriedades da ATL não está disponível no Visual Studio 2019 e versões posteriores.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Este exemplo mostra como criar uma página de propriedades que exibe (e permite alterar) propriedades da interface [Classes de documento](../mfc/document-classes.md).
 
@@ -47,7 +47,7 @@ Para concluir este exemplo, você vai:
 
 ## <a name="adding-the-atl-property-page-class"></a><a name="vcconusing_the_atl_object_wizard"></a> Como adicionar a classe de página de propriedades da ATL
 
-Primeiro, crie um novo projeto ATL para um servidor DLL denominado `ATLPages7`. Agora, use o [Assistente de Página de Propriedades da ATL](../atl/reference/atl-property-page-wizard.md) para gerar uma página de propriedades. Dê à página de propriedades um **Nome Curto** de **DocProperties**, em seguida, alterne para a página **Cadeias de Caracteres** para definir itens específicos da página de propriedades, conforme mostrado na tabela abaixo.
+Primeiro, crie um novo projeto ATL para um servidor DLL denominado `ATLPages7`. Agora, use o [Assistente de Página de Propriedades da ATL](../atl/reference/atl-property-page-wizard.md) para gerar uma página de propriedades. Dê à página de propriedades um **Nome Curto** de **DocProperties** , em seguida, alterne para a página **Cadeias de Caracteres** para definir itens específicos da página de propriedades, conforme mostrado na tabela abaixo.
 
 |Item|Valor|
 |----------|-----------|
@@ -171,7 +171,7 @@ Quando você executar essa macro, a página de propriedades será exibida mostra
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Páginas de propriedade](../atl/atl-com-property-pages.md)<br/>
 [Exemplo de páginas ATL](../overview/visual-cpp-samples.md)

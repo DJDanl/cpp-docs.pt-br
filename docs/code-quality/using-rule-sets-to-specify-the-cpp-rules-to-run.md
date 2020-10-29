@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 53e1122cd1aac74401ca956ee24ebcdf79883228
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507475"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921900"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Usar conjuntos de regras para especificar as regras do C++ para execução
 
@@ -23,9 +23,9 @@ Para criar um novo conjunto de regras personalizadas, salve-o usando um novo nom
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Para criar uma regra personalizada com base em um único conjunto de regras existente
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. No Gerenciador de Soluções, abra o menu de atalho do projeto e, em seguida, escolha **Propriedades**.
+1. No Gerenciador de Soluções, abra o menu de atalho do projeto e, em seguida, escolha **Propriedades** .
 
 1. Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração** > **análise de código** > **geral** .
 
@@ -40,9 +40,9 @@ Para criar um novo conjunto de regras personalizadas, salve-o usando um novo nom
 1. Escolha **abrir** para exibir as regras no editor de conjunto de regras.
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. No Gerenciador de Soluções, abra o menu de atalho do projeto e, em seguida, escolha **Propriedades**.
+1. No Gerenciador de Soluções, abra o menu de atalho do projeto e, em seguida, escolha **Propriedades** .
 
 1. Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração** > **análise de código** da > **Microsoft** .
 
@@ -60,7 +60,7 @@ Para criar um novo conjunto de regras personalizadas, salve-o usando um novo nom
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Para modificar um conjunto de regras no editor de conjunto de regras
 
-- Para alterar o nome de exibição do conjunto de regras, no menu **Exibir** , escolha **janela de propriedades**. Insira o nome de exibição na caixa **nome** . Observe que o nome de exibição pode ser diferente do nome do arquivo.
+- Para alterar o nome de exibição do conjunto de regras, no menu **Exibir** , escolha **janela de propriedades** . Insira o nome de exibição na caixa **nome** . Observe que o nome de exibição pode ser diferente do nome do arquivo.
 
 - Para adicionar todas as regras do grupo a um conjunto de regras personalizadas, marque a caixa de seleção do grupo. Para remover todas as regras do grupo, desmarque a caixa de seleção.
 
@@ -78,23 +78,23 @@ Para criar um novo conjunto de regras personalizadas, salve-o usando um novo nom
 
 ## <a name="to-group-filter-or-change-the-fields-in-the-rule-set-editor-by-using-the-rule-set-editor-toolbar"></a>Para agrupar, filtrar ou alterar os campos no editor de conjunto de regras usando a barra de ferramentas do editor de conjunto de regras
 
-- Para expandir as regras em todos os grupos, escolha **expandir tudo**.
+- Para expandir as regras em todos os grupos, escolha **expandir tudo** .
 
-- Para recolher as regras em todos os grupos, escolha **recolher tudo**.
+- Para recolher as regras em todos os grupos, escolha **recolher tudo** .
 
 - Para alterar o campo pelo qual as regras são agrupadas, escolha o campo na lista **Agrupar por** . Para exibir as regras desagrupadas, escolha **\<None>** .
 
-- Para adicionar ou remover campos em colunas de regra, escolha **Opções de coluna**.
+- Para adicionar ou remover campos em colunas de regra, escolha **Opções de coluna** .
 
-- Para ocultar regras que não se aplicam à solução atual, escolha **ocultar regras que não se aplicam à solução atual**.
+- Para ocultar regras que não se aplicam à solução atual, escolha **ocultar regras que não se aplicam à solução atual** .
 
-- Para alternar entre mostrar e ocultar regras que são atribuídas à ação de erro, escolha **Mostrar regras que podem gerar erros de análise de código**.
+- Para alternar entre mostrar e ocultar regras que são atribuídas à ação de erro, escolha **Mostrar regras que podem gerar erros de análise de código** .
 
-- Para alternar entre mostrar e ocultar regras que recebem a ação de aviso, escolha **Mostrar regras que podem gerar avisos de análise de código**.
+- Para alternar entre mostrar e ocultar regras que recebem a ação de aviso, escolha **Mostrar regras que podem gerar avisos de análise de código** .
 
-- Para alternar entre mostrar e ocultar regras que são atribuídas à ação **nenhum** , escolha **Mostrar regras que não estão habilitadas**.
+- Para alternar entre mostrar e ocultar regras que são atribuídas à ação **nenhum** , escolha **Mostrar regras que não estão habilitadas** .
 
-- Para adicionar ou remover conjuntos de regras padrão da Microsoft para o conjunto de regras atual, escolha **Adicionar ou remover conjuntos de regras filho**.
+- Para adicionar ou remover conjuntos de regras padrão da Microsoft para o conjunto de regras atual, escolha **Adicionar ou remover conjuntos de regras filho** .
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Para criar um conjunto de regras em um editor de texto
 

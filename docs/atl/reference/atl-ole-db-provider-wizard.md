@@ -4,26 +4,26 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706971"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921133"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistente de provedor OLE DB da ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Esse assistente não está disponível no Visual Studio 2019 e versões posteriores.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ## <a name="remarks"></a>Comentários
 
-A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER**, e não em **HKEY_LOCAL_MACHINE**. Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
+A partir do Visual Studio 2008, o script de registro produzido por esse assistente registra seus componentes COM em **HKEY_CURRENT_USER** , e não em **HKEY_LOCAL_MACHINE** . Para modificar esse comportamento, defina a opção **Registrar componente para todos os usuários** do Assistente da ATL.
 
 A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da ATL:
 
@@ -43,7 +43,7 @@ A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da A
 
 - **ProgID**
 
-   ProgID, ou identificador programático, é uma cadeia de caracteres de texto que o aplicativo pode usar no lugar de um GUID. O nome de ProgID tem o formato *Projectname.Coclassname*.
+   ProgID, ou identificador programático, é uma cadeia de caracteres de texto que o aplicativo pode usar no lugar de um GUID. O nome de ProgID tem o formato *Projectname.Coclassname* .
 
 - **Versão**
 
@@ -51,7 +51,7 @@ A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da A
 
 - **Classe DataSource**
 
-   O nome da classe da fonte de dados, no formato C*Nomecurto*Origem.
+   O nome da classe da fonte de dados, no formato C *Nomecurto* Origem.
 
 - **Arquivo .h de DataSource**
 
@@ -59,7 +59,7 @@ A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da A
 
 - **Classe da sessão**
 
-   O nome da classe da sessão, no formato C*Nomecurto*Sessão.
+   O nome da classe da sessão, no formato C *Nomecurto* Sessão.
 
 - **Arquivo. h da sessão**
 
@@ -67,7 +67,7 @@ A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da A
 
 - **Classe do comando**
 
-   O nome da classe do comando, no formato C*Nomecurto*Comando.
+   O nome da classe do comando, no formato C *Nomecurto* Comando.
 
 - **Arquivo .h do comando**
 
@@ -75,7 +75,7 @@ A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da A
 
 - **Classe do conjunto de linhas**
 
-   O nome da classe do conjunto de linhas, no formato C*Nomecurto*ConjuntoDeLinhas.
+   O nome da classe do conjunto de linhas, no formato C *Nomecurto* ConjuntoDeLinhas.
 
 - **Arquivo. h do conjunto de linhas**
 
@@ -87,6 +87,6 @@ A tabela a seguir descreve as opções para o Assistente de Provedor OLE DB da A
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Provedor OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)

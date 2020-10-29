@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75f45244b9e9b38b7dc65b604940199acafa0ede
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507732"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922212"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Tutorial: Noções básicas do analisador de desempenho do Windows
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 As ferramentas de compilação do C++ estão disponíveis no Visual Studio 2019. Para ver a documentação desta versão, defina o controle do seletor de **versão** do Visual Studio para este artigo como Visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Usar as informações de compilação do C++ efetivamente requer algum conhecimento do Windows Performance Analyzer (WPA). Este artigo ajuda você a se familiarizar com operações WPA comuns. Para obter mais informações sobre como usar o WPA, consulte a documentação do [analisador de desempenho do Windows](/windows-hardware/test/wpt/windows-performance-analyzer) .
 
@@ -44,7 +44,7 @@ A maioria dos modos de exibição de WPA das informações de Build do C++ tem v
 
 ## <a name="zoom-in-and-out"></a>Ampliar e reduzir
 
-Alguns rastreamentos de Build são tão grandes que é difícil destacar os detalhes. Para ampliar uma área que lhe interessa, clique com o botão direito do mouse no grafo e selecione **zoom**. Você sempre pode voltar para a configuração anterior escolhendo **desfazer zoom**. Esta imagem mostra um exemplo de como usar uma seleção e o comando de **zoom** para ampliar uma seção do grafo:
+Alguns rastreamentos de Build são tão grandes que é difícil destacar os detalhes. Para ampliar uma área que lhe interessa, clique com o botão direito do mouse no grafo e selecione **zoom** . Você sempre pode voltar para a configuração anterior escolhendo **desfazer zoom** . Esta imagem mostra um exemplo de como usar uma seleção e o comando de **zoom** para ampliar uma seção do grafo:
 
 ![Vídeo curto mostrando o zoom em um grafo.](media/wpa-zooming.gif)
 
@@ -56,7 +56,7 @@ Esta imagem mostra um gráfico de barras de exemplo de uma invocação de link. 
 
 ![Vídeo curto mostrando como você pode agrupar por colunas diferentes.](media/wpa-grouping.gif)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Tutorial: vcperf e analisador de desempenho do Windows](vcperf-and-wpa.md)\
 [Referência: comandos vcperf](../reference/vcperf-commands.md)\
