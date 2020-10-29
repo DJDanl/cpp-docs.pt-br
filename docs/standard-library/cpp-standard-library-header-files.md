@@ -6,12 +6,12 @@ helpviewer_keywords:
 - header files, C++ Standard Library
 - C++ Standard Library, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-ms.openlocfilehash: dfadfb99e10fdb916b3fb4dc515f89e6f9252fde
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 7d4978e7de75e5416ba2653a632d713f407d3677
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352876"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924815"
 ---
 # <a name="c-standard-library-header-files"></a>Arquivos de cabeçalho da biblioteca padrão C++
 
@@ -19,7 +19,7 @@ Arquivos de cabeçalho para a biblioteca e extensões C++ Standard, por categori
 
 ## <a name="headers-by-category"></a>Cabeçalhos por categoria
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Categoria | Cabeçalhos |
 | - | - |
@@ -57,7 +57,7 @@ Arquivos de cabeçalho para a biblioteca e extensões C++ Standard, por categori
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 |Categoria|Cabeçalhos|
 |-|-|
@@ -80,7 +80,7 @@ Arquivos de cabeçalho para a biblioteca e extensões C++ Standard, por categori
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Usando cabeçalhos de biblioteca C++](using-cpp-library-headers.md)\
 [Biblioteca padrão do C++](cpp-standard-library-reference.md)

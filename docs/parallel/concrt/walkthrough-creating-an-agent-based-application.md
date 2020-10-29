@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 4e67b3fc3363955ae02973847912c021eca95ded
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9fdd3ddface01f84f6426dd334600cf88b84e7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219476"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924825"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Instruções passo a passo: criando um aplicativo com base no agente
 
@@ -28,7 +28,7 @@ Você deve entender os seguintes tópicos para concluir este passo a passos:
 
 - [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="sections"></a><a name="top"></a>As
+## <a name="sections"></a><a name="top"></a> As
 
 Este tutorial demonstra como executar as seguintes tarefas:
 
@@ -38,55 +38,55 @@ Este tutorial demonstra como executar as seguintes tarefas:
 
 - [Usando a Classe file_reader no Aplicativo](#useagentclass)
 
-## <a name="creating-the-console-application"></a><a name="createapplication"></a>Criando o aplicativo de console
+## <a name="creating-the-console-application"></a><a name="createapplication"></a> Criando o aplicativo de console
 
 Esta seção mostra como criar um aplicativo de console C++ que faz referência aos arquivos de cabeçalho que o programa usará. As etapas iniciais variam de acordo com a versão do Visual Studio que você está usando. Para ver a documentação da sua versão preferida do Visual Studio, use o controle seletor de **versão** . Ele é encontrado na parte superior do Sumário nesta página.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Para criar um aplicativo de console C++ no Visual Studio 2019
 
-1. No menu principal, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um projeto**.
+1. No menu principal, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um projeto** .
 
-1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++**, **Plataforma** como **Windows** e **Tipo de projeto** como **Console**.
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console** .
 
-1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar**. Na próxima página, insira `BasicAgent` como o nome do projeto e especifique o local do projeto, se desejado.
+1. Na lista filtrada de tipos de projeto, escolha **Aplicativo de Console** e, em seguida, escolha **Avançar** . Na próxima página, insira `BasicAgent` como o nome do projeto e especifique o local do projeto, se desejado.
 
 1. Escolha o botão **Criar** para criar o projeto.
 
-1. Clique com o botão direito do mouse no nó do projeto em **Gerenciador de soluções**e escolha **Propriedades**. Em **Propriedades de configuração**  >  cabeçalhos pré-compilados**C/C++**  >  **Precompiled Headers**  >  **cabeçalho pré-compilado** , escolha **criar**.
+1. Clique com o botão direito do mouse no nó do projeto em **Gerenciador de soluções** e escolha **Propriedades** . Em **Propriedades de configuração**  >  cabeçalhos pré-compilados **C/C++**  >  **Precompiled Headers**  >  **cabeçalho pré-compilado** , escolha **criar** .
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Para criar um aplicativo de console C++ no Visual Studio 2017 e anterior
 
-1. No menu **arquivo** , clique em **novo**e, em seguida, clique em **projeto** para exibir a caixa de diálogo **novo projeto** .
+1. No menu **arquivo** , clique em **novo** e, em seguida, clique em **projeto** para exibir a caixa de diálogo **novo projeto** .
 
-1. Na caixa de diálogo **novo projeto** , selecione o nó **Visual C++** no painel **tipos de projeto** e, em seguida, selecione aplicativo de **console Win32** no painel **modelos** . Digite um nome para o projeto, por exemplo, `BasicAgent` e clique em **OK** para exibir o **Assistente do aplicativo de console do Win32**.
+1. Na caixa de diálogo **novo projeto** , selecione o nó **Visual C++** no painel **tipos de projeto** e, em seguida, selecione aplicativo de **console Win32** no painel **modelos** . Digite um nome para o projeto, por exemplo, `BasicAgent` e clique em **OK** para exibir o **Assistente do aplicativo de console do Win32** .
 
-1. Na caixa de diálogo **Assistente de aplicativo do console do Win32** , clique em **concluir**.
+1. Na caixa de diálogo **Assistente de aplicativo do console do Win32** , clique em **concluir** .
 
 ::: moniker-end
 
-1. Em *PCH. h* (*stdafx. h* no Visual Studio 2017 e anterior), adicione o seguinte código:
+1. Em *PCH. h* ( *stdafx. h* no Visual Studio 2017 e anterior), adicione o seguinte código:
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
    O arquivo de cabeçalho Agents. h contém a funcionalidade da classe [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) .
 
-1. Verifique se o aplicativo foi criado com êxito criando-o e executando-o. Para criar o aplicativo, no menu **Compilar** , clique em **Compilar solução**. Se o aplicativo for compilado com êxito, execute o aplicativo clicando em **Iniciar Depuração** no menu **depurar** .
+1. Verifique se o aplicativo foi criado com êxito criando-o e executando-o. Para criar o aplicativo, no menu **Compilar** , clique em **Compilar solução** . Se o aplicativo for compilado com êxito, execute o aplicativo clicando em **Iniciar Depuração** no menu **depurar** .
 
 [[Superior](#top)]
 
-## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>Criando a classe file_reader
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a> Criando a classe file_reader
 
 Esta seção mostra como criar a `file_reader` classe. O tempo de execução agenda cada agente para executar o trabalho em seu próprio contexto. Portanto, você pode criar um agente que executa o trabalho de forma síncrona, mas interage com outros componentes de maneira assíncrona. A `file_reader` classe lê dados de um determinado arquivo de entrada e envia dados desse arquivo para um determinado componente de destino.
 
 #### <a name="to-create-the-file_reader-class"></a>Para criar a classe file_reader
 
-1. Adicione um novo arquivo de cabeçalho C++ ao seu projeto. Para fazer isso, clique com o botão direito do mouse no nó **arquivos de cabeçalho** em **Gerenciador de soluções**, clique em **Adicionar**e, em seguida, clique em **novo item**. No painel **modelos** , selecione **arquivo de cabeçalho (. h)**. Na caixa de diálogo **Adicionar novo item** , digite `file_reader.h` na caixa **nome** e, em seguida, clique em **Adicionar**.
+1. Adicione um novo arquivo de cabeçalho C++ ao seu projeto. Para fazer isso, clique com o botão direito do mouse no nó **arquivos de cabeçalho** em **Gerenciador de soluções** , clique em **Adicionar** e, em seguida, clique em **novo item** . No painel **modelos** , selecione **arquivo de cabeçalho (. h)** . Na caixa de diálogo **Adicionar novo item** , digite `file_reader.h` na caixa **nome** e, em seguida, clique em **Adicionar** .
 
 1. Em file_reader. h, adicione o código a seguir.
 
@@ -128,7 +128,7 @@ O exemplo a seguir mostra o conteúdo completo de file_reader. h.
 
 [[Superior](#top)]
 
-## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>Usando a classe file_reader no aplicativo
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a> Usando a classe file_reader no aplicativo
 
 Esta seção mostra como usar a `file_reader` classe para ler o conteúdo de um arquivo de texto. Ele também mostra como criar um objeto [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) que recebe esses dados de arquivo e calcula sua soma de verificação de Adler-32.
 
@@ -202,7 +202,7 @@ Sempre chame o método [Concurrency:: Agent::d um](reference/agent-class.md#done
 
 Para obter outro exemplo de um aplicativo baseado em agente, consulte [Walkthrough: usando Join para evitar deadlock](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Biblioteca de Agentes Assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
