@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 8a9c09eba23e2db3c1929cf1e24163947cf015b9
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389981"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924796"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usar os verificadores de Diretrizes Principais do C++
 
@@ -22,13 +22,13 @@ Criado por Bjarne Stroustrup e outros, o Diretrizes Principais do C++ é um guia
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Habilitar as diretrizes de Verificação Principal do C++ na análise de código
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Um subconjunto de regras de Verificação Principal do C++ está incluído no conjunto de regras Microsoft Native recomendado. É o conjunto de regras que é executado por padrão quando a análise de código está habilitada.
 
 ### <a name="to-enable-code-analysis-on-your-project"></a>Para habilitar a análise de código em seu projeto
 
-1. Abra a caixa de diálogo **páginas de propriedades** do seu projeto.
+1. Abra a caixa de diálogo  **páginas de propriedades** do seu projeto.
 
 1. Selecione a página de propriedade análise de código **das propriedades de configuração** > **Code Analysis** .
 
@@ -41,13 +41,13 @@ Para habilitar outras regras de verificação principais, abra a lista suspensa 
 ![Lista suspensa para conjuntos de regras de Verificação Principal do C++ adicionais](media/cppcorecheck_codeanalysis_extensions.png)
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Um subconjunto de regras de Verificação Principal do C++ está incluído no conjunto de regras Microsoft Native recomendado. É o conjunto de regras que é executado por padrão quando a análise de código da Microsoft é habilitada.
 
 ### <a name="to-enable-code-analysis-on-your-project"></a>Para habilitar a análise de código em seu projeto:
 
-1. Abra a caixa de diálogo **páginas de propriedades** do seu projeto.
+1. Abra a caixa de diálogo  **páginas de propriedades** do seu projeto.
 
 1. Selecione a página de propriedade análise de código **das propriedades de configuração** > **Code Analysis** .
 
@@ -57,11 +57,11 @@ Você também pode optar por executar todas as regras de Verificação Principal
 
 ### <a name="to-enable-additional-core-check-rules"></a>Para habilitar outras regras de verificação principais
 
-1. Abra a caixa de diálogo **páginas de propriedades** do seu projeto.
+1. Abra a caixa de diálogo  **páginas de propriedades** do seu projeto.
 
 1. Selecione a página de propriedade da análise de código **das propriedades de configuração** > **Code Analysis** > da **Microsoft** .
 
-1. Abra a lista suspensa **regras ativas** e selecione **escolher vários conjuntos de regras**.
+1. Abra a lista suspensa **regras ativas** e selecione **escolher vários conjuntos de regras** .
 
 1. Na caixa de diálogo **Adicionar ou remover conjuntos de regras** , escolha quais conjuntos de regras você deseja incluir.
 
@@ -96,7 +96,7 @@ Este exemplo demonstra alguns dos avisos que as regras de Verificação Principa
 
 - C26485 é associado à regra. 3: nenhum decaimento de matriz para ponteiro.
 
-- C26481 são limites de regra. 1: não use aritmética de ponteiro. Use `span` em vez disso.
+- C26481 são limites de regra. 1: não use aritmética de ponteiro. Use `span` em seu lugar.
 
 Instale e habilite os conjuntos de regras de análise de código Verificação Principal do C++ e compile este código. A análise de código gera os dois primeiros avisos e suprime o terceiro. Aqui está a saída da compilação do código de exemplo no Visual Studio 2015:
 
@@ -116,43 +116,43 @@ As Diretrizes Principais do C++ existem para ajudá-lo a escrever um código mel
 
 À medida que novas regras são adicionadas ao verificador de Diretrizes Principais do C++, o número de avisos produzidos para código pré-existente pode aumentar. Você pode usar conjuntos de regras predefinidos para filtrar quais tipos de regras habilitar. Você encontrará artigos de referência para a maioria das regras no [Visual Studio verificação principal do C++ referência](code-analysis-for-cpp-corecheck.md).
 
-- **Regras aritméticas**: regras para detectar [estouro](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)aritmético, [operações não assinadas](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)e manipulação de [bits](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
+- **Regras aritméticas** : regras para detectar [estouro](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)aritmético, [operações não assinadas](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned)e manipulação de [bits](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative). <sup>15,6</sup>
 
-- **Regras de limites**: impor o [perfil de limites do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
+- **Regras de limites** : impor o [perfil de limites do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile). <sup>15,3</sup>
 
-- **Regras de classe**: algumas regras que se concentram no uso adequado de funções de membro especiais e especificações virtuais. Eles são um subconjunto das verificações recomendadas para [classes e hierarquias de classe](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class). <sup>15,5</sup>
+- **Regras de classe** : algumas regras que se concentram no uso adequado de funções de membro especiais e especificações virtuais. Eles são um subconjunto das verificações recomendadas para [classes e hierarquias de classe](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class). <sup>15,5</sup>
 
-- **Regras de simultaneidade**: uma única regra, que captura declarações de objeto de proteção inadequadas. Para obter mais informações, consulte [diretrizes relacionadas à simultaneidade](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
+- **Regras de simultaneidade** : uma única regra, que captura declarações de objeto de proteção inadequadas. Para obter mais informações, consulte [diretrizes relacionadas à simultaneidade](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency). <sup>15,5</sup>
 
-- **Regras const**: impor [verificações relacionadas a const do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
+- **Regras const** : impor [verificações relacionadas a const do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability). <sup>15,3</sup>
 
-- **Regras de declaração**: algumas regras das diretrizes de [interfaces](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) que se concentram em como as variáveis globais são declaradas. <sup>15,5</sup>
+- **Regras de declaração** : algumas regras das diretrizes de [interfaces](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) que se concentram em como as variáveis globais são declaradas. <sup>15,5</sup>
 
-- **Regras de enumeração**: essas regras impõem [verificações relacionadas a enum do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
+- **Regras de enumeração** : essas regras impõem [verificações relacionadas a enum do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
 - **Regras experimentais** Essas são regras de Verificação Principal do C++ experimentais que são úteis, mas não estão prontas para uso diário. Experimente e [forneça comentários](https://developercommunity.visualstudio.com/content/idea/post.html?space=62). <sup>16,0</sup>
 
-- **Regras de função**: duas verificações que ajudam na adoção do **`noexcept`** especificador. Eles fazem parte das diretrizes para o [design e a implementação da função Clear](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
+- **Regras de função** : duas verificações que ajudam na adoção do **`noexcept`** especificador. Eles fazem parte das diretrizes para o [design e a implementação da função Clear](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
-- **Regras de GSL**: essas regras impõem verificações relacionadas à [biblioteca de suporte de diretrizes do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
+- **Regras de GSL** : essas regras impõem verificações relacionadas à [biblioteca de suporte de diretrizes do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-gsl). <sup>15,7</sup>
 
-- **Regras de tempo de vida**: essas regras impõem o [perfil de tempo de vida do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
+- **Regras de tempo de vida** : essas regras impõem o [perfil de tempo de vida do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prolifetime-lifetime-safety-profile). <sup>15,7</sup>
 
-- **Regras de ponteiro do proprietário**: impor [verificações de gerenciamento de recursos relacionadas ao proprietário \<T> da diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).<sup> 15,3</sup>
+- **Regras de ponteiro do proprietário** : impor [verificações de gerenciamento de recursos relacionadas ao proprietário \<T> da diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup> 15,3</sup>
 
-- **Regras de ponteiro bruto**: impor [verificações de gerenciamento de recursos relacionadas a ponteiros brutos do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Regras de ponteiro bruto** : impor [verificações de gerenciamento de recursos relacionadas a ponteiros brutos do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Regras de ponteiro compartilhado**: faz parte da imposição de diretrizes de [Gerenciamento de recursos](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> adicionamos algumas regras específicas para como ponteiros compartilhados são passados para funções ou usados localmente.
+- **Regras de ponteiro compartilhado** : faz parte da imposição de diretrizes de [Gerenciamento de recursos](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) . <sup>15,5</sup> adicionamos algumas regras específicas para como ponteiros compartilhados são passados para funções ou usados localmente.
 
-- **Regras STL**: essas regras impõem verificações relacionadas à [STL (biblioteca padrão C++) do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
+- **Regras STL** : essas regras impõem verificações relacionadas à [STL (biblioteca padrão C++) do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-stdlib). <sup>15,7</sup>
 
-- **Regras de estilo**: uma verificação simples, mas importante, que banimentos o uso de [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> é a primeira etapa para melhorar o estilo de codificação e o uso de expressões e instruções em C++.
+- **Regras de estilo** : uma verificação simples, mas importante, que banimentos o uso de [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). <sup>15,5</sup> é a primeira etapa para melhorar o estilo de codificação e o uso de expressões e instruções em C++.
 
-- **Regras de tipo**: impor o [perfil de tipo do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
+- **Regras de tipo** : impor o [perfil de tipo do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#prosafety-type-safety-profile). <sup>15,3</sup>
 
-- **Regras de ponteiro exclusivas**: impor [verificações de gerenciamento de recursos relacionadas a tipos com semântica de ponteiro exclusiva do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
+- **Regras de ponteiro exclusivas** : impor [verificações de gerenciamento de recursos relacionadas a tipos com semântica de ponteiro exclusiva do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management). <sup>15,3</sup>
 
-- **Regras de verificação principal do C++**: esse conjunto de regras contém todas as verificações atualmente implementadas do [diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), exceto as regras experimentais.
+- **Regras de verificação principal do C++** : esse conjunto de regras contém todas as verificações atualmente implementadas do [diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c-core-guidelines), exceto as regras experimentais.
 
 <sup>15,3</sup> essas regras apareciam primeiro no Visual Studio 2017 versão 15,3 \
 <sup>15,5</sup> essas regras apareciam primeiro no Visual Studio 2017 versão 15,5 \
@@ -163,14 +163,14 @@ As Diretrizes Principais do C++ existem para ajudá-lo a escrever um código mel
 
 Você pode optar por limitar os avisos a apenas um ou alguns dos grupos. Os conjuntos de regras **recomendadas** nativas e **mínimas** nativas incluem regras de verificação principal do C++ e outras verificações PREfast.
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código**  >  **geral** . Em seguida, abra o menu suspenso na caixa de combinação **conjuntos de regras** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras**. A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código**  >  **geral** . Em seguida, abra o menu suspenso na caixa de combinação **conjuntos de regras** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras** . A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código**da  >  **Microsoft** . Em seguida, abra o menu suspenso na caixa de combinação **regras ativas** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras**. A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código** da  >  **Microsoft** . Em seguida, abra o menu suspenso na caixa de combinação **regras ativas** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras** . A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 
@@ -224,15 +224,15 @@ O compilador do Microsoft C++ tem suporte limitado para o `[[gsl::suppress]]` at
 
 Em vez de #pragmas, você pode usar opções de linha de comando na página de propriedades do arquivo para suprimir os avisos de um projeto ou de um único arquivo. Por exemplo, para desabilitar o aviso C26400 para um arquivo:
 
-1. Clique com o botão direito do mouse no arquivo em **Gerenciador de soluções** e escolha **Propriedades**.
+1. Clique com o botão direito do mouse no arquivo em **Gerenciador de soluções** e escolha **Propriedades** .
 
-1. Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**de  >  linha de comando**C/C++**  >  **Command Line** .
+1. Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração** de  >  linha de comando **C/C++**  >  **Command Line** .
 
 1. Na caixa de edição **Opções adicionais** , adicione *`/wd26400`* .
 
-Você pode usar a opção de linha de comando para desabilitar temporariamente toda a análise de código de um arquivo, especificando **`/analyze-`** . Você verá o aviso *D9025 substituindo '/ANALYZE ' por '/ANALYZE-'*, que o lembrará de reabilitar a análise de código mais tarde.
+Você pode usar a opção de linha de comando para desabilitar temporariamente toda a análise de código de um arquivo, especificando **`/analyze-`** . Você verá o aviso *D9025 substituindo '/ANALYZE ' por '/ANALYZE-'* , que o lembrará de reabilitar a análise de código mais tarde.
 
-## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>Habilitar o verificador de Diretrizes Principais do C++ em arquivos de projeto específicos
+## <a name="enable-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a> Habilitar o verificador de Diretrizes Principais do C++ em arquivos de projeto específicos
 
 Às vezes, é útil fazer uma análise de código focada e ainda usar o IDE do Visual Studio. Experimente o cenário de exemplo a seguir para projetos grandes. Ele pode economizar tempo de compilação e facilitar o filtro de resultados:
 
@@ -246,9 +246,9 @@ Você pode usar a opção de linha de comando para desabilitar temporariamente t
 
 1. Vá para o arquivo que você deseja analisar com o verificador de Diretrizes Principais do C++ e abra suas propriedades.
 
-1. Escolha **Propriedades de configuração**  >  linha de comando**C/C++**  >  **Command Line**  >  **Opções adicionais** e adicionar*`/analyze:plugin EspXEngine.dll`*
+1. Escolha **Propriedades de configuração**  >  linha de comando **C/C++**  >  **Command Line**  >  **Opções adicionais** e adicionar *`/analyze:plugin EspXEngine.dll`*
 
-1. Desabilite o uso de cabeçalho pré-compilado (**Propriedades de configuração**  >  cabeçalhos pré-compilados**C/C++**  >  **Precompiled Headers**). É necessário porque o mecanismo de extensões pode tentar ler suas informações internas do cabeçalho pré-compilado (PCH). Se o PCH tiver sido compilado com opções de projeto padrão, ele não será compatível.
+1. Desabilite o uso de cabeçalho pré-compilado ( **Propriedades de configuração**  >  cabeçalhos pré-compilados **C/C++**  >  **Precompiled Headers** ). É necessário porque o mecanismo de extensões pode tentar ler suas informações internas do cabeçalho pré-compilado (PCH). Se o PCH tiver sido compilado com opções de projeto padrão, ele não será compatível.
 
 1. Recompile o projeto. As verificações PREfast comuns devem ser executadas em todos os arquivos. Como o verificador de Diretrizes Principais do C++ não está habilitado por padrão, ele só deve ser executado no arquivo que está configurado para usá-lo.
 
@@ -298,21 +298,21 @@ Se você usar um sistema de compilação que não dependa do MSBuild, ainda pode
 A análise de código requer algumas variáveis de ambiente e opções de linha de comando do compilador. É recomendável usar o ambiente de **prompt de comando das ferramentas nativas** para que você não precise procurar caminhos específicos para o compilador, incluir diretórios e assim por diante.
 
 - **Variáveis de ambiente**
-  - `set esp.extensions=cppcorecheck.dll`Isso informa o mecanismo para carregar o módulo Diretrizes Principais do C++.
-  - `set esp.annotationbuildlevel=ignore`Isso desabilita a lógica que processa anotações SAL. As anotações não afetam a análise de código no verificador de Diretrizes Principais do C++, mas seu processamento leva tempo (às vezes, muito tempo). Essa configuração é opcional, mas altamente recomendável.
-  - `set caexcludepath=%include%`É altamente recomendável que você desabilite os avisos que são acionados em cabeçalhos padrão. Você pode adicionar mais caminhos aqui, por exemplo, o caminho para os cabeçalhos comuns em seu projeto.
+  - `set esp.extensions=cppcorecheck.dll` Isso informa o mecanismo para carregar o módulo Diretrizes Principais do C++.
+  - `set esp.annotationbuildlevel=ignore` Isso desabilita a lógica que processa anotações SAL. As anotações não afetam a análise de código no verificador de Diretrizes Principais do C++, mas seu processamento leva tempo (às vezes, muito tempo). Essa configuração é opcional, mas altamente recomendável.
+  - `set caexcludepath=%include%` É altamente recomendável que você desabilite os avisos que são acionados em cabeçalhos padrão. Você pode adicionar mais caminhos aqui, por exemplo, o caminho para os cabeçalhos comuns em seu projeto.
 
 - **Opções de linha de comando**
-  - **`/analyze`** Habilita a análise de código (Considere também usar **`/analyze:only`** e **`/analyze:quiet`** ).
+  - **`/analyze`**  Habilita a análise de código (Considere também usar **`/analyze:only`** e **`/analyze:quiet`** ).
   - **`/analyze:plugin EspXEngine.dll`** Essa opção carrega o mecanismo de extensões de análise de código no PREfast. Esse mecanismo, por sua vez, carrega o verificador de Diretrizes Principais do C++.
 
 ## <a name="use-the-guideline-support-library"></a>Usar a biblioteca de suporte de diretrizes
 
 A GSL (biblioteca de suporte de diretrizes) foi projetada para ajudá-lo a seguir as diretrizes básicas. O GSL inclui definições que permitem que você substitua construções propensas a erros com alternativas mais seguras. Por exemplo, você pode substituir um `T*, length` par de parâmetros pelo `span<T>` tipo. O GSL está disponível em [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl) . A biblioteca é de código-fonte aberto, para que você possa exibir as fontes, fazer comentários ou contribuir. O projeto pode ser encontrado em [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL) .
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
-## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Usar as diretrizes de Verificação Principal do C++ nos projetos do Visual Studio 2015
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a> Usar as diretrizes de Verificação Principal do C++ nos projetos do Visual Studio 2015
 
 Se você usar o Visual Studio 2015, os conjuntos de regras de análise de código Verificação Principal do C++ não serão instalados por padrão. Etapas adicionais são necessárias para que você possa habilitar as ferramentas de análise de código Verificação Principal do C++ no Visual Studio 2015. A Microsoft fornece suporte para projetos do Visual Studio 2015 usando um pacote NuGet. O pacote é denominado Microsoft. CppCoreCheck e está disponível em [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck) . Este pacote requer que você tenha pelo menos o Visual Studio 2015 com atualização 1 instalado.
 
@@ -322,7 +322,7 @@ Devido à maneira como as regras de análise de código são carregadas no Visua
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Para adicionar o pacote Microsoft. CppCoreCheck ao seu projeto no Visual Studio 2015
 
-1. No **Gerenciador de soluções**, clique com o botão direito do mouse para abrir o menu de contexto do seu projeto na solução à qual você deseja adicionar o pacote. Escolha **gerenciar pacotes NuGet** para abrir o **Gerenciador de pacotes NuGet**.
+1. No **Gerenciador de soluções** , clique com o botão direito do mouse para abrir o menu de contexto do seu projeto na solução à qual você deseja adicionar o pacote. Escolha **gerenciar pacotes NuGet** para abrir o **Gerenciador de pacotes NuGet** .
 
 1. Na janela **Gerenciador de pacotes NuGet** , procure Microsoft. CppCoreCheck.
 
@@ -334,6 +334,6 @@ Devido à maneira como as regras de análise de código são carregadas no Visua
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Referência do Visual Studio Verificação Principal do C++](code-analysis-for-cpp-corecheck.md)

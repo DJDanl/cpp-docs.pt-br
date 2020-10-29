@@ -4,22 +4,22 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c2ef6c539d5845beee044a963e0056d3287ba679
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845348"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924809"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e funcionalidades do C++ em edições do Visual Studio
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos que declarado de outra forma, todos os recursos estão disponíveis em todas as edições: Visual Studio Community, Visual Studio Professional e Visual Studio Enterprise. Alguns recursos exigem cargas de trabalho específicas ou componentes opcionais, que você pode instalar com o Instalador do Visual Studio.
 
 ## <a name="platforms"></a>Plataformas
 
-- Área de Trabalho do Windows
+- Windows Desktop
 - Plataforma Universal do Windows ((tablet, computador, Xbox, IoT e HoloLens))
 - Linux
 - Android
@@ -38,7 +38,7 @@ Os recursos do C++ a seguir estão disponíveis no Visual Studio 2019. A menos q
 
 O Visual Studio inclui as seguintes cargas de trabalho para desenvolvimento do C++. É possível instalar qualquer uma ou todas elas juntamente com outras cargas de trabalho como Desenvolvimento para Desktop do .NET, Desenvolvimento do Python, Desenvolvimento do Azure, Desenvolvimento de Extensão do Visual Studio e outros.
 
-### <a name="desktop-development-with-c"></a>Desenvolvimento de área de trabalho com o C++
+### <a name="desktop-development-with-c"></a>Desenvolvimento para desktop com C++
 
 Incluído:
 
@@ -301,7 +301,7 @@ Linux:
 - Microsoft Fakes (Isolamento de teste de unidade) (somente Enterprise)
 - Cobertura de código (somente Enterprise)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Instalar o Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [O que há de novo no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
@@ -309,7 +309,7 @@ Linux:
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Studio 2017. Um X em uma célula indica que o recurso está disponível; uma célula vazia indica que o recurso não está disponível. As observações entre parênteses indicam que um recurso está disponível, mas é restrito.
 
@@ -317,7 +317,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 
 |Plataforma|Visual Studio Express para Windows 10|Visual Studio Express para Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Área de Trabalho do Windows||X|X|X|
+|Windows Desktop||X|X|X|
 |Plataforma Universal do Windows (telefone, tablet, computador, Xbox, IoT e HoloLens)|X||X|X|
 |Linux|X|X|
 |Microsoft Store 8.1|||X|X|
@@ -467,7 +467,7 @@ As tabelas a seguir mostram os recursos do Visual C++ disponíveis no Visual Stu
 |Mapa de códigos e grafos de dependência|||somente leitura|X|
 |Depuração do mapa de códigos||||X|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Instalar o Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [O que há de novo no Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>

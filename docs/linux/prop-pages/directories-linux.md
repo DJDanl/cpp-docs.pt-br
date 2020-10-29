@@ -2,22 +2,22 @@
 title: Diretórios VC++ (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 12d45b93-0a5c-455e-b12a-9b9aad9a6d6c
-ms.openlocfilehash: c32c706f314b4ed57350f359ba44ace5eeb458e4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 764e04b9aa05f4feec51d98a3578812c04bbabb6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441294"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924503"
 ---
 # <a name="vc-directories-linux-c"></a>Diretórios VC++ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Propriedade | Descrição |
 |--|--|

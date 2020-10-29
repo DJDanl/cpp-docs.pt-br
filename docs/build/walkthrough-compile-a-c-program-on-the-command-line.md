@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 1090bf98332a51773e53bfcda51e944dc09c5221
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075602"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924736"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Passo a passo: Compilar um programa em C na linha de comando
 
@@ -28,7 +28,7 @@ Para concluir este passo a passos, você deve ter instalado o Visual Studio e os
 
 O Visual Studio é um poderoso ambiente de desenvolvimento integrado que dá suporte a um editor completo, gerenciadores de recursos, depuradores e compiladores para muitas linguagens e plataformas. Para obter informações sobre esses recursos e como baixar e instalar o Visual Studio, incluindo o Visual Studio Community Edition gratuito, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
 
-As ferramentas de Build para a versão do Visual Studio do Visual Studio instalam apenas o conjunto de ferramentas de linha de comando, os compiladores, as ferramentas e as bibliotecas necessárias para criar programas em C e C++. É perfeito para os laboratórios de compilação ou exercícios de sala de aula e é instalado de forma relativamente rápida. Para instalar apenas o conjunto de ferramentas de linha de comando, baixe ferramentas de compilação para Visual Studio na página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) e execute o instalador. No instalador do Visual Studio, selecione a carga de trabalho **ferramentas de compilação C++** e escolha **instalar**.
+As ferramentas de Build para a versão do Visual Studio do Visual Studio instalam apenas o conjunto de ferramentas de linha de comando, os compiladores, as ferramentas e as bibliotecas necessárias para criar programas em C e C++. É perfeito para os laboratórios de compilação ou exercícios de sala de aula e é instalado de forma relativamente rápida. Para instalar apenas o conjunto de ferramentas de linha de comando, baixe ferramentas de compilação para Visual Studio na página de [downloads do Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) e execute o instalador. No instalador do Visual Studio, selecione a carga de trabalho **ferramentas de compilação C++** e escolha **instalar** .
 
 Antes de criar um programa C ou C++ na linha de comando, você deve verificar se as ferramentas estão instaladas e se pode acessá-las na linha de comando. Visual C++ tem requisitos complexos para o ambiente de linha de comando para localizar as ferramentas, os cabeçalhos e as bibliotecas que ele usa. **Você não pode usar Visual C++ em uma janela de prompt de comando simples** sem alguma preparação. Você precisa de uma janela de *prompt de comando do desenvolvedor* , que é uma janela de prompt de comando regular que tem todas as variáveis de ambiente necessárias definidas. Felizmente, Visual C++ instala atalhos para que você inicie prompts de comando do desenvolvedor que têm o ambiente configurado para compilações de linha de comando. Infelizmente, os nomes dos atalhos de prompt de comando do desenvolvedor e onde eles estão localizados são diferentes em quase todas as versões do Visual C++ e em versões diferentes do Windows. Sua primeira tarefa de explicação é encontrar o atalho correto a ser usado.
 
@@ -37,7 +37,7 @@ Antes de criar um programa C ou C++ na linha de comando, você deve verificar se
 
 Essas instruções variam de acordo com a versão do Visual Studio que você está usando. Para ver a documentação da sua versão preferida do Visual Studio, use o controle seletor de **versão** . Ele é encontrado na parte superior do Sumário nesta página.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Abrir um prompt de comando do desenvolvedor no Visual Studio 2019
 
@@ -47,7 +47,7 @@ Se você estiver usando uma versão diferente do Windows, examine o menu iniciar
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Abrir um prompt de comando do desenvolvedor no Visual Studio 2017
 
@@ -57,7 +57,7 @@ Se você estiver executando uma versão diferente do Windows, examine o menu ini
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Abrir um prompt de comando do desenvolvedor no Visual Studio 2015
 
@@ -183,7 +183,7 @@ As linguagens C e C++ são semelhantes, mas não as mesmas. O compilador do Micr
 
 O MSVC é compatível com o padrão ISO C99, mas não é estritamente compatível. Na maioria dos casos, o código C portátil será compilado e executado conforme o esperado. Visual C++ fornece suporte para as alterações no ISO C11/C17. Para compilar com o suporte a C11/C17, use o sinalizador do compilador `/std:c11` ou `/std:c17` . Certas funções de biblioteca e nomes de função POSIX são preteridos pelo MSVC. As funções têm suporte, mas os nomes preferenciais foram alterados. Para obter mais informações, consulte [recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md) e [aviso do compilador (nível 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Passo a passo: criando um programa C++ padrão (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referência da linguagem C](../c-language/c-language-reference.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 7a639f7ad7deb76cade47b0162012dcb70cb0d69
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: a660e67b2664417438ea9fa7acddbde4c20c307a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446747"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924141"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuindo arquivos do Visual C++
 
@@ -25,19 +25,19 @@ ms.locfileid: "86446747"
 
 Ao implantar um aplicativo, você também deve implantar os arquivos que são necessários para o suporte. Se qualquer um desses arquivos for fornecido pela Microsoft, verifique se você tem permissão para redistribuí-los. Você encontrará um link para os termos de licença do Visual Studio no IDE. Use o link termos de licença na caixa de diálogo sobre o Microsoft Visual Studio. Ou então, baixe os EULAs e as licenças relevantes do [diretório de licenças](https://visualstudio.microsoft.com/license-terms/)do Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Para exibir a "lista redist" mencionada na seção "código distribuível" dos termos de licença para software Microsoft do Visual Studio 2019, consulte [arquivos de código distribuível para Microsoft Visual Studio 2019](/visualstudio/releases/2019/redistribution#-distributable-code-files-for-visual-studio-2019)
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Para exibir a "lista redist" mencionada na seção "código distribuível" dos termos de licença para software Microsoft do Visual Studio 2017, consulte [arquivos de código distribuível para Microsoft Visual Studio 2017](/visualstudio/productinfo/2017-redistribution-vs#-distributable-code-files-for-visual-studio-2017).
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Para exibir a "lista redist" mencionada na seção "código distribuível" dos termos de licença para software Microsoft do Visual Studio 2015, consulte [arquivos de código distribuível para Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs#-distributable-code-files-for-visual-studio-2015).
 
@@ -65,11 +65,11 @@ Os módulos de mesclagem redistribuíveis devem ser incluídos no pacote de Wind
 
 ## <a name="install-individual-redistributable-files"></a>Instalar arquivos redistribuíveis individuais
 
-Também é possível instalar diretamente as DLLs redistribuíveis na *pasta local do aplicativo*. Essa é a pasta que contém o arquivo de aplicativo executável. Por motivos de manutenção, não recomendamos que você use esse local de instalação.
+Também é possível instalar diretamente as DLLs redistribuíveis na *pasta local do aplicativo* . Essa é a pasta que contém o arquivo de aplicativo executável. Por motivos de manutenção, não recomendamos que você use esse local de instalação.
 
 ## <a name="potential-run-time-errors"></a>Possíveis erros de tempo de execução
 
-Se o Windows não conseguir encontrar uma das DLLs de biblioteca redistribuível exigidas pelo seu aplicativo, ele poderá exibir uma mensagem semelhante a: "este aplicativo falhou ao iniciar porque a *biblioteca*. dll não foi encontrada. A reinstalação do aplicativo pode corrigir esse problema. "
+Se o Windows não conseguir encontrar uma das DLLs de biblioteca redistribuível exigidas pelo seu aplicativo, ele poderá exibir uma mensagem semelhante a: "este aplicativo falhou ao iniciar porque a *biblioteca* . dll não foi encontrada. A reinstalação do aplicativo pode corrigir esse problema. "
 
 Para resolver esse tipo de erro, verifique se o instalador do aplicativo foi criado corretamente. Verifique se as bibliotecas redistribuíveis são implantadas corretamente no sistema de destino. Para obter mais informações, confira [Noções básicas sobre as dependências de um aplicativo do Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md).
 

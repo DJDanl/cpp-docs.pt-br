@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e1eeb7e466e325772d6a1522e77983fd3de04293
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185861"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923964"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Aviso do compilador (nível 1) C4727
 
@@ -20,13 +20,13 @@ ms.locfileid: "80185861"
 > [!NOTE]
 > No Visual Studio 2017 e anterior, o cabeçalho pré-compilado é chamado de *stdafx. h* por padrão e, no Visual Studio 2019 e posterior, ele é chamado de *PCH. h* por padrão.
 
-C4727 ocorre ao compilar vários compilandos com **/YC**e onde o compilador conseguiu marcar todos os arquivos. obj com o mesmo carimbo de data/hora. pch.
+C4727 ocorre ao compilar vários compilandos com **/YC** e onde o compilador conseguiu marcar todos os arquivos. obj com o mesmo carimbo de data/hora. pch.
 
 Para resolver, compile um arquivo de origem com **/Yc/c** (cria pch) e os outros compilam separadamente com **/Yu/c** (usa pch) e vincule-os juntos.
 
 Portanto, se você fez o seguinte e gera C4727:
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **CL/CLR/GL a. cpp b. cpp c. cpp/Ycstdafx.h**
 
@@ -38,7 +38,7 @@ Em vez disso, você faria o seguinte:
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 **CL/CLR/GL a. cpp b. cpp c. cpp/Ycpch.h**
 

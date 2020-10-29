@@ -2,16 +2,16 @@
 title: Programa C multithread de exemplo
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: eb1a07558dd9446e167c27ad08891f88c37fb4ec
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195807"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924766"
 ---
 # <a name="sample-multithread-c-program"></a>Programa C multithread de exemplo
 
-Bounce. c é um exemplo de programa multithread que cria um novo thread sempre que a `a` letra `A` ou é digitada. Cada thread salta uma letra de uma cor diferente em toda a tela. Até 32 threads podem ser criados. A terminação normal do programa ocorre `q` quando `Q` ou é digitada.
+Bounce. c é um exemplo de programa multithread que cria um novo thread sempre que a letra `a` ou `A` é digitada. Cada thread salta uma letra de uma cor diferente em toda a tela. Até 32 threads podem ser criados. A terminação normal do programa ocorre quando `q` ou `Q` é digitada.
 
 ## <a name="compile-and-link-a-multithread-program"></a>Compilar e vincular um programa multithread
 
@@ -19,11 +19,11 @@ Os programas são compilados como multissegmentados por padrão.
 
 ### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Para compilar e vincular o programa multithread Bounce. c de dentro do ambiente de desenvolvimento
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. No menu **Arquivo**, escolha **Novo** > **Projeto**.
+1. No menu **Arquivo** , escolha **Novo** > **Projeto** .
 
-1. Na caixa de diálogo **criar um novo projeto** , selecione o modelo de **aplicativo** de **C++** console que tem, **janelas**e marcas de **console** . Escolha **Avançar** para continuar.
+1. Na caixa de diálogo **criar um novo projeto** , selecione o modelo de **aplicativo de console** que tem as marcas **C++** , **Windows** e **console** . Escolha **Avançar** para continuar.
 
 1. Na caixa de diálogo **configurar seu novo projeto** , insira um nome para seu projeto, como "elástico". Escolha **criar** para continuar.
 
@@ -31,17 +31,17 @@ Os programas são compilados como multissegmentados por padrão.
 
 1. Na janela Editar, exclua o código-fonte existente e substitua-o pelo código de exemplo.
 
-1. No menu **Compilar**, escolha **Compilar Solução**.
+1. No menu **Compilar** , escolha **Compilar Solução** .
 
 1. Pressione **F5** para iniciar o programa no depurador.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. No menu **Arquivo**, escolha **Novo** > **Projeto**.
+1. No menu **Arquivo** , escolha **Novo** > **Projeto** .
 
-1. Na caixa de diálogo **novo projeto** , **selecione C++ Visual** no painel esquerdo e, em seguida, selecione **projeto vazio** no painel central.
+1. Na caixa de diálogo **novo projeto** , selecione **Visual C++** no painel esquerdo e, em seguida, selecione **projeto vazio** no painel central.
 
 1. Na caixa de edição **nome** , insira um nome para seu projeto, como "elástico". Escolha **OK** para criar o projeto vazio.
 
@@ -264,6 +264,6 @@ void ClearScreen(void)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-[Multithreading com C e Win32](multithreading-with-c-and-win32.md)
+[Multithread com C e Win32](multithreading-with-c-and-win32.md)

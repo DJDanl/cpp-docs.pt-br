@@ -1,6 +1,6 @@
 ---
 title: Classe de atividade
-description: A referência da classe C++ Build Insights SDK Activity.
+description: A referência da classe de atividade do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2ea04150aec9c0b2366d97e6e4c15de557a4f47c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce7e4083411f1654064ca4628d10a767c7be1b7f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325254"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923401"
 ---
 # <a name="activity-class"></a>Classe de atividade
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `Activity` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para corresponder a qualquer evento de atividade. Consulte a [tabela de eventos](../event-table.md) para ver todos `Activity` os eventos que podem ser combinados pela classe.
+A `Activity` classe é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a qualquer evento de atividade. Consulte a [tabela de eventos](../event-table.md) para ver todos os eventos que podem ser correspondidos pela `Activity` classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,13 +54,13 @@ public:
 
 ## <a name="remarks"></a>Comentários
 
-Várias funções `Activity` de membros na classe retornam uma contagem de carrapatos. O C++ Build Insights usa o contador de desempenho do Windows como fonte de tiques. Uma contagem de carrapatos deve ser usada com uma freqüência de carrapato para convertê-la em uma unidade de tempo, como segundos. A `TickFrequency` função membro, disponível na classe base [do evento,](event.md) pode ser chamada para obter a freqüência de tique-taque. A página [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) mostra um exemplo de conversão de carrapatos em uma unidade de tempo.
+Várias funções de membro na `Activity` classe retornam uma contagem de tiques. As informações de Build do C++ usam o contador de desempenho do Windows como uma fonte de tiques. Uma contagem em escala deve ser usada com uma frequência de escala para convertê-la em uma unidade de tempo, como segundos. A `TickFrequency` função de membro, disponível na classe base de [evento](event.md) , pode ser chamada para obter a frequência de tiques. A página [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) mostra um exemplo de conversão de tiques em uma unidade de tempo.
 
-Se você não quiser converter carrapatos em unidades `Activity` de tempo você mesmo, a classe fornece funções de membro que retornam valores de tempo em nanossegundos. Use a biblioteca `chrono` C++ padrão para convertê-las em outras unidades de tempo.
+Se você não quiser converter tiques em unidades de tempo por conta própria, a `Activity` classe fornecerá funções de membro que retornam valores de tempo em nanossegundos. Use a biblioteca C++ padrão `chrono` para convertê-las em outras unidades de tempo.
 
 ## <a name="members"></a>Membros
 
-Juntamente com seus membros herdados da `Activity` classe base do [evento,](event.md) a classe contém os seguintes membros:
+Junto com seus membros herdados da classe base de [evento](event.md) , a `Activity` classe contém os seguintes membros:
 
 ### <a name="constructor"></a>Construtor
 
@@ -70,16 +70,16 @@ Juntamente com seus membros herdados da `Activity` classe base do [evento,](even
 
 [CPUTicks](#cpu-ticks)\
 [CPUTime](#cpu-time)\
-[Duração](#duration)\
-[ExclusivoCPUTicks](#exclusive-cpu-ticks)\
-[EXCLUSIVOCPUTime](#exclusive-cpu-time)\
-[Duração exclusiva](#exclusive-duration)\
+[Permanência](#duration)\
+[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
+[ExclusiveCPUTime](#exclusive-cpu-time)\
+[ExclusiveDuration](#exclusive-duration)\
 [ExclusiveDurationTicks](#exclusive-duration-ticks)\
-[Responsabilidade exclusiva do wallclock](#exclusive-wall-clock-time-responsibility)\
-[ExclusivoWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
+[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
 [StartTimestamp](#start-timestamp)\
 [StopTimestamp](#stop-timestamp)\
-[WallClockResponsabilidade](#wall-clock-time-responsibility)\
+[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
 [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
 ## <a name="activity"></a><a name="activity"></a> Atividade
@@ -90,137 +90,137 @@ Activity(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*\
+*circunstância*\
 Qualquer evento de atividade.
 
-## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUTicks
+## <a name="cputicks"></a><a name="cpu-ticks"></a> CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O número de carrapatos da CPU que ocorreram durante esta atividade. Um carrapato da CPU é diferente de um carrapato normal. Os carrapatos da CPU só são contados quando a CPU está executando o código em uma atividade. Os carrapatos da CPU não são contados quando o segmento associado à atividade está dormindo.
+O número de tiques de CPU que ocorreram durante esta atividade. Um tique de CPU é diferente de um tique regular. Os tiques de CPU são contados apenas quando a CPU está executando o código em uma atividade. As tiques de CPU não são contadas quando o thread associado à atividade está em suspensão.
 
-## <a name="cputime"></a><a name="cpu-time"></a>CPUTime
+## <a name="cputime"></a><a name="cpu-time"></a> CPUTime
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A quantidade de tempo que a CPU estava executando código dentro desta atividade. Esse valor pode ser maior do que a duração da atividade se as atividades da criança forem executadas em segmentos separados. O valor é devolvido em nanossegundos.
+O tempo durante o qual a CPU estava executando o código dentro desta atividade. Esse valor pode ser maior do que a duração da atividade se atividades filhas forem executadas em threads separados. O valor é retornado em nanossegundos.
 
-## <a name="duration"></a><a name="duration"></a>Duração
+## <a name="duration"></a><a name="duration"></a> Permanência
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
 A duração da atividade em nanossegundos.
 
-## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>ExclusivoCPUTicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a> ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O mesmo que [CPUTicks,](#cpu-ticks)mas sem incluir os carrapatos da CPU que ocorreram em atividades infantis.
+O mesmo que [CPUTicks](#cpu-ticks), mas não incluindo os tiques de CPU que ocorreram em atividades filhas.
 
-## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>EXCLUSIVOCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a> ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O mesmo que [CPUTime,](#cpu-time)exceto que o tempo da CPU das atividades infantis não está incluído.
+O mesmo que [CPUTime](#cpu-time), exceto que o tempo de CPU das atividades filhas não está incluído.
 
-## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>Duração exclusiva
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a> ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A duração da atividade em nanossegundos, sem incluir o tempo gasto nas atividades infantis.
+A duração da atividade em nanossegundos, não incluindo a quantidade de tempo gasto em atividades filhas.
 
-## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a> ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O número de carrapatos ocorridos nesta atividade, excluindo o número de carrapatos ocorridos nas atividades infantis.
+O número de tiques que ocorreram nessa atividade, excluindo o número de tiques que ocorreram em atividades filhas.
 
-## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>Responsabilidade exclusiva do wallclock
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a> ExclusiveWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O mesmo que [WallClockTimeResponsibility,](#wall-clock-time-responsibility)mas não incluindo a responsabilidade do tempo de parede das atividades infantis.
+O mesmo que [WallClockTimeResponsibility](#wall-clock-time-responsibility), mas não incluindo a responsabilidade do tempo do relógio das atividades filhas.
 
-## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusivoWallClockTimeResponsibilityTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a> ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-O mesmo que [WallClockTimeResponsibilityTicks,](#wall-clock-time-responsibility-ticks)mas não incluindo os carrapatos de responsabilidade do relógio de parede das atividades infantis.
+O mesmo que [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), mas não incluindo os tiques de responsabilidade de tempo do relógio de parede de atividades filhas.
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um valor de tique-taque capturado no momento em que a atividade começou.
+Um valor de tique capturado no momento em que a atividade foi iniciada.
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um valor de tique-taque capturado no momento em que a atividade parou.
+Um valor de tique capturado no momento em que a atividade foi interrompida.
 
-## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>WallClockResponsabilidade
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a> WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-A responsabilidade do relógio de parede desta atividade, em nanossegundos. Para obter mais informações sobre o que significa responsabilidade de tempo de relógio de parede, consulte [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
+A responsabilidade do tempo do relógio desta atividade, em nanossegundos. Para obter mais informações sobre o que significa responsabilidade de tempo do relógio de parede, consulte [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
 
-## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a> WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
 ```
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Uma contagem de carrapatos que representa a contribuição desta atividade para o tempo geral do relógio de parede. Um carrapato de responsabilidade de relógio de parede é diferente de um carrapato normal. Os carrapatos de responsabilidade do relógio de parede levam em conta o paralelismo entre as atividades. Duas atividades paralelas podem ter uma duração de 50 carrapatos, e o mesmo tempo de início e parada. Neste caso, ambos recebem uma responsabilidade de 25 carrapatos.
+Uma contagem em escala que representa a contribuição desta atividade para o tempo geral do relógio de parede. Um tique de responsabilidade de tempo do relógio de parede é diferente de um tique regular. Os tiques de responsabilidade do tempo do relógio do mural levam em conta o paralelismo entre as atividades. Duas atividades paralelas podem ter uma duração de 50 tiques e a mesma hora de início e de término. Nesse caso, ambos recebem uma responsabilidade de tempo do relógio de parede de 25 tiques.
 
 ::: moniker-end

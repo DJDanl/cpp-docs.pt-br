@@ -25,20 +25,20 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: bb301f63bfd1e6839d7893cdc03d61e021409666
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eaaa2c7428809c05532642b0f9ac53146c6f01a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500074"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924289"
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Este tópico aplica-se aos projetos do Visual Studio para Windows. Para projetos do Linux, consulte [referência de página de propriedades do Linux C++](../../linux/prop-pages-linux.md). Para projetos do CMake, consulte [projetos do cmake no Visual Studio](../cmake-projects-in-visual-studio.md). Para projetos do Android, consulte [Propriedades gerais do projeto (Android C++)](../../cross-platform/general-android-prop-page.md). Para projetos do makefile do Android, consulte [Propriedades gerais do projeto (Android C++ makefile)](../../cross-platform/general-makefile-android-prop-page.md)
 
-Quando você clica com o botão direito do mouse em um nó do projeto em Gerenciador de Soluções e seleciona **Propriedades**, a página de propriedades **geral** no nó **Propriedades de configuração** no painel esquerdo exibe estas propriedades:
+Quando você clica com o botão direito do mouse em um nó do projeto em Gerenciador de Soluções e seleciona **Propriedades** , a página de propriedades **geral** no nó **Propriedades de configuração** no painel esquerdo exibe estas propriedades:
 
 - **Diretório de saída**
 
@@ -86,7 +86,7 @@ Quando você clica com o botão direito do mouse em um nó do projeto em Gerenci
 
    Para a plataforma de destino do Windows, isso especifica a versão do SDK do Windows necessária para o projeto. Quando você instala uma Carga de Trabalho do C++ usando o Instalador do Visual Studio, as partes necessárias do SDK do Windows também são instaladas. Caso você tenha outras versões do SDK do Windows no computador, cada versão das SDK Tools instalada será exibida na lista suspensa.
 
-   Para ter o Windows 7 ou o Windows Vista como destino, use o valor **8.1**, pois o SDK do Windows 8.1 é compatível com versões anteriores dessas plataformas. Além disso, você deve definir o valor apropriado como **_WIN32_WINNT** em targetver.h. Para o Windows 7, isso é 0x0601. Confira [Modificando WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+   Para ter o Windows 7 ou o Windows Vista como destino, use o valor **8.1** , pois o SDK do Windows 8.1 é compatível com versões anteriores dessas plataformas. Além disso, você deve definir o valor apropriado como **_WIN32_WINNT** em targetver.h. Para o Windows 7, isso é 0x0601. Confira [Modificando WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
    Instale o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, confira [Configurando programas para o Windows XP](../configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
@@ -100,9 +100,9 @@ Quando você clica com o botão direito do mouse em um nó do projeto em Gerenci
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão direito do mouse em um nó do projeto em **Gerenciador de soluções**e seleciona **Propriedades**, a página de propriedades **geral** no nó **Propriedades de configuração** no painel esquerdo exibe duas seções de propriedades:
+No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão direito do mouse em um nó do projeto em **Gerenciador de soluções** e seleciona **Propriedades** , a página de propriedades **geral** no nó **Propriedades de configuração** no painel esquerdo exibe duas seções de propriedades:
 
 - Geral
 
@@ -112,7 +112,7 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
 - **Plataforma de Destino**
 
-   Especifica a plataforma na qual o projeto será executado. Por exemplo, Windows, Android ou iOS. O valor **Windows 10** significa que o projeto é direcionado à Plataforma Universal do Windows. Caso você tenha como destino versões anteriores do Windows, a versão não será listada e o valor neste campo será exibido apenas como **Windows**. Esse é um campo somente leitura definido quando você cria um projeto.
+   Especifica a plataforma na qual o projeto será executado. Por exemplo, Windows, Android ou iOS. O valor **Windows 10** significa que o projeto é direcionado à Plataforma Universal do Windows. Caso você tenha como destino versões anteriores do Windows, a versão não será listada e o valor neste campo será exibido apenas como **Windows** . Esse é um campo somente leitura definido quando você cria um projeto.
 
 - **Versão da plataforma de destino (Visual Studio 2015)**
 
@@ -124,7 +124,7 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
    Para a plataforma de destino do Windows, isso especifica a versão do SDK do Windows necessária para o projeto. Quando você instala uma Carga de Trabalho do C++ usando o Instalador do Visual Studio, as partes necessárias do SDK do Windows também são instaladas. Caso você tenha outras versões do SDK do Windows no computador, cada versão das SDK Tools instalada será exibida na lista suspensa.
 
-   Para ter o Windows 7 ou o Windows Vista como destino, use o valor **8.1**, pois o SDK do Windows 8.1 é compatível com versões anteriores dessas plataformas. Além disso, você deve definir o valor apropriado como **_WIN32_WINNT** em targetver.h. Para o Windows 7, isso é 0x0601. Confira [Modificando WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+   Para ter o Windows 7 ou o Windows Vista como destino, use o valor **8.1** , pois o SDK do Windows 8.1 é compatível com versões anteriores dessas plataformas. Além disso, você deve definir o valor apropriado como **_WIN32_WINNT** em targetver.h. Para o Windows 7, isso é 0x0601. Confira [Modificando WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
    Instale o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio para usar a versão atual das bibliotecas para compilar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como obter e usar esse conjunto de ferramentas da plataforma, confira [Configurando programas para o Windows XP](../configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
@@ -150,7 +150,7 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
 - **Extensões a serem excluídas na limpeza**
 
-   A opção **Limpar** (menu **Build**) exclui arquivos do diretório intermediário no qual uma configuração do projeto é compilada. Arquivos com extensões especificadas com essa propriedade serão excluídos quando a opção **Limpar** for executada ou quando você executar uma recompilação. Além dos arquivos dessas extensões no diretório intermediário, o sistema de build também excluirá todas as saídas de build conhecidas, independentemente de sua localização (incluindo saídas intermediárias, como arquivos .obj). Observe que você pode especificar caracteres curinga.
+   A opção **Limpar** (menu **Build** ) exclui arquivos do diretório intermediário no qual uma configuração do projeto é compilada. Arquivos com extensões especificadas com essa propriedade serão excluídos quando a opção **Limpar** for executada ou quando você executar uma recompilação. Além dos arquivos dessas extensões no diretório intermediário, o sistema de build também excluirá todas as saídas de build conhecidas, independentemente de sua localização (incluindo saídas intermediárias, como arquivos .obj). Observe que você pode especificar caracteres curinga.
 
    Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
@@ -170,7 +170,7 @@ No Visual Studio 2015 e no Visual Studio 2017, quando você clica com o botão d
 
 ## <a name="project-defaults"></a>Padrões de Projeto
 
-As propriedades na seção Padrão de Projeto representam as propriedades padrão que podem ser modificadas. A definição dessas propriedades pode ser encontrada nos arquivos .props no *Diretório de Instalação*\VC\VCProjectDefaults.
+As propriedades na seção Padrão de Projeto representam as propriedades padrão que podem ser modificadas. A definição dessas propriedades pode ser encontrada nos arquivos .props no *Diretório de Instalação* \VC\VCProjectDefaults.
 
 - **Tipo de Configuração**
 
@@ -230,6 +230,6 @@ As propriedades na seção Padrão de Projeto representam as propriedades padrã
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 [Referência de página de propriedades do projeto C++](property-pages-visual-cpp.md)

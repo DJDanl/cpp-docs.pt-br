@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 617a82055f406c130d74a2823c2cf00aa1beef36
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041816"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923613"
 ---
 # <a name="event_data-structure"></a>Estrutura de EVENT_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 A `EVENT_DATA` estrutura descreve um evento recebido de uma sessão de análise ou de reregistro em log. Essas sessões são iniciadas chamando as funções [Analyze](../functions/analyze.md), [analyza](../functions/analyze-a.md), [AnalyzeW](../functions/analyze-w.md), [relog](../functions/relog.md), [RelogA](../functions/relog-a.md)ou [RelogW](../functions/relog-w.md) .
 
@@ -63,13 +63,13 @@ typedef struct EVENT_DATA_TAG
 | `EventId` | Um número que identifica o evento. Para obter uma lista de identificadores de eventos, consulte [EVENT_ID](event-id-enum.md). |
 | `EventInstanceId` | Um número que identifica exclusivamente o evento atual dentro de um rastreamento. Esse valor não é alterado ao analisar ou refazer o log do mesmo rastreamento várias vezes. Use esse campo para identificar o mesmo evento em várias análises ou o novo registro em log passa pelo mesmo rastreamento. |
 | `TickFrequency` | O número de tiques por segundo a serem usados ao avaliar uma duração medida em tiques. |
-| `StartTimestamp` | Quando o evento é uma *atividade*, esse campo é definido como um valor de tique capturado no momento em que a atividade foi iniciada. Se esse evento for um *evento simples*, esse campo será definido como um valor de tique capturado no momento em que o evento ocorreu. |
-| `StopTimestamp` | Quando o evento é uma *atividade*, esse campo é definido como um valor de tique capturado no momento em que a atividade foi interrompida. Se o evento de parada ainda não tiver sido recebido para essa atividade, esse campo será definido como zero. Se esse evento for um *evento simples*, esse campo será definido como zero. |
-| `ExclusiveDurationTicks` | Se esse evento for uma *atividade*, esse campo será definido como o número de tiques que ocorreram diretamente nesta atividade. O número de tiques que ocorreram em uma atividade filho são excluídos. Esse campo é definido como zero para *eventos simples*. |
-| `CPUTicks` | Se esse evento for uma *atividade*, esse campo será definido como o número de tiques de CPU que ocorreram durante essa atividade. Um tique de CPU é diferente de um tique regular. Os tiques de CPU são contados apenas quando a CPU está executando o código em uma atividade. As tiques de CPU não são contadas quando o thread associado à atividade está em suspensão. Esse campo é definido como zero para *eventos simples*. |
-| `ExclusiveCPUTicks` | Esse campo tem o mesmo significado que o `CPUTicks` , exceto pelo fato de que ele não inclui tiques de CPU que ocorreram em atividades filhas. Esse campo é definido como zero para *eventos simples*. |
-| `WallClockTimeResponsibilityTicks` | Se esse evento for uma *atividade*, esse campo será definido como uma contagem em escala que representa a contribuição desta atividade para o tempo geral do relógio de parede. Um tique de responsabilidade de tempo do relógio de parede é diferente de um tique regular. Os tiques de responsabilidade do tempo do relógio do mural levam em conta o paralelismo entre as atividades. Por exemplo, duas atividades paralelas podem ter uma duração de 50 tiques e a mesma hora de início e de término. Nesse caso, as duas serão atribuídas a uma responsabilidade de tempo do relógio de uma parede de 25 tiques. Esse campo é definido como zero para *eventos simples*. |
-| `ExclusiveWallClockTimeResponsibilityTicks` | Esse campo tem o mesmo significado `WallClockTimeResponsibilityTicks` que, exceto pelo fato de que ele não inclui os tiques de responsabilidade de tempo de relógio de parede das atividades de filhos. Esse campo é definido como zero para *eventos simples*. |
+| `StartTimestamp` | Quando o evento é uma *atividade* , esse campo é definido como um valor de tique capturado no momento em que a atividade foi iniciada. Se esse evento for um *evento simples* , esse campo será definido como um valor de tique capturado no momento em que o evento ocorreu. |
+| `StopTimestamp` | Quando o evento é uma *atividade* , esse campo é definido como um valor de tique capturado no momento em que a atividade foi interrompida. Se o evento de parada ainda não tiver sido recebido para essa atividade, esse campo será definido como zero. Se esse evento for um *evento simples* , esse campo será definido como zero. |
+| `ExclusiveDurationTicks` | Se esse evento for uma *atividade* , esse campo será definido como o número de tiques que ocorreram diretamente nesta atividade. O número de tiques que ocorreram em uma atividade filho são excluídos. Esse campo é definido como zero para *eventos simples* . |
+| `CPUTicks` | Se esse evento for uma *atividade* , esse campo será definido como o número de tiques de CPU que ocorreram durante essa atividade. Um tique de CPU é diferente de um tique regular. Os tiques de CPU são contados apenas quando a CPU está executando o código em uma atividade. As tiques de CPU não são contadas quando o thread associado à atividade está em suspensão. Esse campo é definido como zero para *eventos simples* . |
+| `ExclusiveCPUTicks` | Esse campo tem o mesmo significado que o `CPUTicks` , exceto pelo fato de que ele não inclui tiques de CPU que ocorreram em atividades filhas. Esse campo é definido como zero para *eventos simples* . |
+| `WallClockTimeResponsibilityTicks` | Se esse evento for uma *atividade* , esse campo será definido como uma contagem em escala que representa a contribuição desta atividade para o tempo geral do relógio de parede. Um tique de responsabilidade de tempo do relógio de parede é diferente de um tique regular. Os tiques de responsabilidade do tempo do relógio do mural levam em conta o paralelismo entre as atividades. Por exemplo, duas atividades paralelas podem ter uma duração de 50 tiques e a mesma hora de início e de término. Nesse caso, as duas serão atribuídas a uma responsabilidade de tempo do relógio de uma parede de 25 tiques. Esse campo é definido como zero para *eventos simples* . |
+| `ExclusiveWallClockTimeResponsibilityTicks` | Esse campo tem o mesmo significado `WallClockTimeResponsibilityTicks` que, exceto pelo fato de que ele não inclui os tiques de responsabilidade de tempo de relógio de parede das atividades de filhos. Esse campo é definido como zero para *eventos simples* . |
 | `Data` | Aponta para dados adicionais armazenados no evento. O tipo de dados apontado é diferente, dependendo do `EventId` campo. |
 | `ProcessId` | O identificador do processo no qual o evento ocorreu. |
 | `ThreadId` | O identificador para o thread no qual o evento ocorreu. |
@@ -86,7 +86,7 @@ O valor do `EVENT_DATA` `Data` campo depende do valor de seu `EventId` campo. O 
 | `EventId` valor | Tipo apontado por `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
-| `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
+| `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
 | `EVENT_ID_COMPILER` | [INVOCATION_DATA](invocation-data-struct.md) |
 | `EVENT_ID_ENVIRONMENT_VARIABLE` | [NAME_VALUE_PAIR_DATA](name-value-pair-data-struct.md) |
 | `EVENT_ID_EXECUTABLE_IMAGE_OUTPUT` | [FILE_DATA](file-data-struct.md) |

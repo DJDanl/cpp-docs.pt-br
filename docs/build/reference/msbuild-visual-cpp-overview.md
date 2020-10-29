@@ -4,12 +4,12 @@ description: Os arquivos de suporte, as propriedades e os destinos usados pelo M
 ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: e99b9a428d9c6149debc06e1dfab7a69c3590196
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099674"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924393"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Recursos internos do MSBuild para projetos C++
 
@@ -21,7 +21,7 @@ A maioria dos destinos e das propriedades nos arquivos de suporte existe somente
 
 Por padrão, os arquivos de suporte principais do Visual Studio estão localizados nos diretórios a seguir. Essas informações são específicas da versão.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
@@ -39,7 +39,7 @@ Por padrão, os arquivos de suporte principais do Visual Studio estão localizad
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 

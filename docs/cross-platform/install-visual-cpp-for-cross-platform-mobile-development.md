@@ -2,12 +2,12 @@
 title: Instalar desenvolvimento de tecnologia móvel multiplataforma com C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b9a6b78450969f5228ccf16cc7b0cff02a4d3b1e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041946"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924002"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Instalar desenvolvimento de tecnologia móvel multiplataforma com C++
 
@@ -17,7 +17,7 @@ Este artigo descreve como instalar as ferramentas e o software de terceiros nece
 
 ## <a name="requirements"></a>Requisitos
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 - Para obter os requisitos de instalação, consulte [requisitos de sistema da família de produtos do Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs).
 
@@ -25,7 +25,7 @@ Este artigo descreve como instalar as ferramentas e o software de terceiros nece
    > Se você estiver usando o Windows 7 ou o Windows Server 2008 R2, poderá desenvolver código para aplicativos da área de trabalho do Windows, aplicativos e bibliotecas de atividades nativas do Android e aplicativos e bibliotecas de código para iOS, mas não para aplicativos da Windows Store ou UWP.
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 - Para obter os requisitos de instalação, consulte [requisitos de sistema da família de produtos do Visual Studio](/visualstudio/releases/2019/system-requirements).
 
@@ -60,17 +60,17 @@ O Instalador do Visual Studio inclui um **desenvolvimento móvel com carga de** 
 - As ferramentas de desenvolvimento c++ do iOS são necessárias para criar código C++ direcionado para a plataforma iOS.
 
 > [!NOTE]
-> Se estiver usando o Visual Studio 2015, confira [Instalar Visual C++ para Desenvolvimento Móvel Multiplataforma (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
+> Se estiver usando o Visual Studio 2015, confira [Instalar Visual C++ para Desenvolvimento Móvel Multiplataforma (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=msvc-140&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Instalação da carga de trabalho Desenvolvimento Mobile com C++
 
-1. Execute o **Instalador do Visual Studio** pelo menu **Iniciar**.
+1. Execute o **Instalador do Visual Studio** pelo menu **Iniciar** .
 
 1. Se você já tiver instalado o Visual Studio, escolha o botão **Modificar** para a versão instalada do Visual Studio que você deseja modificar. Caso contrário, escolha **Instalar** para instalar o Visual Studio.
 
-1. Com a guia **Cargas de Trabalho** selecionada, role a tela para baixo e selecione a carga **Desenvolvimento Mobile com C++** no Instalador do Visual Studio. Após a seleção dessa carga de trabalho, outros componentes necessários para desenvolvimento em C++ também serão selecionados. Você também pode escolher outras cargas de trabalho e componentes individuais para instalação simultânea. Para compilar o código de plataforma cruzada que também é direcionado ao UWP, selecione a carga de trabalho **Desenvolvimento na Plataforma Universal do Windows**.
+1. Com a guia **Cargas de Trabalho** selecionada, role a tela para baixo e selecione a carga **Desenvolvimento Mobile com C++** no Instalador do Visual Studio. Após a seleção dessa carga de trabalho, outros componentes necessários para desenvolvimento em C++ também serão selecionados. Você também pode escolher outras cargas de trabalho e componentes individuais para instalação simultânea. Para compilar o código de plataforma cruzada que também é direcionado ao UWP, selecione a carga de trabalho **Desenvolvimento na Plataforma Universal do Windows** .
 
-1. No painel **Detalhes da instalação**, expanda **Desenvolvimento Mobile com C++**. Na seção **Opcional**, você pode escolher outras versões do NDK, o Android Emulator do Google, o Hardware Accelerated Execution Manager da Intel e a ferramenta de aceleração de compilação IncrediBuild.
+1. No painel **Detalhes da instalação** , expanda **Desenvolvimento Mobile com C++** . Na seção **Opcional** , você pode escolher outras versões do NDK, o Android Emulator do Google, o Hardware Accelerated Execution Manager da Intel e a ferramenta de aceleração de compilação IncrediBuild.
 
 1. Por padrão, um ou mais componentes de instalação do SDK do Android estão incluídos na carga de trabalho. Há outras versões do SDK do Android disponíveis. Para adicionar uma à sua instalação, escolha a guia **Componentes Individuais** e, em seguida, role para baixo até a seção **SDKs, bibliotecas e estruturas** para fazer sua seleção.
 
@@ -99,17 +99,17 @@ Na maioria dos casos, o Visual Studio pode detectar as configurações para o so
 
 ### <a name="to-set-the-paths-for-third-party-tools"></a>Para definir os caminhos para as ferramentas de terceiros
 
-1. Na barra de menus do Visual Studio, selecione **ferramentas**  >  **Opções**.
+1. Na barra de menus do Visual Studio, selecione **ferramentas**  >  **Opções** .
 
-1. Na caixa de diálogo **Opções**, selecione **Multiplataforma** > **C++** > **Android**.
+1. Na caixa de diálogo **Opções** , selecione **Multiplataforma** > **C++** > **Android** .
 
    ![Opções de caminho de ferramenta do Android](../cross-platform/media/cppmdd-options-android.png "Opções de caminho de ferramenta do Android")
 
-1. Para alterar o caminho usado por uma ferramenta, marque a caixa de seleção ao lado do caminho e edite o caminho da pasta na caixa de texto. Você também pode usar o botão Procurar (**... **) para abrir uma caixa de diálogo **Selecionar local** para escolher a pasta.
+1. Para alterar o caminho usado por uma ferramenta, marque a caixa de seleção ao lado do caminho e edite o caminho da pasta na caixa de texto. Você também pode usar o botão Procurar ( **...** ) para abrir uma caixa de diálogo **Selecionar local** para escolher a pasta.
 
 1. Escolha **OK** para salvar os locais de pasta da ferramenta personalizada.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Instalar e configurar ferramentas para compilar usando o iOS](install-and-configure-tools-to-build-using-ios.md)\
 [Visual C++ para desenvolvimento móvel multiplataforma](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

@@ -2,22 +2,22 @@
 title: Propriedades gerais (Projeto do Linux C++ Makefile) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446156"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924666"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Propriedades do projeto makefile (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Esta é uma lista parcial das propriedades disponíveis em um projeto do Linux Makefile. Muitas propriedades de projeto makefile são idênticas às propriedades do projeto de Aplicativo de Console C++ do Linux.
 
@@ -28,7 +28,7 @@ Esta é uma lista parcial das propriedades disponíveis em um projeto do Linux M
 | Diretório de saída | Especifica um caminho relativo para o diretório de arquivo de saída e pode incluir variáveis de ambiente. |
 | Diretório intermediário | Especifica um caminho relativo para o diretório de arquivo intermediário e pode incluir variáveis de ambiente. |
 | Arquivo de log de build | Especifica o arquivo de log de build para gravação quando o registro em log de build está habilitado. |
-| Tipo de Configuração | Especifica o tipo de saída gerado por essa configuração. | **Biblioteca dinâmica (.so)** – Biblioteca dinâmica (.so)<br>**Biblioteca estática (.a)** - Biblioteca Estática (.a)<br>**Aplicativo (.out)** – Aplicativo (.out)<br>**Makefile** – makefile<br> |
+| Tipo de Configuração | Especifica o tipo de saída gerado por essa configuração. | **Biblioteca dinâmica (.so)** – Biblioteca dinâmica (.so)<br>**Biblioteca estática (. a)** -biblioteca estática (. a)<br>**Aplicativo (.out)** – Aplicativo (.out)<br>**Makefile** – makefile<br> |
 | Computador de Build Remoto | O computador ou dispositivo de destino a ser usado para build, implantação e depuração remotos. |
 | Diretório Raiz de Build Remoto | Especifica um caminho para um diretório no computador ou dispositivo remoto. |
 | Diretório de Projeto de Build Remoto | Especifica um caminho para um diretório no computador ou dispositivo remoto para o projeto. |
@@ -47,7 +47,7 @@ Consulta [Copiar propriedades do projeto de origem (Linux C++)](copy-sources-pro
 
 | Propriedade | Descrição |
 |--|--|
-| Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar. |
+| Linha de comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar. |
 | Descrição | Especifica uma descrição para a ferramenta de evento de pré-build exibir. |
 | Uso no build | Especifica se esse evento de build é excluído da build para a configuração atual. |
 | Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem copiadas para o sistema remoto. Opcionalmente, a lista pode ser fornecida como um local para pares de mapeamento remoto usando uma sintaxe como esta: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, em que um arquivo local pode ser copiado para o local remoto especificado no sistema remoto. |
@@ -56,7 +56,7 @@ Consulta [Copiar propriedades do projeto de origem (Linux C++)](copy-sources-pro
 
 | Propriedade | Descrição |
 |--|--|
-| Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar. |
+| Linha de comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar. |
 | Descrição | Especifica uma descrição para a ferramenta de evento de pós-build exibir. |
 | Uso no build | Especifica se esse evento de build é excluído da build para a configuração atual. |
 | Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem copiadas para o sistema remoto. Opcionalmente, a lista pode ser fornecida como um local para pares de mapeamento remoto usando uma sintaxe como esta: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2, em que um arquivo local pode ser copiado para o local remoto especificado no sistema remoto. |
@@ -65,7 +65,7 @@ Consulta [Copiar propriedades do projeto de origem (Linux C++)](copy-sources-pro
 
 | Propriedade | Descrição |
 |--|--|
-| Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar no sistema remoto. |
+| Linha de comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar no sistema remoto. |
 | Descrição | Especifica uma descrição para a ferramenta de evento de pré-build exibir. |
 | Uso no build | Especifica se esse evento de build é excluído da build para a configuração atual. |
 | Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem copiadas do sistema remoto. Opcionalmente, a lista pode ser fornecida como um remoto para pares de mapeamento local usando uma sintaxe como essa: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2, na qual um arquivo remoto pode ser copiado para um local especificado no computador local. |
@@ -74,7 +74,7 @@ Consulta [Copiar propriedades do projeto de origem (Linux C++)](copy-sources-pro
 
 | Propriedade | Descrição |
 |--|--|
-| Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar no sistema remoto. |
+| Linha de comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar no sistema remoto. |
 | Descrição | Especifica uma descrição para a ferramenta de evento de pós-build exibir. |
 | Uso no build | Especifica se esse evento de build é excluído da build para a configuração atual. |
 | Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem copiadas do sistema remoto. Opcionalmente, a lista pode ser fornecida como um remoto para pares de mapeamento local usando uma sintaxe como essa: fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2, na qual um arquivo remoto pode ser copiado para um local especificado no computador local. |
@@ -108,6 +108,6 @@ As propriedades do IntelliSense podem ser definidas no nível do projeto ou de a
 | Linha de Comando de Build | Especifica a linha de comando a ser executada para o comando “Build”. Isso é executado no sistema remoto. |
 | Linha de Comando de Rebuild All | Especifica a linha de comando a ser executada para o comando “Rebuild All”. Isso é executado no sistema remoto. |
 | Linha de comando de Clean | Especifica a linha de comando a ser executada para o comando “Clean”. Isso é executado no sistema remoto. |
-| outputs | Especifica as saídas geradas pelo build remoto no sistema remoto. |
+| Saídas | Especifica as saídas geradas pelo build remoto no sistema remoto. |
 
 ::: moniker-end

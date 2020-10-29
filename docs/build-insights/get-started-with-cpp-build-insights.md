@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: c4ebbb280a5cccaa35b5efc7f90e9b570600c47b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759219"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923631"
 ---
 # <a name="get-started-with-c-build-insights"></a>Introdução ao C++ Build Insights
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 As ferramentas de compilação do C++ estão disponíveis no Visual Studio 2019. Para ver a documentação dessa versão, defina o controle do seletor de **versão** do Visual Studio para este artigo como Visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 As informações de Build do C++ são uma coleção de ferramentas que fornece maior visibilidade na cadeia de ferramentas do Microsoft Visual C++ (MSVC). As ferramentas coletam dados sobre suas compilações do C++ e as apresentam em um formato que pode ajudá-lo a responder a perguntas comuns, como:
 
@@ -31,7 +31,7 @@ As informações de Build do C++ são uma coleção de ferramentas que fornece m
 
 Os principais componentes dessa tecnologia são:
 
-- *vcperf. exe*, um utilitário de linha de comando que você pode usar para coletar rastreamentos para suas compilações,
+- *vcperf.exe* , um utilitário de linha de comando que você pode usar para coletar rastreamentos para suas compilações,
 - uma extensão do Windows Performance Analyzer (WPA) que permite exibir rastreamentos de compilação no WPA e
 - o SDK do Application insights do C++, um Software Development Kit para criar suas próprias ferramentas que consomem dados de informações de compilação do C++.
 

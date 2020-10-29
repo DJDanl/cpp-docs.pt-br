@@ -1,6 +1,6 @@
 ---
 title: Classe OptLBR
-description: A referência de classe C++ Build Insights SDK OptLBR.
+description: A referência de classe do SDK do OptLBR de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4cbd87134741d6fc09521f94bfdfbc099cb426a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5505e50b0acd961a1ff745eee36419bbaa4bd601
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324463"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923047"
 ---
 # <a name="optlbr-class"></a>Classe OptLBR
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `OptLBR` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com um evento [OPT_LBR.](../event-table.md#opt-lbr)
+A `OptLBR` classe é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a um evento de [OPT_LBR](../event-table.md#opt-lbr) .
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membros
 
-Juntamente com os membros herdados de `OptLBR` sua classe base [de atividade,](activity.md) a classe contém os seguintes membros:
+Junto com os membros herdados de sua classe base de [atividade](activity.md) , a `OptLBR` classe contém os seguintes membros:
 
 ### <a name="constructors"></a>Construtores
 
 [OptLBR](#opt-lbr)
 
-## <a name="optlbr"></a><a name="opt-lbr"></a>OptLBR
+## <a name="optlbr"></a><a name="opt-lbr"></a> OptLBR
 
 ```cpp
 OptLBR(const RawEvent& event);
@@ -53,7 +53,7 @@ OptLBR(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*\
-Um evento [OPT_LBR.](../event-table.md#opt-lbr)
+*circunstância*\
+Um evento [OPT_LBR](../event-table.md#opt-lbr) .
 
 ::: moniker-end

@@ -10,37 +10,37 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: 8d0f53ed13143ed7ff5c507df73937a86c07b5b8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725689"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924204"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (definir padrão de sinalizadores de carregamento dependente)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 A opção **/DEPENDENTLOADFLAG** requer o Visual Studio 2017 ou posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Define os sinalizadores de carga padrão usados quando o sistema operacional resolve as importações estaticamente vinculadas de um módulo.
 
-## <a name="syntax"></a>Sintaxe
+## <a name="syntax"></a>Syntax
 
-> **/DEPENDENTLOADFLAG**[ __:__ *load_flags*]
+> **/DEPENDENTLOADFLAG** [ __:__*load_flags* ]
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Argumentos
 
 *load_flags*<br/>
-Um valor inteiro opcional que especifica os sinalizadores de carga a serem aplicados ao resolver dependências de importação vinculadas estaticamente do módulo. O valor padrão é 0. Para obter uma lista de valores de sinalizador com suporte, consulte as entradas de `LOAD_LIBRARY_SEARCH_*` em [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
+Um valor inteiro opcional que especifica os sinalizadores de carga a serem aplicados ao resolver dependências de importação vinculadas estaticamente do módulo. O valor padrão é 0. Para obter uma lista de valores de sinalizador com suporte, consulte as `LOAD_LIBRARY_SEARCH_*` entradas em [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ## <a name="remarks"></a>Comentários
 
-Quando o sistema operacional resolve as importações estaticamente vinculadas de um módulo, ele usa a ordem de [pesquisa padrão](/windows/win32/dlls/dynamic-link-library-search-order). Use a opção **/DEPENDENTLOADFLAG** para especificar um valor *load_flags* que altera o caminho de pesquisa usado para resolver essas importações. Em sistemas operacionais com suporte, ele altera a ordem de pesquisa de resolução de importação estática, semelhante ao que o [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) faz ao usar parâmetros de `LOAD_LIBRARY_SEARCH`. Para obter informações sobre a ordem de pesquisa definida por *load_flags*, consulte [ordem de pesquisa usando sinalizadores de LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
+Quando o sistema operacional resolve as importações estaticamente vinculadas de um módulo, ele usa a ordem de [pesquisa padrão](/windows/win32/dlls/dynamic-link-library-search-order). Use a opção **/DEPENDENTLOADFLAG** para especificar um valor *load_flags* que altera o caminho de pesquisa usado para resolver essas importações. Em sistemas operacionais com suporte, ele altera a ordem de pesquisa de resolução de importação estática, semelhante ao que o [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) faz ao usar `LOAD_LIBRARY_SEARCH` parâmetros. Para obter informações sobre a ordem de pesquisa definida por *load_flags* , consulte [ordem de pesquisa usando sinalizadores de LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
 
 Esse sinalizador pode ser usado para tornar um vetor de [ataque de planta de dll](/windows/win32/dlls/dynamic-link-library-security) mais difícil. Por exemplo, considere um aplicativo que tem uma DLL vinculada estaticamente:
 
@@ -48,7 +48,7 @@ Esse sinalizador pode ser usado para tornar um vetor de [ataque de planta de dll
 
 - Se a DLL estiver ausente nos diretórios Application,%Windows%\System32 e% Windows%, a resolução de importação se enquadrará no diretório atual. Um invasor pode implantar uma DLL lá.
 
-Em ambos os casos, se você especificar a opção de link `/DEPENDENTLOADFLAG:0x800` (o valor do sinalizador `LOAD_LIBRARY_SEARCH_SYSTEM32`), o caminho de pesquisa do módulo será limitado ao diretório%Windows%\System32. Ele oferece alguma proteção contra a planta de ataques em outros diretórios. Para obter mais informações, consulte [segurança da biblioteca de vínculo dinâmico](/windows/win32/dlls/dynamic-link-library-security).
+Em ambos os casos, se você especificar a opção de link `/DEPENDENTLOADFLAG:0x800` (o valor do sinalizador `LOAD_LIBRARY_SEARCH_SYSTEM32` ), o caminho de pesquisa do módulo será limitado ao diretório%Windows%\System32 Ele oferece alguma proteção contra a planta de ataques em outros diretórios. Para obter mais informações, consulte [segurança da biblioteca de vínculo dinâmico](/windows/win32/dlls/dynamic-link-library-security).
 
 Para ver o valor definido pela opção **/DEPENDENTLOADFLAG** em qualquer DLL, use o comando [DUMPBIN](dumpbin-reference.md) com a opção [/LOADCONFIG](loadconfig.md) .
 
@@ -58,9 +58,9 @@ A opção **/DEPENDENTLOADFLAG** é nova no Visual Studio 2017. Ele se aplica so
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Definir as propriedades de build e do compilador do C++ no Visual Studio](../working-with-project-properties.md).
 
-1. Selecione a **página de propriedades de** linha de **comando** do > **vinculador > conexão** .
+1. Selecione a **Configuration Properties** > página de propriedade da linha de comando do **vinculador** de propriedades de configuração > **Command Line** .
 
-1. Insira a opção em **Opções adicionais**.
+1. Insira a opção em **Opções adicionais** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
@@ -69,7 +69,7 @@ A opção **/DEPENDENTLOADFLAG** é nova no Visual Studio 2017. Ele se aplica so
 ## <a name="see-also"></a>Veja também
 
 - [Referência de vinculador MSVC](linking.md)
-- [Opções do vinculador MSVC](linker-options.md)
+- [Opções de vinculador MSVC](linker-options.md)
 - [Vincular um executável a uma DLL implicitamente](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [Determinar qual método de vinculação usar](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)

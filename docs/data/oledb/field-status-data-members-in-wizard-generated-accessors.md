@@ -5,26 +5,26 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 61ee867f664b6b0d885e35f6d58840b37ce322b9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 476c91f55071f6d1c7f243257273a32798813cae
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210906"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924634"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 O Assistente de Consumidor OLE DB da ATL não está disponível no Visual Studio 2019 e posteriores. Ainda é possível adicionar a funcionalidade manualmente. Saiba mais em [Criação de um consumidor sem usar um assistente](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Quando você usa o **Assistente de Consumidor OLE DB do ATL** para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário de cada campo que você especifica no seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondente ao seu respectivo campo.
 
-Por exemplo, para um membro de dados *m_OwnerID*, o assistente gera um membro de dados adicional para o status de campo (*dwOwnerIDStatus*) e outro para o tamanho do campo (*dwOwnerIDLength*). Ele também gera um mapa de coluna com entradas COLUMN_ENTRY_LENGTH_STATUS.
+Por exemplo, para um membro de dados *m_OwnerID* , o assistente gera um membro de dados adicional para o status de campo ( *dwOwnerIDStatus* ) e outro para o tamanho do campo ( *dwOwnerIDLength* ). Ele também gera um mapa de coluna com entradas COLUMN_ENTRY_LENGTH_STATUS.
 
 Isso é mostrado no código a seguir:
 
@@ -114,6 +114,6 @@ Quando você usa `CDynamicAccessor`, o comprimento e o status são associados au
 
 ::: moniker-end
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-[Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Trabalhando com modelos de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

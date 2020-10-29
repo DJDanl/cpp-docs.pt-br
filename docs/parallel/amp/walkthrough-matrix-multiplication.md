@@ -2,12 +2,12 @@
 title: 'Instruções passo a passo: multiplicação de matrizes'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 6387e68304c7b1dbf0531729b7b73b519f40d159
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d45e731cefe51a815424aa941362dce8ceaa4500
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215862"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924347"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Instruções passo a passo: multiplicação de matrizes
 
@@ -27,41 +27,41 @@ Antes de começar:
 
 As instruções para criar um novo projeto variam de acordo com a versão do Visual Studio instalada. Para ver a documentação da sua versão preferida do Visual Studio, use o controle seletor de **versão** . Ele é encontrado na parte superior do Sumário nesta página.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-the-project-in-visual-studio-2019"></a>Para criar o projeto no Visual Studio 2019
 
-1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto**.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Criar um novo projeto** .
 
-1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++**, **Plataforma** como **Windows** e **Tipo de projeto** como **Console**.
+1. Na parte superior da caixa de diálogo, defina **Linguagem** como **C++** , **Plataforma** como **Windows** e **Tipo de projeto** como **Console** .
 
-1. Na lista filtrada de tipos de projeto, escolha **projeto vazio** e, em seguida, escolha **Avançar**. Na página seguinte, digite *MatrixMultiply* na caixa **nome** para especificar um nome para o projeto e especifique o local do projeto, se desejado.
+1. Na lista filtrada de tipos de projeto, escolha **projeto vazio** e, em seguida, escolha **Avançar** . Na página seguinte, digite *MatrixMultiply* na caixa **nome** para especificar um nome para o projeto e especifique o local do projeto, se desejado.
 
    ![Novo aplicativo de console](../../build/media/mathclient-project-name-2019.png "Novo aplicativo de console")
 
 1. Escolha o botão **Criar** para criar o projeto do cliente.
 
-1. No **Gerenciador de soluções**, abra o menu de atalho para **arquivos de origem**e escolha **Adicionar** > **novo item**.
+1. No **Gerenciador de soluções** , abra o menu de atalho para **arquivos de origem** e escolha **Adicionar** > **novo item** .
 
-1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**, insira *MatrixMultiply. cpp* na caixa **nome** e, em seguida, escolha o botão **Adicionar** .
+1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)** , insira *MatrixMultiply. cpp* na caixa **nome** e, em seguida, escolha o botão **Adicionar** .
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Para criar um projeto no Visual Studio 2017 ou 2015
 
-1. Na barra de menus no Visual Studio, escolha **arquivo** > **novo** > **projeto**.
+1. Na barra de menus no Visual Studio, escolha **arquivo** > **novo** > **projeto** .
 
-1. Em **instalado** no painel modelos, selecione **Visual C++**.
+1. Em **instalado** no painel modelos, selecione **Visual C++** .
 
-1. Selecione **projeto vazio**, insira *MatrixMultiply* na caixa **nome** e escolha o botão **OK** .
+1. Selecione **projeto vazio** , insira *MatrixMultiply* na caixa **nome** e escolha o botão **OK** .
 
-1. Escolha o botão **Avançar**.
+1. Escolha o botão **Avançar** .
 
-1. No **Gerenciador de soluções**, abra o menu de atalho para **arquivos de origem**e escolha **Adicionar** > **novo item**.
+1. No **Gerenciador de soluções** , abra o menu de atalho para **arquivos de origem** e escolha **Adicionar** > **novo item** .
 
-1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)**, insira *MatrixMultiply. cpp* na caixa **nome** e, em seguida, escolha o botão **Adicionar** .
+1. Na caixa de diálogo **Adicionar novo item** , selecione **arquivo C++ (. cpp)** , insira *MatrixMultiply. cpp* na caixa **nome** e, em seguida, escolha o botão **Adicionar** .
 
 ::: moniker-end
 
@@ -109,7 +109,7 @@ Um é uma matriz 3 por 2 e B é uma matriz 2-por-3. O produto da multiplicação
 
    O algoritmo é uma implementação simples da definição de multiplicação de matriz. Ele não usa nenhum algoritmo paralelo ou threaded para reduzir o tempo de computação.
 
-1. Na barra de menus, escolha **arquivo**  >  **salvar tudo**.
+1. Na barra de menus, escolha **arquivo**  >  **salvar tudo** .
 
 1. Escolha o atalho de teclado **F5** para iniciar a depuração e verificar se a saída está correta.
 
@@ -320,7 +320,7 @@ Para implementar esse algoritmo, o código:
 
 1. Pressione a barra de **espaço** para sair do aplicativo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Walkthrough: Depurando um aplicativo C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

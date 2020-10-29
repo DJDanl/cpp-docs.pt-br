@@ -6,16 +6,16 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 3694dc72860892d778533de2e40898faf9cc287d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b8373eda52967db881d7d58477fcd2a9181ac3ee
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042154"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924728"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
-Para personalizar como os membros de classe são inicializados ou para invocar funções quando um objeto da sua classe é criado, defina um *Construtor*. Um construtor tem o mesmo nome que a classe e nenhum valor de retorno. Você pode definir quantos construtores sobrecarregados forem necessários para personalizar a inicialização de várias maneiras. Normalmente, os construtores têm acessibilidade pública para que o código fora da definição de classe ou da hierarquia de herança possa criar objetos da classe. Mas você também pode declarar um construtor como **`protected`** ou **`private`** .
+Para personalizar como os membros de classe são inicializados ou para invocar funções quando um objeto da sua classe é criado, defina um *Construtor* . Um construtor tem o mesmo nome que a classe e nenhum valor de retorno. Você pode definir quantos construtores sobrecarregados forem necessários para personalizar a inicialização de várias maneiras. Normalmente, os construtores têm acessibilidade pública para que o código fora da definição de classe ou da hierarquia de herança possa criar objetos da classe. Mas você também pode declarar um construtor como **`protected`** ou **`private`** .
 
 Os construtores podem, opcionalmente, usar uma lista inicial de membros. Essa é uma maneira mais eficiente de inicializar membros de classe do que atribuir valores no corpo do construtor. O exemplo a seguir mostra uma classe `Box` com três construtores sobrecarregados. As duas últimas usam listas de iniciais de membros:
 
@@ -202,7 +202,7 @@ Você pode impedir que o objeto seja copiado definindo o construtor de cópia co
     Box (const Box& other) = delete;
 ```
 
-A tentativa de copiar o objeto produz o erro *C2280: tentando fazer referência a uma função excluída*.
+A tentativa de copiar o objeto produz o erro *C2280: tentando fazer referência a uma função excluída* .
 
 ## <a name="move-constructors"></a><a name="move_constructors"></a> Mover construtores
 
@@ -641,9 +641,9 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-**Visual Studio 2017 e posterior**: a **`using`** instrução em **/std: o modo c++ 17** coloca em escopo todos os construtores da classe base, exceto aqueles que têm uma assinatura idêntica aos construtores na classe derivada. Em geral, é melhor usar construtores de herança quando a classe derivada declara não novos membros de dados ou construtores.
+**Visual Studio 2017 e posterior** : a **`using`** instrução em **/std: o modo c++ 17** coloca em escopo todos os construtores da classe base, exceto aqueles que têm uma assinatura idêntica aos construtores na classe derivada. Em geral, é melhor usar construtores de herança quando a classe derivada declara não novos membros de dados ou construtores.
 
 ::: moniker-end
 
@@ -661,7 +661,7 @@ Uma classe derivada não pode herdar de várias classes base se essas classes ba
 
 ## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> Construtores e classes compostas
 
-As classes que contêm membros de tipo de classe são conhecidas como *classes compostas*. Quando um membro do tipo classe de uma classe composta é criado, o construtor é chamado antes do próprio construtor da classe. Quando uma classe contida não possuir um construtor padrão, você deverá usar uma lista de inicialização no construtor da classe composta. No exemplo anterior de `StorageBox`, se você alterar o tipo da variável de membro `m_label` para uma nova classe `Label`, deverá chamar o construtor da classe base e inicializar a variável `m_label` no construtor `StorageBox`:
+As classes que contêm membros de tipo de classe são conhecidas como *classes compostas* . Quando um membro do tipo classe de uma classe composta é criado, o construtor é chamado antes do próprio construtor da classe. Quando uma classe contida não possuir um construtor padrão, você deverá usar uma lista de inicialização no construtor da classe composta. No exemplo anterior de `StorageBox`, se você alterar o tipo da variável de membro `m_label` para uma nova classe `Label`, deverá chamar o construtor da classe base e inicializar a variável `m_label` no construtor `StorageBox`:
 
 ```cpp
 class Label {
@@ -698,6 +698,6 @@ int main(){
 - [Operadores de construtores de movimento e de atribuição de movimento](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delegação de construtores](delegating-constructors.md)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 [Classes e structs](classes-and-structs-cpp.md)

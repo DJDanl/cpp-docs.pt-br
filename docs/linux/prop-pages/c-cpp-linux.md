@@ -4,22 +4,22 @@ ms.date: 10/14/2020
 description: Descreve as opções de compilação do Linux na página de propriedades do Visual Studio C/C++
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: 0840327b30d94b4845adef7788fd73f4e797775f
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: b8cb1d8c6c585262e966c3015660adeaeab60307
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176234"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924553"
 ---
 # <a name="cc-properties-linux-c"></a>Propriedades do C/C++ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="general"></a>Geral
 
@@ -28,7 +28,7 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Diretórios de Inclusão Adicionais | Especifica um ou mais diretórios a serem adicionados ao caminho de inclusão. Use ponto-e-vírgula para separar vários diretórios. (-I\[path]). |
 | Formato de informações de depuração | Especifica o tipo de informações de depuração geradas pelo compilador. | **Nenhum** – não produz nenhuma informação de depuração, portanto, a compilação pode ser mais rápida.<br/>**Mínimo de informações de depuração** – gerar o mínimo de informações de depuração.<br/>**Informações de depuração completas (DWARF2)** – gerar informações de depuração DWARF2.<br/> |
 | Nome do arquivo-objeto | Especifica um nome para substituir o nome padrão do arquivo-objeto. Ele pode ser um nome de arquivo ou diretório. (-o [name]). |
-| Nível de aviso | Seleciona o rigor que você deseja que o compilador aplique aos erros de código.  Adicione outros sinalizadores diretamente a **Opções Adicionais**. (/w, /Weverything). | **Desligar todos os avisos** – desabilita todos os avisos do compilador.<br/>**EnableAllWarnings** – habilita todos os avisos, incluindo os que estão desabilitados por padrão.<br/> |
+| Nível de aviso | Seleciona o rigor que você deseja que o compilador aplique aos erros de código.  Adicione outros sinalizadores diretamente a **Opções Adicionais** . (/w, /Weverything). | **Desligar todos os avisos** – desabilita todos os avisos do compilador.<br/>**EnableAllWarnings** – habilita todos os avisos, incluindo os que estão desabilitados por padrão.<br/> |
 | Tratar avisos como erros | Trata todos os avisos do compilador como erros. Para um novo projeto, talvez seja melhor usar /Werror em todas as compilações. Resolva todos os avisos para garantir o menor número possível de defeitos de código de difícil localização. |
 | Avisos adicionais do C | Define um conjunto adicional de mensagens de aviso. |
 | Avisos adicionais do C++ | Define um conjunto adicional de mensagens de aviso. |
@@ -72,7 +72,7 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Símbolos ocultos por padrão | Todos os símbolos são declarados como `private extern`, a menos que explicitamente marcado para exportação usando a macro `__attribute`. |
 | Habilitar exceções do C++ | Especifica o modelo de tratamento de exceção usado pelo compilador. | **Não** – desabilitar o tratamento de exceções.<br/>**Sim** – habilitar tratamento de exceções. |
 
-## <a name="language"></a>Linguagem
+## <a name="language"></a>Idioma
 
 | Propriedade | Descrição | Opções |
 |--|--|--|

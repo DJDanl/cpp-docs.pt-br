@@ -1,6 +1,6 @@
 ---
 title: Classe SimpleEvent
-description: A referência da classe C++ Build Insights SDK SimpleEvent.
+description: A referência de classe do SDK do SimpleEvent de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 414ff5c1af99acc612384c1ae39f6e12ab051275
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc09a279157482089adedc660395feaa98376dae
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324361"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923002"
 ---
 # <a name="simpleevent-class"></a>Classe SimpleEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `SimpleEvent` classe é usada com as funções [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Use-o para combinar com qualquer evento simples. Consulte a tabela do [evento](../event-table.md) para ver todos `SimpleEvent` os eventos que podem ser combinados pela classe.
+A `SimpleEvent` classe é usada com as funções [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)e [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Use-o para corresponder a qualquer evento simples. Consulte a [tabela de eventos](../event-table.md) para ver todos os eventos que podem ser correspondidos pela `SimpleEvent` classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membros
 
-Juntamente com os membros herdados de `SimpleEvent` sua classe base [de eventos,](event.md) a classe contém os seguintes membros:
+Junto com os membros herdados de sua classe base de [evento](event.md) , a `SimpleEvent` classe contém os seguintes membros:
 
 ### <a name="constructors"></a>Construtores
 
-[Evento simples](#simple-event)
+[SimpleEvent](#simple-event)
 
-## <a name="simpleevent"></a><a name="simple-event"></a>Evento simples
+## <a name="simpleevent"></a><a name="simple-event"></a> SimpleEvent
 
 ```cpp
 SimpleEvent(const RawEvent& event);
@@ -53,7 +53,7 @@ SimpleEvent(const RawEvent& event);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Evento*\
+*circunstância*\
 Qualquer evento simples.
 
 ::: moniker-end

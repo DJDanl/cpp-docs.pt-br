@@ -1,6 +1,6 @@
 ---
 title: StopTracingSessionA
-description: A referência de função C++ Build Insights SDK StopTracingSessionA.
+description: A referência da função StopTracingSessionA do SDK do insights de compilação do C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 15560ecf4959ccda0d617c09d3645750210f331a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 211538c1756d41b91dab6d43f33f4b4a41ceb70c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323494"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922648"
 ---
 # <a name="stoptracingsessiona"></a>StopTracingSessionA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-O C++ Build Insights SDK é compatível com o Visual Studio 2017 e acima. Para ver a documentação dessas versões, defina o controle do seletor Visual Studio **Version** para este artigo para visual studio 2017 ou Visual Studio 2019. É encontrado no topo da tabela de conteúdo nesta página.
+O SDK do insights de compilação do C++ é compatível com o Visual Studio 2017 e superior. Para ver a documentação dessas versões, defina o controle do seletor de **versão** do Visual Studio para este artigo como visual Studio 2017 ou visual Studio 2019. Ele é encontrado na parte superior do Sumário nesta página.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-A `StopTracingSessionA` função interrompe uma sessão de rastreamento em andamento e produz um arquivo de rastreamento bruto. Os arquivos de rastreamento bruto podem ser passados para as funções [Analyze,](analyze.md) [AnalzeA](analyze-a.md)e [AnalyzeW](analyze-w.md) para iniciar uma sessão de análise. Os arquivos de rastreamento bruto também podem ser passados para as funções [Relog,](relog.md) [RelogA](relog-a.md)e [RelogW](relog-w.md) para iniciar a sessão de relogamento. Os executáveis `StopTracingSessionA` chamados devem ter privilégios de administrador.
+A `StopTracingSessionA` função interrompe uma sessão de rastreamento em andamento e produz um arquivo de rastreamento bruto. Os arquivos de rastreamento brutos podem ser passados para as funções [Analyze](analyze.md), [AnalzeA](analyze-a.md)e [AnalyzeW](analyze-w.md) para iniciar uma sessão de análise. Os arquivos de rastreamento brutos também podem ser passados para as funções [relog](relog.md), [RelogA](relog-a.md)e [RelogW](relog-w.md) para iniciar a sessão de log novamente. Os executáveis `StopTracingSessionA` que chamam devem ter privilégios de administrador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,16 +39,16 @@ enum RESULT_CODE StopTracingSessionA(
 ### <a name="parameters"></a>Parâmetros
 
 *sessionName*\
-O nome da sessão de rastreamento para parar. Use o mesmo nome de sessão que o aprovado para [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
+O nome da sessão de rastreamento a ser interrompida. Use o mesmo nome de sessão que foi passado para [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
 
-*saídaLogFile*\
-Caminho para o arquivo de log de saída final onde o traço bruto deve ser salvo.
+*outputLogFile*\
+Caminho para o arquivo de log de saída final em que o rastreamento bruto deve ser salvo.
 
-*Estatísticas*\
-Ponteiro para um objeto [TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopTracingSessionA`escreve estatísticas de coleta de vestígios neste objeto antes de retornar.
+*estatística*\
+Ponteiro para um objeto [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopTracingSessionA` grava estatísticas de coleção de rastreamento neste objeto antes de retornar.
 
-### <a name="return-value"></a>Valor retornado
+### <a name="return-value"></a>Valor Retornado
 
-Um código de resultado do [RESULT_CODE](../other-types/result-code-enum.md) enum.
+Um código de resultado da enumeração [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end
