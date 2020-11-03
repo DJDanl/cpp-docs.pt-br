@@ -1,109 +1,130 @@
 ---
 title: Resumo de expressões
-ms.date: 06/14/2018
+description: Saiba mais sobre a gramática C padrão para expressões conforme implementadas pelo compilador C/C++ da Microsoft.
+ms.date: 10/30/2020
 ms.assetid: ed448953-687a-4b57-a1cb-12967bd770ea
-ms.openlocfilehash: 1660690c6d36aa1dbdc025d6afe92e19ff941463
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 317f7c26e89e2741a5496c5a091100f0c2d8a21a
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220828"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238441"
 ---
 # <a name="summary-of-expressions"></a>Resumo de expressões
 
-*expressão primária*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ID*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*amortiza*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*literal de cadeia de caracteres*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *expressão*  **)**
+*`primary-expression`* :\
+&emsp;*`identifier`*\
+&emsp;*`constant`*\
+&emsp;*`string-literal`*\
+&emsp;**`(`** *`expression`* **`)`**\
+&emsp;*`generic-selection`*
 
-*expressão*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de atribuição*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão***,** expressão*de atribuição*    
+*`generic-selection`* :\
+&emsp;**`_Generic`** **`(`** *`assignment-expression`* **`,`** *`generic-assoc-list`* **`)`**
 
-*expressão de constante*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão condicional*
+*`generic-assoc-list`* :\
+&emsp;*`generic-association`*\
+&emsp;*`generic-assoc-list`* **`,`** *`generic-association`*
 
-*expressão condicional*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão or lógica*  **?**  *expression*  **:**  *expressão condicional*
+*`generic-association`* :\
+&emsp;*`type-name`* **`:`** *`assignment-expression`*\
+&emsp;**`default`** **`:`** *`assignment-expression`*
 
-*assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão condicional*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+*`postfix-expression`* :\
+&emsp;*`primary-expression`*\
+&emsp;*`postfix-expression`* **`[`** *`expression`* **`]`**\
+&emsp;*`postfix-expression`***`(`** *`argument-expression-list`* <sub>aceitar</sub>**`)`**\
+&emsp;*`postfix-expression`* **`.`** *`identifier`*\
+&emsp;*`postfix-expression`* **`->`** *`identifier`*\
+&emsp;*`postfix-expression`* **`++`**\
+&emsp;*`postfix-expression`* **`--`**\
+&emsp;**`(`** *`type-name`* **`)`** **`{`** *`initializer-list`* **`}`**\
+&emsp;**`(`** *`type-name`* **`)`** **`{`** *`initializer-list`* **`,`** **`}`**
 
-*expressão de sufixo*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*primary-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sufixo-expressão*  **[**  *expressão*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sufixo-expressão***(***opção de expressão de argumento-lista*<sub>opt</sub> **)**    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **.**  *ID*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **->** de sufixo *identificador* do    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*  **--**
+*`argument-expression-list`* :\
+&emsp;*`assignment-expression`*\
+&emsp;*`argument-expression-list`* **`,`** *`assignment-expression`*
 
-*argument-expression-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de atribuição*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argumento-expressão-lista*  **,**  *expressão de atribuição*
+*`unary-expression`* :\
+&emsp;*`postfix-expression`*\
+&emsp;**`++`** *`unary-expression`*\
+&emsp;**`--`** *`unary-expression`*\
+&emsp;*`unary-operator`* *`cast-expression`*\
+&emsp;**`sizeof`** *`unary-expression`*\
+&emsp;**`sizeof`** **`(`** *`type-name`* **`)`** &emsp;**`_Alignof`** **`(`** *`type-name`* **`)`**
 
-*expressão unário*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de sufixo*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**++**  *expressão unário*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**--**  *expressão unário*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operador unário*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`sizeof`**  *expressão unário*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**sizeof (**  *tipo-nome*  **)**
+*`unary-operator`* : um de \
+&emsp;**`&`** **`*`** **`+`** **`-`** **`~`** **`!`**
 
-*unary-operator*: one of<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**&****&#42;** **+** **-** **~** **!**
+*`cast-expression`* :\
+&emsp;*`unary-expression`*\
+&emsp;**`(`** *`type-name`* **`)`** *`cast-expression`*
 
-*expressão CAST*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão-unária*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão CAST* **(***nome-do-tipo***)**      
+*`multiplicative-expression`* :\
+&emsp;*`cast-expression`*\
+&emsp;*`multiplicative-expression`* **`*`** *`cast-expression`*\
+&emsp;*`multiplicative-expression`* **`/`** *`cast-expression`*\
+&emsp;*`multiplicative-expression`* **`%`** *`cast-expression`*
 
-*multiplicativa-expressão*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*  **&#42;**  *cast-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicativa-expressão* **/** *expressão CAST*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicativa-expressão* **%** *expressão CAST*    
+*`additive-expression`* :\
+&emsp;*`multiplicative-expression`*\
+&emsp;*`additive-expression`* **`+`** *`multiplicative-expression`*\
+&emsp;*`additive-expression`* **`-`** *`multiplicative-expression`*
 
-*additive-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão aditiva* **+** *multiplicativa-expressão*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão aditiva* **-** *multiplicativa-expressão*    
+*`shift-expression`* :\
+&emsp;*`additive-expression`*\
+&emsp;*`shift-expression`* **`<<`** *`additive-expression`*\
+&emsp;*`shift-expression`* **`>>`** *`additive-expression`*
 
-*expressão Shift*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão aditiva*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão Shift*   * *expressão Shift-Expression * aditivo \<\<**  *additive-expression*<br/> &nbsp; &nbsp; &nbsp; &nbsp; * **>>** *additive-expression*  
+*`relational-expression`* :\
+&emsp;*`shift-expression`*\
+&emsp;*`relational-expression`* **`<`** *`shift-expression`*\
+&emsp;*`relational-expression`* **`>`** *`shift-expression`*\
+&emsp;*`relational-expression`* **`<=`** *`shift-expression`*\
+&emsp;*`relational-expression`* **`>=`** *`shift-expression`*
 
-*expressão relacional*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* expressão relacional* \<=**  *shift-expression*<br/> &nbsp; &nbsp; - &nbsp; &nbsp; ** * \<**  *shift-expression*<br/> &nbsp; &nbsp; relacional-Expression * Shift-Expression relacional-expressão * * relacional-expressão * Shift-Expression &nbsp; &nbsp; * **>** *shift-expression* <br/> &nbsp; &nbsp; &nbsp; &nbsp;   * **>=** *shift-expression*    
+*`equality-expression`* :\
+&emsp;*`relational-expression`*\
+&emsp;*`equality-expression`* **`==`** *`relational-expression`*\
+&emsp;*`equality-expression`* **`!=`** *`relational-expression`*
 
-*equality-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **==** de igualdade *expressão relacional*    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression*  **!=**  *relational-expression*
+*`AND-expression`* :\
+&emsp;*`equality-expression`*\
+&emsp;*`AND-expression`* **`&`** *`equality-expression`*
 
-*AND-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão de igualdade*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Expressão and* **&** *expressão de igualdade*    
+*`exclusive-OR-expression`* :\
+&emsp;*`AND-expression`*\
+&emsp;*`exclusive-OR-expression`* **`^`** *`AND-expression`*
 
-*exclusive-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Expressão AND*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **^** or exclusiva *Expressão and*    
+*`inclusive-OR-expression`* :\
+&emsp;*`exclusive-OR-expression`*\
+&emsp;*`inclusive-OR-expression`* **`|`** *`exclusive-OR-expression`*
 
-*expressão inclusiva ou*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão OR exclusiva*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;uma *expressão inclusiva ou* **&#124;** *exclusiva-ou-expressão*    
+*`logical-AND-expression`* :\
+&emsp;*`inclusive-OR-expression`*\
+&emsp;*`logical-AND-expression`* **`&&`** *`inclusive-OR-expression`*
 
-*expressão and lógica*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inclusivo-ou-expressão*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão* **&&** and lógica *inclusivo-ou-expressão*    
+*`logical-OR-expression`* :\
+&emsp;*`logical-AND-expression`*\
+&emsp;*`logical-OR-expression`* **`||`** *`logical-AND-expression`*
 
-*expressão or lógica*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expressão AND lógica*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;expressão or *lógica* **&#124;&#124;** *lógica e expressão*    
+*`conditional-expression`* :\
+&emsp;*`logical-OR-expression`*\
+&emsp;*`logical-OR-expression`* **`?`** *`expression`* **`:`** *`conditional-expression`*
+
+*`assignment-expression`* :\
+&emsp;*`conditional-expression`*\
+&emsp;*`unary-expression`* *`assignment-operator`* *`assignment-expression`*
+
+*`assignment-operator`* : um de \
+&emsp;**`=`** **`*=`** **`/=`** **`%=`** **`+=`** **`-=`** **`<<=`** **`>>=`** **`&=`** **`^=`** **`|=`**
+
+*`expression`* :\
+&emsp;*`assignment-expression`*\
+&emsp;*`expression`* **`,`** *`assignment-expression`*
+
+*`constant-expression`* :\
+&emsp;*`conditional-expression`*
 
 ## <a name="see-also"></a>Confira também
 
