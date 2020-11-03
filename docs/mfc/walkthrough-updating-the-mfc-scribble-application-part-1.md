@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: a9eda80fbabf939b9e3a5f8a0ef5b76e46656740
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2abcb509a3d7a0045ad33bedccdd61fd1e0e58f8
+ms.sourcegitcommit: d8f65b1ddc9ea32e877c67e2c8f0ea7501183fc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840252"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93291076"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Walkthrough: atualizando o aplicativo de rabisco do MFC (parte 1)
 
@@ -24,7 +24,7 @@ Este passo a passos modifica o exemplo do MFC de rabisco 1,0 do Classic que perm
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-O [exemplo do MFC do rabisco 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017 ou posterior, consulte [Guia de portabilidade: rabisco do MFC](../porting/porting-guide-mfc-scribble.md).
+O [exemplo do MFC do rabisco 1,0](https://github.com/microsoft/VCSamples/tree/master/VC2010Samples/MFC/general/Scribble). Para obter ajuda sobre como converter para o Visual Studio 2017 ou posterior, consulte [Guia de portabilidade: rabisco do MFC](../porting/porting-guide-mfc-scribble.md).
 
 ## <a name="sections"></a><a name="top"></a> As
 
@@ -50,7 +50,7 @@ Para converter um aplicativo que dá suporte a um menu para um aplicativo que d�
 
 1. Em rabisco. cpp, verifique se `CScribbleApp::InitInstance` o inclui uma chamada para [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-1. Adicione o código a seguir ao arquivo *PCH. h* (*stdafx. h* no Visual Studio 2017 e anterior):
+1. Adicione o código a seguir ao arquivo *PCH. h* ( *stdafx. h* no Visual Studio 2017 e anterior):
 
     ```cpp
     #include <afxcontrolbars.h>
@@ -127,7 +127,7 @@ Este passo a passos copia arquivos de recursos do exemplo criado em [passo a pas
 
    1. Faça uma cópia do arquivo de toolbar.bmp, mas salve a cópia no exemplo da faixa de medida. Renomeie a cópia panelicons.bmp e, em seguida, mova a cópia para o seu projeto de rabisco.
 
-1. Importe o bitmap para um aplicativo MFC. Em **modo de exibição de recursos**, clique duas vezes no nó **rabisco. rc** , clique duas vezes no nó do **bitmap** e, em seguida, clique em **Adicionar recurso**. Na caixa de diálogo que aparece, clique em **importar**. Navegue até o `res` diretório, selecione o arquivo de main.bmp e, em seguida, clique em **abrir**.
+1. Importe o bitmap para um aplicativo MFC. Em **modo de exibição de recursos** , clique duas vezes no nó **rabisco. rc** , clique duas vezes no nó do **bitmap** e, em seguida, clique em **Adicionar recurso**. Na caixa de diálogo que aparece, clique em **importar**. Navegue até o `res` diretório, selecione o arquivo de main.bmp e, em seguida, clique em **abrir**.
 
    O bitmap main.bmp contém uma imagem 26x26. Altere a ID do bitmap para `IDB_RIBBON_MAIN` .
 
@@ -148,7 +148,7 @@ Este passo a passos copia arquivos de recursos do exemplo criado em [passo a pas
 
 1. Importe bitmaps para os painéis de faixa de faixas redimensionados. Esses bitmaps ou ícones de painel serão usados após uma operação de redimensionamento se a faixa de faixas for muito pequena para exibir o painel inteiro.
 
-   1. Importe o bitmap panelicons.bmp, que contém oito imagens 16x16. Na janela **Propriedades** do editor de **bitmap**, ajuste a largura do bitmap para 64 (16X64). Altere a ID do bitmap para `IDB_PANEL_ICONS` .
+   1. Importe o bitmap panelicons.bmp, que contém oito imagens 16x16. Na janela **Propriedades** do editor de **bitmap** , ajuste a largura do bitmap para 64 (16X64). Altere a ID do bitmap para `IDB_PANEL_ICONS` .
 
    > [!NOTE]
    > Como precisamos apenas das primeiras quatro imagens de 16x16 (16X64), você pode, opcionalmente, cortar a largura do lado direito desse bitmap de 128 para 64.
@@ -161,7 +161,7 @@ Uma faixa consiste no botão do **aplicativo** , que é o botão grande no lado 
 
 ### <a name="to-add-a-ribbon-resource-to-the-project"></a>Para adicionar um recurso da faixa de faixas ao projeto
 
-1. Com o projeto de rabisco selecionado em **Gerenciador de soluções**, no menu **projeto** , clique em **Adicionar recurso**.
+1. Com o projeto de rabisco selecionado em **Gerenciador de soluções** , no menu **projeto** , clique em **Adicionar recurso**.
 
 1. Na caixa de diálogo **Adicionar recurso** , selecione **faixa** de opções e clique em **novo**.
 
@@ -171,7 +171,7 @@ Uma faixa consiste no botão do **aplicativo** , que é o botão grande no lado 
 
 1. Na exibição Design, clique no botão **aplicativo** para exibir suas propriedades. Altere os valores de propriedade da seguinte maneira: **imagem** para `IDB_RIBBON_MAIN` , **solicitar** `File` , **chaves** para `f` , **imagens grandes** `IDB_RIBBON_FILELARGE` e **imagens pequenas** para `IDB_RIBBON_FILESMALL` .
 
-1. As modificações a seguir criam o menu que aparece quando o usuário clica no botão do **aplicativo** . Clique nas reticências (**...**) ao lado de **itens principais** para abrir o **Editor de itens**.
+1. As modificações a seguir criam o menu que aparece quando o usuário clica no botão do **aplicativo** . Clique nas reticências ( **...** ) ao lado de **itens principais** para abrir o **Editor de itens**.
 
    1. Com o **botão** tipo de **Item** selecionado, clique em **Adicionar** para adicionar um botão. Altere a **legenda** para `&New` , **ID** para, `ID_FILE_NEW` **imagem** para `0` , **imagem grande** para `0` .
 
@@ -187,9 +187,9 @@ Uma faixa consiste no botão do **aplicativo** , que é o botão grande no lado 
 
 1. As modificações a seguir criam um submenu sob o botão **Imprimir** que você criou na etapa anterior.
 
-   1. Clique no botão **Imprimir** , altere o tipo de **Item** para **rótulo**e, em seguida, clique em **Inserir**. Altere a **legenda** para `Preview and print the document` .
+   1. Clique no botão **Imprimir** , altere o tipo de **Item** para **rótulo** e, em seguida, clique em **Inserir**. Altere a **legenda** para `Preview and print the document` .
 
-   1. Clique no botão **Imprimir** , altere o tipo de **Item** para **botão**e clique em **Inserir**. Altere a **legenda** para `&Print` , **ID** para, `ID_FILE_PRINT` **imagem** para `4` e **imagem grande** para `4` .
+   1. Clique no botão **Imprimir** , altere o tipo de **Item** para **botão** e clique em **Inserir**. Altere a **legenda** para `&Print` , **ID** para, `ID_FILE_PRINT` **imagem** para `4` e **imagem grande** para `4` .
 
    1. Clique no botão **Imprimir** e, em seguida, clique em **Inserir** para adicionar um botão. Altere a **legenda** para `&Quick Print` , **ID** para, `ID_FILE_PRINT_DIRECT` **imagem** para `7` e **imagem grande** para `7` .
 
@@ -200,7 +200,7 @@ Uma faixa consiste no botão do **aplicativo** , que é o botão grande no lado 
 1. A modificação a seguir cria um botão sair que aparece na parte inferior do menu do botão do **aplicativo** .
 
    1. Escolha a guia **modo de exibição de recursos** em **Gerenciador de soluções**.
-   1. Na janela **Propriedades** , clique nas reticências (**...**) ao lado do **botão** para abrir o **Editor de itens**.
+   1. Na janela **Propriedades** , clique nas reticências ( **...** ) ao lado do **botão** para abrir o **Editor de itens**.
 
    1. Com o **botão** tipo de **Item** selecionado, clique em **Adicionar** para adicionar um botão. Altere a **legenda** para `E&xit` , **ID** para `ID_APP_EXIT` , **imagem** para `8` .
 
@@ -239,13 +239,13 @@ Agora que você criou o botão **aplicativo** , é possível adicionar elementos
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Para adicionar uma categoria inicial e um painel de edição
 
-1. O programa de rabisco requer apenas uma categoria. Na exibição Design, na caixa de **ferramentas**, clique duas vezes em **categoria** para adicionar uma e exibir suas propriedades. Altere os valores de propriedade da seguinte maneira: **legenda** para `&Home` , **imagens grandes** para `IDB_RIBBON_HOMELARGE` , **imagens pequenas** para `IDB_RIBBON_HOMESMALL` .
+1. O programa de rabisco requer apenas uma categoria. Na exibição Design, na caixa de **ferramentas** , clique duas vezes em **categoria** para adicionar uma e exibir suas propriedades. Altere os valores de propriedade da seguinte maneira: **legenda** para `&Home` , **imagens grandes** para `IDB_RIBBON_HOMELARGE` , **imagens pequenas** para `IDB_RIBBON_HOMESMALL` .
 
-1. Cada categoria da faixa de faixas é organizada em painéis nomeados. Cada painel contém um conjunto de controles que concluem as operações relacionadas. Esta categoria tem um painel. Clique em **painel**e, em seguida, altere a **legenda** para `Edit` .
+1. Cada categoria da faixa de faixas é organizada em painéis nomeados. Cada painel contém um conjunto de controles que concluem as operações relacionadas. Esta categoria tem um painel. Clique em **painel** e, em seguida, altere a **legenda** para `Edit` .
 
-1. Para o painel de **edição** , adicione um botão responsável por limpar o conteúdo do documento. A ID da mensagem para este botão já foi definida no `IDR_SCRIBBTYPE` recurso de menu. Especifique `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra a **caixa de ferramentas**e arraste um **botão** para o painel **Editar** . Clique no botão e altere a **legenda** para `Clear All` , **ID** para `ID_EDIT_CLEAR_ALL` , **índice de imagem** para `0` , índice de **imagem grande** para `0` .
+1. Para o painel de **edição** , adicione um botão responsável por limpar o conteúdo do documento. A ID da mensagem para este botão já foi definida no `IDR_SCRIBBTYPE` recurso de menu. Especifique `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra a **caixa de ferramentas** e arraste um **botão** para o painel **Editar** . Clique no botão e altere a **legenda** para `Clear All` , **ID** para `ID_EDIT_CLEAR_ALL` , **índice de imagem** para `0` , índice de **imagem grande** para `0` .
 
-1. Salve as alterações e, em seguida, compile e execute o aplicativo. O aplicativo de rabisco deve ser exibido e deve ter uma barra de faixa de faixas na parte superior da janela, em vez de uma barra de menus. A barra da faixa de faixas deve ter uma categoria, **página inicial**e **casa** deve ter um painel, **Editar**. Os botões da faixa de faixas que você adicionou devem ser associados aos manipuladores de eventos existentes e os botões **abrir**, **fechar**, **salvar**, **Imprimir**e **limpar todos** devem funcionar conforme o esperado.
+1. Salve as alterações e, em seguida, compile e execute o aplicativo. O aplicativo de rabisco deve ser exibido e deve ter uma barra de faixa de faixas na parte superior da janela, em vez de uma barra de menus. A barra da faixa de faixas deve ter uma categoria, **página inicial** e **casa** deve ter um painel, **Editar**. Os botões da faixa de faixas que você adicionou devem ser associados aos manipuladores de eventos existentes e os botões **abrir** , **fechar** , **salvar** , **Imprimir** e **limpar todos** devem funcionar conforme o esperado.
 
 ## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Configurando a aparência do aplicativo
 
