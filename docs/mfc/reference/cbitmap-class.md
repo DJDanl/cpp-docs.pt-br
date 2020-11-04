@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: adb2a461de5e82fa76ce0ed9961d970f46dbe26a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834980"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344573"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -126,7 +126,7 @@ BOOL CreateBitmap(
     const void* lpBits);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nWidth*<br/>
 Especifica a largura (em pixels) do bitmap.
@@ -165,7 +165,7 @@ Inicializa um bitmap que tem a largura, a altura e o padrão de bits (se um for 
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpBitmap*<br/>
 Aponta para uma estrutura de [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) que contém informações sobre o bitmap.
@@ -193,7 +193,7 @@ BOOL CreateCompatibleBitmap(
     int nHeight);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Especifica o contexto do dispositivo.
@@ -231,7 +231,7 @@ BOOL CreateDiscardableBitmap(
     int nHeight);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *Primário*<br/>
 Especifica um contexto de dispositivo.
@@ -262,7 +262,7 @@ Retorna um ponteiro para um `CBitmap` objeto quando um identificador para um bit
 static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *hBitmap*<br/>
 Especifica um bitmap GDI do Windows.
@@ -283,7 +283,7 @@ Recupera as propriedades da imagem para o bitmap anexado.
 int GetBitmap(BITMAP* pBitMap);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *pBitMap*<br/>
 Ponteiro para uma estrutura de [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) que receberá as propriedades da imagem. Esse parâmetro não deve ser nulo.
@@ -304,7 +304,7 @@ DWORD GetBitmapBits(
     LPVOID lpBits) const;
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwCount*<br/>
 O número de bytes a serem copiados no buffer.
@@ -345,7 +345,7 @@ BOOL LoadBitmap(LPCTSTR lpszResourceName);
 BOOL LoadBitmap(UINT nIDResource);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *lpszResourceName*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome do recurso de bitmap.
@@ -386,7 +386,7 @@ BOOL LoadMappedBitmap(
     int nMapSize = 0);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nIDBitmap*<br/>
 A ID do recurso de bitmap.
@@ -408,7 +408,7 @@ Diferente de zero, se for bem-sucedido; caso contrário, 0.
 
 Por padrão, o `LoadMappedBitmap` mapeará as cores geralmente usadas em glifos de botão.
 
-Para obter informações sobre como criar um bitmap mapeado, consulte a função do Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) e a estrutura [ColorMap](/windows/win32/api/commctrl/ns-commctrl-colormap) no SDK do Windows.
+Para obter informações sobre como criar um bitmap mapeado, consulte a função do Windows [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) e a estrutura [ColorMap](/windows/win32/api/commctrl/ns-commctrl-colormap) no SDK do Windows.
 
 ## <a name="cbitmaploadoembitmap"></a><a name="loadoembitmap"></a> CBitmap::LoadOEMBitmap
 
@@ -418,7 +418,7 @@ Carrega um bitmap predefinido usado pelo Windows.
 BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nIDBitmap*<br/>
 Número de ID do bitmap do Windows predefinido. Os valores possíveis estão listados abaixo do WINDOWS. T
@@ -504,7 +504,7 @@ DWORD SetBitmapBits(
     const void* lpBits);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *dwCount*<br/>
 Especifica o número de bytes apontados por *lpBits*.
@@ -526,7 +526,7 @@ CSize SetBitmapDimension(
     int nHeight);
 ```
 
-### <a name="parameters"></a>parâmetros
+### <a name="parameters"></a>Parâmetros
 
 *nWidth*<br/>
 Especifica a largura do bitmap (em unidades de 0,1 a milímetros).

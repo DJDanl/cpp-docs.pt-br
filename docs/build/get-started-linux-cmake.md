@@ -3,12 +3,12 @@ title: Criar projetos multiplataforma do C++ no Visual Studio
 description: Como configurar, compilar e depurar um projeto de CMake de software livre C++ no Visual Studio destinado ao Linux e ao Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c420e0ee04e85d49ad752da085d38b2c5ff9d4fa
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040477"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344651"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Criar projetos multiplataforma do C++ no Visual Studio
 
@@ -27,14 +27,14 @@ Neste tutorial, você aprenderá como:
 ## <a name="prerequisites"></a>Pré-requisitos
 
 * Configurar o Visual Studio para Desenvolvimento em C++ Multiplataforma
-  * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de desktops com** desenvolvimento em c++ e **Linux com cargas**de trabalho do c++. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
+  * Primeiro, [Instale o Visual Studio](https://visualstudio.microsoft.com/vs/) e escolha o **desenvolvimento de desktops com** desenvolvimento em c++ e **Linux com cargas** de trabalho do c++. Essa instalação mínima é de apenas 3 GB. Dependendo da velocidade de download, a instalação não deve levar mais de 10 minutos.
 
 * Configurar um computador Linux para desenvolvimento em C++ multiplataforma
   * O Visual Studio não exige nenhuma distribuição específica do Linux. O sistema operacional pode ser executado em um computador físico, em uma VM ou na nuvem. Você também pode usar o subsistema do Windows para Linux (WSL). No entanto, para este tutorial, é necessário um ambiente gráfico. WSL não é recomendado aqui, porque ele é destinado principalmente para operações de linha de comando.
-  * O Visual Studio requer essas ferramentas no computador Linux: compiladores C++, gdb, SSH, rsync, ninja e zip. Em sistemas baseados em Debian, você pode usar esse comando para instalar essas dependências:
+  * O Visual Studio requer essas ferramentas no computador Linux: compiladores C++, gdb, SSH, rsync, Make e zip. Em sistemas baseados em Debian, você pode usar esse comando para instalar essas dependências:
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
+    sudo apt install -y openssh-server build-essential gdb rsync make zip
     ```
 
   * O Visual Studio requer uma versão recente do CMake no computador Linux que tem o modo de servidor habilitado (pelo menos 3,8). A Microsoft produz um build universal do CMake que você pode instalar em qualquer distribuição do Linux. Recomendamos que você use essa compilação para garantir que tem os recursos mais recentes. Você pode obter os binários do CMake da [bifurcação da Microsoft do repositório CMake](https://github.com/Microsoft/CMake/releases) no GitHub. Acesse essa página e baixe a versão que corresponde à arquitetura do sistema em seu computador Linux e, em seguida, marque-a como um executável:
@@ -79,7 +79,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 Quando você abre uma pasta que usa CMake, o Visual Studio gera automaticamente o cache de CMake. Essa operação pode levar alguns minutos, dependendo do tamanho do seu projeto.
 
-1. Na **Janela de Saída**, selecione **Mostrar saída de** e, em seguida, escolha **CMake** para monitorar o status do processo de geração de cache. Quando a operação for concluída, é indicado "Extração de informações destino concluída".
+1. Na **Janela de Saída** , selecione **Mostrar saída de** e, em seguida, escolha **CMake** para monitorar o status do processo de geração de cache. Quando a operação for concluída, é indicado "Extração de informações destino concluída".
 
    ![Janela de Saída do Visual Studio mostrando a saída do CMake](media/cmake-bullet3-output-window.png)
 
@@ -109,13 +109,13 @@ O Visual Studio cria uma configuração de **depuração x64** padrão para o Wi
 
    ![Caixa de diálogo Adicionar Configuração a CMakeSettings](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-   Essa caixa de diálogo mostra todas as configurações incluídas no Visual Studio, além de quaisquer configurações personalizadas que você criar. Se você quiser continuar usando uma configuração de **depuração x64** , ela deverá ser a primeira que você adicionar. Selecione **x64-depurar**e, em seguida, escolha o botão **selecionar** . O Visual Studio cria o CMakeSettings.jsno arquivo com uma configuração para **a depuração x64**e salva-o no disco. Você pode usar qualquer nome que desejar para suas configurações, alterando o parâmetro de nome diretamente no CMakeSettings.json.
+   Essa caixa de diálogo mostra todas as configurações incluídas no Visual Studio, além de quaisquer configurações personalizadas que você criar. Se você quiser continuar usando uma configuração de **depuração x64** , ela deverá ser a primeira que você adicionar. Selecione **x64-depurar** e, em seguida, escolha o botão **selecionar** . O Visual Studio cria o CMakeSettings.jsno arquivo com uma configuração para **a depuração x64** e salva-o no disco. Você pode usar qualquer nome que desejar para suas configurações, alterando o parâmetro de nome diretamente no CMakeSettings.json.
 
 ## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Definir um ponto de interrupção, compilar e executar no Windows
 
 Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do Bullet Physics.
   
-1. Em **Gerenciador de Soluções**, selecione AppBasicExampleGui e expanda-o.
+1. Em **Gerenciador de Soluções** , selecione AppBasicExampleGui e expanda-o.
 
 1. Abra o arquivo `BasicExample.cpp`.
 
@@ -144,6 +144,8 @@ Nesta etapa, vamos depurar um programa de exemplo que demonstra a biblioteca do 
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Adicionar uma configuração do Linux e conectar-se ao computador remoto
 
 1. Adicione uma configuração do Linux. Clique com o botão direito do mouse no arquivo CMakeSettings.json na exibição **Gerenciador de Soluções** e selecione **Adicionar Configuração**. Você verá a mesma caixa de diálogo Adicionar Configuração a CMakeSettings de antes. Selecione **Linux-depurar** desta vez e salve o CMakeSettings.jsno arquivo (CTRL + s).
+
+1. **Visual Studio 2019 versão 16,6 ou posterior** Role para baixo até a parte inferior do editor de configurações do CMake e selecione **Mostrar configurações avançadas**. Selecione os **Makers do UNIX** como o **gerador CMake** e salve o CMakeSettings.jsno arquivo (CTRL + s).
 
 1. Selecione **Linux-depurar** na lista suspensa configuração.
 

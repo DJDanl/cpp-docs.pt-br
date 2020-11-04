@@ -8,18 +8,18 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427719"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344742"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
 A C++ Accelerated Massive Parallelism (C++ AMP) acelera a execução do código C++ aproveitando o hardware de dados paralelos, como uma GPU (unidade de processamento gráfico) em uma placa gráfica discreta. Usando C++ AMP, você pode codificar algoritmos de dados multidimensionais para que a execução possa ser acelerada usando paralelismo em hardware heterogêneo. O modelo de programação do C++ AMP inclui matrizes multidimensionais, indexação, transferência de memória, agrupamento lado a lado e uma biblioteca de funções matemáticas. Você pode usar C++ AMP extensões de idioma para controlar como os dados são movidos da CPU para a GPU e de volta, para que você possa melhorar o desempenho.
 
-## <a name="system-requirements"></a>Requisitos de sistema
+## <a name="system-requirements"></a>Requisitos do Sistema
 
 - Windows 7 ou posterior
 
@@ -360,7 +360,7 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>Acelerando o código: blocos e barreiras
 
-Você pode obter aceleração adicional usando blocos. O agrupamento divide os threads em subconjuntos ou *blocos*iguais retangulares. Você determina o tamanho do bloco apropriado com base em seu conjunto de dados e o algoritmo que está codificando. Para cada thread, você tem acesso ao local *global* de um elemento de dados em relação ao todo `array` ou `array_view` ao acesso ao local *local* em relação ao bloco. Usar o valor de índice local simplifica seu código porque você não precisa escrever o código para converter valores de índice de global para local. Para usar o disposição em cascata, chame o [método extensão:: Tile](reference/extent-class.md#tile) no domínio de computação no `parallel_for_each` método e use um [tiled_index](../../parallel/amp/reference/tiled-index-class.md) objeto na expressão lambda.
+Você pode obter aceleração adicional usando blocos. O agrupamento divide os threads em subconjuntos ou *blocos* iguais retangulares. Você determina o tamanho do bloco apropriado com base em seu conjunto de dados e o algoritmo que está codificando. Para cada thread, você tem acesso ao local *global* de um elemento de dados em relação ao todo `array` ou `array_view` ao acesso ao local *local* em relação ao bloco. Usar o valor de índice local simplifica seu código porque você não precisa escrever o código para converter valores de índice de global para local. Para usar o disposição em cascata, chame o [método extensão:: Tile](reference/extent-class.md#tile) no domínio de computação no `parallel_for_each` método e use um [tiled_index](../../parallel/amp/reference/tiled-index-class.md) objeto na expressão lambda.
 
 Em aplicativos típicos, os elementos em um bloco estão relacionados de alguma forma, e o código precisa acessar e manter o controle dos valores no bloco. Use a palavra-chave [Tile_static palavra-chave](../../cpp/tile-static-keyword.md) e o [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) para fazer isso. Uma variável que tem a palavra-chave **tile_static** tem um escopo em todo um bloco e uma instância da variável é criada para cada bloco. Você deve lidar com a sincronização de acesso de thread de bloco para a variável. O [método tile_barrier:: Wait](reference/tile-barrier-class.md#wait) interrompe a execução do thread atual até que todos os threads no bloco tenham atingido a chamada para `tile_barrier::wait` . Portanto, você pode acumular valores em todo o bloco usando variáveis **tile_static** . Em seguida, você pode concluir qualquer computação que exija acesso a todos os valores.
 
@@ -473,9 +473,9 @@ Assim como outras bibliotecas de C++, você pode usar C++ AMP em seus aplicativo
 
 - [Usando C++ AMP em aplicativos UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Walkthrough: Criando um componente Windows Runtime básico em C++ e chamando-o do JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Walkthrough: Criando um componente Windows Runtime básico em C++ e chamando-o do JavaScript](/previous-versions/windows/apps/hh755833(v=vs.140))
 
-- [Otimizador de viagens do Bing Maps, um aplicativo da Windows Store em JavaScript e C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Otimizador de viagens do Bing Maps, um aplicativo da Windows Store em JavaScript e C++](/previous-versions/windows/apps/hh699893(v=vs.140))
 
 - [Como usar C++ AMP do C# usando o Windows Runtime](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 
@@ -503,7 +503,7 @@ O Visualizador de simultaneidade inclui suporte para analisar o desempenho de C+
 
 O módulo e a divisão de inteiros não assinados têm desempenho significativamente melhor do que o módulo e a divisão de inteiros assinados. É recomendável que você use inteiros sem sinal quando possível.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintaxe de expressão lambda](../../cpp/lambda-expression-syntax.md)<br/>
