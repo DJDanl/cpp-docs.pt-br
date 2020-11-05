@@ -23,16 +23,16 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: a45ae433e5adaa8aeaf32215d4af7ad0a247af04
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606403"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344677"
 ---
 # <a name="hlsl-compiler-property-pages"></a>Páginas de propriedades do compilador HLSL
 
-Use as páginas de propriedades do compilador HLSL (fxc.exe) para configurar como os arquivos individuais do sombreador HLSL são criados. Você também pode especificar argumentos de linha de comando para o compilador HLSL usando a propriedade **Opções adicionais** da página de propriedades de **linha de comando** ; Isso inclui argumentos que não podem ser configurados usando outras propriedades das páginas de propriedades HLSL. Para obter informações sobre o compilador HLSL, confira [Ferramenta Compilador de Efeitos](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
+Use as páginas de propriedades do compilador HLSL (fxc.exe) para configurar como os arquivos individuais do sombreador HLSL são criados. Você também pode especificar argumentos de linha de comando para o compilador HLSL usando a propriedade **Opções adicionais** da página de propriedades de **linha de comando** ; Isso inclui argumentos que não podem ser configurados usando outras propriedades das páginas de propriedades HLSL. Para obter informações sobre o compilador HLSL, confira [Ferramenta Compilador de Efeitos](/windows/win32/direct3dtools/fxc)
 
 ## <a name="hlsl-general-property-page"></a>Página de propriedades geral do HLSL
 
@@ -40,7 +40,7 @@ Use as páginas de propriedades do compilador HLSL (fxc.exe) para configurar com
 
 Especifica um ou mais diretórios a serem adicionados ao caminho de inclusão, separados por ponto e vírgula no caso de mais de um. (/I [caminho])
 
-### <a name="entrypoint-name"></a>Nome do ponto de entrada
+### <a name="entrypoint-name"></a>Nome do Ponto de Entrada
 
 Especifica o nome do ponto de entrada para o sombreador (/E [name])
 
@@ -48,35 +48,35 @@ Especifica o nome do ponto de entrada para o sombreador (/E [name])
 
 **Sim (/Od)** para desabilitar as otimizações; caso contrário, **Não**. Por padrão, o valor é **Sim (/Od)** para configurações de **Depuração** e **Não** para configurações de **Versão**.
 
-O argumento de linha de comando **/Od** para o compilador HLSL aplica implicitamente o argumento de linha de comando **/Gfp**, mas a saída pode não ser idêntica à saída produzida ao passar os argumentos de linha de comando **/Od** e **/Gfp** explicitamente.
+O argumento de linha de comando **/Od** para o compilador HLSL aplica implicitamente o argumento de linha de comando **/Gfp** , mas a saída pode não ser idêntica à saída produzida ao passar os argumentos de linha de comando **/Od** e **/Gfp** explicitamente.
 
 ### <a name="enable-debugging-information"></a>Habilitar informações de depuração
 
 **Sim (/Zi)** para habilitar as informações de depuração; caso contrário, **Não**. Por padrão, o valor é **Sim (/Zi)** para configurações de **Depuração** e **Não** para configurações de **Versão**.
 
-### <a name="shader-type"></a>Tipo de sombreador
+### <a name="shader-type"></a>Tipo de Sombreador
 
-Especifica o tipo de sombreador. Diferentes tipos de sombreadores implementam diferentes partes do pipeline gráfico. Alguns tipos de sombreadores estão disponíveis apenas em modelos de sombreador mais recentes (que são especificados pela propriedade **Modelo de Sombreador**) – por exemplo, sombreadores de computação foram introduzidos no modelo de sombreador 5.
+Especifica o tipo de sombreador. Diferentes tipos de sombreadores implementam diferentes partes do pipeline gráfico. Alguns tipos de sombreadores estão disponíveis apenas em modelos de sombreador mais recentes (que são especificados pela propriedade **Modelo de Sombreador** ) – por exemplo, sombreadores de computação foram introduzidos no modelo de sombreador 5.
 
-Essa propriedade corresponde à parte **\[type]** do argumento de linha de comando **/T \[type]_\[model]** para o compilador HLSL. A propriedade **Modelos de Sombreador** especifica a parte **[model]** do argumento.
+Essa propriedade corresponde à parte **\[ Type]** do argumento de linha de comando **/t \[ Type] _ \[ Model]** ao compilador HLSL. A propriedade **Modelos de Sombreador** especifica a parte **[model]** do argumento.
 
-**Durante**
+**Opções**
 
-- **Effect**
+- **Efeito**
 - **Sombreador de vértice**
 - **Sombreador de pixel**
 - **Sombreador de geometria**
-- **Sombreador envoltória**
+- **{1&amp;gt;Sombreador Hull&amp;lt;1}**
 - **Sombreador de domínio**
 - **Sombreador de computação**
-- **Library**
+- **Biblioteca**
 - **Gerar objeto de assinatura de raiz**
 
-### <a name="shader-model"></a>Modelo de sombreador
+### <a name="shader-model"></a>Modelo de Sombreador
 
-Especifica o modelo de sombreador. Diferentes modelos de sombreador têm diferentes funcionalidades. Em geral, modelos de sombreador mais recentes oferecem funcionalidades expandidas, mas exigem um hardware de elementos gráficos mais moderno para executar o código do sombreador. Alguns tipos de sombreadores (que são especificados pela propriedade **Tipo de Sombreador**) estão disponíveis apenas em modelos de sombreador mais recentes – por exemplo, sombreadores de computação foram introduzidos no modelo de sombreador 5.
+Especifica o modelo de sombreador. Diferentes modelos de sombreador têm diferentes funcionalidades. Em geral, modelos de sombreador mais recentes oferecem funcionalidades expandidas, mas exigem um hardware de elementos gráficos mais moderno para executar o código do sombreador. Alguns tipos de sombreadores (que são especificados pela propriedade **Tipo de Sombreador** ) estão disponíveis apenas em modelos de sombreador mais recentes – por exemplo, sombreadores de computação foram introduzidos no modelo de sombreador 5.
 
-Essa propriedade corresponde à parte **\[model]** do argumento de linha de comando **/T \[type]_\[model]** para o compilador HLSL. A propriedade **Tipo de Sombreador** especifica a parte **[type]** do argumento.
+Essa propriedade corresponde à parte **\[ Model]** do argumento de linha de comando **/t \[ Type] _ \[ Model]** ao compilador HLSL. A propriedade **Tipo de Sombreador** especifica a parte **[type]** do argumento.
 
 ### <a name="all-resources-bound"></a>Todos os recursos associados
 
@@ -116,11 +116,11 @@ Trata todos os avisos do compilador como erros. Para um novo projeto, talvez sej
 
 ## <a name="output-files-property-page"></a>Página de propriedades de arquivos de saída
 
-### <a name="header-variable-name"></a>Nome da variável de cabeçalho
+### <a name="header-variable-name"></a>Nome da Variável de Cabeçalho
 
 Especifica um nome para o nome da variável no arquivo de cabeçalho (/vn [name])
 
-### <a name="header-file-name"></a>Nome do arquivo de cabeçalho
+### <a name="header-file-name"></a>Nome do Arquivo de Cabeçalho
 
 Especifica um nome para um arquivo de cabeçalho que contém código objeto. (/FH [name])
 
@@ -132,18 +132,18 @@ Especifica um nome para o arquivo-objeto. (/Fo [nome])
 
 Especifica o conteúdo do arquivo de saída de linguagem assembly. (/FC,/FX)
 
-**Durante**
+**Opções**
 
 - **Sem listagem** -sem listagem.
 - **Listagem somente de assembly** -arquivo de código de assembly
 - **Código do assembly e código hex** -assembly e arquivo de listagem hex
 
-### <a name="assembler-output-file"></a>Arquivo de saída do Assembler
+### <a name="assembler-output-file"></a>Arquivo de Saída do Assembler
 
 Especifica o nome do arquivo para o arquivo de listagem de código do assembly
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[C++referência de página de propriedades do projeto](property-pages-visual-cpp.md)<br>
-[Página de propriedades de linha de comando](command-line-property-pages.md)<br>
-[Compilando sombreadores](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+[Referência de página de propriedades do projeto C++](property-pages-visual-cpp.md)<br>
+[Páginas de propriedades de linha de comando](command-line-property-pages.md)<br>
+[Compilar um sombreador](/windows/win32/direct3dhlsl/dx-graphics-hlsl-part1)

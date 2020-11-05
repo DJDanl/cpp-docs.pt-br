@@ -2,12 +2,12 @@
 title: Elementos gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041452"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344716"
 ---
 # <a name="graphics-c-amp"></a>Elementos gráficos (C++ AMP)
 
@@ -25,12 +25,12 @@ Os `norm` `unorm` tipos e são tipos escalares que limitam o intervalo de **`flo
 
 ## <a name="short-vector-library"></a>Biblioteca de vetores curta
 
-A biblioteca de vetores curta fornece algumas das funcionalidades do [tipo de vetor](https://go.microsoft.com/fwlink/p/?linkid=248500) que são definidas em HLSL e normalmente são usadas para definir texels. Um vetor curto é uma estrutura de dados que contém de um a quatro valores do mesmo tipo. Os tipos com suporte são,,,, **`double`** **`float`** **`int`** `norm` `uint` e `unorm` . Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um correspondente **`typedef`** que não tem um sublinhado no nome. Os tipos que têm os sublinhados estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não têm os sublinhados estão no [namespace Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles sejam claramente separados dos tipos fundamentais nomeados de forma semelhante, como **`__int8`** e **`__int16`** .
+A biblioteca de vetores curta fornece algumas das funcionalidades do [tipo de vetor](/windows/win32/direct3dhlsl/dx-graphics-hlsl-vector) que são definidas em HLSL e normalmente são usadas para definir texels. Um vetor curto é uma estrutura de dados que contém de um a quatro valores do mesmo tipo. Os tipos com suporte são,,,, **`double`** **`float`** **`int`** `norm` `uint` e `unorm` . Os nomes de tipo são mostrados na tabela a seguir. Para cada tipo, há também um correspondente **`typedef`** que não tem um sublinhado no nome. Os tipos que têm os sublinhados estão no [namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Os tipos que não têm os sublinhados estão no [namespace Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que eles sejam claramente separados dos tipos fundamentais nomeados de forma semelhante, como **`__int8`** e **`__int16`** .
 
 |Type|Comprimento 2|Comprimento 3|Comprimento 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
-|FLOAT|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
+|float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
 |INT|int_2<br /><br /> int2|int_3<br /><br /> Int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
@@ -57,7 +57,7 @@ A operação é transportada por componente entre cada componente do vetor curto
 
 ### <a name="swizzling-expressions"></a>Expressões Swizzling
 
-A biblioteca de vetores curta dá suporte à `vector_type.identifier` construção de acessador para acessar os componentes de um vetor curto. O `identifier` , que é conhecido como uma *expressão swizzling*, especifica os componentes do vetor. A expressão pode ser um l-Value ou um valor de r. Os caracteres individuais no identificador podem ser: x, y, z e w; ou r, g, b e a. "x" e "r" significam o componente zero-th, "y" e "g" significa o primeiro componente e assim por diante. (Observe que "x" e "r" não podem ser usados no mesmo identificador.) Portanto, "RGBA" e "xyzw" retornam o mesmo resultado. Acessadores de componente único, como "x" e "y", são tipos de valor escalar. Acessadores de vários componentes são tipos de vetores curtos. Por exemplo, se você construir um `int_4` vetor nomeado `fourInts` e tiver os valores 2, 4, 6 e 8, `fourInts.y` retornará o inteiro 4 e `fourInts.rg` retornará um `int_2` objeto com os valores 2 e 4.
+A biblioteca de vetores curta dá suporte à `vector_type.identifier` construção de acessador para acessar os componentes de um vetor curto. O `identifier` , que é conhecido como uma *expressão swizzling* , especifica os componentes do vetor. A expressão pode ser um l-Value ou um valor de r. Os caracteres individuais no identificador podem ser: x, y, z e w; ou r, g, b e a. "x" e "r" significam o componente zero-th, "y" e "g" significa o primeiro componente e assim por diante. (Observe que "x" e "r" não podem ser usados no mesmo identificador.) Portanto, "RGBA" e "xyzw" retornam o mesmo resultado. Acessadores de componente único, como "x" e "y", são tipos de valor escalar. Acessadores de vários componentes são tipos de vetores curtos. Por exemplo, se você construir um `int_4` vetor nomeado `fourInts` e tiver os valores 2, 4, 6 e 8, `fourInts.y` retornará o inteiro 4 e `fourInts.rg` retornará um `int_2` objeto com os valores 2 e 4.
 
 ## <a name="texture-classes"></a>Classes de textura
 
@@ -67,7 +67,7 @@ Muitas GPUs têm hardware e caches otimizados para buscar pixels e texels e para
 
 - Um pequeno vetor que tem dois ou quatro componentes. A única exceção é `double_4` , o que não é permitido.
 
-O `texture` objeto pode ter uma classificação de 1, 2 ou 3. O `texture` objeto só pode ser capturado por referência no lambda de uma chamada para `parallel_for_each` . A textura é armazenada na GPU como objetos de textura de Direct3D. Para obter mais informações sobre texturas e texels no Direct3D, consulte [Introduction to Textures in Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
+O `texture` objeto pode ter uma classificação de 1, 2 ou 3. O `texture` objeto só pode ser capturado por referência no lambda de uma chamada para `parallel_for_each` . A textura é armazenada na GPU como objetos de textura de Direct3D. Para obter mais informações sobre texturas e texels no Direct3D, consulte [Introduction to Textures in Direct3D 11](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-intro).
 
 O tipo de Texel que você usa pode ser um dos muitos formatos de textura usados na programação de gráficos. Por exemplo, um formato RGBA poderia usar 32 bits, com 8 bits cada para os elementos R, G, B e escalar. O hardware de textura de uma placa gráfica pode acessar os elementos individuais com base no formato. Por exemplo, se você estiver usando o formato RGBA, o hardware de textura poderá extrair cada elemento de 8 bits em um formato de 32 bits. No C++ AMP, você pode definir o bits por elemento escalar de seu Texel para que você possa acessar automaticamente os elementos escalares individuais no código sem usar a alternância de bits.
 
@@ -344,8 +344,8 @@ O tipo de elemento de a `texture_view` — seu const-qualidade e também o núme
 
 |Type|Componentes|Ler|Gravar|amostragem|Acesso mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N>|1, 2, 4|Sim|Não (1)|Sim|Sim, indexável. O intervalo é determinado na instanciação.|
-|Texture_view\<T, N>|1<br /><br /> 2, 4|Sim<br /><br /> Não (2)|Sim<br /><br /> Sim|Não (1)<br /><br /> Não (1)|Sim, um nível. O nível é determinado na instanciação.<br /><br /> Sim, um nível. O nível é determinado na instanciação.|
+|texture_view\<const T, N>|1, 2, 4|Yes|Não (1)|Yes|Sim, indexável. O intervalo é determinado na instanciação.|
+|Texture_view\<T, N>|1<br /><br /> 2, 4|Yes<br /><br /> Não (2)|Sim<br /><br /> Sim|Não (1)<br /><br /> Não (1)|Sim, um nível. O nível é determinado na instanciação.<br /><br /> Sim, um nível. O nível é determinado na instanciação.|
 
 Nessa tabela, você pode ver que exibições de textura somente leitura suportam totalmente os novos recursos do Exchange para não serem capazes de gravar no modo de exibição. As exibições de textura graváveis são limitadas, pois só podem acessar um nível de mipmap. As exibições de textura de leitura e gravação são ainda mais especializadas do que aquelas graváveis, pois elas adicionam o requisito de que o tipo de elemento da exibição de textura tem apenas um componente. Observe que a amostragem não tem suporte para exibições de textura graváveis porque é uma operação orientada para leitura.
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interoperabilidade
 
-O tempo de execução do C++ AMP dá suporte à interoperabilidade entre `texture<T,1>` o e a [interface ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` o e a [interface ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317), e entre `texture<T,3>` e a [interface ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). O método [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) pega um `texture` objeto e retorna uma `IUnknown` interface. O método [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) usa uma `IUnknown` interface e um `accelerator_view` objeto e retorna um `texture` objeto.
+O tempo de execução do C++ AMP dá suporte à interoperabilidade entre `texture<T,1>` o e a [interface ID3D11Texture1D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture1d), entre `texture<T,2>` o e a [interface ID3D11Texture2D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture2d), e entre `texture<T,3>` e a [interface ID3D11Texture3D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture3d). O método [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) pega um `texture` objeto e retorna uma `IUnknown` interface. O método [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) usa uma `IUnknown` interface e um `accelerator_view` objeto e retorna um `texture` objeto.
 
 ## <a name="see-also"></a>Confira também
 
