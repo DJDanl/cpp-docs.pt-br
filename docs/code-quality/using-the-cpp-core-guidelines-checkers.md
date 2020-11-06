@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924796"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334137"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usar os verificadores de Diretrizes Principais do C++
 
@@ -61,7 +61,7 @@ Você também pode optar por executar todas as regras de Verificação Principal
 
 1. Selecione a página de propriedade da análise de código **das propriedades de configuração** > **Code Analysis** > da **Microsoft** .
 
-1. Abra a lista suspensa **regras ativas** e selecione **escolher vários conjuntos de regras** .
+1. Abra a lista suspensa **regras ativas** e selecione **escolher vários conjuntos de regras**.
 
 1. Na caixa de diálogo **Adicionar ou remover conjuntos de regras** , escolha quais conjuntos de regras você deseja incluir.
 
@@ -96,7 +96,7 @@ Este exemplo demonstra alguns dos avisos que as regras de Verificação Principa
 
 - C26485 é associado à regra. 3: nenhum decaimento de matriz para ponteiro.
 
-- C26481 são limites de regra. 1: não use aritmética de ponteiro. Use `span` em seu lugar.
+- C26481 são limites de regra. 1: não use aritmética de ponteiro. Use `span` em vez disso.
 
 Instale e habilite os conjuntos de regras de análise de código Verificação Principal do C++ e compile este código. A análise de código gera os dois primeiros avisos e suprime o terceiro. Aqui está a saída da compilação do código de exemplo no Visual Studio 2015:
 
@@ -130,7 +130,7 @@ As Diretrizes Principais do C++ existem para ajudá-lo a escrever um código mel
 
 - **Regras de enumeração** : essas regras impõem [verificações relacionadas a enum do diretrizes principais do C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
-- **Regras experimentais** Essas são regras de Verificação Principal do C++ experimentais que são úteis, mas não estão prontas para uso diário. Experimente e [forneça comentários](https://developercommunity.visualstudio.com/content/idea/post.html?space=62). <sup>16,0</sup>
+- **Regras experimentais** Essas são regras de Verificação Principal do C++ experimentais que são úteis, mas não estão prontas para uso diário. Experimente e [forneça comentários](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
 - **Regras de função** : duas verificações que ajudam na adoção do **`noexcept`** especificador. Eles fazem parte das diretrizes para o [design e a implementação da função Clear](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
@@ -165,12 +165,12 @@ Você pode optar por limitar os avisos a apenas um ou alguns dos grupos. Os conj
 
 ::: moniker range="<=msvc-150"
 
-Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código**  >  **geral** . Em seguida, abra o menu suspenso na caixa de combinação **conjuntos de regras** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras** . A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código**  >  **geral** . Em seguida, abra o menu suspenso na caixa de combinação **conjuntos de regras** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras**. A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
 
-Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código** da  >  **Microsoft** . Em seguida, abra o menu suspenso na caixa de combinação **regras ativas** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras** . A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Para ver os conjuntos de regras disponíveis, abra a caixa de diálogo **Propriedades do projeto** . Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração**  >  **análise de código** da  >  **Microsoft** . Em seguida, abra o menu suspenso na caixa de combinação **regras ativas** para ver os conjuntos de regras disponíveis. Para criar uma combinação personalizada de conjuntos de regras, selecione **escolher vários conjuntos de regras**. A caixa de diálogo **Adicionar ou remover conjuntos de regras** lista as regras que podem ser escolhidas. Para obter mais informações sobre como usar conjuntos de regras no Visual Studio, consulte [usar conjuntos de regras para especificar as regras do C++ a serem executadas](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 
@@ -224,7 +224,7 @@ O compilador do Microsoft C++ tem suporte limitado para o `[[gsl::suppress]]` at
 
 Em vez de #pragmas, você pode usar opções de linha de comando na página de propriedades do arquivo para suprimir os avisos de um projeto ou de um único arquivo. Por exemplo, para desabilitar o aviso C26400 para um arquivo:
 
-1. Clique com o botão direito do mouse no arquivo em **Gerenciador de soluções** e escolha **Propriedades** .
+1. Clique com o botão direito do mouse no arquivo em **Gerenciador de soluções** e escolha **Propriedades**.
 
 1. Na caixa de diálogo **páginas de propriedades** , selecione a página de propriedades **configuração** de  >  linha de comando **C/C++**  >  **Command Line** .
 
@@ -322,7 +322,7 @@ Devido à maneira como as regras de análise de código são carregadas no Visua
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Para adicionar o pacote Microsoft. CppCoreCheck ao seu projeto no Visual Studio 2015
 
-1. No **Gerenciador de soluções** , clique com o botão direito do mouse para abrir o menu de contexto do seu projeto na solução à qual você deseja adicionar o pacote. Escolha **gerenciar pacotes NuGet** para abrir o **Gerenciador de pacotes NuGet** .
+1. No **Gerenciador de soluções** , clique com o botão direito do mouse para abrir o menu de contexto do seu projeto na solução à qual você deseja adicionar o pacote. Escolha **gerenciar pacotes NuGet** para abrir o **Gerenciador de pacotes NuGet**.
 
 1. Na janela **Gerenciador de pacotes NuGet** , procure Microsoft. CppCoreCheck.
 

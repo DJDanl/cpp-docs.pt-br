@@ -1,13 +1,14 @@
 ---
 title: Propriedades do depurador (Linux C++) | Microsoft Docs
+description: Descreve as propriedades do depurador do Microsoft Visual Studio Linux C++
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0d43877df817f40cfd97a03c4f66730ab17138d8
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924514"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334215"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Propriedades do depurador C++ (Linux C++)
 
@@ -21,7 +22,7 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 
 | Propriedade | Descrição | Opções |
 |--|--|--|
-| Computador de depuração remoto | **Visual Studio 2019 versão 16,1** : especifica a máquina na qual o programa será depurado. Pode ser diferente do computador de build remoto especificado na página [Geral](general-linux.md). Você pode adicionar ou editar uma conexão de computador de destino usando **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager** . |
+| Computador de depuração remoto | **Visual Studio 2019 versão 16,1** : especifica a máquina na qual o programa será depurado. Pode ser diferente do computador de build remoto especificado na página [Geral](general-linux.md). Você pode adicionar ou editar uma conexão de computador de destino usando **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager**. |
 | Comando de pré-inicialização | Um comando que é executado no shell antes do depurador ser iniciado, que possa ser usado para afetar o ambiente de depuração. |
 | Programa | O caminho completo no sistema remoto para programa a ser depurado. Se ele for deixado em branco ou inalterado, usará como padrão a saída do projeto atual. |
 | Argumentos do Programa | Os argumentos de linha de comando a serem passados ao programa que está sendo depurado. |
@@ -35,5 +36,6 @@ O suporte ao Linux está disponível no Visual Studio 2017 e posterior.
 | Habilitar estilos de formação Python | Habilite os estilos de formação de valores de expressão. Apenas há suporte no modo de depuração gdb. |
 | Arquivo de visualização | Arquivo de visualização nativo padrão (.natvis) que contém as diretivas de visualização para os tipos SLT. Outros arquivos .natvis que pertencem à solução atual são carregados automaticamente. |
 | Mapa adicional de caminho de arquivo de origem | Equivalências de caminho adicionais para o depurador usar para mapear os nomes de arquivo de origem do Windows para os nomes de arquivo de origem do Linux. O formato é " \<windows-path> = \<linux-path> ;...". Um nome de arquivo de origem encontrado no caminho do Windows é referenciado como se fosse encontrado na mesma posição relativa no caminho do Linux. Os arquivos encontrados no projeto local não exigem mapeamento adicional. |
+| Caminho GDB | **Visual studio 2019 versão 16,9** : especifica o caminho para o executável do gdb a ser usado pelo Visual Studio. |
 
 ::: moniker-end
