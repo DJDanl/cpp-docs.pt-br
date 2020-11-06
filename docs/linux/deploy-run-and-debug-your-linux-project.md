@@ -3,17 +3,17 @@ title: Implantar, executar e depurar seu projeto do C++ do MSBuild do Linux no V
 description: Descreve como compilar, executar e depurar código no destino remoto de dentro de um projeto C++ do Linux baseado em MSBuild no Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: a9feffbc86b50d510647776de6f1030f6986bef7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 7c038e1903fe029e04e8e9e9e41c11c7bff61ee2
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921705"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334189"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Implantar, executar e depurar o projeto do Linux com o MSBuild
 
 ::: moniker range="msvc-140"
-O suporte ao Linux está disponível no Visual Studio 2017 e posterior. Para ver a documentação dessas versões, defina a lista suspensa **versão** localizada acima do Sumário para o **Visual Studio 2017** ou **Visual Studio 2019** .
+O suporte ao Linux está disponível no Visual Studio 2017 e posterior. Para ver a documentação dessas versões, defina a lista suspensa **versão** localizada acima do Sumário para o **Visual Studio 2017** ou **Visual Studio 2019**.
 ::: moniker-end
 
 Depois de criar um projeto C++ do Linux baseado em MSBuild no Visual Studio e conectado ao projeto usando o [Gerenciador de conexões do Linux](connect-to-your-remote-linux-computer.md), você poderá executar e depurar o projeto. Você compilará, executará e depurará o código no destino remoto.
@@ -32,7 +32,7 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
 ## <a name="debug-your-linux-project"></a>Depurar o projeto do Linux
 
-1. Selecione o modo de depuração na página de propriedades **Depuração** .
+1. Selecione o modo de depuração na página de propriedades **Depuração**.
 
    ::: moniker range="msvc-160"
 
@@ -73,15 +73,15 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
 1. Pressione **F5** (ou **Depurar > Iniciar depuração** ) para iniciar a depuração.
 
-   Quando você inicia a depuração, o aplicativo é compilado no destino remoto antes de ser iniciado. Os possíveis erros de compilação serão exibidos na janela **Lista de Erros** .
+   Quando você inicia a depuração, o aplicativo é compilado no destino remoto antes de ser iniciado. Os possíveis erros de compilação serão exibidos na janela **Lista de Erros**.
 
    Se não houver nenhum erro, o aplicativo será iniciado e o depurador pausará no ponto de interrupção.
 
    ![Atingir um ponto de interrupção](media/hit_breakpoint.png)
 
-   Agora, você pode interagir com o aplicativo em seu estado atual, exibir variáveis e percorrer o código pressionando as teclas de comando como **F10** ou **F11** .
+   Agora, você pode interagir com o aplicativo em seu estado atual, exibir variáveis e percorrer o código pressionando as teclas de comando como **F10** ou **F11**.
 
-1. Se você quiser usar o Console do Linux para interagir com o aplicativo, selecione **Depurar > Console do Linux** .
+1. Se você quiser usar o Console do Linux para interagir com o aplicativo, selecione **Depurar > Console do Linux**.
 
    ![Menu do Console do Linux](media/consolemenu.png)
 
@@ -96,9 +96,11 @@ Há várias maneiras de interagir com o projeto do Linux e depurá-lo.
 
    ![Argumentos do Programa](media/settings_programarguments.png)
 
-- Opções específicas do depurador podem ser passadas para o GDB usando a entrada **Comandos adicionais do depurador** .  Por exemplo, talvez você deseje ignorar os sinais SIGILL (instrução inválida).  Seria possível usar o comando **handle** para isso, adicionando o seguinte à entrada **Comandos Adicionais do Depurador** , como mostrado acima:
+- Opções específicas do depurador podem ser passadas para o GDB usando a entrada **Comandos adicionais do depurador**.  Por exemplo, talvez você deseje ignorar os sinais SIGILL (instrução inválida).  Seria possível usar o comando **handle** para isso, adicionando o seguinte à entrada **Comandos Adicionais do Depurador** , como mostrado acima:
 
    `handle SIGILL nostop noprint`
+   
+- Você pode especificar o caminho para o GDB usado pelo Visual Studio usando o item de **caminho gdb** na página de propriedades de **depuração** do projeto. Essa propriedade está disponível no Visual Studio 2019 versão 16,9 e posterior.
 
 ## <a name="debug-with-attach-to-process"></a>Depuração com Anexar ao Processo
 
@@ -127,11 +129,11 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 No Visual Studio 2019 versão 16,1, você pode separar o computador de compilação remota do computador de depuração remota para projetos do Linux baseados no MSBuild e projetos CMake destinados a um computador Linux remoto. Por exemplo, você pode fazer uma compilação cruzada no x64 e implantar em um dispositivo ARM ao visar cenários de IoT.
 
-Por padrão, o computador de depuração remota é o mesmo que o computador de compilação remota ( **Propriedades de configuração**  >  **geral** do  >  **computador de compilação remota** ). Para especificar um novo computador de depuração remoto, clique com botão direito no projeto no **Gerenciador de Soluções** e vá para **Propriedades da Configuração** > **Depuração** > **Computador de Depuração Remoto** .  
+Por padrão, o computador de depuração remota é o mesmo que o computador de compilação remota ( **Propriedades de configuração**  >  **geral** do  >  **computador de compilação remota** ). Para especificar um novo computador de depuração remoto, clique com botão direito no projeto no **Gerenciador de Soluções** e vá para **Propriedades da Configuração** > **Depuração** > **Computador de Depuração Remoto**.  
 
 ![Computador de depuração remoto do Linux](media/linux-remote-debug-machine.png)
 
-O menu suspenso para **Computador de Depuração Remoto** é preenchido com todas as conexões remotas estabelecidas. Para adicionar uma nova conexão remota, navegue até **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager** ou pesquise "Gerenciador de conexões" no **início rápido** . Você também pode especificar um novo diretório de implantação remota nas páginas de propriedades do projeto ( **Propriedades de configuração**  >  **geral** do  >  **diretório de implantação remota** ).
+O menu suspenso para **Computador de Depuração Remoto** é preenchido com todas as conexões remotas estabelecidas. Para adicionar uma nova conexão remota, navegue até **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager** ou pesquise "Gerenciador de conexões" no **início rápido**. Você também pode especificar um novo diretório de implantação remota nas páginas de propriedades do projeto ( **Propriedades de configuração**  >  **geral** do  >  **diretório de implantação remota** ).
 
 Por padrão, somente os arquivos necessários para depurar o processo serão implantados no computador de depuração remoto. Você pode usar o **Gerenciador de Soluções** para configurar os arquivos de origem que serão implantados no computador de depuração remoto. Ao clicar em um arquivo de origem, você verá uma visualização de suas propriedades de arquivo diretamente abaixo do Gerenciador de Soluções.
 
@@ -164,7 +166,7 @@ Para projetos do CMake que se destinam a um computador Linux remoto, você pode 
 
 ![Computador de depuração remoto do CMake](media/cmake-remote-debug-machine.png)
 
-O IntelliSense sugere uma lista de todas as conexões remotas estabelecidas. Você pode adicionar uma nova conexão remota navegando até **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager** ou procurando "Gerenciador de conexões" no **início rápido** .
+O IntelliSense sugere uma lista de todas as conexões remotas estabelecidas. Você pode adicionar uma nova conexão remota navegando até **ferramentas**  >  **Opções**  >  Gerenciador de conexões **entre plataformas**  >  **Connection Manager** ou procurando "Gerenciador de conexões" no **início rápido**.
 
 Se quiser controle completo sobre a implantação, você poderá acrescentar os seguintes blocos de código ao arquivo launch.vs.json. Lembre-se de substituir os valores do espaço reservado pelos valores reais:
 

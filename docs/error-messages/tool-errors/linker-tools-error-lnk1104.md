@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: aa7bcf34cddfa24956d807131b3c484e7d580e73
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2eea6885537037db496a2f42e0fff0ffa69127e3
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506037"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334202"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erro das Ferramentas de Vinculador LNK1104
 
-> Não é possível abrir o arquivo '*filename*'
+> Não é possível abrir o arquivo ' *filename* '
 
 Esse erro é relatado quando o vinculador falha ao abrir um arquivo, seja para leitura ou gravação. As duas causas mais comuns do problema são:
 
@@ -40,11 +40,11 @@ Os programas antivírus geralmente bloqueiam temporariamente o acesso a arquivos
 
 ### <a name="windows-libraries-such-as-kernel32lib"></a>Bibliotecas do Windows, como Kernel32. lib
 
-Se o arquivo que não puder ser aberto for um dos arquivos de biblioteca padrão fornecidos pela Microsoft, como *Kernel32. lib*, você poderá ter um erro de configuração de projeto ou um erro de instalação. Verifique se o SDK do Windows foi instalado. Se seu projeto exigir outras bibliotecas da Microsoft, como o MFC, verifique se os componentes do MFC também foram instalados pelo instalador do Visual Studio. Você pode executar o instalador novamente para adicionar componentes opcionais a qualquer momento. Para obter mais informações, consulte [Modify Visual Studio](/visualstudio/install/modify-visual-studio). Use a guia **componentes individuais** no instalador para escolher bibliotecas e SDKs específicos.
+Se o arquivo que não puder ser aberto for um dos arquivos de biblioteca padrão fornecidos pela Microsoft, como *Kernel32. lib* , você poderá ter um erro de configuração de projeto ou um erro de instalação. Verifique se o SDK do Windows foi instalado. Se seu projeto exigir outras bibliotecas da Microsoft, como o MFC, verifique se os componentes do MFC também foram instalados pelo instalador do Visual Studio. Você pode executar o instalador novamente para adicionar componentes opcionais a qualquer momento. Para obter mais informações, consulte [Modify Visual Studio](/visualstudio/install/modify-visual-studio). Use a guia **componentes individuais** no instalador para escolher bibliotecas e SDKs específicos.
 
 ### <a name="versioned-vcruntime-libraries"></a>Bibliotecas de vcruntime com controle de versão
 
-Se a mensagem de erro tiver uma biblioteca da Microsoft com versão, como *msvcr120. lib*, o conjunto de ferramentas da plataforma para essa versão do compilador poderá não estar instalado. Para corrigir esse problema, você tem duas opções: atualizar o projeto para usar o conjunto de ferramentas da plataforma atual ou instalar o conjunto de ferramentas mais antigo e criar o projeto inalterado. Para obter mais informações, consulte [Atualizando projetos de versões anteriores do Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) e [usar multiplataforma nativa no Visual Studio para criar projetos antigos](../../porting/use-native-multi-targeting.md).
+Se a mensagem de erro tiver uma biblioteca da Microsoft com versão, como *msvcr120. lib* , o conjunto de ferramentas da plataforma para essa versão do compilador poderá não estar instalado. Para corrigir esse problema, você tem duas opções: atualizar o projeto para usar o conjunto de ferramentas da plataforma atual ou instalar o conjunto de ferramentas mais antigo e criar o projeto inalterado. Para obter mais informações, consulte [Atualizando projetos de versões anteriores do Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) e [usar multiplataforma nativa no Visual Studio para criar projetos antigos](../../porting/use-native-multi-targeting.md).
 
 ### <a name="retail-debug-or-platform-specific-libraries"></a>Bibliotecas específicas de varejo, depuração ou plataforma
 
@@ -52,7 +52,7 @@ O erro pode ocorrer quando você cria pela primeira vez uma nova plataforma ou c
 
 ### <a name="the-vccorliblib-library"></a>A biblioteca vccorlib. lib
 
-Não há bibliotecas Spectre para aplicativos ou componentes do UWP (Universal Windows). Se a mensagem de erro incluir *vccorlib. lib*, você poderá ter habilitado [/Qspectre](../../build/reference/qspectre.md) em um projeto UWP. Desabilite a opção de compilador **/Qspectre** para corrigir esse problema. No Visual Studio, altere a propriedade de **mitigação Spectre** . Ele é encontrado na página de geração de código **C/C++**  >  **Code Generation** da caixa de diálogo **páginas de propriedades** do projeto.
+Não há bibliotecas Spectre para aplicativos ou componentes do UWP (Universal Windows). Se a mensagem de erro incluir *vccorlib. lib* , você poderá ter habilitado [/Qspectre](../../build/reference/qspectre.md) em um projeto UWP. Desabilite a opção de compilador **/Qspectre** para corrigir esse problema. No Visual Studio, altere a propriedade de **mitigação Spectre** . Ele é encontrado na página de geração de código **C/C++**  >  **Code Generation** da caixa de diálogo **páginas de propriedades** do projeto.
 
 ### <a name="libraries-in-projects-from-online-or-other-sources"></a>Bibliotecas em projetos de online ou outras fontes
 
@@ -82,7 +82,7 @@ Certifique-se de instalar todas as versões da biblioteca necessárias para as c
 
 Você poderá ver esse erro se o *nome do arquivo* ainda não existir quando o vinculador tentar acessá-lo. Isso pode acontecer quando um projeto depende de outro na solução, mas os projetos são criados na ordem errada. Para corrigir esse problema, verifique se as referências do projeto estão definidas no projeto que usa o arquivo. Em seguida, o arquivo ausente é compilado antes de ser necessário. Para obter mais informações, consulte [adicionando referências em projetos do Visual Studio C++](../../build/adding-references-in-visual-cpp-projects.md) e [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).
 
-## <a name="cannot-open-file-cprogramobj"></a>Não é possível abrir o arquivo ' C: \\ Program. obj '
+## <a name="cant-open-file-cprogramobj"></a>Não é possível abrir o arquivo ' C: \\ Program. obj '
 
 Se você vir o nome do arquivo *C: \\ Program. obj* na mensagem de erro, empacote os caminhos da biblioteca entre aspas duplas. Esse erro ocorre quando um caminho não encapsulado que começa com *C: \\ arquivos de programa* é passado para o vinculador. Os caminhos não encapsulados também podem causar erros semelhantes. Normalmente, eles mostram um arquivo. obj inesperado na raiz da unidade.
 
@@ -128,10 +128,10 @@ O erro pode ocorrer quando você não tem espaço em disco suficiente. O vincula
 
 ### <a name="problems-in-the-tmp-environment-variable"></a>Problemas na variável de ambiente TMP
 
-Se o *nome do arquivo* for chamado de lnk*nnn*, ele será um nome de arquivo gerado pelo vinculador para um ficheiro temporário. O diretório especificado na variável de ambiente TMP pode não existir. Ou, mais de um diretório pode ser especificado para a variável de ambiente TMP. Somente um caminho de diretório deve ser especificado para a variável de ambiente TMP.
+Se o *nome do arquivo* for chamado de lnk *nnn* , ele será um nome de arquivo gerado pelo vinculador para um ficheiro temporário. O diretório especificado na variável de ambiente TMP pode não existir. Ou, mais de um diretório pode ser especificado para a variável de ambiente TMP. Somente um caminho de diretório deve ser especificado para a variável de ambiente TMP.
 
 ## <a name="help-my-issue-isnt-listed-here"></a>Ajuda, meu problema não está listado aqui!
 
-Quando nenhum dos problemas listados aqui se aplicar, você poderá usar as ferramentas de comentários no Visual Studio para obter ajuda. No IDE, vá para a barra de menus e escolha **ajuda > enviar comentários > relatar um problema**. Ou envie uma sugestão usando **a ajuda > enviar comentários > enviar uma sugestão**. Você também pode usar o site do Visual Studio C++ [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)). Use-o para procurar respostas para perguntas e pedir ajuda. Para obter mais informações, consulte [como relatar um problema com o conjunto de ferramentas Visual C++ ou a documentação](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Quando nenhum dos problemas listados aqui se aplicar, você poderá usar as ferramentas de comentários no Visual Studio para obter ajuda. No IDE, vá para a barra de menus e escolha **ajuda > enviar comentários > relatar um problema**. Ou envie uma sugestão usando **a ajuda > enviar comentários > enviar uma sugestão**. Você também pode usar o [Microsoft docs Q&um](/answers/topics/c%2B%2B.html) site para perguntas e o site da comunidade de [desenvolvedores](https://aka.ms/vsfeedback/browsecpp) do Visual Studio C++. Use esses sites para procurar respostas para perguntas e pedir ajuda. Para obter mais informações, consulte [como relatar um problema com o conjunto de ferramentas Visual C++ ou a documentação](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Se você descobriu uma nova maneira de corrigir esse problema que devemos adicionar a este artigo, avise-nos. Você pode enviar comentários para nós usando o botão abaixo para **esta página**. Use-o para criar um novo problema em nosso [repositório GitHub de documentação do C++](https://github.com/MicrosoftDocs/cpp-docs/issues). Obrigado!
