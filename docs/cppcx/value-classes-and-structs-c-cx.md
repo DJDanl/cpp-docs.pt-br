@@ -5,12 +5,12 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214939"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381591"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes e estruturas de valor (C++/CX)
 
@@ -64,7 +64,7 @@ O fragmento de código a seguir declara os tipos `Coordinates` e `City` como est
 
 ## <a name="parameter-passing-for-value-types"></a>Passagem de parâmetro para tipos de valor
 
-Se você tiver um valor de tipo como um parâmetro de função ou método, ele será normalmente transmitido por valor. Para objetos maiores, isso pode causar um problema de desempenho. No Visual Studio 2013 e anteriores, os tipos de valor em C++/CX sempre são passados por valor. No Visual Studio de 2015 e posteriores, você pode passar tipos de valor por referência ou por valor.
+Se você tiver um valor de tipo como um parâmetro de função ou método, ele será normalmente transmitido por valor. Para objetos maiores, isso pode causar um problema de desempenho. Em Visual Studio 2013 e anteriores, os tipos de valor em C++/CX eram sempre passados por valor. No Visual Studio de 2015 e posteriores, você pode passar tipos de valor por referência ou por valor.
 
 Para declarar um parâmetro que transmita um tipo de valor por valor, use um código como o seguinte:
 

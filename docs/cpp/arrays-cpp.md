@@ -1,17 +1,18 @@
 ---
 title: Matrizes (C++)
-ms.date: 08/03/2020
+description: Saiba como declarar e usar o tipo de matriz nativa na linguagem de programação C++ padrão.
+ms.date: 11/08/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2a84e5db04d0a37ebd65e0d979e9b075b7c23312
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352785"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381578"
 ---
 # <a name="arrays-c"></a>Matrizes (C++)
 
@@ -44,7 +45,7 @@ Em uma declaração de matriz do C++, o tamanho da matriz é especificado após 
     }
 ```
 
-O primeiro elemento na matriz é o elemento inicial. O último elemento é o elemento (*n*-1), em que *n* é o número de elementos que a matriz pode conter. O número de elementos na declaração deve ser de um tipo integral e deve ser maior que 0. É sua responsabilidade garantir que seu programa nunca passe um valor para o operador subscrito maior que `(size - 1)` .
+O primeiro elemento na matriz é o elemento inicial. O último elemento é o elemento ( *n* -1), em que *n* é o número de elementos que a matriz pode conter. O número de elementos na declaração deve ser de um tipo integral e deve ser maior que 0. É sua responsabilidade garantir que seu programa nunca passe um valor para o operador subscrito maior que `(size - 1)` .
 
 Uma matriz de tamanho zero é válida somente quando a matriz é o último campo em um **`struct`** ou **`union`** e quando as extensões da Microsoft são habilitadas ( **`/Za`** ou **`/permissive-`** não é definido).
 
@@ -136,7 +137,7 @@ Quando uma matriz é passada para uma função, ela é passada como um ponteiro 
 O exemplo a seguir mostra uma função que aceita uma matriz e um comprimento. O ponteiro aponta para a matriz original, não para uma cópia. Como o parâmetro não é **`const`** , a função pode modificar os elementos da matriz.
 
 ```cpp
-void process(double p*, const size_t len)
+void process(double *p, const size_t len)
 {
     std::cout << "process:\n";
     for (size_t i = 0; i < len; ++i)
@@ -146,10 +147,10 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare a matriz como const para torná-la somente leitura dentro do bloco de função:
+Declare e defina o parâmetro de matriz `p` como **`const`** para torná-lo somente leitura dentro do bloco de função:
 
 ```cpp
-void process(const double p*, const size_t len);
+void process(const double *p, const size_t len);
 ```
 
 A mesma função também pode ser declarada de maneiras, sem alterações no comportamento. A matriz ainda é passada como um ponteiro para o primeiro elemento:
@@ -254,7 +255,7 @@ A função `FindMinToMkt` é escrita de modo que a adição de novas fábricas n
 
 ## <a name="initializing-arrays"></a>Inicializando matrizes
 
-Matrizes de objetos que têm um construtor de classe são inicializadas pelo construtor. Quando há menos itens na lista de inicializadores do que elementos na matriz, o construtor padrão é usado para os elementos restantes. Se nenhum construtor padrão for definido para a classe, a lista de inicializadores deverá ser *concluída*, ou seja, deve haver um inicializador para cada elemento na matriz.
+Matrizes de objetos que têm um construtor de classe são inicializadas pelo construtor. Quando há menos itens na lista de inicializadores do que elementos na matriz, o construtor padrão é usado para os elementos restantes. Se nenhum construtor padrão for definido para a classe, a lista de inicializadores deverá ser *concluída* , ou seja, deve haver um inicializador para cada elemento na matriz.
 
 Considere a classe `Point` que define dois construtores:
 
@@ -344,7 +345,7 @@ Assim como outros operadores, o operador subscrito ( `[]` ) pode ser redefinido 
 
 `*((array_name) + (subscript))`
 
-Como em todas as adição que envolvem tipos de ponteiro, o dimensionamento é feito automaticamente para ajustar o tamanho do tipo. O valor resultante não é *n* bytes da origem de `array_name` ; em vez disso, é o *n*-ésimo do elemento da matriz. Para obter mais informações sobre essa conversão, consulte [operadores aditivos](additive-operators-plus-and.md).
+Como em todas as adição que envolvem tipos de ponteiro, o dimensionamento é feito automaticamente para ajustar o tamanho do tipo. O valor resultante não é *n* bytes da origem de `array_name` ; em vez disso, é o *n* -ésimo do elemento da matriz. Para obter mais informações sobre essa conversão, consulte [operadores aditivos](additive-operators-plus-and.md).
 
 De maneira semelhante, para matrizes multidimensionais, o endereço é derivado usando o seguinte método:
 
