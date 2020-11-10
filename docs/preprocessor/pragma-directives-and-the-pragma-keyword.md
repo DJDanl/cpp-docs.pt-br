@@ -14,18 +14,18 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238402"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381539"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Diretivas Pragma e a palavra-chave __pragma
 
 As diretivas pragma especificam recursos de compilador específicos do computador ou do sistema operacional. A palavra-chave **__pragma** , que é específica para o compilador da Microsoft, permite que você codifique as diretivas pragma nas definições de macro.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Sintaxe
 
 > **#`pragma`***cadeia de caracteres de token*\
 > **`__pragma(`***cadeia de caracteres* **`)`** de token dois sublinhados à esquerda- **`_Pragma(`** *cadeia de caracteres de* extensão específica da Microsoft-literal **`)`** //C99
@@ -148,7 +148,7 @@ return _hr; \
 O literal de cadeia de caracteres deve ser o que seria colocado seguindo uma *`#pragma`* instrução. Por exemplo:
 
 ```c
-#pragma message("--the #pragma way")
+#pragma message("the #pragma way")
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 
