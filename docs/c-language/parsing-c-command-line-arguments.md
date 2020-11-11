@@ -1,19 +1,21 @@
 ---
 title: Analisando argumentos de linha de comando C
-ms.date: 11/04/2016
+description: Saiba como o código de inicialização do tempo de execução do Microsoft C interpreta argumentos de linha de comando para criar os parâmetros argv e argc.
+ms.date: 11/09/2020
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
+- double quote marks
 - command line, parsing
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 92921e91ee6bb37b2bf7b702a1b31ed045187b59
+ms.sourcegitcommit: b38485bb3a9d479e0c5d64ffc3d841fa2c2b366f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299085"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441249"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analisando argumentos de linha de comando C
 
@@ -23,15 +25,17 @@ O código de inicialização do Microsoft C usa as seguintes regras para interpr
 
 - Os argumentos são delimitados por espaço em branco, que é um espaço ou uma tabulação.
 
-- Uma cadeia de caracteres cercada por aspas duplas são interpretadas como um único argumento, independentemente do espaço em branco contido. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento. Observe que o cursor (**^**) não é reconhecido como um caractere de escape ou delimitador.
+- O primeiro argumento ( `argv[0]` ) é tratado especialmente. Ele representa o nome do programa. Como ele deve ser um nome de caminho válido, partes entre aspas duplas ( **`"`** ) são permitidas. As aspas duplas não são incluídas na `argv[0]` saída. As partes entre aspas duplas impedem a interpretação de um espaço ou caractere de tabulação como o final do argumento. As regras posteriores desta lista não se aplicam.
 
-- Aspas duplas precedidas por uma barra invertida ** \\"**, são interpretadas como uma aspa dupla literal (**"**).
+- Uma cadeia de caracteres entre aspas duplas é interpretada como um único argumento, independentemente de conter ou não espaço em branco. Uma cadeia de caracteres entre aspas pode ser inserida em um argumento. O cursor ( **`^`** ) não é reconhecido como um caractere de escape ou delimitador. Dentro de uma cadeia de caracteres entre aspas, um par de aspas duplas é interpretado como uma aspa dupla de escape simples. Se a linha de comando terminar antes de uma marca de aspas duplas de fechamento ser encontrada, todos os caracteres lidos até agora serão gerados como o último argumento.
 
-- As barras invertidas são interpretadas literalmente, a menos que precedam imediatamente as aspas duplas.
+- Uma aspa dupla precedida por uma barra invertida ( **`\"`** ) é interpretada como uma aspa dupla literal ( **`"`** ).
 
-- Se um número par de barras invertidas for seguido por uma aspa dupla, uma barra invertida (**\\**) será colocada na `argv` matriz para cada par de barras invertidas (**\\**) e as aspas duplas (**"**) serão interpretadas como um delimitador de cadeia de caracteres.
+- As barras invertidas são interpretadas literalmente, a menos que precedam imediatamente uma aspa dupla.
 
-- Se um número ímpar de barras invertidas for seguido por aspas duplas, uma barra invertida (**\\**) `argv` será colocada na matriz para cada par de barras invertidas (**\\**) e as aspas duplas serão interpretadas como uma sequência de escape pela barra invertida restante, fazendo com que uma aspa dupla literal (**"**) `argv`seja colocada em.
+- Se um número par de barras invertidas for seguido por uma aspa dupla, uma barra invertida ( **`\`** ) será colocada na `argv` matriz para cada par de barras invertidas ( **`\\`** ), e a marca de aspas duplas ( **`"`** ) será interpretada como um delimitador de cadeia de caracteres.
+
+- Se um número ímpar de barras invertidas for seguido por uma aspa dupla, uma barra invertida ( **`\`** ) será colocada na `argv` matriz para cada par de barras invertidas ( **`\\`** ). A marca de aspas duplas é interpretada como uma sequência de escape pela barra invertida restante, fazendo com que uma aspa dupla literal ( **`"`** ) seja colocada `argv` .
 
 Esta lista ilustra as regras acima mostrando o resultado interpretado passado para `argv` por vários exemplos de argumentos de linha de comando. O resultado listado na segunda, terceira e quarta coluna são do programa de ARGS.C que segue a lista.
 
@@ -42,13 +46,13 @@ Esta lista ilustra as regras acima mostrando o resultado interpretado passado pa
 |`a\\\b d"e f"g h`|`a\\\b`|`de fg`|`h`|
 |`a\\\"b c d`|`a\"b`|`c`|`d`|
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|
+|`a"b"" c d`|`ab" c d`|||
 
 ## <a name="example"></a>Exemplo
 
 ### <a name="code"></a>Código
 
 ```c
-// Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
 // argc  argv  envp
@@ -99,4 +103,4 @@ Environment variables:
 
 ## <a name="see-also"></a>Confira também
 
-[Função main e execução do programa](../c-language/main-function-and-program-execution.md)
+[Execução principal da função e do programa](../c-language/main-function-and-program-execution.md)
