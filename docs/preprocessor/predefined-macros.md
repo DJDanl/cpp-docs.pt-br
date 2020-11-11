@@ -240,12 +240,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 85b467a0ac3db67b2715a849966618697437658b
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: b5e2b34357456c4937d8ed17dee5661d36b7b0c0
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075693"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448456"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -277,47 +277,47 @@ O compilador oferece suporte a essas macros predefinidas especificadas pelos pad
 
 - `__LINE__` Definido como o número de linha inteiro no arquivo de origem atual. O valor da `__LINE__` macro pode ser alterado usando uma `#line` diretiva. Essa macro sempre é definida.
 
-- `__STDC__` Definido como 1 somente quando compilado como C e se a [**`/Za`**](../build/reference/za-ze-disable-language-extensions.md) opção do compilador for especificada. Caso contrário, indefinido.
+- `__STDC__` Definido como 1 somente quando compilado como C e se a [`/Za`](../build/reference/za-ze-disable-language-extensions.md) opção do compilador for especificada. Caso contrário, indefinido.
 
-- `__STDC_HOSTED__` Definido como 1 se a implementação for uma *implementação hospedada*, uma que dá suporte a toda a biblioteca padrão necessária. Caso contrário, definido como 0.
+- `__STDC_HOSTED__` Definido como 1 se a implementação for uma *implementação hospedada* , uma que dá suporte a toda a biblioteca padrão necessária. Caso contrário, definido como 0.
 
-- `__STDC_NO_ATOMICS__` Definido como 1 se a implementação não dá suporte a Atomics padrão opcionais. A implementação MSVC define como 1 Quando compilada como C e uma das [**`/std`**](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
+- `__STDC_NO_ATOMICS__` Definido como 1 se a implementação não dá suporte a Atomics padrão opcionais. A implementação MSVC define como 1 Quando compilada como C e uma das [`/std`](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
 
-- `__STDC_NO_COMPLEX__` Definido como 1 se a implementação não dá suporte a números complexos padrão opcionais. A implementação MSVC define como 1 Quando compilada como C e uma das [**`/std`**](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
+- `__STDC_NO_COMPLEX__` Definido como 1 se a implementação não dá suporte a números complexos padrão opcionais. A implementação MSVC define como 1 Quando compilada como C e uma das [`/std`](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
 
-- `__STDC_NO_THREADS__` Definido como 1 se a implementação não dá suporte a threads padrão opcionais. A implementação MSVC define como 1 Quando compilada como C e uma das [**`/std`**](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
+- `__STDC_NO_THREADS__` Definido como 1 se a implementação não dá suporte a threads padrão opcionais. A implementação MSVC define como 1 Quando compilada como C e uma das [`/std`](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
 
-- `__STDC_NO_VLA__` Definido como 1 se a implementação não oferece suporte a matrizes de comprimento variável padrão. A implementação MSVC define como 1 Quando compilada como C e uma das [**`/std`**](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
+- `__STDC_NO_VLA__` Definido como 1 se a implementação não oferece suporte a matrizes de comprimento variável padrão. A implementação MSVC define como 1 Quando compilada como C e uma das [`/std`](../build/reference/std-specify-language-standard-version.md) Opções C11 ou C17 é especificada.
 
-- `__STDC_VERSION__` Definido quando compilado como C e uma das **`/std`** Opções C11 ou C17 é especificado. Ele se expande para `201112L` para [**`/std:c11`**](../build/reference/std-specify-language-standard-version.md) e `201710L` para o [**`/std:c17`**](../build/reference/std-specify-language-standard-version.md) .
+- `__STDC_VERSION__` Definido quando compilado como C e uma das **`/std`** Opções C11 ou C17 é especificado. Ele se expande para `201112L` para [`/std:c11`](../build/reference/std-specify-language-standard-version.md) e `201710L` para o [`/std:c17`](../build/reference/std-specify-language-standard-version.md) .
 
 - `__STDCPP_THREADS__` Definido como 1 se e somente se um programa puder ter mais de um thread de execução e compilado como C++. Caso contrário, indefinido.
 
-- `__TIME__` A hora da tradução da unidade de tradução pré-processado. O tempo é um literal de cadeia de caracteres no formato *hh: mm: SS*, o mesmo que o tempo retornado pela função [asctime](../c-runtime-library/reference/asctime-wasctime.md) do CRT. Essa macro sempre é definida.
+- `__TIME__` A hora da tradução da unidade de tradução pré-processado. O tempo é um literal de cadeia de caracteres no formato *hh: mm: SS* , o mesmo que o tempo retornado pela função [asctime](../c-runtime-library/reference/asctime-wasctime.md) do CRT. Essa macro sempre é definida.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Macros predefinidas específicas da Microsoft
 
 O MSVC dá suporte a essas macros predefinidas adicionais.
 
-- `__ATOM__` Definido como 1 quando a [**`/favor:ATOM`**](../build/reference/favor-optimize-for-architecture-specifics.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__ATOM__` Definido como 1 quando a [`/favor:ATOM`](../build/reference/favor-optimize-for-architecture-specifics.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX__` Definido como 1 quando as [**`/arch:AVX`**](../build/reference/arch-x86.md) [**`/arch:AVX2`**](../build/reference/arch-x86.md) Opções,, ou [**`/arch:AVX512`**](../build/reference/arch-x86.md) do compilador são definidas e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX__` Definido como 1 quando as [`/arch:AVX`](../build/reference/arch-x86.md) [`/arch:AVX2`](../build/reference/arch-x86.md) Opções,, ou [`/arch:AVX512`](../build/reference/arch-x86.md) do compilador são definidas e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX2__` Definido como 1 quando a [**`/arch:AVX2`**](../build/reference/arch-x86.md) opção ou do [**`/arch:AVX512`**](../build/reference/arch-x86.md) compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX2__` Definido como 1 quando a [`/arch:AVX2`](../build/reference/arch-x86.md) opção ou do [`/arch:AVX512`](../build/reference/arch-x86.md) compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX512BW__` Definido como 1 quando a [**`/arch:AVX512`**](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX512BW__` Definido como 1 quando a [`/arch:AVX512`](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX512CD__` Definido como 1 quando a [**`/arch:AVX512`**](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX512CD__` Definido como 1 quando a [`/arch:AVX512`](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX512DQ__` Definido como 1 quando a [**`/arch:AVX512`**](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX512DQ__` Definido como 1 quando a [`/arch:AVX512`](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX512F__` Definido como 1 quando a [**`/arch:AVX512`**](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX512F__` Definido como 1 quando a [`/arch:AVX512`](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
-- `__AVX512VL__` Definido como 1 quando a [**`/arch:AVX512`**](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
+- `__AVX512VL__` Definido como 1 quando a [`/arch:AVX512`](../build/reference/arch-x86.md) opção do compilador é definida e o destino do compilador é x86 ou x64. Caso contrário, indefinido.
 
 - `_CHAR_UNSIGNED` Definido como 1 se o **`char`** tipo padrão não for assinado. Esse valor é definido quando a opção de compilador [ **`/J`** (tipo de caractere padrão não assinado)](../build/reference/j-default-char-type-is-unsigned.md) é definida. Caso contrário, indefinido.
 
-- `__CLR_VER` Definido como um literal inteiro que representa a versão do CLR (Common Language Runtime) usado para compilar o aplicativo. O valor é codificado no formulário `Mmmbbbbb` , em que `M` é a versão principal do tempo de execução, `mm` é a versão secundária do tempo de execução e `bbbbb` é o número da compilação. `__CLR_VER` será definido se a [**`/clr`**](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `__CLR_VER` Definido como um literal inteiro que representa a versão do CLR (Common Language Runtime) usado para compilar o aplicativo. O valor é codificado no formulário `Mmmbbbbb` , em que `M` é a versão principal do tempo de execução, `mm` é a versão secundária do tempo de execução e `bbbbb` é o número da compilação. `__CLR_VER` será definido se a [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
     ```cpp
     // clr_ver.cpp
@@ -374,7 +374,7 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
     }
     ```
 
-- `__cplusplus_cli` Definido como o valor inteiro literal 200406 quando compilado como C++ e uma [**`/clr`**](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador é definida. Caso contrário, indefinido. Quando definido, `__cplusplus_cli` está em vigor em toda a unidade de tradução.
+- `__cplusplus_cli` Definido como o valor inteiro literal 200406 quando compilado como C++ e uma [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) opção de compilador é definida. Caso contrário, indefinido. Quando definido, `__cplusplus_cli` está em vigor em toda a unidade de tradução.
 
     ```cpp
     // cplusplus_cli.cpp
@@ -391,23 +391,23 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
 - `__cplusplus_winrt`Definido como o valor inteiro literal 201009 quando compilado como C++ e a opção de compilador [ **`/ZW`** (compilação de Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) é definida. Caso contrário, indefinido.
 
-- `_CPPRTTI`Definido como 1 se a opção de compilador [ **`/GR`** (habilitar informações de tipo de tempo de execução)](../build/reference/gr-enable-run-time-type-information.md) estiver definida. Caso contrário, indefinido.
+- `_CPPRTTI`Definido como 1 se a opção de compilador [ **`/GR`** (habilitar informações de tipo de Run-Time)](../build/reference/gr-enable-run-time-type-information.md) estiver definida. Caso contrário, indefinido.
 
 - `_CPPUNWIND`Definido como 1 se uma ou mais das opções de compilador [ **`/GX`** (habilitar manipulação de exceção)](../build/reference/gx-enable-exception-handling.md), [ **`/clr`** (compilação em tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md)ou [ **`/EH`** (modelo de tratamento de exceção)](../build/reference/eh-exception-handling-model.md) estão definidas. Caso contrário, indefinido.
 
-- `_DEBUG` Definido como 1 quando a [**`/LDd`**](../build/reference/md-mt-ld-use-run-time-library.md) [**`/MDd`**](../build/reference/md-mt-ld-use-run-time-library.md) opção do compilador, ou [**`/MTd`**](../build/reference/md-mt-ld-use-run-time-library.md) é definida. Caso contrário, indefinido.
+- `_DEBUG` Definido como 1 quando a [`/LDd`](../build/reference/md-mt-ld-use-run-time-library.md) [`/MDd`](../build/reference/md-mt-ld-use-run-time-library.md) opção do compilador, ou [`/MTd`](../build/reference/md-mt-ld-use-run-time-library.md) é definida. Caso contrário, indefinido.
 
-- `_DLL` Definido como 1 quando a [**`/MD`**](../build/reference/md-mt-ld-use-run-time-library.md) [**`/MDd`**](../build/reference/md-mt-ld-use-run-time-library.md) opção de compilador ou (DLL de vários threads) está definida. Caso contrário, indefinido.
+- `_DLL` Definido como 1 quando a [`/MD`](../build/reference/md-mt-ld-use-run-time-library.md) [`/MDd`](../build/reference/md-mt-ld-use-run-time-library.md) opção de compilador ou (DLL de vários threads) está definida. Caso contrário, indefinido.
 
-- `__FUNCDNAME__` Definido como um literal de cadeia de caracteres que contém o [nome decorado](../build/reference/decorated-names.md) da função de circunscrição. A macro é definida somente dentro de uma função. A `__FUNCDNAME__` macro não será expandida se você usar a [**`/EP`**](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) [**`/P`**](../build/reference/p-preprocess-to-a-file.md) opção de compilador ou.
+- `__FUNCDNAME__` Definido como um literal de cadeia de caracteres que contém o [nome decorado](../build/reference/decorated-names.md) da função de circunscrição. A macro é definida somente dentro de uma função. A `__FUNCDNAME__` macro não será expandida se você usar a [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) [`/P`](../build/reference/p-preprocess-to-a-file.md) opção de compilador ou.
 
    Este exemplo usa as `__FUNCDNAME__` `__FUNCSIG__` `__FUNCTION__` macros, e para exibir informações de função.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- `__FUNCSIG__` Definido como um literal de cadeia de caracteres que contém a assinatura da função de circunscrição. A macro é definida somente dentro de uma função. A `__FUNCSIG__` macro não será expandida se você usar a [**`/EP`**](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) [**`/P`**](../build/reference/p-preprocess-to-a-file.md) opção de compilador ou. Quando compilado para um destino de 64 bits, a Convenção de chamada é **`__cdecl`** por padrão. Para obter um exemplo de uso, consulte a `__FUNCDNAME__` macro.
+- `__FUNCSIG__` Definido como um literal de cadeia de caracteres que contém a assinatura da função de circunscrição. A macro é definida somente dentro de uma função. A `__FUNCSIG__` macro não será expandida se você usar a [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) [`/P`](../build/reference/p-preprocess-to-a-file.md) opção de compilador ou. Quando compilado para um destino de 64 bits, a Convenção de chamada é **`__cdecl`** por padrão. Para obter um exemplo de uso, consulte a `__FUNCDNAME__` macro.
 
-- `__FUNCTION__` Definido como um literal de cadeia de caracteres que contém o nome não decorado da função de circunscrição. A macro é definida somente dentro de uma função. A `__FUNCTION__` macro não será expandida se você usar a [**`/EP`**](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) [**`/P`**](../build/reference/p-preprocess-to-a-file.md) opção de compilador ou. Para obter um exemplo de uso, consulte a `__FUNCDNAME__` macro.
+- `__FUNCTION__` Definido como um literal de cadeia de caracteres que contém o nome não decorado da função de circunscrição. A macro é definida somente dentro de uma função. A `__FUNCTION__` macro não será expandida se você usar a [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) [`/P`](../build/reference/p-preprocess-to-a-file.md) opção de compilador ou. Para obter um exemplo de uso, consulte a `__FUNCDNAME__` macro.
 
 - `_INTEGRAL_MAX_BITS` Definido como o valor inteiro literal 64, o tamanho máximo (em bits) para um tipo não vetorial integral. Essa macro sempre é definida.
 
@@ -421,7 +421,7 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
 - `__INTELLISENSE__` Definido como 1 durante uma passagem do compilador do IntelliSense no IDE do Visual Studio. Caso contrário, indefinido. Você pode usar essa macro para proteger o código que o compilador do IntelliSense não entende ou usá-lo para alternar entre o compilador Build e o IntelliSense. Para obter mais informações, consulte [dicas de solução de problemas para o IntelliSense lentidão](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/).
 
-- `_ISO_VOLATILE` Definido como 1 se a [**`/volatile:iso`**](../build/reference/volatile-volatile-keyword-interpretation.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `_ISO_VOLATILE` Definido como 1 se a [`/volatile:iso`](../build/reference/volatile-volatile-keyword-interpretation.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
 - `_KERNEL_MODE`Definido como 1 se a opção de compilador [ **`/kernel`** (criar binário do modo kernel)](../build/reference/kernel-create-kernel-mode-binary.md) estiver definida. Caso contrário, indefinido.
 
@@ -429,9 +429,9 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
 - `_M_ARM` Definido como o valor literal inteiro 7 para compilações direcionadas a processadores ARM. Caso contrário, indefinido.
 
-- `_M_ARM_ARMV7VE` Definido como 1 quando a [**`/arch:ARMv7VE`**](../build/reference/arch-arm.md) opção do compilador é definida para compilações direcionadas a processadores ARM. Caso contrário, indefinido.
+- `_M_ARM_ARMV7VE` Definido como 1 quando a [`/arch:ARMv7VE`](../build/reference/arch-arm.md) opção do compilador é definida para compilações direcionadas a processadores ARM. Caso contrário, indefinido.
 
-- `_M_ARM_FP` Definido como um valor literal inteiro que indica qual [**`/arch`**](../build/reference/arch-arm.md) opção de compilador foi definida para destinos do processador ARM. Caso contrário, indefinido.
+- `_M_ARM_FP` Definido como um valor literal inteiro que indica qual [`/arch`](../build/reference/arch-arm.md) opção de compilador foi definida para destinos do processador ARM. Caso contrário, indefinido.
 
   - Um valor no intervalo de 30-39 se nenhuma **`/arch`** opção de ARM tiver sido especificada, indicando que a arquitetura padrão para ARM foi definida ( `VFPv3` ).
 
@@ -443,21 +443,21 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
 - `_M_CEE`Definido como 001 se qualquer opção [ **`/clr`** de compilador (compilação de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) estiver definida. Caso contrário, indefinido.
 
-- `_M_CEE_PURE` Preterido a partir do Visual Studio 2015. Definido como 001 se a [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `_M_CEE_PURE` Preterido a partir do Visual Studio 2015. Definido como 001 se a [`/clr:pure`](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
-- `_M_CEE_SAFE` Preterido a partir do Visual Studio 2015. Definido como 001 se a [**`/clr:safe`**](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `_M_CEE_SAFE` Preterido a partir do Visual Studio 2015. Definido como 001 se a [`/clr:safe`](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
-- `_M_FP_EXCEPT` Definido como 1 se a [**`/fp:except`**](../build/reference/fp-specify-floating-point-behavior.md) [**`/fp:strict`**](../build/reference/fp-specify-floating-point-behavior.md) opção de compilador ou está definida. Caso contrário, indefinido.
+- `_M_FP_EXCEPT` Definido como 1 se a [`/fp:except`](../build/reference/fp-specify-floating-point-behavior.md) [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) opção de compilador ou está definida. Caso contrário, indefinido.
 
-- `_M_FP_FAST` Definido como 1 se a [**`/fp:fast`**](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `_M_FP_FAST` Definido como 1 se a [`/fp:fast`](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
-- `_M_FP_PRECISE` Definido como 1 se a [**`/fp:precise`**](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `_M_FP_PRECISE` Definido como 1 se a [`/fp:precise`](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
-- `_M_FP_STRICT` Definido como 1 se a [**`/fp:strict`**](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador estiver definida. Caso contrário, indefinido.
+- `_M_FP_STRICT` Definido como 1 se a [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) opção do compilador estiver definida. Caso contrário, indefinido.
 
 - `_M_IX86` Definido como o valor inteiro literal 600 para compilações que visam processadores x86. Essa macro não está definida para destinos de compilação x64 ou ARM.
 
-- `_M_IX86_FP` Definido como um valor literal inteiro que indica a [**`/arch`**](../build/reference/arch-arm.md) opção de compilador que foi definida ou o padrão. Essa macro é sempre definida quando o destino da compilação é um processador x86. Caso contrário, indefinido. Quando definido, o valor é:
+- `_M_IX86_FP` Definido como um valor literal inteiro que indica a [`/arch`](../build/reference/arch-arm.md) opção de compilador que foi definida ou o padrão. Essa macro é sempre definida quando o destino da compilação é um processador x86. Caso contrário, indefinido. Quando definido, o valor é:
 
   - 0 se a `/arch:IA32` opção do compilador foi definida.
 
@@ -469,7 +469,7 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
 - `_M_X64` Definido como o valor inteiro literal 100 para compilações que visam processadores x64. Caso contrário, indefinido.
 
-- `_MANAGED` Definido como 1 quando a [**`/clr`**](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador é definida. Caso contrário, indefinido.
+- `_MANAGED` Definido como 1 quando a [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) opção do compilador é definida. Caso contrário, indefinido.
 
 - `_MSC_BUILD` Definido como um literal inteiro que contém o elemento número de revisão do número de versão do compilador. O número de revisão é o quarto elemento do número de versão delimitado por período. Por exemplo, se o número de versão do compilador C/C++ da Microsoft for 15.00.20706.01, a `_MSC_BUILD` macro será avaliada como 1. Essa macro sempre é definida.
 
@@ -521,11 +521,11 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
    Para obter mais informações, consulte [Visual C++ versão do compilador](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) no blog da equipe do Microsoft C++.
 
-- `_MSVC_LANG` Definido como um literal inteiro que especifica o padrão de linguagem C++ direcionado pelo compilador. Ele é definido somente no código compilado como C++. A macro é o valor literal inteiro 201402L por padrão ou quando a [**`/std:c++14`**](../build/reference/std-specify-language-standard-version.md) opção do compilador é especificada. A macro será definida como 201703L se a [**`/std:c++17`**](../build/reference/std-specify-language-standard-version.md) opção do compilador for especificada. Ele é definido como um valor mais alto e não especificado quando a [**`/std:c++latest`**](../build/reference/std-specify-language-standard-version.md) opção é especificada. Caso contrário, a macro será indefinida. As `_MSVC_LANG` Opções de compilador macro e [ **`/std`** (especificar versão padrão da linguagem)](../build/reference/std-specify-language-standard-version.md) estão disponíveis a partir do Visual Studio 2015 atualização 3.
+- `_MSVC_LANG` Definido como um literal inteiro que especifica o padrão de linguagem C++ direcionado pelo compilador. Ele é definido somente no código compilado como C++. A macro é o valor literal inteiro 201402L por padrão ou quando a [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) opção do compilador é especificada. A macro será definida como 201703L se a [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) opção do compilador for especificada. Ele é definido como um valor mais alto e não especificado quando a [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opção é especificada. Caso contrário, a macro será indefinida. As `_MSVC_LANG` Opções de compilador macro e [ **`/std`** (especificar versão padrão da linguagem)](../build/reference/std-specify-language-standard-version.md) estão disponíveis a partir do Visual Studio 2015 atualização 3.
 
-- `__MSVC_RUNTIME_CHECKS` Definido como 1 quando uma das [**`/RTC`**](../build/reference/rtc-run-time-error-checks.md) Opções do compilador é definida. Caso contrário, indefinido.
+- `__MSVC_RUNTIME_CHECKS` Definido como 1 quando uma das [`/RTC`](../build/reference/rtc-run-time-error-checks.md) Opções do compilador é definida. Caso contrário, indefinido.
 
-- `_MSVC_TRADITIONAL` Definido como 0 quando a opção de compilador do modo de conformidade do pré-processador [**`/experimental:preprocessor`**](../build/reference/experimental-preprocessor.md) estiver definida. Definido como 1 por padrão, ou quando a [**`/experimental:preprocessor-`**](../build/reference/experimental-preprocessor.md) opção do compilador é definida, para indicar que o pré-processador tradicional está em uso. A `_MSVC_TRADITIONAL` opção de compilador macro e [ **`/experimental:preprocessor`** (habilitar modo de conformidade do pré-processador)](../build/reference/experimental-preprocessor.md) está disponível a partir do Visual Studio 2017 versão 15,8.
+- `_MSVC_TRADITIONAL` Definido como 0 quando a opção de compilador do modo de conformidade do pré-processador [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) estiver definida. Definido como 1 por padrão, ou quando a [`/experimental:preprocessor-`](../build/reference/experimental-preprocessor.md) opção do compilador é definida, para indicar que o pré-processador tradicional está em uso. A `_MSVC_TRADITIONAL` opção de compilador macro e [ **`/experimental:preprocessor`** (habilitar modo de conformidade do pré-processador)](../build/reference/experimental-preprocessor.md) está disponível a partir do Visual Studio 2017 versão 15,8.
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -537,7 +537,7 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
 
 - `_MT`Definido como 1 quando [ **`/MD`** ou **`/MDd`** (DLL de vários threads)](../build/reference/md-mt-ld-use-run-time-library.md) ou [ **`/MT`** ou **`/MTd`** (multithreaded)](../build/reference/md-mt-ld-use-run-time-library.md) é especificado. Caso contrário, indefinido.
 
-- `_NATIVE_WCHAR_T_DEFINED` Definido como 1 quando a [**`/Zc:wchar_t`**](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção do compilador é definida. Caso contrário, indefinido.
+- `_NATIVE_WCHAR_T_DEFINED` Definido como 1 quando a [`/Zc:wchar_t`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção do compilador é definida. Caso contrário, indefinido.
 
 - `_OPENMP`Definido como inteiro literal 200203, se a opção de compilador [ **`/openmp`** (habilitar suporte de OpenMP 2,0)](../build/reference/openmp-enable-openmp-2-0-support.md) estiver definida. Esse valor representa a data da especificação de OpenMP implementada por MSVC. Caso contrário, indefinido.
 
@@ -550,13 +550,13 @@ O MSVC dá suporte a essas macros predefinidas adicionais.
    }
    ```
 
-- `_PREFAST_` Definido como 1 quando a [**`/analyze`**](../build/reference/analyze-code-analysis.md) opção do compilador é definida. Caso contrário, indefinido.
+- `_PREFAST_` Definido como 1 quando a [`/analyze`](../build/reference/analyze-code-analysis.md) opção do compilador é definida. Caso contrário, indefinido.
 
 - `__TIMESTAMP__` Definido como um literal de cadeia de caracteres que contém a data e a hora da última modificação do arquivo de origem atual, no formato de tamanho constante abreviado, retornado pela [`asctime`](../c-runtime-library/reference/asctime-wasctime.md) função CRT, por exemplo, `Fri 19 Aug 13:32:58 2016` . Essa macro sempre é definida.
 
 - `_VC_NODEFAULTLIB`Definido como 1 quando a opção de compilador [ **`/Zl`** (omitir nome de biblioteca padrão)](../build/reference/zl-omit-default-library-name.md) está definida. Caso contrário, indefinido.
 
-- `_WCHAR_T_DEFINED` Definido como 1 quando a [**`/Zc:wchar_t`**](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção de compilador padrão é definida. A `_WCHAR_T_DEFINED` macro é definida, mas não tem valor se a **`/Zc:wchar_t-`** opção do compilador estiver definida e **`wchar_t`** estiver definida em um arquivo de cabeçalho do sistema incluído no seu projeto. Caso contrário, indefinido.
+- `_WCHAR_T_DEFINED` Definido como 1 quando a [`/Zc:wchar_t`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção de compilador padrão é definida. A `_WCHAR_T_DEFINED` macro é definida, mas não tem valor se a **`/Zc:wchar_t-`** opção do compilador estiver definida e **`wchar_t`** estiver definida em um arquivo de cabeçalho do sistema incluído no seu projeto. Caso contrário, indefinido.
 
 - `_WIN32` Definido como 1 quando o destino da compilação é ARM de 32 bits, ARM de 64 bits, x86 ou x64. Caso contrário, indefinido.
 

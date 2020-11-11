@@ -1,7 +1,7 @@
 ---
 title: /permissive- (conformidade com padrões)
 description: Guia de referência para a opção de compilador Microsoft C++/permissive-(conformidade com padrões).
-ms.date: 06/04/2020
+ms.date: 10/28/2020
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 36861705acf0328af5c1207c3bf33a098fc3b348
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: ae4ab62f6027d984217d750294f16138a6969f16
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520545"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448471"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (conformidade com padrões)
 
@@ -24,25 +24,28 @@ Especifique o modo de conformidade de padrões para o compilador. Use esta opç�
 
 ## <a name="syntax"></a>Sintaxe
 
-> **`/permissive-`**
+> **`/permissive-`**\
+> **`/permissive`**
 
 ## <a name="remarks"></a>Comentários
 
-Essa opção tem suporte no Visual Studio 2017 e posterior.
+A **`/permissive-`** opção tem suporte no Visual Studio 2017 e posterior. **`/permissive`** tem suporte no Visual Studio 2019 versão 16,8 e posterior.
 
-Você pode usar a **`/permissive-`** opção do compilador para especificar o comportamento do compilador de conformidade com padrões. Essa opção desabilita comportamentos permissivos e define as [**`/Zc`**](zc-conformance.md) Opções de compilador para conformidade estrita. No IDE, essa opção também faz com que o mecanismo do IntelliSense sublinhado código não compatível.
+Você pode usar a **`/permissive-`** opção do compilador para especificar o comportamento do compilador de conformidade com padrões. Essa opção desabilita comportamentos permissivos e define as [`/Zc`](zc-conformance.md) Opções de compilador para conformidade estrita. No IDE, essa opção também faz com que o mecanismo do IntelliSense sublinhado código não compatível.
+
+A **`/permissive-`** opção usa o suporte de conformidade na versão atual do compilador para determinar quais construções de linguagem não estão em conformidade. A opção não determina se o código está em conformidade com uma versão específica do padrão C++. Para habilitar todo o suporte do compilador implementado para o padrão de rascunho mais recente, use a [`/std:c++latest`](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador ao padrão C++ 17 atualmente implementado, use a [`/std:c++17`](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador para corresponder mais próximo ao padrão do C++ 14, use a [`/std:c++14`](std-specify-language-standard-version.md) opção, que é o padrão.
+
+A partir do Visual Studio 2019 versão 16,8, a **`/std:c++latest`** opção define implicitamente a **`/permissive-`** opção. Ele é necessário para o suporte a módulos do C++ 20. Talvez seu código não precise de suporte a módulos, mas requer outros recursos habilitados em **`/std:c++latest`** . Você pode habilitar explicitamente o suporte à extensão da Microsoft usando a **`/permissive`** opção sem o traço à direita.
 
 Por padrão, a **`/permissive-`** opção é definida em novos projetos criados pelo Visual Studio 2017 versão 15,5 e versões posteriores. Ele não é definido por padrão em versões anteriores. Quando a opção é definida, o compilador gera erros de diagnóstico ou avisos quando construções de linguagem não padrão são detectadas em seu código. Essas construções incluem alguns bugs comuns no código pre-C + 11.
 
 A **`/permissive-`** opção é compatível com quase todos os arquivos de cabeçalho dos kits mais recentes do Windows, como o Software Development Kit (SDK) ou o Windows Driver Kit (WDK), a partir do SDK do Windows Outono Creators (10.0.16299.0). As versões mais antigas do SDK podem falhar na compilação em **`/permissive-`** para vários motivos de conformidade do código-fonte. O compilador e os SDKs são fornecidos em cronogramas de liberação diferentes, portanto, há alguns problemas restantes. Para problemas de arquivo de cabeçalho específicos, consulte os [problemas de cabeçalho do Windows](#windows-header-issues) abaixo.
 
-A **`/permissive-`** opção define as [**`/Zc:referenceBinding`**](zc-referencebinding-enforce-reference-binding-rules.md) [**`/Zc:strictStrings`**](zc-strictstrings-disable-string-literal-type-conversion.md) Opções, e [**`/Zc:rvalueCast`**](zc-rvaluecast-enforce-type-conversion-rules.md) para a conformidade do comportamento. Essas opções assumem como padrão o comportamento não compatível. Você pode passar **`/Zc`** opções específicas depois **`/permissive-`** na linha de comando para substituir esse comportamento.
+A **`/permissive-`** opção define as [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) [`/Zc:strictStrings`](zc-strictstrings-disable-string-literal-type-conversion.md) Opções, e [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) para a conformidade do comportamento. Essas opções assumem como padrão o comportamento não compatível. Você pode passar **`/Zc`** opções específicas depois **`/permissive-`** na linha de comando para substituir esse comportamento.
 
-Em versões do compilador a partir do Visual Studio 2017 versão 15,3, a **`/permissive-`** opção define a [**`/Zc:ternary`**](zc-ternary.md) opção. O compilador também implementa mais dos requisitos para a pesquisa de nome de duas fases. Quando a **`/permissive-`** opção é definida, o compilador analisa as definições de modelo de função e classe e identifica nomes dependentes e não dependentes usados nos modelos. Nesta versão, apenas a análise de dependência de nome é executada.
+Em versões do compilador a partir do Visual Studio 2017 versão 15,3, a **`/permissive-`** opção define a [`/Zc:ternary`](zc-ternary.md) opção. O compilador também implementa mais dos requisitos para a pesquisa de nome de duas fases. Quando a **`/permissive-`** opção é definida, o compilador analisa as definições de modelo de função e classe e identifica nomes dependentes e não dependentes usados nos modelos. Nesta versão, apenas a análise de dependência de nome é executada.
 
 As extensões específicas do ambiente e as áreas de linguagem que o padrão deixa para a implementação não são afetadas pelo **`/permissive-`** . Por exemplo, as palavras-chave específicas da Microsoft **`__declspec`** , de Convenção de chamada e manipulação de exceção estruturada e as diretivas pragma específicas do compilador ou atributos não são sinalizadas pelo compilador no **`/permissive-`** modo.
-
-A **`/permissive-`** opção usa o suporte de conformidade na versão atual do compilador para determinar quais construções de linguagem não estão em conformidade. A opção não determina se o código está em conformidade com uma versão específica do padrão C++. Para habilitar todo o suporte do compilador implementado para o padrão de rascunho mais recente, use a [**`/std:c++latest`**](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador ao padrão C++ 17 atualmente implementado, use a [**`/std:c++17`**](std-specify-language-standard-version.md) opção. Para restringir o suporte do compilador para corresponder mais próximo ao padrão do C++ 14, use a [**`/std:c++14`**](std-specify-language-standard-version.md) opção, que é o padrão.
 
 Nem todos os padrões do C++ 11, do C++ 14 ou do C++ 17 – a conformidade do código é compatível com o compilador MSVC em todas as versões do Visual Studio 2017. Dependendo da versão do Visual Studio, a **`/permissive-`** opção pode não detectar problemas em alguns aspectos da pesquisa de nome de duas fases, associando uma referência não const a um temporário, tratando a inicialização de cópia como inicialização direta, permitindo várias conversões definidas pelo usuário na inicialização ou tokens alternativos para operadores lógicos e outras áreas de conformidade sem suporte. Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md). Para obter o máximo do **`/permissive-`** , atualize o Visual Studio para a versão mais recente.
 
@@ -394,7 +397,7 @@ Esses problemas são específicos para cabeçalhos de modo de usuário no SDK de
 
 - Problema em um/Query. h
 
-   Ao usar a **`/permissive-`** opção de compilador, a `tagRESTRICTION` estrutura não é compilada devido ao membro de caso (RTOr) ' ou '.
+   Ao usar a **`/permissive-`**  opção de compilador, a `tagRESTRICTION` estrutura não é compilada devido ao membro de caso (RTOr) ' ou '.
 
    ```cpp
    struct tagRESTRICTION
@@ -420,13 +423,13 @@ Esses problemas são específicos para cabeçalhos de modo de usuário no SDK de
 
 - Problema em um/cellularapi_oem. h
 
-   Ao usar a **`/permissive-`** opção do compilador, a declaração de encaminhamento `enum UICCDATASTOREACCESSMODE` causa um aviso:
+   Ao usar a **`/permissive-`**  opção do compilador, a declaração de encaminhamento `enum UICCDATASTOREACCESSMODE` causa um aviso:
 
    ```cpp
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   A declaração de encaminhamento de enumeração sem escopo é uma extensão da Microsoft. Para resolver esse problema, compile os arquivos que incluem cellularapi_oem. h sem a **`/permissive-`** opção ou use a [**`/wd`**](compiler-option-warning-level.md) opção para silenciar o aviso C4471.
+   A declaração de encaminhamento de enumeração sem escopo é uma extensão da Microsoft. Para resolver esse problema, compile os arquivos que incluem cellularapi_oem. h sem a **`/permissive-`** opção ou use a [`/wd`](compiler-option-warning-level.md) opção para silenciar o aviso C4471.
 
 - Problema em um/omscript. h
 
@@ -447,7 +450,7 @@ No Visual Studio 2017 versão 15,5 e versões posteriores, use este procedimento
 
 1. Abra a caixa de diálogo **páginas de propriedades** do projeto.
 
-1. Selecione a **Configuration Properties**página de propriedades de  >  **linguagem C/C++** Properties  >  **Language** .
+1. Selecione a **Configuration Properties** página de propriedades de  >  **linguagem C/C++** Properties  >  **Language** .
 
 1. Altere o valor da propriedade **modo de conformidade** para **Sim (/permissive-)**. Escolha **OK** ou **aplicar** para salvar suas alterações.
 
@@ -455,7 +458,7 @@ Em versões anteriores ao Visual Studio 2017 versão 15,5, use este procedimento
 
 1. Abra a caixa de diálogo **páginas de propriedades** do projeto.
 
-1. Selecione a **Configuration Properties**  >  página de propriedade de linha de comando**C/C++** Propriedades de configuração  >  **Command Line** .
+1. Selecione a **Configuration Properties**  >  página de propriedade de linha de comando **C/C++** Propriedades de configuração  >  **Command Line** .
 
 1. Insira a opção do compilador **/permissive-** na caixa **Opções adicionais** . Escolha **OK** ou **aplicar** para salvar suas alterações.
 
@@ -463,7 +466,7 @@ Em versões anteriores ao Visual Studio 2017 versão 15,5, use este procedimento
 
 - Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 [Opções do compilador MSVC](compiler-options.md)\
-[Sintaxe de linha de comando do compilador MSVC](compiler-command-line-syntax.md)
+[Sintaxe de Command-Line do compilador MSVC](compiler-command-line-syntax.md)
