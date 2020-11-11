@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
+ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924695"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518811"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador por versão do compilador
 
@@ -45,7 +45,7 @@ Essas versões do compilador introduziram novos avisos:
 |  Visual Studio 2019 versão 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 versão 16,5 | 19.25.28610.0 |
 | Visual Studio 2019 versão 16,6 | 19.26.28805.0 |
-| Visual Studio 2019 versão 16,7 | 19.26.29112.0 |
+| Visual Studio 2019 versão 16,7 | 19.27.29112.0 |
 
 Você pode especificar apenas o número principal, os números principais e secundários, ou os números principal, secundário e de compilação para a **`/Wv`** opção. O compilador relata todos os avisos que correspondem às versões que começam com o número especificado. Ele suprime todos os avisos de versões maiores que o número especificado. Por exemplo, **`/Wv:17`** relata avisos introduzidos em ou antes de qualquer versão do Visual Studio 2012 e suprime avisos introduzidos por qualquer compilador de Visual Studio 2013 (versão 18) ou posterior. Para suprimir os avisos introduzidos no Visual Studio 2015 atualização 2 e posterior, você pode usar o **`/Wv:19.00.23506`** . Use **`/Wv:19.11`** para relatar os avisos introduzidos em qualquer versão do Visual Studio antes da versão 15,5 do visual studio 2017, mas suprimir avisos introduzidos no visual studio 2017 versão 15,5 e posterior.
 
@@ -768,7 +768,7 @@ Esses avisos e todos os avisos em versões posteriores são suprimidos usando a 
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 [Erros e avisos das ferramentas de compilação e do compilador C/C++](../compiler-errors-1/c-cpp-build-errors.md) \
 [Avisos do compilador C4000-C5999](compiler-warnings-c4000-c5999.md) \
